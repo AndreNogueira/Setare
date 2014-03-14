@@ -10,7 +10,7 @@ class CreateCars < ActiveRecord::Migration
       t.boolean :transmission, null: false, default: false
       t.integer :doors_number, null: false
       t.integer :capacity, null: false, default: 2
-      t.decimal :price, null:false, precision: 5, scale: 2
+      t.decimal :price, null:false, scale: 2
       t.boolean :is_available, null: false, default: true
       t.integer :current_subsidiary, null: false
 
