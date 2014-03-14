@@ -7,7 +7,7 @@ class CreateCarServices < ActiveRecord::Migration
       t.boolean :baby_seat, null: false, default: false
       t.boolean :insurance, null: false, default: false
       t.boolean :additional_driver, null: false, default: false
-      t.decimal :final_price, null: false, precison:10,scale: 2
+      t.decimal :final_price, null: false, precision:10,scale: 2
 
       t.integer :car_id, null: false
       t.foreign_key :cars, dependent: :destroy
