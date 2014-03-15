@@ -30,7 +30,6 @@ gem 'foreigner'
 # Gem for generating missing keys. Read More: https://github.com/jenseng/immigrant
 gem 'immigrant'
 
-
 #ActiveModel on steroids. Read More: https://github.com/cgriego/active_attr
 gem 'active_attr'
 
@@ -40,7 +39,13 @@ gem 'annotate', '>=2.6.0'
 # Organizing seed file. Read More: https://github.com/james2m/seedbank
 gem 'seedbank'
 
+#
 gem 'andand', '~> 1.3.3'
+
+# Pagination. Read More: https://github.com/mislav/will_paginate
+gem 'will_paginate', '~> 3.0'
+# Foundation style for will_paginate gem. Read More: https://github.com/acrogenesis/will_paginate-foundation
+gem 'will_paginate-foundation'
 
 # Better errors for Rails. Read More: https://github.com/charliesome/better_errors
 group :development do
