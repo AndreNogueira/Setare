@@ -1,0 +1,3 @@
+Category.create([
+                  {name:''}
+                ])

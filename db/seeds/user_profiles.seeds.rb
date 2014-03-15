@@ -1,0 +1,4 @@
+UserProfile.create([
+                    {name:''},
+                    {name:''}
+                   ])
