@@ -16,6 +16,8 @@ class DropOffLocation < ActiveRecord::Base
   # Scopes
   # Class Methods
   # Validations
+  validates :name, presence: true
+
   # Callbacks
   # Instance Methods
 

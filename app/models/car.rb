@@ -31,6 +31,14 @@ class Car < ActiveRecord::Base
   # Scopes
   # Class Methods
   # Validations
+  validates :image, presence: true
+  validates :brand, presence: true
+  validates :model, presence: true
+  validates :year, presence: true, inclusion: 1920..2100
+  validates :doors_number, presence: true, inclusion: 2..6
+  validates :capacity, presence: true, inclusion: 2..60
+  validates :price, presence: true
+
   # Callbacks
   # Instance Methods
 

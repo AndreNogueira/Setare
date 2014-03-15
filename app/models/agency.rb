@@ -18,6 +18,9 @@ class Agency < ActiveRecord::Base
   # Scopes
   # Class Methods
   # Validations
+  validates :name, presence: true
+  validates :image, presence: true
+
   # Callbacks
   # Instance Methods
 

@@ -29,6 +29,10 @@ class CarService < ActiveRecord::Base
   # Scopes
   # Class Methods
   # Validations
+  validates :service_begin, presence: true
+  validates :service_end, presence: true
+  validates :final_price, presence: true
+
   # Callbacks
   # Instance Methods
 

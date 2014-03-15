@@ -21,6 +21,12 @@ class Taxi < ActiveRecord::Base
   # Scopes
   # Class Methods
   # Validations
+  validates :name, presence: true
+  validates :image, presence: true
+  validates :passengers_number, presence: true, numericality: {greater_than_or_equal_to: 2}
+  validates :luggage, presence: true, numericality: {greater_than_or_equal_to: 0}
+  validates :price_km, presence: true
+
   # Callbacks
   # Instance Methods
 

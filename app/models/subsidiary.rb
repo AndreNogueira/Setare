@@ -22,6 +22,8 @@ class Subsidiary < ActiveRecord::Base
   # Scopes
   # Class Methods
   # Validations
+  validates :name, presence: true
+  validates :address, presence: true
   # Callbacks
   # Instance Methods
 
