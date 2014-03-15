@@ -1,3 +1,21 @@
+# == Schema Information
+#
+# Table name: users
+#
+#  id              :integer          not null, primary key
+#  name            :string(100)      not null
+#  bi              :integer          not null
+#  email           :string(50)       not null
+#  password        :string(50)       not null
+#  driver_license  :string(12)       not null
+#  nif             :integer          not null
+#  address         :string(200)      not null
+#  phone_number    :integer          not null
+#  user_profile_id :integer          not null
+#  created_at      :datetime
+#  updated_at      :datetime
+#
+
 class User < ActiveRecord::Base
 
   belongs_to :user_profile

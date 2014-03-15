@@ -1,3 +1,14 @@
+# == Schema Information
+#
+# Table name: pick_up_locations
+#
+#  id         :integer          not null, primary key
+#  name       :string(255)      not null
+#  city_id    :integer          not null
+#  created_at :datetime
+#  updated_at :datetime
+#
+
 class PickUpLocation < ActiveRecord::Base
 
   belongs_to :city
