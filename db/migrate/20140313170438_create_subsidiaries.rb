@@ -6,10 +6,10 @@ class CreateSubsidiaries < ActiveRecord::Migration
       t.string :address, null: false
 
       t.integer :city_id, null: false
-      t.foreign_key :cities, dependent: :destroy
+      t.foreign_key :cities, dependent: :delete
 
       t.integer :agency_id, null: false
-      t.foreign_key :agencies, dependent: :destroy
+      t.foreign_key :agencies, dependent: :delete
 
       t.timestamps
     end

@@ -9,10 +9,10 @@ class CreateTaxiServices < ActiveRecord::Migration
       t.string :special_request, limit:300
 
       t.integer :user_id, null:false
-      t.foreign_key :users,dependent: :destroy
+      t.foreign_key :users,dependent: :delete
 
       t.integer :taxi_id, null:false
-      t.foreign_key :taxis, dependent: :destroy
+      t.foreign_key :taxis, dependent: :delete
       t.timestamps
     end
   end

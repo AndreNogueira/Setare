@@ -15,10 +15,10 @@ class CreateCars < ActiveRecord::Migration
       t.integer :current_subsidiary, null: false
 
       t.integer :agency_id, null: false
-      t.foreign_key :agencies, dependent: :destroy
+      t.foreign_key :agencies, dependent: :delete
 
       t.integer :category_id, null: false
-      t.foreign_key :categories, dependent: :destroy
+      t.foreign_key :categories, dependent: :delete
 
       t.timestamps
     end

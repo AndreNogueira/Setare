@@ -4,7 +4,7 @@ class CreatePickUpLocations < ActiveRecord::Migration
       t.string :name, null:false
 
       t.integer :city_id, null:false
-      t.foreign_key :cities, dependent: :destroy
+      t.foreign_key :cities, dependent: :delete
 
       t.timestamps
     end

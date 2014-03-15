@@ -12,7 +12,7 @@ class CreateUsers < ActiveRecord::Migration
       t.integer :phone_number, null: false
 
       t.integer :user_profile_id, null: false
-      t.foreign_key :user_profiles, dependent: :destroy
+      t.foreign_key :user_profiles, dependent: :delete
 
       t.timestamps
     end

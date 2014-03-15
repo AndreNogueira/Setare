@@ -16,10 +16,10 @@ class CreateCarServices < ActiveRecord::Migration
       t.foreign_key :users, dependent: :destroy
 
       t.integer :pick_up_subsidiary_id, null: false
-      t.foreign_key :subsidiaries, column: :pick_up_subsidiary_id, dependent: :destroy
+      t.foreign_key :subsidiaries, column: :pick_up_subsidiary_id, dependent: :delete
 
       t.integer :drop_off_subsidiary_id, null: false
-      t.foreign_key :subsidiaries, column: :drop_off_subsidiary_id, dependent: :destroy
+      t.foreign_key :subsidiaries, column: :drop_off_subsidiary_id, dependent: :delete
 
       t.timestamps
     end

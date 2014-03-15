@@ -5,7 +5,7 @@ class CreateCities < ActiveRecord::Migration
       t.boolean :is_taxi, null: false, default: false
 
       t.integer :country_id, null: false
-      t.foreign_key :countries, dependent: :destroy
+      t.foreign_key :countries, dependent: :delete
 
       t.timestamps
     end
