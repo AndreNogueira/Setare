@@ -18,8 +18,15 @@
 
 class User < ActiveRecord::Base
 
+  # Associations
   belongs_to :user_profile
   has_many :car_services
   has_many :taxi_services
+
+  # Scopes
+  # Class Methods
+  # Validations
+  # Callbacks
+  # Instance Methods
 
 end

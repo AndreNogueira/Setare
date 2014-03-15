@@ -23,9 +23,15 @@
 
 class Car < ActiveRecord::Base
 
-
+  # Associations
   belongs_to :category
   belongs_to :agency
   has_many :car_services
+
+  # Scopes
+  # Class Methods
+  # Validations
+  # Callbacks
+  # Instance Methods
 
 end

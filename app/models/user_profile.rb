@@ -10,5 +10,12 @@
 
 class UserProfile < ActiveRecord::Base
 
+  # Associations
   has_many :users
+
+  # Scopes
+  # Class Methods
+  # Validations
+  # Callbacks
+  # Instance Methods
 end

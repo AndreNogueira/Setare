@@ -11,6 +11,14 @@
 
 class Agency < ActiveRecord::Base
 
+  # Associations
   has_many :cars
   has_many :subsidiaries
+
+  # Scopes
+  # Class Methods
+  # Validations
+  # Callbacks
+  # Instance Methods
+
 end

@@ -10,5 +10,13 @@
 
 class Country < ActiveRecord::Base
 
+  # Associations
   has_many :cities
+
+  # Scopes
+  # Class Methods
+  # Validations
+  # Callbacks
+  # Instance Methods
+
 end

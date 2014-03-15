@@ -12,7 +12,15 @@
 
 class City < ActiveRecord::Base
 
+  # Associations
   belongs_to :country
   has_many :subsidiaries
   has_many :pick_up_locations
+
+  # Scopes
+  # Class Methods
+  # Validations
+  # Callbacks
+  # Instance Methods
+
 end

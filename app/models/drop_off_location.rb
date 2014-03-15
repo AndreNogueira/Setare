@@ -9,5 +9,14 @@
 #
 
 class DropOffLocation < ActiveRecord::Base
+
+  # Associations
   has_and_belongs_to_many :pick_up_locations
+
+  # Scopes
+  # Class Methods
+  # Validations
+  # Callbacks
+  # Instance Methods
+
 end

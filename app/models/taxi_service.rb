@@ -16,6 +16,15 @@
 #
 
 class TaxiService < ActiveRecord::Base
+
+  # Associations
   belongs_to :taxi
   belongs_to :user
+
+  # Scopes
+  # Class Methods
+  # Validations
+  # Callbacks
+  # Instance Methods
+
 end

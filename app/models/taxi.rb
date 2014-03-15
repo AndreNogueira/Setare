@@ -13,6 +13,15 @@
 #
 
 class Taxi < ActiveRecord::Base
+
+  # Associations
   has_and_belongs_to_many :pick_up_locations
   has_many :taxi_services
+
+  # Scopes
+  # Class Methods
+  # Validations
+  # Callbacks
+  # Instance Methods
+
 end

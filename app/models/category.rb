@@ -10,5 +10,13 @@
 
 class Category < ActiveRecord::Base
 
+  # Associations
   has_many :cars
+
+  # Scopes
+  # Class Methods
+  # Validations
+  # Callbacks
+  # Instance Methods
+
 end
