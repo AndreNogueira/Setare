@@ -4,8 +4,6 @@ class CreateUsers < ActiveRecord::Migration
 
       t.string :name, null: false, limit: 100
       t.integer :bi, null: false
-      t.string :email, null: false, limit: 50
-      t.string :password, null: false, limit: 50
       t.string :driver_license, null: false, limit: 12
       t.integer :nif, null: false
       t.string :address, null: false, limit: 200

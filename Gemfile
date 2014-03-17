@@ -42,6 +42,9 @@ gem 'seedbank'
 #
 gem 'andand', '~> 1.3.3'
 
+# Read more: https://github.com/plataformatec/devise
+gem 'devise'
+
 # Pagination. Read More: https://github.com/mislav/will_paginate
 gem 'will_paginate', '~> 3.0'
 # Foundation style for will_paginate gem. Read More: https://github.com/acrogenesis/will_paginate-foundation

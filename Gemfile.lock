@@ -34,6 +34,7 @@ GEM
       rake (>= 0.8.7)
     arel (4.0.2)
     atomic (1.1.15)
+    bcrypt-ruby (3.1.2)
     better_errors (1.0.1)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
@@ -49,6 +50,12 @@ GEM
       execjs
     coffee-script-source (1.7.0)
     debug_inspector (0.0.2)
+    devise (3.2.2)
+      bcrypt-ruby (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 3.2.6, < 5)
+      thread_safe (~> 0.1)
+      warden (~> 1.2.3)
     erubis (2.7.0)
     execjs (2.0.2)
     foreigner (1.6.1)
@@ -75,6 +82,7 @@ GEM
     minitest (4.7.5)
     multi_json (1.9.0)
     mysql2 (0.3.15)
+    orm_adapter (0.5.0)
     polyglot (0.3.4)
     rack (1.5.2)
     rack-test (0.6.2)
@@ -126,6 +134,8 @@ GEM
     uglifier (2.4.0)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    warden (1.2.3)
+      rack (>= 1.0)
     will_paginate (3.0.5)
     will_paginate-foundation (5.3.3)
       will_paginate (>= 3.0.3)
@@ -139,6 +149,7 @@ DEPENDENCIES
   annotate (>= 2.6.0)
   better_errors
   binding_of_caller
+  devise
   foreigner
   foundation-rails
   immigrant
