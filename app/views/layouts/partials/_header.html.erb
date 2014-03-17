@@ -1,0 +1,29 @@
+<div class="fixed">
+  <nav class="top-bar" data-topbar>
+    <ul class="title-area">
+      <li class="name">
+        <h1><a href="#">Setare</a></h1>
+      </li>
+    </ul>
+
+    <section class="top-bar-section">
+      <ul class="right">
+        <li class="divider"></li>
+        <% if user_signed_in? %>
+            <li class="has-dropdown">
+              <a href="#">User</a>
+              <ul class="dropdown">
+                <li><a href="#">Perfil</a></li>
+                <li><a href="#">Logout</a></li>
+              </ul>
+            </li>
+        <% else %>
+            <li class="has_form">
+              <%= render template: 'devise/sessions/new' %>
+            </li>
+        <% end %>
+      </ul>
+    </section>
+
+  </nav>
+</div>
