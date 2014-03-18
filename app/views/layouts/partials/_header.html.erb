@@ -15,10 +15,18 @@
             <li><a href="#">Cars</a></li>
             <li class="divider"></li>
             <li class="has-dropdown not-click">
-              <%= link_to current_user.name, '#'  %>
+              <%= link_to current_user.name ,'#' %>
               <ul class="dropdown">
-                <li><%= link_to 'Perfil', edit_user_registration_path %></li>
-                <li><%= link_to 'Logout', destroy_user_session_path , method: :delete %></li>
+                <li>
+                  <%= link_to edit_user_registration_path do %>
+                    <i class="fi-torso large"></i> Perfil
+                  <% end %>
+                </li>
+                <li>
+                  <%= link_to destroy_user_session_path , method: :delete do %>
+                  <i class="fi-power large"></i> Logout
+                  <% end %>
+                </li>
               </ul>
             </li>
         <% else %>
