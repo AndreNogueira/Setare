@@ -1,0 +1,33 @@
+<div class="fixed">
+  <nav class="top-bar" data-topbar>
+    <ul class="title-area">
+      <li class="name">
+        <h1><a href="#">Setare</a></h1>
+      </li>
+    </ul>
+
+    <section class="top-bar-section">
+      <ul class="right">
+        <li class="divider"></li>
+        <% if user_signed_in? %>
+            <li><a href="#">Taxis</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Cars</a></li>
+            <li class="divider"></li>
+            <li class="has-dropdown">
+              <%= link_to current_user.name, '#'  %>
+              <ul class="dropdown">
+                <li><%= link_to 'Perfil', edit_user_registration_path %></li>
+                <li><%= link_to 'Logout', destroy_user_session_path , method: :delete %></li>
+              </ul>
+            </li>
+        <% else %>
+           <li><%= link_to 'Login', new_user_session_path  %></li>
+            <li class="divider"></li>
+           <li><%= link_to 'Register', new_user_registration_path %> </li>
+        <% end %>
+      </ul>
+    </section>
+
+  </nav>
+</div>
