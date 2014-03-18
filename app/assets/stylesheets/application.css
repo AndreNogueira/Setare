@@ -14,6 +14,10 @@
  *= require_tree .
  */
 
+.login-form{
+    margin-top: 1%;
+}
+
 #footer{
     position: fixed;
     bottom: 0;
