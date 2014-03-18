@@ -5,38 +5,45 @@
         <h2>Login</h2>
       </div>
     </div>
-    <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-        <%= devise_error_messages! %>
+    <%= form_for(resource, :as => resource_name, :url => session_path(resource_name), html: { data: { abide: '' } }) do |f| %>
         <fieldset class="fieldset-border">
-        <div class="row">
-          <div class="large-2 columns">
-            <%= f.label :email, class: 'right inline' %>
-          </div>
-          <div class="large-10 columns">
-            <%= f.email_field :email, autofocus: true, placeholder: 'E-mail' %>
-          </div>
-        </div>
-        <div class="row">
-          <div class="large-2 columns">
-            <%= f.label :password, class: 'right inline' %>
-          </div>
-          <div class="large-10 columns">
-            <%= f.password_field :password, placeholder: 'Password' %>
-          </div>
-        </div>
-        <% if devise_mapping.rememberable? -%>
-            <div class="row">
-              <div class="large-6 large-offset-2 columns">
-                <%= f.check_box :remember_me %> <%= f.label :remember_me %>
+          <div class="row">
+            <div class="email-field">
+              <div class="large-2 columns">
+                <%= f.label :email, class: 'right inline' %>
+              </div>
+              <div class="large-10 columns">
+                <%= f.email_field :email, autofocus: true, placeholder: 'E-mail', required: true %>
+                <small class="error">An email address is required.</small>
               </div>
             </div>
-        <% end -%>
-
-        <div class="row">
-          <div class="large-6 large-offset-2 columns">
-            <%= f.submit 'Login', class: 'button small radius' %>
           </div>
-        </div>
+          <div class="row">
+            <div class="password-field">
+              <div class="large-2 columns">
+                <%= f.label :password, class: 'right inline' %>
+              </div>
+              <div class="large-10 columns">
+                <%= f.password_field :password, placeholder: 'Password', required: true %>
+                <small class="error">A password is required.</small>
+              </div>
+            </div>
+          </div>
+          <% if devise_mapping.rememberable? -%>
+              <div class="row">
+                <div class="large-6 large-offset-2 columns">
+                  <%= f.check_box :remember_me %> <%= f.label :remember_me %>
+                </div>
+              </div>
+          <% end -%>
+
+          <div class="row">
+            <div class="large-6 large-offset-2 columns">
+              <%= f.button type: 'submit', class: 'button small radius' do %>
+                  <i class="fi-check large"></i> Login
+              <% end %>
+            </div>
+          </div>
 
     <% end %>
     <div class="row">

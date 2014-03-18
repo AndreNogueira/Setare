@@ -24,6 +24,9 @@ gem 'jbuilder', '~> 1.2'
 # Zurb Foundation. Read More: https://github.com/zurb/foundation-rails
 gem 'foundation-rails'
 
+#Zurb Foundation Font Icons. Read More: https://github.com/zaiste/foundation-icons-sass-rails
+gem 'foundation-icons-sass-rails'
+
 # Foreigner. Read More: https://github.com/matthuhiggins/foreigner
 gem 'foreigner'
 
@@ -41,6 +44,7 @@ gem 'seedbank'
 
 #
 gem 'andand', '~> 1.3.3'
+
 
 # Read more: https://github.com/plataformatec/devise
 gem 'devise'
