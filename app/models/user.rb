@@ -31,6 +31,11 @@ class User < ActiveRecord::Base
   # Class Methods
   # Validations
   # Callbacks
+  before_save :add_user_profile
+
+  def add_user_profile
+    self.user_profile = UserProfile.first if self.user_profile.nil?
+  end
   # Instance Methods
 
 end
