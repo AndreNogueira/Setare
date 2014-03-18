@@ -1,5 +1,5 @@
 <div class="fixed">
-  <nav class="top-bar" data-topbar data-options="is_hover: false">
+  <nav class="top-bar" data-topbar data-options="is_hover: true">
     <ul class="title-area">
       <li class="name">
         <h1><a href="#">Setare</a></h1>
@@ -14,7 +14,7 @@
             <li class="divider"></li>
             <li><a href="#">Cars</a></li>
             <li class="divider"></li>
-            <li class="has-dropdown">
+            <li class="has-dropdown not-click">
               <%= link_to current_user.name, '#'  %>
               <ul class="dropdown">
                 <li><%= link_to 'Perfil', edit_user_registration_path %></li>
