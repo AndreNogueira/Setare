@@ -1,40 +1,140 @@
-<h2>Sign up</h2>
+<div class="row">
+  <div class="large-12 columns">
+    <div class="row">
+      <div class="large-8 large-centered columns end">
+        <h2>Sign up</h2>
+      </div>
+    </div>
 
-<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
-    <%= devise_error_messages! %>
+    <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), html: { data: { abide: '' } }) do |f| %>
+        <fieldset class="fieldset-border">
+          <%= devise_error_messages! %>
 
-    <div><%= f.label :email %>
-      <br/>
-      <%= f.email_field :email, :autofocus => true %></div>
+          <!-- Row Name -->
+          <div class="row">
+            <div class="name-field">
+              <div class="large-2 columns">
+                <%= f.label :name, class: 'right inline' %>
+              </div>
+              <div class="large-10 columns">
+                <%= f.text_field :name, required: true, placeholder: 'Insert your name', :autofocus => true %>
+                <small class="error">Name is required.</small>
+              </div>
+            </div>
+          </div>
+          <!-- Row Email -->
+          <div class="row">
+            <div class="email-field">
+              <div class="large-2 columns">
+                <%= f.label :email, class: 'right inline' %>
+              </div>
+              <div class="large-10 columns">
+                <%= f.email_field :email, required: true, placeholder: 'Insert your email' %>
+                <small class="error">An email address is required.</small>
+              </div>
+            </div>
+          </div>
+          <!-- Row Password -->
+          <div class="row">
+            <div class="password-field">
+              <div class="large-2 columns">
+                <%= f.label :password, class: 'right inline' %>
+              </div>
+              <div class="large-10 columns">
+                <%= f.password_field :password, required: true, placeholder: 'Insert your password' %>
+                <small class="error">Password must be at least 8 characters.</small>
+              </div>
+            </div>
+          </div>
+          <!-- Row Password Confirmation -->
+          <div class="row">
+            <div class="password-confirmation-field">
+              <div class="large-2 columns">
+                <%= f.label :password_confirmation, 'Password Confirmation', class: 'right inline' %>
+              </div>
+              <div class="large-10 columns">
+                <%= f.password_field :password_confirmation, required: true, placeholder: 'Repeat your password', data: { equalto: 'user_password' } %>
+                <small class="error">Passwords must be equals.</small>
+              </div>
+            </div>
+          </div>
+          <!-- Row BI -->
+          <div class="row">
+            <div class="number-field">
+              <div class="large-2 columns">
+                <%= f.label :bi, 'BI', class: 'right inline' %>
+              </div>
+              <div class="large-10 columns">
+                <%= f.text_field :bi, required: true, placeholder: 'Insert your BI number', pattern: '[1-9][0-9]{8}' %>
+                <small class="error">BI must be a number with 9 digits.</small>
+              </div>
+            </div>
+          </div>
+          <!-- Row Driver License -->
+          <div class="row">
+            <div class="number-field">
+              <div class="large-2 columns">
+                <%= f.label :driver_license, class: 'right inline' %>
+              </div>
+              <div class="large-10 columns">
+                <%= f.text_field :driver_license, required: true, placeholder: 'Insert your driver license number', pattern: '[A-Z]-[1-9][0-9]{6}' %>
+                <small class="error">Driver License must be a number with 7 digits.</small>
+              </div>
+            </div>
+          </div>
+          <!-- Row NIF -->
+          <div class="row">
+            <div class="number-field">
+              <div class="large-2 columns">
+                <%= f.label :nif, 'NIF', class: 'right inline' %>
+              </div>
+              <div class="large-10 columns">
+                <%= f.text_field :nif, required: true, placeholder: 'Insert your NIF number', pattern: '[1-9][0-9]{8}' %>
+                <small class="error">NIF must be a number with 9 digits.</small>
+              </div>
+            </div>
+          </div>
+          <!-- Row Phone Number -->
+          <div class="row">
+            <div class="number-field">
+              <div class="large-2 columns">
+                <%= f.label :phone_number, 'Phone Number', class: 'right inline' %>
+              </div>
+              <div class="large-10 columns">
+                <%= f.phone_field :phone_number, required: true, placeholder: 'Insert your phone number', pattern: '[1-9][0-9]{8}' %>
+                <small class="error">Phone must be a number with 9 digits.</small>
+              </div>
+            </div>
+          </div>
+          <!-- Row Address -->
+          <div class="row">
+            <div class="name-field">
+              <div class="large-2 columns">
+                <%= f.label :address, class: 'right inline' %>
+              </div>
+              <div class="large-10 columns">
+                <%= f.text_field :address, required: true, placeholder: 'Insert your address' %>
+                <small class="error">Address is required.s</small>
+              </div>
+            </div>
+          </div>
+          <!-- Row Address -->
+          <div class="row">
+            <div class="large-6 large-offset-2 columns">
+              <%= f.button type:'submit' , class: 'button small radius' do %>
+                  <i class="fi-plus large"></i> Register
+              <% end %>
+            </div>
+          </div>
+          <div class="row">
+            <div class="large-6 large-offset-2 columns">
+              <% if controller_name != 'sessions' %>
+                  <%= link_to "Sign in", new_session_path(resource_name) %>
+              <% end %>
+            </div>
+          </div>
+        </fieldset>
+    <% end %>
 
-    <div><%= f.label :password %>
-      <br/>
-      <%= f.password_field :password %></div>
-
-    <div><%= f.label :password_confirmation %>
-      <br/>
-      <%= f.password_field :password_confirmation %></div>
-
-    <div><%= f.label :bi %>
-      <br/>
-      <%= f.text_field :bi %></div>
-
-    <div><%= f.label :name %><br />
-      <%= f.text_field :name %></div>
-
-    <div><%= f.label :driver_license %><br />
-      <%= f.text_field :driver_license %></div>
-
-    <div><%= f.label :nif %><br />
-      <%= f.number_field :nif %></div>
-
-    <div><%= f.label :phone_number %><br />
-      <%= f.phone_field :phone_number %></div>
-
-    <div><%= f.label :address %><br />
-      <%= f.text_field :address %></div>
-
-    <div><%= f.submit "Sign up" %></div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+  </div>
+</div>
