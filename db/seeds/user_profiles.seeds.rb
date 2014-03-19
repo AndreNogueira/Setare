@@ -1,4 +1,4 @@
 UserProfile.create([
-                    {name:''},
-                    {name:''}
+                    {name:'client'},
+                    {name:'admin'}
                    ])
