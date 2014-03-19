@@ -2,18 +2,27 @@
 #
 # Table name: users
 #
-#  id              :integer          not null, primary key
-#  name            :string(100)      not null
-#  bi              :integer          not null
-#  email           :string(50)       not null
-#  password        :string(50)       not null
-#  driver_license  :string(12)       not null
-#  nif             :integer          not null
-#  address         :string(200)      not null
-#  phone_number    :integer          not null
-#  user_profile_id :integer          not null
-#  created_at      :datetime
-#  updated_at      :datetime
+#  id                     :integer          not null, primary key
+#  name                   :string(100)      not null
+#  bi                     :string(15)       not null
+#  driver_license         :string(12)       not null
+#  nif                    :string(15)       not null
+#  address                :string(200)      not null
+#  phone_number           :string(15)       not null
+#  user_profile_id        :integer          not null
+#  created_at             :datetime
+#  updated_at             :datetime
+#  email                  :string(255)      not null
+#  encrypted_password     :string(255)      default(""), not null
+#  reset_password_token   :string(255)
+#  reset_password_sent_at :datetime
+#  remember_created_at    :datetime
+#
+# Indexes
+#
+#  index_users_on_email                 (email) UNIQUE
+#  index_users_on_reset_password_token  (reset_password_token) UNIQUE
+#  users_user_profile_id_fk             (user_profile_id)
 #
 
 class User < ActiveRecord::Base

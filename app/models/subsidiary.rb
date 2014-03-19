@@ -10,6 +10,11 @@
 #  created_at :datetime
 #  updated_at :datetime
 #
+# Indexes
+#
+#  subsidiaries_agency_id_fk  (agency_id)
+#  subsidiaries_city_id_fk    (city_id)
+#
 
 class Subsidiary < ActiveRecord::Base
 

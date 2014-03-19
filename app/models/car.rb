@@ -20,6 +20,11 @@
 #  created_at         :datetime
 #  updated_at         :datetime
 #
+# Indexes
+#
+#  cars_agency_id_fk    (agency_id)
+#  cars_category_id_fk  (category_id)
+#
 
 class Car < ActiveRecord::Base
 

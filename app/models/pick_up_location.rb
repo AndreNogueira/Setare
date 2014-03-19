@@ -8,6 +8,10 @@
 #  created_at :datetime
 #  updated_at :datetime
 #
+# Indexes
+#
+#  pick_up_locations_city_id_fk  (city_id)
+#
 
 class PickUpLocation < ActiveRecord::Base
 
