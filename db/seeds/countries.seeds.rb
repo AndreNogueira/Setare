@@ -41,7 +41,7 @@ Country.create([
                    { name: 'Fiji' },
                    { name: 'Finland' },
                    { name: 'France - Corsica' },
-                   { name: 'France - Mainland' },
+                   { name: 'France' },
                    { name: 'French Guiana' },
                    { name: 'French Polynesia' },
                    { name: 'Georgia' },
@@ -130,7 +130,7 @@ Country.create([
                    { name: 'South Korea' },
                    { name: 'Spain - Balearic Islands' },
                    { name: 'Spain - Canary Islands' },
-                   { name: 'Spain - Mainland' },
+                   { name: 'Spain' },
                    { name: 'Sri Lanka' },
                    { name: 'St. Barthelemy' },
                    { name: 'St. Croix' },
@@ -164,5 +164,6 @@ Country.create([
                    { name: 'Venezuela' },
                    { name: 'Yemen' },
                    { name: 'Zambia' },
-                   { name: 'Zimbabwe' }
+                   { name: 'Zimbabwe' },
+                   { name: 'Netherlands'}
                ])
