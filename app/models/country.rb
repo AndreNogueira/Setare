@@ -14,6 +14,7 @@ class Country < ActiveRecord::Base
   has_many :cities
 
   # Scopes
+  default_scope {order('name ASC')}
   # Class Methods
   # Validations
   validates :name, presence: true
