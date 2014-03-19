@@ -15,6 +15,8 @@ class Country < ActiveRecord::Base
 
   # Scopes
   default_scope {order('name ASC')}
+  scope :taxis, -> {joins(:cities).where('cities.is_taxi = ?',true).distinct}
+  
   # Class Methods
   # Validations
   validates :name, presence: true
