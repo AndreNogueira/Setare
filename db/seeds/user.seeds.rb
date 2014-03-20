@@ -1,0 +1,3 @@
+after :user_profiles do
+  User.create(name:'jose esteves', email:'pjmaia10@gmail.com',bi:123123123,nif:123123123,address:'Rua do esgoto',password:"12345678",driver_license:'321321321',phone_number:912311234)
+end
