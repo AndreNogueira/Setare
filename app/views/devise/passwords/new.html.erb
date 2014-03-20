@@ -1,12 +1,42 @@
-<h2>Forgot your password?</h2>
+<div class="row">
+  <div class="large-9 large-offset-1 columns end">
 
-<%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |f| %>
-  <%= devise_error_messages! %>
+    <div class="row">
+      <div class="large-9 large-offset-2 columns">
+        <h2>Forgot your password?</h2>
+      </div>
+    </div>
 
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email, :autofocus => true %></div>
+    <%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |f| %>
 
-  <div><%= f.submit "Send me reset password instructions" %></div>
-<% end %>
+        <fieldset class="fieldset-border">
 
-<%= render "devise/shared/links" %>
+          <% if resource.errors.count != 0 %>
+              <div id="error_explanation">
+                <h4> <%=resource.errors.count%> Errors prohibited the current operation from being saved.</h4>
+              </div>
+          <%end%>
+
+          <div class="row">
+            <div class="large-3 columns">
+              <label for="right-label" class="right inline"><%= f.label :email %></label>
+            </div>
+            <div class="large-9 columns">
+              <%= f.email_field :email, :autofocus => true %>
+              <%= render partial: "devise/shared/errors",  locals: { field: :email} %>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="large-3 large-offset-5 columns end">
+              <%= f.submit "Send me reset password instructions", class:'button small radius' %>
+            </div>
+          </div>
+
+          <%= render "devise/shared/links" %>
+
+        </fieldset>
+    <% end %>
+
+  </div>
+</div>
