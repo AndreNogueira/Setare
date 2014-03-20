@@ -21,9 +21,11 @@ class PickUpLocation < ActiveRecord::Base
   has_and_belongs_to_many :taxis
 
   # Scopes
+  default_scope {order('name ASC')}
   # Class Methods
   # Validations
   validates :name, presence: true
+
   # Callbacks
   # Instance Methods
 

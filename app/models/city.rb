@@ -22,9 +22,12 @@ class City < ActiveRecord::Base
   has_many :pick_up_locations
 
   # Scopes
+  default_scope {order('name ASC')}
+
   # Class Methods
   # Validations
   validates :name, presence: true
+
   # Callbacks
   # Instance Methods
 
