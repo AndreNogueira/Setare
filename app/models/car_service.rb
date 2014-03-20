@@ -17,6 +17,13 @@
 #  created_at             :datetime
 #  updated_at             :datetime
 #
+# Indexes
+#
+#  car_services_car_id_fk                  (car_id)
+#  car_services_drop_off_subsidiary_id_fk  (drop_off_subsidiary_id)
+#  car_services_pick_up_subsidiary_id_fk   (pick_up_subsidiary_id)
+#  car_services_user_id_fk                 (user_id)
+#
 
 class CarService < ActiveRecord::Base
 

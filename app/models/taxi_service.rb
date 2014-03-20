@@ -14,6 +14,11 @@
 #  created_at      :datetime
 #  updated_at      :datetime
 #
+# Indexes
+#
+#  taxi_services_taxi_id_fk  (taxi_id)
+#  taxi_services_user_id_fk  (user_id)
+#
 
 class TaxiService < ActiveRecord::Base
 

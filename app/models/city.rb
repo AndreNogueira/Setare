@@ -9,6 +9,10 @@
 #  created_at :datetime
 #  updated_at :datetime
 #
+# Indexes
+#
+#  cities_country_id_fk  (country_id)
+#
 
 class City < ActiveRecord::Base
 
