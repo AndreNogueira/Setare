@@ -2,7 +2,13 @@ Setare::Application.routes.draw do
 
 
 
+
   devise_for :users, :controllers => {:registrations => 'registrations'}
+
+  devise_scope :user do
+    get '/user_password/edit', to:'registrations#edit_password', as:'user_password_edit'
+  end
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -1,0 +1,9 @@
+<% if !resource.errors[field].empty? %>
+    <div id="error_explanation">
+      <ul style="padding-left: 8%">
+        <% resource.errors[field].each do |m| %>
+            <li><%= m %></li>
+        <%end%>
+      </ul>
+    </div>
+<%end%>
