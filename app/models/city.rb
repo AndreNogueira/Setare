@@ -2,12 +2,13 @@
 #
 # Table name: cities
 #
-#  id         :integer          not null, primary key
-#  name       :string(255)      not null
-#  is_taxi    :boolean          default(FALSE), not null
-#  country_id :integer          not null
-#  created_at :datetime
-#  updated_at :datetime
+#  id          :integer          not null, primary key
+#  name        :string(255)      not null
+#  is_taxi     :boolean          default(FALSE), not null
+#  country_id  :integer          not null
+#  created_at  :datetime
+#  updated_at  :datetime
+#  number_cars :integer          default(0), not null
 #
 # Indexes
 #
