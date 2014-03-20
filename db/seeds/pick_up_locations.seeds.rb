@@ -2113,6 +2113,97 @@ after :cities do
            {name:'Zdobnice', city: prague},
            {name:'Zlin', city: prague}
  ])
+  puts 'Cities of Egypt'
+  alexandria = City.find_by(name:'Alexandria')
+  aswan = City.find_by(name:'Aswan')
+  cairo = City.find_by(name:'Cairo')
+  dabaa = City.find_by(name:'Dabaa')
+  hurghada = City.find_by(name:'Hurghada')
+  luxor = City.find_by(name:'Luxor')
+  marsa = City.find_by(name:'Marsa Alam')
+  sharm = City.find_by(name:'Sharm El Sheikh')
+  taba = City.find_by(name:'Taba')
+  PickUpLocation.create([
+           {name:'Alexandria Airport', city: alexandria},
+           {name:'Marsa Matrouh', city: alexandria},
+           {name:'Alexandria City Centre', city: alexandria},
+           {name:'Aswan Airport', city: aswan},
+           {name:'Aswan Port', city: aswan},
+           {name:'Aswan', city: aswan},
+           {name:'Abu Simbel', city: aswan},
+           {name:'Cairo Airport', city: cairo},
+           {name:'Cairo City Centre', city: cairo},
+           {name:'Heliopolis', city: cairo},
+           {name:'Giza Hotels', city: cairo},
+           {name:'Ain El Sukhna', city: cairo},
+           {name:'El Alamein', city: cairo},
+           {name:'El Minia', city: cairo},
+           {name:'Ain El Sukhna', city: cairo},
+           {name:'Cairo City Centre', city: cairo},
+           {name:'El Alamein', city: cairo},
+           {name:'El Minia', city: cairo},
+           {name:'Giza Hotels', city: cairo},
+           {name:'Heliopolis', city: cairo},
+           {name:'Pyramids', city: cairo},
+           {name:'Zafarana', city: cairo},
+           {name:'Dabaa Alalamain Airport', city: dabaa},
+           {name:'Dabaa', city: dabaa},
+           {name:'Porto Marina El Alameen', city: dabaa},
+           {name:'Borg Al Arab', city: dabaa},
+           {name:'Matrouh', city: dabaa},
+           {name:'Hurghada Airport', city: hurghada},
+           {name:'Hurghada Port', city: hurghada},
+           {name:'Hurghada Hotels', city: hurghada},
+           {name:'El Gouna', city: hurghada},
+           {name:'Makhadi Bay', city: hurghada},
+           {name:'Soma Bay', city: hurghada},
+           {name:'Hamata', city: hurghada},
+           {name:'Sahl Hasheesh', city: hurghada},
+           {name:'Al Kosseir', city: hurghada},
+           {name:'Berenice', city: hurghada},
+           {name:'Caribbean World Soma Bay', city: hurghada},
+           {name:'Conrad Resort', city: hurghada},
+           {name:'Coral Beach', city: hurghada},
+           {name:'El Hamrawein', city: hurghada},
+           {name:'El Naaba', city: hurghada},
+           {name:'El Quseir', city: hurghada},
+           {name:'Hamata', city: hurghada},
+           {name:'Makhadi Bay', city: hurghada},
+           {name:'Ras Sadr', city: hurghada},
+           {name:'Safaga', city: hurghada},
+           {name:'Safaga Port', city: hurghada},
+           {name:'Luxor Airport', city: luxor},
+           {name:'Luxor Port', city: luxor},
+           {name:'Luxor Hotels', city: luxor},
+           {name:'Karnak', city: luxor},
+           {name:'Movenpick Joile Ville Luxor', city: luxor},
+           {name:'Marsa Alam Airport', city: marsa},
+           {name:'Marsa Alam', city: marsa},
+           {name:'Abu Dabbab', city: marsa},
+           {name:'Wadi Gimal', city: marsa},
+           {name:'Shams Alam', city: marsa},
+           {name:'Wadi Lahami', city: marsa},
+           {name:'Abu Dabbab', city: marsa},
+           {name:'Sharm El Sheikh Airport', city: sharm},
+           {name:'Nuweiba Port', city: sharm},
+           {name:'Sharm El Sheikh Port', city: sharm},
+           {name:'Sharm El Sheikh Hotels', city: sharm},
+           {name:'Sharks Bay', city: sharm},
+           {name:'Naama Bay', city: sharm},
+           {name:'Nabq Bay', city: sharm},
+           {name:'Dahab', city: sharm},
+           {name:'Om El Seid Hill', city: sharm},
+           {name:'Hadaba', city: sharm},
+           {name:'Neema Bay', city: sharm},
+           {name:'Nuweiba', city: sharm},
+           {name:'Ras Nasrani', city: sharm},
+           {name:'Rus Um Shid', city: sharm},
+           {name:'St Catherine', city: sharm},
+           {name:'Taba Airport', city: taba},
+           {name:'Sinai Bay Club Med', city: taba},
+           {name:'Taba', city: taba}
+          ])
+
 
 
 end
