@@ -1269,37 +1269,6 @@ after :cities do
           {name:'Zamardi', city: budapest},
           {name:'Zanka', city: budapest}
         ])
-  puts 'Cities of Finland'
-  helsinki = City.find_by(name:'Helsinki')
-  PickUpLocation.create([
-          {name:'Helsinki Airport', city: helsinki},
-          {name:'Helsinki Cruise Port', city: helsinki},
-          {name:'Helsinki Train Station', city: helsinki},
-          {name:'Helsinki City Centre', city: helsinki},
-          {name:'Espoo', city: helsinki},
-          {name:'Tempere', city: helsinki},
-          {name:'Naantali', city: helsinki},
-          {name:'Vantaa', city: helsinki},
-          {name:'Turku', city: helsinki},
-          {name:'Dalsbruk', city: helsinki},
-          {name:'Espoo', city: helsinki},
-          {name:'Hamina', city: helsinki},
-          {name:'Hanko', city: helsinki},
-          {name:'Helsinki City Centre', city: helsinki},
-          {name:'Korpilampi', city: helsinki},
-          {name:'Kotka', city: helsinki},
-          {name:'Lahti', city: helsinki},
-          {name:'Lappeenranta', city: helsinki},
-          {name:'Loviisa', city: helsinki},
-          {name:'Mikkeli', city: helsinki},
-          {name:'Naantali', city: helsinki},
-          {name:'Pori', city: helsinki},
-          {name:'Porvoo', city: helsinki},
-          {name:'Taalindtehdas', city: helsinki},
-          {name:'Tempere', city: helsinki},
-          {name:'Turku', city: helsinki},
-          {name:'Vantaa', city: helsinki}
-        ])
   puts 'Cities of Belgium'
   antwerp = City.find_by(name:'Antwerp')
   bruges  = City.find_by(name:'Bruges')
@@ -2203,6 +2172,60 @@ after :cities do
            {name:'Sinai Bay Club Med', city: taba},
            {name:'Taba', city: taba}
           ])
+  puts 'Cities of Estonia'
+  tallinn = City.find_by(name:'Tallinn')
+  tartu = City.find_by(name:'Tartu')
+  PickUpLocation.create([
+           {name:'Tallinn Airport', city: tallinn},
+           {name:'Tallinn City Centre', city: tallinn},
+           {name:'Haapsalu', city: tallinn},
+           {name:'Parnu', city: tallinn},
+           {name:'Narva', city: tallinn},
+           {name:'Keila', city: tallinn},
+           {name:'Paldiski', city: tallinn},
+           {name:'Kehtna', city: tallinn},
+           {name:'Keila', city: tallinn},
+           {name:'Marjamaa', city: tallinn},
+           {name:'Tartu Airport', city: tartu},
+           {name:'Viljandi', city: tartu},
+           {name:'Tartu', city: tartu},
+           {name:'Otepaa', city: tartu},
+           {name:'Voru', city: tartu},
+           {name:'Valga', city: tartu},
+           {name:'Polva', city: tartu},
+           {name:'Elva', city: tartu}
+        ])
+  puts 'Cities of Finland'
+  helsinki = City.find_by(name:'Helsinki')
+  PickUpLocation.create([
+            {name:'Helsinki Airport', city: helsinki},
+            {name:'Helsinki Cruise Port', city: helsinki},
+            {name:'Helsinki Train Station', city: helsinki},
+            {name:'Helsinki City Centre', city: helsinki},
+            {name:'Espoo', city: helsinki},
+            {name:'Tempere', city: helsinki},
+            {name:'Naantali', city: helsinki},
+            {name:'Vantaa', city: helsinki},
+            {name:'Turku', city: helsinki},
+            {name:'Dalsbruk', city: helsinki},
+            {name:'Espoo', city: helsinki},
+            {name:'Hamina', city: helsinki},
+            {name:'Hanko', city: helsinki},
+            {name:'Helsinki City Centre', city: helsinki},
+            {name:'Korpilampi', city: helsinki},
+            {name:'Kotka', city: helsinki},
+            {name:'Lahti', city: helsinki},
+            {name:'Lappeenranta', city: helsinki},
+            {name:'Loviisa', city: helsinki},
+            {name:'Mikkeli', city: helsinki},
+            {name:'Naantali', city: helsinki},
+            {name:'Pori', city: helsinki},
+            {name:'Porvoo', city: helsinki},
+            {name:'Taalindtehdas', city: helsinki},
+            {name:'Tempere', city: helsinki},
+            {name:'Turku', city: helsinki},
+            {name:'Vantaa', city: helsinki}
+  ])
 
 
 
