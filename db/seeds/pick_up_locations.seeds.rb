@@ -1760,8 +1760,7 @@ after :cities do
             {name:'Zamardi', city: budapest},
             {name:'Zanka', city: budapest}
     ])
-  puts 'Cities of Italy'
-  puts 'Cities of France'
+  puts 'Cities of Italy - TODO'
   puts 'Cities of Latvia'
   liepaja = City.find_by(name:'Liepaja')
   riga = City.find_by(name:'Riga')
@@ -1784,7 +1783,34 @@ after :cities do
             {name:'Valmiera', city: riga},
             {name:'Smiltene', city: riga}
   ])
-  puts 'Cities of Lithuania - TODO'
+  puts 'Cities of Lithuania'
+  kaunas = City.find_by(name:'Kaunas')
+  palanga = City.find_by(name:'Palanga')
+  vilnius = City.find_by(name:'Vilnius')
+  PickUpLocation.create([
+            {name:'Kaunas Airport', city: kaunas},
+            {name:'Kaunas', city: kaunas},
+            {name:'Marijampole', city: kaunas},
+            {name:'Siauliai', city: kaunas},
+            {name:'Panevezys', city: kaunas},
+            {name:'Utena', city: kaunas},
+            {name:'Jonava', city: kaunas},
+            {name:'Palanga Airport', city: palanga},
+            {name:'Klaipeda', city: palanga},
+            {name:'Rietavas', city: palanga},
+            {name:'Palanga', city: palanga},
+            {name:'Mazeikiai', city: palanga},
+            {name:'Plunge', city: palanga},
+            {name:'Vilnius Airport', city: vilnius},
+            {name:'Vilnius City Centre', city: vilnius},
+            {name:'Radviliskis', city: vilnius},
+            {name:'Trakai', city: vilnius},
+            {name:'Elektrenai', city: vilnius},
+            {name:'Varena', city: vilnius},
+            {name:'Ukmerge', city: vilnius},
+            {name:'Druskinikai', city: vilnius},
+            {name:'Pakruojis', city: vilnius}
+          ])
   puts 'Cities of Luxembourg'
   luxembourg = City.find_by(name: 'Luxembourg')
   PickUpLocation.create([
