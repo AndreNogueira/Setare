@@ -1977,8 +1977,7 @@ after :cities do
           {name:'Poortugaal', city: rotterdam},
           {name:'Alphen aan den Rijn', city: rotterdam},
           {name:'Woerden', city: rotterdam}
-
-])
+        ])
   puts 'Cities of Norway'
   oslo = City.find_by(name:'Oslo')
   PickUpLocation.create([
@@ -2263,7 +2262,17 @@ after :cities do
             {name:'Viseu', city: porto}
         ])
   puts 'Cities of Romania - TODO'
-  puts 'Cities of Russia - TODO'
+  puts 'Cities of Russia'
+  moscow = City.find_by(name:'Moscow')
+  petersburg = City.find_by(name:'Saint Petersburg')
+  PickUpLocation.create([
+            {name:'Moscow Domodedovo Airport', city: moscow},
+            {name:'Moscow Sheremetyevo Airport', city: moscow},
+            {name:'Moscow Vnukovo Airport', city: moscow},
+            {name:'Moscow City Centre', city: moscow},
+            {name:'Pulkovo Airport', city: petersburg},
+            {name:'Saint Petersburg', city: petersburg}
+          ])
   puts 'Cities of Serbia'
   belgrade = City.find_by(name:'Belgrade')
   PickUpLocation.create([
