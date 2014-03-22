@@ -1,6 +1,6 @@
 class PickUpLocationTaxi < ActiveRecord::Migration
   def change
-    create_table :pick_up_location_taxi, id: false do |t|
+    create_table :pick_up_locations_taxis, id: false do |t|
       t.integer :pick_up_location_id, null:false
       t.foreign_key :pick_up_locations, dependent: :delete
 
