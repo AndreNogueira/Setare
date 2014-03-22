@@ -3021,7 +3021,7 @@ after :cities do
             {name:'Zurich Baden', city: zurich},
             {name:'Zurich City Centre', city: zurich}
           ])
-  puts 'Cities of Turkey - TODO'
+  puts 'Cities of Turkey'
   ankara = City.find_by(name:'Ankara')
   antalya = City.find_by(name:'Antalya')
   bodrum = City.find_by(name:'Bodrum')
