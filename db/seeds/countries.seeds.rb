@@ -1,3 +1,4 @@
+puts '--------- Begin of Country Seeds File ---------'
 Country.create([
                    { name: 'Albania' },
                    { name: 'Andorra' },
@@ -167,3 +168,4 @@ Country.create([
                    { name: 'Zimbabwe' },
                    { name: 'Netherlands'}
                ])
+puts '--------- End of Country Seeds File -----------'

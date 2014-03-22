@@ -14,6 +14,8 @@ class DropOffLocation < ActiveRecord::Base
   has_and_belongs_to_many :pick_up_locations
 
   # Scopes
+  default_scope {order('name ASC')}
+
   # Class Methods
   # Validations
   validates :name, presence: true

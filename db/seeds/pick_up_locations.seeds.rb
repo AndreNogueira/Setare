@@ -1,5 +1,5 @@
 after :cities do
-
+  puts '--------- Begin of Pick Up Locations Seeds File ---------'
   puts 'Cities of Austria'
   innsbruck = City.find_by(name: 'Innsbruck')
   klagenfurt = City.find_by(name: 'Klagenfurt')
@@ -3787,6 +3787,5 @@ after :cities do
             {name:'Wrexham', city: manchester},
             {name:'York', city: manchester}
           ])
-
-
+  puts '--------- End of Pick Up Locations Seeds File -----------'
 end
