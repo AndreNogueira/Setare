@@ -195,7 +195,6 @@ after :countries do
                 {name: 'Dalaman', is_taxi:true, country: turkey},
                 {name: 'Istanbul', is_taxi:true, country: turkey},
                 {name: 'Izmir', is_taxi:true, country: turkey},
-                {name: 'Samsun', is_taxi:true, country: turkey},
                 {name: 'Birmingham', is_taxi:true, country: uk},
                 {name: 'Bristol', is_taxi:true, country: uk},
                 {name: 'Edinburgh', is_taxi:true, country: uk},
