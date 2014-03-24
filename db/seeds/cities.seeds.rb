@@ -176,7 +176,6 @@ after :countries do
                 {name: 'Gran Canaria', is_taxi:true, country: spain},
                 {name: 'Madrid', is_taxi:true, country: spain},
                 {name: 'Malaga', is_taxi:true, country: spain},
-                {name: 'Menorca', is_taxi:true, country: spain},
                 {name: 'Murcia', is_taxi:true, country: spain},
                 {name: 'San Sebastian', is_taxi:true, country: spain},
                 {name: 'Santander', is_taxi:true, country: spain},
