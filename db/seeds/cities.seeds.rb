@@ -106,7 +106,6 @@ after :countries do
                 {name: 'Paros', is_taxi:true, country: greece},
                 {name: 'Rhodes', is_taxi:true, country: greece},
                 {name: 'Santorini', is_taxi:true, country: greece},
-                {name: 'Thessaloniki', is_taxi:true, country: greece},
                 {name: 'Zakynthos', is_taxi:true, country: greece},
                 {name: 'Budapest', is_taxi:true, country: hungary},
                 {name: 'Alghero', is_taxi:true, country: italy},
