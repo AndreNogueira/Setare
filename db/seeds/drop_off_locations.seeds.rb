@@ -1628,6 +1628,202 @@ after :pick_up_locations do
     aux.pick_up_locations << pick_ups[3]
   end
 
+  puts 'Pick Up Locations for Poznan'
+  pick_ups = City.find_by(name: 'Poznan').pick_up_locations.reorder('id asc')
+  ['Poznan City Centre','Buk','Czaplinek','Konin'].each do |drop_off|
+    aux = DropOffLocation.find_or_create_by(name: drop_off)
+    aux.pick_up_locations << pick_ups[0]
+  end
+
+  ['Poznan Airport'].each do |drop_off|
+    aux = DropOffLocation.find_or_create_by(name: drop_off)
+    aux.pick_up_locations << pick_ups[1]
+  end
+
+  ['Poznan Airport'].each do |drop_off|
+    aux = DropOffLocation.find_or_create_by(name: drop_off)
+    aux.pick_up_locations << pick_ups[2]
+  end
+
+  ['Gdansk Airport','Modlin Airport','Poznan Airport','Warsaw Airport','Wroclaw Airport','Gdansk City Centre','Wroclaw City Centre'].each do |drop_off|
+    aux = DropOffLocation.find_or_create_by(name: drop_off)
+    aux.pick_up_locations << pick_ups[3]
+  end
+
+  puts 'Pick Up Locations for Perpignan'
+  pick_ups = City.find_by(name: 'Perpignan').pick_up_locations.reorder('id asc')
+  ['Pau Airport','Toulouse Airport','Pau'].each do |drop_off|
+    aux = DropOffLocation.find_or_create_by(name: drop_off)
+    aux.pick_up_locations << pick_ups[0]
+  end
+
+  ['Toulouse Airport'].each do |drop_off|
+    aux = DropOffLocation.find_or_create_by(name: drop_off)
+    aux.pick_up_locations << pick_ups[1]
+  end
+
+  ['Girona Airport'].each do |drop_off|
+    aux = DropOffLocation.find_or_create_by(name: drop_off)
+    aux.pick_up_locations << pick_ups[2]
+  end
+
+  ['Barcelona Airport','Girona Airport','Barcelona Cruise Port','Barcelona City Centre','Girona City Centre'].each do |drop_off|
+    aux = DropOffLocation.find_or_create_by(name: drop_off)
+    aux.pick_up_locations << pick_ups[3]
+  end
+
+  puts 'Pick Up Locations for Portoroz'
+  pick_ups = City.find_by(name: 'Portoroz').pick_up_locations.reorder('id asc')
+  ['Ljubljana Airport','Ljubljana City Centre'].each do |drop_off|
+    aux = DropOffLocation.find_or_create_by(name: drop_off)
+    aux.pick_up_locations << pick_ups[0]
+  end
+
+  ['Ljubljana Airport','Ljubljana City Centre'].each do |drop_off|
+    aux = DropOffLocation.find_or_create_by(name: drop_off)
+    aux.pick_up_locations << pick_ups[1]
+  end
+
+  ['Ljubljana Airport','Ljubljana City Centre'].each do |drop_off|
+    aux = DropOffLocation.find_or_create_by(name: drop_off)
+    aux.pick_up_locations << pick_ups[2]
+  end
+
+  ['Ljubljana Airport','Split Airport','Treviso Airport','Venice Airport','Zadar Airport','Zagreb Airport','Baden','Baska Voda','Biograd','Bled','Bohinj','Bovec','Bregenz','Brezice','Brodarica','Cateske Toplice','Celje','Crikvenica','Crnomelj','Domzale','Dravograd','Dubrovnik City Centre','Feldkirch','Gorizia','Gornja Radgona','Graz','Grosuplje','Idrija','Innsbruck City Centre','Jesenice','Kamnik','Klagenfurt City Centre','Kocevje','Kostanjevica na Krki','Kranj','Kranjska Gora','Krk','Krsko','Lasko','Lenart','Lendava','Litija','Ljubljana City Centre','Ljutomer','Logatec','Makarska','Mali Losinj','Maria Worth','Maribor','Medvode','Menges','Metlika','Mezica','Modena','Murska Sobota','Murter','Nova Gorica','Novo Mesto','Ormoz','Osijek City Centre','Pag','Plitvice Lakes','Ptuj','Radece','Radovljica','Ravne na Koroskem','Rogaska Slatina','Salzburg City Centre','Sempeter pri Gorici','Senj','Sentjur','Sevnica','Sibenik','Skofja Loka','Slovenj Gradec','Slovenska Bistrica','Slovenske Konjice','Sostanj','Split City Centre','St Polten','Tolmin','Trbovlje','Trebnje','Treviso City Centre','Trogir','Trzic','Udine','Velenje','Venice Piazzale Roma','Vienna City Centre','Villach','Visnja Gora','Vrhnika','Zadar City Centre','Zagorje ob Savi','Zagreb City Centre','Zalec','Zelezniki','Ziri'].each do |drop_off|
+    aux = DropOffLocation.find_or_create_by(name: drop_off)
+    aux.pick_up_locations << pick_ups[3]
+  end
+
+  puts 'Pick Up Locations for Cannes'
+  pick_ups = City.find_by(name: 'Cannes').pick_up_locations.reorder('id asc')
+  ['Nice Airport'].each do |drop_off|
+    aux = DropOffLocation.find_or_create_by(name: drop_off)
+    aux.pick_up_locations << pick_ups[0]
+  end
+
+  ['Bergamo Airport','Marseille Airport','Nice Airport','Marseille City Centre','Nice City Centre'].each do |drop_off|
+    aux = DropOffLocation.find_or_create_by(name: drop_off)
+    aux.pick_up_locations << pick_ups[1]
+  end
+
+  ['Nice Airport'].each do |drop_off|
+    aux = DropOffLocation.find_or_create_by(name: drop_off)
+    aux.pick_up_locations << pick_ups[2]
+  end
+
+  ['Nice Airport'].each do |drop_off|
+    aux = DropOffLocation.find_or_create_by(name: drop_off)
+    aux.pick_up_locations << pick_ups[3]
+  end
+
+  puts 'Pick Up Locations for Katowice'
+  pick_ups = City.find_by(name: 'Katowice').pick_up_locations.reorder('id asc')
+  ['Warsaw Airport','Wroclaw Airport','Czestochowa','Banska Bystrica','Bedrichov','Benecko','Bialka Tatrzanska','Biele Vody nad Hrinova','Bielsko Biala','Bila','Bochnia','Brzesko','Budapest City Centre','Bukowina Tatrzanska','Celadna','Cenkovice','Cervenohorske Sedlo','Chocholow','Cieszyn','Czarna Gora','Dubovica Zliabky','Gliczarow Gorny','Harrachov','High Tatras','Janske Lazne','Jurgow','Karpacz','Kielce','Korbielow','Korenov','Koscielisko','Krakow City Centre','Krakow Nowa Huta','Krompachy','Krosno','Krynica','Kubinska Hola','Lanov','Liptovska Teplicka','Liptovske Jan','Lodz','Lublin','Lubochna','Makov','Mala Moravka','Mala Upa','Male Ciche','Martinske Hole','Medvedin','Mlynky','Murzasichle','Myto pod Dumbierom','Niepolomice','Nowy Sacz','Opole','Oscadnica','Ostruzna','Paseky nad Jizerou','Pec pod Snezkou','Plejsy','Podbanske','Podhale','Poprad','Poronin','Poruba','Przemysl','Rabka','Rackova Dolina','Radom','Regetovka','Rokytnice nad Jizerou','Rzeszow','Sanok','Semily','Severak','Siepraw','Skalite Serafinov','Spindleruv Mlyn','Stary Smokovec','Strazne','Svetla pod Jestedem','Svit','Svoboda nad Upou','Szczyrk','Tarnow','Telgart','Teplica','Trojanovice','Turany','Turcianske Klacany','Utekac','Velka Raca','Vernar','Vitkovice','Vratna','Vrbno pod Pradedem','Vrchlabi','Vrutky','Vysne Ruzbachy','Warsaw City Centre','Wisla','Witow','Wroclaw City Centre','Zakopane','Zavada','Zawoja','Zdiar','Zdobnice','Zielona Gora'].each do |drop_off|
+    aux = DropOffLocation.find_or_create_by(name: drop_off)
+    aux.pick_up_locations << pick_ups[0]
+  end
+
+  ['Gdansk Airport','Katowice Airport','Krakow Balice Airport','Modlin Airport','Warsaw Airport','Wroclaw Airport','Czestochowa','Gdansk City Centre','Katowice City Centre','Krakow City Centre','Wroclaw City Centre'].each do |drop_off|
+    aux = DropOffLocation.find_or_create_by(name: drop_off)
+    aux.pick_up_locations << pick_ups[1]
+  end
+
+  ['Krakow Balice Airport','Krakow City Centre'].each do |drop_off|
+    aux = DropOffLocation.find_or_create_by(name: drop_off)
+    aux.pick_up_locations << pick_ups[2]
+  end
+
+  ['Bratislava Airport','Gdansk Airport','Krakow Balice Airport','Vienna Airport','Warsaw Airport','Wroclaw Airport','Czestochowa','Banska Bystrica','Bedrichov','Benecko','Bialka Tatrzanska','Biele Vody nad Hrinova','Bielsko Biala','Bila','Bochnia','Brzesko','Budapest City Centre','Bukowina Tatrzanska','Celadna','Cenkovice','Cervenohorske Sedlo','Chocholow','Cieszyn','Czarna Gora','Dubovica Zliabky','Gdansk City Centre','Gliczarow Gorny','Harrachov','High Tatras','Janske Lazne','Jurgow','Karpacz','Kielce','Korbielow','Korenov','Koscielisko','Krakow City Centre','Krakow Nowa Huta','Krompachy','Krosno','Krynica','Kubinska Hola','Lanov','Liptovska Teplicka','Liptovske Jan','Lodz','Lublin','Lubochna','Makov','Mala Moravka','Mala Upa','Male Ciche','Martinske Hole','Medvedin','Mlynky','Murzasichle','Myto pod Dumbierom','Niepolomice','Nowy Sacz','Opole','Oscadnica','Ostruzna','Paseky nad Jizerou','Pec pod Snezkou','Plejsy','Podbanske','Podhale','Poprad','Poronin','Poruba','Przemysl','Rabka','Rackova Dolina','Radom','Regetovka','Rokytnice nad Jizerou','Rzeszow','Sanok','Semily','Severak','Siepraw','Skalite Serafinov','Spindleruv Mlyn','Stary Smokovec','Strazne','Svetla pod Jestedem','Svit','Svoboda nad Upou','Szczyrk','Tarnow','Telgart','Teplica','Trojanovice','Turany','Turcianske Klacany','Utekac','Velka Raca','Vernar','Vienna City Centre','Vitkovice','Vratna','Vrbno pod Pradedem','Vrchlabi','Vrutky','Vysne Ruzbachy','Warsaw City Centre','Wisla','Witow','Wroclaw City Centre','Zakopane','Zavada','Zawoja','Zdiar','Zdobnice'].each do |drop_off|
+    aux = DropOffLocation.find_or_create_by(name: drop_off)
+    aux.pick_up_locations << pick_ups[3]
+  end
+
+  ['Krakow Balice Airport','Krakow City Centre'].each do |drop_off|
+    aux = DropOffLocation.find_or_create_by(name: drop_off)
+    aux.pick_up_locations << pick_ups[4]
+  end
+
+  puts 'Pick Up Locations for Brescia'
+  pick_ups = City.find_by(name: 'Brescia').pick_up_locations.reorder('id asc')
+  ['Milan Linate Airport','Milan Malpensa Airport','Verona Airport','Milan Train Station','Livigno','Milan City Centre','St Moritz'].each do |drop_off|
+    aux = DropOffLocation.find_or_create_by(name: drop_off)
+    aux.pick_up_locations << pick_ups[0]
+  end
+
+  ['Bergamo Airport'].each do |drop_off|
+    aux = DropOffLocation.find_or_create_by(name: drop_off)
+    aux.pick_up_locations << pick_ups[1]
+  end
+
+  ['Bergamo Airport'].each do |drop_off|
+    aux = DropOffLocation.find_or_create_by(name: drop_off)
+    aux.pick_up_locations << pick_ups[2]
+  end
+
+  ['Bergamo Airport','Milan Linate Airport','Milan Malpensa Airport','Verona Airport','Milan Train Station','Livigno','Milan City Centre','St Moritz'].each do |drop_off|
+    aux = DropOffLocation.find_or_create_by(name: drop_off)
+    aux.pick_up_locations << pick_ups[3]
+  end
+
+  ['Verona Airport'].each do |drop_off|
+    aux = DropOffLocation.find_or_create_by(name: drop_off)
+    aux.pick_up_locations << pick_ups[4]
+  end
+
+  puts 'Pick Up Locations for Ancona'
+  pick_ups = City.find_by(name: 'Ancona').pick_up_locations.reorder('id asc')
+  ['Bologna Airport','Parma Airport','Pisa Airport','Livorno Cruise Port','Bergamo City Centre','Bologna City Centre','Brescia','Cremona','Faenza','Ferrara','Florence City Centre','La Spezia','Lodi','Lucca','Mantova','Milan City Centre','Modena','Padova','Parma','Pavia','Piacenza','Pisa City Centre','Pistoia','Pordenone','Prato','Ravenna','Reggio Emilia','Rovigo','Sondrio','Trento','Treviso City Centre','Venice Piazzale Roma','Verona City Centre','Vicenza'].each do |drop_off|
+    aux = DropOffLocation.find_or_create_by(name: drop_off)
+    aux.pick_up_locations << pick_ups[0]
+  end
+
+  ['Bologna Airport','Parma Airport','Pisa Airport','Rimini Airport','Rome Ciampino Airport','Rome Fiumicino Airport','Livorno Cruise Port','Bergamo City Centre','Bologna City Centre','Brescia','Cremona','Faenza','Ferrara','Florence City Centre','La Spezia','Lodi','Lucca','Mantova','Milan City Centre','Modena','Padova','Parma','Pavia','Piacenza','Pisa City Centre','Pistoia','Pordenone','Prato','Ravenna','Reggio Emilia','Rimini','Rome City Centre','Rovigo','Sondrio','Trento','Treviso City Centre','Venice Piazzale Roma','Verona City Centre','Vicenza'].each do |drop_off|
+    aux = DropOffLocation.find_or_create_by(name: drop_off)
+    aux.pick_up_locations << pick_ups[1]
+  end
+
+  ['Forli Airport','Rimini Airport','Forli','Rimini'].each do |drop_off|
+    aux = DropOffLocation.find_or_create_by(name: drop_off)
+    aux.pick_up_locations << pick_ups[2]
+  end
+
+  ['Bologna Airport','Forli Airport','Rimini Airport','Bologna City Centre','Forli','Rimini'].each do |drop_off|
+    aux = DropOffLocation.find_or_create_by(name: drop_off)
+    aux.pick_up_locations << pick_ups[3]
+  end
+
+  ['Bologna Airport','Forli Airport','Rimini Airport','Bologna City Centre','Forli','Rimini'].each do |drop_off|
+    aux = DropOffLocation.find_or_create_by(name: drop_off)
+    aux.pick_up_locations << pick_ups[4]
+  end
+
+  puts 'Pick Up Locations for Bruges'
+  pick_ups = City.find_by(name: 'Bruges').pick_up_locations.reorder('id asc')
+  ['Bruges City Centre'].each do |drop_off|
+    aux = DropOffLocation.find_or_create_by(name: drop_off)
+    aux.pick_up_locations << pick_ups[0]
+  end
+
+  ['Brussels Airport'].each do |drop_off|
+    aux = DropOffLocation.find_or_create_by(name: drop_off)
+    aux.pick_up_locations << pick_ups[1]
+  end
+
+  ['Brussels Airport','Charleroi Airport','Brussels Midi Train Station','Bruges City Centre','Zeebruges','Brussels City Centre','Sluis'].each do |drop_off|
+    aux = DropOffLocation.find_or_create_by(name: drop_off)
+    aux.pick_up_locations << pick_ups[2]
+  end
+
+  ['Amsterdam Schiphol Airport','Bruges Airport','Brussels Airport','Charleroi Airport','Paris Charles de Gaulle Airport','Bruges Train Station','Brussels Midi Train Station','Bruges City Centre','Amsterdam City Centre','Antwerp City Centre','Brussels City Centre','Calais','Diksmuide','Ghent','Lille Airport','Lille City Centre','Paris City Centre','Tilburg','Zeebruges'].each do |drop_off|
+    aux = DropOffLocation.find_or_create_by(name: drop_off)
+    aux.pick_up_locations << pick_ups[3]
+  end
+
+  ['Brussels Airport','Bruges Train Station','Brussels Midi Train Station','Bruges City Centre','Bruges City Centre'].each do |drop_off|
+    aux = DropOffLocation.find_or_create_by(name: drop_off)
+    aux.pick_up_locations << pick_ups[4]
+  end
+
   puts 'Pick Up Locations for Funchal'
   funchal_pick_up = City.find_by(name: 'Funchal').pick_up_locations.reorder('id asc')
   ['Funchal City Centre', 'Santa Cruz Funchal', 'Machico', 'Canico', 'Ribeira Brava', 'Calheta', 'Boaventura', 'Calheta',

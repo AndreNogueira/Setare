@@ -45,6 +45,8 @@ gem 'seedbank'
 #
 gem 'andand', '~> 1.3.3'
 
+# ActiveRecord-Import. Read More: https://github.com/zdennis/activerecord-import
+gem 'activerecord-import', '~> 0.5.0'
 
 # Read more: https://github.com/plataformatec/devise
 gem 'devise'
