@@ -1,1091 +1,1090 @@
 after :cities do
   puts '--------- Begin of Pick Up Locations Seeds File ---------'
+  pick_up_locations = []
   puts 'Cities of Austria'
   innsbruck = City.find_by(name: 'Innsbruck')
   klagenfurt = City.find_by(name: 'Klagenfurt')
   salzburg = City.find_by(name: 'Salzburg')
   vienna = City.find_by(name: 'Vienna')
-  PickUpLocation.create([
-      {name:'Innsbruck Airport',city:innsbruck},
-      {name:'Innsbruck Train Station',city:innsbruck},
-      {name:'Absam',city:innsbruck},
-      {name:'Achenkirch',city:innsbruck},
-      {name:'Affenhausen',city:innsbruck},
-      {name:'Alberschwende',city:innsbruck},
-      {name:'Alpbach',city:innsbruck},
-      {name:'Andelsbuch',city:innsbruck},
-      {name:'Arzl im Pitztal',city:innsbruck},
-      {name:'Aschau im Zillertal',city:innsbruck},
-      {name:'Au',city:innsbruck},
-      {name:'Auffach',city:innsbruck},
-      {name:'Aurach bei Kitzbuhel',city:innsbruck},
-      {name:'Axamer Lizum',city:innsbruck},
-      {name:'Axams',city:innsbruck},
-      {name:'Bad Haring',city:innsbruck},
-      {name:'Berwang',city:innsbruck},
-      {name:'Biberwier',city:innsbruck},
-      {name:'Bichlbach',city:innsbruck},
-      {name:'Birgitz',city:innsbruck},
-      {name:'Bizau',city:innsbruck},
-      {name:'Bludenz',city:innsbruck},
-      {name:'Brand',city:innsbruck},
-      {name:'Brandenberg',city:innsbruck},
-      {name:'Bregenz',city:innsbruck},
-      {name:'Brennerpass',city:innsbruck},
-      {name:'Brixen im Thale',city:innsbruck},
-      {name:'Brixlegg',city:innsbruck},
-      {name:'Bruck am Ziller',city:innsbruck},
-      {name:'Burserberg',city:innsbruck},
-      {name:'Dalaas',city:innsbruck},
-      {name:'Damuels',city:innsbruck},
-      {name:'Dirschenbach',city:innsbruck},
-      {name:'Dornbirn',city:innsbruck},
-      {name:'Ebbs',city:innsbruck},
-      {name:'Eben am Achensee',city:innsbruck},
-      {name:'Ehrwald',city:innsbruck},
-      {name:'Eigenhofen',city:innsbruck},
-      {name:'Elblingenalp',city:innsbruck},
-      {name:'Ellmau',city:innsbruck},
-      {name:'Elmen',city:innsbruck},
-      {name:'Erl',city:innsbruck},
-      {name:'Erpfendorf',city:innsbruck},
-      {name:'Faschina',city:innsbruck},
-      {name:'Feldkirch',city:innsbruck},
-      {name:'Fernpass',city:innsbruck},
-      {name:'Fieberbrunn',city:innsbruck},
-      {name:'Fiecht',city:innsbruck},
-      {name:'Finkenberg',city:innsbruck},
-      {name:'Fiss',city:innsbruck},
-      {name:'Flaurling',city:innsbruck},
-      {name:'Fliess',city:innsbruck},
-      {name:'Flirsch',city:innsbruck},
-      {name:'Fontanella',city:innsbruck},
-      {name:'Frohnhausen',city:innsbruck},
-      {name:'Fugen',city:innsbruck},
-      {name:'Fulpmes',city:innsbruck},
-      {name:'Galtuer',city:innsbruck},
-      {name:'Galtur',city:innsbruck},
-      {name:'Gargellen',city:innsbruck},
-      {name:'Gerlos',city:innsbruck},
-      {name:'Gnadenwald',city:innsbruck},
-      {name:'Going am Wilden Kaiser',city:innsbruck},
-      {name:'Gotzens',city:innsbruck},
-      {name:'Gotzis',city:innsbruck},
-      {name:'Gries Sellrain',city:innsbruck},
-      {name:'Gries am Brenner',city:innsbruck},
-      {name:'Grinzens',city:innsbruck},
-      {name:'Gschnitz',city:innsbruck},
-      {name:'Haiming',city:innsbruck},
-      {name:'Hall in Tirol',city:innsbruck},
-      {name:'Hatting',city:innsbruck},
-      {name:'Heiligenblut',city:innsbruck},
-      {name:'Heiterwang',city:innsbruck},
-      {name:'Hintertux',city:innsbruck},
-      {name:'Hippach',city:innsbruck},
-      {name:'Hochfilzen',city:innsbruck},
-      {name:'Hochfugen',city:innsbruck},
-      {name:'Hochgurgl',city:innsbruck},
-      {name:'Hochpillberg',city:innsbruck},
-      {name:'Hochzirl',city:innsbruck},
-      {name:'Hofen',city:innsbruck},
-      {name:'Hohenems',city:innsbruck},
-      {name:'Hopfgarten im Brixental',city:innsbruck},
-      {name:'Huben',city:innsbruck},
-      {name:'Igls',city:innsbruck},
-      {name:'Imst',city:innsbruck},
-      {name:'Innsbruck City Centre',city:innsbruck},
-      {name:'Inzing',city:innsbruck},
-      {name:'Ischgl',city:innsbruck},
-      {name:'Itter',city:innsbruck},
-      {name:'Jenbach',city:innsbruck},
-      {name:'Judenstein',city:innsbruck},
-      {name:'Jungholz',city:innsbruck},
-      {name:'Kaltenbach',city:innsbruck},
-      {name:'Kampl',city:innsbruck},
-      {name:'Kappl',city:innsbruck},
-      {name:'Karres',city:innsbruck},
-      {name:'Kaunertal',city:innsbruck},
-      {name:'Kauns',city:innsbruck},
-      {name:'Kelchsau',city:innsbruck},
-      {name:'Kematen',city:innsbruck},
-      {name:'Kirchberg in Tirol',city:innsbruck},
-      {name:'Kirchbichl',city:innsbruck},
-      {name:'Kitzbuhel',city:innsbruck},
-      {name:'Kleinwalsertal',city:innsbruck},
-      {name:'Klosterle',city:innsbruck},
-      {name:'Koessen',city:innsbruck},
-      {name:'Kolsass',city:innsbruck},
-      {name:'Konigsleiten',city:innsbruck},
-      {name:'Kossen',city:innsbruck},
-      {name:'Kramsach',city:innsbruck},
-      {name:'Krimml',city:innsbruck},
-      {name:'Krossbach',city:innsbruck},
-      {name:'Kufstein',city:innsbruck},
-      {name:'Kuhtai',city:innsbruck},
-      {name:'Kundl',city:innsbruck},
-      {name:'Ladis',city:innsbruck},
-      {name:'Landeck',city:innsbruck},
-      {name:'Lanersbach',city:innsbruck},
-      {name:'Langen am Arlberg',city:innsbruck},
-      {name:'Langenfeld',city:innsbruck},
-      {name:'Lans',city:innsbruck},
-      {name:'Laterns',city:innsbruck},
-      {name:'Lech',city:innsbruck},
-      {name:'Lech am Arlberg',city:innsbruck},
-      {name:'Leiblfing',city:innsbruck},
-      {name:'Leithen',city:innsbruck},
-      {name:'Lermoos',city:innsbruck},
-      {name:'Leutasch',city:innsbruck},
-      {name:'Lienz',city:innsbruck},
-      {name:'Lofer',city:innsbruck},
-      {name:'Lusens',city:innsbruck},
-      {name:'Lustenau',city:innsbruck},
-      {name:'Mathon',city:innsbruck},
-      {name:'Matrei am Brenner',city:innsbruck},
-      {name:'Matrei in Osttirol',city:innsbruck},
-      {name:'Maurach',city:innsbruck},
-      {name:'Mayrhofen',city:innsbruck},
-      {name:'Mellau',city:innsbruck},
-      {name:'Mieders',city:innsbruck},
-      {name:'Milders',city:innsbruck},
-      {name:'Mils bei Imst',city:innsbruck},
-      {name:'Mittelberg',city:innsbruck},
-      {name:'Mittersill',city:innsbruck},
-      {name:'Motz',city:innsbruck},
-      {name:'Munster Tirol',city:innsbruck},
-      {name:'Mutters',city:innsbruck},
-      {name:'Nassereth',city:innsbruck},
-      {name:'Natters',city:innsbruck},
-      {name:'Nauders',city:innsbruck},
-      {name:'Navis',city:innsbruck},
-      {name:'Neder',city:innsbruck},
-      {name:'Neu Gotzens',city:innsbruck},
-      {name:'Neukirchen am Grossvenediger',city:innsbruck},
-      {name:'Neustift im Stubaital',city:innsbruck},
-      {name:'Niederau',city:innsbruck},
-      {name:'Oberau Wildschonau',city:innsbruck},
-      {name:'Obergurgl',city:innsbruck},
-      {name:'Oberhofen',city:innsbruck},
-      {name:'Oberlech',city:innsbruck},
-      {name:'Obermieming',city:innsbruck},
-      {name:'Obernberg am Brenner',city:innsbruck},
-      {name:'Oberperfuss',city:innsbruck},
-      {name:'Obladis',city:innsbruck},
-      {name:'Obsteig',city:innsbruck},
-      {name:'Oetz',city:innsbruck},
-      {name:'Omes',city:innsbruck},
-      {name:'Partenen',city:innsbruck},
-      {name:'Patsch',city:innsbruck},
-      {name:'Pertisau',city:innsbruck},
-      {name:'Pettnau',city:innsbruck},
-      {name:'Pettnau am Arlberg',city:innsbruck},
-      {name:'Pfaffenhofen',city:innsbruck},
-      {name:'Pfons',city:innsbruck},
-      {name:'Pfunds',city:innsbruck},
-      {name:'Pians',city:innsbruck},
-      {name:'Pill',city:innsbruck},
-      {name:'Pitztal',city:innsbruck},
-      {name:'Plagne Montalbert',city:innsbruck},
-      {name:'Polling',city:innsbruck},
-      {name:'Prutz',city:innsbruck},
-      {name:'Radfeld',city:innsbruck},
-      {name:'Raggal',city:innsbruck},
-      {name:'Ramsau im Zillertal',city:innsbruck},
-      {name:'Ranggen',city:innsbruck},
-      {name:'Rankweil',city:innsbruck},
-      {name:'Rans',city:innsbruck},
-      {name:'Rattenberg',city:innsbruck},
-      {name:'Reith bei Seefeld',city:innsbruck},
-      {name:'Reith im Alpbachtal',city:innsbruck},
-      {name:'Reutte',city:innsbruck},
-      {name:'Ried im Zillertal',city:innsbruck},
-      {name:'Rietz',city:innsbruck},
-      {name:'Rinn',city:innsbruck},
-      {name:'Rotholz',city:innsbruck},
-      {name:'Rum',city:innsbruck},
-      {name:'Sankt Leonhard im Pitztal',city:innsbruck},
-      {name:'Sauttens',city:innsbruck},
-      {name:'Scharnitz',city:innsbruck},
-      {name:'Schattwald',city:innsbruck},
-      {name:'Schlitters',city:innsbruck},
-      {name:'Schmirn',city:innsbruck},
-      {name:'Schoenberg',city:innsbruck},
-      {name:'Schonwies',city:innsbruck},
-      {name:'Schrocken',city:innsbruck},
-      {name:'Schruns',city:innsbruck},
-      {name:'Schwarzenberg',city:innsbruck},
-      {name:'Schwaz',city:innsbruck},
-      {name:'See im Paznauntal',city:innsbruck},
-      {name:'Seefeld in Tirol',city:innsbruck},
-      {name:'Sellrain',city:innsbruck},
-      {name:'Serfaus',city:innsbruck},
-      {name:'Silbertal',city:innsbruck},
-      {name:'Sillian',city:innsbruck},
-      {name:'Silz',city:innsbruck},
-      {name:'Sistrans',city:innsbruck},
-      {name:'Solden',city:innsbruck},
-      {name:'Soll',city:innsbruck},
-      {name:'St Agatha',city:innsbruck},
-      {name:'St Anton am Arlberg',city:innsbruck},
-      {name:'St Christoph am Arlberg',city:innsbruck},
-      {name:'St Gallenkirch',city:innsbruck},
-      {name:'St Jakob am Arlberg',city:innsbruck},
-      {name:'St Johann in Tirol',city:innsbruck},
-      {name:'St Peter in Tirol',city:innsbruck},
-      {name:'St Sigmund im Sellrain',city:innsbruck},
-      {name:'Stams',city:innsbruck},
-      {name:'Stans',city:innsbruck},
-      {name:'Stanzach',city:innsbruck},
-      {name:'Steeg',city:innsbruck},
-      {name:'Steinach am Brenner',city:innsbruck},
-      {name:'Strass im Zillertal',city:innsbruck},
-      {name:'Strengen am Arlberg',city:innsbruck},
-      {name:'Stubaier Gletscher',city:innsbruck},
-      {name:'Stuben am Arlberg',city:innsbruck},
-      {name:'Stumm',city:innsbruck},
-      {name:'Tannheim',city:innsbruck},
-      {name:'Tarrenz',city:innsbruck},
-      {name:'Telfes',city:innsbruck},
-      {name:'Telfs',city:innsbruck},
-      {name:'Terfens',city:innsbruck},
-      {name:'Thaur',city:innsbruck},
-      {name:'Thiersee',city:innsbruck},
-      {name:'Trin',city:innsbruck},
-      {name:'Tschagguns',city:innsbruck},
-      {name:'Tulfes',city:innsbruck},
-      {name:'Tumpen',city:innsbruck},
-      {name:'Tux',city:innsbruck},
-      {name:'Uderns',city:innsbruck},
-      {name:'Umhausen',city:innsbruck},
-      {name:'Untermieming',city:innsbruck},
-      {name:'Vandans',city:innsbruck},
-      {name:'Vomperberg',city:innsbruck},
-      {name:'Waidring',city:innsbruck},
-      {name:'Walchsee',city:innsbruck},
-      {name:'Wald im Pinzgau',city:innsbruck},
-      {name:'Warth',city:innsbruck},
-      {name:'Wattens',city:innsbruck},
-      {name:'Weer',city:innsbruck},
-      {name:'Weissenmbach Lech',city:innsbruck},
-      {name:'Wenns',city:innsbruck},
-      {name:'Westendorf',city:innsbruck},
-      {name:'Wiesing',city:innsbruck},
-      {name:'Wildschonau Oberau',city:innsbruck},
-      {name:'Worgl',city:innsbruck},
-      {name:'Zams',city:innsbruck},
-      {name:'Zell am Ziller',city:innsbruck},
-      {name:'Zillertal',city:innsbruck},
-      {name:'Zirl',city:innsbruck},
-      {name:'Zurs',city:innsbruck},
-      {name:'Zwieselstein',city:innsbruck},
-      {name:'Klagenfurt Airport', city: klagenfurt},
-      {name:'Altenmarkt im Pongau', city: klagenfurt},
-      {name:'Katschberg', city: klagenfurt},
-      {name:'Bad Kleinkirchheim', city: klagenfurt},
-      {name:'Kotschach Mauthen', city: klagenfurt},
-      {name:'Maria Worth', city: klagenfurt},
-      {name:'Zauchensee', city: klagenfurt},
-      {name:'Annenheim', city: klagenfurt},
-      {name:'Arnoldstein', city: klagenfurt},
-      {name:'Bad Bleiberg', city: klagenfurt},
-      {name:'Bad St Leonhard im Lavanttal', city: klagenfurt},
-      {name:'Bleiburg', city: klagenfurt},
-      {name:'Bodensdorf', city: klagenfurt},
-      {name:'Dobriach', city: klagenfurt},
-      {name:'Drobollach', city: klagenfurt},
-      {name:'Ebene Reichenau', city: klagenfurt},
-      {name:'Egg am Faaker See', city: klagenfurt},
-      {name:'Eisentratten', city: klagenfurt},
-      {name:'Faak am See', city: klagenfurt},
-      {name:'Falkert', city: klagenfurt},
-      {name:'Feistritz ob Bleiburg', city: klagenfurt},
-      {name:'Feld am See', city: klagenfurt},
-      {name:'Feldkirchen in Karnten', city: klagenfurt},
-      {name:'Ferndorf', city: klagenfurt},
-      {name:'Finkenstein am Faaker See', city: klagenfurt},
-      {name:'Flattach', city: klagenfurt},
-      {name:'Frantschach', city: klagenfurt},
-      {name:'Fresach', city: klagenfurt},
-      {name:'Gerlitzen', city: klagenfurt},
-      {name:'Godersdorf', city: klagenfurt},
-      {name:'Goldeck', city: klagenfurt},
-      {name:'Heiligengeist', city: klagenfurt},
-      {name:'Hermagor', city: klagenfurt},
-      {name:'Innerkrems', city: klagenfurt},
-      {name:'Jenig', city: klagenfurt},
-      {name:'Kirchbach', city: klagenfurt},
-      {name:'Klagenfurt City Centre', city: klagenfurt},
-      {name:'Klippitztorl', city: klagenfurt},
-      {name:'Krumpendorf', city: klagenfurt},
-      {name:'Landskron', city: klagenfurt},
-      {name:'Latschach', city: klagenfurt},
-      {name:'Ledenitzen', city: klagenfurt},
-      {name:'Lendorf', city: klagenfurt},
-      {name:'Lieserbrucke', city: klagenfurt},
-      {name:'Malta', city: klagenfurt},
-      {name:'Mariahof', city: klagenfurt},
-      {name:'Millstatt', city: klagenfurt},
-      {name:'Nassfeld', city: klagenfurt},
-      {name:'Notsch im Gailtal', city: klagenfurt},
-      {name:'Obermillstatt', city: klagenfurt},
-      {name:'Obervellach', city: klagenfurt},
-      {name:'Ossiach', city: klagenfurt},
-      {name:'Patergassen', city: klagenfurt},
-      {name:'Portschach am Worthersee', city: klagenfurt},
-      {name:'Pressegger See', city: klagenfurt},
-      {name:'Radenthein', city: klagenfurt},
-      {name:'Ramingstein', city: klagenfurt},
-      {name:'Rattendorf', city: klagenfurt},
-      {name:'Reifnitz', city: klagenfurt},
-      {name:'Rennweg am Katschberg', city: klagenfurt},
-      {name:'Sattendorf', city: klagenfurt},
-      {name:'Schiefling am See', city: klagenfurt},
-      {name:'Seeboden', city: klagenfurt},
-      {name:'Spittal an der Drau', city: klagenfurt},
-      {name:'St  Michael im Lungau', city: klagenfurt},
-      {name:'St Kanzian am Klopeiner See', city: klagenfurt},
-      {name:'St Margarethen im Lungau', city: klagenfurt},
-      {name:'St Oswald', city: klagenfurt},
-      {name:'St Veit', city: klagenfurt},
-      {name:'Steindorf am Ossiacher See', city: klagenfurt},
-      {name:'Tamsweg', city: klagenfurt},
-      {name:'Trebesing', city: klagenfurt},
-      {name:'Tropolach', city: klagenfurt},
-      {name:'Turracher Hohe', city: klagenfurt},
-      {name:'Unzmarkt Frauenburg', city: klagenfurt},
-      {name:'Velden am Worther See', city: klagenfurt},
-      {name:'Verditz', city: klagenfurt},
-      {name:'Villach', city: klagenfurt},
-      {name:'Waidegg', city: klagenfurt},
-      {name:'Watschig', city: klagenfurt},
-      {name:'Salzburg Airport', city: salzburg},
-      {name:'Salzburg Train Station', city: salzburg},
-      {name:'Saalbach', city: salzburg},
-      {name:'Hinterglemm', city: salzburg},
-      {name:'Wagrain', city: salzburg},
-      {name:'Flachau', city: salzburg},
-      {name:'Bad Gastein', city: salzburg},
-      {name:'Zell am See', city: salzburg},
-      {name:'Abtenau', city: salzburg},
-      {name:'Achensee', city: salzburg},
-      {name:'Afritz am See', city: salzburg},
-      {name:'Aigen Schlaegl', city: salzburg},
-      {name:'Alpendorf', city: salzburg},
-      {name:'Altmunster', city: salzburg},
-      {name:'Andorf ', city: salzburg},
-      {name:'Annaberg im Lammatal', city: salzburg},
-      {name:'Ansfelden', city: salzburg},
-      {name:'Aschbach Markt', city: salzburg},
-      {name:'Aspach', city: salzburg},
-      {name:'Asten', city: salzburg},
-      {name:'Attersee', city: salzburg},
-      {name:'Bachmanning', city: salzburg},
-      {name:'Bad Aussee', city: salzburg},
-      {name:'Bad Goisern', city: salzburg},
-      {name:'Bad Hall', city: salzburg},
-      {name:'Bad Hofgastein', city: salzburg},
-      {name:'Bad Ischl', city: salzburg},
-      {name:'Bad Kreuzen', city: salzburg},
-      {name:'Bad Leonfelden', city: salzburg},
-      {name:'Bad Mitterndorf', city: salzburg},
-      {name:'Bad Schallerbach', city: salzburg},
-      {name:'Bad Vigaun', city: salzburg},
-      {name:'Baumkirchen', city: salzburg},
-      {name:'Bischofshofen', city: salzburg},
-      {name:'Blindenmarkt', city: salzburg},
-      {name:'Bramberg', city: salzburg},
-      {name:'Brand Nagelberg', city: salzburg},
-      {name:'Braunau', city: salzburg},
-      {name:'Breitenschuetzing', city: salzburg},
-      {name:'Bruck an der Grossglocknerstrasse', city: salzburg},
-      {name:'Buermoos', city: salzburg},
-      {name:'Burghausen', city: salzburg},
-      {name:'Dellach', city: salzburg},
-      {name:'Deutschlandsberg', city: salzburg},
-      {name:'Dienten', city: salzburg},
-      {name:'Dolsach', city: salzburg},
-      {name:'Donawitz', city: salzburg},
-      {name:'Donnersbachwald', city: salzburg},
-      {name:'Dorfbeuern', city: salzburg},
-      {name:'Dorfgastein', city: salzburg},
-      {name:'Ebelsberg', city: salzburg},
-      {name:'Eben im Pongau', city: salzburg},
-      {name:'Ebenau', city: salzburg},
-      {name:'Ebensee', city: salzburg},
-      {name:'Eberschwang', city: salzburg},
-      {name:'Eferding', city: salzburg},
-      {name:'Eggelsberg', city: salzburg},
-      {name:'Eisenerz', city: salzburg},
-      {name:'Engelhartszell', city: salzburg},
-      {name:'Enns', city: salzburg},
-      {name:'Eugendorf', city: salzburg},
-      {name:'Faistenau', city: salzburg},
-      {name:'Felbertauern', city: salzburg},
-      {name:'Feldbach', city: salzburg},
-      {name:'Ferleiten', city: salzburg},
-      {name:'Filzmoos', city: salzburg},
-      {name:'Fohnsdorf', city: salzburg},
-      {name:'Forstau', city: salzburg},
-      {name:'Frankenburg', city: salzburg},
-      {name:'Frankenmarkt', city: salzburg},
-      {name:'Friedburg', city: salzburg},
-      {name:'Fuerstenfeld', city: salzburg},
-      {name:'Fusch an der Grossglocknerstrasse', city: salzburg},
-      {name:'Fuschl', city: salzburg},
-      {name:'Gaishorn', city: salzburg},
-      {name:'Gallneukirchen', city: salzburg},
-      {name:'Gallspach', city: salzburg},
-      {name:'Geretsberg', city: salzburg},
-      {name:'Gerlos Pass', city: salzburg},
-      {name:'Gmuend', city: salzburg},
-      {name:'Gmunden', city: salzburg},
-      {name:'Goestling', city: salzburg},
-      {name:'Going', city: salzburg},
-      {name:'Goldegg', city: salzburg},
-      {name:'Golling', city: salzburg},
-      {name:'Gosau', city: salzburg},
-      {name:'Gossl', city: salzburg},
-      {name:'Gostling', city: salzburg},
-      {name:'Graukogel', city: salzburg},
-      {name:'Greifenburg', city: salzburg},
-      {name:'Grein', city: salzburg},
-      {name:'Grieskirchen', city: salzburg},
-      {name:'Grobming', city: salzburg},
-      {name:'Grodig', city: salzburg},
-      {name:'Grossarl', city: salzburg},
-      {name:'Grossgmain', city: salzburg},
-      {name:'Grossraming', city: salzburg},
-      {name:'Grossreifling', city: salzburg},
-      {name:'Grunau im Almtal', city: salzburg},
-      {name:'Grundlsee', city: salzburg},
-      {name:'Gundertshausen', city: salzburg},
-      {name:'Gunskirchen', city: salzburg},
-      {name:'Haag am Hausruck', city: salzburg},
-      {name:'Hagen Lofer', city: salzburg},
-      {name:'Hallein', city: salzburg},
-      {name:'Hallstatt', city: salzburg},
-      {name:'Haus im Ennstal', city: salzburg},
-      {name:'Hinterstoder', city: salzburg},
-      {name:'Hof bei Salzburg ', city: salzburg},
-      {name:'Hohentauren', city: salzburg},
-      {name:'Holzoster', city: salzburg},
-      {name:'Huettschlag', city: salzburg},
-      {name:'Irdning', city: salzburg},
-      {name:'Jochberg', city: salzburg},
-      {name:'Kals am Grossglockner', city: salzburg},
-      {name:'Kaprun', city: salzburg},
-      {name:'Kirchdorf an der Krems', city: salzburg},
-      {name:'Kirchdorf in Tirol', city: salzburg},
-      {name:'Kitzbuehel', city: salzburg},
-      {name:'Klagenfurt', city: salzburg},
-      {name:'Kleinarl', city: salzburg},
-      {name:'Knittelfeld', city: salzburg},
-      {name:'Koenigswiesen', city: salzburg},
-      {name:'Koppl', city: salzburg},
-      {name:'Kostendorf', city: salzburg},
-      {name:'Kuchl', city: salzburg},
-      {name:'Laakirchen', city: salzburg},
-      {name:'Lambach', city: salzburg},
-      {name:'Lammertal', city: salzburg},
-      {name:'Lamprechtshausen', city: salzburg},
-      {name:'Lenzing', city: salzburg},
-      {name:'Leoben', city: salzburg},
-      {name:'Leogang', city: salzburg},
-      {name:'Lessach', city: salzburg},
-      {name:'Liezen', city: salzburg},
-      {name:'Linz ', city: salzburg},
-      {name:'Lohnsburg', city: salzburg},
-      {name:'Maishofen', city: salzburg},
-      {name:'Mallnitz', city: salzburg},
-      {name:'Mandling', city: salzburg},
-      {name:'Manning', city: salzburg},
-      {name:'Marchtrenk', city: salzburg},
-      {name:'Maria Alm', city: salzburg},
-      {name:'Mariapfarr', city: salzburg},
-      {name:'Mattighofen', city: salzburg},
-      {name:'Mattsee', city: salzburg},
-      {name:'Mauerkirchen', city: salzburg},
-      {name:'Mauterndorf', city: salzburg},
-      {name:'Mauthausen', city: salzburg},
-      {name:'Mettmach', city: salzburg},
-      {name:'Michaelbeuern', city: salzburg},
-      {name:'Micheldorf', city: salzburg},
-      {name:'Mondsee', city: salzburg},
-      {name:'Moosdorf', city: salzburg},
-      {name:'Muenzkirchen', city: salzburg},
-      {name:'Muhlbach am Hochkonig', city: salzburg},
-      {name:'Munderfing', city: salzburg},
-      {name:'Murau', city: salzburg},
-      {name:'Neumarkt am Wallersee', city: salzburg},
-      {name:'Niederalm', city: salzburg},
-      {name:'Niederndorf', city: salzburg},
-      {name:'Niedernsill', city: salzburg},
-      {name:'Nussdorf am Attersee', city: salzburg},
-      {name:'Nussdorf am Haunsberg', city: salzburg},
-      {name:'Obernberg am Inn', city: salzburg},
-      {name:'Oberndorf bei Salzburg', city: salzburg},
-      {name:'Oberndorf in Tirol', city: salzburg},
-      {name:'Obertauern', city: salzburg},
-      {name:'Obertilliach', city: salzburg},
-      {name:'Obertraun', city: salzburg},
-      {name:'Obertrum', city: salzburg},
-      {name:'Offenhausen', city: salzburg},
-      {name:'Ostermiething', city: salzburg},
-      {name:'Ottensheim', city: salzburg},
-      {name:'Perg', city: salzburg},
-      {name:'Pertisau am Achensee', city: salzburg},
-      {name:'Pettneu am Arlberg', city: salzburg},
-      {name:'Peuerbach', city: salzburg},
-      {name:'Pfarrkirchen', city: salzburg},
-      {name:'Piesendorf', city: salzburg},
-      {name:'Pinzgau', city: salzburg},
-      {name:'Postalm', city: salzburg},
-      {name:'Pramet', city: salzburg},
-      {name:'Pregarten', city: salzburg},
-      {name:'Prien am Chiemsee', city: salzburg},
-      {name:'Pruggern', city: salzburg},
-      {name:'Puch bei Hallein', city: salzburg},
-      {name:'Radstadt', city: salzburg},
-      {name:'Ramsau am Dachstein', city: salzburg},
-      {name:'Rauris', city: salzburg},
-      {name:'Reith', city: salzburg},
-      {name:'Rennweg', city: salzburg},
-      {name:'Ried im Innkreis', city: salzburg},
-      {name:'Riedau', city: salzburg},
-      {name:'Rohrbach in Oberosterreich', city: salzburg},
-      {name:'Rohrmoos', city: salzburg},
-      {name:'Rossbach', city: salzburg},
-      {name:'Russbach', city: salzburg},
-      {name:'Saalfelden', city: salzburg},
-      {name:'Salzburg City Centre', city: salzburg},
-      {name:'Schaerding', city: salzburg},
-      {name:'Scheffau am Wilden Kaiser', city: salzburg},
-      {name:'Scheibbs', city: salzburg},
-      {name:'Schladming', city: salzburg},
-      {name:'Schlagl', city: salzburg},
-      {name:'Schmieden', city: salzburg},
-      {name:'Schneegattern', city: salzburg},
-      {name:'Schorfling', city: salzburg},
-      {name:'Schwanenstadt', city: salzburg},
-      {name:'Schwertberg', city: salzburg},
-      {name:'Seefeld', city: salzburg},
-      {name:'Seeham', city: salzburg},
-      {name:'Seekirchen', city: salzburg},
-      {name:'Seewalchen', city: salzburg},
-      {name:'Sierning', city: salzburg},
-      {name:'Spital am Pyhrn', city: salzburg},
-      {name:'Sportgastein', city: salzburg},
-      {name:'St Aegydi', city: salzburg},
-      {name:'St Gilgen ', city: salzburg},
-      {name:'St Johann im Pongau', city: salzburg},
-      {name:'St Lorenz', city: salzburg},
-      {name:'St Martin bei Lofer', city: salzburg},
-      {name:'St Martin im Innkreis', city: salzburg},
-      {name:'St Michael im Lungau', city: salzburg},
-      {name:'St Ulrich am Pillersee', city: salzburg},
-      {name:'St Wolfgang', city: salzburg},
-      {name:'Steinbach am Attersee', city: salzburg},
-      {name:'Steyr', city: salzburg},
-      {name:'Steyregg', city: salzburg},
-      {name:'Strasswalchen', city: salzburg},
-      {name:'Strobl', city: salzburg},
-      {name:'Suben', city: salzburg},
-      {name:'Sulzau', city: salzburg},
-      {name:'Taiskirchen', city: salzburg},
-      {name:'Tamsweg', city: salzburg},
-      {name:'Tarsdorf', city: salzburg},
-      {name:'Tauplitz', city: salzburg},
-      {name:'Taxenbach', city: salzburg},
-      {name:'Ternberg', city: salzburg},
-      {name:'Thalgau', city: salzburg},
-      {name:'Timmelkam', city: salzburg},
-      {name:'Traun', city: salzburg},
-      {name:'Traunkirchen', city: salzburg},
-      {name:'Trimmelkam', city: salzburg},
-      {name:'Turracherhohe', city: salzburg},
-      {name:'Ulrichsberg', city: salzburg},
-      {name:'Unken', city: salzburg},
-      {name:'Unterach am Attersee', city: salzburg},
-      {name:'Untertauern', city: salzburg},
-      {name:'Uttendorf', city: salzburg},
-      {name:'Viehhofen', city: salzburg},
-      {name:'Vocklabruck', city: salzburg},
-      {name:'Vocklamarkt', city: salzburg},
-      {name:'Voitsberg', city: salzburg},
-      {name:'Volkermarkt', city: salzburg},
-      {name:'Vorchdorf', city: salzburg},
-      {name:'Waidhofen an der Thaya', city: salzburg},
-      {name:'Waizenkirchen', city: salzburg},
-      {name:'Waldzell', city: salzburg},
-      {name:'Weissbach bei Lofer', city: salzburg},
-      {name:'Wels', city: salzburg},
-      {name:'Werfen', city: salzburg},
-      {name:'Werfenweng', city: salzburg},
-      {name:'Windischgarsten', city: salzburg},
-      {name:'Wolfsberg', city: salzburg},
-      {name:'Worschach', city: salzburg},
-      {name:'Zell am Moos', city: salzburg},
-      {name:'Zell an der Pram', city: salzburg},
-      {name:'Zinkenbach', city: salzburg},
-      {name:'Vienna Airport', city: vienna},
-      {name:'Vienna Train Station', city: vienna},
-      {name:'Vienna City Centre', city: vienna},
-      {name:'Wiener Neustadt', city: vienna},
-      {name:'Hopfgarten', city: vienna},
-      {name:'Kohfidisch', city: vienna},
-      {name:'Neustift', city: vienna},
-      {name:'Krems', city: vienna},
-      {name:'Aderklaa', city: vienna},
-      {name:'Aflenz Kurort', city: vienna},
-      {name:'Amstetten', city: vienna},
-      {name:'Annaberg', city: vienna},
-      {name:'Bad Radkersburg', city: vienna},
-      {name:'Baden', city: vienna},
-      {name:'Berndorf', city: vienna},
-      {name:'Bisamberg', city: vienna},
-      {name:'Breitenfurt', city: vienna},
-      {name:'Bruck an der Leitha', city: vienna},
-      {name:'Bruck an der Mur', city: vienna},
-      {name:'Brunn am Gebirge', city: vienna},
-      {name:'Deutsch Wagram', city: vienna},
-      {name:'Eisenstadt', city: vienna},
-      {name:'Freistadt', city: vienna},
-      {name:'Furstenfeld', city: vienna},
-      {name:'Gablitz', city: vienna},
-      {name:'Gaenserndorf', city: vienna},
-      {name:'Gerasdorf', city: vienna},
-      {name:'Gmund', city: vienna},
-      {name:'Goriach', city: vienna},
-      {name:'Graz', city: vienna},
-      {name:'Gross Enzersdorf', city: vienna},
-      {name:'Guessing', city: vienna},
-      {name:'Guntramsdorf', city: vienna},
-      {name:'Gussing', city: vienna},
-      {name:'Hagenbrunn', city: vienna},
-      {name:'Hainburg', city: vienna},
-      {name:'Hainburg an der Donau', city: vienna},
-      {name:'Himberg', city: vienna},
-      {name:'Hinterbruhl', city: vienna},
-      {name:'Hollabrunn', city: vienna},
-      {name:'Jennersdorf', city: vienna},
-      {name:'Kirchberg am Wechsel', city: vienna},
-      {name:'Klosterneuburg', city: vienna},
-      {name:'Korneuburg', city: vienna},
-      {name:'Lackenhof', city: vienna},
-      {name:'Langenzersdorf', city: vienna},
-      {name:'Leopoldsdorf', city: vienna},
-      {name:'Liesing', city: vienna},
-      {name:'Lilienfeld', city: vienna},
-      {name:'Mattersburg', city: vienna},
-      {name:'Mauerbach', city: vienna},
-      {name:'Melk', city: vienna},
-      {name:'Mistelbach', city: vienna},
-      {name:'Modling', city: vienna},
-      {name:'Muerzzuschlag', city: vienna},
-      {name:'Munchendorf', city: vienna},
-      {name:'Neusiedl am See', city: vienna},
-      {name:'Oberpullendorf', city: vienna},
-      {name:'Oberwart', city: vienna},
-      {name:'Parndorf', city: vienna},
-      {name:'Perchtoldsdorf', city: vienna},
-      {name:'Pressbaum', city: vienna},
-      {name:'Purkersdorf', city: vienna},
-      {name:'Raasdorf', city: vienna},
-      {name:'Rust Austria', city: vienna},
-      {name:'Schwechat', city: vienna},
-      {name:'Semmering', city: vienna},
-      {name:'Spitz', city: vienna},
-      {name:'St Polten', city: vienna},
-      {name:'Stockerau', city: vienna},
-      {name:'Tulln', city: vienna},
-      {name:'Waidhofen An Der Ybbs', city: vienna},
-      {name:'Weidling', city: vienna},
-      {name:'Weiz', city: vienna},
-      {name:'Wiener Neudorf', city: vienna},
-      {name:'Wolfsgraben', city: vienna},
-      {name:'Zwettl', city: vienna}
-          ])
+  
+  pick_up_locations << PickUpLocation.new(name:'Innsbruck Airport',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Innsbruck Train Station',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Absam',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Achenkirch',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Affenhausen',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Alberschwende',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Alpbach',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Andelsbuch',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Arzl im Pitztal',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Aschau im Zillertal',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Au',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Auffach',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Aurach bei Kitzbuhel',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Axamer Lizum',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Axams',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Bad Haring',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Berwang',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Biberwier',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Bichlbach',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Birgitz',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Bizau',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Bludenz',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Brand',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Brandenberg',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Bregenz',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Brennerpass',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Brixen im Thale',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Brixlegg',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Bruck am Ziller',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Burserberg',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Dalaas',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Damuels',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Dirschenbach',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Dornbirn',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Ebbs',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Eben am Achensee',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Ehrwald',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Eigenhofen',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Elblingenalp',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Ellmau',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Elmen',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Erl',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Erpfendorf',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Faschina',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Feldkirch',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Fernpass',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Fieberbrunn',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Fiecht',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Finkenberg',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Fiss',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Flaurling',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Fliess',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Flirsch',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Fontanella',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Frohnhausen',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Fugen',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Fulpmes',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Galtuer',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Galtur',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Gargellen',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Gerlos',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Gnadenwald',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Going am Wilden Kaiser',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Gotzens',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Gotzis',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Gries Sellrain',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Gries am Brenner',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Grinzens',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Gschnitz',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Haiming',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Hall in Tirol',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Hatting',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Heiligenblut',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Heiterwang',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Hintertux',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Hippach',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Hochfilzen',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Hochfugen',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Hochgurgl',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Hochpillberg',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Hochzirl',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Hofen',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Hohenems',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Hopfgarten im Brixental',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Huben',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Igls',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Imst',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Innsbruck City Centre',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Inzing',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Ischgl',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Itter',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Jenbach',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Judenstein',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Jungholz',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Kaltenbach',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Kampl',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Kappl',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Karres',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Kaunertal',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Kauns',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Kelchsau',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Kematen',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Kirchberg in Tirol',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Kirchbichl',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Kitzbuhel',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Kleinwalsertal',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Klosterle',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Koessen',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Kolsass',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Konigsleiten',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Kossen',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Kramsach',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Krimml',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Krossbach',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Kufstein',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Kuhtai',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Kundl',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Ladis',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Landeck',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Lanersbach',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Langen am Arlberg',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Langenfeld',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Lans',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Laterns',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Lech',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Lech am Arlberg',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Leiblfing',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Leithen',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Lermoos',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Leutasch',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Lienz',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Lofer',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Lusens',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Lustenau',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Mathon',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Matrei am Brenner',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Matrei in Osttirol',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Maurach',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Mayrhofen',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Mellau',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Mieders',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Milders',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Mils bei Imst',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Mittelberg',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Mittersill',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Motz',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Munster Tirol',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Mutters',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Nassereth',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Natters',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Nauders',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Navis',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Neder',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Neu Gotzens',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Neukirchen am Grossvenediger',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Neustift im Stubaital',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Niederau',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Oberau Wildschonau',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Obergurgl',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Oberhofen',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Oberlech',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Obermieming',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Obernberg am Brenner',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Oberperfuss',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Obladis',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Obsteig',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Oetz',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Omes',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Partenen',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Patsch',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Pertisau',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Pettnau',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Pettnau am Arlberg',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Pfaffenhofen',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Pfons',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Pfunds',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Pians',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Pill',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Pitztal',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Plagne Montalbert',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Polling',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Prutz',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Radfeld',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Raggal',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Ramsau im Zillertal',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Ranggen',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Rankweil',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Rans',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Rattenberg',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Reith bei Seefeld',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Reith im Alpbachtal',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Reutte',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Ried im Zillertal',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Rietz',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Rinn',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Rotholz',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Rum',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Sankt Leonhard im Pitztal',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Sauttens',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Scharnitz',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Schattwald',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Schlitters',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Schmirn',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Schoenberg',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Schonwies',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Schrocken',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Schruns',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Schwarzenberg',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Schwaz',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'See im Paznauntal',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Seefeld in Tirol',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Sellrain',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Serfaus',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Silbertal',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Sillian',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Silz',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Sistrans',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Solden',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Soll',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'St Agatha',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'St Anton am Arlberg',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'St Christoph am Arlberg',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'St Gallenkirch',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'St Jakob am Arlberg',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'St Johann in Tirol',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'St Peter in Tirol',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'St Sigmund im Sellrain',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Stams',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Stans',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Stanzach',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Steeg',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Steinach am Brenner',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Strass im Zillertal',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Strengen am Arlberg',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Stubaier Gletscher',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Stuben am Arlberg',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Stumm',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Tannheim',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Tarrenz',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Telfes',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Telfs',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Terfens',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Thaur',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Thiersee',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Trin',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Tschagguns',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Tulfes',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Tumpen',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Tux',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Uderns',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Umhausen',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Untermieming',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Vandans',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Vomperberg',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Waidring',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Walchsee',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Wald im Pinzgau',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Warth',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Wattens',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Weer',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Weissenmbach Lech',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Wenns',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Westendorf',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Wiesing',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Wildschonau Oberau',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Worgl',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Zams',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Zell am Ziller',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Zillertal',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Zirl',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Zurs',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Zwieselstein',city:innsbruck)
+  pick_up_locations << PickUpLocation.new(name:'Klagenfurt Airport', city: klagenfurt)
+  pick_up_locations << PickUpLocation.new(name:'Altenmarkt im Pongau', city: klagenfurt)
+  pick_up_locations << PickUpLocation.new(name:'Katschberg', city: klagenfurt)
+  pick_up_locations << PickUpLocation.new(name:'Bad Kleinkirchheim', city: klagenfurt)
+  pick_up_locations << PickUpLocation.new(name:'Kotschach Mauthen', city: klagenfurt)
+  pick_up_locations << PickUpLocation.new(name:'Maria Worth', city: klagenfurt)
+  pick_up_locations << PickUpLocation.new(name:'Zauchensee', city: klagenfurt)
+  pick_up_locations << PickUpLocation.new(name:'Annenheim', city: klagenfurt)
+  pick_up_locations << PickUpLocation.new(name:'Arnoldstein', city: klagenfurt)
+  pick_up_locations << PickUpLocation.new(name:'Bad Bleiberg', city: klagenfurt)
+  pick_up_locations << PickUpLocation.new(name:'Bad St Leonhard im Lavanttal', city: klagenfurt)
+  pick_up_locations << PickUpLocation.new(name:'Bleiburg', city: klagenfurt)
+  pick_up_locations << PickUpLocation.new(name:'Bodensdorf', city: klagenfurt)
+  pick_up_locations << PickUpLocation.new(name:'Dobriach', city: klagenfurt)
+  pick_up_locations << PickUpLocation.new(name:'Drobollach', city: klagenfurt)
+  pick_up_locations << PickUpLocation.new(name:'Ebene Reichenau', city: klagenfurt)
+  pick_up_locations << PickUpLocation.new(name:'Egg am Faaker See', city: klagenfurt)
+  pick_up_locations << PickUpLocation.new(name:'Eisentratten', city: klagenfurt)
+  pick_up_locations << PickUpLocation.new(name:'Faak am See', city: klagenfurt)
+  pick_up_locations << PickUpLocation.new(name:'Falkert', city: klagenfurt)
+  pick_up_locations << PickUpLocation.new(name:'Feistritz ob Bleiburg', city: klagenfurt)
+  pick_up_locations << PickUpLocation.new(name:'Feld am See', city: klagenfurt)
+  pick_up_locations << PickUpLocation.new(name:'Feldkirchen in Karnten', city: klagenfurt)
+  pick_up_locations << PickUpLocation.new(name:'Ferndorf', city: klagenfurt)
+  pick_up_locations << PickUpLocation.new(name:'Finkenstein am Faaker See', city: klagenfurt)
+  pick_up_locations << PickUpLocation.new(name:'Flattach', city: klagenfurt)
+  pick_up_locations << PickUpLocation.new(name:'Frantschach', city: klagenfurt)
+  pick_up_locations << PickUpLocation.new(name:'Fresach', city: klagenfurt)
+  pick_up_locations << PickUpLocation.new(name:'Gerlitzen', city: klagenfurt)
+  pick_up_locations << PickUpLocation.new(name:'Godersdorf', city: klagenfurt)
+  pick_up_locations << PickUpLocation.new(name:'Goldeck', city: klagenfurt)
+  pick_up_locations << PickUpLocation.new(name:'Heiligengeist', city: klagenfurt)
+  pick_up_locations << PickUpLocation.new(name:'Hermagor', city: klagenfurt)
+  pick_up_locations << PickUpLocation.new(name:'Innerkrems', city: klagenfurt)
+  pick_up_locations << PickUpLocation.new(name:'Jenig', city: klagenfurt)
+  pick_up_locations << PickUpLocation.new(name:'Kirchbach', city: klagenfurt)
+  pick_up_locations << PickUpLocation.new(name:'Klagenfurt City Centre', city: klagenfurt)
+  pick_up_locations << PickUpLocation.new(name:'Klippitztorl', city: klagenfurt)
+  pick_up_locations << PickUpLocation.new(name:'Krumpendorf', city: klagenfurt)
+  pick_up_locations << PickUpLocation.new(name:'Landskron', city: klagenfurt)
+  pick_up_locations << PickUpLocation.new(name:'Latschach', city: klagenfurt)
+  pick_up_locations << PickUpLocation.new(name:'Ledenitzen', city: klagenfurt)
+  pick_up_locations << PickUpLocation.new(name:'Lendorf', city: klagenfurt)
+  pick_up_locations << PickUpLocation.new(name:'Lieserbrucke', city: klagenfurt)
+  pick_up_locations << PickUpLocation.new(name:'Malta', city: klagenfurt)
+  pick_up_locations << PickUpLocation.new(name:'Mariahof', city: klagenfurt)
+  pick_up_locations << PickUpLocation.new(name:'Millstatt', city: klagenfurt)
+  pick_up_locations << PickUpLocation.new(name:'Nassfeld', city: klagenfurt)
+  pick_up_locations << PickUpLocation.new(name:'Notsch im Gailtal', city: klagenfurt)
+  pick_up_locations << PickUpLocation.new(name:'Obermillstatt', city: klagenfurt)
+  pick_up_locations << PickUpLocation.new(name:'Obervellach', city: klagenfurt)
+  pick_up_locations << PickUpLocation.new(name:'Ossiach', city: klagenfurt)
+  pick_up_locations << PickUpLocation.new(name:'Patergassen', city: klagenfurt)
+  pick_up_locations << PickUpLocation.new(name:'Portschach am Worthersee', city: klagenfurt)
+  pick_up_locations << PickUpLocation.new(name:'Pressegger See', city: klagenfurt)
+  pick_up_locations << PickUpLocation.new(name:'Radenthein', city: klagenfurt)
+  pick_up_locations << PickUpLocation.new(name:'Ramingstein', city: klagenfurt)
+  pick_up_locations << PickUpLocation.new(name:'Rattendorf', city: klagenfurt)
+  pick_up_locations << PickUpLocation.new(name:'Reifnitz', city: klagenfurt)
+  pick_up_locations << PickUpLocation.new(name:'Rennweg am Katschberg', city: klagenfurt)
+  pick_up_locations << PickUpLocation.new(name:'Sattendorf', city: klagenfurt)
+  pick_up_locations << PickUpLocation.new(name:'Schiefling am See', city: klagenfurt)
+  pick_up_locations << PickUpLocation.new(name:'Seeboden', city: klagenfurt)
+  pick_up_locations << PickUpLocation.new(name:'Spittal an der Drau', city: klagenfurt)
+  pick_up_locations << PickUpLocation.new(name:'St  Michael im Lungau', city: klagenfurt)
+  pick_up_locations << PickUpLocation.new(name:'St Kanzian am Klopeiner See', city: klagenfurt)
+  pick_up_locations << PickUpLocation.new(name:'St Margarethen im Lungau', city: klagenfurt)
+  pick_up_locations << PickUpLocation.new(name:'St Oswald', city: klagenfurt)
+  pick_up_locations << PickUpLocation.new(name:'St Veit', city: klagenfurt)
+  pick_up_locations << PickUpLocation.new(name:'Steindorf am Ossiacher See', city: klagenfurt)
+  pick_up_locations << PickUpLocation.new(name:'Tamsweg', city: klagenfurt)
+  pick_up_locations << PickUpLocation.new(name:'Trebesing', city: klagenfurt)
+  pick_up_locations << PickUpLocation.new(name:'Tropolach', city: klagenfurt)
+  pick_up_locations << PickUpLocation.new(name:'Turracher Hohe', city: klagenfurt)
+  pick_up_locations << PickUpLocation.new(name:'Unzmarkt Frauenburg', city: klagenfurt)
+  pick_up_locations << PickUpLocation.new(name:'Velden am Worther See', city: klagenfurt)
+  pick_up_locations << PickUpLocation.new(name:'Verditz', city: klagenfurt)
+  pick_up_locations << PickUpLocation.new(name:'Villach', city: klagenfurt)
+  pick_up_locations << PickUpLocation.new(name:'Waidegg', city: klagenfurt)
+  pick_up_locations << PickUpLocation.new(name:'Watschig', city: klagenfurt)
+  pick_up_locations << PickUpLocation.new(name:'Salzburg Airport', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Salzburg Train Station', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Saalbach', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Hinterglemm', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Wagrain', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Flachau', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Bad Gastein', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Zell am See', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Abtenau', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Achensee', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Afritz am See', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Aigen Schlaegl', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Alpendorf', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Altmunster', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Andorf ', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Annaberg im Lammatal', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Ansfelden', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Aschbach Markt', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Aspach', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Asten', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Attersee', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Bachmanning', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Bad Aussee', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Bad Goisern', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Bad Hall', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Bad Hofgastein', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Bad Ischl', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Bad Kreuzen', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Bad Leonfelden', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Bad Mitterndorf', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Bad Schallerbach', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Bad Vigaun', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Baumkirchen', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Bischofshofen', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Blindenmarkt', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Bramberg', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Brand Nagelberg', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Braunau', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Breitenschuetzing', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Bruck an der Grossglocknerstrasse', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Buermoos', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Burghausen', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Dellach', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Deutschlandsberg', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Dienten', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Dolsach', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Donawitz', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Donnersbachwald', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Dorfbeuern', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Dorfgastein', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Ebelsberg', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Eben im Pongau', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Ebenau', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Ebensee', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Eberschwang', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Eferding', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Eggelsberg', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Eisenerz', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Engelhartszell', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Enns', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Eugendorf', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Faistenau', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Felbertauern', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Feldbach', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Ferleiten', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Filzmoos', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Fohnsdorf', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Forstau', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Frankenburg', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Frankenmarkt', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Friedburg', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Fuerstenfeld', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Fusch an der Grossglocknerstrasse', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Fuschl', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Gaishorn', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Gallneukirchen', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Gallspach', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Geretsberg', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Gerlos Pass', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Gmuend', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Gmunden', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Goestling', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Going', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Goldegg', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Golling', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Gosau', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Gossl', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Gostling', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Graukogel', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Greifenburg', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Grein', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Grieskirchen', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Grobming', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Grodig', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Grossarl', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Grossgmain', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Grossraming', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Grossreifling', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Grunau im Almtal', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Grundlsee', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Gundertshausen', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Gunskirchen', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Haag am Hausruck', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Hagen Lofer', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Hallein', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Hallstatt', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Haus im Ennstal', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Hinterstoder', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Hof bei Salzburg ', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Hohentauren', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Holzoster', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Huettschlag', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Irdning', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Jochberg', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Kals am Grossglockner', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Kaprun', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Kirchdorf an der Krems', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Kirchdorf in Tirol', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Kitzbuehel', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Klagenfurt', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Kleinarl', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Knittelfeld', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Koenigswiesen', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Koppl', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Kostendorf', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Kuchl', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Laakirchen', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Lambach', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Lammertal', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Lamprechtshausen', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Lenzing', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Leoben', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Leogang', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Lessach', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Liezen', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Linz ', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Lohnsburg', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Maishofen', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Mallnitz', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Mandling', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Manning', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Marchtrenk', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Maria Alm', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Mariapfarr', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Mattighofen', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Mattsee', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Mauerkirchen', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Mauterndorf', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Mauthausen', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Mettmach', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Michaelbeuern', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Micheldorf', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Mondsee', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Moosdorf', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Muenzkirchen', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Muhlbach am Hochkonig', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Munderfing', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Murau', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Neumarkt am Wallersee', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Niederalm', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Niederndorf', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Niedernsill', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Nussdorf am Attersee', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Nussdorf am Haunsberg', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Obernberg am Inn', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Oberndorf bei Salzburg', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Oberndorf in Tirol', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Obertauern', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Obertilliach', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Obertraun', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Obertrum', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Offenhausen', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Ostermiething', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Ottensheim', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Perg', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Pertisau am Achensee', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Pettneu am Arlberg', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Peuerbach', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Pfarrkirchen', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Piesendorf', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Pinzgau', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Postalm', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Pramet', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Pregarten', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Prien am Chiemsee', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Pruggern', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Puch bei Hallein', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Radstadt', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Ramsau am Dachstein', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Rauris', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Reith', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Rennweg', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Ried im Innkreis', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Riedau', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Rohrbach in Oberosterreich', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Rohrmoos', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Rossbach', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Russbach', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Saalfelden', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Salzburg City Centre', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Schaerding', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Scheffau am Wilden Kaiser', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Scheibbs', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Schladming', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Schlagl', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Schmieden', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Schneegattern', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Schorfling', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Schwanenstadt', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Schwertberg', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Seefeld', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Seeham', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Seekirchen', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Seewalchen', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Sierning', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Spital am Pyhrn', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Sportgastein', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'St Aegydi', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'St Gilgen ', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'St Johann im Pongau', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'St Lorenz', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'St Martin bei Lofer', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'St Martin im Innkreis', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'St Michael im Lungau', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'St Ulrich am Pillersee', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'St Wolfgang', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Steinbach am Attersee', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Steyr', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Steyregg', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Strasswalchen', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Strobl', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Suben', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Sulzau', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Taiskirchen', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Tamsweg', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Tarsdorf', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Tauplitz', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Taxenbach', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Ternberg', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Thalgau', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Timmelkam', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Traun', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Traunkirchen', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Trimmelkam', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Turracherhohe', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Ulrichsberg', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Unken', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Unterach am Attersee', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Untertauern', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Uttendorf', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Viehhofen', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Vocklabruck', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Vocklamarkt', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Voitsberg', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Volkermarkt', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Vorchdorf', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Waidhofen an der Thaya', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Waizenkirchen', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Waldzell', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Weissbach bei Lofer', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Wels', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Werfen', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Werfenweng', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Windischgarsten', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Wolfsberg', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Worschach', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Zell am Moos', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Zell an der Pram', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Zinkenbach', city: salzburg)
+  pick_up_locations << PickUpLocation.new(name:'Vienna Airport', city: vienna)
+  pick_up_locations << PickUpLocation.new(name:'Vienna Train Station', city: vienna)
+  pick_up_locations << PickUpLocation.new(name:'Vienna City Centre', city: vienna)
+  pick_up_locations << PickUpLocation.new(name:'Wiener Neustadt', city: vienna)
+  pick_up_locations << PickUpLocation.new(name:'Hopfgarten', city: vienna)
+  pick_up_locations << PickUpLocation.new(name:'Kohfidisch', city: vienna)
+  pick_up_locations << PickUpLocation.new(name:'Neustift', city: vienna)
+  pick_up_locations << PickUpLocation.new(name:'Krems', city: vienna)
+  pick_up_locations << PickUpLocation.new(name:'Aderklaa', city: vienna)
+  pick_up_locations << PickUpLocation.new(name:'Aflenz Kurort', city: vienna)
+  pick_up_locations << PickUpLocation.new(name:'Amstetten', city: vienna)
+  pick_up_locations << PickUpLocation.new(name:'Annaberg', city: vienna)
+  pick_up_locations << PickUpLocation.new(name:'Bad Radkersburg', city: vienna)
+  pick_up_locations << PickUpLocation.new(name:'Baden', city: vienna)
+  pick_up_locations << PickUpLocation.new(name:'Berndorf', city: vienna)
+  pick_up_locations << PickUpLocation.new(name:'Bisamberg', city: vienna)
+  pick_up_locations << PickUpLocation.new(name:'Breitenfurt', city: vienna)
+  pick_up_locations << PickUpLocation.new(name:'Bruck an der Leitha', city: vienna)
+  pick_up_locations << PickUpLocation.new(name:'Bruck an der Mur', city: vienna)
+  pick_up_locations << PickUpLocation.new(name:'Brunn am Gebirge', city: vienna)
+  pick_up_locations << PickUpLocation.new(name:'Deutsch Wagram', city: vienna)
+  pick_up_locations << PickUpLocation.new(name:'Eisenstadt', city: vienna)
+  pick_up_locations << PickUpLocation.new(name:'Freistadt', city: vienna)
+  pick_up_locations << PickUpLocation.new(name:'Furstenfeld', city: vienna)
+  pick_up_locations << PickUpLocation.new(name:'Gablitz', city: vienna)
+  pick_up_locations << PickUpLocation.new(name:'Gaenserndorf', city: vienna)
+  pick_up_locations << PickUpLocation.new(name:'Gerasdorf', city: vienna)
+  pick_up_locations << PickUpLocation.new(name:'Gmund', city: vienna)
+  pick_up_locations << PickUpLocation.new(name:'Goriach', city: vienna)
+  pick_up_locations << PickUpLocation.new(name:'Graz', city: vienna)
+  pick_up_locations << PickUpLocation.new(name:'Gross Enzersdorf', city: vienna)
+  pick_up_locations << PickUpLocation.new(name:'Guessing', city: vienna)
+  pick_up_locations << PickUpLocation.new(name:'Guntramsdorf', city: vienna)
+  pick_up_locations << PickUpLocation.new(name:'Gussing', city: vienna)
+  pick_up_locations << PickUpLocation.new(name:'Hagenbrunn', city: vienna)
+  pick_up_locations << PickUpLocation.new(name:'Hainburg', city: vienna)
+  pick_up_locations << PickUpLocation.new(name:'Hainburg an der Donau', city: vienna)
+  pick_up_locations << PickUpLocation.new(name:'Himberg', city: vienna)
+  pick_up_locations << PickUpLocation.new(name:'Hinterbruhl', city: vienna)
+  pick_up_locations << PickUpLocation.new(name:'Hollabrunn', city: vienna)
+  pick_up_locations << PickUpLocation.new(name:'Jennersdorf', city: vienna)
+  pick_up_locations << PickUpLocation.new(name:'Kirchberg am Wechsel', city: vienna)
+  pick_up_locations << PickUpLocation.new(name:'Klosterneuburg', city: vienna)
+  pick_up_locations << PickUpLocation.new(name:'Korneuburg', city: vienna)
+  pick_up_locations << PickUpLocation.new(name:'Lackenhof', city: vienna)
+  pick_up_locations << PickUpLocation.new(name:'Langenzersdorf', city: vienna)
+  pick_up_locations << PickUpLocation.new(name:'Leopoldsdorf', city: vienna)
+  pick_up_locations << PickUpLocation.new(name:'Liesing', city: vienna)
+  pick_up_locations << PickUpLocation.new(name:'Lilienfeld', city: vienna)
+  pick_up_locations << PickUpLocation.new(name:'Mattersburg', city: vienna)
+  pick_up_locations << PickUpLocation.new(name:'Mauerbach', city: vienna)
+  pick_up_locations << PickUpLocation.new(name:'Melk', city: vienna)
+  pick_up_locations << PickUpLocation.new(name:'Mistelbach', city: vienna)
+  pick_up_locations << PickUpLocation.new(name:'Modling', city: vienna)
+  pick_up_locations << PickUpLocation.new(name:'Muerzzuschlag', city: vienna)
+  pick_up_locations << PickUpLocation.new(name:'Munchendorf', city: vienna)
+  pick_up_locations << PickUpLocation.new(name:'Neusiedl am See', city: vienna)
+  pick_up_locations << PickUpLocation.new(name:'Oberpullendorf', city: vienna)
+  pick_up_locations << PickUpLocation.new(name:'Oberwart', city: vienna)
+  pick_up_locations << PickUpLocation.new(name:'Parndorf', city: vienna)
+  pick_up_locations << PickUpLocation.new(name:'Perchtoldsdorf', city: vienna)
+  pick_up_locations << PickUpLocation.new(name:'Pressbaum', city: vienna)
+  pick_up_locations << PickUpLocation.new(name:'Purkersdorf', city: vienna)
+  pick_up_locations << PickUpLocation.new(name:'Raasdorf', city: vienna)
+  pick_up_locations << PickUpLocation.new(name:'Rust Austria', city: vienna)
+  pick_up_locations << PickUpLocation.new(name:'Schwechat', city: vienna)
+  pick_up_locations << PickUpLocation.new(name:'Semmering', city: vienna)
+  pick_up_locations << PickUpLocation.new(name:'Spitz', city: vienna)
+  pick_up_locations << PickUpLocation.new(name:'St Polten', city: vienna)
+  pick_up_locations << PickUpLocation.new(name:'Stockerau', city: vienna)
+  pick_up_locations << PickUpLocation.new(name:'Tulln', city: vienna)
+  pick_up_locations << PickUpLocation.new(name:'Waidhofen An Der Ybbs', city: vienna)
+  pick_up_locations << PickUpLocation.new(name:'Weidling', city: vienna)
+  pick_up_locations << PickUpLocation.new(name:'Weiz', city: vienna)
+  pick_up_locations << PickUpLocation.new(name:'Wiener Neudorf', city: vienna)
+  pick_up_locations << PickUpLocation.new(name:'Wolfsgraben', city: vienna)
+  pick_up_locations << PickUpLocation.new(name:'Zwettl', city: vienna)
+
   puts 'Cities of Belgium'
   antwerp = City.find_by(name:'Antwerp')
   bruges  = City.find_by(name:'Bruges')
   brussels = City.find_by(name:'Brussels')
-  PickUpLocation.create([
-      {name:'Antwerp Airport', city: antwerp},
-      {name:'Antwerp Cruise Port', city: antwerp},
-      {name:'Antwerp City Centre', city: antwerp},
-      {name:'Sint Niklaas', city: antwerp},
-      {name:'Knokke Heist', city: antwerp},
-      {name:'Lier', city: antwerp},
-      {name:'Geel', city: antwerp},
-      {name:'Kontich', city: antwerp},
-      {name:'Beveren Waas', city: antwerp},
-      {name:'Eeklo', city: antwerp},
-      {name:'Heist op den Berg', city: antwerp},
-      {name:'Lommel', city: antwerp},
-      {name:'Mol', city: antwerp},
-      {name:'Oud Turnhout', city: antwerp},
-      {name:'Ruisbroek', city: antwerp},
-      {name:'Turnhout', city: antwerp},
-      {name:'Waasmunster', city: antwerp},
-      {name:'Zwijndrecht', city: antwerp},
-      {name:'Bruges Airport', city: bruges},
-      {name:'Zeebruges Port', city: bruges},
-      {name:'Bruges Train Station', city: bruges},
-      {name:'Bruges City Centre', city: bruges},
-      {name:'Zeebruges', city: bruges},
-      {name:'Brussels Airport', city: brussels},
-      {name:'Charleroi Airport', city: brussels},
-      {name:'Liege Airport', city: brussels},
-      {name:'Brussels Central Train Station', city: brussels},
-      {name:'Brussels Midi Train Station', city: brussels},
-      {name:'Brussels Nord Train Station', city: brussels},
-      {name:'Brussels City Centre', city: brussels},
-      {name:'Leuven', city: brussels},
-      {name:'La Hulpe', city: brussels},
-      {name:'Louvain la Neuve', city: brussels},
-      {name:'Waterloo', city: brussels},
-      {name:'Ghent', city: brussels},
-      {name:'Aalst', city: brussels},
-      {name:'Aarschot', city: brussels},
-      {name:'Affligem', city: brussels},
-      {name:'Alsemberg', city: brussels},
-      {name:'Andenne', city: brussels},
-      {name:'Anderlues', city: brussels},
-      {name:'Annevoie Rouillon', city: brussels},
-      {name:'Antoing', city: brussels},
-      {name:'Arlon', city: brussels},
-      {name:'Asse', city: brussels},
-      {name:'Ath', city: brussels},
-      {name:'Athus', city: brussels},
-      {name:'Barvaux sur Ourthe', city: brussels},
-      {name:'Bastogne', city: brussels},
-      {name:'Baudour', city: brussels},
-      {name:'Beaumont', city: brussels},
-      {name:'Beerse', city: brussels},
-      {name:'Beersel', city: brussels},
-      {name:'Beloeil', city: brussels},
-      {name:'Bertrix', city: brussels},
-      {name:'Bierges', city: brussels},
-      {name:'Binche', city: brussels},
-      {name:'Blanden', city: brussels},
-      {name:'Blankenberge', city: brussels},
-      {name:'Bocholt', city: brussels},
-      {name:'Boom', city: brussels},
-      {name:'Bouillon', city: brussels},
-      {name:'Braine Le Chateau', city: brussels},
-      {name:'Braine l Alleud', city: brussels},
-      {name:'Braine le Comte', city: brussels},
-      {name:'Bredene', city: brussels},
-      {name:'Bree', city: brussels},
-      {name:'Bruges', city: brussels},
-      {name:'Brussegem', city: brussels},
-      {name:'Brussels Airport Hotel', city: brussels},
-      {name:'Brussels Port', city: brussels},
-      {name:'Cambron Casteau', city: brussels},
-      {name:'Charleroi', city: brussels},
-      {name:'Chevetogne', city: brussels},
-      {name:'Chievres', city: brussels},
-      {name:'Chimay', city: brussels},
-      {name:'Chiny', city: brussels},
-      {name:'Ciney', city: brussels},
-      {name:'Court Saint Etienne', city: brussels},
-      {name:'Couvin', city: brussels},
-      {name:'De Haan', city: brussels},
-      {name:'De Panne', city: brussels},
-      {name:'Dendermonde', city: brussels},
-      {name:'Diegem', city: brussels},
-      {name:'Diepenbeek', city: brussels},
-      {name:'Diest', city: brussels},
-      {name:'Diksmuide', city: brussels},
-      {name:'Dilbeek', city: brussels},
-      {name:'Dinant', city: brussels},
-      {name:'Dour', city: brussels},
-      {name:'Drogenbos', city: brussels},
-      {name:'Dunkerque', city: brussels},
-      {name:'Durbuy', city: brussels},
-      {name:'Dworp', city: brussels},
-      {name:'Enghien', city: brussels},
-      {name:'Erpe Mere', city: brussels},
-      {name:'Erps Kwerps', city: brussels},
-      {name:'Erquelinnes', city: brussels},
-      {name:'Feluy', city: brussels},
-      {name:'Flobecq', city: brussels},
-      {name:'Floreffe', city: brussels},
-      {name:'Florennes', city: brussels},
-      {name:'Florenville', city: brussels},
-      {name:'Fosses la Ville', city: brussels},
-      {name:'Francorchamps', city: brussels},
-      {name:'Gedinne', city: brussels},
-      {name:'Gembloux', city: brussels},
-      {name:'Genappe', city: brussels},
-      {name:'Genk', city: brussels},
-      {name:'Genval', city: brussels},
-      {name:'Geraardsbergen', city: brussels},
-      {name:'Gerpinnes', city: brussels},
-      {name:'Godinne', city: brussels},
-      {name:'Gooik', city: brussels},
-      {name:'Grimbergen', city: brussels},
-      {name:'Groot Bijgaarden', city: brussels},
-      {name:'Haacht', city: brussels},
-      {name:'Haasrode', city: brussels},
-      {name:'Habay la Neuve', city: brussels},
-      {name:'Halle', city: brussels},
-      {name:'Hamoir', city: brussels},
-      {name:'Han sur Lesse', city: brussels},
-      {name:'Hannut', city: brussels},
-      {name:'Hasselt', city: brussels},
-      {name:'Hastiere', city: brussels},
-      {name:'Havelange', city: brussels},
-      {name:'Herentals', city: brussels},
-      {name:'Heusden Zolder', city: brussels},
-      {name:'Heverlee', city: brussels},
-      {name:'Hoeilaart', city: brussels},
-      {name:'Hofstade', city: brussels},
-      {name:'Houffalize', city: brussels},
-      {name:'Huizingen', city: brussels},
-      {name:'Huldenberg', city: brussels},
-      {name:'Huy', city: brussels},
-      {name:'Itterbeek', city: brussels},
-      {name:'Jemeppe sur Sambre', city: brussels},
-      {name:'Jodoigne', city: brussels},
-      {name:'Kessel Lo', city: brussels},
-      {name:'Kester', city: brussels},
-      {name:'Koksijde', city: brussels},
-      {name:'Korbeek Dijle', city: brussels},
-      {name:'Kortenberg', city: brussels},
-      {name:'Kortrijk', city: brussels},
-      {name:'Kraainem', city: brussels},
-      {name:'La Louviere', city: brussels},
-      {name:'La Roche en Ardenne', city: brussels},
-      {name:'Landen', city: brussels},
-      {name:'Lavaux Sainte Anne', city: brussels},
-      {name:'Le Roeulx', city: brussels},
-      {name:'Leefdaal', city: brussels},
-      {name:'Lennik', city: brussels},
-      {name:'Lessines', city: brussels},
-      {name:'Lessive', city: brussels},
-      {name:'Leuze en Hainaut', city: brussels},
-      {name:'Libramont Chevigny', city: brussels},
-      {name:'Liege', city: brussels},
-      {name:'Limal', city: brussels},
-      {name:'Linkebeek', city: brussels},
-      {name:'Lokeren', city: brussels},
-      {name:'Londerzeel', city: brussels},
-      {name:'Lot', city: brussels},
-      {name:'Maaseik', city: brussels},
-      {name:'Machelen', city: brussels},
-      {name:'Maillen', city: brussels},
-      {name:'Maldegem', city: brussels},
-      {name:'Malmedy', city: brussels},
-      {name:'Manage', city: brussels},
-      {name:'Marbehan', city: brussels},
-      {name:'Marche en Famenne', city: brussels},
-      {name:'Martelange', city: brussels},
-      {name:'Mechelen', city: brussels},
-      {name:'Meise', city: brussels},
-      {name:'Merchtem', city: brussels},
-      {name:'Messancy', city: brussels},
-      {name:'Middelkerke', city: brussels},
-      {name:'Mons', city: brussels},
-      {name:'Mouscron', city: brussels},
-      {name:'Namur', city: brussels},
-      {name:'Nazareth', city: brussels},
-      {name:'Neufchateau', city: brussels},
-      {name:'Nieuwpoort', city: brussels},
-      {name:'Ninove', city: brussels},
-      {name:'Nivelles', city: brussels},
-      {name:'Ohain', city: brussels},
-      {name:'Oostduinkerke', city: brussels},
-      {name:'Opwijk', city: brussels},
-      {name:'Ostend', city: brussels},
-      {name:'Ottignies', city: brussels},
-      {name:'Oud Heverlee', city: brussels},
-      {name:'Overijse', city: brussels},
-      {name:'Perk', city: brussels},
-      {name:'Peruwelz', city: brussels},
-      {name:'Peutie', city: brussels},
-      {name:'Philippeville', city: brussels},
-      {name:'Pommeroeul', city: brussels},
-      {name:'Quievrain', city: brussels},
-      {name:'Rebecq Rognon', city: brussels},
-      {name:'Renaix', city: brussels},
-      {name:'Rhode Saint Genese', city: brussels},
-      {name:'Rixensart', city: brussels},
-      {name:'Rochefort', city: brussels},
-      {name:'Roeselare', city: brussels},
-      {name:'Ronse', city: brussels},
-      {name:'Roosdaal', city: brussels},
-      {name:'Rosieres', city: brussels},
-      {name:'Saint Vith', city: brussels},
-      {name:'Sambreville', city: brussels},
-      {name:'Sint Joris Weert', city: brussels},
-      {name:'Sint Pieters Leeuw', city: brussels},
-      {name:'Sint Truiden', city: brussels},
-      {name:'Soignies', city: brussels},
-      {name:'Spa', city: brussels},
-      {name:'Steenokkerzeel', city: brussels},
-      {name:'Sterrebeek', city: brussels},
-      {name:'Strombeek Bever', city: brussels},
-      {name:'Ternat', city: brussels},
-      {name:'Tertre', city: brussels},
-      {name:'Tervuren', city: brussels},
-      {name:'Thuin', city: brussels},
-      {name:'Tielt Winge', city: brussels},
-      {name:'Tienen', city: brussels},
-      {name:'Tongeren', city: brussels},
-      {name:'Tournai', city: brussels},
-      {name:'Tubize', city: brussels},
-      {name:'Verviers', city: brussels},
-      {name:'Veurne', city: brussels},
-      {name:'Viller sur Semois', city: brussels},
-      {name:'Vilvoorde', city: brussels},
-      {name:'Vlezenbeek', city: brussels},
-      {name:'Vresse sur Semois', city: brussels},
-      {name:'Waremme', city: brussels},
-      {name:'Waulsort', city: brussels},
-      {name:'Wavre', city: brussels},
-      {name:'Wemmel', city: brussels},
-      {name:'Westende', city: brussels},
-      {name:'Wevelgem', city: brussels},
-      {name:'Wezembeek Oppem', city: brussels},
-      {name:'Wilsele', city: brussels},
-      {name:'Wolvertem', city: brussels},
-      {name:'Yvoir', city: brussels},
-      {name:'Zellik', city: brussels},
-      {name:'Zemst', city: brussels},
-      {name:'Zottegem', city: brussels}
-        ])
+  
+pick_up_locations << PickUpLocation.new(name:'Antwerp Airport', city: antwerp)
+pick_up_locations << PickUpLocation.new(name:'Antwerp Cruise Port', city: antwerp)
+pick_up_locations << PickUpLocation.new(name:'Antwerp City Centre', city: antwerp)
+pick_up_locations << PickUpLocation.new(name:'Sint Niklaas', city: antwerp)
+pick_up_locations << PickUpLocation.new(name:'Knokke Heist', city: antwerp)
+pick_up_locations << PickUpLocation.new(name:'Lier', city: antwerp)
+pick_up_locations << PickUpLocation.new(name:'Geel', city: antwerp)
+pick_up_locations << PickUpLocation.new(name:'Kontich', city: antwerp)
+pick_up_locations << PickUpLocation.new(name:'Beveren Waas', city: antwerp)
+pick_up_locations << PickUpLocation.new(name:'Eeklo', city: antwerp)
+pick_up_locations << PickUpLocation.new(name:'Heist op den Berg', city: antwerp)
+pick_up_locations << PickUpLocation.new(name:'Lommel', city: antwerp)
+pick_up_locations << PickUpLocation.new(name:'Mol', city: antwerp)
+pick_up_locations << PickUpLocation.new(name:'Oud Turnhout', city: antwerp)
+pick_up_locations << PickUpLocation.new(name:'Ruisbroek', city: antwerp)
+pick_up_locations << PickUpLocation.new(name:'Turnhout', city: antwerp)
+pick_up_locations << PickUpLocation.new(name:'Waasmunster', city: antwerp)
+pick_up_locations << PickUpLocation.new(name:'Zwijndrecht', city: antwerp)
+pick_up_locations << PickUpLocation.new(name:'Bruges Airport', city: bruges)
+pick_up_locations << PickUpLocation.new(name:'Zeebruges Port', city: bruges)
+pick_up_locations << PickUpLocation.new(name:'Bruges Train Station', city: bruges)
+pick_up_locations << PickUpLocation.new(name:'Bruges City Centre', city: bruges)
+pick_up_locations << PickUpLocation.new(name:'Zeebruges', city: bruges)
+pick_up_locations << PickUpLocation.new(name:'Brussels Airport', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Charleroi Airport', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Liege Airport', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Brussels Central Train Station', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Brussels Midi Train Station', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Brussels Nord Train Station', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Brussels City Centre', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Leuven', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'La Hulpe', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Louvain la Neuve', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Waterloo', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Ghent', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Aalst', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Aarschot', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Affligem', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Alsemberg', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Andenne', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Anderlues', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Annevoie Rouillon', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Antoing', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Arlon', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Asse', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Ath', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Athus', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Barvaux sur Ourthe', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Bastogne', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Baudour', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Beaumont', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Beerse', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Beersel', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Beloeil', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Bertrix', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Bierges', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Binche', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Blanden', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Blankenberge', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Bocholt', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Boom', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Bouillon', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Braine Le Chateau', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Braine l Alleud', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Braine le Comte', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Bredene', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Bree', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Bruges', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Brussegem', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Brussels Airport Hotel', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Brussels Port', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Cambron Casteau', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Charleroi', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Chevetogne', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Chievres', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Chimay', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Chiny', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Ciney', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Court Saint Etienne', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Couvin', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'De Haan', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'De Panne', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Dendermonde', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Diegem', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Diepenbeek', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Diest', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Diksmuide', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Dilbeek', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Dinant', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Dour', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Drogenbos', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Dunkerque', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Durbuy', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Dworp', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Enghien', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Erpe Mere', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Erps Kwerps', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Erquelinnes', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Feluy', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Flobecq', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Floreffe', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Florennes', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Florenville', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Fosses la Ville', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Francorchamps', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Gedinne', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Gembloux', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Genappe', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Genk', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Genval', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Geraardsbergen', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Gerpinnes', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Godinne', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Gooik', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Grimbergen', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Groot Bijgaarden', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Haacht', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Haasrode', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Habay la Neuve', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Halle', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Hamoir', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Han sur Lesse', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Hannut', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Hasselt', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Hastiere', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Havelange', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Herentals', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Heusden Zolder', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Heverlee', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Hoeilaart', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Hofstade', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Houffalize', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Huizingen', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Huldenberg', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Huy', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Itterbeek', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Jemeppe sur Sambre', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Jodoigne', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Kessel Lo', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Kester', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Koksijde', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Korbeek Dijle', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Kortenberg', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Kortrijk', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Kraainem', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'La Louviere', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'La Roche en Ardenne', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Landen', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Lavaux Sainte Anne', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Le Roeulx', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Leefdaal', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Lennik', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Lessines', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Lessive', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Leuze en Hainaut', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Libramont Chevigny', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Liege', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Limal', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Linkebeek', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Lokeren', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Londerzeel', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Lot', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Maaseik', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Machelen', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Maillen', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Maldegem', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Malmedy', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Manage', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Marbehan', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Marche en Famenne', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Martelange', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Mechelen', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Meise', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Merchtem', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Messancy', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Middelkerke', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Mons', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Mouscron', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Namur', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Nazareth', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Neufchateau', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Nieuwpoort', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Ninove', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Nivelles', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Ohain', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Oostduinkerke', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Opwijk', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Ostend', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Ottignies', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Oud Heverlee', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Overijse', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Perk', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Peruwelz', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Peutie', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Philippeville', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Pommeroeul', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Quievrain', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Rebecq Rognon', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Renaix', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Rhode Saint Genese', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Rixensart', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Rochefort', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Roeselare', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Ronse', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Roosdaal', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Rosieres', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Saint Vith', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Sambreville', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Sint Joris Weert', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Sint Pieters Leeuw', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Sint Truiden', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Soignies', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Spa', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Steenokkerzeel', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Sterrebeek', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Strombeek Bever', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Ternat', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Tertre', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Tervuren', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Thuin', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Tielt Winge', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Tienen', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Tongeren', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Tournai', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Tubize', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Verviers', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Veurne', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Viller sur Semois', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Vilvoorde', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Vlezenbeek', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Vresse sur Semois', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Waremme', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Waulsort', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Wavre', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Wemmel', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Westende', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Wevelgem', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Wezembeek Oppem', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Wilsele', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Wolvertem', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Yvoir', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Zellik', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Zemst', city: brussels)
+pick_up_locations << PickUpLocation.new(name:'Zottegem', city: brussels)
   puts 'Cities of Bulgaria'
   burgas = City.find_by(name:'Burgas')
   plovdiv = City.find_by(name:'Plovdiv')
   sofia = City.find_by(name:'Sofia')
   varna = City.find_by(name:'Varna')
-  PickUpLocation.create([
-      {name:'Burgas Airport', city: burgas},
-      {name:'Burgas Port', city: burgas},
-      {name:'Burgas Train Station', city: burgas},
-      {name:'Ahtopol', city: burgas},
-      {name:'Slanchev Briag', city: burgas},
-      {name:'Primorsko', city: burgas},
-      {name:'Burgas', city: burgas},
-      {name:'Burgas City Centre', city: burgas},
-      {name:'Chernomorets', city: burgas},
-      {name:'Duni', city: burgas},
-      {name:'Elena', city: burgas},
-      {name:'Elenite', city: burgas},
-      {name:'Elhovo', city: burgas},
-      {name:'Kamchia', city: burgas},
-      {name:'Kardam', city: burgas},
-      {name:'Karnobat', city: burgas},
-      {name:'Kiten', city: burgas},
-      {name:'Kosharitsa', city: burgas},
-      {name:'Lozenets', city: burgas},
-      {name:'Malko Tarnovo', city: burgas},
-      {name:'Nessebar', city: burgas},
-      {name:'Obzor', city: burgas},
-      {name:'Pomorie', city: burgas},
-      {name:'Ravda', city: burgas},
-      {name:'Sinemorets', city: burgas},
-      {name:'Sliven', city: burgas},
-      {name:'Sozopol', city: burgas},
-      {name:'Sveti Vlas', city: burgas},
-      {name:'Svilengrad', city: burgas},
-      {name:'Tsarevo', city: burgas},
-      {name:'Veliko Tarnovo', city: burgas},
-      {name:'Yambol', city: burgas},
-      {name:'Plovdiv Airport', city: plovdiv},
-      {name:'Pamporovo', city: plovdiv},
-      {name:'Haskovo', city: plovdiv},
-      {name:'Plovdiv City Centre', city: plovdiv},
-      {name:'Chepelare', city: plovdiv},
-      {name:'Koprivshtitsa', city: plovdiv},
-      {name:'Velingrad', city: plovdiv},
-      {name:'Apriltsi', city: plovdiv},
-      {name:'Arbanassi', city: plovdiv},
-      {name:'Asenovgrad', city: plovdiv},
-      {name:'Bachkovo', city: plovdiv},
-      {name:'Bozhentsi', city: plovdiv},
-      {name:'Chirpan', city: plovdiv},
-      {name:'Devin', city: plovdiv},
-      {name:'Dospat', city: plovdiv},
-      {name:'Gabrovo', city: plovdiv},
-      {name:'Gotse Delchev', city: plovdiv},
-      {name:'Hisarya', city: plovdiv},
-      {name:'Kalofer', city: plovdiv},
-      {name:'Kapitan Andreevo', city: plovdiv},
-      {name:'Kardzhali', city: plovdiv},
-      {name:'Karlovo', city: plovdiv},
-      {name:'Kazanlak', city: plovdiv},
-      {name:'Kulata', city: plovdiv},
-      {name:'Leshten', city: plovdiv},
-      {name:'Levski', city: plovdiv},
-      {name:'Momchilgrad', city: plovdiv},
-      {name:'Pavel Bania', city: plovdiv},
-      {name:'Pazardjik', city: plovdiv},
-      {name:'Sevlievo', city: plovdiv},
-      {name:'Shipka', city: plovdiv},
-      {name:'Shiroka Laka', city: plovdiv},
-      {name:'Smolyan', city: plovdiv},
-      {name:'Stara Zagora', city: plovdiv},
-      {name:'Stoykite', city: plovdiv},
-      {name:'Svishtov', city: plovdiv},
-      {name:'Trigrad', city: plovdiv},
-      {name:'Troyan', city: plovdiv},
-      {name:'Tryavna', city: plovdiv},
-      {name:'Sofia Airport', city: sofia},
-      {name:'Bansko', city: sofia},
-      {name:'Sofia City Centre', city: sofia},
-      {name:'Borovets', city: sofia},
-      {name:'Bankya', city: sofia},
-      {name:'Belogradchik', city: sofia},
-      {name:'Blagoevgrad', city: sofia},
-      {name:'Botevgrad', city: sofia},
-      {name:'Dolna Banya', city: sofia},
-      {name:'Dupnica', city: sofia},
-      {name:'Elin Pelin', city: sofia},
-      {name:'Govedartsi', city: sofia},
-      {name:'Ihtiman', city: sofia},
-      {name:'Kalotina', city: sofia},
-      {name:'Kozloduy', city: sofia},
-      {name:'Krapets', city: sofia},
-      {name:'Kyustendil', city: sofia},
-      {name:'Logodazh', city: sofia},
-      {name:'Lovech', city: sofia},
-      {name:'Melnik', city: sofia},
-      {name:'Montana', city: sofia},
-      {name:'Pernik', city: sofia},
-      {name:'Petrich', city: sofia},
-      {name:'Pleven', city: sofia},
-      {name:'Pravets', city: sofia},
-      {name:'Razlog', city: sofia},
-      {name:'Ribaritsa', city: sofia},
-      {name:'Rila', city: sofia},
-      {name:'Samokov', city: sofia},
-      {name:'Sandanski', city: sofia},
-      {name:'Vidin', city: sofia},
-      {name:'Vitosha', city: sofia},
-      {name:'Vratsa', city: sofia},
-      {name:'Zlatna Panega', city: sofia},
-      {name:'Varna Airport', city: varna},
-      {name:'Balchik', city: varna},
-      {name:'Golden Sands', city: varna},
-      {name:'Byala', city: varna},
-      {name:'Kavarna', city: varna},
-      {name:'Rogachevo', city: varna},
-      {name:'Ruse', city: varna},
-      {name:'Albena', city: varna},
-      {name:'Dobrich', city: varna},
-      {name:'Durankulak', city: varna},
-      {name:'Kranevo', city: varna},
-      {name:'Shabla', city: varna},
-      {name:'Shumen', city: varna},
-      {name:'Silistra', city: varna},
-      {name:'Slanchev Den', city: varna},
-      {name:'Staro Oryahovo', city: varna},
-      {name:'Tetovo', city: varna},
-      {name:'Turgoviste', city: varna},
-      {name:'Varna City Centre', city: varna}
-        ])
+  
+pick_up_locations << PickUpLocation.new(name:'Burgas Airport', city: burgas)
+pick_up_locations << PickUpLocation.new(name:'Burgas Port', city: burgas)
+pick_up_locations << PickUpLocation.new(name:'Burgas Train Station', city: burgas)
+pick_up_locations << PickUpLocation.new(name:'Ahtopol', city: burgas)
+pick_up_locations << PickUpLocation.new(name:'Slanchev Briag', city: burgas)
+pick_up_locations << PickUpLocation.new(name:'Primorsko', city: burgas)
+pick_up_locations << PickUpLocation.new(name:'Burgas', city: burgas)
+pick_up_locations << PickUpLocation.new(name:'Burgas City Centre', city: burgas)
+pick_up_locations << PickUpLocation.new(name:'Chernomorets', city: burgas)
+pick_up_locations << PickUpLocation.new(name:'Duni', city: burgas)
+pick_up_locations << PickUpLocation.new(name:'Elena', city: burgas)
+pick_up_locations << PickUpLocation.new(name:'Elenite', city: burgas)
+pick_up_locations << PickUpLocation.new(name:'Elhovo', city: burgas)
+pick_up_locations << PickUpLocation.new(name:'Kamchia', city: burgas)
+pick_up_locations << PickUpLocation.new(name:'Kardam', city: burgas)
+pick_up_locations << PickUpLocation.new(name:'Karnobat', city: burgas)
+pick_up_locations << PickUpLocation.new(name:'Kiten', city: burgas)
+pick_up_locations << PickUpLocation.new(name:'Kosharitsa', city: burgas)
+pick_up_locations << PickUpLocation.new(name:'Lozenets', city: burgas)
+pick_up_locations << PickUpLocation.new(name:'Malko Tarnovo', city: burgas)
+pick_up_locations << PickUpLocation.new(name:'Nessebar', city: burgas)
+pick_up_locations << PickUpLocation.new(name:'Obzor', city: burgas)
+pick_up_locations << PickUpLocation.new(name:'Pomorie', city: burgas)
+pick_up_locations << PickUpLocation.new(name:'Ravda', city: burgas)
+pick_up_locations << PickUpLocation.new(name:'Sinemorets', city: burgas)
+pick_up_locations << PickUpLocation.new(name:'Sliven', city: burgas)
+pick_up_locations << PickUpLocation.new(name:'Sozopol', city: burgas)
+pick_up_locations << PickUpLocation.new(name:'Sveti Vlas', city: burgas)
+pick_up_locations << PickUpLocation.new(name:'Svilengrad', city: burgas)
+pick_up_locations << PickUpLocation.new(name:'Tsarevo', city: burgas)
+pick_up_locations << PickUpLocation.new(name:'Veliko Tarnovo', city: burgas)
+pick_up_locations << PickUpLocation.new(name:'Yambol', city: burgas)
+pick_up_locations << PickUpLocation.new(name:'Plovdiv Airport', city: plovdiv)
+pick_up_locations << PickUpLocation.new(name:'Pamporovo', city: plovdiv)
+pick_up_locations << PickUpLocation.new(name:'Haskovo', city: plovdiv)
+pick_up_locations << PickUpLocation.new(name:'Plovdiv City Centre', city: plovdiv)
+pick_up_locations << PickUpLocation.new(name:'Chepelare', city: plovdiv)
+pick_up_locations << PickUpLocation.new(name:'Koprivshtitsa', city: plovdiv)
+pick_up_locations << PickUpLocation.new(name:'Velingrad', city: plovdiv)
+pick_up_locations << PickUpLocation.new(name:'Apriltsi', city: plovdiv)
+pick_up_locations << PickUpLocation.new(name:'Arbanassi', city: plovdiv)
+pick_up_locations << PickUpLocation.new(name:'Asenovgrad', city: plovdiv)
+pick_up_locations << PickUpLocation.new(name:'Bachkovo', city: plovdiv)
+pick_up_locations << PickUpLocation.new(name:'Bozhentsi', city: plovdiv)
+pick_up_locations << PickUpLocation.new(name:'Chirpan', city: plovdiv)
+pick_up_locations << PickUpLocation.new(name:'Devin', city: plovdiv)
+pick_up_locations << PickUpLocation.new(name:'Dospat', city: plovdiv)
+pick_up_locations << PickUpLocation.new(name:'Gabrovo', city: plovdiv)
+pick_up_locations << PickUpLocation.new(name:'Gotse Delchev', city: plovdiv)
+pick_up_locations << PickUpLocation.new(name:'Hisarya', city: plovdiv)
+pick_up_locations << PickUpLocation.new(name:'Kalofer', city: plovdiv)
+pick_up_locations << PickUpLocation.new(name:'Kapitan Andreevo', city: plovdiv)
+pick_up_locations << PickUpLocation.new(name:'Kardzhali', city: plovdiv)
+pick_up_locations << PickUpLocation.new(name:'Karlovo', city: plovdiv)
+pick_up_locations << PickUpLocation.new(name:'Kazanlak', city: plovdiv)
+pick_up_locations << PickUpLocation.new(name:'Kulata', city: plovdiv)
+pick_up_locations << PickUpLocation.new(name:'Leshten', city: plovdiv)
+pick_up_locations << PickUpLocation.new(name:'Levski', city: plovdiv)
+pick_up_locations << PickUpLocation.new(name:'Momchilgrad', city: plovdiv)
+pick_up_locations << PickUpLocation.new(name:'Pavel Bania', city: plovdiv)
+pick_up_locations << PickUpLocation.new(name:'Pazardjik', city: plovdiv)
+pick_up_locations << PickUpLocation.new(name:'Sevlievo', city: plovdiv)
+pick_up_locations << PickUpLocation.new(name:'Shipka', city: plovdiv)
+pick_up_locations << PickUpLocation.new(name:'Shiroka Laka', city: plovdiv)
+pick_up_locations << PickUpLocation.new(name:'Smolyan', city: plovdiv)
+pick_up_locations << PickUpLocation.new(name:'Stara Zagora', city: plovdiv)
+pick_up_locations << PickUpLocation.new(name:'Stoykite', city: plovdiv)
+pick_up_locations << PickUpLocation.new(name:'Svishtov', city: plovdiv)
+pick_up_locations << PickUpLocation.new(name:'Trigrad', city: plovdiv)
+pick_up_locations << PickUpLocation.new(name:'Troyan', city: plovdiv)
+pick_up_locations << PickUpLocation.new(name:'Tryavna', city: plovdiv)
+pick_up_locations << PickUpLocation.new(name:'Sofia Airport', city: sofia)
+pick_up_locations << PickUpLocation.new(name:'Bansko', city: sofia)
+pick_up_locations << PickUpLocation.new(name:'Sofia City Centre', city: sofia)
+pick_up_locations << PickUpLocation.new(name:'Borovets', city: sofia)
+pick_up_locations << PickUpLocation.new(name:'Bankya', city: sofia)
+pick_up_locations << PickUpLocation.new(name:'Belogradchik', city: sofia)
+pick_up_locations << PickUpLocation.new(name:'Blagoevgrad', city: sofia)
+pick_up_locations << PickUpLocation.new(name:'Botevgrad', city: sofia)
+pick_up_locations << PickUpLocation.new(name:'Dolna Banya', city: sofia)
+pick_up_locations << PickUpLocation.new(name:'Dupnica', city: sofia)
+pick_up_locations << PickUpLocation.new(name:'Elin Pelin', city: sofia)
+pick_up_locations << PickUpLocation.new(name:'Govedartsi', city: sofia)
+pick_up_locations << PickUpLocation.new(name:'Ihtiman', city: sofia)
+pick_up_locations << PickUpLocation.new(name:'Kalotina', city: sofia)
+pick_up_locations << PickUpLocation.new(name:'Kozloduy', city: sofia)
+pick_up_locations << PickUpLocation.new(name:'Krapets', city: sofia)
+pick_up_locations << PickUpLocation.new(name:'Kyustendil', city: sofia)
+pick_up_locations << PickUpLocation.new(name:'Logodazh', city: sofia)
+pick_up_locations << PickUpLocation.new(name:'Lovech', city: sofia)
+pick_up_locations << PickUpLocation.new(name:'Melnik', city: sofia)
+pick_up_locations << PickUpLocation.new(name:'Montana', city: sofia)
+pick_up_locations << PickUpLocation.new(name:'Pernik', city: sofia)
+pick_up_locations << PickUpLocation.new(name:'Petrich', city: sofia)
+pick_up_locations << PickUpLocation.new(name:'Pleven', city: sofia)
+pick_up_locations << PickUpLocation.new(name:'Pravets', city: sofia)
+pick_up_locations << PickUpLocation.new(name:'Razlog', city: sofia)
+pick_up_locations << PickUpLocation.new(name:'Ribaritsa', city: sofia)
+pick_up_locations << PickUpLocation.new(name:'Rila', city: sofia)
+pick_up_locations << PickUpLocation.new(name:'Samokov', city: sofia)
+pick_up_locations << PickUpLocation.new(name:'Sandanski', city: sofia)
+pick_up_locations << PickUpLocation.new(name:'Vidin', city: sofia)
+pick_up_locations << PickUpLocation.new(name:'Vitosha', city: sofia)
+pick_up_locations << PickUpLocation.new(name:'Vratsa', city: sofia)
+pick_up_locations << PickUpLocation.new(name:'Zlatna Panega', city: sofia)
+pick_up_locations << PickUpLocation.new(name:'Varna Airport', city: varna)
+pick_up_locations << PickUpLocation.new(name:'Balchik', city: varna)
+pick_up_locations << PickUpLocation.new(name:'Golden Sands', city: varna)
+pick_up_locations << PickUpLocation.new(name:'Byala', city: varna)
+pick_up_locations << PickUpLocation.new(name:'Kavarna', city: varna)
+pick_up_locations << PickUpLocation.new(name:'Rogachevo', city: varna)
+pick_up_locations << PickUpLocation.new(name:'Ruse', city: varna)
+pick_up_locations << PickUpLocation.new(name:'Albena', city: varna)
+pick_up_locations << PickUpLocation.new(name:'Dobrich', city: varna)
+pick_up_locations << PickUpLocation.new(name:'Durankulak', city: varna)
+pick_up_locations << PickUpLocation.new(name:'Kranevo', city: varna)
+pick_up_locations << PickUpLocation.new(name:'Shabla', city: varna)
+pick_up_locations << PickUpLocation.new(name:'Shumen', city: varna)
+pick_up_locations << PickUpLocation.new(name:'Silistra', city: varna)
+pick_up_locations << PickUpLocation.new(name:'Slanchev Den', city: varna)
+pick_up_locations << PickUpLocation.new(name:'Staro Oryahovo', city: varna)
+pick_up_locations << PickUpLocation.new(name:'Tetovo', city: varna)
+pick_up_locations << PickUpLocation.new(name:'Turgoviste', city: varna)
+pick_up_locations << PickUpLocation.new(name:'Varna City Centre', city: varna)
   puts 'Cities of Croatia'
   dubrovnik = City.find_by(name:'Dubrovnik')
   osijek = City.find_by(name:'Osijek')
@@ -1094,341 +1093,338 @@ after :cities do
   split = City.find_by(name:'Split')
   zadar = City.find_by(name:'Zadar')
   zagreb = City.find_by(name:'Zagreb')
-  PickUpLocation.create([
-      {name:'Dubrovnik Airport', city: dubrovnik},
-      {name:'Dubrovnik City Centre', city: dubrovnik},
-      {name:'Cavtat', city: dubrovnik},
-      {name:'Orasac', city: dubrovnik},
-      {name:'Plat', city: dubrovnik},
-      {name:'Zaton', city: dubrovnik},
-      {name:'Brsecine', city: dubrovnik},
-      {name:'Bar', city: dubrovnik},
-      {name:'Budva', city: dubrovnik},
-      {name:'Herceg Novi', city: dubrovnik},
-      {name:'Klek', city: dubrovnik},
-      {name:'Kolocep', city: dubrovnik},
-      {name:'Komolac', city: dubrovnik},
-      {name:'Korcula', city: dubrovnik},
-      {name:'Kupari', city: dubrovnik},
-      {name:'Lopud', city: dubrovnik},
-      {name:'Lozica', city: dubrovnik},
-      {name:'Medjugorje', city: dubrovnik},
-      {name:'Metkovic', city: dubrovnik},
-      {name:'Mlini', city: dubrovnik},
-      {name:'Molunat', city: dubrovnik},
-      {name:'Orebic', city: dubrovnik},
-      {name:'Perast', city: dubrovnik},
-      {name:'Ploce', city: dubrovnik},
-      {name:'Sipan', city: dubrovnik},
-      {name:'Slano', city: dubrovnik},
-      {name:'Ston', city: dubrovnik},
-      {name:'Tivat', city: dubrovnik},
-      {name:'Trebinje', city: dubrovnik},
-      {name:'Trpanj', city: dubrovnik},
-      {name:'Trsteno', city: dubrovnik},
-      {name:'Zupa Dubrovacka', city: dubrovnik},
-      {name:'Osijek Airport', city: osijek},
-      {name:'Slavonski Brod', city: osijek},
-      {name:'Osijek City Centre', city: osijek},
-      {name:'Vinkovci', city: osijek},
-      {name:'Vukovar', city: osijek},
-      {name:'Zupanja', city: osijek},
-      {name:'Pula Airport', city: pula},
-      {name:'Pula', city: pula},
-      {name:'Rijeka Airport', city: rijeka},
-      {name:'Rijeka City Centre', city: rijeka},
-      {name:'Split Airport', city: split},
-      {name:'Split City Centre', city: split},
-      {name:'Podgora', city: split},
-      {name:'Marina', city: split},
-      {name:'Sibenik', city: split},
-      {name:'Podstrana', city: split},
-      {name:'Makarska', city: split},
-      {name:'Arbania', city: split},
-      {name:'Baska Voda', city: split},
-      {name:'Bol', city: split},
-      {name:'Brela', city: split},
-      {name:'Brodarica', city: split},
-      {name:'Drvenik', city: split},
-      {name:'Duce', city: split},
-      {name:'Dugi Rat', city: split},
-      {name:'Gradac', city: split},
-      {name:'Grebastica', city: split},
-      {name:'Igrane', city: split},
-      {name:'Kastela', city: split},
-      {name:'Komiza', city: split},
-      {name:'Marina ACI Trogir', city: split},
-      {name:'Marina Kremik', city: split},
-      {name:'Okrug Donji', city: split},
-      {name:'Omis', city: split},
-      {name:'Primosten', city: split},
-      {name:'Rogoznica', city: split},
-      {name:'Seget Donji', city: split},
-      {name:'Seget Vranjica', city: split},
-      {name:'Skradin', city: split},
-      {name:'Slatine', city: split},
-      {name:'Solaris', city: split},
-      {name:'Solin', city: split},
-      {name:'Split Bus Station', city: split},
-      {name:'Split Ferry Port', city: split},
-      {name:'Split Marina ACI', city: split},
-      {name:'Stari Grad', city: split},
-      {name:'Stobrec', city: split},
-      {name:'Supetar', city: split},
-      {name:'Trogir', city: split},
-      {name:'Tucepi', city: split},
-      {name:'Vela Luka', city: split},
-      {name:'Vinisce', city: split},
-      {name:'Vis', city: split},
-      {name:'Zivogosce', city: split},
-      {name:'Zadar Airport', city: zadar},
-      {name:'Novalja', city: zadar},
-      {name:'Zadar City Centre', city: zadar},
-      {name:'Tisno', city: zadar},
-      {name:'Starigrad Paklenica', city: zadar},
-      {name:'Sukosan', city: zadar},
-      {name:'Vodice', city: zadar},
-      {name:'Biograd', city: zadar},
-      {name:'Gornji Karin', city: zadar},
-      {name:'Karlobag', city: zadar},
-      {name:'Mali Losinj', city: zadar},
-      {name:'Murter', city: zadar},
-      {name:'Pakostane', city: zadar},
-      {name:'Petrcane', city: zadar},
-      {name:'Zagreb Airport', city: zagreb},
-      {name:'Zagreb Train Station', city: zagreb},
-      {name:'Zagreb City Centre', city: zagreb},
-      {name:'Opatija', city: zagreb},
-      {name:'Plitvice Lakes', city: zagreb},
-      {name:'Krk', city: zagreb},
-      {name:'Rovinj', city: zagreb},
-      {name:'Pag', city: zagreb},
-      {name:'Baska', city: zagreb},
-      {name:'Bednja', city: zagreb},
-      {name:'Bihac', city: zagreb},
-      {name:'Bjelovar', city: zagreb},
-      {name:'Bosanska Kostajnica', city: zagreb},
-      {name:'Cakovec', city: zagreb},
-      {name:'Crikvenica', city: zagreb},
-      {name:'Dakovo', city: zagreb},
-      {name:'Daruvar', city: zagreb},
-      {name:'Dreznik Grad', city: zagreb},
-      {name:'Dugo Selo', city: zagreb},
-      {name:'Fazana', city: zagreb},
-      {name:'Grabovac', city: zagreb},
-      {name:'Irinovac', city: zagreb},
-      {name:'Jastrebarsko', city: zagreb},
-      {name:'Jezerce', city: zagreb},
-      {name:'Karlovac', city: zagreb},
-      {name:'Koprivnica', city: zagreb},
-      {name:'Lovran', city: zagreb},
-      {name:'Medulin', city: zagreb},
-      {name:'Motovun', city: zagreb},
-      {name:'Novi Vinodolski', city: zagreb},
-      {name:'Novigrad', city: zagreb},
-      {name:'Novigrad Istarski', city: zagreb},
-      {name:'Pazin', city: zagreb},
-      {name:'Podsused', city: zagreb},
-      {name:'Porec', city: zagreb},
-      {name:'Rab', city: zagreb},
-      {name:'Rakovica', city: zagreb},
-      {name:'Rudanovac', city: zagreb},
-      {name:'Samobor', city: zagreb},
-      {name:'Senj', city: zagreb},
-      {name:'Sesvete', city: zagreb},
-      {name:'Sisak', city: zagreb},
-      {name:'Smoljanac', city: zagreb},
-      {name:'Stubicke Toplice', city: zagreb},
-      {name:'Tuheljske Toplice', city: zagreb},
-      {name:'Umag', city: zagreb},
-      {name:'Varazdin', city: zagreb},
-      {name:'Virovitica', city: zagreb},
-      {name:'Vrsar', city: zagreb},
-      {name:'Zapresic', city: zagreb}
-          ])
+  
+pick_up_locations << PickUpLocation.new(name:'Dubrovnik Airport', city: dubrovnik)
+pick_up_locations << PickUpLocation.new(name:'Dubrovnik City Centre', city: dubrovnik)
+pick_up_locations << PickUpLocation.new(name:'Cavtat', city: dubrovnik)
+pick_up_locations << PickUpLocation.new(name:'Orasac', city: dubrovnik)
+pick_up_locations << PickUpLocation.new(name:'Plat', city: dubrovnik)
+pick_up_locations << PickUpLocation.new(name:'Zaton', city: dubrovnik)
+pick_up_locations << PickUpLocation.new(name:'Brsecine', city: dubrovnik)
+pick_up_locations << PickUpLocation.new(name:'Bar', city: dubrovnik)
+pick_up_locations << PickUpLocation.new(name:'Budva', city: dubrovnik)
+pick_up_locations << PickUpLocation.new(name:'Herceg Novi', city: dubrovnik)
+pick_up_locations << PickUpLocation.new(name:'Klek', city: dubrovnik)
+pick_up_locations << PickUpLocation.new(name:'Kolocep', city: dubrovnik)
+pick_up_locations << PickUpLocation.new(name:'Komolac', city: dubrovnik)
+pick_up_locations << PickUpLocation.new(name:'Korcula', city: dubrovnik)
+pick_up_locations << PickUpLocation.new(name:'Kupari', city: dubrovnik)
+pick_up_locations << PickUpLocation.new(name:'Lopud', city: dubrovnik)
+pick_up_locations << PickUpLocation.new(name:'Lozica', city: dubrovnik)
+pick_up_locations << PickUpLocation.new(name:'Medjugorje', city: dubrovnik)
+pick_up_locations << PickUpLocation.new(name:'Metkovic', city: dubrovnik)
+pick_up_locations << PickUpLocation.new(name:'Mlini', city: dubrovnik)
+pick_up_locations << PickUpLocation.new(name:'Molunat', city: dubrovnik)
+pick_up_locations << PickUpLocation.new(name:'Orebic', city: dubrovnik)
+pick_up_locations << PickUpLocation.new(name:'Perast', city: dubrovnik)
+pick_up_locations << PickUpLocation.new(name:'Ploce', city: dubrovnik)
+pick_up_locations << PickUpLocation.new(name:'Sipan', city: dubrovnik)
+pick_up_locations << PickUpLocation.new(name:'Slano', city: dubrovnik)
+pick_up_locations << PickUpLocation.new(name:'Ston', city: dubrovnik)
+pick_up_locations << PickUpLocation.new(name:'Tivat', city: dubrovnik)
+pick_up_locations << PickUpLocation.new(name:'Trebinje', city: dubrovnik)
+pick_up_locations << PickUpLocation.new(name:'Trpanj', city: dubrovnik)
+pick_up_locations << PickUpLocation.new(name:'Trsteno', city: dubrovnik)
+pick_up_locations << PickUpLocation.new(name:'Zupa Dubrovacka', city: dubrovnik)
+pick_up_locations << PickUpLocation.new(name:'Osijek Airport', city: osijek)
+pick_up_locations << PickUpLocation.new(name:'Slavonski Brod', city: osijek)
+pick_up_locations << PickUpLocation.new(name:'Osijek City Centre', city: osijek)
+pick_up_locations << PickUpLocation.new(name:'Vinkovci', city: osijek)
+pick_up_locations << PickUpLocation.new(name:'Vukovar', city: osijek)
+pick_up_locations << PickUpLocation.new(name:'Zupanja', city: osijek)
+pick_up_locations << PickUpLocation.new(name:'Pula Airport', city: pula)
+pick_up_locations << PickUpLocation.new(name:'Pula', city: pula)
+pick_up_locations << PickUpLocation.new(name:'Rijeka Airport', city: rijeka)
+pick_up_locations << PickUpLocation.new(name:'Rijeka City Centre', city: rijeka)
+pick_up_locations << PickUpLocation.new(name:'Split Airport', city: split)
+pick_up_locations << PickUpLocation.new(name:'Split City Centre', city: split)
+pick_up_locations << PickUpLocation.new(name:'Podgora', city: split)
+pick_up_locations << PickUpLocation.new(name:'Marina', city: split)
+pick_up_locations << PickUpLocation.new(name:'Sibenik', city: split)
+pick_up_locations << PickUpLocation.new(name:'Podstrana', city: split)
+pick_up_locations << PickUpLocation.new(name:'Makarska', city: split)
+pick_up_locations << PickUpLocation.new(name:'Arbania', city: split)
+pick_up_locations << PickUpLocation.new(name:'Baska Voda', city: split)
+pick_up_locations << PickUpLocation.new(name:'Bol', city: split)
+pick_up_locations << PickUpLocation.new(name:'Brela', city: split)
+pick_up_locations << PickUpLocation.new(name:'Brodarica', city: split)
+pick_up_locations << PickUpLocation.new(name:'Drvenik', city: split)
+pick_up_locations << PickUpLocation.new(name:'Duce', city: split)
+pick_up_locations << PickUpLocation.new(name:'Dugi Rat', city: split)
+pick_up_locations << PickUpLocation.new(name:'Gradac', city: split)
+pick_up_locations << PickUpLocation.new(name:'Grebastica', city: split)
+pick_up_locations << PickUpLocation.new(name:'Igrane', city: split)
+pick_up_locations << PickUpLocation.new(name:'Kastela', city: split)
+pick_up_locations << PickUpLocation.new(name:'Komiza', city: split)
+pick_up_locations << PickUpLocation.new(name:'Marina ACI Trogir', city: split)
+pick_up_locations << PickUpLocation.new(name:'Marina Kremik', city: split)
+pick_up_locations << PickUpLocation.new(name:'Okrug Donji', city: split)
+pick_up_locations << PickUpLocation.new(name:'Omis', city: split)
+pick_up_locations << PickUpLocation.new(name:'Primosten', city: split)
+pick_up_locations << PickUpLocation.new(name:'Rogoznica', city: split)
+pick_up_locations << PickUpLocation.new(name:'Seget Donji', city: split)
+pick_up_locations << PickUpLocation.new(name:'Seget Vranjica', city: split)
+pick_up_locations << PickUpLocation.new(name:'Skradin', city: split)
+pick_up_locations << PickUpLocation.new(name:'Slatine', city: split)
+pick_up_locations << PickUpLocation.new(name:'Solaris', city: split)
+pick_up_locations << PickUpLocation.new(name:'Solin', city: split)
+pick_up_locations << PickUpLocation.new(name:'Split Bus Station', city: split)
+pick_up_locations << PickUpLocation.new(name:'Split Ferry Port', city: split)
+pick_up_locations << PickUpLocation.new(name:'Split Marina ACI', city: split)
+pick_up_locations << PickUpLocation.new(name:'Stari Grad', city: split)
+pick_up_locations << PickUpLocation.new(name:'Stobrec', city: split)
+pick_up_locations << PickUpLocation.new(name:'Supetar', city: split)
+pick_up_locations << PickUpLocation.new(name:'Trogir', city: split)
+pick_up_locations << PickUpLocation.new(name:'Tucepi', city: split)
+pick_up_locations << PickUpLocation.new(name:'Vela Luka', city: split)
+pick_up_locations << PickUpLocation.new(name:'Vinisce', city: split)
+pick_up_locations << PickUpLocation.new(name:'Vis', city: split)
+pick_up_locations << PickUpLocation.new(name:'Zivogosce', city: split)
+pick_up_locations << PickUpLocation.new(name:'Zadar Airport', city: zadar)
+pick_up_locations << PickUpLocation.new(name:'Novalja', city: zadar)
+pick_up_locations << PickUpLocation.new(name:'Zadar City Centre', city: zadar)
+pick_up_locations << PickUpLocation.new(name:'Tisno', city: zadar)
+pick_up_locations << PickUpLocation.new(name:'Starigrad Paklenica', city: zadar)
+pick_up_locations << PickUpLocation.new(name:'Sukosan', city: zadar)
+pick_up_locations << PickUpLocation.new(name:'Vodice', city: zadar)
+pick_up_locations << PickUpLocation.new(name:'Biograd', city: zadar)
+pick_up_locations << PickUpLocation.new(name:'Gornji Karin', city: zadar)
+pick_up_locations << PickUpLocation.new(name:'Karlobag', city: zadar)
+pick_up_locations << PickUpLocation.new(name:'Mali Losinj', city: zadar)
+pick_up_locations << PickUpLocation.new(name:'Murter', city: zadar)
+pick_up_locations << PickUpLocation.new(name:'Pakostane', city: zadar)
+pick_up_locations << PickUpLocation.new(name:'Petrcane', city: zadar)
+pick_up_locations << PickUpLocation.new(name:'Zagreb Airport', city: zagreb)
+pick_up_locations << PickUpLocation.new(name:'Zagreb Train Station', city: zagreb)
+pick_up_locations << PickUpLocation.new(name:'Zagreb City Centre', city: zagreb)
+pick_up_locations << PickUpLocation.new(name:'Opatija', city: zagreb)
+pick_up_locations << PickUpLocation.new(name:'Plitvice Lakes', city: zagreb)
+pick_up_locations << PickUpLocation.new(name:'Krk', city: zagreb)
+pick_up_locations << PickUpLocation.new(name:'Rovinj', city: zagreb)
+pick_up_locations << PickUpLocation.new(name:'Pag', city: zagreb)
+pick_up_locations << PickUpLocation.new(name:'Baska', city: zagreb)
+pick_up_locations << PickUpLocation.new(name:'Bednja', city: zagreb)
+pick_up_locations << PickUpLocation.new(name:'Bihac', city: zagreb)
+pick_up_locations << PickUpLocation.new(name:'Bjelovar', city: zagreb)
+pick_up_locations << PickUpLocation.new(name:'Bosanska Kostajnica', city: zagreb)
+pick_up_locations << PickUpLocation.new(name:'Cakovec', city: zagreb)
+pick_up_locations << PickUpLocation.new(name:'Crikvenica', city: zagreb)
+pick_up_locations << PickUpLocation.new(name:'Dakovo', city: zagreb)
+pick_up_locations << PickUpLocation.new(name:'Daruvar', city: zagreb)
+pick_up_locations << PickUpLocation.new(name:'Dreznik Grad', city: zagreb)
+pick_up_locations << PickUpLocation.new(name:'Dugo Selo', city: zagreb)
+pick_up_locations << PickUpLocation.new(name:'Fazana', city: zagreb)
+pick_up_locations << PickUpLocation.new(name:'Grabovac', city: zagreb)
+pick_up_locations << PickUpLocation.new(name:'Irinovac', city: zagreb)
+pick_up_locations << PickUpLocation.new(name:'Jastrebarsko', city: zagreb)
+pick_up_locations << PickUpLocation.new(name:'Jezerce', city: zagreb)
+pick_up_locations << PickUpLocation.new(name:'Karlovac', city: zagreb)
+pick_up_locations << PickUpLocation.new(name:'Koprivnica', city: zagreb)
+pick_up_locations << PickUpLocation.new(name:'Lovran', city: zagreb)
+pick_up_locations << PickUpLocation.new(name:'Medulin', city: zagreb)
+pick_up_locations << PickUpLocation.new(name:'Motovun', city: zagreb)
+pick_up_locations << PickUpLocation.new(name:'Novi Vinodolski', city: zagreb)
+pick_up_locations << PickUpLocation.new(name:'Novigrad', city: zagreb)
+pick_up_locations << PickUpLocation.new(name:'Novigrad Istarski', city: zagreb)
+pick_up_locations << PickUpLocation.new(name:'Pazin', city: zagreb)
+pick_up_locations << PickUpLocation.new(name:'Podsused', city: zagreb)
+pick_up_locations << PickUpLocation.new(name:'Porec', city: zagreb)
+pick_up_locations << PickUpLocation.new(name:'Rab', city: zagreb)
+pick_up_locations << PickUpLocation.new(name:'Rakovica', city: zagreb)
+pick_up_locations << PickUpLocation.new(name:'Rudanovac', city: zagreb)
+pick_up_locations << PickUpLocation.new(name:'Samobor', city: zagreb)
+pick_up_locations << PickUpLocation.new(name:'Senj', city: zagreb)
+pick_up_locations << PickUpLocation.new(name:'Sesvete', city: zagreb)
+pick_up_locations << PickUpLocation.new(name:'Sisak', city: zagreb)
+pick_up_locations << PickUpLocation.new(name:'Smoljanac', city: zagreb)
+pick_up_locations << PickUpLocation.new(name:'Stubicke Toplice', city: zagreb)
+pick_up_locations << PickUpLocation.new(name:'Tuheljske Toplice', city: zagreb)
+pick_up_locations << PickUpLocation.new(name:'Umag', city: zagreb)
+pick_up_locations << PickUpLocation.new(name:'Varazdin', city: zagreb)
+pick_up_locations << PickUpLocation.new(name:'Virovitica', city: zagreb)
+pick_up_locations << PickUpLocation.new(name:'Vrsar', city: zagreb)
+pick_up_locations << PickUpLocation.new(name:'Zapresic', city: zagreb)
   puts 'Cities of Cyprus'
   larnaca = City.find_by(name:'Larnaca')
   limassol = City.find_by(name:'Limassol')
   paphos = City.find_by(name:'Paphos')
-  PickUpLocation.create([
-      {name:'Ercan Airport', city: larnaca},
-      {name:'Larnaca Airport', city: larnaca},
-      {name:'Ayia Napa', city: larnaca},
-      {name:'Nicosia', city: larnaca},
-      {name:'Protaras', city: larnaca},
-      {name:'Kyrenia', city: larnaca},
-      {name:'Larnaca City Centre', city: larnaca},
-      {name:'Kiti', city: larnaca},
-      {name:'Alaminos', city: larnaca},
-      {name:'Anassa', city: larnaca},
-      {name:'Aradippou', city: larnaca},
-      {name:'Ayia Thekla', city: larnaca},
-      {name:'Bogaz', city: larnaca},
-      {name:'Deryneia', city: larnaca},
-      {name:'Dhekelia', city: larnaca},
-      {name:'Droushia', city: larnaca},
-      {name:'Esentepe', city: larnaca},
-      {name:'Famagusta', city: larnaca},
-      {name:'Governors Beach', city: larnaca},
-      {name:'Kalavasos', city: larnaca},
-      {name:'Kapparis', city: larnaca},
-      {name:'Larnaca Bay', city: larnaca},
-      {name:'Letymbou', city: larnaca},
-      {name:'Liopetri', city: larnaca},
-      {name:'Maroni', city: larnaca},
-      {name:'Mazotos', city: larnaca},
-      {name:'Meniko', city: larnaca},
-      {name:'Ormidhia', city: larnaca},
-      {name:'Oroklini', city: larnaca},
-      {name:'Paralimni', city: larnaca},
-      {name:'Pernera', city: larnaca},
-      {name:'Pervolia', city: larnaca},
-      {name:'Pyla', city: larnaca},
-      {name:'Sotira', city: larnaca},
-      {name:'Tochni', city: larnaca},
-      {name:'RAF Akrotiri Airport', city: limassol},
-      {name:'Limassol Cruise Port', city: limassol},
-      {name:'Limassol', city: limassol},
-      {name:'Nissi Bay', city: limassol},
-      {name:'Episkopi', city: limassol},
-      {name:'Agios Athanasios', city: limassol},
-      {name:'Germasoyia', city: limassol},
-      {name:'Pentakomo', city: limassol},
-      {name:'Egkomi', city: limassol},
-      {name:'Makounta', city: limassol},
-      {name:'Makronissos Agia Napa', city: limassol},
-      {name:'Neo Chorio', city: limassol},
-      {name:'Ora', city: limassol},
-      {name:'Pano Akourdaleia', city: limassol},
-      {name:'Pedoulas', city: limassol},
-      {name:'Prodromi', city: limassol},
-      {name:'Skarinou', city: limassol},
-      {name:'Skoulli', city: limassol},
-      {name:'Steni', city: limassol},
-      {name:'Tombs of Kings Road', city: limassol},
-      {name:'Paphos Airport', city: paphos},
-      {name:'Paphos City Centre', city: paphos},
-      {name:'Pissouri', city: paphos},
-      {name:'Aphrodite Hills', city: paphos},
-      {name:'Polis', city: paphos},
-      {name:'Coral Bay', city: paphos},
-      {name:'Kissonerga', city: paphos},
-      {name:'Agia Marina Chrysochous', city: paphos},
-      {name:'Agios Georgios Peyia  ', city: paphos},
-      {name:'Agros', city: paphos},
-      {name:'Amathus', city: paphos},
-      {name:'Anarita', city: paphos},
-      {name:'Anavargos', city: paphos},
-      {name:'Argaka', city: paphos},
-      {name:'Ascos Coral Beach', city: paphos},
-      {name:'Ayia Triada', city: paphos},
-      {name:'Azia', city: paphos},
-      {name:'Chloraka', city: paphos},
-      {name:'Drouseia', city: paphos},
-      {name:'Emba', city: paphos},
-      {name:'Erimi', city: paphos},
-      {name:'Kakopetria', city: paphos},
-      {name:'Kathikas', city: paphos},
-      {name:'Kato Paphos', city: paphos},
-      {name:'Konia', city: paphos},
-      {name:'Kouklia', city: paphos},
-      {name:'Latchi', city: paphos},
-      {name:'Latsia', city: paphos},
-      {name:'Mandria', city: paphos},
-      {name:'Miliou', city: paphos},
-      {name:'Morphou', city: paphos},
-      {name:'Nata', city: paphos},
-      {name:'Nikokleia', city: paphos},
-      {name:'Peyia', city: paphos},
-      {name:'Platres', city: paphos},
-      {name:'Pomos', city: paphos},
-      {name:'Tala', city: paphos},
-      {name:'Troodos', city: paphos},
-      {name:'Tsada', city: paphos}
-          ])
+  
+pick_up_locations << PickUpLocation.new(name:'Ercan Airport', city: larnaca)
+pick_up_locations << PickUpLocation.new(name:'Larnaca Airport', city: larnaca)
+pick_up_locations << PickUpLocation.new(name:'Ayia Napa', city: larnaca)
+pick_up_locations << PickUpLocation.new(name:'Nicosia', city: larnaca)
+pick_up_locations << PickUpLocation.new(name:'Protaras', city: larnaca)
+pick_up_locations << PickUpLocation.new(name:'Kyrenia', city: larnaca)
+pick_up_locations << PickUpLocation.new(name:'Larnaca City Centre', city: larnaca)
+pick_up_locations << PickUpLocation.new(name:'Kiti', city: larnaca)
+pick_up_locations << PickUpLocation.new(name:'Alaminos', city: larnaca)
+pick_up_locations << PickUpLocation.new(name:'Anassa', city: larnaca)
+pick_up_locations << PickUpLocation.new(name:'Aradippou', city: larnaca)
+pick_up_locations << PickUpLocation.new(name:'Ayia Thekla', city: larnaca)
+pick_up_locations << PickUpLocation.new(name:'Bogaz', city: larnaca)
+pick_up_locations << PickUpLocation.new(name:'Deryneia', city: larnaca)
+pick_up_locations << PickUpLocation.new(name:'Dhekelia', city: larnaca)
+pick_up_locations << PickUpLocation.new(name:'Droushia', city: larnaca)
+pick_up_locations << PickUpLocation.new(name:'Esentepe', city: larnaca)
+pick_up_locations << PickUpLocation.new(name:'Famagusta', city: larnaca)
+pick_up_locations << PickUpLocation.new(name:'Governors Beach', city: larnaca)
+pick_up_locations << PickUpLocation.new(name:'Kalavasos', city: larnaca)
+pick_up_locations << PickUpLocation.new(name:'Kapparis', city: larnaca)
+pick_up_locations << PickUpLocation.new(name:'Larnaca Bay', city: larnaca)
+pick_up_locations << PickUpLocation.new(name:'Letymbou', city: larnaca)
+pick_up_locations << PickUpLocation.new(name:'Liopetri', city: larnaca)
+pick_up_locations << PickUpLocation.new(name:'Maroni', city: larnaca)
+pick_up_locations << PickUpLocation.new(name:'Mazotos', city: larnaca)
+pick_up_locations << PickUpLocation.new(name:'Meniko', city: larnaca)
+pick_up_locations << PickUpLocation.new(name:'Ormidhia', city: larnaca)
+pick_up_locations << PickUpLocation.new(name:'Oroklini', city: larnaca)
+pick_up_locations << PickUpLocation.new(name:'Paralimni', city: larnaca)
+pick_up_locations << PickUpLocation.new(name:'Pernera', city: larnaca)
+pick_up_locations << PickUpLocation.new(name:'Pervolia', city: larnaca)
+pick_up_locations << PickUpLocation.new(name:'Pyla', city: larnaca)
+pick_up_locations << PickUpLocation.new(name:'Sotira', city: larnaca)
+pick_up_locations << PickUpLocation.new(name:'Tochni', city: larnaca)
+pick_up_locations << PickUpLocation.new(name:'RAF Akrotiri Airport', city: limassol)
+pick_up_locations << PickUpLocation.new(name:'Limassol Cruise Port', city: limassol)
+pick_up_locations << PickUpLocation.new(name:'Limassol', city: limassol)
+pick_up_locations << PickUpLocation.new(name:'Nissi Bay', city: limassol)
+pick_up_locations << PickUpLocation.new(name:'Episkopi', city: limassol)
+pick_up_locations << PickUpLocation.new(name:'Agios Athanasios', city: limassol)
+pick_up_locations << PickUpLocation.new(name:'Germasoyia', city: limassol)
+pick_up_locations << PickUpLocation.new(name:'Pentakomo', city: limassol)
+pick_up_locations << PickUpLocation.new(name:'Egkomi', city: limassol)
+pick_up_locations << PickUpLocation.new(name:'Makounta', city: limassol)
+pick_up_locations << PickUpLocation.new(name:'Makronissos Agia Napa', city: limassol)
+pick_up_locations << PickUpLocation.new(name:'Neo Chorio', city: limassol)
+pick_up_locations << PickUpLocation.new(name:'Ora', city: limassol)
+pick_up_locations << PickUpLocation.new(name:'Pano Akourdaleia', city: limassol)
+pick_up_locations << PickUpLocation.new(name:'Pedoulas', city: limassol)
+pick_up_locations << PickUpLocation.new(name:'Prodromi', city: limassol)
+pick_up_locations << PickUpLocation.new(name:'Skarinou', city: limassol)
+pick_up_locations << PickUpLocation.new(name:'Skoulli', city: limassol)
+pick_up_locations << PickUpLocation.new(name:'Steni', city: limassol)
+pick_up_locations << PickUpLocation.new(name:'Tombs of Kings Road', city: limassol)
+pick_up_locations << PickUpLocation.new(name:'Paphos Airport', city: paphos)
+pick_up_locations << PickUpLocation.new(name:'Paphos City Centre', city: paphos)
+pick_up_locations << PickUpLocation.new(name:'Pissouri', city: paphos)
+pick_up_locations << PickUpLocation.new(name:'Aphrodite Hills', city: paphos)
+pick_up_locations << PickUpLocation.new(name:'Polis', city: paphos)
+pick_up_locations << PickUpLocation.new(name:'Coral Bay', city: paphos)
+pick_up_locations << PickUpLocation.new(name:'Kissonerga', city: paphos)
+pick_up_locations << PickUpLocation.new(name:'Agia Marina Chrysochous', city: paphos)
+pick_up_locations << PickUpLocation.new(name:'Agios Georgios Peyia  ', city: paphos)
+pick_up_locations << PickUpLocation.new(name:'Agros', city: paphos)
+pick_up_locations << PickUpLocation.new(name:'Amathus', city: paphos)
+pick_up_locations << PickUpLocation.new(name:'Anarita', city: paphos)
+pick_up_locations << PickUpLocation.new(name:'Anavargos', city: paphos)
+pick_up_locations << PickUpLocation.new(name:'Argaka', city: paphos)
+pick_up_locations << PickUpLocation.new(name:'Ascos Coral Beach', city: paphos)
+pick_up_locations << PickUpLocation.new(name:'Ayia Triada', city: paphos)
+pick_up_locations << PickUpLocation.new(name:'Azia', city: paphos)
+pick_up_locations << PickUpLocation.new(name:'Chloraka', city: paphos)
+pick_up_locations << PickUpLocation.new(name:'Drouseia', city: paphos)
+pick_up_locations << PickUpLocation.new(name:'Emba', city: paphos)
+pick_up_locations << PickUpLocation.new(name:'Erimi', city: paphos)
+pick_up_locations << PickUpLocation.new(name:'Kakopetria', city: paphos)
+pick_up_locations << PickUpLocation.new(name:'Kathikas', city: paphos)
+pick_up_locations << PickUpLocation.new(name:'Kato Paphos', city: paphos)
+pick_up_locations << PickUpLocation.new(name:'Konia', city: paphos)
+pick_up_locations << PickUpLocation.new(name:'Kouklia', city: paphos)
+pick_up_locations << PickUpLocation.new(name:'Latchi', city: paphos)
+pick_up_locations << PickUpLocation.new(name:'Latsia', city: paphos)
+pick_up_locations << PickUpLocation.new(name:'Mandria', city: paphos)
+pick_up_locations << PickUpLocation.new(name:'Miliou', city: paphos)
+pick_up_locations << PickUpLocation.new(name:'Morphou', city: paphos)
+pick_up_locations << PickUpLocation.new(name:'Nata', city: paphos)
+pick_up_locations << PickUpLocation.new(name:'Nikokleia', city: paphos)
+pick_up_locations << PickUpLocation.new(name:'Peyia', city: paphos)
+pick_up_locations << PickUpLocation.new(name:'Platres', city: paphos)
+pick_up_locations << PickUpLocation.new(name:'Pomos', city: paphos)
+pick_up_locations << PickUpLocation.new(name:'Tala', city: paphos)
+pick_up_locations << PickUpLocation.new(name:'Troodos', city: paphos)
+pick_up_locations << PickUpLocation.new(name:'Tsada', city: paphos)
   puts 'Cities of Czech Republic'
   prague = City.find_by(name:'Prague')
-  PickUpLocation.create([
-      {name:'Brno Airport', city: prague},
-      {name:'Prague Airport', city: prague},
-      {name:'Prague City Centre', city: prague},
-      {name:'Brno', city: prague},
-      {name:'Karlovy Vary', city: prague},
-      {name:'Spindleruv Mlyn', city: prague},
-      {name:'Paseky nad Jizerou', city: prague},
-      {name:'Pec pod Snezkou', city: prague},
-      {name:'Bedrichov', city: prague},
-      {name:'Benecko', city: prague},
-      {name:'Benesov', city: prague},
-      {name:'Beroun', city: prague},
-      {name:'Bila', city: prague},
-      {name:'Celadna', city: prague},
-      {name:'Cenkovice', city: prague},
-      {name:'Cerny Dul', city: prague},
-      {name:'Cervenohorske Sedlo', city: prague},
-      {name:'Ceske Budejovice', city: prague},
-      {name:'Cesky Krumlov', city: prague},
-      {name:'Chomutov', city: prague},
-      {name:'Decin', city: prague},
-      {name:'Domazlice', city: prague},
-      {name:'Frantiskovy Lazne', city: prague},
-      {name:'Harrachov', city: prague},
-      {name:'Hradec Kralove', city: prague},
-      {name:'Jablonec nad Nisou', city: prague},
-      {name:'Janske Lazne', city: prague},
-      {name:'Jihlava', city: prague},
-      {name:'Jindrichuv Hradec', city: prague},
-      {name:'Karlova Studanka', city: prague},
-      {name:'Kladno', city: prague},
-      {name:'Kolin', city: prague},
-      {name:'Korenov', city: prague},
-      {name:'Kralupy nad Vltavou', city: prague},
-      {name:'Kromeriz', city: prague},
-      {name:'Kutna Hora', city: prague},
-      {name:'Lanov', city: prague},
-      {name:'Liberec', city: prague},
-      {name:'Loucna', city: prague},
-      {name:'Mala Moravka', city: prague},
-      {name:'Mala Upa', city: prague},
-      {name:'Marianske Lazne', city: prague},
-      {name:'Medvedin', city: prague},
-      {name:'Mlada Boleslav', city: prague},
-      {name:'Most', city: prague},
-      {name:'Olomouc', city: prague},
-      {name:'Opava', city: prague},
-      {name:'Ostrava', city: prague},
-      {name:'Ostruzna', city: prague},
-      {name:'Pardubice', city: prague},
-      {name:'Plzen', city: prague},
-      {name:'Podebrady', city: prague},
-      {name:'Pribram', city: prague},
-      {name:'Ramzova', city: prague},
-      {name:'Rokytnice nad Jizerou', city: prague},
-      {name:'Semily', city: prague},
-      {name:'Severak', city: prague},
-      {name:'Stare Mesto', city: prague},
-      {name:'Sternberk', city: prague},
-      {name:'Strazne', city: prague},
-      {name:'Stribrna', city: prague},
-      {name:'Sumperk', city: prague},
-      {name:'Svetla pod Jestedem', city: prague},
-      {name:'Svoboda nad Upou', city: prague},
-      {name:'Tabor', city: prague},
-      {name:'Tanvald', city: prague},
-      {name:'Telc', city: prague},
-      {name:'Teplice', city: prague},
-      {name:'Terezin', city: prague},
-      {name:'Trebon', city: prague},
-      {name:'Trojanovice', city: prague},
-      {name:'Turnov', city: prague},
-      {name:'Usti nad Labem', city: prague},
-      {name:'Uvaly', city: prague},
-      {name:'Vitkovice', city: prague},
-      {name:'Vrbno pod Pradedem', city: prague},
-      {name:'Vrchlabi', city: prague},
-      {name:'Zdobnice', city: prague},
-      {name:'Zlin', city: prague}
- ])
+  
+pick_up_locations << PickUpLocation.new(name:'Brno Airport', city: prague)
+pick_up_locations << PickUpLocation.new(name:'Prague Airport', city: prague)
+pick_up_locations << PickUpLocation.new(name:'Prague City Centre', city: prague)
+pick_up_locations << PickUpLocation.new(name:'Brno', city: prague)
+pick_up_locations << PickUpLocation.new(name:'Karlovy Vary', city: prague)
+pick_up_locations << PickUpLocation.new(name:'Spindleruv Mlyn', city: prague)
+pick_up_locations << PickUpLocation.new(name:'Paseky nad Jizerou', city: prague)
+pick_up_locations << PickUpLocation.new(name:'Pec pod Snezkou', city: prague)
+pick_up_locations << PickUpLocation.new(name:'Bedrichov', city: prague)
+pick_up_locations << PickUpLocation.new(name:'Benecko', city: prague)
+pick_up_locations << PickUpLocation.new(name:'Benesov', city: prague)
+pick_up_locations << PickUpLocation.new(name:'Beroun', city: prague)
+pick_up_locations << PickUpLocation.new(name:'Bila', city: prague)
+pick_up_locations << PickUpLocation.new(name:'Celadna', city: prague)
+pick_up_locations << PickUpLocation.new(name:'Cenkovice', city: prague)
+pick_up_locations << PickUpLocation.new(name:'Cerny Dul', city: prague)
+pick_up_locations << PickUpLocation.new(name:'Cervenohorske Sedlo', city: prague)
+pick_up_locations << PickUpLocation.new(name:'Ceske Budejovice', city: prague)
+pick_up_locations << PickUpLocation.new(name:'Cesky Krumlov', city: prague)
+pick_up_locations << PickUpLocation.new(name:'Chomutov', city: prague)
+pick_up_locations << PickUpLocation.new(name:'Decin', city: prague)
+pick_up_locations << PickUpLocation.new(name:'Domazlice', city: prague)
+pick_up_locations << PickUpLocation.new(name:'Frantiskovy Lazne', city: prague)
+pick_up_locations << PickUpLocation.new(name:'Harrachov', city: prague)
+pick_up_locations << PickUpLocation.new(name:'Hradec Kralove', city: prague)
+pick_up_locations << PickUpLocation.new(name:'Jablonec nad Nisou', city: prague)
+pick_up_locations << PickUpLocation.new(name:'Janske Lazne', city: prague)
+pick_up_locations << PickUpLocation.new(name:'Jihlava', city: prague)
+pick_up_locations << PickUpLocation.new(name:'Jindrichuv Hradec', city: prague)
+pick_up_locations << PickUpLocation.new(name:'Karlova Studanka', city: prague)
+pick_up_locations << PickUpLocation.new(name:'Kladno', city: prague)
+pick_up_locations << PickUpLocation.new(name:'Kolin', city: prague)
+pick_up_locations << PickUpLocation.new(name:'Korenov', city: prague)
+pick_up_locations << PickUpLocation.new(name:'Kralupy nad Vltavou', city: prague)
+pick_up_locations << PickUpLocation.new(name:'Kromeriz', city: prague)
+pick_up_locations << PickUpLocation.new(name:'Kutna Hora', city: prague)
+pick_up_locations << PickUpLocation.new(name:'Lanov', city: prague)
+pick_up_locations << PickUpLocation.new(name:'Liberec', city: prague)
+pick_up_locations << PickUpLocation.new(name:'Loucna', city: prague)
+pick_up_locations << PickUpLocation.new(name:'Mala Moravka', city: prague)
+pick_up_locations << PickUpLocation.new(name:'Mala Upa', city: prague)
+pick_up_locations << PickUpLocation.new(name:'Marianske Lazne', city: prague)
+pick_up_locations << PickUpLocation.new(name:'Medvedin', city: prague)
+pick_up_locations << PickUpLocation.new(name:'Mlada Boleslav', city: prague)
+pick_up_locations << PickUpLocation.new(name:'Most', city: prague)
+pick_up_locations << PickUpLocation.new(name:'Olomouc', city: prague)
+pick_up_locations << PickUpLocation.new(name:'Opava', city: prague)
+pick_up_locations << PickUpLocation.new(name:'Ostrava', city: prague)
+pick_up_locations << PickUpLocation.new(name:'Ostruzna', city: prague)
+pick_up_locations << PickUpLocation.new(name:'Pardubice', city: prague)
+pick_up_locations << PickUpLocation.new(name:'Plzen', city: prague)
+pick_up_locations << PickUpLocation.new(name:'Podebrady', city: prague)
+pick_up_locations << PickUpLocation.new(name:'Pribram', city: prague)
+pick_up_locations << PickUpLocation.new(name:'Ramzova', city: prague)
+pick_up_locations << PickUpLocation.new(name:'Rokytnice nad Jizerou', city: prague)
+pick_up_locations << PickUpLocation.new(name:'Semily', city: prague)
+pick_up_locations << PickUpLocation.new(name:'Severak', city: prague)
+pick_up_locations << PickUpLocation.new(name:'Stare Mesto', city: prague)
+pick_up_locations << PickUpLocation.new(name:'Sternberk', city: prague)
+pick_up_locations << PickUpLocation.new(name:'Strazne', city: prague)
+pick_up_locations << PickUpLocation.new(name:'Stribrna', city: prague)
+pick_up_locations << PickUpLocation.new(name:'Sumperk', city: prague)
+pick_up_locations << PickUpLocation.new(name:'Svetla pod Jestedem', city: prague)
+pick_up_locations << PickUpLocation.new(name:'Svoboda nad Upou', city: prague)
+pick_up_locations << PickUpLocation.new(name:'Tabor', city: prague)
+pick_up_locations << PickUpLocation.new(name:'Tanvald', city: prague)
+pick_up_locations << PickUpLocation.new(name:'Telc', city: prague)
+pick_up_locations << PickUpLocation.new(name:'Teplice', city: prague)
+pick_up_locations << PickUpLocation.new(name:'Terezin', city: prague)
+pick_up_locations << PickUpLocation.new(name:'Trebon', city: prague)
+pick_up_locations << PickUpLocation.new(name:'Trojanovice', city: prague)
+pick_up_locations << PickUpLocation.new(name:'Turnov', city: prague)
+pick_up_locations << PickUpLocation.new(name:'Usti nad Labem', city: prague)
+pick_up_locations << PickUpLocation.new(name:'Uvaly', city: prague)
+pick_up_locations << PickUpLocation.new(name:'Vitkovice', city: prague)
+pick_up_locations << PickUpLocation.new(name:'Vrbno pod Pradedem', city: prague)
+pick_up_locations << PickUpLocation.new(name:'Vrchlabi', city: prague)
+pick_up_locations << PickUpLocation.new(name:'Zdobnice', city: prague)
+pick_up_locations << PickUpLocation.new(name:'Zlin', city: prague)
   puts 'Cities of Egypt'
   alexandria = City.find_by(name:'Alexandria')
   aswan = City.find_by(name:'Aswan')
@@ -1439,125 +1435,122 @@ after :cities do
   marsa = City.find_by(name:'Marsa Alam')
   sharm = City.find_by(name:'Sharm El Sheikh')
   taba = City.find_by(name:'Taba')
-  PickUpLocation.create([
-      {name:'Alexandria Airport', city: alexandria},
-      {name:'Marsa Matrouh', city: alexandria},
-      {name:'Alexandria City Centre', city: alexandria},
-      {name:'Aswan Airport', city: aswan},
-      {name:'Aswan Port', city: aswan},
-      {name:'Aswan', city: aswan},
-      {name:'Abu Simbel', city: aswan},
-      {name:'Cairo Airport', city: cairo},
-      {name:'Cairo City Centre', city: cairo},
-      {name:'Heliopolis', city: cairo},
-      {name:'Giza Hotels', city: cairo},
-      {name:'Ain El Sukhna', city: cairo},
-      {name:'El Alamein', city: cairo},
-      {name:'El Minia', city: cairo},
-      {name:'Pyramids', city: cairo},
-      {name:'Zafarana', city: cairo},
-      {name:'Dabaa Alalamain Airport', city: dabaa},
-      {name:'Dabaa', city: dabaa},
-      {name:'Porto Marina El Alameen', city: dabaa},
-      {name:'Borg Al Arab', city: dabaa},
-      {name:'Matrouh', city: dabaa},
-      {name:'Hurghada Airport', city: hurghada},
-      {name:'Hurghada Port', city: hurghada},
-      {name:'Hurghada Hotels', city: hurghada},
-      {name:'El Gouna', city: hurghada},
-      {name:'Makhadi Bay', city: hurghada},
-      {name:'Soma Bay', city: hurghada},
-      {name:'Hamata', city: hurghada},
-      {name:'Sahl Hasheesh', city: hurghada},
-      {name:'Al Kosseir', city: hurghada},
-      {name:'Berenice', city: hurghada},
-      {name:'Caribbean World Soma Bay', city: hurghada},
-      {name:'Conrad Resort', city: hurghada},
-      {name:'Coral Beach', city: hurghada},
-      {name:'El Hamrawein', city: hurghada},
-      {name:'El Naaba', city: hurghada},
-      {name:'El Quseir', city: hurghada},
-      {name:'Ras Sadr', city: hurghada},
-      {name:'Safaga', city: hurghada},
-      {name:'Safaga Port', city: hurghada},
-      {name:'Luxor Airport', city: luxor},
-      {name:'Luxor Port', city: luxor},
-      {name:'Luxor Hotels', city: luxor},
-      {name:'Karnak', city: luxor},
-      {name:'Movenpick Joile Ville Luxor', city: luxor},
-      {name:'Marsa Alam Airport', city: marsa},
-      {name:'Marsa Alam', city: marsa},
-      {name:'Abu Dabbab', city: marsa},
-      {name:'Wadi Gimal', city: marsa},
-      {name:'Shams Alam', city: marsa},
-      {name:'Wadi Lahami', city: marsa},
-      {name:'Sharm El Sheikh Airport', city: sharm},
-      {name:'Nuweiba Port', city: sharm},
-      {name:'Sharm El Sheikh Port', city: sharm},
-      {name:'Sharm El Sheikh Hotels', city: sharm},
-      {name:'Sharks Bay', city: sharm},
-      {name:'Naama Bay', city: sharm},
-      {name:'Nabq Bay', city: sharm},
-      {name:'Dahab', city: sharm},
-      {name:'Om El Seid Hill', city: sharm},
-      {name:'Hadaba', city: sharm},
-      {name:'Neema Bay', city: sharm},
-      {name:'Nuweiba', city: sharm},
-      {name:'Ras Nasrani', city: sharm},
-      {name:'Rus Um Shid', city: sharm},
-      {name:'St Catherine', city: sharm},
-      {name:'Taba Airport', city: taba},
-      {name:'Sinai Bay Club Med', city: taba},
-      {name:'Taba', city: taba}
-          ])
+  
+pick_up_locations << PickUpLocation.new(name:'Alexandria Airport', city: alexandria)
+pick_up_locations << PickUpLocation.new(name:'Marsa Matrouh', city: alexandria)
+pick_up_locations << PickUpLocation.new(name:'Alexandria City Centre', city: alexandria)
+pick_up_locations << PickUpLocation.new(name:'Aswan Airport', city: aswan)
+pick_up_locations << PickUpLocation.new(name:'Aswan Port', city: aswan)
+pick_up_locations << PickUpLocation.new(name:'Aswan', city: aswan)
+pick_up_locations << PickUpLocation.new(name:'Abu Simbel', city: aswan)
+pick_up_locations << PickUpLocation.new(name:'Cairo Airport', city: cairo)
+pick_up_locations << PickUpLocation.new(name:'Cairo City Centre', city: cairo)
+pick_up_locations << PickUpLocation.new(name:'Heliopolis', city: cairo)
+pick_up_locations << PickUpLocation.new(name:'Giza Hotels', city: cairo)
+pick_up_locations << PickUpLocation.new(name:'Ain El Sukhna', city: cairo)
+pick_up_locations << PickUpLocation.new(name:'El Alamein', city: cairo)
+pick_up_locations << PickUpLocation.new(name:'El Minia', city: cairo)
+pick_up_locations << PickUpLocation.new(name:'Pyramids', city: cairo)
+pick_up_locations << PickUpLocation.new(name:'Zafarana', city: cairo)
+pick_up_locations << PickUpLocation.new(name:'Dabaa Alalamain Airport', city: dabaa)
+pick_up_locations << PickUpLocation.new(name:'Dabaa', city: dabaa)
+pick_up_locations << PickUpLocation.new(name:'Porto Marina El Alameen', city: dabaa)
+pick_up_locations << PickUpLocation.new(name:'Borg Al Arab', city: dabaa)
+pick_up_locations << PickUpLocation.new(name:'Matrouh', city: dabaa)
+pick_up_locations << PickUpLocation.new(name:'Hurghada Airport', city: hurghada)
+pick_up_locations << PickUpLocation.new(name:'Hurghada Port', city: hurghada)
+pick_up_locations << PickUpLocation.new(name:'Hurghada Hotels', city: hurghada)
+pick_up_locations << PickUpLocation.new(name:'El Gouna', city: hurghada)
+pick_up_locations << PickUpLocation.new(name:'Makhadi Bay', city: hurghada)
+pick_up_locations << PickUpLocation.new(name:'Soma Bay', city: hurghada)
+pick_up_locations << PickUpLocation.new(name:'Hamata', city: hurghada)
+pick_up_locations << PickUpLocation.new(name:'Sahl Hasheesh', city: hurghada)
+pick_up_locations << PickUpLocation.new(name:'Al Kosseir', city: hurghada)
+pick_up_locations << PickUpLocation.new(name:'Berenice', city: hurghada)
+pick_up_locations << PickUpLocation.new(name:'Caribbean World Soma Bay', city: hurghada)
+pick_up_locations << PickUpLocation.new(name:'Conrad Resort', city: hurghada)
+pick_up_locations << PickUpLocation.new(name:'Coral Beach', city: hurghada)
+pick_up_locations << PickUpLocation.new(name:'El Hamrawein', city: hurghada)
+pick_up_locations << PickUpLocation.new(name:'El Naaba', city: hurghada)
+pick_up_locations << PickUpLocation.new(name:'El Quseir', city: hurghada)
+pick_up_locations << PickUpLocation.new(name:'Ras Sadr', city: hurghada)
+pick_up_locations << PickUpLocation.new(name:'Safaga', city: hurghada)
+pick_up_locations << PickUpLocation.new(name:'Safaga Port', city: hurghada)
+pick_up_locations << PickUpLocation.new(name:'Luxor Airport', city: luxor)
+pick_up_locations << PickUpLocation.new(name:'Luxor Port', city: luxor)
+pick_up_locations << PickUpLocation.new(name:'Luxor Hotels', city: luxor)
+pick_up_locations << PickUpLocation.new(name:'Karnak', city: luxor)
+pick_up_locations << PickUpLocation.new(name:'Movenpick Joile Ville Luxor', city: luxor)
+pick_up_locations << PickUpLocation.new(name:'Marsa Alam Airport', city: marsa)
+pick_up_locations << PickUpLocation.new(name:'Marsa Alam', city: marsa)
+pick_up_locations << PickUpLocation.new(name:'Abu Dabbab', city: marsa)
+pick_up_locations << PickUpLocation.new(name:'Wadi Gimal', city: marsa)
+pick_up_locations << PickUpLocation.new(name:'Shams Alam', city: marsa)
+pick_up_locations << PickUpLocation.new(name:'Wadi Lahami', city: marsa)
+pick_up_locations << PickUpLocation.new(name:'Sharm El Sheikh Airport', city: sharm)
+pick_up_locations << PickUpLocation.new(name:'Nuweiba Port', city: sharm)
+pick_up_locations << PickUpLocation.new(name:'Sharm El Sheikh Port', city: sharm)
+pick_up_locations << PickUpLocation.new(name:'Sharm El Sheikh Hotels', city: sharm)
+pick_up_locations << PickUpLocation.new(name:'Sharks Bay', city: sharm)
+pick_up_locations << PickUpLocation.new(name:'Naama Bay', city: sharm)
+pick_up_locations << PickUpLocation.new(name:'Nabq Bay', city: sharm)
+pick_up_locations << PickUpLocation.new(name:'Dahab', city: sharm)
+pick_up_locations << PickUpLocation.new(name:'Om El Seid Hill', city: sharm)
+pick_up_locations << PickUpLocation.new(name:'Hadaba', city: sharm)
+pick_up_locations << PickUpLocation.new(name:'Neema Bay', city: sharm)
+pick_up_locations << PickUpLocation.new(name:'Nuweiba', city: sharm)
+pick_up_locations << PickUpLocation.new(name:'Ras Nasrani', city: sharm)
+pick_up_locations << PickUpLocation.new(name:'Rus Um Shid', city: sharm)
+pick_up_locations << PickUpLocation.new(name:'St Catherine', city: sharm)
+pick_up_locations << PickUpLocation.new(name:'Taba Airport', city: taba)
+pick_up_locations << PickUpLocation.new(name:'Sinai Bay Club Med', city: taba)
+pick_up_locations << PickUpLocation.new(name:'Taba', city: taba)
   puts 'Cities of Estonia'
   tallinn = City.find_by(name:'Tallinn')
   tartu = City.find_by(name:'Tartu')
-  PickUpLocation.create([
-           {name:'Tallinn Airport', city: tallinn},
-           {name:'Tallinn City Centre', city: tallinn},
-           {name:'Haapsalu', city: tallinn},
-           {name:'Parnu', city: tallinn},
-           {name:'Narva', city: tallinn},
-           {name:'Keila', city: tallinn},
-           {name:'Paldiski', city: tallinn},
-           {name:'Kehtna', city: tallinn},
-           {name:'Keila', city: tallinn},
-           {name:'Marjamaa', city: tallinn},
-           {name:'Tartu Airport', city: tartu},
-           {name:'Viljandi', city: tartu},
-           {name:'Tartu', city: tartu},
-           {name:'Otepaa', city: tartu},
-           {name:'Voru', city: tartu},
-           {name:'Valga', city: tartu},
-           {name:'Polva', city: tartu},
-           {name:'Elva', city: tartu}
-        ])
+  pick_up_locations << PickUpLocation.new(name:'Tallinn Airport', city: tallinn)
+  pick_up_locations << PickUpLocation.new(name:'Tallinn City Centre', city: tallinn)
+  pick_up_locations << PickUpLocation.new(name:'Haapsalu', city: tallinn)
+  pick_up_locations << PickUpLocation.new(name:'Parnu', city: tallinn)
+  pick_up_locations << PickUpLocation.new(name:'Narva', city: tallinn)
+  pick_up_locations << PickUpLocation.new(name:'Keila', city: tallinn)
+  pick_up_locations << PickUpLocation.new(name:'Paldiski', city: tallinn)
+  pick_up_locations << PickUpLocation.new(name:'Kehtna', city: tallinn)
+  pick_up_locations << PickUpLocation.new(name:'Keila', city: tallinn)
+  pick_up_locations << PickUpLocation.new(name:'Marjamaa', city: tallinn)
+  pick_up_locations << PickUpLocation.new(name:'Tartu Airport', city: tartu)
+  pick_up_locations << PickUpLocation.new(name:'Viljandi', city: tartu)
+  pick_up_locations << PickUpLocation.new(name:'Tartu', city: tartu)
+  pick_up_locations << PickUpLocation.new(name:'Otepaa', city: tartu)
+  pick_up_locations << PickUpLocation.new(name:'Voru', city: tartu)
+  pick_up_locations << PickUpLocation.new(name:'Valga', city: tartu)
+  pick_up_locations << PickUpLocation.new(name:'Polva', city: tartu)
+  pick_up_locations << PickUpLocation.new(name:'Elva', city: tartu)
   puts 'Cities of Finland'
   helsinki = City.find_by(name:'Helsinki')
-  PickUpLocation.create([
-            {name:'Helsinki Airport', city: helsinki},
-            {name:'Helsinki Cruise Port', city: helsinki},
-            {name:'Helsinki Train Station', city: helsinki},
-            {name:'Dalsbruk', city: helsinki},
-            {name:'Espoo', city: helsinki},
-            {name:'Hamina', city: helsinki},
-            {name:'Hanko', city: helsinki},
-            {name:'Helsinki City Centre', city: helsinki},
-            {name:'Korpilampi', city: helsinki},
-            {name:'Kotka', city: helsinki},
-            {name:'Lahti', city: helsinki},
-            {name:'Lappeenranta', city: helsinki},
-            {name:'Loviisa', city: helsinki},
-            {name:'Mikkeli', city: helsinki},
-            {name:'Naantali', city: helsinki},
-            {name:'Pori', city: helsinki},
-            {name:'Porvoo', city: helsinki},
-            {name:'Taalindtehdas', city: helsinki},
-            {name:'Tempere', city: helsinki},
-            {name:'Turku', city: helsinki},
-            {name:'Vantaa', city: helsinki}
-        ])
+  
+pick_up_locations << PickUpLocation.new(name:'Helsinki Airport', city: helsinki)
+pick_up_locations << PickUpLocation.new(name:'Helsinki Cruise Port', city: helsinki)
+pick_up_locations << PickUpLocation.new(name:'Helsinki Train Station', city: helsinki)
+pick_up_locations << PickUpLocation.new(name:'Dalsbruk', city: helsinki)
+pick_up_locations << PickUpLocation.new(name:'Espoo', city: helsinki)
+pick_up_locations << PickUpLocation.new(name:'Hamina', city: helsinki)
+pick_up_locations << PickUpLocation.new(name:'Hanko', city: helsinki)
+pick_up_locations << PickUpLocation.new(name:'Helsinki City Centre', city: helsinki)
+pick_up_locations << PickUpLocation.new(name:'Korpilampi', city: helsinki)
+pick_up_locations << PickUpLocation.new(name:'Kotka', city: helsinki)
+pick_up_locations << PickUpLocation.new(name:'Lahti', city: helsinki)
+pick_up_locations << PickUpLocation.new(name:'Lappeenranta', city: helsinki)
+pick_up_locations << PickUpLocation.new(name:'Loviisa', city: helsinki)
+pick_up_locations << PickUpLocation.new(name:'Mikkeli', city: helsinki)
+pick_up_locations << PickUpLocation.new(name:'Naantali', city: helsinki)
+pick_up_locations << PickUpLocation.new(name:'Pori', city: helsinki)
+pick_up_locations << PickUpLocation.new(name:'Porvoo', city: helsinki)
+pick_up_locations << PickUpLocation.new(name:'Taalindtehdas', city: helsinki)
+pick_up_locations << PickUpLocation.new(name:'Tempere', city: helsinki)
+pick_up_locations << PickUpLocation.new(name:'Turku', city: helsinki)
+pick_up_locations << PickUpLocation.new(name:'Vantaa', city: helsinki)
+  
   puts 'Cities of France'
   annecy = City.find_by(name:'Annecy')
   biarritz = City.find_by(name:'Biarritz')
@@ -1578,626 +1571,626 @@ after :cities do
   tarbes = City.find_by(name:'Tarbes')
   toulon = City.find_by(name:'Toulon')
   toulouse = City.find_by(name:'Toulouse')
-  PickUpLocation.create([
-             {name:'Annecy Airport', city: annecy},
-             {name:'Megeve', city: annecy},
-             {name:'Morzine', city: annecy},
-             {name:'La Clusaz', city: annecy},
-             {name:'Les Arcs', city: annecy},
-             {name:'Thollon les Memises', city: annecy},
-             {name:'Les Gets', city: annecy},
-             {name:'Abondance', city: annecy},
-             {name:'Annecy City Centre', city: annecy},
-             {name:'Annemasse', city: annecy},
-             {name:'Areches Beaufort', city: annecy},
-             {name:'Argentiere', city: annecy},
-             {name:'Avoriaz', city: annecy},
-             {name:'Bernex', city: annecy},
-             {name:'Chamonix Mont Blanc', city: annecy},
-             {name:'Chatel', city: annecy},
-             {name:'Chinaillon', city: annecy},
-             {name:'Combloux', city: annecy},
-             {name:'Evian les Bains', city: annecy},
-             {name:'Flaine', city: annecy},
-             {name:'Flumet', city: annecy},
-             {name:'La Plagne', city: annecy},
-             {name:'La Rosiere', city: annecy},
-             {name:'Le Grand Bornand', city: annecy},
-             {name:'Lelex', city: annecy},
-             {name:'Les Bossons', city: annecy},
-             {name:'Les Contamines', city: annecy},
-             {name:'Les Houches', city: annecy},
-             {name:'Les Praz de Chamonix', city: annecy},
-             {name:'Manigod', city: annecy},
-             {name:'Messery', city: annecy},
-             {name:'Mijoux', city: annecy},
-             {name:'Morillon', city: annecy},
-             {name:'Neydens', city: annecy},
-             {name:'Notre Dame de Bellecombe', city: annecy},
-             {name:'Praz Sur Arly', city: annecy},
-             {name:'Saint Gervais les Bains', city: annecy},
-             {name:'Saint Jean d Aulps', city: annecy},
-             {name:'Samoens', city: annecy},
-             {name:'Talloires', city: annecy},
-             {name:'Ugine', city: annecy},
-             {name:'Vallorcine', city: annecy},
-             {name:'Vovray en Bornes', city: annecy},
-             {name:'Biarritz Airport', city: biarritz},
-             {name:'Bayonne Train Station', city: biarritz},
-             {name:'Dax Train Station', city: biarritz},
-             {name:'Biarritz', city: biarritz},
-             {name:'Ciboure', city: biarritz},
-             {name:'St Jean de Luz', city: biarritz},
-             {name:'Bayonne', city: biarritz},
-             {name:'Ahetze', city: biarritz},
-             {name:'Bidart', city: biarritz},
-             {name:'Arcangues', city: biarritz},
-             {name:'Berenx', city: biarritz},
-             {name:'Biriatou', city: biarritz},
-             {name:'Camping Le Ruisseau Bidart', city: biarritz},
-             {name:'Camping Le Vieux Port', city: biarritz},
-             {name:'Camping Sylvamar Labenne', city: biarritz},
-             {name:'Capbreton', city: biarritz},
-             {name:'Chantaco', city: biarritz},
-             {name:'Chiberta', city: biarritz},
-             {name:'Dax', city: biarritz},
-             {name:'Guethary', city: biarritz},
-             {name:'Hendaya', city: biarritz},
-             {name:'Hossegor', city: biarritz},
-             {name:'Ilbarritz', city: biarritz},
-             {name:'Labenne', city: biarritz},
-             {name:'Labenne Sylvamar', city: biarritz},
-             {name:'Le Phare', city: biarritz},
-             {name:'Lit et Mixe', city: biarritz},
-             {name:'Luz Saint Sauveur', city: biarritz},
-             {name:'Makila', city: biarritz},
-             {name:'Moliets', city: biarritz},
-             {name:'Montignac', city: biarritz},
-             {name:'Salies de Bearn', city: biarritz},
-             {name:'Sare', city: biarritz},
-             {name:'Seignosse', city: biarritz},
-             {name:'Soustons', city: biarritz},
-             {name:'St Jean Pied de Port', city: biarritz},
-             {name:'Urrugne', city: biarritz},
-             {name:'Vieux Boucau', city: biarritz},
-             {name:'Bordeaux Airport', city: bordeaux},
-             {name:'Bordeaux Train Station', city: bordeaux},
-             {name:'Bordeaux City Centre', city: bordeaux},
-             {name:'Hourtin', city: bordeaux},
-             {name:'Pillac', city: bordeaux},
-             {name:'Valence sur Baise', city: bordeaux},
-             {name:'Alles sur Dordogne', city: bordeaux},
-             {name:'Bergerac', city: bordeaux},
-             {name:'Agen', city: bordeaux},
-             {name:'Andernos les Bains', city: bordeaux},
-             {name:'Angouleme', city: bordeaux},
-             {name:'Arcachon', city: bordeaux},
-             {name:'Aubeterre sur Dronne', city: bordeaux},
-             {name:'Auch', city: bordeaux},
-             {name:'Biscarrosse', city: bordeaux},
-             {name:'Blanzac', city: bordeaux},
-             {name:'Blaye', city: bordeaux},
-             {name:'Buzet sur Baise', city: bordeaux},
-             {name:'Cap Ferret', city: bordeaux},
-             {name:'Casteljaloux', city: bordeaux},
-             {name:'Cognac', city: bordeaux},
-             {name:'Daglan', city: bordeaux},
-             {name:'Haux', city: bordeaux},
-             {name:'Jonzac', city: bordeaux},
-             {name:'La Perroterie Duras', city: bordeaux},
-             {name:'La Rochelle', city: bordeaux},
-             {name:'Labenne Ocean', city: bordeaux},
-             {name:'Lacanau', city: bordeaux},
-             {name:'Langon', city: bordeaux},
-             {name:'Le Bugue', city: bordeaux},
-             {name:'Le Mas d Agenais', city: bordeaux},
-             {name:'Le Porge', city: bordeaux},
-             {name:'Les Mathes', city: bordeaux},
-             {name:'Libourne', city: bordeaux},
-             {name:'Lignan de Bordeaux', city: bordeaux},
-             {name:'Limoges', city: bordeaux},
-             {name:'Margaux', city: bordeaux},
-             {name:'Marmande', city: bordeaux},
-             {name:'Messanges Plage', city: bordeaux},
-             {name:'Mimizan', city: bordeaux},
-             {name:'Mirambeau', city: bordeaux},
-             {name:'Moissac', city: bordeaux},
-             {name:'Mont de Marsan', city: bordeaux},
-             {name:'Montendre', city: bordeaux},
-             {name:'Montignac St Leon', city: bordeaux},
-             {name:'Montpon Menesterol', city: bordeaux},
-             {name:'Mouliets et Villemartin', city: bordeaux},
-             {name:'Moulis en Medoc', city: bordeaux},
-             {name:'Pauillac', city: bordeaux},
-             {name:'Perigeux', city: bordeaux},
-             {name:'Pessac', city: bordeaux},
-             {name:'Saint Macaire', city: bordeaux},
-             {name:'Saintes', city: bordeaux},
-             {name:'Sarlat', city: bordeaux},
-             {name:'Sarlat la Caneda', city: bordeaux},
-             {name:'Sauternes', city: bordeaux},
-             {name:'Sauveterre de Guyenne', city: bordeaux},
-             {name:'Soulac sur Mer', city: bordeaux},
-             {name:'St Crepin Carlucet', city: bordeaux},
-             {name:'St Emilion', city: bordeaux},
-             {name:'St Estephe', city: bordeaux},
-             {name:'St Romain', city: bordeaux},
-             {name:'Verdon sur Mer', city: bordeaux},
-             {name:'Villeneuve sur Lot', city: bordeaux},
-             {name:'Vitrac', city: bordeaux},
-             {name:'Cannes Airport', city: cannes},
-             {name:'Cannes City Centre', city: cannes},
-             {name:'Saint Cezaire sur Siange', city: cannes},
-             {name:'Tourtour', city: cannes},
-             {name:'Chambery Airport', city: chambery},
-             {name:'Courchevel', city: chambery},
-             {name:'Meribel', city: chambery},
-             {name:'Val d lsere', city: chambery},
-             {name:'Les Carroz', city: chambery},
-             {name:'Belle Plagne', city: chambery},
-             {name:'Chambery Town Centre', city: chambery},
-             {name:'Abries', city: chambery},
-             {name:'Aillons Margeriaz', city: chambery},
-             {name:'Aime', city: chambery},
-             {name:'Aix les Bains', city: chambery},
-             {name:'Albertville', city: chambery},
-             {name:'Areches', city: chambery},
-             {name:'Aussois', city: chambery},
-             {name:'Bessans', city: chambery},
-             {name:'Bonneval sur Arc', city: chambery},
-             {name:'Bourg Saint Maurice', city: chambery},
-             {name:'Bozel', city: chambery},
-             {name:'Bramans', city: chambery},
-             {name:'Brides Les Bains', city: chambery},
-             {name:'La Daille', city: chambery},
-             {name:'La Rossiere', city: chambery},
-             {name:'La Tania', city: chambery},
-             {name:'Le Corbier', city: chambery},
-             {name:'Le Lac de Tignes', city: chambery},
-             {name:'Le Lavachet', city: chambery},
-             {name:'Les Allues', city: chambery},
-             {name:'Les Coches', city: chambery},
-             {name:'Les Echelles', city: chambery},
-             {name:'Les Menuires', city: chambery},
-             {name:'Les Saisies', city: chambery},
-             {name:'Modane', city: chambery},
-             {name:'Montalbert', city: chambery},
-             {name:'Montchavin', city: chambery},
-             {name:'Mottaret', city: chambery},
-             {name:'Moutiers', city: chambery},
-             {name:'Plagne Bellecote', city: chambery},
-             {name:'Reberty', city: chambery},
-             {name:'Saint Jean de Maurienne', city: chambery},
-             {name:'Saint Leger', city: chambery},
-             {name:'Saint Martin de Belleville', city: chambery},
-             {name:'Sainte Foy Tarentaise', city: chambery},
-             {name:'St Francois Longchamp', city: chambery},
-             {name:'St Jean de Belleville', city: chambery},
-             {name:'Termignon', city: chambery},
-             {name:'Tignes', city: chambery},
-             {name:'Val Claret', city: chambery},
-             {name:'Val Thorens', city: chambery},
-             {name:'Vallandry', city: chambery},
-             {name:'Valmorel', city: chambery},
-             {name:'Grenoble Airport', city: grenoble},
-             {name:'Grenoble Train Station', city: grenoble},
-             {name:'Alpe d Huez', city: grenoble},
-             {name:'Saint Jean d Arves', city: grenoble},
-             {name:'Grenoble Town Centre', city: grenoble},
-             {name:'Les Deux Alpes', city: grenoble},
-             {name:'Puy Saint Vincent', city: grenoble},
-             {name:'Montgenevre', city: grenoble},
-             {name:'Albiez Montrond', city: grenoble},
-             {name:'Alpe du Grand Serre', city: grenoble},
-             {name:'Ancelle', city: grenoble},
-             {name:'Briancon', city: grenoble},
-             {name:'Champagny en Vanoise', city: grenoble},
-             {name:'Chamrousse', city: grenoble},
-             {name:'Chateau Ville Vieille', city: grenoble},
-             {name:'Gresse en Vercors', city: grenoble},
-             {name:'La Grave', city: grenoble},
-             {name:'La Norma', city: grenoble},
-             {name:'La Toussuire', city: grenoble},
-             {name:'Lanslebourg Mont Cenis', city: grenoble},
-             {name:'Les Karellis', city: grenoble},
-             {name:'Les Laux Prapoutel', city: grenoble},
-             {name:'Orcieres Merlette', city: grenoble},
-             {name:'Oz', city: grenoble},
-             {name:'Pra Loup', city: grenoble},
-             {name:'Pralognan la Vanoise', city: grenoble},
-             {name:'Prapoutel', city: grenoble},
-             {name:'Reallon Savines le Lac', city: grenoble},
-             {name:'Saint Ismier', city: grenoble},
-             {name:'Saint Sorlin d Arves', city: grenoble},
-             {name:'Serre Chevalier', city: grenoble},
-             {name:'St Jean Montclar', city: grenoble},
-             {name:'Superdevoluy', city: grenoble},
-             {name:'Val Cenis', city: grenoble},
-             {name:'Val d Allos', city: grenoble},
-             {name:'Valence', city: grenoble},
-             {name:'Valloire', city: grenoble},
-             {name:'Valmeinier', city: grenoble},
-             {name:'Vars', city: grenoble},
-             {name:'Vaujany', city: grenoble},
-             {name:'Villard Reculas', city: grenoble},
-             {name:'Villard de Lans', city: grenoble},
-             {name:'Lyon Airport', city: lyon},
-             {name:'Lyon City Centre', city: lyon},
-             {name:'Chamonix', city: lyon},
-             {name:'Dijon', city: lyon},
-             {name:'Valfrejus', city: lyon},
-             {name:'St Gervais Les Bains', city: lyon},
-             {name:'Risoul', city: lyon},
-             {name:'Bagnols', city: lyon},
-             {name:'Beaune', city: lyon},
-             {name:'Bellevaux', city: lyon},
-             {name:'Echenevex', city: lyon},
-             {name:'Les Orres', city: lyon},
-             {name:'Macon', city: lyon},
-             {name:'Selestat', city: lyon},
-             {name:'St Clair Les Annonay', city: lyon},
-             {name:'Viviers', city: lyon},
-             {name:'Avignon Airport', city: marseille},
-             {name:'Marseille Airport', city: marseille},
-             {name:'Marseille Train Station', city: marseille},
-             {name:'Marseille City Centre', city: marseille},
-             {name:'Marseille Port', city: marseille},
-             {name:'Aix en Provence', city: marseille},
-             {name:'Martigues', city: marseille},
-             {name:'La Ciotat', city: marseille},
-             {name:'Saintes Maries de la Mer', city: marseille},
-             {name:'Arles', city: marseille},
-             {name:'Avignon', city: marseille},
-             {name:'Bandol', city: marseille},
-             {name:'Buoux', city: marseille},
-             {name:'Cardarache', city: marseille},
-             {name:'Cassis', city: marseille},
-             {name:'Chateauneuf du Pape', city: marseille},
-             {name:'Cotignac', city: marseille},
-             {name:'Digne les Bains', city: marseille},
-             {name:'Forcalquier', city: marseille},
-             {name:'Gordes', city: marseille},
-             {name:'Hyeres', city: marseille},
-             {name:'Istres', city: marseille},
-             {name:'La Crau', city: marseille},
-             {name:'La Seynes Sur Mer', city: marseille},
-             {name:'La Tour d Aigues', city: marseille},
-             {name:'Le Grau du Roi', city: marseille},
-             {name:'Le Lavandou', city: marseille},
-             {name:'Les Baux de Provence', city: marseille},
-             {name:'Loumarin', city: marseille},
-             {name:'Maillane', city: marseille},
-             {name:'Mallemort Pont Royal', city: marseille},
-             {name:'Meze', city: marseille},
-             {name:'Orange', city: marseille},
-             {name:'Palavas les Flots', city: marseille},
-             {name:'Rayol Canadel sur Mer', city: marseille},
-             {name:'Saint Cyr Sur Mer', city: marseille},
-             {name:'Saint Paul Lez Durance', city: marseille},
-             {name:'Saint Remy de Provence', city: marseille},
-             {name:'Salon de Provence', city: marseille},
-             {name:'Sete', city: marseille},
-             {name:'Six Fours Les Plages', city: marseille},
-             {name:'Super Sauze', city: marseille},
-             {name:'Vacheres', city: marseille},
-             {name:'Metz Nancy Airport', city: metz},
-             {name:'Thionville', city: metz},
-             {name:'Metz', city: metz},
-             {name:'Chalons en Champagne', city: metz},
-             {name:'Amneville', city: metz},
-             {name:'Forbach', city: metz},
-             {name:'Epernay', city: metz},
-             {name:'Lac De Madine', city: metz},
-             {name:'Saint Dizier', city: metz},
-             {name:'Vitry Le Francois', city: metz},
-             {name:'Montpellier Airport', city: montpellier},
-             {name:'Nimes Airport', city: montpellier},
-             {name:'Canet en Roussillon', city: montpellier},
-             {name:'Argeles sur Mer', city: montpellier},
-             {name:'Agde', city: montpellier},
-             {name:'Banyuls sur Mer', city: montpellier},
-             {name:'Collioure', city: montpellier},
-             {name:'Port Argeles', city: montpellier},
-             {name:'Ceret', city: montpellier},
-             {name:'Lattes', city: montpellier},
-             {name:'Le Serignan Plage', city: montpellier},
-             {name:'Montpellier City Centre', city: montpellier},
-             {name:'Narbonne', city: montpellier},
-             {name:'Nimes', city: montpellier},
-             {name:'Port Leucate', city: montpellier},
-             {name:'Portiragnes', city: montpellier},
-             {name:'Saint Pantaleon les Vignes', city: montpellier},
-             {name:'Sommieres', city: montpellier},
-             {name:'Mulhouse', city: nancy},
-             {name:'Nancy', city: nancy},
-             {name:'Besancon', city: nancy},
-             {name:'Gerardmer', city: nancy},
-             {name:'Luneville', city: nancy},
-             {name:'Toul', city: nancy},
-             {name:'Nice Airport', city: nice},
-             {name:'Monte Carlo Cruise Port', city: nice},
-             {name:'Monte Carlo', city: nice},
-             {name:'Nice City Centre', city: nice},
-             {name:'Juan les Pins', city: nice},
-             {name:'St Tropez', city: nice},
-             {name:'Monaco', city: nice},
-             {name:'Cap Ferrat', city: nice},
-             {name:'Antibes', city: nice},
-             {name:'Biot', city: nice},
-             {name:'Draguignan', city: nice},
-             {name:'Fayence', city: nice},
-             {name:'Frejus', city: nice},
-             {name:'Grasse', city: nice},
-             {name:'La Garde Freinet', city: nice},
-             {name:'Le Cannet', city: nice},
-             {name:'Mandelieu', city: nice},
-             {name:'Menton', city: nice},
-             {name:'Mougins', city: nice},
-             {name:'Nice Port', city: nice},
-             {name:'Ramatuelle', city: nice},
-             {name:'Saint Etienne de Tinee', city: nice},
-             {name:'Sainte Maxime', city: nice},
-             {name:'Sophia Antipolis', city: nice},
-             {name:'St Paul', city: nice},
-             {name:'St Raphael', city: nice},
-             {name:'Theoule', city: nice},
-             {name:'Tourrettes sur Loup', city: nice},
-             {name:'Valbonne', city: nice},
-             {name:'Vallauris', city: nice},
-             {name:'Vence', city: nice},
-             {name:'Villefranche sur Mer', city: nice},
-             {name:'Beauvais Airport', city: paris},
-             {name:'Paris Charles de Gaulle Airport', city: paris},
-             {name:'Paris Orly Airport', city: paris},
-             {name:'Le Havre Cruise Port', city: paris},
-             {name:'Gare Montparnesse Train Station', city: paris},
-             {name:'Gare Saint Lazare Train Station', city: paris},
-             {name:'Gare d Austerlitz Train Station ', city: paris},
-             {name:'Gare de Bercy Train Station', city: paris},
-             {name:'Gare de Lyon Train Station', city: paris},
-             {name:'Gare de l Est Train Station', city: paris},
-             {name:'Gare du Nord Train Station', city: paris},
-             {name:'Paris City Centre', city: paris},
-             {name:'Disneyland', city: paris},
-             {name:'Boulogne Billancourt', city: paris},
-             {name:'La Defense', city: paris},
-             {name:'Neuilly sur Seine', city: paris},
-             {name:'Fontainebleau', city: paris},
-             {name:'Alfortville', city: paris},
-             {name:'Anet', city: paris},
-             {name:'Antony', city: paris},
-             {name:'Arras', city: paris},
-             {name:'Asnieres sur Seine', city: paris},
-             {name:'Aubergenville', city: paris},
-             {name:'Aubervilliers', city: paris},
-             {name:'Auxerre', city: paris},
-             {name:'Bagnolet', city: paris},
-             {name:'Bailly Romainvilliers', city: paris},
-             {name:'Bayeux', city: paris},
-             {name:'Belle Eglise', city: paris},
-             {name:'Berny Riviere', city: paris},
-             {name:'Blois', city: paris},
-             {name:'Bobigny', city: paris},
-             {name:'Bonneuil sur Marne', city: paris},
-             {name:'Bouray sur Juine', city: paris},
-             {name:'Bry sur Marne ', city: paris},
-             {name:'Buc', city: paris},
-             {name:'Bussy Saint Georges', city: paris},
-             {name:'Caen', city: paris},
-             {name:'Calais', city: paris},
-             {name:'Cambrai', city: paris},
-             {name:'Cergy', city: paris},
-             {name:'Charleville Mezieres', city: paris},
-             {name:'Chartres', city: paris},
-             {name:'Chatillon', city: paris},
-             {name:'Chatou', city: paris},
-             {name:'Chaville', city: paris},
-             {name:'Chessy', city: paris},
-             {name:'Choisy Le Roi', city: paris},
-             {name:'Clamart', city: paris},
-             {name:'Clichy', city: paris},
-             {name:'Colombes', city: paris},
-             {name:'Compiegne', city: paris},
-             {name:'Corbeil Essonnes', city: paris},
-             {name:'Courbevoie', city: paris},
-             {name:'Creil', city: paris},
-             {name:'Creteil ', city: paris},
-             {name:'Deauville', city: paris},
-             {name:'Dreux', city: paris},
-             {name:'Dunkirk', city: paris},
-             {name:'Escrennes', city: paris},
-             {name:'Evreux', city: paris},
-             {name:'Evry ', city: paris},
-             {name:'Fontenay Sous Bois', city: paris},
-             {name:'Fontenay Tresigny', city: paris},
-             {name:'Fontenay sur Conie', city: paris},
-             {name:'Fourqueux', city: paris},
-             {name:'Gagny', city: paris},
-             {name:'Garches', city: paris},
-             {name:'Gennevilliers', city: paris},
-             {name:'Giverny', city: paris},
-             {name:'Grigny', city: paris},
-             {name:'Guyancourt', city: paris},
-             {name:'Hirson', city: paris},
-             {name:'Issy les Moulineaux', city: paris},
-             {name:'Ivry sur Seine', city: paris},
-             {name:'Jouy en Josas', city: paris},
-             {name:'La Croix de Vieux Pont Camping', city: paris},
-             {name:'Laon', city: paris},
-             {name:'Le Chesnay', city: paris},
-             {name:'Le Havre', city: paris},
-             {name:'Le Kremlin Bicetre', city: paris},
-             {name:'Le Mans', city: paris},
-             {name:'Le Port Marly', city: paris},
-             {name:'Le Vesinet', city: paris},
-             {name:'Les Ulis', city: paris},
-             {name:'Lesigny', city: paris},
-             {name:'Lille', city: paris},
-             {name:'Lille Airport', city: paris},
-             {name:'Lille City Centre', city: paris},
-             {name:'Lisieux', city: paris},
-             {name:'Maisons Laffitte', city: paris},
-             {name:'Malakoff', city: paris},
-             {name:'Massy', city: paris},
-             {name:'Maubeuge', city: paris},
-             {name:'Meaux', city: paris},
-             {name:'Meudon', city: paris},
-             {name:'Montesson', city: paris},
-             {name:'Montevrain', city: paris},
-             {name:'Montigny le Bretonneux', city: paris},
-             {name:'Montreuil', city: paris},
-             {name:'Nanterre', city: paris},
-             {name:'Nemours', city: paris},
-             {name:'Nevers', city: paris},
-             {name:'Noisy Le Grand', city: paris},
-             {name:'Oeting', city: paris},
-             {name:'Orleans', city: paris},
-             {name:'Orsay', city: paris},
-             {name:'Pantin', city: paris},
-             {name:'Parc d Asterix', city: paris},
-             {name:'Paris Bateaux Parisiens', city: paris},
-             {name:'Paris Charles De Gaulle Airport Hotel', city: paris},
-             {name:'Paris Palais des Congres', city: paris},
-             {name:'Peronne', city: paris},
-             {name:'Plaisir', city: paris},
-             {name:'Poissy', city: paris},
-             {name:'Pontoise ', city: paris},
-             {name:'Pontorson', city: paris},
-             {name:'Reims', city: paris},
-             {name:'Rethel', city: paris},
-             {name:'Rochefort en Yvelines', city: paris},
-             {name:'Rocroi', city: paris},
-             {name:'Rosny Sous Bois', city: paris},
-             {name:'Roubaix', city: paris},
-             {name:'Rouen', city: paris},
-             {name:'Rue', city: paris},
-             {name:'Rueil Malmaison', city: paris},
-             {name:'Saint  Arnoult en Yvelines', city: paris},
-             {name:'Saint Amand Les Eaux', city: paris},
-             {name:'Saint Denis', city: paris},
-             {name:'Saint Genevieve des Bois', city: paris},
-             {name:'Saint Lambert des Bois', city: paris},
-             {name:'Saint Maur des Fosses', city: paris},
-             {name:'Saint Ouen', city: paris},
-             {name:'Saint Quentin', city: paris},
-             {name:'St Georges sur Cher', city: paris},
-             {name:'Suresnes', city: paris},
-             {name:'Tourcoing', city: paris},
-             {name:'Tours', city: paris},
-             {name:'Trappes', city: paris},
-             {name:'Troyes', city: paris},
-             {name:'Vanves', city: paris},
-             {name:'Velizy Villacoublay', city: paris},
-             {name:'Verneuil sur Avre', city: paris},
-             {name:'Vernon', city: paris},
-             {name:'Versailles', city: paris},
-             {name:'Villemandeur', city: paris},
-             {name:'Pau Airport', city: pau},
-             {name:'Pau', city: pau},
-             {name:'Aire sur l Adour', city: pau},
-             {name:'Argeles Gazost', city: pau},
-             {name:'Artouste', city: pau},
-             {name:'Ascou Pailheres', city: pau},
-             {name:'Bareges', city: pau},
-             {name:'Bareges la Mongie', city: pau},
-             {name:'Campan Payolle', city: pau},
-             {name:'Camurac', city: pau},
-             {name:'Cauterets', city: pau},
-             {name:'Cerdagne Puigmal', city: pau},
-             {name:'Domaine de Chioula', city: pau},
-             {name:'Etang de Lers', city: pau},
-             {name:'Eyne', city: pau},
-             {name:'Formigal', city: pau},
-             {name:'Formigueres', city: pau},
-             {name:'Goulier Neige', city: pau},
-             {name:'Guzet', city: pau},
-             {name:'Hautacam', city: pau},
-             {name:'Homps', city: pau},
-             {name:'La Pierre Saint Martin', city: pau},
-             {name:'Le Mourtis', city: pau},
-             {name:'Le Somport Candanchu', city: pau},
-             {name:'Les Angles', city: pau},
-             {name:'Les Monts d Olmes', city: pau},
-             {name:'Lombez', city: pau},
-             {name:'Luchon Superbagneres', city: pau},
-             {name:'Mijanes Donozan', city: pau},
-             {name:'Mirande', city: pau},
-             {name:'Nistos', city: pau},
-             {name:'Orthez', city: pau},
-             {name:'Plateau de Beille', city: pau},
-             {name:'Porte Puymorens', city: pau},
-             {name:'Puyvalador', city: pau},
-             {name:'Val d Azun', city: pau},
-             {name:'Villefranche de Lauragais', city: pau},
-             {name:'Perpignan', city: perpignan},
-             {name:'Ax les Thermes', city: perpignan},
-             {name:'Canet Plage', city: perpignan},
-             {name:'Osseja', city: perpignan},
-             {name:'Strasbourg Airport', city: strasbourg},
-             {name:'Strasbourg Train Station', city: strasbourg},
-             {name:'Valenciennes', city: strasbourg},
-             {name:'Colmar', city: strasbourg},
-             {name:'Strasbourg City Centre', city: strasbourg},
-             {name:'Trith Saint Leger', city: strasbourg},
-             {name:'Xonrupt Longemer', city: strasbourg},
-             {name:'Belfort', city: strasbourg},
-             {name:'Aarau', city: strasbourg},
-             {name:'Baccarat', city: strasbourg},
-             {name:'Dieuze', city: strasbourg},
-             {name:'Epinal', city: strasbourg},
-             {name:'Guebwiller', city: strasbourg},
-             {name:'Haguenau', city: strasbourg},
-             {name:'Kreuzlingen', city: strasbourg},
-             {name:'La Bresse', city: strasbourg},
-             {name:'Luxeuil les Bains', city: strasbourg},
-             {name:'Offenburg', city: strasbourg},
-             {name:'Saint Die des Vosges', city: strasbourg},
-             {name:'Sarrebourg', city: strasbourg},
-             {name:'Sarreguemines', city: strasbourg},
-             {name:'Saverne', city: strasbourg},
-             {name:'Solothurn', city: strasbourg},
-             {name:'Lourdes', city: tarbes},
-             {name:'Tarbes', city: tarbes},
-             {name:'Saint Lary Soulan', city: tarbes},
-             {name:'Gavarnie', city: tarbes},
-             {name:'Gavarnie Gedre', city: tarbes},
-             {name:'Gourette', city: tarbes},
-             {name:'Val Louron', city: tarbes},
-             {name:'Toulon Hyeres Airport', city: toulon},
-             {name:'Toulon', city: toulon},
-             {name:'Toulouse Airport', city: toulouse},
-             {name:'Font Romeu', city: toulouse},
-             {name:'Toulouse', city: toulouse},
-             {name:'Carcassonne', city: toulouse},
-             {name:'Albi', city: toulouse},
-             {name:'Argens Minervois', city: toulouse},
-             {name:'Bagneres de Luchon', city: toulouse},
-             {name:'Benque', city: toulouse},
-             {name:'Beziers', city: toulouse},
-             {name:'Bram', city: toulouse},
-             {name:'Cahors', city: toulouse},
-             {name:'Castelnaudary', city: toulouse},
-             {name:'Condom', city: toulouse},
-             {name:'Conques', city: toulouse},
-             {name:'Douelle', city: toulouse},
-             {name:'Foix', city: toulouse},
-             {name:'Francescas', city: toulouse},
-             {name:'La Mongie', city: toulouse},
-             {name:'Lempaut', city: toulouse},
-             {name:'Marciac', city: toulouse},
-             {name:'Montauban', city: toulouse},
-             {name:'Nant', city: toulouse},
-             {name:'Negra', city: toulouse},
-             {name:'Peyragudes', city: toulouse},
-             {name:'Piau Engaly', city: toulouse},
-             {name:'Pic du Midi', city: toulouse},
-             {name:'Rocamadour', city: toulouse},
-             {name:'Saint Amans des Cots', city: toulouse},
-             {name:'Trebes', city: toulouse},
-             {name:'Valras Plage', city: toulouse},
-             {name:'Vias Plage', city: toulouse},
-             {name:'Villeneuve les Beziers', city: toulouse}
-          ])
+  
+ pick_up_locations << PickUpLocation.new(name:'Annecy Airport', city: annecy)
+ pick_up_locations << PickUpLocation.new(name:'Megeve', city: annecy)
+ pick_up_locations << PickUpLocation.new(name:'Morzine', city: annecy)
+ pick_up_locations << PickUpLocation.new(name:'La Clusaz', city: annecy)
+ pick_up_locations << PickUpLocation.new(name:'Les Arcs', city: annecy)
+ pick_up_locations << PickUpLocation.new(name:'Thollon les Memises', city: annecy)
+ pick_up_locations << PickUpLocation.new(name:'Les Gets', city: annecy)
+ pick_up_locations << PickUpLocation.new(name:'Abondance', city: annecy)
+ pick_up_locations << PickUpLocation.new(name:'Annecy City Centre', city: annecy)
+ pick_up_locations << PickUpLocation.new(name:'Annemasse', city: annecy)
+ pick_up_locations << PickUpLocation.new(name:'Areches Beaufort', city: annecy)
+ pick_up_locations << PickUpLocation.new(name:'Argentiere', city: annecy)
+ pick_up_locations << PickUpLocation.new(name:'Avoriaz', city: annecy)
+ pick_up_locations << PickUpLocation.new(name:'Bernex', city: annecy)
+ pick_up_locations << PickUpLocation.new(name:'Chamonix Mont Blanc', city: annecy)
+ pick_up_locations << PickUpLocation.new(name:'Chatel', city: annecy)
+ pick_up_locations << PickUpLocation.new(name:'Chinaillon', city: annecy)
+ pick_up_locations << PickUpLocation.new(name:'Combloux', city: annecy)
+ pick_up_locations << PickUpLocation.new(name:'Evian les Bains', city: annecy)
+ pick_up_locations << PickUpLocation.new(name:'Flaine', city: annecy)
+ pick_up_locations << PickUpLocation.new(name:'Flumet', city: annecy)
+ pick_up_locations << PickUpLocation.new(name:'La Plagne', city: annecy)
+ pick_up_locations << PickUpLocation.new(name:'La Rosiere', city: annecy)
+ pick_up_locations << PickUpLocation.new(name:'Le Grand Bornand', city: annecy)
+ pick_up_locations << PickUpLocation.new(name:'Lelex', city: annecy)
+ pick_up_locations << PickUpLocation.new(name:'Les Bossons', city: annecy)
+ pick_up_locations << PickUpLocation.new(name:'Les Contamines', city: annecy)
+ pick_up_locations << PickUpLocation.new(name:'Les Houches', city: annecy)
+ pick_up_locations << PickUpLocation.new(name:'Les Praz de Chamonix', city: annecy)
+ pick_up_locations << PickUpLocation.new(name:'Manigod', city: annecy)
+ pick_up_locations << PickUpLocation.new(name:'Messery', city: annecy)
+ pick_up_locations << PickUpLocation.new(name:'Mijoux', city: annecy)
+ pick_up_locations << PickUpLocation.new(name:'Morillon', city: annecy)
+ pick_up_locations << PickUpLocation.new(name:'Neydens', city: annecy)
+ pick_up_locations << PickUpLocation.new(name:'Notre Dame de Bellecombe', city: annecy)
+ pick_up_locations << PickUpLocation.new(name:'Praz Sur Arly', city: annecy)
+ pick_up_locations << PickUpLocation.new(name:'Saint Gervais les Bains', city: annecy)
+ pick_up_locations << PickUpLocation.new(name:'Saint Jean d Aulps', city: annecy)
+ pick_up_locations << PickUpLocation.new(name:'Samoens', city: annecy)
+ pick_up_locations << PickUpLocation.new(name:'Talloires', city: annecy)
+ pick_up_locations << PickUpLocation.new(name:'Ugine', city: annecy)
+ pick_up_locations << PickUpLocation.new(name:'Vallorcine', city: annecy)
+ pick_up_locations << PickUpLocation.new(name:'Vovray en Bornes', city: annecy)
+ pick_up_locations << PickUpLocation.new(name:'Biarritz Airport', city: biarritz)
+ pick_up_locations << PickUpLocation.new(name:'Bayonne Train Station', city: biarritz)
+ pick_up_locations << PickUpLocation.new(name:'Dax Train Station', city: biarritz)
+ pick_up_locations << PickUpLocation.new(name:'Biarritz', city: biarritz)
+ pick_up_locations << PickUpLocation.new(name:'Ciboure', city: biarritz)
+ pick_up_locations << PickUpLocation.new(name:'St Jean de Luz', city: biarritz)
+ pick_up_locations << PickUpLocation.new(name:'Bayonne', city: biarritz)
+ pick_up_locations << PickUpLocation.new(name:'Ahetze', city: biarritz)
+ pick_up_locations << PickUpLocation.new(name:'Bidart', city: biarritz)
+ pick_up_locations << PickUpLocation.new(name:'Arcangues', city: biarritz)
+ pick_up_locations << PickUpLocation.new(name:'Berenx', city: biarritz)
+ pick_up_locations << PickUpLocation.new(name:'Biriatou', city: biarritz)
+ pick_up_locations << PickUpLocation.new(name:'Camping Le Ruisseau Bidart', city: biarritz)
+ pick_up_locations << PickUpLocation.new(name:'Camping Le Vieux Port', city: biarritz)
+ pick_up_locations << PickUpLocation.new(name:'Camping Sylvamar Labenne', city: biarritz)
+ pick_up_locations << PickUpLocation.new(name:'Capbreton', city: biarritz)
+ pick_up_locations << PickUpLocation.new(name:'Chantaco', city: biarritz)
+ pick_up_locations << PickUpLocation.new(name:'Chiberta', city: biarritz)
+ pick_up_locations << PickUpLocation.new(name:'Dax', city: biarritz)
+ pick_up_locations << PickUpLocation.new(name:'Guethary', city: biarritz)
+ pick_up_locations << PickUpLocation.new(name:'Hendaya', city: biarritz)
+ pick_up_locations << PickUpLocation.new(name:'Hossegor', city: biarritz)
+ pick_up_locations << PickUpLocation.new(name:'Ilbarritz', city: biarritz)
+ pick_up_locations << PickUpLocation.new(name:'Labenne', city: biarritz)
+ pick_up_locations << PickUpLocation.new(name:'Labenne Sylvamar', city: biarritz)
+ pick_up_locations << PickUpLocation.new(name:'Le Phare', city: biarritz)
+ pick_up_locations << PickUpLocation.new(name:'Lit et Mixe', city: biarritz)
+ pick_up_locations << PickUpLocation.new(name:'Luz Saint Sauveur', city: biarritz)
+ pick_up_locations << PickUpLocation.new(name:'Makila', city: biarritz)
+ pick_up_locations << PickUpLocation.new(name:'Moliets', city: biarritz)
+ pick_up_locations << PickUpLocation.new(name:'Montignac', city: biarritz)
+ pick_up_locations << PickUpLocation.new(name:'Salies de Bearn', city: biarritz)
+ pick_up_locations << PickUpLocation.new(name:'Sare', city: biarritz)
+ pick_up_locations << PickUpLocation.new(name:'Seignosse', city: biarritz)
+ pick_up_locations << PickUpLocation.new(name:'Soustons', city: biarritz)
+ pick_up_locations << PickUpLocation.new(name:'St Jean Pied de Port', city: biarritz)
+ pick_up_locations << PickUpLocation.new(name:'Urrugne', city: biarritz)
+ pick_up_locations << PickUpLocation.new(name:'Vieux Boucau', city: biarritz)
+ pick_up_locations << PickUpLocation.new(name:'Bordeaux Airport', city: bordeaux)
+ pick_up_locations << PickUpLocation.new(name:'Bordeaux Train Station', city: bordeaux)
+ pick_up_locations << PickUpLocation.new(name:'Bordeaux City Centre', city: bordeaux)
+ pick_up_locations << PickUpLocation.new(name:'Hourtin', city: bordeaux)
+ pick_up_locations << PickUpLocation.new(name:'Pillac', city: bordeaux)
+ pick_up_locations << PickUpLocation.new(name:'Valence sur Baise', city: bordeaux)
+ pick_up_locations << PickUpLocation.new(name:'Alles sur Dordogne', city: bordeaux)
+ pick_up_locations << PickUpLocation.new(name:'Bergerac', city: bordeaux)
+ pick_up_locations << PickUpLocation.new(name:'Agen', city: bordeaux)
+ pick_up_locations << PickUpLocation.new(name:'Andernos les Bains', city: bordeaux)
+ pick_up_locations << PickUpLocation.new(name:'Angouleme', city: bordeaux)
+ pick_up_locations << PickUpLocation.new(name:'Arcachon', city: bordeaux)
+ pick_up_locations << PickUpLocation.new(name:'Aubeterre sur Dronne', city: bordeaux)
+ pick_up_locations << PickUpLocation.new(name:'Auch', city: bordeaux)
+ pick_up_locations << PickUpLocation.new(name:'Biscarrosse', city: bordeaux)
+ pick_up_locations << PickUpLocation.new(name:'Blanzac', city: bordeaux)
+ pick_up_locations << PickUpLocation.new(name:'Blaye', city: bordeaux)
+ pick_up_locations << PickUpLocation.new(name:'Buzet sur Baise', city: bordeaux)
+ pick_up_locations << PickUpLocation.new(name:'Cap Ferret', city: bordeaux)
+ pick_up_locations << PickUpLocation.new(name:'Casteljaloux', city: bordeaux)
+ pick_up_locations << PickUpLocation.new(name:'Cognac', city: bordeaux)
+ pick_up_locations << PickUpLocation.new(name:'Daglan', city: bordeaux)
+ pick_up_locations << PickUpLocation.new(name:'Haux', city: bordeaux)
+ pick_up_locations << PickUpLocation.new(name:'Jonzac', city: bordeaux)
+ pick_up_locations << PickUpLocation.new(name:'La Perroterie Duras', city: bordeaux)
+ pick_up_locations << PickUpLocation.new(name:'La Rochelle', city: bordeaux)
+ pick_up_locations << PickUpLocation.new(name:'Labenne Ocean', city: bordeaux)
+ pick_up_locations << PickUpLocation.new(name:'Lacanau', city: bordeaux)
+ pick_up_locations << PickUpLocation.new(name:'Langon', city: bordeaux)
+ pick_up_locations << PickUpLocation.new(name:'Le Bugue', city: bordeaux)
+ pick_up_locations << PickUpLocation.new(name:'Le Mas d Agenais', city: bordeaux)
+ pick_up_locations << PickUpLocation.new(name:'Le Porge', city: bordeaux)
+ pick_up_locations << PickUpLocation.new(name:'Les Mathes', city: bordeaux)
+ pick_up_locations << PickUpLocation.new(name:'Libourne', city: bordeaux)
+ pick_up_locations << PickUpLocation.new(name:'Lignan de Bordeaux', city: bordeaux)
+ pick_up_locations << PickUpLocation.new(name:'Limoges', city: bordeaux)
+ pick_up_locations << PickUpLocation.new(name:'Margaux', city: bordeaux)
+ pick_up_locations << PickUpLocation.new(name:'Marmande', city: bordeaux)
+ pick_up_locations << PickUpLocation.new(name:'Messanges Plage', city: bordeaux)
+ pick_up_locations << PickUpLocation.new(name:'Mimizan', city: bordeaux)
+ pick_up_locations << PickUpLocation.new(name:'Mirambeau', city: bordeaux)
+ pick_up_locations << PickUpLocation.new(name:'Moissac', city: bordeaux)
+ pick_up_locations << PickUpLocation.new(name:'Mont de Marsan', city: bordeaux)
+ pick_up_locations << PickUpLocation.new(name:'Montendre', city: bordeaux)
+ pick_up_locations << PickUpLocation.new(name:'Montignac St Leon', city: bordeaux)
+ pick_up_locations << PickUpLocation.new(name:'Montpon Menesterol', city: bordeaux)
+ pick_up_locations << PickUpLocation.new(name:'Mouliets et Villemartin', city: bordeaux)
+ pick_up_locations << PickUpLocation.new(name:'Moulis en Medoc', city: bordeaux)
+ pick_up_locations << PickUpLocation.new(name:'Pauillac', city: bordeaux)
+ pick_up_locations << PickUpLocation.new(name:'Perigeux', city: bordeaux)
+ pick_up_locations << PickUpLocation.new(name:'Pessac', city: bordeaux)
+ pick_up_locations << PickUpLocation.new(name:'Saint Macaire', city: bordeaux)
+ pick_up_locations << PickUpLocation.new(name:'Saintes', city: bordeaux)
+ pick_up_locations << PickUpLocation.new(name:'Sarlat', city: bordeaux)
+ pick_up_locations << PickUpLocation.new(name:'Sarlat la Caneda', city: bordeaux)
+ pick_up_locations << PickUpLocation.new(name:'Sauternes', city: bordeaux)
+ pick_up_locations << PickUpLocation.new(name:'Sauveterre de Guyenne', city: bordeaux)
+ pick_up_locations << PickUpLocation.new(name:'Soulac sur Mer', city: bordeaux)
+ pick_up_locations << PickUpLocation.new(name:'St Crepin Carlucet', city: bordeaux)
+ pick_up_locations << PickUpLocation.new(name:'St Emilion', city: bordeaux)
+ pick_up_locations << PickUpLocation.new(name:'St Estephe', city: bordeaux)
+ pick_up_locations << PickUpLocation.new(name:'St Romain', city: bordeaux)
+ pick_up_locations << PickUpLocation.new(name:'Verdon sur Mer', city: bordeaux)
+ pick_up_locations << PickUpLocation.new(name:'Villeneuve sur Lot', city: bordeaux)
+ pick_up_locations << PickUpLocation.new(name:'Vitrac', city: bordeaux)
+ pick_up_locations << PickUpLocation.new(name:'Cannes Airport', city: cannes)
+ pick_up_locations << PickUpLocation.new(name:'Cannes City Centre', city: cannes)
+ pick_up_locations << PickUpLocation.new(name:'Saint Cezaire sur Siange', city: cannes)
+ pick_up_locations << PickUpLocation.new(name:'Tourtour', city: cannes)
+ pick_up_locations << PickUpLocation.new(name:'Chambery Airport', city: chambery)
+ pick_up_locations << PickUpLocation.new(name:'Courchevel', city: chambery)
+ pick_up_locations << PickUpLocation.new(name:'Meribel', city: chambery)
+ pick_up_locations << PickUpLocation.new(name:'Val d lsere', city: chambery)
+ pick_up_locations << PickUpLocation.new(name:'Les Carroz', city: chambery)
+ pick_up_locations << PickUpLocation.new(name:'Belle Plagne', city: chambery)
+ pick_up_locations << PickUpLocation.new(name:'Chambery Town Centre', city: chambery)
+ pick_up_locations << PickUpLocation.new(name:'Abries', city: chambery)
+ pick_up_locations << PickUpLocation.new(name:'Aillons Margeriaz', city: chambery)
+ pick_up_locations << PickUpLocation.new(name:'Aime', city: chambery)
+ pick_up_locations << PickUpLocation.new(name:'Aix les Bains', city: chambery)
+ pick_up_locations << PickUpLocation.new(name:'Albertville', city: chambery)
+ pick_up_locations << PickUpLocation.new(name:'Areches', city: chambery)
+ pick_up_locations << PickUpLocation.new(name:'Aussois', city: chambery)
+ pick_up_locations << PickUpLocation.new(name:'Bessans', city: chambery)
+ pick_up_locations << PickUpLocation.new(name:'Bonneval sur Arc', city: chambery)
+ pick_up_locations << PickUpLocation.new(name:'Bourg Saint Maurice', city: chambery)
+ pick_up_locations << PickUpLocation.new(name:'Bozel', city: chambery)
+ pick_up_locations << PickUpLocation.new(name:'Bramans', city: chambery)
+ pick_up_locations << PickUpLocation.new(name:'Brides Les Bains', city: chambery)
+ pick_up_locations << PickUpLocation.new(name:'La Daille', city: chambery)
+ pick_up_locations << PickUpLocation.new(name:'La Rossiere', city: chambery)
+ pick_up_locations << PickUpLocation.new(name:'La Tania', city: chambery)
+ pick_up_locations << PickUpLocation.new(name:'Le Corbier', city: chambery)
+ pick_up_locations << PickUpLocation.new(name:'Le Lac de Tignes', city: chambery)
+ pick_up_locations << PickUpLocation.new(name:'Le Lavachet', city: chambery)
+ pick_up_locations << PickUpLocation.new(name:'Les Allues', city: chambery)
+ pick_up_locations << PickUpLocation.new(name:'Les Coches', city: chambery)
+ pick_up_locations << PickUpLocation.new(name:'Les Echelles', city: chambery)
+ pick_up_locations << PickUpLocation.new(name:'Les Menuires', city: chambery)
+ pick_up_locations << PickUpLocation.new(name:'Les Saisies', city: chambery)
+ pick_up_locations << PickUpLocation.new(name:'Modane', city: chambery)
+ pick_up_locations << PickUpLocation.new(name:'Montalbert', city: chambery)
+ pick_up_locations << PickUpLocation.new(name:'Montchavin', city: chambery)
+ pick_up_locations << PickUpLocation.new(name:'Mottaret', city: chambery)
+ pick_up_locations << PickUpLocation.new(name:'Moutiers', city: chambery)
+ pick_up_locations << PickUpLocation.new(name:'Plagne Bellecote', city: chambery)
+ pick_up_locations << PickUpLocation.new(name:'Reberty', city: chambery)
+ pick_up_locations << PickUpLocation.new(name:'Saint Jean de Maurienne', city: chambery)
+ pick_up_locations << PickUpLocation.new(name:'Saint Leger', city: chambery)
+ pick_up_locations << PickUpLocation.new(name:'Saint Martin de Belleville', city: chambery)
+ pick_up_locations << PickUpLocation.new(name:'Sainte Foy Tarentaise', city: chambery)
+ pick_up_locations << PickUpLocation.new(name:'St Francois Longchamp', city: chambery)
+ pick_up_locations << PickUpLocation.new(name:'St Jean de Belleville', city: chambery)
+ pick_up_locations << PickUpLocation.new(name:'Termignon', city: chambery)
+ pick_up_locations << PickUpLocation.new(name:'Tignes', city: chambery)
+ pick_up_locations << PickUpLocation.new(name:'Val Claret', city: chambery)
+ pick_up_locations << PickUpLocation.new(name:'Val Thorens', city: chambery)
+ pick_up_locations << PickUpLocation.new(name:'Vallandry', city: chambery)
+ pick_up_locations << PickUpLocation.new(name:'Valmorel', city: chambery)
+ pick_up_locations << PickUpLocation.new(name:'Grenoble Airport', city: grenoble)
+ pick_up_locations << PickUpLocation.new(name:'Grenoble Train Station', city: grenoble)
+ pick_up_locations << PickUpLocation.new(name:'Alpe d Huez', city: grenoble)
+ pick_up_locations << PickUpLocation.new(name:'Saint Jean d Arves', city: grenoble)
+ pick_up_locations << PickUpLocation.new(name:'Grenoble Town Centre', city: grenoble)
+ pick_up_locations << PickUpLocation.new(name:'Les Deux Alpes', city: grenoble)
+ pick_up_locations << PickUpLocation.new(name:'Puy Saint Vincent', city: grenoble)
+ pick_up_locations << PickUpLocation.new(name:'Montgenevre', city: grenoble)
+ pick_up_locations << PickUpLocation.new(name:'Albiez Montrond', city: grenoble)
+ pick_up_locations << PickUpLocation.new(name:'Alpe du Grand Serre', city: grenoble)
+ pick_up_locations << PickUpLocation.new(name:'Ancelle', city: grenoble)
+ pick_up_locations << PickUpLocation.new(name:'Briancon', city: grenoble)
+ pick_up_locations << PickUpLocation.new(name:'Champagny en Vanoise', city: grenoble)
+ pick_up_locations << PickUpLocation.new(name:'Chamrousse', city: grenoble)
+ pick_up_locations << PickUpLocation.new(name:'Chateau Ville Vieille', city: grenoble)
+ pick_up_locations << PickUpLocation.new(name:'Gresse en Vercors', city: grenoble)
+ pick_up_locations << PickUpLocation.new(name:'La Grave', city: grenoble)
+ pick_up_locations << PickUpLocation.new(name:'La Norma', city: grenoble)
+ pick_up_locations << PickUpLocation.new(name:'La Toussuire', city: grenoble)
+ pick_up_locations << PickUpLocation.new(name:'Lanslebourg Mont Cenis', city: grenoble)
+ pick_up_locations << PickUpLocation.new(name:'Les Karellis', city: grenoble)
+ pick_up_locations << PickUpLocation.new(name:'Les Laux Prapoutel', city: grenoble)
+ pick_up_locations << PickUpLocation.new(name:'Orcieres Merlette', city: grenoble)
+ pick_up_locations << PickUpLocation.new(name:'Oz', city: grenoble)
+ pick_up_locations << PickUpLocation.new(name:'Pra Loup', city: grenoble)
+ pick_up_locations << PickUpLocation.new(name:'Pralognan la Vanoise', city: grenoble)
+ pick_up_locations << PickUpLocation.new(name:'Prapoutel', city: grenoble)
+ pick_up_locations << PickUpLocation.new(name:'Reallon Savines le Lac', city: grenoble)
+ pick_up_locations << PickUpLocation.new(name:'Saint Ismier', city: grenoble)
+ pick_up_locations << PickUpLocation.new(name:'Saint Sorlin d Arves', city: grenoble)
+ pick_up_locations << PickUpLocation.new(name:'Serre Chevalier', city: grenoble)
+ pick_up_locations << PickUpLocation.new(name:'St Jean Montclar', city: grenoble)
+ pick_up_locations << PickUpLocation.new(name:'Superdevoluy', city: grenoble)
+ pick_up_locations << PickUpLocation.new(name:'Val Cenis', city: grenoble)
+ pick_up_locations << PickUpLocation.new(name:'Val d Allos', city: grenoble)
+ pick_up_locations << PickUpLocation.new(name:'Valence', city: grenoble)
+ pick_up_locations << PickUpLocation.new(name:'Valloire', city: grenoble)
+ pick_up_locations << PickUpLocation.new(name:'Valmeinier', city: grenoble)
+ pick_up_locations << PickUpLocation.new(name:'Vars', city: grenoble)
+ pick_up_locations << PickUpLocation.new(name:'Vaujany', city: grenoble)
+ pick_up_locations << PickUpLocation.new(name:'Villard Reculas', city: grenoble)
+ pick_up_locations << PickUpLocation.new(name:'Villard de Lans', city: grenoble)
+ pick_up_locations << PickUpLocation.new(name:'Lyon Airport', city: lyon)
+ pick_up_locations << PickUpLocation.new(name:'Lyon City Centre', city: lyon)
+ pick_up_locations << PickUpLocation.new(name:'Chamonix', city: lyon)
+ pick_up_locations << PickUpLocation.new(name:'Dijon', city: lyon)
+ pick_up_locations << PickUpLocation.new(name:'Valfrejus', city: lyon)
+ pick_up_locations << PickUpLocation.new(name:'St Gervais Les Bains', city: lyon)
+ pick_up_locations << PickUpLocation.new(name:'Risoul', city: lyon)
+ pick_up_locations << PickUpLocation.new(name:'Bagnols', city: lyon)
+ pick_up_locations << PickUpLocation.new(name:'Beaune', city: lyon)
+ pick_up_locations << PickUpLocation.new(name:'Bellevaux', city: lyon)
+ pick_up_locations << PickUpLocation.new(name:'Echenevex', city: lyon)
+ pick_up_locations << PickUpLocation.new(name:'Les Orres', city: lyon)
+ pick_up_locations << PickUpLocation.new(name:'Macon', city: lyon)
+ pick_up_locations << PickUpLocation.new(name:'Selestat', city: lyon)
+ pick_up_locations << PickUpLocation.new(name:'St Clair Les Annonay', city: lyon)
+ pick_up_locations << PickUpLocation.new(name:'Viviers', city: lyon)
+ pick_up_locations << PickUpLocation.new(name:'Avignon Airport', city: marseille)
+ pick_up_locations << PickUpLocation.new(name:'Marseille Airport', city: marseille)
+ pick_up_locations << PickUpLocation.new(name:'Marseille Train Station', city: marseille)
+ pick_up_locations << PickUpLocation.new(name:'Marseille City Centre', city: marseille)
+ pick_up_locations << PickUpLocation.new(name:'Marseille Port', city: marseille)
+ pick_up_locations << PickUpLocation.new(name:'Aix en Provence', city: marseille)
+ pick_up_locations << PickUpLocation.new(name:'Martigues', city: marseille)
+ pick_up_locations << PickUpLocation.new(name:'La Ciotat', city: marseille)
+ pick_up_locations << PickUpLocation.new(name:'Saintes Maries de la Mer', city: marseille)
+ pick_up_locations << PickUpLocation.new(name:'Arles', city: marseille)
+ pick_up_locations << PickUpLocation.new(name:'Avignon', city: marseille)
+ pick_up_locations << PickUpLocation.new(name:'Bandol', city: marseille)
+ pick_up_locations << PickUpLocation.new(name:'Buoux', city: marseille)
+ pick_up_locations << PickUpLocation.new(name:'Cardarache', city: marseille)
+ pick_up_locations << PickUpLocation.new(name:'Cassis', city: marseille)
+ pick_up_locations << PickUpLocation.new(name:'Chateauneuf du Pape', city: marseille)
+ pick_up_locations << PickUpLocation.new(name:'Cotignac', city: marseille)
+ pick_up_locations << PickUpLocation.new(name:'Digne les Bains', city: marseille)
+ pick_up_locations << PickUpLocation.new(name:'Forcalquier', city: marseille)
+ pick_up_locations << PickUpLocation.new(name:'Gordes', city: marseille)
+ pick_up_locations << PickUpLocation.new(name:'Hyeres', city: marseille)
+ pick_up_locations << PickUpLocation.new(name:'Istres', city: marseille)
+ pick_up_locations << PickUpLocation.new(name:'La Crau', city: marseille)
+ pick_up_locations << PickUpLocation.new(name:'La Seynes Sur Mer', city: marseille)
+ pick_up_locations << PickUpLocation.new(name:'La Tour d Aigues', city: marseille)
+ pick_up_locations << PickUpLocation.new(name:'Le Grau du Roi', city: marseille)
+ pick_up_locations << PickUpLocation.new(name:'Le Lavandou', city: marseille)
+ pick_up_locations << PickUpLocation.new(name:'Les Baux de Provence', city: marseille)
+ pick_up_locations << PickUpLocation.new(name:'Loumarin', city: marseille)
+ pick_up_locations << PickUpLocation.new(name:'Maillane', city: marseille)
+ pick_up_locations << PickUpLocation.new(name:'Mallemort Pont Royal', city: marseille)
+ pick_up_locations << PickUpLocation.new(name:'Meze', city: marseille)
+ pick_up_locations << PickUpLocation.new(name:'Orange', city: marseille)
+ pick_up_locations << PickUpLocation.new(name:'Palavas les Flots', city: marseille)
+ pick_up_locations << PickUpLocation.new(name:'Rayol Canadel sur Mer', city: marseille)
+ pick_up_locations << PickUpLocation.new(name:'Saint Cyr Sur Mer', city: marseille)
+ pick_up_locations << PickUpLocation.new(name:'Saint Paul Lez Durance', city: marseille)
+ pick_up_locations << PickUpLocation.new(name:'Saint Remy de Provence', city: marseille)
+ pick_up_locations << PickUpLocation.new(name:'Salon de Provence', city: marseille)
+ pick_up_locations << PickUpLocation.new(name:'Sete', city: marseille)
+ pick_up_locations << PickUpLocation.new(name:'Six Fours Les Plages', city: marseille)
+ pick_up_locations << PickUpLocation.new(name:'Super Sauze', city: marseille)
+ pick_up_locations << PickUpLocation.new(name:'Vacheres', city: marseille)
+ pick_up_locations << PickUpLocation.new(name:'Metz Nancy Airport', city: metz)
+ pick_up_locations << PickUpLocation.new(name:'Thionville', city: metz)
+ pick_up_locations << PickUpLocation.new(name:'Metz', city: metz)
+ pick_up_locations << PickUpLocation.new(name:'Chalons en Champagne', city: metz)
+ pick_up_locations << PickUpLocation.new(name:'Amneville', city: metz)
+ pick_up_locations << PickUpLocation.new(name:'Forbach', city: metz)
+ pick_up_locations << PickUpLocation.new(name:'Epernay', city: metz)
+ pick_up_locations << PickUpLocation.new(name:'Lac De Madine', city: metz)
+ pick_up_locations << PickUpLocation.new(name:'Saint Dizier', city: metz)
+ pick_up_locations << PickUpLocation.new(name:'Vitry Le Francois', city: metz)
+ pick_up_locations << PickUpLocation.new(name:'Montpellier Airport', city: montpellier)
+ pick_up_locations << PickUpLocation.new(name:'Nimes Airport', city: montpellier)
+ pick_up_locations << PickUpLocation.new(name:'Canet en Roussillon', city: montpellier)
+ pick_up_locations << PickUpLocation.new(name:'Argeles sur Mer', city: montpellier)
+ pick_up_locations << PickUpLocation.new(name:'Agde', city: montpellier)
+ pick_up_locations << PickUpLocation.new(name:'Banyuls sur Mer', city: montpellier)
+ pick_up_locations << PickUpLocation.new(name:'Collioure', city: montpellier)
+ pick_up_locations << PickUpLocation.new(name:'Port Argeles', city: montpellier)
+ pick_up_locations << PickUpLocation.new(name:'Ceret', city: montpellier)
+ pick_up_locations << PickUpLocation.new(name:'Lattes', city: montpellier)
+ pick_up_locations << PickUpLocation.new(name:'Le Serignan Plage', city: montpellier)
+ pick_up_locations << PickUpLocation.new(name:'Montpellier City Centre', city: montpellier)
+ pick_up_locations << PickUpLocation.new(name:'Narbonne', city: montpellier)
+ pick_up_locations << PickUpLocation.new(name:'Nimes', city: montpellier)
+ pick_up_locations << PickUpLocation.new(name:'Port Leucate', city: montpellier)
+ pick_up_locations << PickUpLocation.new(name:'Portiragnes', city: montpellier)
+ pick_up_locations << PickUpLocation.new(name:'Saint Pantaleon les Vignes', city: montpellier)
+ pick_up_locations << PickUpLocation.new(name:'Sommieres', city: montpellier)
+ pick_up_locations << PickUpLocation.new(name:'Mulhouse', city: nancy)
+ pick_up_locations << PickUpLocation.new(name:'Nancy', city: nancy)
+ pick_up_locations << PickUpLocation.new(name:'Besancon', city: nancy)
+ pick_up_locations << PickUpLocation.new(name:'Gerardmer', city: nancy)
+ pick_up_locations << PickUpLocation.new(name:'Luneville', city: nancy)
+ pick_up_locations << PickUpLocation.new(name:'Toul', city: nancy)
+ pick_up_locations << PickUpLocation.new(name:'Nice Airport', city: nice)
+ pick_up_locations << PickUpLocation.new(name:'Monte Carlo Cruise Port', city: nice)
+ pick_up_locations << PickUpLocation.new(name:'Monte Carlo', city: nice)
+ pick_up_locations << PickUpLocation.new(name:'Nice City Centre', city: nice)
+ pick_up_locations << PickUpLocation.new(name:'Juan les Pins', city: nice)
+ pick_up_locations << PickUpLocation.new(name:'St Tropez', city: nice)
+ pick_up_locations << PickUpLocation.new(name:'Monaco', city: nice)
+ pick_up_locations << PickUpLocation.new(name:'Cap Ferrat', city: nice)
+ pick_up_locations << PickUpLocation.new(name:'Antibes', city: nice)
+ pick_up_locations << PickUpLocation.new(name:'Biot', city: nice)
+ pick_up_locations << PickUpLocation.new(name:'Draguignan', city: nice)
+ pick_up_locations << PickUpLocation.new(name:'Fayence', city: nice)
+ pick_up_locations << PickUpLocation.new(name:'Frejus', city: nice)
+ pick_up_locations << PickUpLocation.new(name:'Grasse', city: nice)
+ pick_up_locations << PickUpLocation.new(name:'La Garde Freinet', city: nice)
+ pick_up_locations << PickUpLocation.new(name:'Le Cannet', city: nice)
+ pick_up_locations << PickUpLocation.new(name:'Mandelieu', city: nice)
+ pick_up_locations << PickUpLocation.new(name:'Menton', city: nice)
+ pick_up_locations << PickUpLocation.new(name:'Mougins', city: nice)
+ pick_up_locations << PickUpLocation.new(name:'Nice Port', city: nice)
+ pick_up_locations << PickUpLocation.new(name:'Ramatuelle', city: nice)
+ pick_up_locations << PickUpLocation.new(name:'Saint Etienne de Tinee', city: nice)
+ pick_up_locations << PickUpLocation.new(name:'Sainte Maxime', city: nice)
+ pick_up_locations << PickUpLocation.new(name:'Sophia Antipolis', city: nice)
+ pick_up_locations << PickUpLocation.new(name:'St Paul', city: nice)
+ pick_up_locations << PickUpLocation.new(name:'St Raphael', city: nice)
+ pick_up_locations << PickUpLocation.new(name:'Theoule', city: nice)
+ pick_up_locations << PickUpLocation.new(name:'Tourrettes sur Loup', city: nice)
+ pick_up_locations << PickUpLocation.new(name:'Valbonne', city: nice)
+ pick_up_locations << PickUpLocation.new(name:'Vallauris', city: nice)
+ pick_up_locations << PickUpLocation.new(name:'Vence', city: nice)
+ pick_up_locations << PickUpLocation.new(name:'Villefranche sur Mer', city: nice)
+ pick_up_locations << PickUpLocation.new(name:'Beauvais Airport', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Paris Charles de Gaulle Airport', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Paris Orly Airport', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Le Havre Cruise Port', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Gare Montparnesse Train Station', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Gare Saint Lazare Train Station', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Gare d Austerlitz Train Station ', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Gare de Bercy Train Station', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Gare de Lyon Train Station', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Gare de l Est Train Station', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Gare du Nord Train Station', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Paris City Centre', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Disneyland', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Boulogne Billancourt', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'La Defense', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Neuilly sur Seine', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Fontainebleau', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Alfortville', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Anet', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Antony', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Arras', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Asnieres sur Seine', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Aubergenville', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Aubervilliers', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Auxerre', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Bagnolet', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Bailly Romainvilliers', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Bayeux', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Belle Eglise', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Berny Riviere', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Blois', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Bobigny', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Bonneuil sur Marne', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Bouray sur Juine', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Bry sur Marne ', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Buc', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Bussy Saint Georges', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Caen', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Calais', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Cambrai', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Cergy', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Charleville Mezieres', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Chartres', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Chatillon', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Chatou', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Chaville', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Chessy', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Choisy Le Roi', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Clamart', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Clichy', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Colombes', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Compiegne', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Corbeil Essonnes', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Courbevoie', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Creil', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Creteil ', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Deauville', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Dreux', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Dunkirk', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Escrennes', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Evreux', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Evry ', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Fontenay Sous Bois', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Fontenay Tresigny', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Fontenay sur Conie', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Fourqueux', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Gagny', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Garches', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Gennevilliers', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Giverny', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Grigny', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Guyancourt', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Hirson', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Issy les Moulineaux', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Ivry sur Seine', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Jouy en Josas', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'La Croix de Vieux Pont Camping', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Laon', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Le Chesnay', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Le Havre', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Le Kremlin Bicetre', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Le Mans', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Le Port Marly', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Le Vesinet', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Les Ulis', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Lesigny', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Lille', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Lille Airport', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Lille City Centre', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Lisieux', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Maisons Laffitte', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Malakoff', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Massy', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Maubeuge', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Meaux', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Meudon', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Montesson', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Montevrain', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Montigny le Bretonneux', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Montreuil', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Nanterre', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Nemours', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Nevers', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Noisy Le Grand', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Oeting', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Orleans', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Orsay', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Pantin', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Parc d Asterix', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Paris Bateaux Parisiens', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Paris Charles De Gaulle Airport Hotel', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Paris Palais des Congres', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Peronne', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Plaisir', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Poissy', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Pontoise ', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Pontorson', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Reims', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Rethel', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Rochefort en Yvelines', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Rocroi', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Rosny Sous Bois', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Roubaix', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Rouen', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Rue', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Rueil Malmaison', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Saint  Arnoult en Yvelines', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Saint Amand Les Eaux', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Saint Denis', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Saint Genevieve des Bois', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Saint Lambert des Bois', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Saint Maur des Fosses', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Saint Ouen', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Saint Quentin', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'St Georges sur Cher', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Suresnes', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Tourcoing', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Tours', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Trappes', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Troyes', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Vanves', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Velizy Villacoublay', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Verneuil sur Avre', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Vernon', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Versailles', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Villemandeur', city: paris)
+ pick_up_locations << PickUpLocation.new(name:'Pau Airport', city: pau)
+ pick_up_locations << PickUpLocation.new(name:'Pau', city: pau)
+ pick_up_locations << PickUpLocation.new(name:'Aire sur l Adour', city: pau)
+ pick_up_locations << PickUpLocation.new(name:'Argeles Gazost', city: pau)
+ pick_up_locations << PickUpLocation.new(name:'Artouste', city: pau)
+ pick_up_locations << PickUpLocation.new(name:'Ascou Pailheres', city: pau)
+ pick_up_locations << PickUpLocation.new(name:'Bareges', city: pau)
+ pick_up_locations << PickUpLocation.new(name:'Bareges la Mongie', city: pau)
+ pick_up_locations << PickUpLocation.new(name:'Campan Payolle', city: pau)
+ pick_up_locations << PickUpLocation.new(name:'Camurac', city: pau)
+ pick_up_locations << PickUpLocation.new(name:'Cauterets', city: pau)
+ pick_up_locations << PickUpLocation.new(name:'Cerdagne Puigmal', city: pau)
+ pick_up_locations << PickUpLocation.new(name:'Domaine de Chioula', city: pau)
+ pick_up_locations << PickUpLocation.new(name:'Etang de Lers', city: pau)
+ pick_up_locations << PickUpLocation.new(name:'Eyne', city: pau)
+ pick_up_locations << PickUpLocation.new(name:'Formigal', city: pau)
+ pick_up_locations << PickUpLocation.new(name:'Formigueres', city: pau)
+ pick_up_locations << PickUpLocation.new(name:'Goulier Neige', city: pau)
+ pick_up_locations << PickUpLocation.new(name:'Guzet', city: pau)
+ pick_up_locations << PickUpLocation.new(name:'Hautacam', city: pau)
+ pick_up_locations << PickUpLocation.new(name:'Homps', city: pau)
+ pick_up_locations << PickUpLocation.new(name:'La Pierre Saint Martin', city: pau)
+ pick_up_locations << PickUpLocation.new(name:'Le Mourtis', city: pau)
+ pick_up_locations << PickUpLocation.new(name:'Le Somport Candanchu', city: pau)
+ pick_up_locations << PickUpLocation.new(name:'Les Angles', city: pau)
+ pick_up_locations << PickUpLocation.new(name:'Les Monts d Olmes', city: pau)
+ pick_up_locations << PickUpLocation.new(name:'Lombez', city: pau)
+ pick_up_locations << PickUpLocation.new(name:'Luchon Superbagneres', city: pau)
+ pick_up_locations << PickUpLocation.new(name:'Mijanes Donozan', city: pau)
+ pick_up_locations << PickUpLocation.new(name:'Mirande', city: pau)
+ pick_up_locations << PickUpLocation.new(name:'Nistos', city: pau)
+ pick_up_locations << PickUpLocation.new(name:'Orthez', city: pau)
+ pick_up_locations << PickUpLocation.new(name:'Plateau de Beille', city: pau)
+ pick_up_locations << PickUpLocation.new(name:'Porte Puymorens', city: pau)
+ pick_up_locations << PickUpLocation.new(name:'Puyvalador', city: pau)
+ pick_up_locations << PickUpLocation.new(name:'Val d Azun', city: pau)
+ pick_up_locations << PickUpLocation.new(name:'Villefranche de Lauragais', city: pau)
+ pick_up_locations << PickUpLocation.new(name:'Perpignan', city: perpignan)
+ pick_up_locations << PickUpLocation.new(name:'Ax les Thermes', city: perpignan)
+ pick_up_locations << PickUpLocation.new(name:'Canet Plage', city: perpignan)
+ pick_up_locations << PickUpLocation.new(name:'Osseja', city: perpignan)
+ pick_up_locations << PickUpLocation.new(name:'Strasbourg Airport', city: strasbourg)
+ pick_up_locations << PickUpLocation.new(name:'Strasbourg Train Station', city: strasbourg)
+ pick_up_locations << PickUpLocation.new(name:'Valenciennes', city: strasbourg)
+ pick_up_locations << PickUpLocation.new(name:'Colmar', city: strasbourg)
+ pick_up_locations << PickUpLocation.new(name:'Strasbourg City Centre', city: strasbourg)
+ pick_up_locations << PickUpLocation.new(name:'Trith Saint Leger', city: strasbourg)
+ pick_up_locations << PickUpLocation.new(name:'Xonrupt Longemer', city: strasbourg)
+ pick_up_locations << PickUpLocation.new(name:'Belfort', city: strasbourg)
+ pick_up_locations << PickUpLocation.new(name:'Aarau', city: strasbourg)
+ pick_up_locations << PickUpLocation.new(name:'Baccarat', city: strasbourg)
+ pick_up_locations << PickUpLocation.new(name:'Dieuze', city: strasbourg)
+ pick_up_locations << PickUpLocation.new(name:'Epinal', city: strasbourg)
+ pick_up_locations << PickUpLocation.new(name:'Guebwiller', city: strasbourg)
+ pick_up_locations << PickUpLocation.new(name:'Haguenau', city: strasbourg)
+ pick_up_locations << PickUpLocation.new(name:'Kreuzlingen', city: strasbourg)
+ pick_up_locations << PickUpLocation.new(name:'La Bresse', city: strasbourg)
+ pick_up_locations << PickUpLocation.new(name:'Luxeuil les Bains', city: strasbourg)
+ pick_up_locations << PickUpLocation.new(name:'Offenburg', city: strasbourg)
+ pick_up_locations << PickUpLocation.new(name:'Saint Die des Vosges', city: strasbourg)
+ pick_up_locations << PickUpLocation.new(name:'Sarrebourg', city: strasbourg)
+ pick_up_locations << PickUpLocation.new(name:'Sarreguemines', city: strasbourg)
+ pick_up_locations << PickUpLocation.new(name:'Saverne', city: strasbourg)
+ pick_up_locations << PickUpLocation.new(name:'Solothurn', city: strasbourg)
+ pick_up_locations << PickUpLocation.new(name:'Lourdes', city: tarbes)
+ pick_up_locations << PickUpLocation.new(name:'Tarbes', city: tarbes)
+ pick_up_locations << PickUpLocation.new(name:'Saint Lary Soulan', city: tarbes)
+ pick_up_locations << PickUpLocation.new(name:'Gavarnie', city: tarbes)
+ pick_up_locations << PickUpLocation.new(name:'Gavarnie Gedre', city: tarbes)
+ pick_up_locations << PickUpLocation.new(name:'Gourette', city: tarbes)
+ pick_up_locations << PickUpLocation.new(name:'Val Louron', city: tarbes)
+ pick_up_locations << PickUpLocation.new(name:'Toulon Hyeres Airport', city: toulon)
+ pick_up_locations << PickUpLocation.new(name:'Toulon', city: toulon)
+ pick_up_locations << PickUpLocation.new(name:'Toulouse Airport', city: toulouse)
+ pick_up_locations << PickUpLocation.new(name:'Font Romeu', city: toulouse)
+ pick_up_locations << PickUpLocation.new(name:'Toulouse', city: toulouse)
+ pick_up_locations << PickUpLocation.new(name:'Carcassonne', city: toulouse)
+ pick_up_locations << PickUpLocation.new(name:'Albi', city: toulouse)
+ pick_up_locations << PickUpLocation.new(name:'Argens Minervois', city: toulouse)
+ pick_up_locations << PickUpLocation.new(name:'Bagneres de Luchon', city: toulouse)
+ pick_up_locations << PickUpLocation.new(name:'Benque', city: toulouse)
+ pick_up_locations << PickUpLocation.new(name:'Beziers', city: toulouse)
+ pick_up_locations << PickUpLocation.new(name:'Bram', city: toulouse)
+ pick_up_locations << PickUpLocation.new(name:'Cahors', city: toulouse)
+ pick_up_locations << PickUpLocation.new(name:'Castelnaudary', city: toulouse)
+ pick_up_locations << PickUpLocation.new(name:'Condom', city: toulouse)
+ pick_up_locations << PickUpLocation.new(name:'Conques', city: toulouse)
+ pick_up_locations << PickUpLocation.new(name:'Douelle', city: toulouse)
+ pick_up_locations << PickUpLocation.new(name:'Foix', city: toulouse)
+ pick_up_locations << PickUpLocation.new(name:'Francescas', city: toulouse)
+ pick_up_locations << PickUpLocation.new(name:'La Mongie', city: toulouse)
+ pick_up_locations << PickUpLocation.new(name:'Lempaut', city: toulouse)
+ pick_up_locations << PickUpLocation.new(name:'Marciac', city: toulouse)
+ pick_up_locations << PickUpLocation.new(name:'Montauban', city: toulouse)
+ pick_up_locations << PickUpLocation.new(name:'Nant', city: toulouse)
+ pick_up_locations << PickUpLocation.new(name:'Negra', city: toulouse)
+ pick_up_locations << PickUpLocation.new(name:'Peyragudes', city: toulouse)
+ pick_up_locations << PickUpLocation.new(name:'Piau Engaly', city: toulouse)
+ pick_up_locations << PickUpLocation.new(name:'Pic du Midi', city: toulouse)
+ pick_up_locations << PickUpLocation.new(name:'Rocamadour', city: toulouse)
+ pick_up_locations << PickUpLocation.new(name:'Saint Amans des Cots', city: toulouse)
+ pick_up_locations << PickUpLocation.new(name:'Trebes', city: toulouse)
+ pick_up_locations << PickUpLocation.new(name:'Valras Plage', city: toulouse)
+ pick_up_locations << PickUpLocation.new(name:'Vias Plage', city: toulouse)
+ pick_up_locations << PickUpLocation.new(name:'Villeneuve les Beziers', city: toulouse)
+ 
   puts 'Cities of Germany'
   berlin = City.find_by(name:'Berlin')
   bremen = City.find_by(name:'Bremen')
@@ -2211,523 +2204,523 @@ after :cities do
   munich = City.find_by(name:'Munich')
   nuremberg = City.find_by(name:'Nuremberg')
   stuttgart = City.find_by(name:'Stuttgart')
-  PickUpLocation.create([
-            {name:'Berlin Brandenburg Airport', city: berlin},
-            {name:'Berlin Schonefeld Airport', city: berlin},
-            {name:'Berlin Tegel Airport', city: berlin},
-            {name:'Berlin City Centre', city: berlin},
-            {name:'Berlin Hotel', city: berlin},
-            {name:'Mitte', city: berlin},
-            {name:'Prenzlauer Berg', city: berlin},
-            {name:'Potsdam', city: berlin},
-            {name:'Ahrensfelde', city: berlin},
-            {name:'Alt Treptow', city: berlin},
-            {name:'Bad Saarow', city: berlin},
-            {name:'Bernau bei Berlin', city: berlin},
-            {name:'Birkenwerder', city: berlin},
-            {name:'Blankenfelde Mahlow', city: berlin},
-            {name:'Brandenburg an der Havel', city: berlin},
-            {name:'Britz Berlin', city: berlin},
-            {name:'Buckow', city: berlin},
-            {name:'Charlottenburg', city: berlin},
-            {name:'Cottbus', city: berlin},
-            {name:'Dahlem', city: berlin},
-            {name:'Eberswalde', city: berlin},
-            {name:'Falkensee', city: berlin},
-            {name:'Friedrichshain', city: berlin},
-            {name:'Frohnau', city: berlin},
-            {name:'Gatow', city: berlin},
-            {name:'Grossbeeren', city: berlin},
-            {name:'Haselhorst', city: berlin},
-            {name:'Heiligensee', city: berlin},
-            {name:'Hellersdorf', city: berlin},
-            {name:'Hennigsdorf', city: berlin},
-            {name:'Hermsdorf Berlin', city: berlin},
-            {name:'Hohen Neuendorf', city: berlin},
-            {name:'Hoppegarten', city: berlin},
-            {name:'Kleinmachnow', city: berlin},
-            {name:'Kopenick', city: berlin},
-            {name:'Kremmen', city: berlin},
-            {name:'Lichtenberg Berlin', city: berlin},
-            {name:'Lichtenrade', city: berlin},
-            {name:'Lichterfelde Berlin', city: berlin},
-            {name:'Ludwigsfelde', city: berlin},
-            {name:'Magdeburg', city: berlin},
-            {name:'Mariendorf', city: berlin},
-            {name:'Marienfelde', city: berlin},
-            {name:'Marzahn', city: berlin},
-            {name:'Muhlenbecker Land', city: berlin},
-            {name:'Neubrandenburg', city: berlin},
-            {name:'Neukolln', city: berlin},
-            {name:'Neuruppin', city: berlin},
-            {name:'Nikolassee', city: berlin},
-            {name:'Oberkramer', city: berlin},
-            {name:'Oranienburg', city: berlin},
-            {name:'Panketal', city: berlin},
-            {name:'Pankow', city: berlin},
-            {name:'Rangsdorf', city: berlin},
-            {name:'Reinickendorf', city: berlin},
-            {name:'Rheinsberg', city: berlin},
-            {name:'Rostock', city: berlin},
-            {name:'Rudow', city: berlin},
-            {name:'Schoneberg', city: berlin},
-            {name:'Schonefeld', city: berlin},
-            {name:'Schwielowsee', city: berlin},
-            {name:'Spandau', city: berlin},
-            {name:'Staaken', city: berlin},
-            {name:'Steglitz', city: berlin},
-            {name:'Tegel', city: berlin},
-            {name:'Tempelhof', city: berlin},
-            {name:'Tiergarten', city: berlin},
-            {name:'Tropical Island', city: berlin},
-            {name:'Velten', city: berlin},
-            {name:'Wandlitz', city: berlin},
-            {name:'Wannsee', city: berlin},
-            {name:'Warnemunde', city: berlin},
-            {name:'Wilmersdorf', city: berlin},
-            {name:'Wittenau', city: berlin},
-            {name:'Zehlendorf', city: berlin},
-            {name:'Bremen City Centre', city: bremen},
-            {name:'Bremen Airport', city: bremen},
-            {name:'Oldenburg', city: bremen},
-            {name:'Osnabruck', city: bremen},
-            {name:'Cologne City Centre', city: cologne},
-            {name:'Bonn', city: cologne},
-            {name:'Aachen', city: cologne},
-            {name:'Dusseldorf Airport', city: dusseldorf},
-            {name:'Weeze Airport', city: dusseldorf},
-            {name:'Dusseldorf', city: dusseldorf},
-            {name:'Duisburg', city: dusseldorf},
-            {name:'Dortmund', city: dusseldorf},
-            {name:'Neuss', city: dusseldorf},
-            {name:'Wuppertal', city: dusseldorf},
-            {name:'Bochum', city: dusseldorf},
-            {name:'Gelsenkirchen', city: dusseldorf},
-            {name:'Hamm', city: dusseldorf},
-            {name:'Leverkusen', city: dusseldorf},
-            {name:'Mulheim', city: dusseldorf},
-            {name:'Mulheim an der Ruhr', city: dusseldorf},
-            {name:'Oberhausen', city: dusseldorf},
-            {name:'Remscheid', city: dusseldorf},
-            {name:'Solingen', city: dusseldorf},
-            {name:'Frankfurt Airport', city: frankfurt},
-            {name:'Hahn Airport', city: frankfurt},
-            {name:'Nuremberg Port', city: frankfurt},
-            {name:'Frankfurt Train Station', city: frankfurt},
-            {name:'Wiesbaden', city: frankfurt},
-            {name:'Heidelberg', city: frankfurt},
-            {name:'Darmstadt', city: frankfurt},
-            {name:'Frankfurt City Centre', city: frankfurt},
-            {name:'Bad Soden', city: frankfurt},
-            {name:'Bad Homburg', city: frankfurt},
-            {name:'Alsbach', city: frankfurt},
-            {name:'Altheim', city: frankfurt},
-            {name:'Annelsbach', city: frankfurt},
-            {name:'Appenheim', city: frankfurt},
-            {name:'Asbach', city: frankfurt},
-            {name:'Aschaffenburg', city: frankfurt},
-            {name:'Asselheim', city: frankfurt},
-            {name:'Auerbach', city: frankfurt},
-            {name:'Babenhausen', city: frankfurt},
-            {name:'Bad Bruckenau', city: frankfurt},
-            {name:'Bad Durkheim', city: frankfurt},
-            {name:'Bad Hersfeld', city: frankfurt},
-            {name:'Bad Kissingen', city: frankfurt},
-            {name:'Bad Konig', city: frankfurt},
-            {name:'Bad Kreuznach', city: frankfurt},
-            {name:'Bad Nauheim', city: frankfurt},
-            {name:'Bad Neuenahr Ahrweiler', city: frankfurt},
-            {name:'Bad Schwalbach', city: frankfurt},
-            {name:'Bad Vilbel', city: frankfurt},
-            {name:'Bad Weilbach', city: frankfurt},
-            {name:'Bad Wildbad', city: frankfurt},
-            {name:'Bad Windsheim', city: frankfurt},
-            {name:'Baden Baden', city: frankfurt},
-            {name:'Bauschheim', city: frankfurt},
-            {name:'Beedenkirchen', city: frankfurt},
-            {name:'Beerfelden', city: frankfurt},
-            {name:'Beerfurth', city: frankfurt},
-            {name:'Bensheim', city: frankfurt},
-            {name:'Bergisch Gladbach', city: frankfurt},
-            {name:'Bickenbach', city: frankfurt},
-            {name:'Biebesheim', city: frankfurt},
-            {name:'Birkenau', city: frankfurt},
-            {name:'Bischofsheim', city: frankfurt},
-            {name:'Bobenheim Roxheim', city: frankfurt},
-            {name:'Bodenheim', city: frankfurt},
-            {name:'Brandau', city: frankfurt},
-            {name:'Braunshardt', city: frankfurt},
-            {name:'Brensbach', city: frankfurt},
-            {name:'Breuberg', city: frankfurt},
-            {name:'Bruchsal', city: frankfurt},
-            {name:'Buttelborn', city: frankfurt},
-            {name:'Coburg', city: frankfurt},
-            {name:'Crumstadt', city: frankfurt},
-            {name:'Deidesheim', city: frankfurt},
-            {name:'Dieburg', city: frankfurt},
-            {name:'Dietenbergen', city: frankfurt},
-            {name:'Dietzenbach', city: frankfurt},
-            {name:'Dillenburg', city: frankfurt},
-            {name:'Dreieich', city: frankfurt},
-            {name:'Dudenhofen', city: frankfurt},
-            {name:'Duren', city: frankfurt},
-            {name:'Eberbach', city: frankfurt},
-            {name:'Eberstadt', city: frankfurt},
-            {name:'Egelsbach', city: frankfurt},
-            {name:'Einhausen', city: frankfurt},
-            {name:'Eppelborn', city: frankfurt},
-            {name:'Eppelheim', city: frankfurt},
-            {name:'Eppertshausen', city: frankfurt},
-            {name:'Erbach', city: frankfurt},
-            {name:'Erbach im Odenwald', city: frankfurt},
-            {name:'Erfelden', city: frankfurt},
-            {name:'Erfurt', city: frankfurt},
-            {name:'Eschborn', city: frankfurt},
-            {name:'Eschollbrucken', city: frankfurt},
-            {name:'Essen', city: frankfurt},
-            {name:'Esslingen Am Neckar', city: frankfurt},
-            {name:'Ettlingen', city: frankfurt},
-            {name:'Florsheim', city: frankfurt},
-            {name:'Frankenhausen', city: frankfurt},
-            {name:'Frankenthal', city: frankfurt},
-            {name:'Frankisch Crumbach', city: frankfurt},
-            {name:'Freiburg', city: frankfurt},
-            {name:'Friedberg', city: frankfurt},
-            {name:'Friedewald', city: frankfurt},
-            {name:'Friedrichsdorf', city: frankfurt},
-            {name:'Fulda', city: frankfurt},
-            {name:'Geinsheim', city: frankfurt},
-            {name:'Georgenhausen', city: frankfurt},
-            {name:'Gernsheim', city: frankfurt},
-            {name:'Giessen', city: frankfurt},
-            {name:'Goch', city: frankfurt},
-            {name:'Goddelau', city: frankfurt},
-            {name:'Gotzenhain', city: frankfurt},
-            {name:'Grafenhausen', city: frankfurt},
-            {name:'Grasellenbach', city: frankfurt},
-            {name:'Gravenbruch', city: frankfurt},
-            {name:'Griesheim', city: frankfurt},
-            {name:'Gross Bieberau', city: frankfurt},
-            {name:'Gross Gerau', city: frankfurt},
-            {name:'Gross Umstadt', city: frankfurt},
-            {name:'Gross Zimmern', city: frankfurt},
-            {name:'Gundernhausen', city: frankfurt},
-            {name:'Guttersbach', city: frankfurt},
-            {name:'Hagen', city: frankfurt},
-            {name:'Hahn', city: frankfurt},
-            {name:'Hahnlein', city: frankfurt},
-            {name:'Hanau', city: frankfurt},
-            {name:'Hasloch', city: frankfurt},
-            {name:'Hassloch', city: frankfurt},
-            {name:'Heimbuchental', city: frankfurt},
-            {name:'Hemsbach', city: frankfurt},
-            {name:'Heppenheim', city: frankfurt},
-            {name:'Heubach', city: frankfurt},
-            {name:'Hippelsbach', city: frankfurt},
-            {name:'Hirschberg', city: frankfurt},
-            {name:'Hochst', city: frankfurt},
-            {name:'Hohensachsen', city: frankfurt},
-            {name:'Ilshofen', city: frankfurt},
-            {name:'Ingelheim am Rhein', city: frankfurt},
-            {name:'Johannisberg Schloss', city: frankfurt},
-            {name:'Jugesheim', city: frankfurt},
-            {name:'Kaarst', city: frankfurt},
-            {name:'Kaiserslautern', city: frankfurt},
-            {name:'Kaltenengers', city: frankfurt},
-            {name:'Karlsruhe', city: frankfurt},
-            {name:'Kelkheim', city: frankfurt},
-            {name:'Kelsterbach', city: frankfurt},
-            {name:'Ketsch', city: frankfurt},
-            {name:'Kirchheimbolanden', city: frankfurt},
-            {name:'Kleestadt', city: frankfurt},
-            {name:'Klein Zimmern', city: frankfurt},
-            {name:'Kleinwallstadt', city: frankfurt},
-            {name:'Koblenz', city: frankfurt},
-            {name:'Koln', city: frankfurt},
-            {name:'Konigstein Falkenstein', city: frankfurt},
-            {name:'Konigstein im Taunus', city: frankfurt},
-            {name:'Krefeld', city: frankfurt},
-            {name:'Kriftel', city: frankfurt},
-            {name:'Kronberg im Taunus', city: frankfurt},
-            {name:'Lammerspiel', city: frankfurt},
-            {name:'Lampertheim', city: frankfurt},
-            {name:'Landau', city: frankfurt},
-            {name:'Langen', city: frankfurt},
-            {name:'Laudenbach', city: frankfurt},
-            {name:'Lautertal', city: frankfurt},
-            {name:'Leeheim', city: frankfurt},
-            {name:'Lengfeld', city: frankfurt},
-            {name:'Lichtenberg', city: frankfurt},
-            {name:'Limburg', city: frankfurt},
-            {name:'Lindenfels', city: frankfurt},
-            {name:'Lorsch', city: frankfurt},
-            {name:'Ludwigshafen', city: frankfurt},
-            {name:'Maintal', city: frankfurt},
-            {name:'Mainz', city: frankfurt},
-            {name:'Malchen', city: frankfurt},
-            {name:'Mannheim', city: frankfurt},
-            {name:'Marburg', city: frankfurt},
-            {name:'Maxdorf', city: frankfurt},
-            {name:'Meiningen', city: frankfurt},
-            {name:'Messel', city: frankfurt},
-            {name:'Michelstadt', city: frankfurt},
-            {name:'Monchengladbach', city: frankfurt},
-            {name:'Monsheim', city: frankfurt},
-            {name:'Morfelden', city: frankfurt},
-            {name:'Morfelden Walldorf', city: frankfurt},
-            {name:'Morshausen', city: frankfurt},
-            {name:'Munster', city: frankfurt},
-            {name:'Nackenheim', city: frankfurt},
-            {name:'Neckargemund', city: frankfurt},
-            {name:'Neu Isenburg', city: frankfurt},
-            {name:'Neutsch', city: frankfurt},
-            {name:'Nieder Beerbach', city: frankfurt},
-            {name:'Nieder Erlenbach', city: frankfurt},
-            {name:'Nieder Klingen', city: frankfurt},
-            {name:'Nieder Modau ', city: frankfurt},
-            {name:'Nieder Ramstadt', city: frankfurt},
-            {name:'Nieder Roden', city: frankfurt},
-            {name:'Nierstein', city: frankfurt},
-            {name:'Nurburgring', city: frankfurt},
-            {name:'Nuremberg', city: frankfurt},
-            {name:'Nussloch', city: frankfurt},
-            {name:'Ober Beerbach', city: frankfurt},
-            {name:'Ober Ramstadt', city: frankfurt},
-            {name:'Ober Roden', city: frankfurt},
-            {name:'Oberleichtersbach', city: frankfurt},
-            {name:'Obertshausen', city: frankfurt},
-            {name:'Oberursel', city: frankfurt},
-            {name:'Oberwesel', city: frankfurt},
-            {name:'Offenbach', city: frankfurt},
-            {name:'Osterode am Harz', city: frankfurt},
-            {name:'Paderborn', city: frankfurt},
-            {name:'Pfirschbach', city: frankfurt},
-            {name:'Pfungstadt', city: frankfurt},
-            {name:'Pirmasens', city: frankfurt},
-            {name:'Reichelsheim', city: frankfurt},
-            {name:'Reinheim', city: frankfurt},
-            {name:'Rodermark', city: frankfurt},
-            {name:'Rodgau', city: frankfurt},
-            {name:'Rohrbach', city: frankfurt},
-            {name:'Rossdorf', city: frankfurt},
-            {name:'Rudesheim', city: frankfurt},
-            {name:'Rust', city: frankfurt},
-            {name:'Ruthweiler', city: frankfurt},
-            {name:'Saarbrucken', city: frankfurt},
-            {name:'Sankt Goar', city: frankfurt},
-            {name:'Schaafheim', city: frankfurt},
-            {name:'Schlangenbad', city: frankfurt},
-            {name:'Schmitten', city: frankfurt},
-            {name:'Schneppenhausen', city: frankfurt},
-            {name:'Schriesheim', city: frankfurt},
-            {name:'Schwalbach', city: frankfurt},
-            {name:'Schwalbach am Taunus', city: frankfurt},
-            {name:'Schwetzingen', city: frankfurt},
-            {name:'Seeheim', city: frankfurt},
-            {name:'Selzen', city: frankfurt},
-            {name:'Sickenhofen', city: frankfurt},
-            {name:'Siegen', city: frankfurt},
-            {name:'Spachbrucken', city: frankfurt},
-            {name:'Spangdahlem', city: frankfurt},
-            {name:'Speyer', city: frankfurt},
-            {name:'Sprendlingen', city: frankfurt},
-            {name:'Springen', city: frankfurt},
-            {name:'Stockstadt Rhein', city: frankfurt},
-            {name:'Sulzbach', city: frankfurt},
-            {name:'Sulzbach am Main', city: frankfurt},
-            {name:'Taunusstein', city: frankfurt},
-            {name:'Traisa', city: frankfurt},
-            {name:'Trautheim', city: frankfurt},
-            {name:'Trebur', city: frankfurt},
-            {name:'Trier', city: frankfurt},
-            {name:'Ueberau', city: frankfurt},
-            {name:'Urberach', city: frankfurt},
-            {name:'Volklingen', city: frankfurt},
-            {name:'Wallau', city: frankfurt},
-            {name:'Walldorf', city: frankfurt},
-            {name:'Waschenbach', city: frankfurt},
-            {name:'Weeze', city: frankfurt},
-            {name:'Wehrheim', city: frankfurt},
-            {name:'Weinheim', city: frankfurt},
-            {name:'Weiterstadt', city: frankfurt},
-            {name:'Wetzlar', city: frankfurt},
-            {name:'Wiebelsbach', city: frankfurt},
-            {name:'Wildsachsen', city: frankfurt},
-            {name:'Wilmshausen', city: frankfurt},
-            {name:'Wolfskehlen', city: frankfurt},
-            {name:'Wolfstein', city: frankfurt},
-            {name:'Worfelden', city: frankfurt},
-            {name:'Worms', city: frankfurt},
-            {name:'Zeilhard', city: frankfurt},
-            {name:'Zweibrucken', city: frankfurt},
-            {name:'Zwingenberg', city: frankfurt},
-            {name:'Friedrichshafen Airport', city: friedrichshafen},
-            {name:'Friedrichshafen', city: friedrichshafen},
-            {name:'Hamburg Airport', city: hamburg},
-            {name:'Lubeck Airport', city: hamburg},
-            {name:'Hamburg Cruise Port', city: hamburg},
-            {name:'Hamburg City Centre', city: hamburg},
-            {name:'Kiel', city: hamburg},
-            {name:'Pinneberg', city: hamburg},
-            {name:'Luneburg', city: hamburg},
-            {name:'Flensburg', city: hamburg},
-            {name:'Schwerin', city: hamburg},
-            {name:'Bargteheide', city: hamburg},
-            {name:'Barsbuttel', city: hamburg},
-            {name:'Bergedorf', city: hamburg},
-            {name:'Bremerhaven', city: hamburg},
-            {name:'Geesthacht', city: hamburg},
-            {name:'Halstenbek', city: hamburg},
-            {name:'Hamburg Wandsbek', city: hamburg},
-            {name:'Harburg', city: hamburg},
-            {name:'Lubeck', city: hamburg},
-            {name:'Neu Wulmstorf', city: hamburg},
-            {name:'Norderstedt', city: hamburg},
-            {name:'Oststeinbek', city: hamburg},
-            {name:'Seevetal', city: hamburg},
-            {name:'Strande', city: hamburg},
-            {name:'Wedel', city: hamburg},
-            {name:'Wilhelmsburg', city: hamburg},
-            {name:'Hannover Airport', city: hannover},
-            {name:'Hannover Train Station', city: hannover},
-            {name:'Hannover', city: hannover},
-            {name:'Braunschweig', city: hannover},
-            {name:'Wolfsburg', city: hannover},
-            {name:'Salzgitter', city: hannover},
-            {name:'Bielefeld', city: hannover},
-            {name:'Goslar', city: hannover},
-            {name:'Gottingen', city: hannover},
-            {name:'Hannover Fair', city: hannover},
-            {name:'Laatzen', city: hannover},
-            {name:'Rheda Wiedenbruck', city: hannover},
-            {name:'Leipzig Halle Airport', city: leipzig},
-            {name:'Leipzig', city: leipzig},
-            {name:'Dresden', city: leipzig},
-            {name:'Halle Salle', city: leipzig},
-            {name:'Dessau', city: leipzig},
-            {name:'Gera', city: leipzig},
-            {name:'Jena', city: leipzig},
-            {name:'Bitterfeld', city: leipzig},
-            {name:'Chemnitz', city: leipzig},
-            {name:'Memmingen Airport', city: munich},
-            {name:'Munich Airport', city: munich},
-            {name:'Munich Train Station', city: munich},
-            {name:'Munich City Centre', city: munich},
-            {name:'Munich South', city: munich},
-            {name:'Garmisch Partenkirchen', city: munich},
-            {name:'Starnberg', city: munich},
-            {name:'Konstanz', city: munich},
-            {name:'Holzkirchen', city: munich},
-            {name:'Pocking', city: munich},
-            {name:'Altotting', city: munich},
-            {name:'Augsburg', city: munich},
-            {name:'Bad Aibling', city: munich},
-            {name:'Bad Bellingen', city: munich},
-            {name:'Bad Hindelang', city: munich},
-            {name:'Bad Reichenhall', city: munich},
-            {name:'Bad Tolz', city: munich},
-            {name:'Berchtesgaden', city: munich},
-            {name:'Bruckmuehl', city: munich},
-            {name:'Chiemsee', city: munich},
-            {name:'Dachau', city: munich},
-            {name:'Deggendorf', city: munich},
-            {name:'Donauworth', city: munich},
-            {name:'Eching am Ammersee', city: munich},
-            {name:'Eggenfelden', city: munich},
-            {name:'Eibsee', city: munich},
-            {name:'Elmau', city: munich},
-            {name:'Feldkirchen', city: munich},
-            {name:'Freiburg im Breisgau', city: munich},
-            {name:'Freilassing', city: munich},
-            {name:'Fridolfing', city: munich},
-            {name:'Furstenfeldbruck', city: munich},
-            {name:'Fussen', city: munich},
-            {name:'Germering', city: munich},
-            {name:'Gunzburg', city: munich},
-            {name:'Haus', city: munich},
-            {name:'Herrsching', city: munich},
-            {name:'Hoeglwoerth', city: munich},
-            {name:'Hohenschwangau', city: munich},
-            {name:'Hopferau', city: munich},
-            {name:'Inzell', city: munich},
-            {name:'Kiefersfelden', city: munich},
-            {name:'Laimgrub', city: munich},
-            {name:'Landsberg am Lech', city: munich},
-            {name:'Landshut', city: munich},
-            {name:'Laufen', city: munich},
-            {name:'Marktl', city: munich},
-            {name:'Marquartstein', city: munich},
-            {name:'Marzling', city: munich},
-            {name:'Meitingen', city: munich},
-            {name:'Memmingen', city: munich},
-            {name:'Miesbach', city: munich},
-            {name:'Mittenwald', city: munich},
-            {name:'Muehldorf', city: munich},
-            {name:'Munich Airport Hotel', city: munich},
-            {name:'Murnau', city: munich},
-            {name:'Oberammergau', city: munich},
-            {name:'Oberaudorf', city: munich},
-            {name:'Oberstaufen', city: munich},
-            {name:'Oettingen', city: munich},
-            {name:'Passau', city: munich},
-            {name:'Reit im Winkl', city: munich},
-            {name:'Rosenheim', city: munich},
-            {name:'Ruhpolding', city: munich},
-            {name:'Scheffau', city: munich},
-            {name:'Schliersee', city: munich},
-            {name:'Siegsdorf', city: munich},
-            {name:'Solden Tyrol', city: munich},
-            {name:'Steinkirchen', city: munich},
-            {name:'Stockach', city: munich},
-            {name:'Sulzemoos', city: munich},
-            {name:'Tegernsee', city: munich},
-            {name:'Teisendorf', city: munich},
-            {name:'Thyrnau', city: munich},
-            {name:'Titisee', city: munich},
-            {name:'Tittmoning', city: munich},
-            {name:'Traunstein', city: munich},
-            {name:'Trostberg', city: munich},
-            {name:'Ulm', city: munich},
-            {name:'Villingen Schwenningen', city: munich},
-            {name:'Vilshofen', city: munich},
-            {name:'Waging am See', city: munich},
-            {name:'Walpertskirchen', city: munich},
-            {name:'Wasserburg am Inn', city: munich},
-            {name:'Wiggensbach', city: munich},
-            {name:'Worthsee', city: munich},
-            {name:'Zorneding', city: munich},
-            {name:'Nuremberg Airport', city: nuremberg},
-            {name:'Regensburg', city: nuremberg},
-            {name:'Nuremberg City Centre', city: nuremberg},
-            {name:'Erlangen', city: nuremberg},
-            {name:'Ingolstadt', city: nuremberg},
-            {name:'Wurzburg', city: nuremberg},
-            {name:'Furth', city: nuremberg},
-            {name:'Bamberg', city: nuremberg},
-            {name:'Bayreuth', city: nuremberg},
-            {name:'Herzogenaurach', city: nuremberg},
-            {name:'Kitzingen', city: nuremberg},
-            {name:'Schweinfurt', city: nuremberg},
-            {name:'Stuttgart Airport', city: stuttgart},
-            {name:'Stuttgart City Centre', city: stuttgart},
-            {name:'Heilbronn', city: stuttgart},
-            {name:'Stuttgart', city: stuttgart},
-            {name:'Pforzheim', city: stuttgart},
-            {name:'Tubingen', city: stuttgart},
-            {name:'Sindelfingen', city: stuttgart},
-            {name:'Bernau im Schwarzwald', city: stuttgart},
-            {name:'Bietigheim Bissingen', city: stuttgart},
-            {name:'Boblingen', city: stuttgart},
-            {name:'Donaueschingen', city: stuttgart},
-            {name:'Heidenheim', city: stuttgart},
-            {name:'Hinterzarten', city: stuttgart},
-            {name:'Ludwigsburg', city: stuttgart},
-            {name:'Reutlingen', city: stuttgart},
-            {name:'Salem', city: stuttgart},
-            {name:'Titisee Neustadt', city: stuttgart},
-            {name:'Tuttlingen', city: stuttgart},
-            {name:'Uberlingen', city: stuttgart}
-          ])
+  
+pick_up_locations << PickUpLocation.new(name:'Berlin Brandenburg Airport', city: berlin)
+pick_up_locations << PickUpLocation.new(name:'Berlin Schonefeld Airport', city: berlin)
+pick_up_locations << PickUpLocation.new(name:'Berlin Tegel Airport', city: berlin)
+pick_up_locations << PickUpLocation.new(name:'Berlin City Centre', city: berlin)
+pick_up_locations << PickUpLocation.new(name:'Berlin Hotel', city: berlin)
+pick_up_locations << PickUpLocation.new(name:'Mitte', city: berlin)
+pick_up_locations << PickUpLocation.new(name:'Prenzlauer Berg', city: berlin)
+pick_up_locations << PickUpLocation.new(name:'Potsdam', city: berlin)
+pick_up_locations << PickUpLocation.new(name:'Ahrensfelde', city: berlin)
+pick_up_locations << PickUpLocation.new(name:'Alt Treptow', city: berlin)
+pick_up_locations << PickUpLocation.new(name:'Bad Saarow', city: berlin)
+pick_up_locations << PickUpLocation.new(name:'Bernau bei Berlin', city: berlin)
+pick_up_locations << PickUpLocation.new(name:'Birkenwerder', city: berlin)
+pick_up_locations << PickUpLocation.new(name:'Blankenfelde Mahlow', city: berlin)
+pick_up_locations << PickUpLocation.new(name:'Brandenburg an der Havel', city: berlin)
+pick_up_locations << PickUpLocation.new(name:'Britz Berlin', city: berlin)
+pick_up_locations << PickUpLocation.new(name:'Buckow', city: berlin)
+pick_up_locations << PickUpLocation.new(name:'Charlottenburg', city: berlin)
+pick_up_locations << PickUpLocation.new(name:'Cottbus', city: berlin)
+pick_up_locations << PickUpLocation.new(name:'Dahlem', city: berlin)
+pick_up_locations << PickUpLocation.new(name:'Eberswalde', city: berlin)
+pick_up_locations << PickUpLocation.new(name:'Falkensee', city: berlin)
+pick_up_locations << PickUpLocation.new(name:'Friedrichshain', city: berlin)
+pick_up_locations << PickUpLocation.new(name:'Frohnau', city: berlin)
+pick_up_locations << PickUpLocation.new(name:'Gatow', city: berlin)
+pick_up_locations << PickUpLocation.new(name:'Grossbeeren', city: berlin)
+pick_up_locations << PickUpLocation.new(name:'Haselhorst', city: berlin)
+pick_up_locations << PickUpLocation.new(name:'Heiligensee', city: berlin)
+pick_up_locations << PickUpLocation.new(name:'Hellersdorf', city: berlin)
+pick_up_locations << PickUpLocation.new(name:'Hennigsdorf', city: berlin)
+pick_up_locations << PickUpLocation.new(name:'Hermsdorf Berlin', city: berlin)
+pick_up_locations << PickUpLocation.new(name:'Hohen Neuendorf', city: berlin)
+pick_up_locations << PickUpLocation.new(name:'Hoppegarten', city: berlin)
+pick_up_locations << PickUpLocation.new(name:'Kleinmachnow', city: berlin)
+pick_up_locations << PickUpLocation.new(name:'Kopenick', city: berlin)
+pick_up_locations << PickUpLocation.new(name:'Kremmen', city: berlin)
+pick_up_locations << PickUpLocation.new(name:'Lichtenberg Berlin', city: berlin)
+pick_up_locations << PickUpLocation.new(name:'Lichtenrade', city: berlin)
+pick_up_locations << PickUpLocation.new(name:'Lichterfelde Berlin', city: berlin)
+pick_up_locations << PickUpLocation.new(name:'Ludwigsfelde', city: berlin)
+pick_up_locations << PickUpLocation.new(name:'Magdeburg', city: berlin)
+pick_up_locations << PickUpLocation.new(name:'Mariendorf', city: berlin)
+pick_up_locations << PickUpLocation.new(name:'Marienfelde', city: berlin)
+pick_up_locations << PickUpLocation.new(name:'Marzahn', city: berlin)
+pick_up_locations << PickUpLocation.new(name:'Muhlenbecker Land', city: berlin)
+pick_up_locations << PickUpLocation.new(name:'Neubrandenburg', city: berlin)
+pick_up_locations << PickUpLocation.new(name:'Neukolln', city: berlin)
+pick_up_locations << PickUpLocation.new(name:'Neuruppin', city: berlin)
+pick_up_locations << PickUpLocation.new(name:'Nikolassee', city: berlin)
+pick_up_locations << PickUpLocation.new(name:'Oberkramer', city: berlin)
+pick_up_locations << PickUpLocation.new(name:'Oranienburg', city: berlin)
+pick_up_locations << PickUpLocation.new(name:'Panketal', city: berlin)
+pick_up_locations << PickUpLocation.new(name:'Pankow', city: berlin)
+pick_up_locations << PickUpLocation.new(name:'Rangsdorf', city: berlin)
+pick_up_locations << PickUpLocation.new(name:'Reinickendorf', city: berlin)
+pick_up_locations << PickUpLocation.new(name:'Rheinsberg', city: berlin)
+pick_up_locations << PickUpLocation.new(name:'Rostock', city: berlin)
+pick_up_locations << PickUpLocation.new(name:'Rudow', city: berlin)
+pick_up_locations << PickUpLocation.new(name:'Schoneberg', city: berlin)
+pick_up_locations << PickUpLocation.new(name:'Schonefeld', city: berlin)
+pick_up_locations << PickUpLocation.new(name:'Schwielowsee', city: berlin)
+pick_up_locations << PickUpLocation.new(name:'Spandau', city: berlin)
+pick_up_locations << PickUpLocation.new(name:'Staaken', city: berlin)
+pick_up_locations << PickUpLocation.new(name:'Steglitz', city: berlin)
+pick_up_locations << PickUpLocation.new(name:'Tegel', city: berlin)
+pick_up_locations << PickUpLocation.new(name:'Tempelhof', city: berlin)
+pick_up_locations << PickUpLocation.new(name:'Tiergarten', city: berlin)
+pick_up_locations << PickUpLocation.new(name:'Tropical Island', city: berlin)
+pick_up_locations << PickUpLocation.new(name:'Velten', city: berlin)
+pick_up_locations << PickUpLocation.new(name:'Wandlitz', city: berlin)
+pick_up_locations << PickUpLocation.new(name:'Wannsee', city: berlin)
+pick_up_locations << PickUpLocation.new(name:'Warnemunde', city: berlin)
+pick_up_locations << PickUpLocation.new(name:'Wilmersdorf', city: berlin)
+pick_up_locations << PickUpLocation.new(name:'Wittenau', city: berlin)
+pick_up_locations << PickUpLocation.new(name:'Zehlendorf', city: berlin)
+pick_up_locations << PickUpLocation.new(name:'Bremen City Centre', city: bremen)
+pick_up_locations << PickUpLocation.new(name:'Bremen Airport', city: bremen)
+pick_up_locations << PickUpLocation.new(name:'Oldenburg', city: bremen)
+pick_up_locations << PickUpLocation.new(name:'Osnabruck', city: bremen)
+pick_up_locations << PickUpLocation.new(name:'Cologne City Centre', city: cologne)
+pick_up_locations << PickUpLocation.new(name:'Bonn', city: cologne)
+pick_up_locations << PickUpLocation.new(name:'Aachen', city: cologne)
+pick_up_locations << PickUpLocation.new(name:'Dusseldorf Airport', city: dusseldorf)
+pick_up_locations << PickUpLocation.new(name:'Weeze Airport', city: dusseldorf)
+pick_up_locations << PickUpLocation.new(name:'Dusseldorf', city: dusseldorf)
+pick_up_locations << PickUpLocation.new(name:'Duisburg', city: dusseldorf)
+pick_up_locations << PickUpLocation.new(name:'Dortmund', city: dusseldorf)
+pick_up_locations << PickUpLocation.new(name:'Neuss', city: dusseldorf)
+pick_up_locations << PickUpLocation.new(name:'Wuppertal', city: dusseldorf)
+pick_up_locations << PickUpLocation.new(name:'Bochum', city: dusseldorf)
+pick_up_locations << PickUpLocation.new(name:'Gelsenkirchen', city: dusseldorf)
+pick_up_locations << PickUpLocation.new(name:'Hamm', city: dusseldorf)
+pick_up_locations << PickUpLocation.new(name:'Leverkusen', city: dusseldorf)
+pick_up_locations << PickUpLocation.new(name:'Mulheim', city: dusseldorf)
+pick_up_locations << PickUpLocation.new(name:'Mulheim an der Ruhr', city: dusseldorf)
+pick_up_locations << PickUpLocation.new(name:'Oberhausen', city: dusseldorf)
+pick_up_locations << PickUpLocation.new(name:'Remscheid', city: dusseldorf)
+pick_up_locations << PickUpLocation.new(name:'Solingen', city: dusseldorf)
+pick_up_locations << PickUpLocation.new(name:'Frankfurt Airport', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Hahn Airport', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Nuremberg Port', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Frankfurt Train Station', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Wiesbaden', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Heidelberg', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Darmstadt', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Frankfurt City Centre', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Bad Soden', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Bad Homburg', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Alsbach', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Altheim', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Annelsbach', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Appenheim', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Asbach', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Aschaffenburg', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Asselheim', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Auerbach', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Babenhausen', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Bad Bruckenau', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Bad Durkheim', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Bad Hersfeld', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Bad Kissingen', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Bad Konig', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Bad Kreuznach', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Bad Nauheim', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Bad Neuenahr Ahrweiler', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Bad Schwalbach', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Bad Vilbel', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Bad Weilbach', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Bad Wildbad', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Bad Windsheim', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Baden Baden', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Bauschheim', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Beedenkirchen', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Beerfelden', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Beerfurth', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Bensheim', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Bergisch Gladbach', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Bickenbach', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Biebesheim', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Birkenau', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Bischofsheim', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Bobenheim Roxheim', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Bodenheim', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Brandau', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Braunshardt', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Brensbach', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Breuberg', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Bruchsal', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Buttelborn', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Coburg', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Crumstadt', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Deidesheim', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Dieburg', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Dietenbergen', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Dietzenbach', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Dillenburg', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Dreieich', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Dudenhofen', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Duren', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Eberbach', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Eberstadt', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Egelsbach', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Einhausen', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Eppelborn', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Eppelheim', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Eppertshausen', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Erbach', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Erbach im Odenwald', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Erfelden', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Erfurt', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Eschborn', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Eschollbrucken', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Essen', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Esslingen Am Neckar', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Ettlingen', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Florsheim', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Frankenhausen', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Frankenthal', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Frankisch Crumbach', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Freiburg', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Friedberg', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Friedewald', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Friedrichsdorf', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Fulda', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Geinsheim', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Georgenhausen', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Gernsheim', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Giessen', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Goch', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Goddelau', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Gotzenhain', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Grafenhausen', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Grasellenbach', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Gravenbruch', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Griesheim', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Gross Bieberau', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Gross Gerau', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Gross Umstadt', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Gross Zimmern', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Gundernhausen', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Guttersbach', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Hagen', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Hahn', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Hahnlein', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Hanau', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Hasloch', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Hassloch', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Heimbuchental', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Hemsbach', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Heppenheim', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Heubach', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Hippelsbach', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Hirschberg', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Hochst', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Hohensachsen', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Ilshofen', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Ingelheim am Rhein', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Johannisberg Schloss', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Jugesheim', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Kaarst', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Kaiserslautern', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Kaltenengers', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Karlsruhe', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Kelkheim', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Kelsterbach', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Ketsch', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Kirchheimbolanden', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Kleestadt', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Klein Zimmern', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Kleinwallstadt', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Koblenz', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Koln', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Konigstein Falkenstein', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Konigstein im Taunus', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Krefeld', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Kriftel', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Kronberg im Taunus', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Lammerspiel', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Lampertheim', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Landau', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Langen', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Laudenbach', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Lautertal', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Leeheim', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Lengfeld', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Lichtenberg', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Limburg', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Lindenfels', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Lorsch', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Ludwigshafen', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Maintal', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Mainz', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Malchen', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Mannheim', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Marburg', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Maxdorf', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Meiningen', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Messel', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Michelstadt', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Monchengladbach', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Monsheim', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Morfelden', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Morfelden Walldorf', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Morshausen', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Munster', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Nackenheim', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Neckargemund', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Neu Isenburg', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Neutsch', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Nieder Beerbach', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Nieder Erlenbach', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Nieder Klingen', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Nieder Modau ', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Nieder Ramstadt', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Nieder Roden', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Nierstein', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Nurburgring', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Nuremberg', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Nussloch', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Ober Beerbach', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Ober Ramstadt', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Ober Roden', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Oberleichtersbach', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Obertshausen', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Oberursel', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Oberwesel', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Offenbach', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Osterode am Harz', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Paderborn', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Pfirschbach', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Pfungstadt', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Pirmasens', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Reichelsheim', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Reinheim', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Rodermark', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Rodgau', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Rohrbach', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Rossdorf', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Rudesheim', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Rust', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Ruthweiler', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Saarbrucken', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Sankt Goar', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Schaafheim', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Schlangenbad', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Schmitten', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Schneppenhausen', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Schriesheim', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Schwalbach', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Schwalbach am Taunus', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Schwetzingen', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Seeheim', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Selzen', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Sickenhofen', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Siegen', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Spachbrucken', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Spangdahlem', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Speyer', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Sprendlingen', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Springen', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Stockstadt Rhein', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Sulzbach', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Sulzbach am Main', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Taunusstein', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Traisa', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Trautheim', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Trebur', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Trier', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Ueberau', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Urberach', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Volklingen', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Wallau', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Walldorf', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Waschenbach', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Weeze', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Wehrheim', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Weinheim', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Weiterstadt', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Wetzlar', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Wiebelsbach', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Wildsachsen', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Wilmshausen', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Wolfskehlen', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Wolfstein', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Worfelden', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Worms', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Zeilhard', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Zweibrucken', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Zwingenberg', city: frankfurt)
+pick_up_locations << PickUpLocation.new(name:'Friedrichshafen Airport', city: friedrichshafen)
+pick_up_locations << PickUpLocation.new(name:'Friedrichshafen', city: friedrichshafen)
+pick_up_locations << PickUpLocation.new(name:'Hamburg Airport', city: hamburg)
+pick_up_locations << PickUpLocation.new(name:'Lubeck Airport', city: hamburg)
+pick_up_locations << PickUpLocation.new(name:'Hamburg Cruise Port', city: hamburg)
+pick_up_locations << PickUpLocation.new(name:'Hamburg City Centre', city: hamburg)
+pick_up_locations << PickUpLocation.new(name:'Kiel', city: hamburg)
+pick_up_locations << PickUpLocation.new(name:'Pinneberg', city: hamburg)
+pick_up_locations << PickUpLocation.new(name:'Luneburg', city: hamburg)
+pick_up_locations << PickUpLocation.new(name:'Flensburg', city: hamburg)
+pick_up_locations << PickUpLocation.new(name:'Schwerin', city: hamburg)
+pick_up_locations << PickUpLocation.new(name:'Bargteheide', city: hamburg)
+pick_up_locations << PickUpLocation.new(name:'Barsbuttel', city: hamburg)
+pick_up_locations << PickUpLocation.new(name:'Bergedorf', city: hamburg)
+pick_up_locations << PickUpLocation.new(name:'Bremerhaven', city: hamburg)
+pick_up_locations << PickUpLocation.new(name:'Geesthacht', city: hamburg)
+pick_up_locations << PickUpLocation.new(name:'Halstenbek', city: hamburg)
+pick_up_locations << PickUpLocation.new(name:'Hamburg Wandsbek', city: hamburg)
+pick_up_locations << PickUpLocation.new(name:'Harburg', city: hamburg)
+pick_up_locations << PickUpLocation.new(name:'Lubeck', city: hamburg)
+pick_up_locations << PickUpLocation.new(name:'Neu Wulmstorf', city: hamburg)
+pick_up_locations << PickUpLocation.new(name:'Norderstedt', city: hamburg)
+pick_up_locations << PickUpLocation.new(name:'Oststeinbek', city: hamburg)
+pick_up_locations << PickUpLocation.new(name:'Seevetal', city: hamburg)
+pick_up_locations << PickUpLocation.new(name:'Strande', city: hamburg)
+pick_up_locations << PickUpLocation.new(name:'Wedel', city: hamburg)
+pick_up_locations << PickUpLocation.new(name:'Wilhelmsburg', city: hamburg)
+pick_up_locations << PickUpLocation.new(name:'Hannover Airport', city: hannover)
+pick_up_locations << PickUpLocation.new(name:'Hannover Train Station', city: hannover)
+pick_up_locations << PickUpLocation.new(name:'Hannover', city: hannover)
+pick_up_locations << PickUpLocation.new(name:'Braunschweig', city: hannover)
+pick_up_locations << PickUpLocation.new(name:'Wolfsburg', city: hannover)
+pick_up_locations << PickUpLocation.new(name:'Salzgitter', city: hannover)
+pick_up_locations << PickUpLocation.new(name:'Bielefeld', city: hannover)
+pick_up_locations << PickUpLocation.new(name:'Goslar', city: hannover)
+pick_up_locations << PickUpLocation.new(name:'Gottingen', city: hannover)
+pick_up_locations << PickUpLocation.new(name:'Hannover Fair', city: hannover)
+pick_up_locations << PickUpLocation.new(name:'Laatzen', city: hannover)
+pick_up_locations << PickUpLocation.new(name:'Rheda Wiedenbruck', city: hannover)
+pick_up_locations << PickUpLocation.new(name:'Leipzig Halle Airport', city: leipzig)
+pick_up_locations << PickUpLocation.new(name:'Leipzig', city: leipzig)
+pick_up_locations << PickUpLocation.new(name:'Dresden', city: leipzig)
+pick_up_locations << PickUpLocation.new(name:'Halle Salle', city: leipzig)
+pick_up_locations << PickUpLocation.new(name:'Dessau', city: leipzig)
+pick_up_locations << PickUpLocation.new(name:'Gera', city: leipzig)
+pick_up_locations << PickUpLocation.new(name:'Jena', city: leipzig)
+pick_up_locations << PickUpLocation.new(name:'Bitterfeld', city: leipzig)
+pick_up_locations << PickUpLocation.new(name:'Chemnitz', city: leipzig)
+pick_up_locations << PickUpLocation.new(name:'Memmingen Airport', city: munich)
+pick_up_locations << PickUpLocation.new(name:'Munich Airport', city: munich)
+pick_up_locations << PickUpLocation.new(name:'Munich Train Station', city: munich)
+pick_up_locations << PickUpLocation.new(name:'Munich City Centre', city: munich)
+pick_up_locations << PickUpLocation.new(name:'Munich South', city: munich)
+pick_up_locations << PickUpLocation.new(name:'Garmisch Partenkirchen', city: munich)
+pick_up_locations << PickUpLocation.new(name:'Starnberg', city: munich)
+pick_up_locations << PickUpLocation.new(name:'Konstanz', city: munich)
+pick_up_locations << PickUpLocation.new(name:'Holzkirchen', city: munich)
+pick_up_locations << PickUpLocation.new(name:'Pocking', city: munich)
+pick_up_locations << PickUpLocation.new(name:'Altotting', city: munich)
+pick_up_locations << PickUpLocation.new(name:'Augsburg', city: munich)
+pick_up_locations << PickUpLocation.new(name:'Bad Aibling', city: munich)
+pick_up_locations << PickUpLocation.new(name:'Bad Bellingen', city: munich)
+pick_up_locations << PickUpLocation.new(name:'Bad Hindelang', city: munich)
+pick_up_locations << PickUpLocation.new(name:'Bad Reichenhall', city: munich)
+pick_up_locations << PickUpLocation.new(name:'Bad Tolz', city: munich)
+pick_up_locations << PickUpLocation.new(name:'Berchtesgaden', city: munich)
+pick_up_locations << PickUpLocation.new(name:'Bruckmuehl', city: munich)
+pick_up_locations << PickUpLocation.new(name:'Chiemsee', city: munich)
+pick_up_locations << PickUpLocation.new(name:'Dachau', city: munich)
+pick_up_locations << PickUpLocation.new(name:'Deggendorf', city: munich)
+pick_up_locations << PickUpLocation.new(name:'Donauworth', city: munich)
+pick_up_locations << PickUpLocation.new(name:'Eching am Ammersee', city: munich)
+pick_up_locations << PickUpLocation.new(name:'Eggenfelden', city: munich)
+pick_up_locations << PickUpLocation.new(name:'Eibsee', city: munich)
+pick_up_locations << PickUpLocation.new(name:'Elmau', city: munich)
+pick_up_locations << PickUpLocation.new(name:'Feldkirchen', city: munich)
+pick_up_locations << PickUpLocation.new(name:'Freiburg im Breisgau', city: munich)
+pick_up_locations << PickUpLocation.new(name:'Freilassing', city: munich)
+pick_up_locations << PickUpLocation.new(name:'Fridolfing', city: munich)
+pick_up_locations << PickUpLocation.new(name:'Furstenfeldbruck', city: munich)
+pick_up_locations << PickUpLocation.new(name:'Fussen', city: munich)
+pick_up_locations << PickUpLocation.new(name:'Germering', city: munich)
+pick_up_locations << PickUpLocation.new(name:'Gunzburg', city: munich)
+pick_up_locations << PickUpLocation.new(name:'Haus', city: munich)
+pick_up_locations << PickUpLocation.new(name:'Herrsching', city: munich)
+pick_up_locations << PickUpLocation.new(name:'Hoeglwoerth', city: munich)
+pick_up_locations << PickUpLocation.new(name:'Hohenschwangau', city: munich)
+pick_up_locations << PickUpLocation.new(name:'Hopferau', city: munich)
+pick_up_locations << PickUpLocation.new(name:'Inzell', city: munich)
+pick_up_locations << PickUpLocation.new(name:'Kiefersfelden', city: munich)
+pick_up_locations << PickUpLocation.new(name:'Laimgrub', city: munich)
+pick_up_locations << PickUpLocation.new(name:'Landsberg am Lech', city: munich)
+pick_up_locations << PickUpLocation.new(name:'Landshut', city: munich)
+pick_up_locations << PickUpLocation.new(name:'Laufen', city: munich)
+pick_up_locations << PickUpLocation.new(name:'Marktl', city: munich)
+pick_up_locations << PickUpLocation.new(name:'Marquartstein', city: munich)
+pick_up_locations << PickUpLocation.new(name:'Marzling', city: munich)
+pick_up_locations << PickUpLocation.new(name:'Meitingen', city: munich)
+pick_up_locations << PickUpLocation.new(name:'Memmingen', city: munich)
+pick_up_locations << PickUpLocation.new(name:'Miesbach', city: munich)
+pick_up_locations << PickUpLocation.new(name:'Mittenwald', city: munich)
+pick_up_locations << PickUpLocation.new(name:'Muehldorf', city: munich)
+pick_up_locations << PickUpLocation.new(name:'Munich Airport Hotel', city: munich)
+pick_up_locations << PickUpLocation.new(name:'Murnau', city: munich)
+pick_up_locations << PickUpLocation.new(name:'Oberammergau', city: munich)
+pick_up_locations << PickUpLocation.new(name:'Oberaudorf', city: munich)
+pick_up_locations << PickUpLocation.new(name:'Oberstaufen', city: munich)
+pick_up_locations << PickUpLocation.new(name:'Oettingen', city: munich)
+pick_up_locations << PickUpLocation.new(name:'Passau', city: munich)
+pick_up_locations << PickUpLocation.new(name:'Reit im Winkl', city: munich)
+pick_up_locations << PickUpLocation.new(name:'Rosenheim', city: munich)
+pick_up_locations << PickUpLocation.new(name:'Ruhpolding', city: munich)
+pick_up_locations << PickUpLocation.new(name:'Scheffau', city: munich)
+pick_up_locations << PickUpLocation.new(name:'Schliersee', city: munich)
+pick_up_locations << PickUpLocation.new(name:'Siegsdorf', city: munich)
+pick_up_locations << PickUpLocation.new(name:'Solden Tyrol', city: munich)
+pick_up_locations << PickUpLocation.new(name:'Steinkirchen', city: munich)
+pick_up_locations << PickUpLocation.new(name:'Stockach', city: munich)
+pick_up_locations << PickUpLocation.new(name:'Sulzemoos', city: munich)
+pick_up_locations << PickUpLocation.new(name:'Tegernsee', city: munich)
+pick_up_locations << PickUpLocation.new(name:'Teisendorf', city: munich)
+pick_up_locations << PickUpLocation.new(name:'Thyrnau', city: munich)
+pick_up_locations << PickUpLocation.new(name:'Titisee', city: munich)
+pick_up_locations << PickUpLocation.new(name:'Tittmoning', city: munich)
+pick_up_locations << PickUpLocation.new(name:'Traunstein', city: munich)
+pick_up_locations << PickUpLocation.new(name:'Trostberg', city: munich)
+pick_up_locations << PickUpLocation.new(name:'Ulm', city: munich)
+pick_up_locations << PickUpLocation.new(name:'Villingen Schwenningen', city: munich)
+pick_up_locations << PickUpLocation.new(name:'Vilshofen', city: munich)
+pick_up_locations << PickUpLocation.new(name:'Waging am See', city: munich)
+pick_up_locations << PickUpLocation.new(name:'Walpertskirchen', city: munich)
+pick_up_locations << PickUpLocation.new(name:'Wasserburg am Inn', city: munich)
+pick_up_locations << PickUpLocation.new(name:'Wiggensbach', city: munich)
+pick_up_locations << PickUpLocation.new(name:'Worthsee', city: munich)
+pick_up_locations << PickUpLocation.new(name:'Zorneding', city: munich)
+pick_up_locations << PickUpLocation.new(name:'Nuremberg Airport', city: nuremberg)
+pick_up_locations << PickUpLocation.new(name:'Regensburg', city: nuremberg)
+pick_up_locations << PickUpLocation.new(name:'Nuremberg City Centre', city: nuremberg)
+pick_up_locations << PickUpLocation.new(name:'Erlangen', city: nuremberg)
+pick_up_locations << PickUpLocation.new(name:'Ingolstadt', city: nuremberg)
+pick_up_locations << PickUpLocation.new(name:'Wurzburg', city: nuremberg)
+pick_up_locations << PickUpLocation.new(name:'Furth', city: nuremberg)
+pick_up_locations << PickUpLocation.new(name:'Bamberg', city: nuremberg)
+pick_up_locations << PickUpLocation.new(name:'Bayreuth', city: nuremberg)
+pick_up_locations << PickUpLocation.new(name:'Herzogenaurach', city: nuremberg)
+pick_up_locations << PickUpLocation.new(name:'Kitzingen', city: nuremberg)
+pick_up_locations << PickUpLocation.new(name:'Schweinfurt', city: nuremberg)
+pick_up_locations << PickUpLocation.new(name:'Stuttgart Airport', city: stuttgart)
+pick_up_locations << PickUpLocation.new(name:'Stuttgart City Centre', city: stuttgart)
+pick_up_locations << PickUpLocation.new(name:'Heilbronn', city: stuttgart)
+pick_up_locations << PickUpLocation.new(name:'Stuttgart', city: stuttgart)
+pick_up_locations << PickUpLocation.new(name:'Pforzheim', city: stuttgart)
+pick_up_locations << PickUpLocation.new(name:'Tubingen', city: stuttgart)
+pick_up_locations << PickUpLocation.new(name:'Sindelfingen', city: stuttgart)
+pick_up_locations << PickUpLocation.new(name:'Bernau im Schwarzwald', city: stuttgart)
+pick_up_locations << PickUpLocation.new(name:'Bietigheim Bissingen', city: stuttgart)
+pick_up_locations << PickUpLocation.new(name:'Boblingen', city: stuttgart)
+pick_up_locations << PickUpLocation.new(name:'Donaueschingen', city: stuttgart)
+pick_up_locations << PickUpLocation.new(name:'Heidenheim', city: stuttgart)
+pick_up_locations << PickUpLocation.new(name:'Hinterzarten', city: stuttgart)
+pick_up_locations << PickUpLocation.new(name:'Ludwigsburg', city: stuttgart)
+pick_up_locations << PickUpLocation.new(name:'Reutlingen', city: stuttgart)
+pick_up_locations << PickUpLocation.new(name:'Salem', city: stuttgart)
+pick_up_locations << PickUpLocation.new(name:'Titisee Neustadt', city: stuttgart)
+pick_up_locations << PickUpLocation.new(name:'Tuttlingen', city: stuttgart)
+pick_up_locations << PickUpLocation.new(name:'Uberlingen', city: stuttgart)
+ 
   puts 'Cities of Greece'
   athens = City.find_by(name:'Athens')
   crete = City.find_by(name:'Crete')
@@ -2738,327 +2731,327 @@ after :cities do
   rhodes = City.find_by(name:'Rhodes')
   santorini = City.find_by(name:'Santorini')
   zakynthos = City.find_by(name:'Zakynthos')
-  PickUpLocation.create([
-           {name:'Athens Airport', city: athens},
-           {name:'Kymi Port', city: athens},
-           {name:'Lavrio Port', city: athens},
-           {name:'Piraeus Cruise Port', city: athens},
-           {name:'Rafina Port', city: athens},
-           {name:'Piraeus', city: athens},
-           {name:'Athens City Centre', city: athens},
-           {name:'Vouliagmeni', city: athens},
-           {name:'Sounion', city: athens},
-           {name:'Alimos', city: athens},
-           {name:'Glyfada', city: athens},
-           {name:'Agios Konstantinos', city: athens},
-           {name:'Alimos Kalamaki Marina', city: athens},
-           {name:'Anavyssos', city: athens},
-           {name:'Chalkida', city: athens},
-           {name:'Corinth', city: athens},
-           {name:'Flisvos Marina', city: athens},
-           {name:'Glyfada Marina', city: athens},
-           {name:'Kifissia', city: athens},
-           {name:'Lavrio Marina', city: athens},
-           {name:'Lavrion', city: athens},
-           {name:'Loutraki', city: athens},
-           {name:'Nafplion', city: athens},
-           {name:'Patras', city: athens},
-           {name:'Phaliron', city: athens},
-           {name:'Rafina', city: athens},
-           {name:'Saronida', city: athens},
-           {name:'Varkiza', city: athens},
-           {name:'Voula', city: athens},
-           {name:'Vouliagmeni Marina', city: athens},
-           {name:'Chania Airport', city: crete},
-           {name:'Heraklion Airport', city: crete},
-           {name:'Heraklion Port', city: crete},
-           {name:'Souda Port', city: crete},
-           {name:'Malia', city: crete},
-           {name:'Rethymnon', city: crete},
-           {name:'Agia Marina', city: crete},
-           {name:'Gouves', city: crete},
-           {name:'Plakias', city: crete},
-           {name:'Amnissos', city: crete},
-           {name:'Adelainos Kampos', city: crete},
-           {name:'Adele', city: crete},
-           {name:'Agia Galini', city: crete},
-           {name:'Agia Pelagia', city: crete},
-           {name:'Agios Nikolaos', city: crete},
-           {name:'Almirida', city: crete},
-           {name:'Ammoudara Heraklion', city: crete},
-           {name:'Amoudara Lassithi', city: crete},
-           {name:'Analipsi', city: crete},
-           {name:'Anissaras', city: crete},
-           {name:'Anopolis', city: crete},
-           {name:'Archanes', city: crete},
-           {name:'Arkadi', city: crete},
-           {name:'Arolithos', city: crete},
-           {name:'Aspro', city: crete},
-           {name:'Atsipopoulo', city: crete},
-           {name:'Bali', city: crete},
-           {name:'Chania', city: crete},
-           {name:'Chania Port', city: crete},
-           {name:'Chora Sfakion', city: crete},
-           {name:'Chryssi Akti', city: crete},
-           {name:'Damnoni', city: crete},
-           {name:'Daratso', city: crete},
-           {name:'Drapanos', city: crete},
-           {name:'Elounda', city: crete},
-           {name:'Falasarna', city: crete},
-           {name:'Ferma', city: crete},
-           {name:'Fodele', city: crete},
-           {name:'Frangokastello', city: crete},
-           {name:'Galatas', city: crete},
-           {name:'Georgioupolis', city: crete},
-           {name:'Gerani Chania', city: crete},
-           {name:'Gerani Rethymnon', city: crete},
-           {name:'Gournes', city: crete},
-           {name:'Heraklion City Centre', city: crete},
-           {name:'Hersonissos', city: crete},
-           {name:'Ierapetra', city: crete},
-           {name:'Istron', city: crete},
-           {name:'Kalamaki', city: crete},
-           {name:'Kalives', city: crete},
-           {name:'Kalo Chorio', city: crete},
-           {name:'Karteros', city: crete},
-           {name:'Kasteli Kissamos', city: crete},
-           {name:'Kavros', city: crete},
-           {name:'Keratokampos', city: crete},
-           {name:'Knossos', city: crete},
-           {name:'Kokkini Hani', city: crete},
-           {name:'Kokkino Chorio', city: crete},
-           {name:'Kolymbari', city: crete},
-           {name:'Koutouloufari', city: crete},
-           {name:'Lentas', city: crete},
-           {name:'Ligaria', city: crete},
-           {name:'Linoperamata', city: crete},
-           {name:'Makrys Gialos', city: crete},
-           {name:'Maleme', city: crete},
-           {name:'Matala', city: crete},
-           {name:'Milatos', city: crete},
-           {name:'Mirthios', city: crete},
-           {name:'Missiria', city: crete},
-           {name:'Mochlos', city: crete},
-           {name:'Myrtos', city: crete},
-           {name:'Nea Chora', city: crete},
-           {name:'Omalos', city: crete},
-           {name:'Palekastron', city: crete},
-           {name:'Paleochora', city: crete},
-           {name:'Perama', city: crete},
-           {name:'Pervolia Rethymnon', city: crete},
-           {name:'Plaka Chania', city: crete},
-           {name:'Plaka Elounda', city: crete},
-           {name:'Platanias Chania', city: crete},
-           {name:'Platanias Rethymnon ', city: crete},
-           {name:'Prines', city: crete},
-           {name:'Roumeli', city: crete},
-           {name:'Sissi', city: crete},
-           {name:'Sitia', city: crete},
-           {name:'Skaleta', city: crete},
-           {name:'Sougia', city: crete},
-           {name:'Stalis', city: crete},
-           {name:'Stalos', city: crete},
-           {name:'Stavros', city: crete},
-           {name:'Tavronitis', city: crete},
-           {name:'Vai', city: crete},
-           {name:'Zakros', city: crete},
-           {name:'Kos Airport', city: kos},
-           {name:'Agios Fokas', city: kos},
-           {name:'Kos Ferry Port', city: kos},
-           {name:'Psalidi', city: kos},
-           {name:'Marmari', city: kos},
-           {name:'Kos City Centre', city: kos},
-           {name:'Kefalos', city: kos},
-           {name:'Kardamena', city: kos},
-           {name:'Lambi', city: kos},
-           {name:'Mastichari', city: kos},
-           {name:'Tigaki', city: kos},
-           {name:'Mykonos Airport', city: mykonos},
-           {name:'Mykonos Tourlos Cruise Port', city: mykonos},
-           {name:'Panormos', city: mykonos},
-           {name:'Mykonos Chora Old Port', city: mykonos},
-           {name:'Mykonos City Centre', city: mykonos},
-           {name:'Agios Ioannis', city: mykonos},
-           {name:'Agios Stefanos', city: mykonos},
-           {name:'Amigdalidi', city: mykonos},
-           {name:'Agios Sostis', city: mykonos},
-           {name:'Ano Mera', city: mykonos},
-           {name:'Argari', city: mykonos},
-           {name:'Drafaki', city: mykonos},
-           {name:'Elia', city: mykonos},
-           {name:'Ftelia', city: mykonos},
-           {name:'Houlakia', city: mykonos},
-           {name:'Kalafatis', city: mykonos},
-           {name:'Kalo Livadi', city: mykonos},
-           {name:'Korfos', city: mykonos},
-           {name:'Ornos', city: mykonos},
-           {name:'Paradise', city: mykonos},
-           {name:'Paraga', city: mykonos},
-           {name:'Platis Gialos', city: mykonos},
-           {name:'Psarou', city: mykonos},
-           {name:'Tagoo', city: mykonos},
-           {name:'Tourlos', city: mykonos},
-           {name:'Naxos Airport', city: naxos},
-           {name:'Naxos City Centre', city: naxos},
-           {name:'Naxos Ferry Port', city: naxos},
-           {name:'Agios Georgios', city: naxos},
-           {name:'Agios Prokopios', city: naxos},
-           {name:'Agia Anna', city: naxos},
-           {name:'Plaka', city: naxos},
-           {name:'Stelida', city: naxos},
-           {name:'Paros Airport', city: paros},
-           {name:'Paros Parikia Port', city: paros},
-           {name:'Agia Irini', city: paros},
-           {name:'Aliki', city: paros},
-           {name:'Ambelas', city: paros},
-           {name:'Kolymbithres', city: paros},
-           {name:'Lefkes', city: paros},
-           {name:'Naoussa', city: paros},
-           {name:'Chrysi Akti', city: paros},
-           {name:'Drios', city: paros},
-           {name:'Logaras', city: paros},
-           {name:'Molos', city: paros},
-           {name:'Parasporos', city: paros},
-           {name:'Parikia', city: paros},
-           {name:'Piso Livadi', city: paros},
-           {name:'Pounda', city: paros},
-           {name:'Santa Maria', city: paros},
-           {name:'Rhodes Airport', city: rhodes},
-           {name:'Archangelos', city: rhodes},
-           {name:'Kiotari', city: rhodes},
-           {name:'Ixia', city: rhodes},
-           {name:'Rhodes City Centre', city: rhodes},
-           {name:'Ialyssos', city: rhodes},
-           {name:'Kremasti', city: rhodes},
-           {name:'Afandou', city: rhodes},
-           {name:'Faliraki', city: rhodes},
-           {name:'Fanes', city: rhodes},
-           {name:'Gennadi', city: rhodes},
-           {name:'Haraki', city: rhodes},
-           {name:'Kalathos', city: rhodes},
-           {name:'Kalavarda', city: rhodes},
-           {name:'Kallithea', city: rhodes},
-           {name:'Kamiros', city: rhodes},
-           {name:'Kamiros Skala', city: rhodes},
-           {name:'Kolympia', city: rhodes},
-           {name:'Koskinou', city: rhodes},
-           {name:'Ladiko', city: rhodes},
-           {name:'Lardos', city: rhodes},
-           {name:'Lindos', city: rhodes},
-           {name:'Pastida', city: rhodes},
-           {name:'Pefkos', city: rhodes},
-           {name:'Rhodes Port', city: rhodes},
-           {name:'Stegna', city: rhodes},
-           {name:'Theologos', city: rhodes},
-           {name:'Tholos', city: rhodes},
-           {name:'Vlicha', city: rhodes},
-           {name:'Santorini Airport', city: santorini},
-           {name:'Athinios Port', city: santorini},
-           {name:'Oia', city: santorini},
-           {name:'Perivolos', city: santorini},
-           {name:'Megalochori', city: santorini},
-           {name:'Monolithos', city: santorini},
-           {name:'Agia Paraskevi', city: santorini},
-           {name:'Kamari', city: santorini},
-           {name:'Akrotiri', city: santorini},
-           {name:'Exo Gonia', city: santorini},
-           {name:'Faros', city: santorini},
-           {name:'Fira', city: santorini},
-           {name:'Firostefani', city: santorini},
-           {name:'Imerovigli', city: santorini},
-           {name:'Karterados', city: santorini},
-           {name:'Messaria', city: santorini},
-           {name:'Perissa', city: santorini},
-           {name:'Pyrgos', city: santorini},
-           {name:'Vlichada', city: santorini},
-           {name:'Vothonas', city: santorini},
-           {name:'Vourvoulos', city: santorini},
-           {name:'Zakynthos Airport', city: zakynthos},
-           {name:'Kalamaki Zakynthos', city: zakynthos},
-           {name:'Agios Sostis Zakynthos', city: zakynthos},
-           {name:'Akrotiri Zakynthos', city: zakynthos},
-           {name:'Alykanas', city: zakynthos},
-           {name:'Alykes', city: zakynthos},
-           {name:'Argassi', city: zakynthos},
-           {name:'Kampi', city: zakynthos},
-           {name:'Keri', city: zakynthos},
-           {name:'Kypseli', city: zakynthos},
-           {name:'Laganas', city: zakynthos},
-           {name:'Planos', city: zakynthos},
-           {name:'Skinari', city: zakynthos},
-           {name:'Tragaki', city: zakynthos},
-           {name:'Tsilivi', city: zakynthos},
-           {name:'Vassilikos', city: zakynthos},
-           {name:'Xirokastelo', city: zakynthos},
-           {name:'Zakynthos City Centre', city: zakynthos},
-           {name:'Zakynthos Port', city: zakynthos}
-          ])
+  
+  pick_up_locations << PickUpLocation.new(name:'Athens Airport', city: athens)
+  pick_up_locations << PickUpLocation.new(name:'Kymi Port', city: athens)
+  pick_up_locations << PickUpLocation.new(name:'Lavrio Port', city: athens)
+  pick_up_locations << PickUpLocation.new(name:'Piraeus Cruise Port', city: athens)
+  pick_up_locations << PickUpLocation.new(name:'Rafina Port', city: athens)
+  pick_up_locations << PickUpLocation.new(name:'Piraeus', city: athens)
+  pick_up_locations << PickUpLocation.new(name:'Athens City Centre', city: athens)
+  pick_up_locations << PickUpLocation.new(name:'Vouliagmeni', city: athens)
+  pick_up_locations << PickUpLocation.new(name:'Sounion', city: athens)
+  pick_up_locations << PickUpLocation.new(name:'Alimos', city: athens)
+  pick_up_locations << PickUpLocation.new(name:'Glyfada', city: athens)
+  pick_up_locations << PickUpLocation.new(name:'Agios Konstantinos', city: athens)
+  pick_up_locations << PickUpLocation.new(name:'Alimos Kalamaki Marina', city: athens)
+  pick_up_locations << PickUpLocation.new(name:'Anavyssos', city: athens)
+  pick_up_locations << PickUpLocation.new(name:'Chalkida', city: athens)
+  pick_up_locations << PickUpLocation.new(name:'Corinth', city: athens)
+  pick_up_locations << PickUpLocation.new(name:'Flisvos Marina', city: athens)
+  pick_up_locations << PickUpLocation.new(name:'Glyfada Marina', city: athens)
+  pick_up_locations << PickUpLocation.new(name:'Kifissia', city: athens)
+  pick_up_locations << PickUpLocation.new(name:'Lavrio Marina', city: athens)
+  pick_up_locations << PickUpLocation.new(name:'Lavrion', city: athens)
+  pick_up_locations << PickUpLocation.new(name:'Loutraki', city: athens)
+  pick_up_locations << PickUpLocation.new(name:'Nafplion', city: athens)
+  pick_up_locations << PickUpLocation.new(name:'Patras', city: athens)
+  pick_up_locations << PickUpLocation.new(name:'Phaliron', city: athens)
+  pick_up_locations << PickUpLocation.new(name:'Rafina', city: athens)
+  pick_up_locations << PickUpLocation.new(name:'Saronida', city: athens)
+  pick_up_locations << PickUpLocation.new(name:'Varkiza', city: athens)
+  pick_up_locations << PickUpLocation.new(name:'Voula', city: athens)
+  pick_up_locations << PickUpLocation.new(name:'Vouliagmeni Marina', city: athens)
+  pick_up_locations << PickUpLocation.new(name:'Chania Airport', city: crete)
+  pick_up_locations << PickUpLocation.new(name:'Heraklion Airport', city: crete)
+  pick_up_locations << PickUpLocation.new(name:'Heraklion Port', city: crete)
+  pick_up_locations << PickUpLocation.new(name:'Souda Port', city: crete)
+  pick_up_locations << PickUpLocation.new(name:'Malia', city: crete)
+  pick_up_locations << PickUpLocation.new(name:'Rethymnon', city: crete)
+  pick_up_locations << PickUpLocation.new(name:'Agia Marina', city: crete)
+  pick_up_locations << PickUpLocation.new(name:'Gouves', city: crete)
+  pick_up_locations << PickUpLocation.new(name:'Plakias', city: crete)
+  pick_up_locations << PickUpLocation.new(name:'Amnissos', city: crete)
+  pick_up_locations << PickUpLocation.new(name:'Adelainos Kampos', city: crete)
+  pick_up_locations << PickUpLocation.new(name:'Adele', city: crete)
+  pick_up_locations << PickUpLocation.new(name:'Agia Galini', city: crete)
+  pick_up_locations << PickUpLocation.new(name:'Agia Pelagia', city: crete)
+  pick_up_locations << PickUpLocation.new(name:'Agios Nikolaos', city: crete)
+  pick_up_locations << PickUpLocation.new(name:'Almirida', city: crete)
+  pick_up_locations << PickUpLocation.new(name:'Ammoudara Heraklion', city: crete)
+  pick_up_locations << PickUpLocation.new(name:'Amoudara Lassithi', city: crete)
+  pick_up_locations << PickUpLocation.new(name:'Analipsi', city: crete)
+  pick_up_locations << PickUpLocation.new(name:'Anissaras', city: crete)
+  pick_up_locations << PickUpLocation.new(name:'Anopolis', city: crete)
+  pick_up_locations << PickUpLocation.new(name:'Archanes', city: crete)
+  pick_up_locations << PickUpLocation.new(name:'Arkadi', city: crete)
+  pick_up_locations << PickUpLocation.new(name:'Arolithos', city: crete)
+  pick_up_locations << PickUpLocation.new(name:'Aspro', city: crete)
+  pick_up_locations << PickUpLocation.new(name:'Atsipopoulo', city: crete)
+  pick_up_locations << PickUpLocation.new(name:'Bali', city: crete)
+  pick_up_locations << PickUpLocation.new(name:'Chania', city: crete)
+  pick_up_locations << PickUpLocation.new(name:'Chania Port', city: crete)
+  pick_up_locations << PickUpLocation.new(name:'Chora Sfakion', city: crete)
+  pick_up_locations << PickUpLocation.new(name:'Chryssi Akti', city: crete)
+  pick_up_locations << PickUpLocation.new(name:'Damnoni', city: crete)
+  pick_up_locations << PickUpLocation.new(name:'Daratso', city: crete)
+  pick_up_locations << PickUpLocation.new(name:'Drapanos', city: crete)
+  pick_up_locations << PickUpLocation.new(name:'Elounda', city: crete)
+  pick_up_locations << PickUpLocation.new(name:'Falasarna', city: crete)
+  pick_up_locations << PickUpLocation.new(name:'Ferma', city: crete)
+  pick_up_locations << PickUpLocation.new(name:'Fodele', city: crete)
+  pick_up_locations << PickUpLocation.new(name:'Frangokastello', city: crete)
+  pick_up_locations << PickUpLocation.new(name:'Galatas', city: crete)
+  pick_up_locations << PickUpLocation.new(name:'Georgioupolis', city: crete)
+  pick_up_locations << PickUpLocation.new(name:'Gerani Chania', city: crete)
+  pick_up_locations << PickUpLocation.new(name:'Gerani Rethymnon', city: crete)
+  pick_up_locations << PickUpLocation.new(name:'Gournes', city: crete)
+  pick_up_locations << PickUpLocation.new(name:'Heraklion City Centre', city: crete)
+  pick_up_locations << PickUpLocation.new(name:'Hersonissos', city: crete)
+  pick_up_locations << PickUpLocation.new(name:'Ierapetra', city: crete)
+  pick_up_locations << PickUpLocation.new(name:'Istron', city: crete)
+  pick_up_locations << PickUpLocation.new(name:'Kalamaki', city: crete)
+  pick_up_locations << PickUpLocation.new(name:'Kalives', city: crete)
+  pick_up_locations << PickUpLocation.new(name:'Kalo Chorio', city: crete)
+  pick_up_locations << PickUpLocation.new(name:'Karteros', city: crete)
+  pick_up_locations << PickUpLocation.new(name:'Kasteli Kissamos', city: crete)
+  pick_up_locations << PickUpLocation.new(name:'Kavros', city: crete)
+  pick_up_locations << PickUpLocation.new(name:'Keratokampos', city: crete)
+  pick_up_locations << PickUpLocation.new(name:'Knossos', city: crete)
+  pick_up_locations << PickUpLocation.new(name:'Kokkini Hani', city: crete)
+  pick_up_locations << PickUpLocation.new(name:'Kokkino Chorio', city: crete)
+  pick_up_locations << PickUpLocation.new(name:'Kolymbari', city: crete)
+  pick_up_locations << PickUpLocation.new(name:'Koutouloufari', city: crete)
+  pick_up_locations << PickUpLocation.new(name:'Lentas', city: crete)
+  pick_up_locations << PickUpLocation.new(name:'Ligaria', city: crete)
+  pick_up_locations << PickUpLocation.new(name:'Linoperamata', city: crete)
+  pick_up_locations << PickUpLocation.new(name:'Makrys Gialos', city: crete)
+  pick_up_locations << PickUpLocation.new(name:'Maleme', city: crete)
+  pick_up_locations << PickUpLocation.new(name:'Matala', city: crete)
+  pick_up_locations << PickUpLocation.new(name:'Milatos', city: crete)
+  pick_up_locations << PickUpLocation.new(name:'Mirthios', city: crete)
+  pick_up_locations << PickUpLocation.new(name:'Missiria', city: crete)
+  pick_up_locations << PickUpLocation.new(name:'Mochlos', city: crete)
+  pick_up_locations << PickUpLocation.new(name:'Myrtos', city: crete)
+  pick_up_locations << PickUpLocation.new(name:'Nea Chora', city: crete)
+  pick_up_locations << PickUpLocation.new(name:'Omalos', city: crete)
+  pick_up_locations << PickUpLocation.new(name:'Palekastron', city: crete)
+  pick_up_locations << PickUpLocation.new(name:'Paleochora', city: crete)
+  pick_up_locations << PickUpLocation.new(name:'Perama', city: crete)
+  pick_up_locations << PickUpLocation.new(name:'Pervolia Rethymnon', city: crete)
+  pick_up_locations << PickUpLocation.new(name:'Plaka Chania', city: crete)
+  pick_up_locations << PickUpLocation.new(name:'Plaka Elounda', city: crete)
+  pick_up_locations << PickUpLocation.new(name:'Platanias Chania', city: crete)
+  pick_up_locations << PickUpLocation.new(name:'Platanias Rethymnon ', city: crete)
+  pick_up_locations << PickUpLocation.new(name:'Prines', city: crete)
+  pick_up_locations << PickUpLocation.new(name:'Roumeli', city: crete)
+  pick_up_locations << PickUpLocation.new(name:'Sissi', city: crete)
+  pick_up_locations << PickUpLocation.new(name:'Sitia', city: crete)
+  pick_up_locations << PickUpLocation.new(name:'Skaleta', city: crete)
+  pick_up_locations << PickUpLocation.new(name:'Sougia', city: crete)
+  pick_up_locations << PickUpLocation.new(name:'Stalis', city: crete)
+  pick_up_locations << PickUpLocation.new(name:'Stalos', city: crete)
+  pick_up_locations << PickUpLocation.new(name:'Stavros', city: crete)
+  pick_up_locations << PickUpLocation.new(name:'Tavronitis', city: crete)
+  pick_up_locations << PickUpLocation.new(name:'Vai', city: crete)
+  pick_up_locations << PickUpLocation.new(name:'Zakros', city: crete)
+  pick_up_locations << PickUpLocation.new(name:'Kos Airport', city: kos)
+  pick_up_locations << PickUpLocation.new(name:'Agios Fokas', city: kos)
+  pick_up_locations << PickUpLocation.new(name:'Kos Ferry Port', city: kos)
+  pick_up_locations << PickUpLocation.new(name:'Psalidi', city: kos)
+  pick_up_locations << PickUpLocation.new(name:'Marmari', city: kos)
+  pick_up_locations << PickUpLocation.new(name:'Kos City Centre', city: kos)
+  pick_up_locations << PickUpLocation.new(name:'Kefalos', city: kos)
+  pick_up_locations << PickUpLocation.new(name:'Kardamena', city: kos)
+  pick_up_locations << PickUpLocation.new(name:'Lambi', city: kos)
+  pick_up_locations << PickUpLocation.new(name:'Mastichari', city: kos)
+  pick_up_locations << PickUpLocation.new(name:'Tigaki', city: kos)
+  pick_up_locations << PickUpLocation.new(name:'Mykonos Airport', city: mykonos)
+  pick_up_locations << PickUpLocation.new(name:'Mykonos Tourlos Cruise Port', city: mykonos)
+  pick_up_locations << PickUpLocation.new(name:'Panormos', city: mykonos)
+  pick_up_locations << PickUpLocation.new(name:'Mykonos Chora Old Port', city: mykonos)
+  pick_up_locations << PickUpLocation.new(name:'Mykonos City Centre', city: mykonos)
+  pick_up_locations << PickUpLocation.new(name:'Agios Ioannis', city: mykonos)
+  pick_up_locations << PickUpLocation.new(name:'Agios Stefanos', city: mykonos)
+  pick_up_locations << PickUpLocation.new(name:'Amigdalidi', city: mykonos)
+  pick_up_locations << PickUpLocation.new(name:'Agios Sostis', city: mykonos)
+  pick_up_locations << PickUpLocation.new(name:'Ano Mera', city: mykonos)
+  pick_up_locations << PickUpLocation.new(name:'Argari', city: mykonos)
+  pick_up_locations << PickUpLocation.new(name:'Drafaki', city: mykonos)
+  pick_up_locations << PickUpLocation.new(name:'Elia', city: mykonos)
+  pick_up_locations << PickUpLocation.new(name:'Ftelia', city: mykonos)
+  pick_up_locations << PickUpLocation.new(name:'Houlakia', city: mykonos)
+  pick_up_locations << PickUpLocation.new(name:'Kalafatis', city: mykonos)
+  pick_up_locations << PickUpLocation.new(name:'Kalo Livadi', city: mykonos)
+  pick_up_locations << PickUpLocation.new(name:'Korfos', city: mykonos)
+  pick_up_locations << PickUpLocation.new(name:'Ornos', city: mykonos)
+  pick_up_locations << PickUpLocation.new(name:'Paradise', city: mykonos)
+  pick_up_locations << PickUpLocation.new(name:'Paraga', city: mykonos)
+  pick_up_locations << PickUpLocation.new(name:'Platis Gialos', city: mykonos)
+  pick_up_locations << PickUpLocation.new(name:'Psarou', city: mykonos)
+  pick_up_locations << PickUpLocation.new(name:'Tagoo', city: mykonos)
+  pick_up_locations << PickUpLocation.new(name:'Tourlos', city: mykonos)
+  pick_up_locations << PickUpLocation.new(name:'Naxos Airport', city: naxos)
+  pick_up_locations << PickUpLocation.new(name:'Naxos City Centre', city: naxos)
+  pick_up_locations << PickUpLocation.new(name:'Naxos Ferry Port', city: naxos)
+  pick_up_locations << PickUpLocation.new(name:'Agios Georgios', city: naxos)
+  pick_up_locations << PickUpLocation.new(name:'Agios Prokopios', city: naxos)
+  pick_up_locations << PickUpLocation.new(name:'Agia Anna', city: naxos)
+  pick_up_locations << PickUpLocation.new(name:'Plaka', city: naxos)
+  pick_up_locations << PickUpLocation.new(name:'Stelida', city: naxos)
+  pick_up_locations << PickUpLocation.new(name:'Paros Airport', city: paros)
+  pick_up_locations << PickUpLocation.new(name:'Paros Parikia Port', city: paros)
+  pick_up_locations << PickUpLocation.new(name:'Agia Irini', city: paros)
+  pick_up_locations << PickUpLocation.new(name:'Aliki', city: paros)
+  pick_up_locations << PickUpLocation.new(name:'Ambelas', city: paros)
+  pick_up_locations << PickUpLocation.new(name:'Kolymbithres', city: paros)
+  pick_up_locations << PickUpLocation.new(name:'Lefkes', city: paros)
+  pick_up_locations << PickUpLocation.new(name:'Naoussa', city: paros)
+  pick_up_locations << PickUpLocation.new(name:'Chrysi Akti', city: paros)
+  pick_up_locations << PickUpLocation.new(name:'Drios', city: paros)
+  pick_up_locations << PickUpLocation.new(name:'Logaras', city: paros)
+  pick_up_locations << PickUpLocation.new(name:'Molos', city: paros)
+  pick_up_locations << PickUpLocation.new(name:'Parasporos', city: paros)
+  pick_up_locations << PickUpLocation.new(name:'Parikia', city: paros)
+  pick_up_locations << PickUpLocation.new(name:'Piso Livadi', city: paros)
+  pick_up_locations << PickUpLocation.new(name:'Pounda', city: paros)
+  pick_up_locations << PickUpLocation.new(name:'Santa Maria', city: paros)
+  pick_up_locations << PickUpLocation.new(name:'Rhodes Airport', city: rhodes)
+  pick_up_locations << PickUpLocation.new(name:'Archangelos', city: rhodes)
+  pick_up_locations << PickUpLocation.new(name:'Kiotari', city: rhodes)
+  pick_up_locations << PickUpLocation.new(name:'Ixia', city: rhodes)
+  pick_up_locations << PickUpLocation.new(name:'Rhodes City Centre', city: rhodes)
+  pick_up_locations << PickUpLocation.new(name:'Ialyssos', city: rhodes)
+  pick_up_locations << PickUpLocation.new(name:'Kremasti', city: rhodes)
+  pick_up_locations << PickUpLocation.new(name:'Afandou', city: rhodes)
+  pick_up_locations << PickUpLocation.new(name:'Faliraki', city: rhodes)
+  pick_up_locations << PickUpLocation.new(name:'Fanes', city: rhodes)
+  pick_up_locations << PickUpLocation.new(name:'Gennadi', city: rhodes)
+  pick_up_locations << PickUpLocation.new(name:'Haraki', city: rhodes)
+  pick_up_locations << PickUpLocation.new(name:'Kalathos', city: rhodes)
+  pick_up_locations << PickUpLocation.new(name:'Kalavarda', city: rhodes)
+  pick_up_locations << PickUpLocation.new(name:'Kallithea', city: rhodes)
+  pick_up_locations << PickUpLocation.new(name:'Kamiros', city: rhodes)
+  pick_up_locations << PickUpLocation.new(name:'Kamiros Skala', city: rhodes)
+  pick_up_locations << PickUpLocation.new(name:'Kolympia', city: rhodes)
+  pick_up_locations << PickUpLocation.new(name:'Koskinou', city: rhodes)
+  pick_up_locations << PickUpLocation.new(name:'Ladiko', city: rhodes)
+  pick_up_locations << PickUpLocation.new(name:'Lardos', city: rhodes)
+  pick_up_locations << PickUpLocation.new(name:'Lindos', city: rhodes)
+  pick_up_locations << PickUpLocation.new(name:'Pastida', city: rhodes)
+  pick_up_locations << PickUpLocation.new(name:'Pefkos', city: rhodes)
+  pick_up_locations << PickUpLocation.new(name:'Rhodes Port', city: rhodes)
+  pick_up_locations << PickUpLocation.new(name:'Stegna', city: rhodes)
+  pick_up_locations << PickUpLocation.new(name:'Theologos', city: rhodes)
+  pick_up_locations << PickUpLocation.new(name:'Tholos', city: rhodes)
+  pick_up_locations << PickUpLocation.new(name:'Vlicha', city: rhodes)
+  pick_up_locations << PickUpLocation.new(name:'Santorini Airport', city: santorini)
+  pick_up_locations << PickUpLocation.new(name:'Athinios Port', city: santorini)
+  pick_up_locations << PickUpLocation.new(name:'Oia', city: santorini)
+  pick_up_locations << PickUpLocation.new(name:'Perivolos', city: santorini)
+  pick_up_locations << PickUpLocation.new(name:'Megalochori', city: santorini)
+  pick_up_locations << PickUpLocation.new(name:'Monolithos', city: santorini)
+  pick_up_locations << PickUpLocation.new(name:'Agia Paraskevi', city: santorini)
+  pick_up_locations << PickUpLocation.new(name:'Kamari', city: santorini)
+  pick_up_locations << PickUpLocation.new(name:'Akrotiri', city: santorini)
+  pick_up_locations << PickUpLocation.new(name:'Exo Gonia', city: santorini)
+  pick_up_locations << PickUpLocation.new(name:'Faros', city: santorini)
+  pick_up_locations << PickUpLocation.new(name:'Fira', city: santorini)
+  pick_up_locations << PickUpLocation.new(name:'Firostefani', city: santorini)
+  pick_up_locations << PickUpLocation.new(name:'Imerovigli', city: santorini)
+  pick_up_locations << PickUpLocation.new(name:'Karterados', city: santorini)
+  pick_up_locations << PickUpLocation.new(name:'Messaria', city: santorini)
+  pick_up_locations << PickUpLocation.new(name:'Perissa', city: santorini)
+  pick_up_locations << PickUpLocation.new(name:'Pyrgos', city: santorini)
+  pick_up_locations << PickUpLocation.new(name:'Vlichada', city: santorini)
+  pick_up_locations << PickUpLocation.new(name:'Vothonas', city: santorini)
+  pick_up_locations << PickUpLocation.new(name:'Vourvoulos', city: santorini)
+  pick_up_locations << PickUpLocation.new(name:'Zakynthos Airport', city: zakynthos)
+  pick_up_locations << PickUpLocation.new(name:'Kalamaki Zakynthos', city: zakynthos)
+  pick_up_locations << PickUpLocation.new(name:'Agios Sostis Zakynthos', city: zakynthos)
+  pick_up_locations << PickUpLocation.new(name:'Akrotiri Zakynthos', city: zakynthos)
+  pick_up_locations << PickUpLocation.new(name:'Alykanas', city: zakynthos)
+  pick_up_locations << PickUpLocation.new(name:'Alykes', city: zakynthos)
+  pick_up_locations << PickUpLocation.new(name:'Argassi', city: zakynthos)
+  pick_up_locations << PickUpLocation.new(name:'Kampi', city: zakynthos)
+  pick_up_locations << PickUpLocation.new(name:'Keri', city: zakynthos)
+  pick_up_locations << PickUpLocation.new(name:'Kypseli', city: zakynthos)
+  pick_up_locations << PickUpLocation.new(name:'Laganas', city: zakynthos)
+  pick_up_locations << PickUpLocation.new(name:'Planos', city: zakynthos)
+  pick_up_locations << PickUpLocation.new(name:'Skinari', city: zakynthos)
+  pick_up_locations << PickUpLocation.new(name:'Tragaki', city: zakynthos)
+  pick_up_locations << PickUpLocation.new(name:'Tsilivi', city: zakynthos)
+  pick_up_locations << PickUpLocation.new(name:'Vassilikos', city: zakynthos)
+  pick_up_locations << PickUpLocation.new(name:'Xirokastelo', city: zakynthos)
+  pick_up_locations << PickUpLocation.new(name:'Zakynthos City Centre', city: zakynthos)
+  pick_up_locations << PickUpLocation.new(name:'Zakynthos Port', city: zakynthos)
+ 
   puts 'Cities of Hungary'
   budapest = City.find_by(name:'Budapest')
-  PickUpLocation.create([
-            {name:'Budapest Airport', city: budapest},
-            {name:'Sarmellek Balaton Airport', city: budapest},
-            {name:'Budapest Cruise Port', city: budapest},
-            {name:'Budapest Train Station', city: budapest},
-            {name:'Abrahamhegy', city: budapest},
-            {name:'Alsopahok', city: budapest},
-            {name:'Badacsony', city: budapest},
-            {name:'Badacsonytomaj', city: budapest},
-            {name:'Balaton Ring', city: budapest},
-            {name:'Balatonakali', city: budapest},
-            {name:'Balatonakarattya', city: budapest},
-            {name:'Balatonaliga', city: budapest},
-            {name:'Balatonalmadi', city: budapest},
-            {name:'Balatonbereny', city: budapest},
-            {name:'Balatonboglar', city: budapest},
-            {name:'Balatonfenyves', city: budapest},
-            {name:'Balatonfoldvar', city: budapest},
-            {name:'Balatonfured', city: budapest},
-            {name:'Balatongyorok', city: budapest},
-            {name:'Balatonkenese', city: budapest},
-            {name:'Balatonkeresztur', city: budapest},
-            {name:'Balatonlelle', city: budapest},
-            {name:'Balatonmariafurdo', city: budapest},
-            {name:'Balatonudvari', city: budapest},
-            {name:'Balatonvilagos', city: budapest},
-            {name:'Budapest City Centre', city: budapest},
-            {name:'Bukfurdo', city: budapest},
-            {name:'Csepreg', city: budapest},
-            {name:'Csopak', city: budapest},
-            {name:'Debrecen', city: budapest},
-            {name:'Eger', city: budapest},
-            {name:'Felsopahok', city: budapest},
-            {name:'Fonyod', city: budapest},
-            {name:'God', city: budapest},
-            {name:'Gyenesdias', city: budapest},
-            {name:'Gyor', city: budapest},
-            {name:'Halaszi', city: budapest},
-            {name:'Heviz', city: budapest},
-            {name:'Hungaroring', city: budapest},
-            {name:'Kaposvar', city: budapest},
-            {name:'Keszthely', city: budapest},
-            {name:'Komlo', city: budapest},
-            {name:'Mosonmagyarovar', city: budapest},
-            {name:'Nagykanizsa', city: budapest},
-            {name:'Pecs', city: budapest},
-            {name:'Revfulop', city: budapest},
-            {name:'Rojtokmuzsaj', city: budapest},
-            {name:'Sarvar', city: budapest},
-            {name:'Siofok', city: budapest},
-            {name:'Sopron', city: budapest},
-            {name:'Szantod', city: budapest},
-            {name:'Szeged', city: budapest},
-            {name:'Szekesfehervar', city: budapest},
-            {name:'Szentgotthard', city: budapest},
-            {name:'Szombathely', city: budapest},
-            {name:'Tapolca', city: budapest},
-            {name:'Tihany', city: budapest},
-            {name:'Vonyarcvashegy', city: budapest},
-            {name:'Zalaegerszeg', city: budapest},
-            {name:'Zalakaros', city: budapest},
-            {name:'Zamardi', city: budapest},
-            {name:'Zanka', city: budapest}
-    ])
+  
+pick_up_locations << PickUpLocation.new(name:'Budapest Airport', city: budapest)
+pick_up_locations << PickUpLocation.new(name:'Sarmellek Balaton Airport', city: budapest)
+pick_up_locations << PickUpLocation.new(name:'Budapest Cruise Port', city: budapest)
+pick_up_locations << PickUpLocation.new(name:'Budapest Train Station', city: budapest)
+pick_up_locations << PickUpLocation.new(name:'Abrahamhegy', city: budapest)
+pick_up_locations << PickUpLocation.new(name:'Alsopahok', city: budapest)
+pick_up_locations << PickUpLocation.new(name:'Badacsony', city: budapest)
+pick_up_locations << PickUpLocation.new(name:'Badacsonytomaj', city: budapest)
+pick_up_locations << PickUpLocation.new(name:'Balaton Ring', city: budapest)
+pick_up_locations << PickUpLocation.new(name:'Balatonakali', city: budapest)
+pick_up_locations << PickUpLocation.new(name:'Balatonakarattya', city: budapest)
+pick_up_locations << PickUpLocation.new(name:'Balatonaliga', city: budapest)
+pick_up_locations << PickUpLocation.new(name:'Balatonalmadi', city: budapest)
+pick_up_locations << PickUpLocation.new(name:'Balatonbereny', city: budapest)
+pick_up_locations << PickUpLocation.new(name:'Balatonboglar', city: budapest)
+pick_up_locations << PickUpLocation.new(name:'Balatonfenyves', city: budapest)
+pick_up_locations << PickUpLocation.new(name:'Balatonfoldvar', city: budapest)
+pick_up_locations << PickUpLocation.new(name:'Balatonfured', city: budapest)
+pick_up_locations << PickUpLocation.new(name:'Balatongyorok', city: budapest)
+pick_up_locations << PickUpLocation.new(name:'Balatonkenese', city: budapest)
+pick_up_locations << PickUpLocation.new(name:'Balatonkeresztur', city: budapest)
+pick_up_locations << PickUpLocation.new(name:'Balatonlelle', city: budapest)
+pick_up_locations << PickUpLocation.new(name:'Balatonmariafurdo', city: budapest)
+pick_up_locations << PickUpLocation.new(name:'Balatonudvari', city: budapest)
+pick_up_locations << PickUpLocation.new(name:'Balatonvilagos', city: budapest)
+pick_up_locations << PickUpLocation.new(name:'Budapest City Centre', city: budapest)
+pick_up_locations << PickUpLocation.new(name:'Bukfurdo', city: budapest)
+pick_up_locations << PickUpLocation.new(name:'Csepreg', city: budapest)
+pick_up_locations << PickUpLocation.new(name:'Csopak', city: budapest)
+pick_up_locations << PickUpLocation.new(name:'Debrecen', city: budapest)
+pick_up_locations << PickUpLocation.new(name:'Eger', city: budapest)
+pick_up_locations << PickUpLocation.new(name:'Felsopahok', city: budapest)
+pick_up_locations << PickUpLocation.new(name:'Fonyod', city: budapest)
+pick_up_locations << PickUpLocation.new(name:'God', city: budapest)
+pick_up_locations << PickUpLocation.new(name:'Gyenesdias', city: budapest)
+pick_up_locations << PickUpLocation.new(name:'Gyor', city: budapest)
+pick_up_locations << PickUpLocation.new(name:'Halaszi', city: budapest)
+pick_up_locations << PickUpLocation.new(name:'Heviz', city: budapest)
+pick_up_locations << PickUpLocation.new(name:'Hungaroring', city: budapest)
+pick_up_locations << PickUpLocation.new(name:'Kaposvar', city: budapest)
+pick_up_locations << PickUpLocation.new(name:'Keszthely', city: budapest)
+pick_up_locations << PickUpLocation.new(name:'Komlo', city: budapest)
+pick_up_locations << PickUpLocation.new(name:'Mosonmagyarovar', city: budapest)
+pick_up_locations << PickUpLocation.new(name:'Nagykanizsa', city: budapest)
+pick_up_locations << PickUpLocation.new(name:'Pecs', city: budapest)
+pick_up_locations << PickUpLocation.new(name:'Revfulop', city: budapest)
+pick_up_locations << PickUpLocation.new(name:'Rojtokmuzsaj', city: budapest)
+pick_up_locations << PickUpLocation.new(name:'Sarvar', city: budapest)
+pick_up_locations << PickUpLocation.new(name:'Siofok', city: budapest)
+pick_up_locations << PickUpLocation.new(name:'Sopron', city: budapest)
+pick_up_locations << PickUpLocation.new(name:'Szantod', city: budapest)
+pick_up_locations << PickUpLocation.new(name:'Szeged', city: budapest)
+pick_up_locations << PickUpLocation.new(name:'Szekesfehervar', city: budapest)
+pick_up_locations << PickUpLocation.new(name:'Szentgotthard', city: budapest)
+pick_up_locations << PickUpLocation.new(name:'Szombathely', city: budapest)
+pick_up_locations << PickUpLocation.new(name:'Tapolca', city: budapest)
+pick_up_locations << PickUpLocation.new(name:'Tihany', city: budapest)
+pick_up_locations << PickUpLocation.new(name:'Vonyarcvashegy', city: budapest)
+pick_up_locations << PickUpLocation.new(name:'Zalaegerszeg', city: budapest)
+pick_up_locations << PickUpLocation.new(name:'Zalakaros', city: budapest)
+pick_up_locations << PickUpLocation.new(name:'Zamardi', city: budapest)
+pick_up_locations << PickUpLocation.new(name:'Zanka', city: budapest)
+ 
   puts 'Cities of Italy'
   alghero = City.find_by(name:'Alghero')
   ancona = City.find_by(name:'Ancona')
@@ -3086,1363 +3079,1358 @@ after :cities do
   turin = City.find_by(name:'Turin')
   venice = City.find_by(name:'Venice')
   verona = City.find_by(name:'Verona')
-  PickUpLocation.create([
-           {name:'Alghero Airport', city: alghero},
-           {name:'Alghero City Centre', city: alghero},
-           {name:'Castelsardo', city: alghero},
-           {name:'Porto Torres', city: alghero},
-           {name:'Sassari', city: alghero},
-           {name:'Platamona', city: alghero},
-           {name:'Capo Caccia', city: alghero},
-           {name:'Bosa', city: alghero},
-           {name:'Macomer', city: alghero},
-           {name:'Porto Conte', city: alghero},
-           {name:'Sorso', city: alghero},
-           {name:'Stintino', city: alghero},
-           {name:'Ancona Airport', city: ancona},
-           {name:'Ancona', city: ancona},
-           {name:'Fermo', city: ancona},
-           {name:'Macerata', city: ancona},
-           {name:'Ascoli Piceno', city: ancona},
-           {name:'Bergamo Airport', city: bergamo},
-           {name:'Bergamo City Centre', city: bergamo},
-           {name:'Sarnico', city: bergamo},
-           {name:'Concorezzo', city: bergamo},
-           {name:'Porlezza', city: bergamo},
-           {name:'Tirano', city: bergamo},
-           {name:'Treviglio', city: bergamo},
-           {name:'Agrate Brianza', city: bergamo},
-           {name:'Alzate Brianza', city: bergamo},
-           {name:'Aprica', city: bergamo},
-           {name:'Arcore', city: bergamo},
-           {name:'Artogne', city: bergamo},
-           {name:'Bellusco', city: bergamo},
-           {name:'Brembilla', city: bergamo},
-           {name:'Caravaggio', city: bergamo},
-           {name:'Carona', city: bergamo},
-           {name:'Castione della Presolana', city: bergamo},
-           {name:'Chiavenna', city: bergamo},
-           {name:'Chiesa in Valmalenco', city: bergamo},
-           {name:'Cisano Bergamasco', city: bergamo},
-           {name:'Clusane', city: bergamo},
-           {name:'Clusone', city: bergamo},
-           {name:'Colere', city: bergamo},
-           {name:'Comacchio', city: bergamo},
-           {name:'Corte Franca', city: bergamo},
-           {name:'Crema', city: bergamo},
-           {name:'Dalmine', city: bergamo},
-           {name:'Darfo Boario Terme', city: bergamo},
-           {name:'Entratico', city: bergamo},
-           {name:'Foppolo', city: bergamo},
-           {name:'Lago d Idro', city: bergamo},
-           {name:'Lenna', city: bergamo},
-           {name:'Lovere', city: bergamo},
-           {name:'Mandello del Lario', city: bergamo},
-           {name:'Marone', city: bergamo},
-           {name:'Paderno Dugnano', city: bergamo},
-           {name:'Pescegallo', city: bergamo},
-           {name:'Pontida', city: bergamo},
-           {name:'Sale Marasino', city: bergamo},
-           {name:'San Giovanni Bianco', city: bergamo},
-           {name:'San Pellegrino Terme', city: bergamo},
-           {name:'Schilpario', city: bergamo},
-           {name:'Selvino', city: bergamo},
-           {name:'Sotto il Monte Giovanni', city: bergamo},
-           {name:'Trescore Balneario', city: bergamo},
-           {name:'Valbrembo', city: bergamo},
-           {name:'Vimercate', city: bergamo},
-           {name:'Zambla', city: bergamo},
-           {name:'Bologna Airport', city: bologna},
-           {name:'Parma Airport', city: bologna},
-           {name:'Bologna City Centre', city: bologna},
-           {name:'Parma', city: bologna},
-           {name:'Lizzano in Belvedere', city: bologna},
-           {name:'Faenza', city: bologna},
-           {name:'Cattolica', city: bologna},
-           {name:'Montecchio Emilia', city: bologna},
-           {name:'Castrocaro Terme', city: bologna},
-           {name:'Sansepolcro', city: bologna},
-           {name:'Bolzano Train Station', city: bolzano},
-           {name:'Cortina d Ampezzo', city: bolzano},
-           {name:'Madonna di Campiglio', city: bolzano},
-           {name:'Corvara', city: bolzano},
-           {name:'San Cassiano', city: bolzano},
-           {name:'Canazei', city: bolzano},
-           {name:'Bormio', city: bolzano},
-           {name:'Alleghe', city: bolzano},
-           {name:'Alpe Cermis', city: bolzano},
-           {name:'Alpe di Pampeago', city: bolzano},
-           {name:'Alpe di Siusi', city: bolzano},
-           {name:'Alta Badia', city: bolzano},
-           {name:'Alta Pusteria', city: bolzano},
-           {name:'Alta Valtellina', city: bolzano},
-           {name:'Andalo', city: bolzano},
-           {name:'Arabba', city: bolzano},
-           {name:'Asiago', city: bolzano},
-           {name:'Baselga di Pine', city: bolzano},
-           {name:'Bellamonte', city: bolzano},
-           {name:'Bolzano', city: bolzano},
-           {name:'Brixen', city: bolzano},
-           {name:'Bruneck', city: bolzano},
-           {name:'Caldonazzo', city: bolzano},
-           {name:'Campitello di Fassa', city: bolzano},
-           {name:'Campo Tures', city: bolzano},
-           {name:'Carezza al Lago', city: bolzano},
-           {name:'Carnia', city: bolzano},
-           {name:'Cavalese', city: bolzano},
-           {name:'Cimone', city: bolzano},
-           {name:'Colfosco', city: bolzano},
-           {name:'Comelico', city: bolzano},
-           {name:'Compatsch', city: bolzano},
-           {name:'Dimaro', city: bolzano},
-           {name:'Dobbiaco', city: bolzano},
-           {name:'Fai della Paganella', city: bolzano},
-           {name:'Folgaria', city: bolzano},
-           {name:'Folgarida', city: bolzano},
-           {name:'Fondo Grande', city: bolzano},
-           {name:'Fortezza', city: bolzano},
-           {name:'Gossensass', city: bolzano},
-           {name:'Kastelruth', city: bolzano},
-           {name:'La Villa', city: bolzano},
-           {name:'Lavarone', city: bolzano},
-           {name:'Magre Sulla', city: bolzano},
-           {name:'Marilleva', city: bolzano},
-           {name:'Marmolada', city: bolzano},
-           {name:'Mazzin', city: bolzano},
-           {name:'Merano', city: bolzano},
-           {name:'Meransen', city: bolzano},
-           {name:'Misurina', city: bolzano},
-           {name:'Moena', city: bolzano},
-           {name:'Monte Bondone', city: bolzano},
-           {name:'Nova Levante', city: bolzano},
-           {name:'Obereggen', city: bolzano},
-           {name:'Olang', city: bolzano},
-           {name:'Ortise', city: bolzano},
-           {name:'Ortisei', city: bolzano},
-           {name:'Passo San Pellegrino', city: bolzano},
-           {name:'Passo Stelvio', city: bolzano},
-           {name:'Passo del Brocon', city: bolzano},
-           {name:'Passo del Tonale', city: bolzano},
-           {name:'Plan', city: bolzano},
-           {name:'Plose Brixen', city: bolzano},
-           {name:'Ponte di Legno', city: bolzano},
-           {name:'Predazzo', city: bolzano},
-           {name:'Ravascletto', city: bolzano},
-           {name:'Reinswald', city: bolzano},
-           {name:'Ritten', city: bolzano},
-           {name:'Rovereto', city: bolzano},
-           {name:'Ruffre', city: bolzano},
-           {name:'San Candido', city: bolzano},
-           {name:'San Martino di Castrozza', city: bolzano},
-           {name:'San Pellegrino', city: bolzano},
-           {name:'San Vigilio', city: bolzano},
-           {name:'San Vito di Cadore', city: bolzano},
-           {name:'Sand in Taufers', city: bolzano},
-           {name:'Santa Cristina Val Gardena', city: bolzano},
-           {name:'Sappada', city: bolzano},
-           {name:'Sella Nevea', city: bolzano},
-           {name:'Selva di Cadore', city: bolzano},
-           {name:'Selva di Val Gardena', city: bolzano},
-           {name:'Senales', city: bolzano},
-           {name:'Solda', city: bolzano},
-           {name:'St Ulrich Ortisei', city: bolzano},
-           {name:'Steinhaus im Ahrntal', city: bolzano},
-           {name:'Sterzing', city: bolzano},
-           {name:'Tarvisio', city: bolzano},
-           {name:'Teglio', city: bolzano},
-           {name:'Trento', city: bolzano},
-           {name:'Valle Aurina', city: bolzano},
-           {name:'Vigo di Fassa', city: bolzano},
-           {name:'Villabassa', city: bolzano},
-           {name:'Vipiteno', city: bolzano},
-           {name:'Zoldo Alto', city: bolzano},
-           {name:'Brescia Airport', city: brescia},
-           {name:'Brescia Train Station', city: brescia},
-           {name:'Brescia City Centre', city: brescia},
-           {name:'Bedizzole', city: brescia},
-           {name:'Calvagese della Riviera', city: brescia},
-           {name:'Cagliari Airport', city: cagliari},
-           {name:'Villasimius', city: cagliari},
-           {name:'Santa Margherita di Pula', city: cagliari},
-           {name:'Costa Rei', city: cagliari},
-           {name:'Cagliari City Centre', city: cagliari},
-           {name:'Quartu Sant Elena', city: cagliari},
-           {name:'Chia', city: cagliari},
-           {name:'Arbatax', city: cagliari},
-           {name:'Arborea', city: cagliari},
-           {name:'Assemini', city: cagliari},
-           {name:'Bari Sardo', city: cagliari},
-           {name:'Bugerru', city: cagliari},
-           {name:'Cabras', city: cagliari},
-           {name:'Calasetta', city: cagliari},
-           {name:'Campulongu', city: cagliari},
-           {name:'Capo Boi', city: cagliari},
-           {name:'Capo Carbonara', city: cagliari},
-           {name:'Capoterra', city: cagliari},
-           {name:'Carbonia', city: cagliari},
-           {name:'Cardedu', city: cagliari},
-           {name:'Castiadas', city: cagliari},
-           {name:'Colostrai', city: cagliari},
-           {name:'Costa Verde', city: cagliari},
-           {name:'Domus de Maria', city: cagliari},
-           {name:'Geremeas', city: cagliari},
-           {name:'Iglesias', city: cagliari},
-           {name:'Is Arenas', city: cagliari},
-           {name:'Is Molas', city: cagliari},
-           {name:'Lanusei', city: cagliari},
-           {name:'Lotzorai', city: cagliari},
-           {name:'Lunamatrona', city: cagliari},
-           {name:'Marina Di Capitana', city: cagliari},
-           {name:'Marina di Arbus', city: cagliari},
-           {name:'Muravera', city: cagliari},
-           {name:'Narbolia', city: cagliari},
-           {name:'Nora', city: cagliari},
-           {name:'Oristano', city: cagliari},
-           {name:'Orroli', city: cagliari},
-           {name:'Porto Corallo', city: cagliari},
-           {name:'Porto Pino', city: cagliari},
-           {name:'Portoscuso', city: cagliari},
-           {name:'Portovesme', city: cagliari},
-           {name:'Pula Cagliari', city: cagliari},
-           {name:'Putzu Idu', city: cagliari},
-           {name:'Sanluri', city: cagliari},
-           {name:'Sant Antioco', city: cagliari},
-           {name:'Santa Maria Navarrese', city: cagliari},
-           {name:'Solanas', city: cagliari},
-           {name:'Tanca Manna', city: cagliari},
-           {name:'Tanka Village', city: cagliari},
-           {name:'Terralba', city: cagliari},
-           {name:'Teulada', city: cagliari},
-           {name:'Tharros', city: cagliari},
-           {name:'Torre Delle Stelle', city: cagliari},
-           {name:'Torre Grande', city: cagliari},
-           {name:'Torre Salinas', city: cagliari},
-           {name:'Torre dei Corsari', city: cagliari},
-           {name:'Torre su Puttu', city: cagliari},
-           {name:'Tortoli', city: cagliari},
-           {name:'Villaputzu', city: cagliari},
-           {name:'Catania Airport', city: catania},
-           {name:'Catania Port', city: catania},
-           {name:'Messina Cruise Port', city: catania},
-           {name:'Milazzo Port', city: catania},
-           {name:'Taormina', city: catania},
-           {name:'Giardini Naxos', city: catania},
-           {name:'Catania City Centre', city: catania},
-           {name:'Siracusa', city: catania},
-           {name:'Letojanni', city: catania},
-           {name:'Milazzo', city: catania},
-           {name:'Aci Castello', city: catania},
-           {name:'Acireale', city: catania},
-           {name:'Acquedolci', city: catania},
-           {name:'Arenella', city: catania},
-           {name:'Augusta', city: catania},
-           {name:'Avola', city: catania},
-           {name:'Bronte', city: catania},
-           {name:'Brucoli', city: catania},
-           {name:'Caltagirone', city: catania},
-           {name:'Caltanissetta', city: catania},
-           {name:'Club Kamarina', city: catania},
-           {name:'Club Marispica', city: catania},
-           {name:'Enna', city: catania},
-           {name:'Etna North', city: catania},
-           {name:'Etna South', city: catania},
-           {name:'Fontane Bianche', city: catania},
-           {name:'Forza d Agro', city: catania},
-           {name:'Gela', city: catania},
-           {name:'Giarre', city: catania},
-           {name:'Il Picciolo Golf Club', city: catania},
-           {name:'Lentini', city: catania},
-           {name:'Licata', city: catania},
-           {name:'Marina di Ragusa', city: catania},
-           {name:'Marzamemi', city: catania},
-           {name:'Messina', city: catania},
-           {name:'Modica', city: catania},
-           {name:'Nicosia IT', city: catania},
-           {name:'Noto', city: catania},
-           {name:'Piazza Armerina', city: catania},
-           {name:'Portopalo', city: catania},
-           {name:'Portorosa', city: catania},
-           {name:'Pozzallo', city: catania},
-           {name:'Priolo Gargallo', city: catania},
-           {name:'Ragusa', city: catania},
-           {name:'Randazzo', city: catania},
-           {name:'Sampieri', city: catania},
-           {name:'Sant Alessio', city: catania},
-           {name:'Savoca', city: catania},
-           {name:'Scoglitti', city: catania},
-           {name:'Tonnarella', city: catania},
-           {name:'Valguarnera Caropepe', city: catania},
-           {name:'Vittoria', city: catania},
-           {name:'Vizzini', city: catania},
-           {name:'Florence Airport', city: florence},
-           {name:'Florence Train Station', city: florence},
-           {name:'Florence City Centre', city: florence},
-           {name:'Fiesole', city: florence},
-           {name:'Montecatini Terme', city: florence},
-           {name:'Siena', city: florence},
-           {name:'Volterra', city: florence},
-           {name:'San Gimignano', city: florence},
-           {name:'Aquilea', city: florence},
-           {name:'Arezzo', city: florence},
-           {name:'Asciano', city: florence},
-           {name:'Bagni di Petriolo', city: florence},
-           {name:'Bagno Vignoni', city: florence},
-           {name:'Bagno a Ripoli', city: florence},
-           {name:'Barberino di Mugello', city: florence},
-           {name:'Borgo San Lorenzo', city: florence},
-           {name:'Bucine', city: florence},
-           {name:'Buonconvento', city: florence},
-           {name:'Candeli', city: florence},
-           {name:'Carmignano', city: florence},
-           {name:'Casole D Elsa', city: florence},
-           {name:'Castelfiorentino', city: florence},
-           {name:'Castellina in Chianti', city: florence},
-           {name:'Castelnuovo Berardenga', city: florence},
-           {name:'Castiglion Fiorentino', city: florence},
-           {name:'Certaldo', city: florence},
-           {name:'Cetona', city: florence},
-           {name:'Civitella Paganico', city: florence},
-           {name:'Colle Val D Elsa', city: florence},
-           {name:'Cortona', city: florence},
-           {name:'Donnini', city: florence},
-           {name:'Empoli', city: florence},
-           {name:'Figline Valdarno', city: florence},
-           {name:'Florence Airport  Hotels', city: florence},
-           {name:'Gaiole in Chianti', city: florence},
-           {name:'Gambassi Terme', city: florence},
-           {name:'Greve in Chianti', city: florence},
-           {name:'Grosseto', city: florence},
-           {name:'Imola', city: florence},
-           {name:'Incisa val d Arno', city: florence},
-           {name:'Loro Ciuffenna', city: florence},
-           {name:'Marina di Grosseto', city: florence},
-           {name:'Massa Marittima', city: florence},
-           {name:'Milano Marittima', city: florence},
-           {name:'Montaione', city: florence},
-           {name:'Montalcino', city: florence},
-           {name:'Montefiridolfi', city: florence},
-           {name:'Montefollonico', city: florence},
-           {name:'Montelupo Fiorentino', city: florence},
-           {name:'Montepulciano', city: florence},
-           {name:'Monteriggioni', city: florence},
-           {name:'Montespertoli', city: florence},
-           {name:'Monticiano', city: florence},
-           {name:'Montisi', city: florence},
-           {name:'Olmo', city: florence},
-           {name:'Petrognano', city: florence},
-           {name:'Pienza', city: florence},
-           {name:'Pistoia', city: florence},
-           {name:'Poggibonsi', city: florence},
-           {name:'Poggio Ugolino', city: florence},
-           {name:'Pontassieve', city: florence},
-           {name:'Poppi', city: florence},
-           {name:'Porto Recanati', city: florence},
-           {name:'Pozzolatico', city: florence},
-           {name:'Prato', city: florence},
-           {name:'Pratolino', city: florence},
-           {name:'Pratovecchio', city: florence},
-           {name:'Private Tour of Pisa and Florence', city: florence},
-           {name:'Radda in Chianti', city: florence},
-           {name:'Radicondoli', city: florence},
-           {name:'Rapolano Terme', city: florence},
-           {name:'Reggello', city: florence},
-           {name:'Riccione', city: florence},
-           {name:'Rignano sull Arno', city: florence},
-           {name:'San Casciano Val di Pesa', city: florence},
-           {name:'San Marcello Pistoiese', city: florence},
-           {name:'San Marino', city: florence},
-           {name:'San Miniato', city: florence},
-           {name:'San Quirico d Orcia', city: florence},
-           {name:'Scarperia', city: florence},
-           {name:'Spinello', city: florence},
-           {name:'Tavarnelle Val di Pesa', city: florence},
-           {name:'Trequanda', city: florence},
-           {name:'Tuoro sul Trasimeno', city: florence},
-           {name:'Vagliagli', city: florence},
-           {name:'Vernio', city: florence},
-           {name:'Vicchio', city: florence},
-           {name:'Forli Airport', city: forli},
-           {name:'Ravenna', city: forli},
-           {name:'Forli', city: forli},
-           {name:'Genoa Airport', city: genoa},
-           {name:'Genoa Cruise Port', city: genoa},
-           {name:'Savona Cruise Port', city: genoa},
-           {name:'Portofino', city: genoa},
-           {name:'Genoa City Centre', city: genoa},
-           {name:'Rapallo', city: genoa},
-           {name:'Lerici', city: genoa},
-           {name:'Santa Margherita Ligure', city: genoa},
-           {name:'Savona', city: genoa},
-           {name:'Acquasanta', city: genoa},
-           {name:'Acqui Terme', city: genoa},
-           {name:'Alassio', city: genoa},
-           {name:'Arenzano', city: genoa},
-           {name:'Artesina', city: genoa},
-           {name:'Aulla', city: genoa},
-           {name:'Bonassola', city: genoa},
-           {name:'Bordighera', city: genoa},
-           {name:'Cabella Ligure', city: genoa},
-           {name:'Camogli', city: genoa},
-           {name:'Cinque Terre', city: genoa},
-           {name:'Costigliole D Asti', city: genoa},
-           {name:'Diano Marina', city: genoa},
-           {name:'Gavi', city: genoa},
-           {name:'Imperia', city: genoa},
-           {name:'La Spezia', city: genoa},
-           {name:'Levanto', city: genoa},
-           {name:'Molini di Triora', city: genoa},
-           {name:'Moneglia', city: genoa},
-           {name:'Monterosa', city: genoa},
-           {name:'Monterosso al Mare', city: genoa},
-           {name:'Novi Ligure', city: genoa},
-           {name:'Riomaggiore', city: genoa},
-           {name:'San Remo', city: genoa},
-           {name:'Serravalle Scrivia', city: genoa},
-           {name:'Sestri Levante', city: genoa},
-           {name:'Tortona', city: genoa},
-           {name:'Varazze', city: genoa},
-           {name:'Ventimiglia', city: genoa},
-           {name:'Vernazza', city: genoa},
-           {name:'Lamezia Terme Airport', city: lamezia},
-           {name:'Briatico', city: lamezia},
-           {name:'Castrovillari', city: lamezia},
-           {name:'Tropea', city: lamezia},
-           {name:'Amantea', city: lamezia},
-           {name:'Badolato', city: lamezia},
-           {name:'Botricello', city: lamezia},
-           {name:'Bivongi', city: lamezia},
-           {name:'Campora', city: lamezia},
-           {name:'Capo Vaticano', city: lamezia},
-           {name:'Carpanzano', city: lamezia},
-           {name:'Catanzaro', city: lamezia},
-           {name:'Catanzaro Beach', city: lamezia},
-           {name:'Ciro Marina', city: lamezia},
-           {name:'Corigliano', city: lamezia},
-           {name:'Cosenza', city: lamezia},
-           {name:'Cropani', city: lamezia},
-           {name:'Crotone', city: lamezia},
-           {name:'Falerna', city: lamezia},
-           {name:'Guardavalle', city: lamezia},
-           {name:'Isola Capo Rizzuto', city: lamezia},
-           {name:'Lamezia Terme', city: lamezia},
-           {name:'Le Castella', city: lamezia},
-           {name:'Locri', city: lamezia},
-           {name:'Montepaone Lido', city: lamezia},
-           {name:'Nicotera', city: lamezia},
-           {name:'Nocera', city: lamezia},
-           {name:'Paola', city: lamezia},
-           {name:'Parghelia', city: lamezia},
-           {name:'Pizzo Calabro', city: lamezia},
-           {name:'Pizzo Calabro Bravo Club', city: lamezia},
-           {name:'Pizzo Calabro Club Med Napitia', city: lamezia},
-           {name:'Praia a Mare', city: lamezia},
-           {name:'Reggio Calabria', city: lamezia},
-           {name:'Rende', city: lamezia},
-           {name:'Ricadi', city: lamezia},
-           {name:'Roccella Ionica', city: lamezia},
-           {name:'Rogliano', city: lamezia},
-           {name:'Rossano', city: lamezia},
-           {name:'San Giovanni in Fiore', city: lamezia},
-           {name:'Scalea', city: lamezia},
-           {name:'Sellia Marina', city: lamezia},
-           {name:'Sibari', city: lamezia},
-           {name:'Siderno', city: lamezia},
-           {name:'Simeri', city: lamezia},
-           {name:'Soverato', city: lamezia},
-           {name:'Vibo Valentia', city: lamezia},
-           {name:'Villa San Giovanni', city: lamezia},
-           {name:'Zambrone', city: lamezia},
-           {name:'Milan Linate Airport', city: milan},
-           {name:'Milan Malpensa Airport', city: milan},
-           {name:'Milan Train Station', city: milan},
-           {name:'Milan City Centre', city: milan},
-           {name:'Stresa', city: milan},
-           {name:'Bellagio', city: milan},
-           {name:'Como Town', city: milan},
-           {name:'Tremezzo', city: milan},
-           {name:'Cernobbio', city: milan},
-           {name:'Alagna Valsesia', city: milan},
-           {name:'Alessandria', city: milan},
-           {name:'Alpe di Mera', city: milan},
-           {name:'Angera', city: milan},
-           {name:'Argegno', city: milan},
-           {name:'Arona', city: milan},
-           {name:'Assago', city: milan},
-           {name:'Baggio', city: milan},
-           {name:'Barasso', city: milan},
-           {name:'Baveno', city: milan},
-           {name:'Biella', city: milan},
-           {name:'Binasco', city: milan},
-           {name:'Bollate', city: milan},
-           {name:'Bregano', city: milan},
-           {name:'Bresso', city: milan},
-           {name:'Brugherio', city: milan},
-           {name:'Brunate', city: milan},
-           {name:'Cadenabbia', city: milan},
-           {name:'Calamandrana', city: milan},
-           {name:'Calozzo', city: milan},
-           {name:'Calvenzano', city: milan},
-           {name:'Campione d Italia', city: milan},
-           {name:'Cannero Riviera', city: milan},
-           {name:'Cannobio', city: milan},
-           {name:'Caronno', city: milan},
-           {name:'Caronno Pertusella', city: milan},
-           {name:'Carugate', city: milan},
-           {name:'Casale Monferrato', city: milan},
-           {name:'Cernusco sul Naviglio', city: milan},
-           {name:'Cervinia', city: milan},
-           {name:'Cesano Maderno', city: milan},
-           {name:'Champoluc', city: milan},
-           {name:'Cinisello Balsamo', city: milan},
-           {name:'Colico', city: milan},
-           {name:'Colmegna', city: milan},
-           {name:'Cologno Monzese', city: milan},
-           {name:'Cormano', city: milan},
-           {name:'Corsico', city: milan},
-           {name:'Cremona', city: milan},
-           {name:'Dervio', city: milan},
-           {name:'Desio', city: milan},
-           {name:'Domodossola', city: milan},
-           {name:'Fiera Milano City', city: milan},
-           {name:'Gallarate', city: milan},
-           {name:'Garbagnate Milanese ', city: milan},
-           {name:'Gardone', city: milan},
-           {name:'Gorgonzola', city: milan},
-           {name:'Gozzano', city: milan},
-           {name:'Griante', city: milan},
-           {name:'Ispra', city: milan},
-           {name:'Laglio', city: milan},
-           {name:'Lecco', city: milan},
-           {name:'Legnano', city: milan},
-           {name:'Lenno', city: milan},
-           {name:'Lissone', city: milan},
-           {name:'Livigno', city: milan},
-           {name:'Lodi', city: milan},
-           {name:'Maccagno', city: milan},
-           {name:'Macugnaga', city: milan},
-           {name:'Madesimo', city: milan},
-           {name:'Meda', city: milan},
-           {name:'Melegnano', city: milan},
-           {name:'Melzo', city: milan},
-           {name:'Menaggio', city: milan},
-           {name:'Milan San Siro Stadium', city: milan},
-           {name:'Molina di Faggeto Lario', city: milan},
-           {name:'Moltrasio', city: milan},
-           {name:'Monza', city: milan},
-           {name:'Novara', city: milan},
-           {name:'Novate Milanese', city: milan},
-           {name:'Omegna', city: milan},
-           {name:'Opera', city: milan},
-           {name:'Orta San Giulio', city: milan},
-           {name:'Ossuccio', city: milan},
-           {name:'Pallanza', city: milan},
-           {name:'Paullo', city: milan},
-           {name:'Pavia', city: milan},
-           {name:'Peschiera Borromeo', city: milan},
-           {name:'Piacenza', city: milan},
-           {name:'Piancavallo', city: milan},
-           {name:'Pila Gressan', city: milan},
-           {name:'Pila Vercelli', city: milan},
-           {name:'Pioltello', city: milan},
-           {name:'Pregnana Milanese', city: milan},
-           {name:'Quinzano D Oglio', city: milan},
-           {name:'Rho', city: milan},
-           {name:'Rozzano', city: milan},
-           {name:'Salsomaggiore Terme', city: milan},
-           {name:'San Donato Milanese', city: milan},
-           {name:'San Fedele Intelvi', city: milan},
-           {name:'San Giuliano Milanese', city: milan},
-           {name:'San Siro Como', city: milan},
-           {name:'Santa Cristina Pavia', city: milan},
-           {name:'Saronno', city: milan},
-           {name:'Segrate', city: milan},
-           {name:'Seregno', city: milan},
-           {name:'Serravelle Scrivia', city: milan},
-           {name:'Sesto Calende', city: milan},
-           {name:'Sesto San Giovanni', city: milan},
-           {name:'Settala', city: milan},
-           {name:'Settimo Milanese', city: milan},
-           {name:'Siziano', city: milan},
-           {name:'Somma Lombardo', city: milan},
-           {name:'Sondrio', city: milan},
-           {name:'Sonico', city: milan},
-           {name:'Ternate', city: milan},
-           {name:'Torno', city: milan},
-           {name:'Trezzano Sul Naviglio', city: milan},
-           {name:'Truccazzano', city: milan},
-           {name:'Valtournenche', city: milan},
-           {name:'Varallo', city: milan},
-           {name:'Varedo', city: milan},
-           {name:'Varenna', city: milan},
-           {name:'Varese', city: milan},
-           {name:'Verbania', city: milan},
-           {name:'Vigevano', city: milan},
-           {name:'Voghera', city: milan},
-           {name:'Vogogna', city: milan},
-           {name:'Naples Airport', city: naples},
-           {name:'Naples Cruise Port', city: naples},
-           {name:'Naples Train Station', city: naples},
-           {name:'Salerno Train Station', city: naples},
-           {name:'Sorrento', city: naples},
-           {name:'Positano', city: naples},
-           {name:'Naples City Centre', city: naples},
-           {name:'Pompei', city: naples},
-           {name:'Amalfi', city: naples},
-           {name:'Ravello', city: naples},
-           {name:'Agerola', city: naples},
-           {name:'Agropoli', city: naples},
-           {name:'Alberobello', city: naples},
-           {name:'Atrani', city: naples},
-           {name:'Bagnoli', city: naples},
-           {name:'Baia Domizia', city: naples},
-           {name:'Campo Felice', city: naples},
-           {name:'Carovilli', city: naples},
-           {name:'Casal Velino', city: naples},
-           {name:'Caserta', city: naples},
-           {name:'Castel Volturno', city: naples},
-           {name:'Castellabate', city: naples},
-           {name:'Castellammare di Stabia', city: naples},
-           {name:'Cava dei Tirreni', city: naples},
-           {name:'Cetara', city: naples},
-           {name:'Conca dei Marini ', city: naples},
-           {name:'Ercolano', city: naples},
-           {name:'Fasano', city: naples},
-           {name:'Foggia', city: naples},
-           {name:'Formia', city: naples},
-           {name:'Gaeta', city: naples},
-           {name:'Ginestra degli Schiavoni', city: naples},
-           {name:'Grottaminarda', city: naples},
-           {name:'Maiori', city: naples},
-           {name:'Marina del Cantone', city: naples},
-           {name:'Massa Lubrense', city: naples},
-           {name:'Minori', city: naples},
-           {name:'Mondragone', city: naples},
-           {name:'Naples Ferry Port', city: naples},
-           {name:'Nola', city: naples},
-           {name:'Paestum', city: naples},
-           {name:'Palma Campania', city: naples},
-           {name:'Pisciotta', city: naples},
-           {name:'Pontecagnano', city: naples},
-           {name:'Pontone', city: naples},
-           {name:'Potenza', city: naples},
-           {name:'Pozzuoli', city: naples},
-           {name:'Praiano', city: naples},
-           {name:'Salerno', city: naples},
-           {name:'San Giovanni Rotondo', city: naples},
-           {name:'Sant Agata sui Due golfi', city: naples},
-           {name:'Sant Agnello', city: naples},
-           {name:'Sant Antonio Abate', city: naples},
-           {name:'Sant Arpino', city: naples},
-           {name:'Sapri', city: naples},
-           {name:'Scario', city: naples},
-           {name:'Scauri', city: naples},
-           {name:'Sesto Campano', city: naples},
-           {name:'Telese', city: naples},
-           {name:'Vietri sul Mare', city: naples},
-           {name:'Visciano', city: naples},
-           {name:'Olbia Airport', city: olbia},
-           {name:'Marina Di Portisco', city: olbia},
-           {name:'Porto Cervo', city: olbia},
-           {name:'Cannigione', city: olbia},
-           {name:'Badesi', city: olbia},
-           {name:'San Teodoro', city: olbia},
-           {name:'Baia Sardinia', city: olbia},
-           {name:'La Maddalena', city: olbia},
-           {name:'Abbiadori', city: olbia},
-           {name:'Aglientu', city: olbia},
-           {name:'Agrustos', city: olbia},
-           {name:'Alghero', city: olbia},
-           {name:'Arzachena', city: olbia},
-           {name:'Barrabisa', city: olbia},
-           {name:'Bitti', city: olbia},
-           {name:'Budoni', city: olbia},
-           {name:'Cala Capra', city: olbia},
-           {name:'Cala Ginepro', city: olbia},
-           {name:'Cala Girgolu', city: olbia},
-           {name:'Cala Gonone', city: olbia},
-           {name:'Cala Granu', city: olbia},
-           {name:'Cala Liberotto', city: olbia},
-           {name:'Cala Lupo', city: olbia},
-           {name:'Cala del Faro', city: olbia},
-           {name:'Cala di Volpe', city: olbia},
-           {name:'Capo Coda Cavallo', city: olbia},
-           {name:'Capo Comino', city: olbia},
-           {name:'Capo Testa', city: olbia},
-           {name:'Capo d Orso', city: olbia},
-           {name:'Costa Caddu', city: olbia},
-           {name:'Costa Corallina', city: olbia},
-           {name:'Costa Dorata', city: olbia},
-           {name:'Costa Paradiso', city: olbia},
-           {name:'Costa Smeralda', city: olbia},
-           {name:'Cugnana', city: olbia},
-           {name:'Dorgali', city: olbia},
-           {name:'Fonni', city: olbia},
-           {name:'Golfo Aranci', city: olbia},
-           {name:'Golfo di Marinella', city: olbia},
-           {name:'Isola Rossa', city: olbia},
-           {name:'La Caletta', city: olbia},
-           {name:'La Marmorata', city: olbia},
-           {name:'Le Saline', city: olbia},
-           {name:'Liscia di Vacca', city: olbia},
-           {name:'Lu Ciaccaru', city: olbia},
-           {name:'Lu Fraili', city: olbia},
-           {name:'Matta e Peru', city: olbia},
-           {name:'Monte Petrosu', city: olbia},
-           {name:'Nuoro', city: olbia},
-           {name:'Nuraghe Palmavera', city: olbia},
-           {name:'Olbia City Centre', city: olbia},
-           {name:'Oliena', city: olbia},
-           {name:'Olmedo', city: olbia},
-           {name:'Orosei', city: olbia},
-           {name:'Ottiolu', city: olbia},
-           {name:'Ozieri', city: olbia},
-           {name:'Palau', city: olbia},
-           {name:'Pevero', city: olbia},
-           {name:'Pitrizza', city: olbia},
-           {name:'Pittulongu', city: olbia},
-           {name:'Poltu Quatu', city: olbia},
-           {name:'Portisco', city: olbia},
-           {name:'Porto Ainu', city: olbia},
-           {name:'Porto Istana', city: olbia},
-           {name:'Porto Ottiolu', city: olbia},
-           {name:'Porto Pollo', city: olbia},
-           {name:'Porto Quadro', city: olbia},
-           {name:'Porto Raphael', city: olbia},
-           {name:'Porto Rotondo', city: olbia},
-           {name:'Porto San Paolo', city: olbia},
-           {name:'Porto Taverna', city: olbia},
-           {name:'Portobello di Gallura', city: olbia},
-           {name:'Posada', city: olbia},
-           {name:'Punta Molara', city: olbia},
-           {name:'Puntaldia', city: olbia},
-           {name:'Rena Majore', city: olbia},
-           {name:'Romazzino', city: olbia},
-           {name:'San Pantaleo Olbia', city: olbia},
-           {name:'Santa Teresa di Gallura', city: olbia},
-           {name:'Siniscola', city: olbia},
-           {name:'Tanca Manna Arzachena', city: olbia},
-           {name:'Tempio Pausania', city: olbia},
-           {name:'Tottubella', city: olbia},
-           {name:'Trinita d Agultu', city: olbia},
-           {name:'Valledoria', city: olbia},
-           {name:'Vignola Mare', city: olbia},
-           {name:'Village Cala della Torre', city: olbia},
-           {name:'Palermo Airport', city: palermo},
-           {name:'Palermo City Centre', city: palermo},
-           {name:'Gioiosa Marea', city: palermo},
-           {name:'Cefalu', city: palermo},
-           {name:'Agrigento', city: palermo},
-           {name:'Campofelice di Roccella', city: palermo},
-           {name:'Terrasini', city: palermo},
-           {name:'Bagheria', city: palermo},
-           {name:'Caccamo', city: palermo},
-           {name:'Capo d Orlando', city: palermo},
-           {name:'Castelbuono', city: palermo},
-           {name:'Casteldaccia', city: palermo},
-           {name:'Corleone', city: palermo},
-           {name:'Gangi', city: palermo},
-           {name:'Lercara Friddi', city: palermo},
-           {name:'Menfi', city: palermo},
-           {name:'Monreale', city: palermo},
-           {name:'Palazzo Adriano', city: palermo},
-           {name:'Petralia Sottana', city: palermo},
-           {name:'Piana degli Albanesi', city: palermo},
-           {name:'Pollina', city: palermo},
-           {name:'Porto Empedocle', city: palermo},
-           {name:'Prizzi', city: palermo},
-           {name:'San Giuseppe Jato', city: palermo},
-           {name:'Sant Agata di Militello', city: palermo},
-           {name:'Santa Flavia', city: palermo},
-           {name:'Termini Imerese', city: palermo},
-           {name:'Trabia', city: palermo},
-           {name:'Pescara Airport', city: pescara},
-           {name:'Pescara Cruise Port', city: pescara},
-           {name:'Pescara Train Station', city: pescara},
-           {name:'Pescara City Centre', city: pescara},
-           {name:'Chieti', city: pescara},
-           {name:'Manoppello', city: pescara},
-           {name:'Lanciano', city: pescara},
-           {name:'Castel del Monte', city: pescara},
-           {name:'Campo di Giove', city: pescara},
-           {name:'Ovindoli', city: pescara},
-           {name:'San Benedetto del Tronto', city: pescara},
-           {name:'Santo Stefano di Sessanio', city: pescara},
-           {name:'Teramo', city: pescara},
-           {name:'Tortoreto', city: pescara},
-           {name:'Pisa Airport', city: pisa},
-           {name:'Livorno Cruise Port', city: pisa},
-           {name:'Pisa Train Station', city: pisa},
-           {name:'Forte dei Marmi', city: pisa},
-           {name:'Viareggio', city: pisa},
-           {name:'Lucca', city: pisa},
-           {name:'Pisa City Centre', city: pisa},
-           {name:'Casciana Terme', city: pisa},
-           {name:'Marina di Massa', city: pisa},
-           {name:'Abetone', city: pisa},
-           {name:'Altopascio', city: pisa},
-           {name:'Artimino', city: pisa},
-           {name:'Badia di Morrona', city: pisa},
-           {name:'Bagni di Lucca', city: pisa},
-           {name:'Balbano', city: pisa},
-           {name:'Baragazza', city: pisa},
-           {name:'Barga', city: pisa},
-           {name:'Benabbio', city: pisa},
-           {name:'Bibbona', city: pisa},
-           {name:'Borgo a Mozzano', city: pisa},
-           {name:'Camaiore', city: pisa},
-           {name:'Campiglia Marittima', city: pisa},
-           {name:'Campolemisi', city: pisa},
-           {name:'Capannori', city: pisa},
-           {name:'Cardoso', city: pisa},
-           {name:'Carrara', city: pisa},
-           {name:'Casatico', city: pisa},
-           {name:'Castagneto Carducci', city: pisa},
-           {name:'Castagno', city: pisa},
-           {name:'Castiglioncello', city: pisa},
-           {name:'Cecina', city: pisa},
-           {name:'Cellese in Chianti', city: pisa},
-           {name:'Cerreto Laghi', city: pisa},
-           {name:'Cevoli', city: pisa},
-           {name:'Ciciana', city: pisa},
-           {name:'Cinquale', city: pisa},
-           {name:'Corniglia', city: pisa},
-           {name:'Donoratico', city: pisa},
-           {name:'Fivizzano', city: pisa},
-           {name:'Follonica', city: pisa},
-           {name:'Fonteblanda', city: pisa},
-           {name:'Fosciandora', city: pisa},
-           {name:'Ginestra Fiorentina', city: pisa},
-           {name:'Il Ciocco Resort', city: pisa},
-           {name:'Licciana Nardi', city: pisa},
-           {name:'Lido di Camaiore', city: pisa},
-           {name:'Lorenzana', city: pisa},
-           {name:'Marina di Castagneto', city: pisa},
-           {name:'Marina di Pisa', city: pisa},
-           {name:'Mastiano', city: pisa},
-           {name:'Monsummano Terme', city: pisa},
-           {name:'Monte Bottigli', city: pisa},
-           {name:'Montecarlo Lucca', city: pisa},
-           {name:'Montecatini Val di Cecina', city: pisa},
-           {name:'Montemagno', city: pisa},
-           {name:'Montescudaio', city: pisa},
-           {name:'Montopoli', city: pisa},
-           {name:'Nozzano Castello', city: pisa},
-           {name:'Orciatico', city: pisa},
-           {name:'Palaia', city: pisa},
-           {name:'Palazzo Sarteano', city: pisa},
-           {name:'Peccioli', city: pisa},
-           {name:'Pietrasanta', city: pisa},
-           {name:'Pieve Fosciana', city: pisa},
-           {name:'Piombino', city: pisa},
-           {name:'Pontedera', city: pisa},
-           {name:'Portovenere', city: pisa},
-           {name:'Pratello', city: pisa},
-           {name:'Punta Ala', city: pisa},
-           {name:'Ribolla', city: pisa},
-           {name:'Riparbella', city: pisa},
-           {name:'Riva degli Etruschi', city: pisa},
-           {name:'Riva del Sole', city: pisa},
-           {name:'Roccamare', city: pisa},
-           {name:'Rosignano', city: pisa},
-           {name:'San Giuliano Terme', city: pisa},
-           {name:'San Pietro Marcigliano', city: pisa},
-           {name:'San Vincenzo', city: pisa},
-           {name:'Santa Lucia', city: pisa},
-           {name:'Santa Maria del Giudice', city: pisa},
-           {name:'Sarzana', city: pisa},
-           {name:'Scarlino', city: pisa},
-           {name:'Segromigno', city: pisa},
-           {name:'Serre di Rapolano', city: pisa},
-           {name:'Tellaro', city: pisa},
-           {name:'Tirrenia', city: pisa},
-           {name:'Vada', city: pisa},
-           {name:'Rimini Airport', city: rimini},
-           {name:'Pesaro', city: rimini},
-           {name:'Terni', city: rimini},
-           {name:'Rimini', city: rimini},
-           {name:'Rome Ciampino Airport', city: rome},
-           {name:'Rome Fiumicino Airport', city: rome},
-           {name:'Anzio Ferry Port', city: rome},
-           {name:'Civitavecchia Cruise Port', city: rome},
-           {name:'Rome Termini Train Station', city: rome},
-           {name:'Rome City Centre', city: rome},
-           {name:'Rome Suburbs', city: rome},
-           {name:'Civitavecchia Hotel', city: rome},
-           {name:'Camping Fabulous', city: rome},
-           {name:'Fiumicino', city: rome},
-           {name:'Pomezia', city: rome},
-           {name:'Acquasparta', city: rome},
-           {name:'Ansedonia', city: rome},
-           {name:'Anzio', city: rome},
-           {name:'Assisi', city: rome},
-           {name:'Bracciano', city: rome},
-           {name:'Camping Flaminio Village', city: rome},
-           {name:'Camping Happy Village', city: rome},
-           {name:'Camping Village Roma', city: rome},
-           {name:'Capestrano', city: rome},
-           {name:'Cascia', city: rome},
-           {name:'Cassino', city: rome},
-           {name:'Castel Gandolfo', city: rome},
-           {name:'Castel Romano', city: rome},
-           {name:'Colleferro', city: rome},
-           {name:'Fabrica di Roma', city: rome},
-           {name:'Fiano Romano', city: rome},
-           {name:'Fiuggi', city: rome},
-           {name:'Fondi', city: rome},
-           {name:'Fornole', city: rome},
-           {name:'Frascati', city: rome},
-           {name:'Fregene', city: rome},
-           {name:'Frosinone', city: rome},
-           {name:'Gavarano', city: rome},
-           {name:'Greccio', city: rome},
-           {name:'Grottaferrata', city: rome},
-           {name:'Guidonia Montecelio', city: rome},
-           {name:'L Aquila', city: rome},
-           {name:'Ladispoli', city: rome},
-           {name:'Latina', city: rome},
-           {name:'Lavinio', city: rome},
-           {name:'Lunghezza', city: rome},
-           {name:'Marino', city: rome},
-           {name:'Montalto di Castro', city: rome},
-           {name:'Monte Caminetto', city: rome},
-           {name:'Monte Porzio Catone', city: rome},
-           {name:'Montemerano', city: rome},
-           {name:'Narni', city: rome},
-           {name:'Nettuno', city: rome},
-           {name:'Norcia', city: rome},
-           {name:'Orbetello', city: rome},
-           {name:'Orvieto', city: rome},
-           {name:'Ostia', city: rome},
-           {name:'Palombara Sabina', city: rome},
-           {name:'Perugia', city: rome},
-           {name:'Pisterzo', city: rome},
-           {name:'Ponzano Romano', city: rome},
-           {name:'Porto Ercole', city: rome},
-           {name:'Porto Santo Stefano', city: rome},
-           {name:'Rocca di Mezzo', city: rome},
-           {name:'Roccaraso', city: rome},
-           {name:'Rome Ciampino Airport Hotel', city: rome},
-           {name:'Rovere', city: rome},
-           {name:'Sabaudia', city: rome},
-           {name:'San Felice Circeo', city: rome},
-           {name:'San Lorenzo Nuovo', city: rome},
-           {name:'Santa Marinella', city: rome},
-           {name:'Santopadre', city: rome},
-           {name:'Saturnia', city: rome},
-           {name:'Seven Hills Camping', city: rome},
-           {name:'Soriano nel Cimino', city: rome},
-           {name:'Spello', city: rome},
-           {name:'Sperlonga', city: rome},
-           {name:'Stimigliano', city: rome},
-           {name:'Tarquinia', city: rome},
-           {name:'Terminillo', city: rome},
-           {name:'Termoli', city: rome},
-           {name:'Terracina', city: rome},
-           {name:'Tivoli', city: rome},
-           {name:'Trevignano Romano', city: rome},
-           {name:'Valmontone', city: rome},
-           {name:'Trapani Airport', city: trapani},
-           {name:'Sciacca', city: trapani},
-           {name:'Trapani', city: trapani},
-           {name:'Mazara del Vallo', city: trapani},
-           {name:'Erice', city: trapani},
-           {name:'Marsala', city: trapani},
-           {name:'San Vito lo Capo', city: trapani},
-           {name:'Gibellina', city: trapani},
-           {name:'Selinunte', city: trapani},
-           {name:'Treviso Airport', city: treviso},
-           {name:'Treviso City Centre', city: treviso},
-           {name:'Casale sul Sile', city: treviso},
-           {name:'Asolo', city: treviso},
-           {name:'Belluno', city: treviso},
-           {name:'Cison Di Val Marino', city: treviso},
-           {name:'Auronzo', city: treviso},
-           {name:'Bassano', city: treviso},
-           {name:'Castelfranco Veneto', city: treviso},
-           {name:'Conegliano', city: treviso},
-           {name:'Palmanova', city: treviso},
-           {name:'Portogruaro', city: treviso},
-           {name:'Roncade', city: treviso},
-           {name:'Valdobbiadene', city: treviso},
-           {name:'Vedelago', city: treviso},
-           {name:'Villorba', city: treviso},
-           {name:'Vittorio Veneto', city: treviso},
-           {name:'Trieste Airport', city: trieste},
-           {name:'Trieste Cruise Port', city: trieste},
-           {name:'Trieste City Centre', city: trieste},
-           {name:'Udine', city: trieste},
-           {name:'Gorizia', city: trieste},
-           {name:'Turin Airport', city: turin},
-           {name:'Turin City Centre', city: turin},
-           {name:'Pragelato', city: turin},
-           {name:'La Thuile', city: turin},
-           {name:'Sestriere', city: turin},
-           {name:'Gressoney', city: turin},
-           {name:'Courmayeur', city: turin},
-           {name:'Alagna', city: turin},
-           {name:'Alba', city: turin},
-           {name:'Antagnod', city: turin},
-           {name:'Aosta', city: turin},
-           {name:'Asti', city: turin},
-           {name:'Bardonecchia', city: turin},
-           {name:'Brusson', city: turin},
-           {name:'Cesana Torinese', city: turin},
-           {name:'Claviere', city: turin},
-           {name:'Cogne', city: turin},
-           {name:'Crissolo', city: turin},
-           {name:'Etroubles', city: turin},
-           {name:'Gressoney Saint Jean', city: turin},
-           {name:'Limone Piemonte', city: turin},
-           {name:'Meran', city: turin},
-           {name:'Paesana', city: turin},
-           {name:'Passo Lavaze', city: turin},
-           {name:'Piemonte', city: turin},
-           {name:'Prali', city: turin},
-           {name:'Prato Nevoso', city: turin},
-           {name:'Pre Saint Didier', city: turin},
-           {name:'Saint Rhemy en Bosses', city: turin},
-           {name:'Saint Vincent Aosta', city: turin},
-           {name:'Saluzzo', city: turin},
-           {name:'San Sicario', city: turin},
-           {name:'Sauze d Oulx', city: turin},
-           {name:'Torgnon', city: turin},
-           {name:'Valgrisenche', city: turin},
-           {name:'Vercelli', city: turin},
-           {name:'Venice Airport', city: venice},
-           {name:'Venice Cruise Port', city: venice},
-           {name:'Mestre Train Station', city: venice},
-           {name:'St Lucia Train Station', city: venice},
-           {name:'Venice City Hotels', city: venice},
-           {name:'Mestre', city: venice},
-           {name:'Lido di Jesolo', city: venice},
-           {name:'Padova', city: venice},
-           {name:'Camping Marina di Venezia', city: venice},
-           {name:'Venice Piazzale Roma', city: venice},
-           {name:'Abano Terme', city: venice},
-           {name:'Adria', city: venice},
-           {name:'Bassano del Grappa', city: venice},
-           {name:'Bibione', city: venice},
-           {name:'Burano', city: venice},
-           {name:'Ca Savio', city: venice},
-           {name:'Campagna Lupia', city: venice},
-           {name:'Camping Union Lido', city: venice},
-           {name:'Caorle', city: venice},
-           {name:'Cavallino', city: venice},
-           {name:'Chioggia', city: venice},
-           {name:'Dolo', city: venice},
-           {name:'Duna Verde', city: venice},
-           {name:'Eraclea', city: venice},
-           {name:'Follina', city: venice},
-           {name:'Gemona del Friuli', city: venice},
-           {name:'Gradisca D Isonzo', city: venice},
-           {name:'Grado', city: venice},
-           {name:'Jesolo', city: venice},
-           {name:'Lido di Spina', city: venice},
-           {name:'Lignano Sabbiadoro', city: venice},
-           {name:'Marcon', city: venice},
-           {name:'Martellago', city: venice},
-           {name:'Meolo', city: venice},
-           {name:'Mira', city: venice},
-           {name:'Mirano', city: venice},
-           {name:'Mogliano Veneto', city: venice},
-           {name:'Murano', city: venice},
-           {name:'Noventa di Piave', city: venice},
-           {name:'Pordenone', city: venice},
-           {name:'Porto Santa Margherita', city: venice},
-           {name:'Pove del Grappa', city: venice},
-           {name:'Punta Sabbioni', city: venice},
-           {name:'Quarto d Altino', city: venice},
-           {name:'Rovigo', city: venice},
-           {name:'San Clemente Island', city: venice},
-           {name:'San Servolo Island', city: venice},
-           {name:'Sant Elena Island', city: venice},
-           {name:'Spinea', city: venice},
-           {name:'Stra', city: venice},
-           {name:'Torcello', city: venice},
-           {name:'Tremignon', city: venice},
-           {name:'Venice Airport Hotels', city: venice},
-           {name:'Venice City Hotels (via P Roma)', city: venice},
-           {name:'Venice Lido', city: venice},
-           {name:'Zelarino', city: venice},
-           {name:'Verona Airport', city: verona},
-           {name:'Bella Italia Camping', city: verona},
-           {name:'Peschiera del Garda', city: verona},
-           {name:'Sirmione', city: verona},
-           {name:'Verona City Centre', city: verona},
-           {name:'Garda', city: verona},
-           {name:'Bardolino', city: verona},
-           {name:'Alonte', city: verona},
-           {name:'Arco', city: verona},
-           {name:'Borno', city: verona},
-           {name:'Brenzone', city: verona},
-           {name:'Brescia', city: verona},
-           {name:'Calceranica al Lago', city: verona},
-           {name:'Castel d Azzano', city: verona},
-           {name:'Castion Veronese', city: verona},
-           {name:'Cisano', city: verona},
-           {name:'Desenzano del Garda', city: verona},
-           {name:'Falcade', city: verona},
-           {name:'Ferrara', city: verona},
-           {name:'Galzignano Terme', city: verona},
-           {name:'Gardaland', city: verona},
-           {name:'Gardone Riviera', city: verona},
-           {name:'Gargnano', city: verona},
-           {name:'Iseo', city: verona},
-           {name:'Lazise', city: verona},
-           {name:'Limone Sul Garda', city: verona},
-           {name:'Lonato del Garda', city: verona},
-           {name:'Malcesine', city: verona},
-           {name:'Malga San Giorio', city: verona},
-           {name:'Manerba del Garda', city: verona},
-           {name:'Mantova', city: verona},
-           {name:'Mezzane di Sotto', city: verona},
-           {name:'Modena', city: verona},
-           {name:'Molveno', city: verona},
-           {name:'Moniga del Garda', city: verona},
-           {name:'Montecampione', city: verona},
-           {name:'Montichiari', city: verona},
-           {name:'Obra di Vallarsa', city: verona},
-           {name:'Padenghe', city: verona},
-           {name:'Passo Rolle', city: verona},
-           {name:'Pedemonte', city: verona},
-           {name:'Pinzolo', city: verona},
-           {name:'Povolaro', city: verona},
-           {name:'Pozza di Fassa', city: verona},
-           {name:'Reggio Emilia', city: verona},
-           {name:'Riva del Garda', city: verona},
-           {name:'Salionze', city: verona},
-           {name:'Salo', city: verona},
-           {name:'San Benedetto Po', city: verona},
-           {name:'San Bonifacio', city: verona},
-           {name:'San Felice del Benaco', city: verona},
-           {name:'San Giovanni Lupatoto', city: verona},
-           {name:'Sandrigo', city: verona},
-           {name:'Solferino', city: verona},
-           {name:'Sulzano', city: verona},
-           {name:'Tignale', city: verona},
-           {name:'Torbole', city: verona},
-           {name:'Torri del Benaco', city: verona},
-           {name:'Toscolano Maderno', city: verona},
-           {name:'Vicenza', city: verona}
-   ])
+  
+  pick_up_locations << PickUpLocation.new(name:'Alghero Airport', city: alghero)
+  pick_up_locations << PickUpLocation.new(name:'Alghero City Centre', city: alghero)
+  pick_up_locations << PickUpLocation.new(name:'Castelsardo', city: alghero)
+  pick_up_locations << PickUpLocation.new(name:'Porto Torres', city: alghero)
+  pick_up_locations << PickUpLocation.new(name:'Sassari', city: alghero)
+  pick_up_locations << PickUpLocation.new(name:'Platamona', city: alghero)
+  pick_up_locations << PickUpLocation.new(name:'Capo Caccia', city: alghero)
+  pick_up_locations << PickUpLocation.new(name:'Bosa', city: alghero)
+  pick_up_locations << PickUpLocation.new(name:'Macomer', city: alghero)
+  pick_up_locations << PickUpLocation.new(name:'Porto Conte', city: alghero)
+  pick_up_locations << PickUpLocation.new(name:'Sorso', city: alghero)
+  pick_up_locations << PickUpLocation.new(name:'Stintino', city: alghero)
+  pick_up_locations << PickUpLocation.new(name:'Ancona Airport', city: ancona)
+  pick_up_locations << PickUpLocation.new(name:'Ancona', city: ancona)
+  pick_up_locations << PickUpLocation.new(name:'Fermo', city: ancona)
+  pick_up_locations << PickUpLocation.new(name:'Macerata', city: ancona)
+  pick_up_locations << PickUpLocation.new(name:'Ascoli Piceno', city: ancona)
+  pick_up_locations << PickUpLocation.new(name:'Bergamo Airport', city: bergamo)
+  pick_up_locations << PickUpLocation.new(name:'Bergamo City Centre', city: bergamo)
+  pick_up_locations << PickUpLocation.new(name:'Sarnico', city: bergamo)
+  pick_up_locations << PickUpLocation.new(name:'Concorezzo', city: bergamo)
+  pick_up_locations << PickUpLocation.new(name:'Porlezza', city: bergamo)
+  pick_up_locations << PickUpLocation.new(name:'Tirano', city: bergamo)
+  pick_up_locations << PickUpLocation.new(name:'Treviglio', city: bergamo)
+  pick_up_locations << PickUpLocation.new(name:'Agrate Brianza', city: bergamo)
+  pick_up_locations << PickUpLocation.new(name:'Alzate Brianza', city: bergamo)
+  pick_up_locations << PickUpLocation.new(name:'Aprica', city: bergamo)
+  pick_up_locations << PickUpLocation.new(name:'Arcore', city: bergamo)
+  pick_up_locations << PickUpLocation.new(name:'Artogne', city: bergamo)
+  pick_up_locations << PickUpLocation.new(name:'Bellusco', city: bergamo)
+  pick_up_locations << PickUpLocation.new(name:'Brembilla', city: bergamo)
+  pick_up_locations << PickUpLocation.new(name:'Caravaggio', city: bergamo)
+  pick_up_locations << PickUpLocation.new(name:'Carona', city: bergamo)
+  pick_up_locations << PickUpLocation.new(name:'Castione della Presolana', city: bergamo)
+  pick_up_locations << PickUpLocation.new(name:'Chiavenna', city: bergamo)
+  pick_up_locations << PickUpLocation.new(name:'Chiesa in Valmalenco', city: bergamo)
+  pick_up_locations << PickUpLocation.new(name:'Cisano Bergamasco', city: bergamo)
+  pick_up_locations << PickUpLocation.new(name:'Clusane', city: bergamo)
+  pick_up_locations << PickUpLocation.new(name:'Clusone', city: bergamo)
+  pick_up_locations << PickUpLocation.new(name:'Colere', city: bergamo)
+  pick_up_locations << PickUpLocation.new(name:'Comacchio', city: bergamo)
+  pick_up_locations << PickUpLocation.new(name:'Corte Franca', city: bergamo)
+  pick_up_locations << PickUpLocation.new(name:'Crema', city: bergamo)
+  pick_up_locations << PickUpLocation.new(name:'Dalmine', city: bergamo)
+  pick_up_locations << PickUpLocation.new(name:'Darfo Boario Terme', city: bergamo)
+  pick_up_locations << PickUpLocation.new(name:'Entratico', city: bergamo)
+  pick_up_locations << PickUpLocation.new(name:'Foppolo', city: bergamo)
+  pick_up_locations << PickUpLocation.new(name:'Lago d Idro', city: bergamo)
+  pick_up_locations << PickUpLocation.new(name:'Lenna', city: bergamo)
+  pick_up_locations << PickUpLocation.new(name:'Lovere', city: bergamo)
+  pick_up_locations << PickUpLocation.new(name:'Mandello del Lario', city: bergamo)
+  pick_up_locations << PickUpLocation.new(name:'Marone', city: bergamo)
+  pick_up_locations << PickUpLocation.new(name:'Paderno Dugnano', city: bergamo)
+  pick_up_locations << PickUpLocation.new(name:'Pescegallo', city: bergamo)
+  pick_up_locations << PickUpLocation.new(name:'Pontida', city: bergamo)
+  pick_up_locations << PickUpLocation.new(name:'Sale Marasino', city: bergamo)
+  pick_up_locations << PickUpLocation.new(name:'San Giovanni Bianco', city: bergamo)
+  pick_up_locations << PickUpLocation.new(name:'San Pellegrino Terme', city: bergamo)
+  pick_up_locations << PickUpLocation.new(name:'Schilpario', city: bergamo)
+  pick_up_locations << PickUpLocation.new(name:'Selvino', city: bergamo)
+  pick_up_locations << PickUpLocation.new(name:'Sotto il Monte Giovanni', city: bergamo)
+  pick_up_locations << PickUpLocation.new(name:'Trescore Balneario', city: bergamo)
+  pick_up_locations << PickUpLocation.new(name:'Valbrembo', city: bergamo)
+  pick_up_locations << PickUpLocation.new(name:'Vimercate', city: bergamo)
+  pick_up_locations << PickUpLocation.new(name:'Zambla', city: bergamo)
+  pick_up_locations << PickUpLocation.new(name:'Bologna Airport', city: bologna)
+  pick_up_locations << PickUpLocation.new(name:'Parma Airport', city: bologna)
+  pick_up_locations << PickUpLocation.new(name:'Bologna City Centre', city: bologna)
+  pick_up_locations << PickUpLocation.new(name:'Parma', city: bologna)
+  pick_up_locations << PickUpLocation.new(name:'Lizzano in Belvedere', city: bologna)
+  pick_up_locations << PickUpLocation.new(name:'Faenza', city: bologna)
+  pick_up_locations << PickUpLocation.new(name:'Cattolica', city: bologna)
+  pick_up_locations << PickUpLocation.new(name:'Montecchio Emilia', city: bologna)
+  pick_up_locations << PickUpLocation.new(name:'Castrocaro Terme', city: bologna)
+  pick_up_locations << PickUpLocation.new(name:'Sansepolcro', city: bologna)
+  pick_up_locations << PickUpLocation.new(name:'Bolzano Train Station', city: bolzano)
+  pick_up_locations << PickUpLocation.new(name:'Cortina d Ampezzo', city: bolzano)
+  pick_up_locations << PickUpLocation.new(name:'Madonna di Campiglio', city: bolzano)
+  pick_up_locations << PickUpLocation.new(name:'Corvara', city: bolzano)
+  pick_up_locations << PickUpLocation.new(name:'San Cassiano', city: bolzano)
+  pick_up_locations << PickUpLocation.new(name:'Canazei', city: bolzano)
+  pick_up_locations << PickUpLocation.new(name:'Bormio', city: bolzano)
+  pick_up_locations << PickUpLocation.new(name:'Alleghe', city: bolzano)
+  pick_up_locations << PickUpLocation.new(name:'Alpe Cermis', city: bolzano)
+  pick_up_locations << PickUpLocation.new(name:'Alpe di Pampeago', city: bolzano)
+  pick_up_locations << PickUpLocation.new(name:'Alpe di Siusi', city: bolzano)
+  pick_up_locations << PickUpLocation.new(name:'Alta Badia', city: bolzano)
+  pick_up_locations << PickUpLocation.new(name:'Alta Pusteria', city: bolzano)
+  pick_up_locations << PickUpLocation.new(name:'Alta Valtellina', city: bolzano)
+  pick_up_locations << PickUpLocation.new(name:'Andalo', city: bolzano)
+  pick_up_locations << PickUpLocation.new(name:'Arabba', city: bolzano)
+  pick_up_locations << PickUpLocation.new(name:'Asiago', city: bolzano)
+  pick_up_locations << PickUpLocation.new(name:'Baselga di Pine', city: bolzano)
+  pick_up_locations << PickUpLocation.new(name:'Bellamonte', city: bolzano)
+  pick_up_locations << PickUpLocation.new(name:'Bolzano', city: bolzano)
+  pick_up_locations << PickUpLocation.new(name:'Brixen', city: bolzano)
+  pick_up_locations << PickUpLocation.new(name:'Bruneck', city: bolzano)
+  pick_up_locations << PickUpLocation.new(name:'Caldonazzo', city: bolzano)
+  pick_up_locations << PickUpLocation.new(name:'Campitello di Fassa', city: bolzano)
+  pick_up_locations << PickUpLocation.new(name:'Campo Tures', city: bolzano)
+  pick_up_locations << PickUpLocation.new(name:'Carezza al Lago', city: bolzano)
+  pick_up_locations << PickUpLocation.new(name:'Carnia', city: bolzano)
+  pick_up_locations << PickUpLocation.new(name:'Cavalese', city: bolzano)
+  pick_up_locations << PickUpLocation.new(name:'Cimone', city: bolzano)
+  pick_up_locations << PickUpLocation.new(name:'Colfosco', city: bolzano)
+  pick_up_locations << PickUpLocation.new(name:'Comelico', city: bolzano)
+  pick_up_locations << PickUpLocation.new(name:'Compatsch', city: bolzano)
+  pick_up_locations << PickUpLocation.new(name:'Dimaro', city: bolzano)
+  pick_up_locations << PickUpLocation.new(name:'Dobbiaco', city: bolzano)
+  pick_up_locations << PickUpLocation.new(name:'Fai della Paganella', city: bolzano)
+  pick_up_locations << PickUpLocation.new(name:'Folgaria', city: bolzano)
+  pick_up_locations << PickUpLocation.new(name:'Folgarida', city: bolzano)
+  pick_up_locations << PickUpLocation.new(name:'Fondo Grande', city: bolzano)
+  pick_up_locations << PickUpLocation.new(name:'Fortezza', city: bolzano)
+  pick_up_locations << PickUpLocation.new(name:'Gossensass', city: bolzano)
+  pick_up_locations << PickUpLocation.new(name:'Kastelruth', city: bolzano)
+  pick_up_locations << PickUpLocation.new(name:'La Villa', city: bolzano)
+  pick_up_locations << PickUpLocation.new(name:'Lavarone', city: bolzano)
+  pick_up_locations << PickUpLocation.new(name:'Magre Sulla', city: bolzano)
+  pick_up_locations << PickUpLocation.new(name:'Marilleva', city: bolzano)
+  pick_up_locations << PickUpLocation.new(name:'Marmolada', city: bolzano)
+  pick_up_locations << PickUpLocation.new(name:'Mazzin', city: bolzano)
+  pick_up_locations << PickUpLocation.new(name:'Merano', city: bolzano)
+  pick_up_locations << PickUpLocation.new(name:'Meransen', city: bolzano)
+  pick_up_locations << PickUpLocation.new(name:'Misurina', city: bolzano)
+  pick_up_locations << PickUpLocation.new(name:'Moena', city: bolzano)
+  pick_up_locations << PickUpLocation.new(name:'Monte Bondone', city: bolzano)
+  pick_up_locations << PickUpLocation.new(name:'Nova Levante', city: bolzano)
+  pick_up_locations << PickUpLocation.new(name:'Obereggen', city: bolzano)
+  pick_up_locations << PickUpLocation.new(name:'Olang', city: bolzano)
+  pick_up_locations << PickUpLocation.new(name:'Ortise', city: bolzano)
+  pick_up_locations << PickUpLocation.new(name:'Ortisei', city: bolzano)
+  pick_up_locations << PickUpLocation.new(name:'Passo San Pellegrino', city: bolzano)
+  pick_up_locations << PickUpLocation.new(name:'Passo Stelvio', city: bolzano)
+  pick_up_locations << PickUpLocation.new(name:'Passo del Brocon', city: bolzano)
+  pick_up_locations << PickUpLocation.new(name:'Passo del Tonale', city: bolzano)
+  pick_up_locations << PickUpLocation.new(name:'Plan', city: bolzano)
+  pick_up_locations << PickUpLocation.new(name:'Plose Brixen', city: bolzano)
+  pick_up_locations << PickUpLocation.new(name:'Ponte di Legno', city: bolzano)
+  pick_up_locations << PickUpLocation.new(name:'Predazzo', city: bolzano)
+  pick_up_locations << PickUpLocation.new(name:'Ravascletto', city: bolzano)
+  pick_up_locations << PickUpLocation.new(name:'Reinswald', city: bolzano)
+  pick_up_locations << PickUpLocation.new(name:'Ritten', city: bolzano)
+  pick_up_locations << PickUpLocation.new(name:'Rovereto', city: bolzano)
+  pick_up_locations << PickUpLocation.new(name:'Ruffre', city: bolzano)
+  pick_up_locations << PickUpLocation.new(name:'San Candido', city: bolzano)
+  pick_up_locations << PickUpLocation.new(name:'San Martino di Castrozza', city: bolzano)
+  pick_up_locations << PickUpLocation.new(name:'San Pellegrino', city: bolzano)
+  pick_up_locations << PickUpLocation.new(name:'San Vigilio', city: bolzano)
+  pick_up_locations << PickUpLocation.new(name:'San Vito di Cadore', city: bolzano)
+  pick_up_locations << PickUpLocation.new(name:'Sand in Taufers', city: bolzano)
+  pick_up_locations << PickUpLocation.new(name:'Santa Cristina Val Gardena', city: bolzano)
+  pick_up_locations << PickUpLocation.new(name:'Sappada', city: bolzano)
+  pick_up_locations << PickUpLocation.new(name:'Sella Nevea', city: bolzano)
+  pick_up_locations << PickUpLocation.new(name:'Selva di Cadore', city: bolzano)
+  pick_up_locations << PickUpLocation.new(name:'Selva di Val Gardena', city: bolzano)
+  pick_up_locations << PickUpLocation.new(name:'Senales', city: bolzano)
+  pick_up_locations << PickUpLocation.new(name:'Solda', city: bolzano)
+  pick_up_locations << PickUpLocation.new(name:'St Ulrich Ortisei', city: bolzano)
+  pick_up_locations << PickUpLocation.new(name:'Steinhaus im Ahrntal', city: bolzano)
+  pick_up_locations << PickUpLocation.new(name:'Sterzing', city: bolzano)
+  pick_up_locations << PickUpLocation.new(name:'Tarvisio', city: bolzano)
+  pick_up_locations << PickUpLocation.new(name:'Teglio', city: bolzano)
+  pick_up_locations << PickUpLocation.new(name:'Trento', city: bolzano)
+  pick_up_locations << PickUpLocation.new(name:'Valle Aurina', city: bolzano)
+  pick_up_locations << PickUpLocation.new(name:'Vigo di Fassa', city: bolzano)
+  pick_up_locations << PickUpLocation.new(name:'Villabassa', city: bolzano)
+  pick_up_locations << PickUpLocation.new(name:'Vipiteno', city: bolzano)
+  pick_up_locations << PickUpLocation.new(name:'Zoldo Alto', city: bolzano)
+  pick_up_locations << PickUpLocation.new(name:'Brescia Airport', city: brescia)
+  pick_up_locations << PickUpLocation.new(name:'Brescia Train Station', city: brescia)
+  pick_up_locations << PickUpLocation.new(name:'Brescia City Centre', city: brescia)
+  pick_up_locations << PickUpLocation.new(name:'Bedizzole', city: brescia)
+  pick_up_locations << PickUpLocation.new(name:'Calvagese della Riviera', city: brescia)
+  pick_up_locations << PickUpLocation.new(name:'Cagliari Airport', city: cagliari)
+  pick_up_locations << PickUpLocation.new(name:'Villasimius', city: cagliari)
+  pick_up_locations << PickUpLocation.new(name:'Santa Margherita di Pula', city: cagliari)
+  pick_up_locations << PickUpLocation.new(name:'Costa Rei', city: cagliari)
+  pick_up_locations << PickUpLocation.new(name:'Cagliari City Centre', city: cagliari)
+  pick_up_locations << PickUpLocation.new(name:'Quartu Sant Elena', city: cagliari)
+  pick_up_locations << PickUpLocation.new(name:'Chia', city: cagliari)
+  pick_up_locations << PickUpLocation.new(name:'Arbatax', city: cagliari)
+  pick_up_locations << PickUpLocation.new(name:'Arborea', city: cagliari)
+  pick_up_locations << PickUpLocation.new(name:'Assemini', city: cagliari)
+  pick_up_locations << PickUpLocation.new(name:'Bari Sardo', city: cagliari)
+  pick_up_locations << PickUpLocation.new(name:'Bugerru', city: cagliari)
+  pick_up_locations << PickUpLocation.new(name:'Cabras', city: cagliari)
+  pick_up_locations << PickUpLocation.new(name:'Calasetta', city: cagliari)
+  pick_up_locations << PickUpLocation.new(name:'Campulongu', city: cagliari)
+  pick_up_locations << PickUpLocation.new(name:'Capo Boi', city: cagliari)
+  pick_up_locations << PickUpLocation.new(name:'Capo Carbonara', city: cagliari)
+  pick_up_locations << PickUpLocation.new(name:'Capoterra', city: cagliari)
+  pick_up_locations << PickUpLocation.new(name:'Carbonia', city: cagliari)
+  pick_up_locations << PickUpLocation.new(name:'Cardedu', city: cagliari)
+  pick_up_locations << PickUpLocation.new(name:'Castiadas', city: cagliari)
+  pick_up_locations << PickUpLocation.new(name:'Colostrai', city: cagliari)
+  pick_up_locations << PickUpLocation.new(name:'Costa Verde', city: cagliari)
+  pick_up_locations << PickUpLocation.new(name:'Domus de Maria', city: cagliari)
+  pick_up_locations << PickUpLocation.new(name:'Geremeas', city: cagliari)
+  pick_up_locations << PickUpLocation.new(name:'Iglesias', city: cagliari)
+  pick_up_locations << PickUpLocation.new(name:'Is Arenas', city: cagliari)
+  pick_up_locations << PickUpLocation.new(name:'Is Molas', city: cagliari)
+  pick_up_locations << PickUpLocation.new(name:'Lanusei', city: cagliari)
+  pick_up_locations << PickUpLocation.new(name:'Lotzorai', city: cagliari)
+  pick_up_locations << PickUpLocation.new(name:'Lunamatrona', city: cagliari)
+  pick_up_locations << PickUpLocation.new(name:'Marina Di Capitana', city: cagliari)
+  pick_up_locations << PickUpLocation.new(name:'Marina di Arbus', city: cagliari)
+  pick_up_locations << PickUpLocation.new(name:'Muravera', city: cagliari)
+  pick_up_locations << PickUpLocation.new(name:'Narbolia', city: cagliari)
+  pick_up_locations << PickUpLocation.new(name:'Nora', city: cagliari)
+  pick_up_locations << PickUpLocation.new(name:'Oristano', city: cagliari)
+  pick_up_locations << PickUpLocation.new(name:'Orroli', city: cagliari)
+  pick_up_locations << PickUpLocation.new(name:'Porto Corallo', city: cagliari)
+  pick_up_locations << PickUpLocation.new(name:'Porto Pino', city: cagliari)
+  pick_up_locations << PickUpLocation.new(name:'Portoscuso', city: cagliari)
+  pick_up_locations << PickUpLocation.new(name:'Portovesme', city: cagliari)
+  pick_up_locations << PickUpLocation.new(name:'Pula Cagliari', city: cagliari)
+  pick_up_locations << PickUpLocation.new(name:'Putzu Idu', city: cagliari)
+  pick_up_locations << PickUpLocation.new(name:'Sanluri', city: cagliari)
+  pick_up_locations << PickUpLocation.new(name:'Sant Antioco', city: cagliari)
+  pick_up_locations << PickUpLocation.new(name:'Santa Maria Navarrese', city: cagliari)
+  pick_up_locations << PickUpLocation.new(name:'Solanas', city: cagliari)
+  pick_up_locations << PickUpLocation.new(name:'Tanca Manna', city: cagliari)
+  pick_up_locations << PickUpLocation.new(name:'Tanka Village', city: cagliari)
+  pick_up_locations << PickUpLocation.new(name:'Terralba', city: cagliari)
+  pick_up_locations << PickUpLocation.new(name:'Teulada', city: cagliari)
+  pick_up_locations << PickUpLocation.new(name:'Tharros', city: cagliari)
+  pick_up_locations << PickUpLocation.new(name:'Torre Delle Stelle', city: cagliari)
+  pick_up_locations << PickUpLocation.new(name:'Torre Grande', city: cagliari)
+  pick_up_locations << PickUpLocation.new(name:'Torre Salinas', city: cagliari)
+  pick_up_locations << PickUpLocation.new(name:'Torre dei Corsari', city: cagliari)
+  pick_up_locations << PickUpLocation.new(name:'Torre su Puttu', city: cagliari)
+  pick_up_locations << PickUpLocation.new(name:'Tortoli', city: cagliari)
+  pick_up_locations << PickUpLocation.new(name:'Villaputzu', city: cagliari)
+  pick_up_locations << PickUpLocation.new(name:'Catania Airport', city: catania)
+  pick_up_locations << PickUpLocation.new(name:'Catania Port', city: catania)
+  pick_up_locations << PickUpLocation.new(name:'Messina Cruise Port', city: catania)
+  pick_up_locations << PickUpLocation.new(name:'Milazzo Port', city: catania)
+  pick_up_locations << PickUpLocation.new(name:'Taormina', city: catania)
+  pick_up_locations << PickUpLocation.new(name:'Giardini Naxos', city: catania)
+  pick_up_locations << PickUpLocation.new(name:'Catania City Centre', city: catania)
+  pick_up_locations << PickUpLocation.new(name:'Siracusa', city: catania)
+  pick_up_locations << PickUpLocation.new(name:'Letojanni', city: catania)
+  pick_up_locations << PickUpLocation.new(name:'Milazzo', city: catania)
+  pick_up_locations << PickUpLocation.new(name:'Aci Castello', city: catania)
+  pick_up_locations << PickUpLocation.new(name:'Acireale', city: catania)
+  pick_up_locations << PickUpLocation.new(name:'Acquedolci', city: catania)
+  pick_up_locations << PickUpLocation.new(name:'Arenella', city: catania)
+  pick_up_locations << PickUpLocation.new(name:'Augusta', city: catania)
+  pick_up_locations << PickUpLocation.new(name:'Avola', city: catania)
+  pick_up_locations << PickUpLocation.new(name:'Bronte', city: catania)
+  pick_up_locations << PickUpLocation.new(name:'Brucoli', city: catania)
+  pick_up_locations << PickUpLocation.new(name:'Caltagirone', city: catania)
+  pick_up_locations << PickUpLocation.new(name:'Caltanissetta', city: catania)
+  pick_up_locations << PickUpLocation.new(name:'Club Kamarina', city: catania)
+  pick_up_locations << PickUpLocation.new(name:'Club Marispica', city: catania)
+  pick_up_locations << PickUpLocation.new(name:'Enna', city: catania)
+  pick_up_locations << PickUpLocation.new(name:'Etna North', city: catania)
+  pick_up_locations << PickUpLocation.new(name:'Etna South', city: catania)
+  pick_up_locations << PickUpLocation.new(name:'Fontane Bianche', city: catania)
+  pick_up_locations << PickUpLocation.new(name:'Forza d Agro', city: catania)
+  pick_up_locations << PickUpLocation.new(name:'Gela', city: catania)
+  pick_up_locations << PickUpLocation.new(name:'Giarre', city: catania)
+  pick_up_locations << PickUpLocation.new(name:'Il Picciolo Golf Club', city: catania)
+  pick_up_locations << PickUpLocation.new(name:'Lentini', city: catania)
+  pick_up_locations << PickUpLocation.new(name:'Licata', city: catania)
+  pick_up_locations << PickUpLocation.new(name:'Marina di Ragusa', city: catania)
+  pick_up_locations << PickUpLocation.new(name:'Marzamemi', city: catania)
+  pick_up_locations << PickUpLocation.new(name:'Messina', city: catania)
+  pick_up_locations << PickUpLocation.new(name:'Modica', city: catania)
+  pick_up_locations << PickUpLocation.new(name:'Nicosia IT', city: catania)
+  pick_up_locations << PickUpLocation.new(name:'Noto', city: catania)
+  pick_up_locations << PickUpLocation.new(name:'Piazza Armerina', city: catania)
+  pick_up_locations << PickUpLocation.new(name:'Portopalo', city: catania)
+  pick_up_locations << PickUpLocation.new(name:'Portorosa', city: catania)
+  pick_up_locations << PickUpLocation.new(name:'Pozzallo', city: catania)
+  pick_up_locations << PickUpLocation.new(name:'Priolo Gargallo', city: catania)
+  pick_up_locations << PickUpLocation.new(name:'Ragusa', city: catania)
+  pick_up_locations << PickUpLocation.new(name:'Randazzo', city: catania)
+  pick_up_locations << PickUpLocation.new(name:'Sampieri', city: catania)
+  pick_up_locations << PickUpLocation.new(name:'Sant Alessio', city: catania)
+  pick_up_locations << PickUpLocation.new(name:'Savoca', city: catania)
+  pick_up_locations << PickUpLocation.new(name:'Scoglitti', city: catania)
+  pick_up_locations << PickUpLocation.new(name:'Tonnarella', city: catania)
+  pick_up_locations << PickUpLocation.new(name:'Valguarnera Caropepe', city: catania)
+  pick_up_locations << PickUpLocation.new(name:'Vittoria', city: catania)
+  pick_up_locations << PickUpLocation.new(name:'Vizzini', city: catania)
+  pick_up_locations << PickUpLocation.new(name:'Florence Airport', city: florence)
+  pick_up_locations << PickUpLocation.new(name:'Florence Train Station', city: florence)
+  pick_up_locations << PickUpLocation.new(name:'Florence City Centre', city: florence)
+  pick_up_locations << PickUpLocation.new(name:'Fiesole', city: florence)
+  pick_up_locations << PickUpLocation.new(name:'Montecatini Terme', city: florence)
+  pick_up_locations << PickUpLocation.new(name:'Siena', city: florence)
+  pick_up_locations << PickUpLocation.new(name:'Volterra', city: florence)
+  pick_up_locations << PickUpLocation.new(name:'San Gimignano', city: florence)
+  pick_up_locations << PickUpLocation.new(name:'Aquilea', city: florence)
+  pick_up_locations << PickUpLocation.new(name:'Arezzo', city: florence)
+  pick_up_locations << PickUpLocation.new(name:'Asciano', city: florence)
+  pick_up_locations << PickUpLocation.new(name:'Bagni di Petriolo', city: florence)
+  pick_up_locations << PickUpLocation.new(name:'Bagno Vignoni', city: florence)
+  pick_up_locations << PickUpLocation.new(name:'Bagno a Ripoli', city: florence)
+  pick_up_locations << PickUpLocation.new(name:'Barberino di Mugello', city: florence)
+  pick_up_locations << PickUpLocation.new(name:'Borgo San Lorenzo', city: florence)
+  pick_up_locations << PickUpLocation.new(name:'Bucine', city: florence)
+  pick_up_locations << PickUpLocation.new(name:'Buonconvento', city: florence)
+  pick_up_locations << PickUpLocation.new(name:'Candeli', city: florence)
+  pick_up_locations << PickUpLocation.new(name:'Carmignano', city: florence)
+  pick_up_locations << PickUpLocation.new(name:'Casole D Elsa', city: florence)
+  pick_up_locations << PickUpLocation.new(name:'Castelfiorentino', city: florence)
+  pick_up_locations << PickUpLocation.new(name:'Castellina in Chianti', city: florence)
+  pick_up_locations << PickUpLocation.new(name:'Castelnuovo Berardenga', city: florence)
+  pick_up_locations << PickUpLocation.new(name:'Castiglion Fiorentino', city: florence)
+  pick_up_locations << PickUpLocation.new(name:'Certaldo', city: florence)
+  pick_up_locations << PickUpLocation.new(name:'Cetona', city: florence)
+  pick_up_locations << PickUpLocation.new(name:'Civitella Paganico', city: florence)
+  pick_up_locations << PickUpLocation.new(name:'Colle Val D Elsa', city: florence)
+  pick_up_locations << PickUpLocation.new(name:'Cortona', city: florence)
+  pick_up_locations << PickUpLocation.new(name:'Donnini', city: florence)
+  pick_up_locations << PickUpLocation.new(name:'Empoli', city: florence)
+  pick_up_locations << PickUpLocation.new(name:'Figline Valdarno', city: florence)
+  pick_up_locations << PickUpLocation.new(name:'Florence Airport  Hotels', city: florence)
+  pick_up_locations << PickUpLocation.new(name:'Gaiole in Chianti', city: florence)
+  pick_up_locations << PickUpLocation.new(name:'Gambassi Terme', city: florence)
+  pick_up_locations << PickUpLocation.new(name:'Greve in Chianti', city: florence)
+  pick_up_locations << PickUpLocation.new(name:'Grosseto', city: florence)
+  pick_up_locations << PickUpLocation.new(name:'Imola', city: florence)
+  pick_up_locations << PickUpLocation.new(name:'Incisa val d Arno', city: florence)
+  pick_up_locations << PickUpLocation.new(name:'Loro Ciuffenna', city: florence)
+  pick_up_locations << PickUpLocation.new(name:'Marina di Grosseto', city: florence)
+  pick_up_locations << PickUpLocation.new(name:'Massa Marittima', city: florence)
+  pick_up_locations << PickUpLocation.new(name:'Milano Marittima', city: florence)
+  pick_up_locations << PickUpLocation.new(name:'Montaione', city: florence)
+  pick_up_locations << PickUpLocation.new(name:'Montalcino', city: florence)
+  pick_up_locations << PickUpLocation.new(name:'Montefiridolfi', city: florence)
+  pick_up_locations << PickUpLocation.new(name:'Montefollonico', city: florence)
+  pick_up_locations << PickUpLocation.new(name:'Montelupo Fiorentino', city: florence)
+  pick_up_locations << PickUpLocation.new(name:'Montepulciano', city: florence)
+  pick_up_locations << PickUpLocation.new(name:'Monteriggioni', city: florence)
+  pick_up_locations << PickUpLocation.new(name:'Montespertoli', city: florence)
+  pick_up_locations << PickUpLocation.new(name:'Monticiano', city: florence)
+  pick_up_locations << PickUpLocation.new(name:'Montisi', city: florence)
+  pick_up_locations << PickUpLocation.new(name:'Olmo', city: florence)
+  pick_up_locations << PickUpLocation.new(name:'Petrognano', city: florence)
+  pick_up_locations << PickUpLocation.new(name:'Pienza', city: florence)
+  pick_up_locations << PickUpLocation.new(name:'Pistoia', city: florence)
+  pick_up_locations << PickUpLocation.new(name:'Poggibonsi', city: florence)
+  pick_up_locations << PickUpLocation.new(name:'Poggio Ugolino', city: florence)
+  pick_up_locations << PickUpLocation.new(name:'Pontassieve', city: florence)
+  pick_up_locations << PickUpLocation.new(name:'Poppi', city: florence)
+  pick_up_locations << PickUpLocation.new(name:'Porto Recanati', city: florence)
+  pick_up_locations << PickUpLocation.new(name:'Pozzolatico', city: florence)
+  pick_up_locations << PickUpLocation.new(name:'Prato', city: florence)
+  pick_up_locations << PickUpLocation.new(name:'Pratolino', city: florence)
+  pick_up_locations << PickUpLocation.new(name:'Pratovecchio', city: florence)
+  pick_up_locations << PickUpLocation.new(name:'Private Tour of Pisa and Florence', city: florence)
+  pick_up_locations << PickUpLocation.new(name:'Radda in Chianti', city: florence)
+  pick_up_locations << PickUpLocation.new(name:'Radicondoli', city: florence)
+  pick_up_locations << PickUpLocation.new(name:'Rapolano Terme', city: florence)
+  pick_up_locations << PickUpLocation.new(name:'Reggello', city: florence)
+  pick_up_locations << PickUpLocation.new(name:'Riccione', city: florence)
+  pick_up_locations << PickUpLocation.new(name:'Rignano sull Arno', city: florence)
+  pick_up_locations << PickUpLocation.new(name:'San Casciano Val di Pesa', city: florence)
+  pick_up_locations << PickUpLocation.new(name:'San Marcello Pistoiese', city: florence)
+  pick_up_locations << PickUpLocation.new(name:'San Marino', city: florence)
+  pick_up_locations << PickUpLocation.new(name:'San Miniato', city: florence)
+  pick_up_locations << PickUpLocation.new(name:'San Quirico d Orcia', city: florence)
+  pick_up_locations << PickUpLocation.new(name:'Scarperia', city: florence)
+  pick_up_locations << PickUpLocation.new(name:'Spinello', city: florence)
+  pick_up_locations << PickUpLocation.new(name:'Tavarnelle Val di Pesa', city: florence)
+  pick_up_locations << PickUpLocation.new(name:'Trequanda', city: florence)
+  pick_up_locations << PickUpLocation.new(name:'Tuoro sul Trasimeno', city: florence)
+  pick_up_locations << PickUpLocation.new(name:'Vagliagli', city: florence)
+  pick_up_locations << PickUpLocation.new(name:'Vernio', city: florence)
+  pick_up_locations << PickUpLocation.new(name:'Vicchio', city: florence)
+  pick_up_locations << PickUpLocation.new(name:'Forli Airport', city: forli)
+  pick_up_locations << PickUpLocation.new(name:'Ravenna', city: forli)
+  pick_up_locations << PickUpLocation.new(name:'Forli', city: forli)
+  pick_up_locations << PickUpLocation.new(name:'Genoa Airport', city: genoa)
+  pick_up_locations << PickUpLocation.new(name:'Genoa Cruise Port', city: genoa)
+  pick_up_locations << PickUpLocation.new(name:'Savona Cruise Port', city: genoa)
+  pick_up_locations << PickUpLocation.new(name:'Portofino', city: genoa)
+  pick_up_locations << PickUpLocation.new(name:'Genoa City Centre', city: genoa)
+  pick_up_locations << PickUpLocation.new(name:'Rapallo', city: genoa)
+  pick_up_locations << PickUpLocation.new(name:'Lerici', city: genoa)
+  pick_up_locations << PickUpLocation.new(name:'Santa Margherita Ligure', city: genoa)
+  pick_up_locations << PickUpLocation.new(name:'Savona', city: genoa)
+  pick_up_locations << PickUpLocation.new(name:'Acquasanta', city: genoa)
+  pick_up_locations << PickUpLocation.new(name:'Acqui Terme', city: genoa)
+  pick_up_locations << PickUpLocation.new(name:'Alassio', city: genoa)
+  pick_up_locations << PickUpLocation.new(name:'Arenzano', city: genoa)
+  pick_up_locations << PickUpLocation.new(name:'Artesina', city: genoa)
+  pick_up_locations << PickUpLocation.new(name:'Aulla', city: genoa)
+  pick_up_locations << PickUpLocation.new(name:'Bonassola', city: genoa)
+  pick_up_locations << PickUpLocation.new(name:'Bordighera', city: genoa)
+  pick_up_locations << PickUpLocation.new(name:'Cabella Ligure', city: genoa)
+  pick_up_locations << PickUpLocation.new(name:'Camogli', city: genoa)
+  pick_up_locations << PickUpLocation.new(name:'Cinque Terre', city: genoa)
+  pick_up_locations << PickUpLocation.new(name:'Costigliole D Asti', city: genoa)
+  pick_up_locations << PickUpLocation.new(name:'Diano Marina', city: genoa)
+  pick_up_locations << PickUpLocation.new(name:'Gavi', city: genoa)
+  pick_up_locations << PickUpLocation.new(name:'Imperia', city: genoa)
+  pick_up_locations << PickUpLocation.new(name:'La Spezia', city: genoa)
+  pick_up_locations << PickUpLocation.new(name:'Levanto', city: genoa)
+  pick_up_locations << PickUpLocation.new(name:'Molini di Triora', city: genoa)
+  pick_up_locations << PickUpLocation.new(name:'Moneglia', city: genoa)
+  pick_up_locations << PickUpLocation.new(name:'Monterosa', city: genoa)
+  pick_up_locations << PickUpLocation.new(name:'Monterosso al Mare', city: genoa)
+  pick_up_locations << PickUpLocation.new(name:'Novi Ligure', city: genoa)
+  pick_up_locations << PickUpLocation.new(name:'Riomaggiore', city: genoa)
+  pick_up_locations << PickUpLocation.new(name:'San Remo', city: genoa)
+  pick_up_locations << PickUpLocation.new(name:'Serravalle Scrivia', city: genoa)
+  pick_up_locations << PickUpLocation.new(name:'Sestri Levante', city: genoa)
+  pick_up_locations << PickUpLocation.new(name:'Tortona', city: genoa)
+  pick_up_locations << PickUpLocation.new(name:'Varazze', city: genoa)
+  pick_up_locations << PickUpLocation.new(name:'Ventimiglia', city: genoa)
+  pick_up_locations << PickUpLocation.new(name:'Vernazza', city: genoa)
+  pick_up_locations << PickUpLocation.new(name:'Lamezia Terme Airport', city: lamezia)
+  pick_up_locations << PickUpLocation.new(name:'Briatico', city: lamezia)
+  pick_up_locations << PickUpLocation.new(name:'Castrovillari', city: lamezia)
+  pick_up_locations << PickUpLocation.new(name:'Tropea', city: lamezia)
+  pick_up_locations << PickUpLocation.new(name:'Amantea', city: lamezia)
+  pick_up_locations << PickUpLocation.new(name:'Badolato', city: lamezia)
+  pick_up_locations << PickUpLocation.new(name:'Botricello', city: lamezia)
+  pick_up_locations << PickUpLocation.new(name:'Bivongi', city: lamezia)
+  pick_up_locations << PickUpLocation.new(name:'Campora', city: lamezia)
+  pick_up_locations << PickUpLocation.new(name:'Capo Vaticano', city: lamezia)
+  pick_up_locations << PickUpLocation.new(name:'Carpanzano', city: lamezia)
+  pick_up_locations << PickUpLocation.new(name:'Catanzaro', city: lamezia)
+  pick_up_locations << PickUpLocation.new(name:'Catanzaro Beach', city: lamezia)
+  pick_up_locations << PickUpLocation.new(name:'Ciro Marina', city: lamezia)
+  pick_up_locations << PickUpLocation.new(name:'Corigliano', city: lamezia)
+  pick_up_locations << PickUpLocation.new(name:'Cosenza', city: lamezia)
+  pick_up_locations << PickUpLocation.new(name:'Cropani', city: lamezia)
+  pick_up_locations << PickUpLocation.new(name:'Crotone', city: lamezia)
+  pick_up_locations << PickUpLocation.new(name:'Falerna', city: lamezia)
+  pick_up_locations << PickUpLocation.new(name:'Guardavalle', city: lamezia)
+  pick_up_locations << PickUpLocation.new(name:'Isola Capo Rizzuto', city: lamezia)
+  pick_up_locations << PickUpLocation.new(name:'Lamezia Terme', city: lamezia)
+  pick_up_locations << PickUpLocation.new(name:'Le Castella', city: lamezia)
+  pick_up_locations << PickUpLocation.new(name:'Locri', city: lamezia)
+  pick_up_locations << PickUpLocation.new(name:'Montepaone Lido', city: lamezia)
+  pick_up_locations << PickUpLocation.new(name:'Nicotera', city: lamezia)
+  pick_up_locations << PickUpLocation.new(name:'Nocera', city: lamezia)
+  pick_up_locations << PickUpLocation.new(name:'Paola', city: lamezia)
+  pick_up_locations << PickUpLocation.new(name:'Parghelia', city: lamezia)
+  pick_up_locations << PickUpLocation.new(name:'Pizzo Calabro', city: lamezia)
+  pick_up_locations << PickUpLocation.new(name:'Pizzo Calabro Bravo Club', city: lamezia)
+  pick_up_locations << PickUpLocation.new(name:'Pizzo Calabro Club Med Napitia', city: lamezia)
+  pick_up_locations << PickUpLocation.new(name:'Praia a Mare', city: lamezia)
+  pick_up_locations << PickUpLocation.new(name:'Reggio Calabria', city: lamezia)
+  pick_up_locations << PickUpLocation.new(name:'Rende', city: lamezia)
+  pick_up_locations << PickUpLocation.new(name:'Ricadi', city: lamezia)
+  pick_up_locations << PickUpLocation.new(name:'Roccella Ionica', city: lamezia)
+  pick_up_locations << PickUpLocation.new(name:'Rogliano', city: lamezia)
+  pick_up_locations << PickUpLocation.new(name:'Rossano', city: lamezia)
+  pick_up_locations << PickUpLocation.new(name:'San Giovanni in Fiore', city: lamezia)
+  pick_up_locations << PickUpLocation.new(name:'Scalea', city: lamezia)
+  pick_up_locations << PickUpLocation.new(name:'Sellia Marina', city: lamezia)
+  pick_up_locations << PickUpLocation.new(name:'Sibari', city: lamezia)
+  pick_up_locations << PickUpLocation.new(name:'Siderno', city: lamezia)
+  pick_up_locations << PickUpLocation.new(name:'Simeri', city: lamezia)
+  pick_up_locations << PickUpLocation.new(name:'Soverato', city: lamezia)
+  pick_up_locations << PickUpLocation.new(name:'Vibo Valentia', city: lamezia)
+  pick_up_locations << PickUpLocation.new(name:'Villa San Giovanni', city: lamezia)
+  pick_up_locations << PickUpLocation.new(name:'Zambrone', city: lamezia)
+  pick_up_locations << PickUpLocation.new(name:'Milan Linate Airport', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Milan Malpensa Airport', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Milan Train Station', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Milan City Centre', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Stresa', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Bellagio', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Como Town', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Tremezzo', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Cernobbio', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Alagna Valsesia', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Alessandria', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Alpe di Mera', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Angera', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Argegno', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Arona', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Assago', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Baggio', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Barasso', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Baveno', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Biella', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Binasco', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Bollate', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Bregano', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Bresso', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Brugherio', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Brunate', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Cadenabbia', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Calamandrana', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Calozzo', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Calvenzano', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Campione d Italia', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Cannero Riviera', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Cannobio', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Caronno', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Caronno Pertusella', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Carugate', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Casale Monferrato', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Cernusco sul Naviglio', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Cervinia', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Cesano Maderno', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Champoluc', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Cinisello Balsamo', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Colico', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Colmegna', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Cologno Monzese', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Cormano', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Corsico', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Cremona', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Dervio', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Desio', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Domodossola', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Fiera Milano City', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Gallarate', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Garbagnate Milanese ', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Gardone', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Gorgonzola', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Gozzano', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Griante', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Ispra', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Laglio', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Lecco', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Legnano', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Lenno', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Lissone', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Livigno', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Lodi', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Maccagno', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Macugnaga', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Madesimo', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Meda', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Melegnano', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Melzo', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Menaggio', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Milan San Siro Stadium', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Molina di Faggeto Lario', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Moltrasio', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Monza', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Novara', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Novate Milanese', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Omegna', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Opera', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Orta San Giulio', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Ossuccio', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Pallanza', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Paullo', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Pavia', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Peschiera Borromeo', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Piacenza', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Piancavallo', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Pila Gressan', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Pila Vercelli', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Pioltello', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Pregnana Milanese', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Quinzano D Oglio', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Rho', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Rozzano', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Salsomaggiore Terme', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'San Donato Milanese', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'San Fedele Intelvi', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'San Giuliano Milanese', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'San Siro Como', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Santa Cristina Pavia', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Saronno', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Segrate', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Seregno', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Serravelle Scrivia', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Sesto Calende', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Sesto San Giovanni', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Settala', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Settimo Milanese', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Siziano', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Somma Lombardo', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Sondrio', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Sonico', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Ternate', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Torno', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Trezzano Sul Naviglio', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Truccazzano', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Valtournenche', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Varallo', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Varedo', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Varenna', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Varese', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Verbania', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Vigevano', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Voghera', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Vogogna', city: milan)
+  pick_up_locations << PickUpLocation.new(name:'Naples Airport', city: naples)
+  pick_up_locations << PickUpLocation.new(name:'Naples Cruise Port', city: naples)
+  pick_up_locations << PickUpLocation.new(name:'Naples Train Station', city: naples)
+  pick_up_locations << PickUpLocation.new(name:'Salerno Train Station', city: naples)
+  pick_up_locations << PickUpLocation.new(name:'Sorrento', city: naples)
+  pick_up_locations << PickUpLocation.new(name:'Positano', city: naples)
+  pick_up_locations << PickUpLocation.new(name:'Naples City Centre', city: naples)
+  pick_up_locations << PickUpLocation.new(name:'Pompei', city: naples)
+  pick_up_locations << PickUpLocation.new(name:'Amalfi', city: naples)
+  pick_up_locations << PickUpLocation.new(name:'Ravello', city: naples)
+  pick_up_locations << PickUpLocation.new(name:'Agerola', city: naples)
+  pick_up_locations << PickUpLocation.new(name:'Agropoli', city: naples)
+  pick_up_locations << PickUpLocation.new(name:'Alberobello', city: naples)
+  pick_up_locations << PickUpLocation.new(name:'Atrani', city: naples)
+  pick_up_locations << PickUpLocation.new(name:'Bagnoli', city: naples)
+  pick_up_locations << PickUpLocation.new(name:'Baia Domizia', city: naples)
+  pick_up_locations << PickUpLocation.new(name:'Campo Felice', city: naples)
+  pick_up_locations << PickUpLocation.new(name:'Carovilli', city: naples)
+  pick_up_locations << PickUpLocation.new(name:'Casal Velino', city: naples)
+  pick_up_locations << PickUpLocation.new(name:'Caserta', city: naples)
+  pick_up_locations << PickUpLocation.new(name:'Castel Volturno', city: naples)
+  pick_up_locations << PickUpLocation.new(name:'Castellabate', city: naples)
+  pick_up_locations << PickUpLocation.new(name:'Castellammare di Stabia', city: naples)
+  pick_up_locations << PickUpLocation.new(name:'Cava dei Tirreni', city: naples)
+  pick_up_locations << PickUpLocation.new(name:'Cetara', city: naples)
+  pick_up_locations << PickUpLocation.new(name:'Conca dei Marini ', city: naples)
+  pick_up_locations << PickUpLocation.new(name:'Ercolano', city: naples)
+  pick_up_locations << PickUpLocation.new(name:'Fasano', city: naples)
+  pick_up_locations << PickUpLocation.new(name:'Foggia', city: naples)
+  pick_up_locations << PickUpLocation.new(name:'Formia', city: naples)
+  pick_up_locations << PickUpLocation.new(name:'Gaeta', city: naples)
+  pick_up_locations << PickUpLocation.new(name:'Ginestra degli Schiavoni', city: naples)
+  pick_up_locations << PickUpLocation.new(name:'Grottaminarda', city: naples)
+  pick_up_locations << PickUpLocation.new(name:'Maiori', city: naples)
+  pick_up_locations << PickUpLocation.new(name:'Marina del Cantone', city: naples)
+  pick_up_locations << PickUpLocation.new(name:'Massa Lubrense', city: naples)
+  pick_up_locations << PickUpLocation.new(name:'Minori', city: naples)
+  pick_up_locations << PickUpLocation.new(name:'Mondragone', city: naples)
+  pick_up_locations << PickUpLocation.new(name:'Naples Ferry Port', city: naples)
+  pick_up_locations << PickUpLocation.new(name:'Nola', city: naples)
+  pick_up_locations << PickUpLocation.new(name:'Paestum', city: naples)
+  pick_up_locations << PickUpLocation.new(name:'Palma Campania', city: naples)
+  pick_up_locations << PickUpLocation.new(name:'Pisciotta', city: naples)
+  pick_up_locations << PickUpLocation.new(name:'Pontecagnano', city: naples)
+  pick_up_locations << PickUpLocation.new(name:'Pontone', city: naples)
+  pick_up_locations << PickUpLocation.new(name:'Potenza', city: naples)
+  pick_up_locations << PickUpLocation.new(name:'Pozzuoli', city: naples)
+  pick_up_locations << PickUpLocation.new(name:'Praiano', city: naples)
+  pick_up_locations << PickUpLocation.new(name:'Salerno', city: naples)
+  pick_up_locations << PickUpLocation.new(name:'San Giovanni Rotondo', city: naples)
+  pick_up_locations << PickUpLocation.new(name:'Sant Agata sui Due golfi', city: naples)
+  pick_up_locations << PickUpLocation.new(name:'Sant Agnello', city: naples)
+  pick_up_locations << PickUpLocation.new(name:'Sant Antonio Abate', city: naples)
+  pick_up_locations << PickUpLocation.new(name:'Sant Arpino', city: naples)
+  pick_up_locations << PickUpLocation.new(name:'Sapri', city: naples)
+  pick_up_locations << PickUpLocation.new(name:'Scario', city: naples)
+  pick_up_locations << PickUpLocation.new(name:'Scauri', city: naples)
+  pick_up_locations << PickUpLocation.new(name:'Sesto Campano', city: naples)
+  pick_up_locations << PickUpLocation.new(name:'Telese', city: naples)
+  pick_up_locations << PickUpLocation.new(name:'Vietri sul Mare', city: naples)
+  pick_up_locations << PickUpLocation.new(name:'Visciano', city: naples)
+  pick_up_locations << PickUpLocation.new(name:'Olbia Airport', city: olbia)
+  pick_up_locations << PickUpLocation.new(name:'Marina Di Portisco', city: olbia)
+  pick_up_locations << PickUpLocation.new(name:'Porto Cervo', city: olbia)
+  pick_up_locations << PickUpLocation.new(name:'Cannigione', city: olbia)
+  pick_up_locations << PickUpLocation.new(name:'Badesi', city: olbia)
+  pick_up_locations << PickUpLocation.new(name:'San Teodoro', city: olbia)
+  pick_up_locations << PickUpLocation.new(name:'Baia Sardinia', city: olbia)
+  pick_up_locations << PickUpLocation.new(name:'La Maddalena', city: olbia)
+  pick_up_locations << PickUpLocation.new(name:'Abbiadori', city: olbia)
+  pick_up_locations << PickUpLocation.new(name:'Aglientu', city: olbia)
+  pick_up_locations << PickUpLocation.new(name:'Agrustos', city: olbia)
+  pick_up_locations << PickUpLocation.new(name:'Alghero', city: olbia)
+  pick_up_locations << PickUpLocation.new(name:'Arzachena', city: olbia)
+  pick_up_locations << PickUpLocation.new(name:'Barrabisa', city: olbia)
+  pick_up_locations << PickUpLocation.new(name:'Bitti', city: olbia)
+  pick_up_locations << PickUpLocation.new(name:'Budoni', city: olbia)
+  pick_up_locations << PickUpLocation.new(name:'Cala Capra', city: olbia)
+  pick_up_locations << PickUpLocation.new(name:'Cala Ginepro', city: olbia)
+  pick_up_locations << PickUpLocation.new(name:'Cala Girgolu', city: olbia)
+  pick_up_locations << PickUpLocation.new(name:'Cala Gonone', city: olbia)
+  pick_up_locations << PickUpLocation.new(name:'Cala Granu', city: olbia)
+  pick_up_locations << PickUpLocation.new(name:'Cala Liberotto', city: olbia)
+  pick_up_locations << PickUpLocation.new(name:'Cala Lupo', city: olbia)
+  pick_up_locations << PickUpLocation.new(name:'Cala del Faro', city: olbia)
+  pick_up_locations << PickUpLocation.new(name:'Cala di Volpe', city: olbia)
+  pick_up_locations << PickUpLocation.new(name:'Capo Coda Cavallo', city: olbia)
+  pick_up_locations << PickUpLocation.new(name:'Capo Comino', city: olbia)
+  pick_up_locations << PickUpLocation.new(name:'Capo Testa', city: olbia)
+  pick_up_locations << PickUpLocation.new(name:'Capo d Orso', city: olbia)
+  pick_up_locations << PickUpLocation.new(name:'Costa Caddu', city: olbia)
+  pick_up_locations << PickUpLocation.new(name:'Costa Corallina', city: olbia)
+  pick_up_locations << PickUpLocation.new(name:'Costa Dorata', city: olbia)
+  pick_up_locations << PickUpLocation.new(name:'Costa Paradiso', city: olbia)
+  pick_up_locations << PickUpLocation.new(name:'Costa Smeralda', city: olbia)
+  pick_up_locations << PickUpLocation.new(name:'Cugnana', city: olbia)
+  pick_up_locations << PickUpLocation.new(name:'Dorgali', city: olbia)
+  pick_up_locations << PickUpLocation.new(name:'Fonni', city: olbia)
+  pick_up_locations << PickUpLocation.new(name:'Golfo Aranci', city: olbia)
+  pick_up_locations << PickUpLocation.new(name:'Golfo di Marinella', city: olbia)
+  pick_up_locations << PickUpLocation.new(name:'Isola Rossa', city: olbia)
+  pick_up_locations << PickUpLocation.new(name:'La Caletta', city: olbia)
+  pick_up_locations << PickUpLocation.new(name:'La Marmorata', city: olbia)
+  pick_up_locations << PickUpLocation.new(name:'Le Saline', city: olbia)
+  pick_up_locations << PickUpLocation.new(name:'Liscia di Vacca', city: olbia)
+  pick_up_locations << PickUpLocation.new(name:'Lu Ciaccaru', city: olbia)
+  pick_up_locations << PickUpLocation.new(name:'Lu Fraili', city: olbia)
+  pick_up_locations << PickUpLocation.new(name:'Matta e Peru', city: olbia)
+  pick_up_locations << PickUpLocation.new(name:'Monte Petrosu', city: olbia)
+  pick_up_locations << PickUpLocation.new(name:'Nuoro', city: olbia)
+  pick_up_locations << PickUpLocation.new(name:'Nuraghe Palmavera', city: olbia)
+  pick_up_locations << PickUpLocation.new(name:'Olbia City Centre', city: olbia)
+  pick_up_locations << PickUpLocation.new(name:'Oliena', city: olbia)
+  pick_up_locations << PickUpLocation.new(name:'Olmedo', city: olbia)
+  pick_up_locations << PickUpLocation.new(name:'Orosei', city: olbia)
+  pick_up_locations << PickUpLocation.new(name:'Ottiolu', city: olbia)
+  pick_up_locations << PickUpLocation.new(name:'Ozieri', city: olbia)
+  pick_up_locations << PickUpLocation.new(name:'Palau', city: olbia)
+  pick_up_locations << PickUpLocation.new(name:'Pevero', city: olbia)
+  pick_up_locations << PickUpLocation.new(name:'Pitrizza', city: olbia)
+  pick_up_locations << PickUpLocation.new(name:'Pittulongu', city: olbia)
+  pick_up_locations << PickUpLocation.new(name:'Poltu Quatu', city: olbia)
+  pick_up_locations << PickUpLocation.new(name:'Portisco', city: olbia)
+  pick_up_locations << PickUpLocation.new(name:'Porto Ainu', city: olbia)
+  pick_up_locations << PickUpLocation.new(name:'Porto Istana', city: olbia)
+  pick_up_locations << PickUpLocation.new(name:'Porto Ottiolu', city: olbia)
+  pick_up_locations << PickUpLocation.new(name:'Porto Pollo', city: olbia)
+  pick_up_locations << PickUpLocation.new(name:'Porto Quadro', city: olbia)
+  pick_up_locations << PickUpLocation.new(name:'Porto Raphael', city: olbia)
+  pick_up_locations << PickUpLocation.new(name:'Porto Rotondo', city: olbia)
+  pick_up_locations << PickUpLocation.new(name:'Porto San Paolo', city: olbia)
+  pick_up_locations << PickUpLocation.new(name:'Porto Taverna', city: olbia)
+  pick_up_locations << PickUpLocation.new(name:'Portobello di Gallura', city: olbia)
+  pick_up_locations << PickUpLocation.new(name:'Posada', city: olbia)
+  pick_up_locations << PickUpLocation.new(name:'Punta Molara', city: olbia)
+  pick_up_locations << PickUpLocation.new(name:'Puntaldia', city: olbia)
+  pick_up_locations << PickUpLocation.new(name:'Rena Majore', city: olbia)
+  pick_up_locations << PickUpLocation.new(name:'Romazzino', city: olbia)
+  pick_up_locations << PickUpLocation.new(name:'San Pantaleo Olbia', city: olbia)
+  pick_up_locations << PickUpLocation.new(name:'Santa Teresa di Gallura', city: olbia)
+  pick_up_locations << PickUpLocation.new(name:'Siniscola', city: olbia)
+  pick_up_locations << PickUpLocation.new(name:'Tanca Manna Arzachena', city: olbia)
+  pick_up_locations << PickUpLocation.new(name:'Tempio Pausania', city: olbia)
+  pick_up_locations << PickUpLocation.new(name:'Tottubella', city: olbia)
+  pick_up_locations << PickUpLocation.new(name:'Trinita d Agultu', city: olbia)
+  pick_up_locations << PickUpLocation.new(name:'Valledoria', city: olbia)
+  pick_up_locations << PickUpLocation.new(name:'Vignola Mare', city: olbia)
+  pick_up_locations << PickUpLocation.new(name:'Village Cala della Torre', city: olbia)
+  pick_up_locations << PickUpLocation.new(name:'Palermo Airport', city: palermo)
+  pick_up_locations << PickUpLocation.new(name:'Palermo City Centre', city: palermo)
+  pick_up_locations << PickUpLocation.new(name:'Gioiosa Marea', city: palermo)
+  pick_up_locations << PickUpLocation.new(name:'Cefalu', city: palermo)
+  pick_up_locations << PickUpLocation.new(name:'Agrigento', city: palermo)
+  pick_up_locations << PickUpLocation.new(name:'Campofelice di Roccella', city: palermo)
+  pick_up_locations << PickUpLocation.new(name:'Terrasini', city: palermo)
+  pick_up_locations << PickUpLocation.new(name:'Bagheria', city: palermo)
+  pick_up_locations << PickUpLocation.new(name:'Caccamo', city: palermo)
+  pick_up_locations << PickUpLocation.new(name:'Capo d Orlando', city: palermo)
+  pick_up_locations << PickUpLocation.new(name:'Castelbuono', city: palermo)
+  pick_up_locations << PickUpLocation.new(name:'Casteldaccia', city: palermo)
+  pick_up_locations << PickUpLocation.new(name:'Corleone', city: palermo)
+  pick_up_locations << PickUpLocation.new(name:'Gangi', city: palermo)
+  pick_up_locations << PickUpLocation.new(name:'Lercara Friddi', city: palermo)
+  pick_up_locations << PickUpLocation.new(name:'Menfi', city: palermo)
+  pick_up_locations << PickUpLocation.new(name:'Monreale', city: palermo)
+  pick_up_locations << PickUpLocation.new(name:'Palazzo Adriano', city: palermo)
+  pick_up_locations << PickUpLocation.new(name:'Petralia Sottana', city: palermo)
+  pick_up_locations << PickUpLocation.new(name:'Piana degli Albanesi', city: palermo)
+  pick_up_locations << PickUpLocation.new(name:'Pollina', city: palermo)
+  pick_up_locations << PickUpLocation.new(name:'Porto Empedocle', city: palermo)
+  pick_up_locations << PickUpLocation.new(name:'Prizzi', city: palermo)
+  pick_up_locations << PickUpLocation.new(name:'San Giuseppe Jato', city: palermo)
+  pick_up_locations << PickUpLocation.new(name:'Sant Agata di Militello', city: palermo)
+  pick_up_locations << PickUpLocation.new(name:'Santa Flavia', city: palermo)
+  pick_up_locations << PickUpLocation.new(name:'Termini Imerese', city: palermo)
+  pick_up_locations << PickUpLocation.new(name:'Trabia', city: palermo)
+  pick_up_locations << PickUpLocation.new(name:'Pescara Airport', city: pescara)
+  pick_up_locations << PickUpLocation.new(name:'Pescara Cruise Port', city: pescara)
+  pick_up_locations << PickUpLocation.new(name:'Pescara Train Station', city: pescara)
+  pick_up_locations << PickUpLocation.new(name:'Pescara City Centre', city: pescara)
+  pick_up_locations << PickUpLocation.new(name:'Chieti', city: pescara)
+  pick_up_locations << PickUpLocation.new(name:'Manoppello', city: pescara)
+  pick_up_locations << PickUpLocation.new(name:'Lanciano', city: pescara)
+  pick_up_locations << PickUpLocation.new(name:'Castel del Monte', city: pescara)
+  pick_up_locations << PickUpLocation.new(name:'Campo di Giove', city: pescara)
+  pick_up_locations << PickUpLocation.new(name:'Ovindoli', city: pescara)
+  pick_up_locations << PickUpLocation.new(name:'San Benedetto del Tronto', city: pescara)
+  pick_up_locations << PickUpLocation.new(name:'Santo Stefano di Sessanio', city: pescara)
+  pick_up_locations << PickUpLocation.new(name:'Teramo', city: pescara)
+  pick_up_locations << PickUpLocation.new(name:'Tortoreto', city: pescara)
+  pick_up_locations << PickUpLocation.new(name:'Pisa Airport', city: pisa)
+  pick_up_locations << PickUpLocation.new(name:'Livorno Cruise Port', city: pisa)
+  pick_up_locations << PickUpLocation.new(name:'Pisa Train Station', city: pisa)
+  pick_up_locations << PickUpLocation.new(name:'Forte dei Marmi', city: pisa)
+  pick_up_locations << PickUpLocation.new(name:'Viareggio', city: pisa)
+  pick_up_locations << PickUpLocation.new(name:'Lucca', city: pisa)
+  pick_up_locations << PickUpLocation.new(name:'Pisa City Centre', city: pisa)
+  pick_up_locations << PickUpLocation.new(name:'Casciana Terme', city: pisa)
+  pick_up_locations << PickUpLocation.new(name:'Marina di Massa', city: pisa)
+  pick_up_locations << PickUpLocation.new(name:'Abetone', city: pisa)
+  pick_up_locations << PickUpLocation.new(name:'Altopascio', city: pisa)
+  pick_up_locations << PickUpLocation.new(name:'Artimino', city: pisa)
+  pick_up_locations << PickUpLocation.new(name:'Badia di Morrona', city: pisa)
+  pick_up_locations << PickUpLocation.new(name:'Bagni di Lucca', city: pisa)
+  pick_up_locations << PickUpLocation.new(name:'Balbano', city: pisa)
+  pick_up_locations << PickUpLocation.new(name:'Baragazza', city: pisa)
+  pick_up_locations << PickUpLocation.new(name:'Barga', city: pisa)
+  pick_up_locations << PickUpLocation.new(name:'Benabbio', city: pisa)
+  pick_up_locations << PickUpLocation.new(name:'Bibbona', city: pisa)
+  pick_up_locations << PickUpLocation.new(name:'Borgo a Mozzano', city: pisa)
+  pick_up_locations << PickUpLocation.new(name:'Camaiore', city: pisa)
+  pick_up_locations << PickUpLocation.new(name:'Campiglia Marittima', city: pisa)
+  pick_up_locations << PickUpLocation.new(name:'Campolemisi', city: pisa)
+  pick_up_locations << PickUpLocation.new(name:'Capannori', city: pisa)
+  pick_up_locations << PickUpLocation.new(name:'Cardoso', city: pisa)
+  pick_up_locations << PickUpLocation.new(name:'Carrara', city: pisa)
+  pick_up_locations << PickUpLocation.new(name:'Casatico', city: pisa)
+  pick_up_locations << PickUpLocation.new(name:'Castagneto Carducci', city: pisa)
+  pick_up_locations << PickUpLocation.new(name:'Castagno', city: pisa)
+  pick_up_locations << PickUpLocation.new(name:'Castiglioncello', city: pisa)
+  pick_up_locations << PickUpLocation.new(name:'Cecina', city: pisa)
+  pick_up_locations << PickUpLocation.new(name:'Cellese in Chianti', city: pisa)
+  pick_up_locations << PickUpLocation.new(name:'Cerreto Laghi', city: pisa)
+  pick_up_locations << PickUpLocation.new(name:'Cevoli', city: pisa)
+  pick_up_locations << PickUpLocation.new(name:'Ciciana', city: pisa)
+  pick_up_locations << PickUpLocation.new(name:'Cinquale', city: pisa)
+  pick_up_locations << PickUpLocation.new(name:'Corniglia', city: pisa)
+  pick_up_locations << PickUpLocation.new(name:'Donoratico', city: pisa)
+  pick_up_locations << PickUpLocation.new(name:'Fivizzano', city: pisa)
+  pick_up_locations << PickUpLocation.new(name:'Follonica', city: pisa)
+  pick_up_locations << PickUpLocation.new(name:'Fonteblanda', city: pisa)
+  pick_up_locations << PickUpLocation.new(name:'Fosciandora', city: pisa)
+  pick_up_locations << PickUpLocation.new(name:'Ginestra Fiorentina', city: pisa)
+  pick_up_locations << PickUpLocation.new(name:'Il Ciocco Resort', city: pisa)
+  pick_up_locations << PickUpLocation.new(name:'Licciana Nardi', city: pisa)
+  pick_up_locations << PickUpLocation.new(name:'Lido di Camaiore', city: pisa)
+  pick_up_locations << PickUpLocation.new(name:'Lorenzana', city: pisa)
+  pick_up_locations << PickUpLocation.new(name:'Marina di Castagneto', city: pisa)
+  pick_up_locations << PickUpLocation.new(name:'Marina di Pisa', city: pisa)
+  pick_up_locations << PickUpLocation.new(name:'Mastiano', city: pisa)
+  pick_up_locations << PickUpLocation.new(name:'Monsummano Terme', city: pisa)
+  pick_up_locations << PickUpLocation.new(name:'Monte Bottigli', city: pisa)
+  pick_up_locations << PickUpLocation.new(name:'Montecarlo Lucca', city: pisa)
+  pick_up_locations << PickUpLocation.new(name:'Montecatini Val di Cecina', city: pisa)
+  pick_up_locations << PickUpLocation.new(name:'Montemagno', city: pisa)
+  pick_up_locations << PickUpLocation.new(name:'Montescudaio', city: pisa)
+  pick_up_locations << PickUpLocation.new(name:'Montopoli', city: pisa)
+  pick_up_locations << PickUpLocation.new(name:'Nozzano Castello', city: pisa)
+  pick_up_locations << PickUpLocation.new(name:'Orciatico', city: pisa)
+  pick_up_locations << PickUpLocation.new(name:'Palaia', city: pisa)
+  pick_up_locations << PickUpLocation.new(name:'Palazzo Sarteano', city: pisa)
+  pick_up_locations << PickUpLocation.new(name:'Peccioli', city: pisa)
+  pick_up_locations << PickUpLocation.new(name:'Pietrasanta', city: pisa)
+  pick_up_locations << PickUpLocation.new(name:'Pieve Fosciana', city: pisa)
+  pick_up_locations << PickUpLocation.new(name:'Piombino', city: pisa)
+  pick_up_locations << PickUpLocation.new(name:'Pontedera', city: pisa)
+  pick_up_locations << PickUpLocation.new(name:'Portovenere', city: pisa)
+  pick_up_locations << PickUpLocation.new(name:'Pratello', city: pisa)
+  pick_up_locations << PickUpLocation.new(name:'Punta Ala', city: pisa)
+  pick_up_locations << PickUpLocation.new(name:'Ribolla', city: pisa)
+  pick_up_locations << PickUpLocation.new(name:'Riparbella', city: pisa)
+  pick_up_locations << PickUpLocation.new(name:'Riva degli Etruschi', city: pisa)
+  pick_up_locations << PickUpLocation.new(name:'Riva del Sole', city: pisa)
+  pick_up_locations << PickUpLocation.new(name:'Roccamare', city: pisa)
+  pick_up_locations << PickUpLocation.new(name:'Rosignano', city: pisa)
+  pick_up_locations << PickUpLocation.new(name:'San Giuliano Terme', city: pisa)
+  pick_up_locations << PickUpLocation.new(name:'San Pietro Marcigliano', city: pisa)
+  pick_up_locations << PickUpLocation.new(name:'San Vincenzo', city: pisa)
+  pick_up_locations << PickUpLocation.new(name:'Santa Lucia', city: pisa)
+  pick_up_locations << PickUpLocation.new(name:'Santa Maria del Giudice', city: pisa)
+  pick_up_locations << PickUpLocation.new(name:'Sarzana', city: pisa)
+  pick_up_locations << PickUpLocation.new(name:'Scarlino', city: pisa)
+  pick_up_locations << PickUpLocation.new(name:'Segromigno', city: pisa)
+  pick_up_locations << PickUpLocation.new(name:'Serre di Rapolano', city: pisa)
+  pick_up_locations << PickUpLocation.new(name:'Tellaro', city: pisa)
+  pick_up_locations << PickUpLocation.new(name:'Tirrenia', city: pisa)
+  pick_up_locations << PickUpLocation.new(name:'Vada', city: pisa)
+  pick_up_locations << PickUpLocation.new(name:'Rimini Airport', city: rimini)
+  pick_up_locations << PickUpLocation.new(name:'Pesaro', city: rimini)
+  pick_up_locations << PickUpLocation.new(name:'Terni', city: rimini)
+  pick_up_locations << PickUpLocation.new(name:'Rimini', city: rimini)
+  pick_up_locations << PickUpLocation.new(name:'Rome Ciampino Airport', city: rome)
+  pick_up_locations << PickUpLocation.new(name:'Rome Fiumicino Airport', city: rome)
+  pick_up_locations << PickUpLocation.new(name:'Anzio Ferry Port', city: rome)
+  pick_up_locations << PickUpLocation.new(name:'Civitavecchia Cruise Port', city: rome)
+  pick_up_locations << PickUpLocation.new(name:'Rome Termini Train Station', city: rome)
+  pick_up_locations << PickUpLocation.new(name:'Rome City Centre', city: rome)
+  pick_up_locations << PickUpLocation.new(name:'Rome Suburbs', city: rome)
+  pick_up_locations << PickUpLocation.new(name:'Civitavecchia Hotel', city: rome)
+  pick_up_locations << PickUpLocation.new(name:'Camping Fabulous', city: rome)
+  pick_up_locations << PickUpLocation.new(name:'Fiumicino', city: rome)
+  pick_up_locations << PickUpLocation.new(name:'Pomezia', city: rome)
+  pick_up_locations << PickUpLocation.new(name:'Acquasparta', city: rome)
+  pick_up_locations << PickUpLocation.new(name:'Ansedonia', city: rome)
+  pick_up_locations << PickUpLocation.new(name:'Anzio', city: rome)
+  pick_up_locations << PickUpLocation.new(name:'Assisi', city: rome)
+  pick_up_locations << PickUpLocation.new(name:'Bracciano', city: rome)
+  pick_up_locations << PickUpLocation.new(name:'Camping Flaminio Village', city: rome)
+  pick_up_locations << PickUpLocation.new(name:'Camping Happy Village', city: rome)
+  pick_up_locations << PickUpLocation.new(name:'Camping Village Roma', city: rome)
+  pick_up_locations << PickUpLocation.new(name:'Capestrano', city: rome)
+  pick_up_locations << PickUpLocation.new(name:'Cascia', city: rome)
+  pick_up_locations << PickUpLocation.new(name:'Cassino', city: rome)
+  pick_up_locations << PickUpLocation.new(name:'Castel Gandolfo', city: rome)
+  pick_up_locations << PickUpLocation.new(name:'Castel Romano', city: rome)
+  pick_up_locations << PickUpLocation.new(name:'Colleferro', city: rome)
+  pick_up_locations << PickUpLocation.new(name:'Fabrica di Roma', city: rome)
+  pick_up_locations << PickUpLocation.new(name:'Fiano Romano', city: rome)
+  pick_up_locations << PickUpLocation.new(name:'Fiuggi', city: rome)
+  pick_up_locations << PickUpLocation.new(name:'Fondi', city: rome)
+  pick_up_locations << PickUpLocation.new(name:'Fornole', city: rome)
+  pick_up_locations << PickUpLocation.new(name:'Frascati', city: rome)
+  pick_up_locations << PickUpLocation.new(name:'Fregene', city: rome)
+  pick_up_locations << PickUpLocation.new(name:'Frosinone', city: rome)
+  pick_up_locations << PickUpLocation.new(name:'Gavarano', city: rome)
+  pick_up_locations << PickUpLocation.new(name:'Greccio', city: rome)
+  pick_up_locations << PickUpLocation.new(name:'Grottaferrata', city: rome)
+  pick_up_locations << PickUpLocation.new(name:'Guidonia Montecelio', city: rome)
+  pick_up_locations << PickUpLocation.new(name:'L Aquila', city: rome)
+  pick_up_locations << PickUpLocation.new(name:'Ladispoli', city: rome)
+  pick_up_locations << PickUpLocation.new(name:'Latina', city: rome)
+  pick_up_locations << PickUpLocation.new(name:'Lavinio', city: rome)
+  pick_up_locations << PickUpLocation.new(name:'Lunghezza', city: rome)
+  pick_up_locations << PickUpLocation.new(name:'Marino', city: rome)
+  pick_up_locations << PickUpLocation.new(name:'Montalto di Castro', city: rome)
+  pick_up_locations << PickUpLocation.new(name:'Monte Caminetto', city: rome)
+  pick_up_locations << PickUpLocation.new(name:'Monte Porzio Catone', city: rome)
+  pick_up_locations << PickUpLocation.new(name:'Montemerano', city: rome)
+  pick_up_locations << PickUpLocation.new(name:'Narni', city: rome)
+  pick_up_locations << PickUpLocation.new(name:'Nettuno', city: rome)
+  pick_up_locations << PickUpLocation.new(name:'Norcia', city: rome)
+  pick_up_locations << PickUpLocation.new(name:'Orbetello', city: rome)
+  pick_up_locations << PickUpLocation.new(name:'Orvieto', city: rome)
+  pick_up_locations << PickUpLocation.new(name:'Ostia', city: rome)
+  pick_up_locations << PickUpLocation.new(name:'Palombara Sabina', city: rome)
+  pick_up_locations << PickUpLocation.new(name:'Perugia', city: rome)
+  pick_up_locations << PickUpLocation.new(name:'Pisterzo', city: rome)
+  pick_up_locations << PickUpLocation.new(name:'Ponzano Romano', city: rome)
+  pick_up_locations << PickUpLocation.new(name:'Porto Ercole', city: rome)
+  pick_up_locations << PickUpLocation.new(name:'Porto Santo Stefano', city: rome)
+  pick_up_locations << PickUpLocation.new(name:'Rocca di Mezzo', city: rome)
+  pick_up_locations << PickUpLocation.new(name:'Roccaraso', city: rome)
+  pick_up_locations << PickUpLocation.new(name:'Rome Ciampino Airport Hotel', city: rome)
+  pick_up_locations << PickUpLocation.new(name:'Rovere', city: rome)
+  pick_up_locations << PickUpLocation.new(name:'Sabaudia', city: rome)
+  pick_up_locations << PickUpLocation.new(name:'San Felice Circeo', city: rome)
+  pick_up_locations << PickUpLocation.new(name:'San Lorenzo Nuovo', city: rome)
+  pick_up_locations << PickUpLocation.new(name:'Santa Marinella', city: rome)
+  pick_up_locations << PickUpLocation.new(name:'Santopadre', city: rome)
+  pick_up_locations << PickUpLocation.new(name:'Saturnia', city: rome)
+  pick_up_locations << PickUpLocation.new(name:'Seven Hills Camping', city: rome)
+  pick_up_locations << PickUpLocation.new(name:'Soriano nel Cimino', city: rome)
+  pick_up_locations << PickUpLocation.new(name:'Spello', city: rome)
+  pick_up_locations << PickUpLocation.new(name:'Sperlonga', city: rome)
+  pick_up_locations << PickUpLocation.new(name:'Stimigliano', city: rome)
+  pick_up_locations << PickUpLocation.new(name:'Tarquinia', city: rome)
+  pick_up_locations << PickUpLocation.new(name:'Terminillo', city: rome)
+  pick_up_locations << PickUpLocation.new(name:'Termoli', city: rome)
+  pick_up_locations << PickUpLocation.new(name:'Terracina', city: rome)
+  pick_up_locations << PickUpLocation.new(name:'Tivoli', city: rome)
+  pick_up_locations << PickUpLocation.new(name:'Trevignano Romano', city: rome)
+  pick_up_locations << PickUpLocation.new(name:'Valmontone', city: rome)
+  pick_up_locations << PickUpLocation.new(name:'Trapani Airport', city: trapani)
+  pick_up_locations << PickUpLocation.new(name:'Sciacca', city: trapani)
+  pick_up_locations << PickUpLocation.new(name:'Trapani', city: trapani)
+  pick_up_locations << PickUpLocation.new(name:'Mazara del Vallo', city: trapani)
+  pick_up_locations << PickUpLocation.new(name:'Erice', city: trapani)
+  pick_up_locations << PickUpLocation.new(name:'Marsala', city: trapani)
+  pick_up_locations << PickUpLocation.new(name:'San Vito lo Capo', city: trapani)
+  pick_up_locations << PickUpLocation.new(name:'Gibellina', city: trapani)
+  pick_up_locations << PickUpLocation.new(name:'Selinunte', city: trapani)
+  pick_up_locations << PickUpLocation.new(name:'Treviso Airport', city: treviso)
+  pick_up_locations << PickUpLocation.new(name:'Treviso City Centre', city: treviso)
+  pick_up_locations << PickUpLocation.new(name:'Casale sul Sile', city: treviso)
+  pick_up_locations << PickUpLocation.new(name:'Asolo', city: treviso)
+  pick_up_locations << PickUpLocation.new(name:'Belluno', city: treviso)
+  pick_up_locations << PickUpLocation.new(name:'Cison Di Val Marino', city: treviso)
+  pick_up_locations << PickUpLocation.new(name:'Auronzo', city: treviso)
+  pick_up_locations << PickUpLocation.new(name:'Bassano', city: treviso)
+  pick_up_locations << PickUpLocation.new(name:'Castelfranco Veneto', city: treviso)
+  pick_up_locations << PickUpLocation.new(name:'Conegliano', city: treviso)
+  pick_up_locations << PickUpLocation.new(name:'Palmanova', city: treviso)
+  pick_up_locations << PickUpLocation.new(name:'Portogruaro', city: treviso)
+  pick_up_locations << PickUpLocation.new(name:'Roncade', city: treviso)
+  pick_up_locations << PickUpLocation.new(name:'Valdobbiadene', city: treviso)
+  pick_up_locations << PickUpLocation.new(name:'Vedelago', city: treviso)
+  pick_up_locations << PickUpLocation.new(name:'Villorba', city: treviso)
+  pick_up_locations << PickUpLocation.new(name:'Vittorio Veneto', city: treviso)
+  pick_up_locations << PickUpLocation.new(name:'Trieste Airport', city: trieste)
+  pick_up_locations << PickUpLocation.new(name:'Trieste Cruise Port', city: trieste)
+  pick_up_locations << PickUpLocation.new(name:'Trieste City Centre', city: trieste)
+  pick_up_locations << PickUpLocation.new(name:'Udine', city: trieste)
+  pick_up_locations << PickUpLocation.new(name:'Gorizia', city: trieste)
+  pick_up_locations << PickUpLocation.new(name:'Turin Airport', city: turin)
+  pick_up_locations << PickUpLocation.new(name:'Turin City Centre', city: turin)
+  pick_up_locations << PickUpLocation.new(name:'Pragelato', city: turin)
+  pick_up_locations << PickUpLocation.new(name:'La Thuile', city: turin)
+  pick_up_locations << PickUpLocation.new(name:'Sestriere', city: turin)
+  pick_up_locations << PickUpLocation.new(name:'Gressoney', city: turin)
+  pick_up_locations << PickUpLocation.new(name:'Courmayeur', city: turin)
+  pick_up_locations << PickUpLocation.new(name:'Alagna', city: turin)
+  pick_up_locations << PickUpLocation.new(name:'Alba', city: turin)
+  pick_up_locations << PickUpLocation.new(name:'Antagnod', city: turin)
+  pick_up_locations << PickUpLocation.new(name:'Aosta', city: turin)
+  pick_up_locations << PickUpLocation.new(name:'Asti', city: turin)
+  pick_up_locations << PickUpLocation.new(name:'Bardonecchia', city: turin)
+  pick_up_locations << PickUpLocation.new(name:'Brusson', city: turin)
+  pick_up_locations << PickUpLocation.new(name:'Cesana Torinese', city: turin)
+  pick_up_locations << PickUpLocation.new(name:'Claviere', city: turin)
+  pick_up_locations << PickUpLocation.new(name:'Cogne', city: turin)
+  pick_up_locations << PickUpLocation.new(name:'Crissolo', city: turin)
+  pick_up_locations << PickUpLocation.new(name:'Etroubles', city: turin)
+  pick_up_locations << PickUpLocation.new(name:'Gressoney Saint Jean', city: turin)
+  pick_up_locations << PickUpLocation.new(name:'Limone Piemonte', city: turin)
+  pick_up_locations << PickUpLocation.new(name:'Meran', city: turin)
+  pick_up_locations << PickUpLocation.new(name:'Paesana', city: turin)
+  pick_up_locations << PickUpLocation.new(name:'Passo Lavaze', city: turin)
+  pick_up_locations << PickUpLocation.new(name:'Piemonte', city: turin)
+  pick_up_locations << PickUpLocation.new(name:'Prali', city: turin)
+  pick_up_locations << PickUpLocation.new(name:'Prato Nevoso', city: turin)
+  pick_up_locations << PickUpLocation.new(name:'Pre Saint Didier', city: turin)
+  pick_up_locations << PickUpLocation.new(name:'Saint Rhemy en Bosses', city: turin)
+  pick_up_locations << PickUpLocation.new(name:'Saint Vincent Aosta', city: turin)
+  pick_up_locations << PickUpLocation.new(name:'Saluzzo', city: turin)
+  pick_up_locations << PickUpLocation.new(name:'San Sicario', city: turin)
+  pick_up_locations << PickUpLocation.new(name:'Sauze d Oulx', city: turin)
+  pick_up_locations << PickUpLocation.new(name:'Torgnon', city: turin)
+  pick_up_locations << PickUpLocation.new(name:'Valgrisenche', city: turin)
+  pick_up_locations << PickUpLocation.new(name:'Vercelli', city: turin)
+  pick_up_locations << PickUpLocation.new(name:'Venice Airport', city: venice)
+  pick_up_locations << PickUpLocation.new(name:'Venice Cruise Port', city: venice)
+  pick_up_locations << PickUpLocation.new(name:'Mestre Train Station', city: venice)
+  pick_up_locations << PickUpLocation.new(name:'St Lucia Train Station', city: venice)
+  pick_up_locations << PickUpLocation.new(name:'Venice City Hotels', city: venice)
+  pick_up_locations << PickUpLocation.new(name:'Mestre', city: venice)
+  pick_up_locations << PickUpLocation.new(name:'Lido di Jesolo', city: venice)
+  pick_up_locations << PickUpLocation.new(name:'Padova', city: venice)
+  pick_up_locations << PickUpLocation.new(name:'Camping Marina di Venezia', city: venice)
+  pick_up_locations << PickUpLocation.new(name:'Venice Piazzale Roma', city: venice)
+  pick_up_locations << PickUpLocation.new(name:'Abano Terme', city: venice)
+  pick_up_locations << PickUpLocation.new(name:'Adria', city: venice)
+  pick_up_locations << PickUpLocation.new(name:'Bassano del Grappa', city: venice)
+  pick_up_locations << PickUpLocation.new(name:'Bibione', city: venice)
+  pick_up_locations << PickUpLocation.new(name:'Burano', city: venice)
+  pick_up_locations << PickUpLocation.new(name:'Ca Savio', city: venice)
+  pick_up_locations << PickUpLocation.new(name:'Campagna Lupia', city: venice)
+  pick_up_locations << PickUpLocation.new(name:'Camping Union Lido', city: venice)
+  pick_up_locations << PickUpLocation.new(name:'Caorle', city: venice)
+  pick_up_locations << PickUpLocation.new(name:'Cavallino', city: venice)
+  pick_up_locations << PickUpLocation.new(name:'Chioggia', city: venice)
+  pick_up_locations << PickUpLocation.new(name:'Dolo', city: venice)
+  pick_up_locations << PickUpLocation.new(name:'Duna Verde', city: venice)
+  pick_up_locations << PickUpLocation.new(name:'Eraclea', city: venice)
+  pick_up_locations << PickUpLocation.new(name:'Follina', city: venice)
+  pick_up_locations << PickUpLocation.new(name:'Gemona del Friuli', city: venice)
+  pick_up_locations << PickUpLocation.new(name:'Gradisca D Isonzo', city: venice)
+  pick_up_locations << PickUpLocation.new(name:'Grado', city: venice)
+  pick_up_locations << PickUpLocation.new(name:'Jesolo', city: venice)
+  pick_up_locations << PickUpLocation.new(name:'Lido di Spina', city: venice)
+  pick_up_locations << PickUpLocation.new(name:'Lignano Sabbiadoro', city: venice)
+  pick_up_locations << PickUpLocation.new(name:'Marcon', city: venice)
+  pick_up_locations << PickUpLocation.new(name:'Martellago', city: venice)
+  pick_up_locations << PickUpLocation.new(name:'Meolo', city: venice)
+  pick_up_locations << PickUpLocation.new(name:'Mira', city: venice)
+  pick_up_locations << PickUpLocation.new(name:'Mirano', city: venice)
+  pick_up_locations << PickUpLocation.new(name:'Mogliano Veneto', city: venice)
+  pick_up_locations << PickUpLocation.new(name:'Murano', city: venice)
+  pick_up_locations << PickUpLocation.new(name:'Noventa di Piave', city: venice)
+  pick_up_locations << PickUpLocation.new(name:'Pordenone', city: venice)
+  pick_up_locations << PickUpLocation.new(name:'Porto Santa Margherita', city: venice)
+  pick_up_locations << PickUpLocation.new(name:'Pove del Grappa', city: venice)
+  pick_up_locations << PickUpLocation.new(name:'Punta Sabbioni', city: venice)
+  pick_up_locations << PickUpLocation.new(name:'Quarto d Altino', city: venice)
+  pick_up_locations << PickUpLocation.new(name:'Rovigo', city: venice)
+  pick_up_locations << PickUpLocation.new(name:'San Clemente Island', city: venice)
+  pick_up_locations << PickUpLocation.new(name:'San Servolo Island', city: venice)
+  pick_up_locations << PickUpLocation.new(name:'Sant Elena Island', city: venice)
+  pick_up_locations << PickUpLocation.new(name:'Spinea', city: venice)
+  pick_up_locations << PickUpLocation.new(name:'Stra', city: venice)
+  pick_up_locations << PickUpLocation.new(name:'Torcello', city: venice)
+  pick_up_locations << PickUpLocation.new(name:'Tremignon', city: venice)
+  pick_up_locations << PickUpLocation.new(name:'Venice Airport Hotels', city: venice)
+  pick_up_locations << PickUpLocation.new(name:'Venice City Hotels (via P Roma)', city: venice)
+  pick_up_locations << PickUpLocation.new(name:'Venice Lido', city: venice)
+  pick_up_locations << PickUpLocation.new(name:'Zelarino', city: venice)
+  pick_up_locations << PickUpLocation.new(name:'Verona Airport', city: verona)
+  pick_up_locations << PickUpLocation.new(name:'Bella Italia Camping', city: verona)
+  pick_up_locations << PickUpLocation.new(name:'Peschiera del Garda', city: verona)
+  pick_up_locations << PickUpLocation.new(name:'Sirmione', city: verona)
+  pick_up_locations << PickUpLocation.new(name:'Verona City Centre', city: verona)
+  pick_up_locations << PickUpLocation.new(name:'Garda', city: verona)
+  pick_up_locations << PickUpLocation.new(name:'Bardolino', city: verona)
+  pick_up_locations << PickUpLocation.new(name:'Alonte', city: verona)
+  pick_up_locations << PickUpLocation.new(name:'Arco', city: verona)
+  pick_up_locations << PickUpLocation.new(name:'Borno', city: verona)
+  pick_up_locations << PickUpLocation.new(name:'Brenzone', city: verona)
+  pick_up_locations << PickUpLocation.new(name:'Brescia', city: verona)
+  pick_up_locations << PickUpLocation.new(name:'Calceranica al Lago', city: verona)
+  pick_up_locations << PickUpLocation.new(name:'Castel d Azzano', city: verona)
+  pick_up_locations << PickUpLocation.new(name:'Castion Veronese', city: verona)
+  pick_up_locations << PickUpLocation.new(name:'Cisano', city: verona)
+  pick_up_locations << PickUpLocation.new(name:'Desenzano del Garda', city: verona)
+  pick_up_locations << PickUpLocation.new(name:'Falcade', city: verona)
+  pick_up_locations << PickUpLocation.new(name:'Ferrara', city: verona)
+  pick_up_locations << PickUpLocation.new(name:'Galzignano Terme', city: verona)
+  pick_up_locations << PickUpLocation.new(name:'Gardaland', city: verona)
+  pick_up_locations << PickUpLocation.new(name:'Gardone Riviera', city: verona)
+  pick_up_locations << PickUpLocation.new(name:'Gargnano', city: verona)
+  pick_up_locations << PickUpLocation.new(name:'Iseo', city: verona)
+  pick_up_locations << PickUpLocation.new(name:'Lazise', city: verona)
+  pick_up_locations << PickUpLocation.new(name:'Limone Sul Garda', city: verona)
+  pick_up_locations << PickUpLocation.new(name:'Lonato del Garda', city: verona)
+  pick_up_locations << PickUpLocation.new(name:'Malcesine', city: verona)
+  pick_up_locations << PickUpLocation.new(name:'Malga San Giorio', city: verona)
+  pick_up_locations << PickUpLocation.new(name:'Manerba del Garda', city: verona)
+  pick_up_locations << PickUpLocation.new(name:'Mantova', city: verona)
+  pick_up_locations << PickUpLocation.new(name:'Mezzane di Sotto', city: verona)
+  pick_up_locations << PickUpLocation.new(name:'Modena', city: verona)
+  pick_up_locations << PickUpLocation.new(name:'Molveno', city: verona)
+  pick_up_locations << PickUpLocation.new(name:'Moniga del Garda', city: verona)
+  pick_up_locations << PickUpLocation.new(name:'Montecampione', city: verona)
+  pick_up_locations << PickUpLocation.new(name:'Montichiari', city: verona)
+  pick_up_locations << PickUpLocation.new(name:'Obra di Vallarsa', city: verona)
+  pick_up_locations << PickUpLocation.new(name:'Padenghe', city: verona)
+  pick_up_locations << PickUpLocation.new(name:'Passo Rolle', city: verona)
+  pick_up_locations << PickUpLocation.new(name:'Pedemonte', city: verona)
+  pick_up_locations << PickUpLocation.new(name:'Pinzolo', city: verona)
+  pick_up_locations << PickUpLocation.new(name:'Povolaro', city: verona)
+  pick_up_locations << PickUpLocation.new(name:'Pozza di Fassa', city: verona)
+  pick_up_locations << PickUpLocation.new(name:'Reggio Emilia', city: verona)
+  pick_up_locations << PickUpLocation.new(name:'Riva del Garda', city: verona)
+  pick_up_locations << PickUpLocation.new(name:'Salionze', city: verona)
+  pick_up_locations << PickUpLocation.new(name:'Salo', city: verona)
+  pick_up_locations << PickUpLocation.new(name:'San Benedetto Po', city: verona)
+  pick_up_locations << PickUpLocation.new(name:'San Bonifacio', city: verona)
+  pick_up_locations << PickUpLocation.new(name:'San Felice del Benaco', city: verona)
+  pick_up_locations << PickUpLocation.new(name:'San Giovanni Lupatoto', city: verona)
+  pick_up_locations << PickUpLocation.new(name:'Sandrigo', city: verona)
+  pick_up_locations << PickUpLocation.new(name:'Solferino', city: verona)
+  pick_up_locations << PickUpLocation.new(name:'Sulzano', city: verona)
+  pick_up_locations << PickUpLocation.new(name:'Tignale', city: verona)
+  pick_up_locations << PickUpLocation.new(name:'Torbole', city: verona)
+  pick_up_locations << PickUpLocation.new(name:'Torri del Benaco', city: verona)
+  pick_up_locations << PickUpLocation.new(name:'Toscolano Maderno', city: verona)
+  pick_up_locations << PickUpLocation.new(name:'Vicenza', city: verona)
+
   puts 'Cities of Latvia'
   liepaja = City.find_by(name:'Liepaja')
   riga = City.find_by(name:'Riga')
-  PickUpLocation.create([
-            {name:'Liepaja Airport', city: liepaja},
-            {name:'Kuldiga', city: liepaja},
-            {name:'Ventspils', city: liepaja},
-            {name:'Liepaja', city: liepaja},
-            {name:'Talsi', city: liepaja},
-            {name:'Skrunda', city: liepaja},
-            {name:'Jelgava', city: liepaja},
-            {name:'Aizpute', city: liepaja},
-            {name:'Durbe', city: liepaja},
-            {name:'Riga Airport', city: riga},
-            {name:'Riga City Centre', city: riga},
-            {name:'Jurmala', city: riga},
-            {name:'Sigulda', city: riga},
-            {name:'Tukums', city: riga},
-            {name:'Cesis', city: riga},
-            {name:'Valmiera', city: riga},
-            {name:'Smiltene', city: riga}
-  ])
+  
+pick_up_locations << PickUpLocation.new(name:'Liepaja Airport', city: liepaja)
+pick_up_locations << PickUpLocation.new(name:'Kuldiga', city: liepaja)
+pick_up_locations << PickUpLocation.new(name:'Ventspils', city: liepaja)
+pick_up_locations << PickUpLocation.new(name:'Liepaja', city: liepaja)
+pick_up_locations << PickUpLocation.new(name:'Talsi', city: liepaja)
+pick_up_locations << PickUpLocation.new(name:'Skrunda', city: liepaja)
+pick_up_locations << PickUpLocation.new(name:'Jelgava', city: liepaja)
+pick_up_locations << PickUpLocation.new(name:'Aizpute', city: liepaja)
+pick_up_locations << PickUpLocation.new(name:'Durbe', city: liepaja)
+pick_up_locations << PickUpLocation.new(name:'Riga Airport', city: riga)
+pick_up_locations << PickUpLocation.new(name:'Riga City Centre', city: riga)
+pick_up_locations << PickUpLocation.new(name:'Jurmala', city: riga)
+pick_up_locations << PickUpLocation.new(name:'Sigulda', city: riga)
+pick_up_locations << PickUpLocation.new(name:'Tukums', city: riga)
+pick_up_locations << PickUpLocation.new(name:'Cesis', city: riga)
+pick_up_locations << PickUpLocation.new(name:'Valmiera', city: riga)
+pick_up_locations << PickUpLocation.new(name:'Smiltene', city: riga)
+  
   puts 'Cities of Lithuania'
   kaunas = City.find_by(name:'Kaunas')
   palanga = City.find_by(name:'Palanga')
   vilnius = City.find_by(name:'Vilnius')
-  PickUpLocation.create([
-            {name:'Kaunas Airport', city: kaunas},
-            {name:'Kaunas', city: kaunas},
-            {name:'Marijampole', city: kaunas},
-            {name:'Siauliai', city: kaunas},
-            {name:'Panevezys', city: kaunas},
-            {name:'Utena', city: kaunas},
-            {name:'Jonava', city: kaunas},
-            {name:'Palanga Airport', city: palanga},
-            {name:'Klaipeda', city: palanga},
-            {name:'Rietavas', city: palanga},
-            {name:'Palanga', city: palanga},
-            {name:'Mazeikiai', city: palanga},
-            {name:'Plunge', city: palanga},
-            {name:'Vilnius Airport', city: vilnius},
-            {name:'Vilnius City Centre', city: vilnius},
-            {name:'Radviliskis', city: vilnius},
-            {name:'Trakai', city: vilnius},
-            {name:'Elektrenai', city: vilnius},
-            {name:'Varena', city: vilnius},
-            {name:'Ukmerge', city: vilnius},
-            {name:'Druskinikai', city: vilnius},
-            {name:'Pakruojis', city: vilnius}
-          ])
+  
+pick_up_locations << PickUpLocation.new(name:'Kaunas Airport', city: kaunas)
+pick_up_locations << PickUpLocation.new(name:'Kaunas', city: kaunas)
+pick_up_locations << PickUpLocation.new(name:'Marijampole', city: kaunas)
+pick_up_locations << PickUpLocation.new(name:'Siauliai', city: kaunas)
+pick_up_locations << PickUpLocation.new(name:'Panevezys', city: kaunas)
+pick_up_locations << PickUpLocation.new(name:'Utena', city: kaunas)
+pick_up_locations << PickUpLocation.new(name:'Jonava', city: kaunas)
+pick_up_locations << PickUpLocation.new(name:'Palanga Airport', city: palanga)
+pick_up_locations << PickUpLocation.new(name:'Klaipeda', city: palanga)
+pick_up_locations << PickUpLocation.new(name:'Rietavas', city: palanga)
+pick_up_locations << PickUpLocation.new(name:'Palanga', city: palanga)
+pick_up_locations << PickUpLocation.new(name:'Mazeikiai', city: palanga)
+pick_up_locations << PickUpLocation.new(name:'Plunge', city: palanga)
+pick_up_locations << PickUpLocation.new(name:'Vilnius Airport', city: vilnius)
+pick_up_locations << PickUpLocation.new(name:'Vilnius City Centre', city: vilnius)
+pick_up_locations << PickUpLocation.new(name:'Radviliskis', city: vilnius)
+pick_up_locations << PickUpLocation.new(name:'Trakai', city: vilnius)
+pick_up_locations << PickUpLocation.new(name:'Elektrenai', city: vilnius)
+pick_up_locations << PickUpLocation.new(name:'Varena', city: vilnius)
+pick_up_locations << PickUpLocation.new(name:'Ukmerge', city: vilnius)
+pick_up_locations << PickUpLocation.new(name:'Druskinikai', city: vilnius)
+pick_up_locations << PickUpLocation.new(name:'Pakruojis', city: vilnius)
   puts 'Cities of Luxembourg'
   luxembourg = City.find_by(name: 'Luxembourg')
-  PickUpLocation.create([
-            {name:'Luxembourg Airport', city: luxembourg},
-            {name:'Luxembourg Train Station', city: luxembourg},
-            {name:'Bascharage', city: luxembourg},
-            {name:'Capellen', city: luxembourg},
-            {name:'Diekirch', city: luxembourg},
-            {name:'Differdange', city: luxembourg},
-            {name:'Dippach', city: luxembourg},
-            {name:'Bascharage', city: luxembourg},
-            {name:'Capellen', city: luxembourg},
-            {name:'Diekirch', city: luxembourg},
-            {name:'Differdange', city: luxembourg},
-            {name:'Dippach', city: luxembourg},
-            {name:'Dudelange', city: luxembourg},
-            {name:'Esch sur Alzette', city: luxembourg},
-            {name:'Ettelbruck', city: luxembourg},
-            {name:'Grevenmacher', city: luxembourg},
-            {name:'Luxembourg City Centre', city: luxembourg},
-            {name:'Mersch', city: luxembourg},
-            {name:'Mondorf les Bains', city: luxembourg},
-            {name:'Petange', city: luxembourg},
-            {name:'Remich', city: luxembourg},
-            {name:'Steinsel', city: luxembourg},
-            {name:'Vianden', city: luxembourg},
-            {name:'Wasserbillig', city: luxembourg},
-            {name:'Wiltz', city: luxembourg}
-          ])
+  
+pick_up_locations << PickUpLocation.new(name:'Luxembourg Airport', city: luxembourg)
+pick_up_locations << PickUpLocation.new(name:'Luxembourg Train Station', city: luxembourg)
+pick_up_locations << PickUpLocation.new(name:'Bascharage', city: luxembourg)
+pick_up_locations << PickUpLocation.new(name:'Capellen', city: luxembourg)
+pick_up_locations << PickUpLocation.new(name:'Diekirch', city: luxembourg)
+pick_up_locations << PickUpLocation.new(name:'Differdange', city: luxembourg)
+pick_up_locations << PickUpLocation.new(name:'Dippach', city: luxembourg)
+pick_up_locations << PickUpLocation.new(name:'Bascharage', city: luxembourg)
+pick_up_locations << PickUpLocation.new(name:'Capellen', city: luxembourg)
+pick_up_locations << PickUpLocation.new(name:'Diekirch', city: luxembourg)
+pick_up_locations << PickUpLocation.new(name:'Differdange', city: luxembourg)
+pick_up_locations << PickUpLocation.new(name:'Dippach', city: luxembourg)
+pick_up_locations << PickUpLocation.new(name:'Dudelange', city: luxembourg)
+pick_up_locations << PickUpLocation.new(name:'Esch sur Alzette', city: luxembourg)
+pick_up_locations << PickUpLocation.new(name:'Ettelbruck', city: luxembourg)
+pick_up_locations << PickUpLocation.new(name:'Grevenmacher', city: luxembourg)
+pick_up_locations << PickUpLocation.new(name:'Luxembourg City Centre', city: luxembourg)
+pick_up_locations << PickUpLocation.new(name:'Mersch', city: luxembourg)
+pick_up_locations << PickUpLocation.new(name:'Mondorf les Bains', city: luxembourg)
+pick_up_locations << PickUpLocation.new(name:'Petange', city: luxembourg)
+pick_up_locations << PickUpLocation.new(name:'Remich', city: luxembourg)
+pick_up_locations << PickUpLocation.new(name:'Steinsel', city: luxembourg)
+pick_up_locations << PickUpLocation.new(name:'Vianden', city: luxembourg)
+pick_up_locations << PickUpLocation.new(name:'Wasserbillig', city: luxembourg)
+pick_up_locations << PickUpLocation.new(name:'Wiltz', city: luxembourg)
   puts 'Cities of Malta'
   valletta = City.find_by(name: 'Valletta')
-  PickUpLocation.create([
-           {name:'Malta Airport',city: valletta},
-           {name:'Bugibba',city: valletta},
-           {name:'Mellieha',city: valletta},
-           {name:'Msida',city: valletta},
-           {name:'Sliema',city: valletta},
-           {name:'St Julians',city: valletta},
-           {name:'St Paul Bay',city: valletta},
-           {name:'Valletta City Centre',city: valletta}
-        ])
+  
+  pick_up_locations << PickUpLocation.new(name:'Malta Airport',city: valletta)
+  pick_up_locations << PickUpLocation.new(name:'Bugibba',city: valletta)
+  pick_up_locations << PickUpLocation.new(name:'Mellieha',city: valletta)
+  pick_up_locations << PickUpLocation.new(name:'Msida',city: valletta)
+  pick_up_locations << PickUpLocation.new(name:'Sliema',city: valletta)
+  pick_up_locations << PickUpLocation.new(name:'St Julians',city: valletta)
+  pick_up_locations << PickUpLocation.new(name:'St Paul Bay',city: valletta)
+  pick_up_locations << PickUpLocation.new(name:'Valletta City Centre',city: valletta)
   puts 'Cities of Netherlands'
   amsterdam = City.find_by(name:'Amsterdam')
   eindhoven = City.find_by(name:'Eindhoven')
   rotterdam = City.find_by(name:'Rotterdam')
-  PickUpLocation.create([
-      {name:'Amsterdam Schiphol Airport', city: amsterdam},
-      {name:'Amsterdam Cruise Port', city: amsterdam},
-      {name:'Amsterdam Train Station', city: amsterdam},
-      {name:'Amsterdam City Centre', city: amsterdam},
-      {name:'Oss', city: amsterdam},
-      {name:'Maastricht', city: amsterdam},
-      {name:'The Hague', city: amsterdam},
-      {name:'Utrecht', city: amsterdam},
-      {name:'Hilversum', city: amsterdam},
-      {name:'Eijsden', city: amsterdam},
-      {name:'Almere', city: amsterdam},
-      {name:'Amersfoort', city: amsterdam},
-      {name:'Amstelveen', city: amsterdam},
-      {name:'Amsterdam Movenpick Hotel', city: amsterdam},
-      {name:'Amsterdam North', city: amsterdam},
-      {name:'Amsterdam Zeeburg', city: amsterdam},
-      {name:'Apeldoorn', city: amsterdam},
-      {name:'Arnhem', city: amsterdam},
-      {name:'Assen', city: amsterdam},
-      {name:'Bergen NL', city: amsterdam},
-      {name:'Bergen op Zoom', city: amsterdam},
-      {name:'Beverwijk', city: amsterdam},
-      {name:'Breda', city: amsterdam},
-      {name:'Breukelen', city: amsterdam},
-      {name:'Bussum', city: amsterdam},
-      {name:'De Ruijterkade Oost', city: amsterdam},
-      {name:'Delft', city: amsterdam},
-      {name:'Deventer', city: amsterdam},
-      {name:'Doorwerth', city: amsterdam},
-      {name:'Dordrecht', city: amsterdam},
-      {name:'Duinrell', city: amsterdam},
-      {name:'Eemnes', city: amsterdam},
-      {name:'Elst', city: amsterdam},
-      {name:'Emmeloord', city: amsterdam},
-      {name:'Emmen', city: amsterdam},
-      {name:'Enschede', city: amsterdam},
-      {name:'Etten Leur', city: amsterdam},
-      {name:'Gorinchem', city: amsterdam},
-      {name:'Gorssel', city: amsterdam},
-      {name:'Groningen', city: amsterdam},
-      {name:'Haarlem', city: amsterdam},
-      {name:'Harlingen', city: amsterdam},
-      {name:'Heerlen', city: amsterdam},
-      {name:'Helmond', city: amsterdam},
-      {name:'Hengelo', city: amsterdam},
-      {name:'Hoogeveen', city: amsterdam},
-      {name:'Hoorn', city: amsterdam},
-      {name:'Huizen', city: amsterdam},
-      {name:'IJmuiden', city: amsterdam},
-      {name:'Kaatsheuvel', city: amsterdam},
-      {name:'Katwijk aan Zee', city: amsterdam},
-      {name:'Katwoude', city: amsterdam},
-      {name:'Leeuwarden', city: amsterdam},
-      {name:'Leiden', city: amsterdam},
-      {name:'Lelystad', city: amsterdam},
-      {name:'Lisse', city: amsterdam},
-      {name:'Loosdrecht', city: amsterdam},
-      {name:'Middelburg', city: amsterdam},
-      {name:'Muiden', city: amsterdam},
-      {name:'Nijmegen', city: amsterdam},
-      {name:'Noordwijk', city: amsterdam},
-      {name:'Noordwijkerhout', city: amsterdam},
-      {name:'Oegstgeest', city: amsterdam},
-      {name:'Oentsjerk', city: amsterdam},
-      {name:'Purmerend', city: amsterdam},
-      {name:'Rijnsburg', city: amsterdam},
-      {name:'Rijswijk', city: amsterdam},
-      {name:'Roosendaal', city: amsterdam},
-      {name:'Sint Odilienberg', city: amsterdam},
-      {name:'Sittard', city: amsterdam},
-      {name:'Sneek', city: amsterdam},
-      {name:'Spier', city: amsterdam},
-      {name:'Terneuzen', city: amsterdam},
-      {name:'Tiel', city: amsterdam},
-      {name:'Tilburg', city: amsterdam},
-      {name:'Uden', city: amsterdam},
-      {name:'Uithoorn', city: amsterdam},
-      {name:'Venlo', city: amsterdam},
-      {name:'Vianen', city: amsterdam},
-      {name:'Vlaardingen', city: amsterdam},
-      {name:'Vlissingen', city: amsterdam},
-      {name:'Wassenaar', city: amsterdam},
-      {name:'Weesp', city: amsterdam},
-      {name:'Wemeldinge', city: amsterdam},
-      {name:'Westpoort', city: amsterdam},
-      {name:'Woudsend', city: amsterdam},
-      {name:'Zaandam', city: amsterdam},
-      {name:'Zandvoort', city: amsterdam},
-      {name:'Zeeburg', city: amsterdam},
-      {name:'Zeewolde', city: amsterdam},
-      {name:'Zeist', city: amsterdam},
-      {name:'Zoetermeer', city: amsterdam},
-      {name:'Zuidoost', city: amsterdam},
-      {name:'Zutphen', city: amsterdam},
-      {name:'Zwolle', city: amsterdam},
-      {name:'s Hertogenbosch', city: amsterdam},
-      {name:'Eindhoven',city:eindhoven},
-      {name:'Eindhoven Airport',city:eindhoven},
-      {name:'Rotterdam Airport', city: rotterdam},
-      {name:'Rotterdam Cruise Port', city: rotterdam},
-      {name:'Rotterdam Europoort', city: rotterdam},
-      {name:'Rotterdam City Centre', city: rotterdam},
-      {name:'Sluis', city: rotterdam},
-      {name:'Rotterdam Hotel', city: rotterdam},
-      {name:'Capelle aan den IJssel', city: rotterdam},
-      {name:'Poortugaal', city: rotterdam},
-      {name:'Alphen aan den Rijn', city: rotterdam},
-      {name:'Woerden', city: rotterdam}
-        ])
+  
+pick_up_locations << PickUpLocation.new(name:'Amsterdam Schiphol Airport', city: amsterdam)
+pick_up_locations << PickUpLocation.new(name:'Amsterdam Cruise Port', city: amsterdam)
+pick_up_locations << PickUpLocation.new(name:'Amsterdam Train Station', city: amsterdam)
+pick_up_locations << PickUpLocation.new(name:'Amsterdam City Centre', city: amsterdam)
+pick_up_locations << PickUpLocation.new(name:'Oss', city: amsterdam)
+pick_up_locations << PickUpLocation.new(name:'Maastricht', city: amsterdam)
+pick_up_locations << PickUpLocation.new(name:'The Hague', city: amsterdam)
+pick_up_locations << PickUpLocation.new(name:'Utrecht', city: amsterdam)
+pick_up_locations << PickUpLocation.new(name:'Hilversum', city: amsterdam)
+pick_up_locations << PickUpLocation.new(name:'Eijsden', city: amsterdam)
+pick_up_locations << PickUpLocation.new(name:'Almere', city: amsterdam)
+pick_up_locations << PickUpLocation.new(name:'Amersfoort', city: amsterdam)
+pick_up_locations << PickUpLocation.new(name:'Amstelveen', city: amsterdam)
+pick_up_locations << PickUpLocation.new(name:'Amsterdam Movenpick Hotel', city: amsterdam)
+pick_up_locations << PickUpLocation.new(name:'Amsterdam North', city: amsterdam)
+pick_up_locations << PickUpLocation.new(name:'Amsterdam Zeeburg', city: amsterdam)
+pick_up_locations << PickUpLocation.new(name:'Apeldoorn', city: amsterdam)
+pick_up_locations << PickUpLocation.new(name:'Arnhem', city: amsterdam)
+pick_up_locations << PickUpLocation.new(name:'Assen', city: amsterdam)
+pick_up_locations << PickUpLocation.new(name:'Bergen NL', city: amsterdam)
+pick_up_locations << PickUpLocation.new(name:'Bergen op Zoom', city: amsterdam)
+pick_up_locations << PickUpLocation.new(name:'Beverwijk', city: amsterdam)
+pick_up_locations << PickUpLocation.new(name:'Breda', city: amsterdam)
+pick_up_locations << PickUpLocation.new(name:'Breukelen', city: amsterdam)
+pick_up_locations << PickUpLocation.new(name:'Bussum', city: amsterdam)
+pick_up_locations << PickUpLocation.new(name:'De Ruijterkade Oost', city: amsterdam)
+pick_up_locations << PickUpLocation.new(name:'Delft', city: amsterdam)
+pick_up_locations << PickUpLocation.new(name:'Deventer', city: amsterdam)
+pick_up_locations << PickUpLocation.new(name:'Doorwerth', city: amsterdam)
+pick_up_locations << PickUpLocation.new(name:'Dordrecht', city: amsterdam)
+pick_up_locations << PickUpLocation.new(name:'Duinrell', city: amsterdam)
+pick_up_locations << PickUpLocation.new(name:'Eemnes', city: amsterdam)
+pick_up_locations << PickUpLocation.new(name:'Elst', city: amsterdam)
+pick_up_locations << PickUpLocation.new(name:'Emmeloord', city: amsterdam)
+pick_up_locations << PickUpLocation.new(name:'Emmen', city: amsterdam)
+pick_up_locations << PickUpLocation.new(name:'Enschede', city: amsterdam)
+pick_up_locations << PickUpLocation.new(name:'Etten Leur', city: amsterdam)
+pick_up_locations << PickUpLocation.new(name:'Gorinchem', city: amsterdam)
+pick_up_locations << PickUpLocation.new(name:'Gorssel', city: amsterdam)
+pick_up_locations << PickUpLocation.new(name:'Groningen', city: amsterdam)
+pick_up_locations << PickUpLocation.new(name:'Haarlem', city: amsterdam)
+pick_up_locations << PickUpLocation.new(name:'Harlingen', city: amsterdam)
+pick_up_locations << PickUpLocation.new(name:'Heerlen', city: amsterdam)
+pick_up_locations << PickUpLocation.new(name:'Helmond', city: amsterdam)
+pick_up_locations << PickUpLocation.new(name:'Hengelo', city: amsterdam)
+pick_up_locations << PickUpLocation.new(name:'Hoogeveen', city: amsterdam)
+pick_up_locations << PickUpLocation.new(name:'Hoorn', city: amsterdam)
+pick_up_locations << PickUpLocation.new(name:'Huizen', city: amsterdam)
+pick_up_locations << PickUpLocation.new(name:'IJmuiden', city: amsterdam)
+pick_up_locations << PickUpLocation.new(name:'Kaatsheuvel', city: amsterdam)
+pick_up_locations << PickUpLocation.new(name:'Katwijk aan Zee', city: amsterdam)
+pick_up_locations << PickUpLocation.new(name:'Katwoude', city: amsterdam)
+pick_up_locations << PickUpLocation.new(name:'Leeuwarden', city: amsterdam)
+pick_up_locations << PickUpLocation.new(name:'Leiden', city: amsterdam)
+pick_up_locations << PickUpLocation.new(name:'Lelystad', city: amsterdam)
+pick_up_locations << PickUpLocation.new(name:'Lisse', city: amsterdam)
+pick_up_locations << PickUpLocation.new(name:'Loosdrecht', city: amsterdam)
+pick_up_locations << PickUpLocation.new(name:'Middelburg', city: amsterdam)
+pick_up_locations << PickUpLocation.new(name:'Muiden', city: amsterdam)
+pick_up_locations << PickUpLocation.new(name:'Nijmegen', city: amsterdam)
+pick_up_locations << PickUpLocation.new(name:'Noordwijk', city: amsterdam)
+pick_up_locations << PickUpLocation.new(name:'Noordwijkerhout', city: amsterdam)
+pick_up_locations << PickUpLocation.new(name:'Oegstgeest', city: amsterdam)
+pick_up_locations << PickUpLocation.new(name:'Oentsjerk', city: amsterdam)
+pick_up_locations << PickUpLocation.new(name:'Purmerend', city: amsterdam)
+pick_up_locations << PickUpLocation.new(name:'Rijnsburg', city: amsterdam)
+pick_up_locations << PickUpLocation.new(name:'Rijswijk', city: amsterdam)
+pick_up_locations << PickUpLocation.new(name:'Roosendaal', city: amsterdam)
+pick_up_locations << PickUpLocation.new(name:'Sint Odilienberg', city: amsterdam)
+pick_up_locations << PickUpLocation.new(name:'Sittard', city: amsterdam)
+pick_up_locations << PickUpLocation.new(name:'Sneek', city: amsterdam)
+pick_up_locations << PickUpLocation.new(name:'Spier', city: amsterdam)
+pick_up_locations << PickUpLocation.new(name:'Terneuzen', city: amsterdam)
+pick_up_locations << PickUpLocation.new(name:'Tiel', city: amsterdam)
+pick_up_locations << PickUpLocation.new(name:'Tilburg', city: amsterdam)
+pick_up_locations << PickUpLocation.new(name:'Uden', city: amsterdam)
+pick_up_locations << PickUpLocation.new(name:'Uithoorn', city: amsterdam)
+pick_up_locations << PickUpLocation.new(name:'Venlo', city: amsterdam)
+pick_up_locations << PickUpLocation.new(name:'Vianen', city: amsterdam)
+pick_up_locations << PickUpLocation.new(name:'Vlaardingen', city: amsterdam)
+pick_up_locations << PickUpLocation.new(name:'Vlissingen', city: amsterdam)
+pick_up_locations << PickUpLocation.new(name:'Wassenaar', city: amsterdam)
+pick_up_locations << PickUpLocation.new(name:'Weesp', city: amsterdam)
+pick_up_locations << PickUpLocation.new(name:'Wemeldinge', city: amsterdam)
+pick_up_locations << PickUpLocation.new(name:'Westpoort', city: amsterdam)
+pick_up_locations << PickUpLocation.new(name:'Woudsend', city: amsterdam)
+pick_up_locations << PickUpLocation.new(name:'Zaandam', city: amsterdam)
+pick_up_locations << PickUpLocation.new(name:'Zandvoort', city: amsterdam)
+pick_up_locations << PickUpLocation.new(name:'Zeeburg', city: amsterdam)
+pick_up_locations << PickUpLocation.new(name:'Zeewolde', city: amsterdam)
+pick_up_locations << PickUpLocation.new(name:'Zeist', city: amsterdam)
+pick_up_locations << PickUpLocation.new(name:'Zoetermeer', city: amsterdam)
+pick_up_locations << PickUpLocation.new(name:'Zuidoost', city: amsterdam)
+pick_up_locations << PickUpLocation.new(name:'Zutphen', city: amsterdam)
+pick_up_locations << PickUpLocation.new(name:'Zwolle', city: amsterdam)
+pick_up_locations << PickUpLocation.new(name:'s Hertogenbosch', city: amsterdam)
+pick_up_locations << PickUpLocation.new(name:'Eindhoven',city:eindhoven)
+pick_up_locations << PickUpLocation.new(name:'Eindhoven Airport',city:eindhoven)
+pick_up_locations << PickUpLocation.new(name:'Rotterdam Airport', city: rotterdam)
+pick_up_locations << PickUpLocation.new(name:'Rotterdam Cruise Port', city: rotterdam)
+pick_up_locations << PickUpLocation.new(name:'Rotterdam Europoort', city: rotterdam)
+pick_up_locations << PickUpLocation.new(name:'Rotterdam City Centre', city: rotterdam)
+pick_up_locations << PickUpLocation.new(name:'Sluis', city: rotterdam)
+pick_up_locations << PickUpLocation.new(name:'Rotterdam Hotel', city: rotterdam)
+pick_up_locations << PickUpLocation.new(name:'Capelle aan den IJssel', city: rotterdam)
+pick_up_locations << PickUpLocation.new(name:'Poortugaal', city: rotterdam)
+pick_up_locations << PickUpLocation.new(name:'Alphen aan den Rijn', city: rotterdam)
+pick_up_locations << PickUpLocation.new(name:'Woerden', city: rotterdam)
   puts 'Cities of Norway'
   oslo = City.find_by(name:'Oslo')
-  PickUpLocation.create([
-           {name:'Oslo Airport', city: oslo},
-           {name:'Sandefjord Airport', city: oslo},
-           {name:'Bergen', city: oslo},
-           {name:'Hamar', city: oslo},
-           {name:'Oslo City Centre', city: oslo},
-           {name:'Rygge Airport', city: oslo},
-           {name:'Stavanger', city: oslo},
-           {name:'Tromso', city: oslo},
-           {name:'Trondheim', city: oslo}
-       ])
+  
+  pick_up_locations << PickUpLocation.new(name:'Oslo Airport', city: oslo)
+  pick_up_locations << PickUpLocation.new(name:'Sandefjord Airport', city: oslo)
+  pick_up_locations << PickUpLocation.new(name:'Bergen', city: oslo)
+  pick_up_locations << PickUpLocation.new(name:'Hamar', city: oslo)
+  pick_up_locations << PickUpLocation.new(name:'Oslo City Centre', city: oslo)
+  pick_up_locations << PickUpLocation.new(name:'Rygge Airport', city: oslo)
+  pick_up_locations << PickUpLocation.new(name:'Stavanger', city: oslo)
+  pick_up_locations << PickUpLocation.new(name:'Tromso', city: oslo)
+  pick_up_locations << PickUpLocation.new(name:'Trondheim', city: oslo)
   puts 'Cities of Poland'
   bydgoszcz = City.find_by(name: 'Bydgoszcz')
   gdansk = City.find_by(name: 'Gdansk')
@@ -4451,762 +4439,761 @@ after :cities do
   poznan = City.find_by(name: 'Poznan')
   warsaw = City.find_by(name: 'Warsaw')
   wroclaw = City.find_by(name: 'Wroclaw')
-  PickUpLocation.create([
-      {name:'Bydgoszcz Airport',city: bydgoszcz},
-      {name:'Bydgoszcz',city: bydgoszcz},
-      {name:'Gdansk Airport', city: gdansk},
-      {name:'Elblag', city: gdansk},
-      {name:'Gdansk City Centre', city: gdansk},
-      {name:'Gdynia', city: gdansk},
-      {name:'Gizycko', city: gdansk},
-      {name:'Gorzow Wielkopolski', city: gdansk},
-      {name:'Grudziadz', city: gdansk},
-      {name:'Kolobrzeg', city: gdansk},
-      {name:'Koszalin', city: gdansk},
-      {name:'Kwidzyn', city: gdansk},
-      {name:'Olsztyn', city: gdansk},
-      {name:'Ostroda', city: gdansk},
-      {name:'Slupsk', city: gdansk},
-      {name:'Sopot', city: gdansk},
-      {name:'Swinoujscie', city: gdansk},
-      {name:'Szczecin', city: gdansk},
-      {name:'Torun', city: gdansk},
-      {name:'Katowice Airport', city: katowice},
-      {name:'Czestochowa', city: katowice},
-      {name:'Gliwice', city: katowice},
-      {name:'Katowice City Centre', city: katowice},
-      {name:'Pyrzowice', city: katowice},
-      {name:'Krakow Balice Airport', city: krakow},
-      {name:'Bielsko Biala', city: krakow},
-      {name:'Kielce', city: krakow},
-      {name:'Bialka Tatrzanska', city: krakow},
-      {name:'Bochnia', city: krakow},
-      {name:'Brzesko', city: krakow},
-      {name:'Bukowina Tatrzanska', city: krakow},
-      {name:'Chocholow', city: krakow},
-      {name:'Cieszyn', city: krakow},
-      {name:'Czarna Gora', city: krakow},
-      {name:'Gliczarow Gorny', city: krakow},
-      {name:'Gorlice', city: krakow},
-      {name:'Gubalowka', city: krakow},
-      {name:'Jurgow', city: krakow},
-      {name:'Korbielow', city: krakow},
-      {name:'Koscielisko', city: krakow},
-      {name:'Krakow City Centre', city: krakow},
-      {name:'Krakow Nowa Huta', city: krakow},
-      {name:'Krosno', city: krakow},
-      {name:'Krynica', city: krakow},
-      {name:'Limanowa', city: krakow},
-      {name:'Male Ciche', city: krakow},
-      {name:'Murzasiche', city: krakow},
-      {name:'Murzasichle', city: krakow},
-      {name:'Niepolomice', city: krakow},
-      {name:'Nosal', city: krakow},
-      {name:'Nowy Sacz', city: krakow},
-      {name:'Ostrowiec', city: krakow},
-      {name:'Pilsko', city: krakow},
-      {name:'Podhale', city: krakow},
-      {name:'Poronin', city: krakow},
-      {name:'Przemysl', city: krakow},
-      {name:'Rabka', city: krakow},
-      {name:'Rzeszow', city: krakow},
-      {name:'Sanok', city: krakow},
-      {name:'Siepraw', city: krakow},
-      {name:'Szczyrk', city: krakow},
-      {name:'Tarnow', city: krakow},
-      {name:'Tychy', city: krakow},
-      {name:'Wisla', city: krakow},
-      {name:'Zakopane', city: krakow},
-      {name:'Zamosc', city: krakow},
-      {name:'Zawoja', city: krakow},
-      {name:'Poznan Airport', city: poznan},
-      {name:'Buk', city: poznan},
-      {name:'Czaplinek', city: poznan},
-      {name:'Poznan City Centre', city: poznan},
-      {name:'Lodz Airport', city: warsaw},
-      {name:'Modlin Airport', city: warsaw},
-      {name:'Warsaw Airport', city: warsaw},
-      {name:'Augustow', city: warsaw},
-      {name:'Biala Podlaska', city: warsaw},
-      {name:'Bialowieza', city: warsaw},
-      {name:'Bialystok', city: warsaw},
-      {name:'Busowno', city: warsaw},
-      {name:'Ciechanow', city: warsaw},
-      {name:'Garwolin', city: warsaw},
-      {name:'Grojec', city: warsaw},
-      {name:'Hrubieszow', city: warsaw},
-      {name:'Inowroclaw', city: warsaw},
-      {name:'Kalisz', city: warsaw},
-      {name:'Konin', city: warsaw},
-      {name:'Kutno', city: warsaw},
-      {name:'Lodz', city: warsaw},
-      {name:'Lomza', city: warsaw},
-      {name:'Lublin', city: warsaw},
-      {name:'Minsk Mazowiecki', city: warsaw},
-      {name:'Mlawa', city: warsaw},
-      {name:'Mragowo', city: warsaw},
-      {name:'Ostroleka', city: warsaw},
-      {name:'Ostrow Mazowiecka', city: warsaw},
-      {name:'Ostrowiec Swietokrzyski', city: warsaw},
-      {name:'Piotrkow Trybunalski', city: warsaw},
-      {name:'Plock', city: warsaw},
-      {name:'Plonsk', city: warsaw},
-      {name:'Pulawy', city: warsaw},
-      {name:'Pultusk', city: warsaw},
-      {name:'Radom', city: warsaw},
-      {name:'Siedlce', city: warsaw},
-      {name:'Sochaczew', city: warsaw},
-      {name:'Sokolow', city: warsaw},
-      {name:'Starachowice', city: warsaw},
-      {name:'Suwalki', city: warsaw},
-      {name:'Terespol', city: warsaw},
-      {name:'Warsaw City Centre', city: warsaw},
-      {name:'Wloclawek', city: warsaw},
-      {name:'Wyszkow', city: warsaw},
-      {name:'Wroclaw Airport', city: wroclaw},
-      {name:'Jelenia Gora', city: wroclaw},
-      {name:'Karpacz', city: wroclaw},
-      {name:'Kudowa Zdroj', city: wroclaw},
-      {name:'Misecky Horni', city: wroclaw},
-      {name:'Niemodlin', city: wroclaw},
-      {name:'Opole', city: wroclaw},
-      {name:'Polkowice', city: wroclaw},
-      {name:'Szklarska Poreba', city: wroclaw},
-      {name:'Witow', city: wroclaw},
-      {name:'Wroclaw City Centre', city: wroclaw},
-      {name:'Zielona Gora', city: wroclaw}
-          ])
+  
+pick_up_locations << PickUpLocation.new(name:'Bydgoszcz Airport',city: bydgoszcz)
+pick_up_locations << PickUpLocation.new(name:'Bydgoszcz',city: bydgoszcz)
+pick_up_locations << PickUpLocation.new(name:'Gdansk Airport', city: gdansk)
+pick_up_locations << PickUpLocation.new(name:'Elblag', city: gdansk)
+pick_up_locations << PickUpLocation.new(name:'Gdansk City Centre', city: gdansk)
+pick_up_locations << PickUpLocation.new(name:'Gdynia', city: gdansk)
+pick_up_locations << PickUpLocation.new(name:'Gizycko', city: gdansk)
+pick_up_locations << PickUpLocation.new(name:'Gorzow Wielkopolski', city: gdansk)
+pick_up_locations << PickUpLocation.new(name:'Grudziadz', city: gdansk)
+pick_up_locations << PickUpLocation.new(name:'Kolobrzeg', city: gdansk)
+pick_up_locations << PickUpLocation.new(name:'Koszalin', city: gdansk)
+pick_up_locations << PickUpLocation.new(name:'Kwidzyn', city: gdansk)
+pick_up_locations << PickUpLocation.new(name:'Olsztyn', city: gdansk)
+pick_up_locations << PickUpLocation.new(name:'Ostroda', city: gdansk)
+pick_up_locations << PickUpLocation.new(name:'Slupsk', city: gdansk)
+pick_up_locations << PickUpLocation.new(name:'Sopot', city: gdansk)
+pick_up_locations << PickUpLocation.new(name:'Swinoujscie', city: gdansk)
+pick_up_locations << PickUpLocation.new(name:'Szczecin', city: gdansk)
+pick_up_locations << PickUpLocation.new(name:'Torun', city: gdansk)
+pick_up_locations << PickUpLocation.new(name:'Katowice Airport', city: katowice)
+pick_up_locations << PickUpLocation.new(name:'Czestochowa', city: katowice)
+pick_up_locations << PickUpLocation.new(name:'Gliwice', city: katowice)
+pick_up_locations << PickUpLocation.new(name:'Katowice City Centre', city: katowice)
+pick_up_locations << PickUpLocation.new(name:'Pyrzowice', city: katowice)
+pick_up_locations << PickUpLocation.new(name:'Krakow Balice Airport', city: krakow)
+pick_up_locations << PickUpLocation.new(name:'Bielsko Biala', city: krakow)
+pick_up_locations << PickUpLocation.new(name:'Kielce', city: krakow)
+pick_up_locations << PickUpLocation.new(name:'Bialka Tatrzanska', city: krakow)
+pick_up_locations << PickUpLocation.new(name:'Bochnia', city: krakow)
+pick_up_locations << PickUpLocation.new(name:'Brzesko', city: krakow)
+pick_up_locations << PickUpLocation.new(name:'Bukowina Tatrzanska', city: krakow)
+pick_up_locations << PickUpLocation.new(name:'Chocholow', city: krakow)
+pick_up_locations << PickUpLocation.new(name:'Cieszyn', city: krakow)
+pick_up_locations << PickUpLocation.new(name:'Czarna Gora', city: krakow)
+pick_up_locations << PickUpLocation.new(name:'Gliczarow Gorny', city: krakow)
+pick_up_locations << PickUpLocation.new(name:'Gorlice', city: krakow)
+pick_up_locations << PickUpLocation.new(name:'Gubalowka', city: krakow)
+pick_up_locations << PickUpLocation.new(name:'Jurgow', city: krakow)
+pick_up_locations << PickUpLocation.new(name:'Korbielow', city: krakow)
+pick_up_locations << PickUpLocation.new(name:'Koscielisko', city: krakow)
+pick_up_locations << PickUpLocation.new(name:'Krakow City Centre', city: krakow)
+pick_up_locations << PickUpLocation.new(name:'Krakow Nowa Huta', city: krakow)
+pick_up_locations << PickUpLocation.new(name:'Krosno', city: krakow)
+pick_up_locations << PickUpLocation.new(name:'Krynica', city: krakow)
+pick_up_locations << PickUpLocation.new(name:'Limanowa', city: krakow)
+pick_up_locations << PickUpLocation.new(name:'Male Ciche', city: krakow)
+pick_up_locations << PickUpLocation.new(name:'Murzasiche', city: krakow)
+pick_up_locations << PickUpLocation.new(name:'Murzasichle', city: krakow)
+pick_up_locations << PickUpLocation.new(name:'Niepolomice', city: krakow)
+pick_up_locations << PickUpLocation.new(name:'Nosal', city: krakow)
+pick_up_locations << PickUpLocation.new(name:'Nowy Sacz', city: krakow)
+pick_up_locations << PickUpLocation.new(name:'Ostrowiec', city: krakow)
+pick_up_locations << PickUpLocation.new(name:'Pilsko', city: krakow)
+pick_up_locations << PickUpLocation.new(name:'Podhale', city: krakow)
+pick_up_locations << PickUpLocation.new(name:'Poronin', city: krakow)
+pick_up_locations << PickUpLocation.new(name:'Przemysl', city: krakow)
+pick_up_locations << PickUpLocation.new(name:'Rabka', city: krakow)
+pick_up_locations << PickUpLocation.new(name:'Rzeszow', city: krakow)
+pick_up_locations << PickUpLocation.new(name:'Sanok', city: krakow)
+pick_up_locations << PickUpLocation.new(name:'Siepraw', city: krakow)
+pick_up_locations << PickUpLocation.new(name:'Szczyrk', city: krakow)
+pick_up_locations << PickUpLocation.new(name:'Tarnow', city: krakow)
+pick_up_locations << PickUpLocation.new(name:'Tychy', city: krakow)
+pick_up_locations << PickUpLocation.new(name:'Wisla', city: krakow)
+pick_up_locations << PickUpLocation.new(name:'Zakopane', city: krakow)
+pick_up_locations << PickUpLocation.new(name:'Zamosc', city: krakow)
+pick_up_locations << PickUpLocation.new(name:'Zawoja', city: krakow)
+pick_up_locations << PickUpLocation.new(name:'Poznan Airport', city: poznan)
+pick_up_locations << PickUpLocation.new(name:'Buk', city: poznan)
+pick_up_locations << PickUpLocation.new(name:'Czaplinek', city: poznan)
+pick_up_locations << PickUpLocation.new(name:'Poznan City Centre', city: poznan)
+pick_up_locations << PickUpLocation.new(name:'Lodz Airport', city: warsaw)
+pick_up_locations << PickUpLocation.new(name:'Modlin Airport', city: warsaw)
+pick_up_locations << PickUpLocation.new(name:'Warsaw Airport', city: warsaw)
+pick_up_locations << PickUpLocation.new(name:'Augustow', city: warsaw)
+pick_up_locations << PickUpLocation.new(name:'Biala Podlaska', city: warsaw)
+pick_up_locations << PickUpLocation.new(name:'Bialowieza', city: warsaw)
+pick_up_locations << PickUpLocation.new(name:'Bialystok', city: warsaw)
+pick_up_locations << PickUpLocation.new(name:'Busowno', city: warsaw)
+pick_up_locations << PickUpLocation.new(name:'Ciechanow', city: warsaw)
+pick_up_locations << PickUpLocation.new(name:'Garwolin', city: warsaw)
+pick_up_locations << PickUpLocation.new(name:'Grojec', city: warsaw)
+pick_up_locations << PickUpLocation.new(name:'Hrubieszow', city: warsaw)
+pick_up_locations << PickUpLocation.new(name:'Inowroclaw', city: warsaw)
+pick_up_locations << PickUpLocation.new(name:'Kalisz', city: warsaw)
+pick_up_locations << PickUpLocation.new(name:'Konin', city: warsaw)
+pick_up_locations << PickUpLocation.new(name:'Kutno', city: warsaw)
+pick_up_locations << PickUpLocation.new(name:'Lodz', city: warsaw)
+pick_up_locations << PickUpLocation.new(name:'Lomza', city: warsaw)
+pick_up_locations << PickUpLocation.new(name:'Lublin', city: warsaw)
+pick_up_locations << PickUpLocation.new(name:'Minsk Mazowiecki', city: warsaw)
+pick_up_locations << PickUpLocation.new(name:'Mlawa', city: warsaw)
+pick_up_locations << PickUpLocation.new(name:'Mragowo', city: warsaw)
+pick_up_locations << PickUpLocation.new(name:'Ostroleka', city: warsaw)
+pick_up_locations << PickUpLocation.new(name:'Ostrow Mazowiecka', city: warsaw)
+pick_up_locations << PickUpLocation.new(name:'Ostrowiec Swietokrzyski', city: warsaw)
+pick_up_locations << PickUpLocation.new(name:'Piotrkow Trybunalski', city: warsaw)
+pick_up_locations << PickUpLocation.new(name:'Plock', city: warsaw)
+pick_up_locations << PickUpLocation.new(name:'Plonsk', city: warsaw)
+pick_up_locations << PickUpLocation.new(name:'Pulawy', city: warsaw)
+pick_up_locations << PickUpLocation.new(name:'Pultusk', city: warsaw)
+pick_up_locations << PickUpLocation.new(name:'Radom', city: warsaw)
+pick_up_locations << PickUpLocation.new(name:'Siedlce', city: warsaw)
+pick_up_locations << PickUpLocation.new(name:'Sochaczew', city: warsaw)
+pick_up_locations << PickUpLocation.new(name:'Sokolow', city: warsaw)
+pick_up_locations << PickUpLocation.new(name:'Starachowice', city: warsaw)
+pick_up_locations << PickUpLocation.new(name:'Suwalki', city: warsaw)
+pick_up_locations << PickUpLocation.new(name:'Terespol', city: warsaw)
+pick_up_locations << PickUpLocation.new(name:'Warsaw City Centre', city: warsaw)
+pick_up_locations << PickUpLocation.new(name:'Wloclawek', city: warsaw)
+pick_up_locations << PickUpLocation.new(name:'Wyszkow', city: warsaw)
+pick_up_locations << PickUpLocation.new(name:'Wroclaw Airport', city: wroclaw)
+pick_up_locations << PickUpLocation.new(name:'Jelenia Gora', city: wroclaw)
+pick_up_locations << PickUpLocation.new(name:'Karpacz', city: wroclaw)
+pick_up_locations << PickUpLocation.new(name:'Kudowa Zdroj', city: wroclaw)
+pick_up_locations << PickUpLocation.new(name:'Misecky Horni', city: wroclaw)
+pick_up_locations << PickUpLocation.new(name:'Niemodlin', city: wroclaw)
+pick_up_locations << PickUpLocation.new(name:'Opole', city: wroclaw)
+pick_up_locations << PickUpLocation.new(name:'Polkowice', city: wroclaw)
+pick_up_locations << PickUpLocation.new(name:'Szklarska Poreba', city: wroclaw)
+pick_up_locations << PickUpLocation.new(name:'Witow', city: wroclaw)
+pick_up_locations << PickUpLocation.new(name:'Wroclaw City Centre', city: wroclaw)
+pick_up_locations << PickUpLocation.new(name:'Zielona Gora', city: wroclaw)
   puts 'Cities of Portugal'
   beja = City.find_by(name: 'Beja')
   faro = City.find_by(name: 'Faro')
   funchal = City.find_by(name: 'Funchal')
   lisbon = City.find_by(name: 'Lisbon')
   porto = City.find_by(name: 'Porto')
-  PickUpLocation.create([
-      {name:'Beja Airport',city: beja},
-      {name:'Beja City Centre',city: beja},
-      {name:'Almeirim',city: beja},
-      {name:'Amieira',city: beja},
-      {name:'Elvas',city: beja},
-      {name:'Esporao',city: beja},
-      {name:'Estremoz',city: beja},
-      {name:'Manta Rota',city: beja},
-      {name:'Odemira',city: beja},
-      {name:'Olhos de Agua',city: beja},
-      {name:'Portalegre',city: beja},
-      {name:'Reguengos de Monsaraz',city: beja},
-      {name:'Serra da Estrela',city: beja},
-      {name:'Faro Airport', city: faro},
-      {name:'Albufeira', city: faro},
-      {name:'Vilamoura', city: faro},
-      {name:'Praia da Luz', city: faro},
-      {name:'Alvor', city: faro},
-      {name:'Quarteira', city: faro},
-      {name:'Carvoeiro', city: faro},
-      {name:'Acoteias', city: faro},
-      {name:'Alcantarilha', city: faro},
-      {name:'Alcoutim', city: faro},
-      {name:'Alfontes', city: faro},
-      {name:'Algoz', city: faro},
-      {name:'Aljezur', city: faro},
-      {name:'Almadena', city: faro},
-      {name:'Almancil', city: faro},
-      {name:'Altura', city: faro},
-      {name:'Areias de Sao Joao', city: faro},
-      {name:'Armacao de Pera', city: faro},
-      {name:'Ayamonte', city: faro},
-      {name:'Balaia Golf Resort', city: faro},
-      {name:'Boliqueime', city: faro},
-      {name:'Bordeira', city: faro},
-      {name:'Budens', city: faro},
-      {name:'Burgau', city: faro},
-      {name:'Cabanas de Tavira', city: faro},
-      {name:'Carrapateira', city: faro},
-      {name:'Castro Marim', city: faro},
-      {name:'El Rompido', city: faro},
-      {name:'Estoi', city: faro},
-      {name:'Falesia', city: faro},
-      {name:'Faro City Centre', city: faro},
-      {name:'Ferragudo', city: faro},
-      {name:'Fuseta', city: faro},
-      {name:'Gale', city: faro},
-      {name:'Guia', city: faro},
-      {name:'Isla Antilla', city: faro},
-      {name:'Isla Canela', city: faro},
-      {name:'Isla Critina', city: faro},
-      {name:'Lagoa', city: faro},
-      {name:'Lepe', city: faro},
-      {name:'Loule', city: faro},
-      {name:'Matalascanas', city: faro},
-      {name:'Meia Praia', city: faro},
-      {name:'Moncarapacho', city: faro},
-      {name:'Monchique', city: faro},
-      {name:'Monte Gordo', city: faro},
-      {name:'Montechoro', city: faro},
-      {name:'Montenegro', city: faro},
-      {name:'Olhao', city: faro},
-      {name:'Paderne', city: faro},
-      {name:'Pechao', city: faro},
-      {name:'Pedras Del Rei', city: faro},
-      {name:'Penina', city: faro},
-      {name:'Porches', city: faro},
-      {name:'Praia da Falesia', city: faro},
-      {name:'Praia da Oura', city: faro},
-      {name:'Praia da Rocha', city: faro},
-      {name:'Praia do Vau', city: faro},
-      {name:'Punta Umbria', city: faro},
-      {name:'Quinta do Lago', city: faro},
-      {name:'Rocha Brava Resort', city: faro},
-      {name:'Sagres', city: faro},
-      {name:'Salema', city: faro},
-      {name:'Santa Barbara de Nexe', city: faro},
-      {name:'Santa Eulalia', city: faro},
-      {name:'Santa Luzia', city: faro},
-      {name:'Sao Bras de Alportel', city: faro},
-      {name:'Sao Rafael', city: faro},
-      {name:'Sesmarias', city: faro},
-      {name:'Silves', city: faro},
-      {name:'Tavira', city: faro},
-      {name:'Vale Carros', city: faro},
-      {name:'Vale Garrao', city: faro},
-      {name:'Vale Parra', city: faro},
-      {name:'Vale do Lobo', city: faro},
-      {name:'Vila Real De Santo Antonio', city: faro},
-      {name:'Madeira Funchal Airport', city: funchal},
-      {name:'Funchal City Centre', city: funchal},
-      {name:'Santa Cruz Funchal', city: funchal},
-      {name:'Machico', city: funchal},
-      {name:'Canico', city: funchal},
-      {name:'Ribeira Brava', city: funchal},
-      {name:'Calheta', city: funchal},
-      {name:'Boaventura', city: funchal},
-      {name:'Camara de Lobos', city: funchal},
-      {name:'Choupana Hills Resort', city: funchal},
-      {name:'Encumeada', city: funchal},
-      {name:'Jardim da Serra', city: funchal},
-      {name:'Ponta Delgada', city: funchal},
-      {name:'Ponta do Pargo', city: funchal},
-      {name:'Ponta do Sol', city: funchal},
-      {name:'Porto Moniz', city: funchal},
-      {name:'Porto da Cruz', city: funchal},
-      {name:'Santana', city: funchal},
-      {name:'Santo da Serra', city: funchal},
-      {name:'Sao Jorge', city: funchal},
-      {name:'Sao Vicente', city: funchal},
-      {name:'Lisbon Airport', city: lisbon},
-      {name:'Belem Cruise Port', city: lisbon},
-      {name:'Lisbon Cruise Port', city: lisbon},
-      {name:'Lisbon Train Station', city: lisbon},
-      {name:'Lisbon City Centre', city: lisbon},
-      {name:'Cascais', city: lisbon},
-      {name:'Lagos', city: lisbon},
-      {name:'Estoril', city: lisbon},
-      {name:'Sintra', city: lisbon},
-      {name:'Fatima', city: lisbon},
-      {name:'Alcobaca', city: lisbon},
-      {name:'Alcochete', city: lisbon},
-      {name:'Algarve', city: lisbon},
-      {name:'Azinhaga', city: lisbon},
-      {name:'Batalha', city: lisbon},
-      {name:'Bombarral', city: lisbon},
-      {name:'Caldas da Rainha', city: lisbon},
-      {name:'Caparica', city: lisbon},
-      {name:'Castelo Branco', city: lisbon},
-      {name:'Charneca da Caparica', city: lisbon},
-      {name:'Coimbra', city: lisbon},
-      {name:'Colares', city: lisbon},
-      {name:'Costa da Caparica', city: lisbon},
-      {name:'Ericeira', city: lisbon},
-      {name:'Evora', city: lisbon},
-      {name:'Figueira da Foz', city: lisbon},
-      {name:'Foros de Salvaterra', city: lisbon},
-      {name:'Foz do Arelho', city: lisbon},
-      {name:'Fundao', city: lisbon},
-      {name:'Gradil', city: lisbon},
-      {name:'Guincho', city: lisbon},
-      {name:'Leiria', city: lisbon},
-      {name:'Luso', city: lisbon},
-      {name:'Mafra', city: lisbon},
-      {name:'Marinha Grande', city: lisbon},
-      {name:'Mindelo', city: lisbon},
-      {name:'Miraflores', city: lisbon},
-      {name:'Montijo', city: lisbon},
-      {name:'Nazare', city: lisbon},
-      {name:'Obidos', city: lisbon},
-      {name:'Oeiras', city: lisbon},
-      {name:'Paco de Arcos', city: lisbon},
-      {name:'Palmela', city: lisbon},
-      {name:'Penha Longa Golf Resort', city: lisbon},
-      {name:'Peniche', city: lisbon},
-      {name:'Portimao', city: lisbon},
-      {name:'Praia Grande', city: lisbon},
-      {name:'Praia del Rey', city: lisbon},
-      {name:'Private tour of Lisbon', city: lisbon},
-      {name:'Queijas', city: lisbon},
-      {name:'Queluz', city: lisbon},
-      {name:'Salir do Porto', city: lisbon},
-      {name:'Santa Cruz', city: lisbon},
-      {name:'Santa Iria da Azoia', city: lisbon},
-      {name:'Santa Maria de Belem', city: lisbon},
-      {name:'Santarem', city: lisbon},
-      {name:'Santiago de Cacem', city: lisbon},
-      {name:'Santo Estevao', city: lisbon},
-      {name:'Sao Martinho do Porto', city: lisbon},
-      {name:'Seixal', city: lisbon},
-      {name:'Sesimbra', city: lisbon},
-      {name:'Setubal', city: lisbon},
-      {name:'Sevilha', city: lisbon},
-      {name:'Sines', city: lisbon},
-      {name:'Sintra Private Tour', city: lisbon},
-      {name:'Tomar', city: lisbon},
-      {name:'Torres Vedras', city: lisbon},
-      {name:'Troia by Ferry', city: lisbon},
-      {name:'Troia by road', city: lisbon},
-      {name:'Turcifal', city: lisbon},
-      {name:'Vieira de Leiria', city: lisbon},
-      {name:'Vila do Bispo', city: lisbon},
-      {name:'Villa Nova de Milfontes', city: lisbon},
-      {name:'Porto Airport', city: porto},
-      {name:'Porto Cruise Port', city: porto},
-      {name:'Porto City Centre', city: porto},
-      {name:'Vila Nova de Gaia', city: porto},
-      {name:'Aveiro', city: porto},
-      {name:'Esposende', city: porto},
-      {name:'Braga', city: porto},
-      {name:'Viseu', city: porto},
-      {name:'Amarante', city: porto},
-      {name:'Arcos de Valdevez', city: porto},
-      {name:'Baiona', city: porto},
-      {name:'Barcelos', city: porto},
-      {name:'Braganca', city: porto},
-      {name:'Bussaco', city: porto},
-      {name:'Chaves', city: porto},
-      {name:'Espinho', city: porto},
-      {name:'Estarreja', city: porto},
-      {name:'Europarque', city: porto},
-      {name:'Guarda', city: porto},
-      {name:'Guimaraes', city: porto},
-      {name:'Lamego', city: porto},
-      {name:'Mirandela', city: porto},
-      {name:'Moncao', city: porto},
-      {name:'Oliveira de Azemeis', city: porto},
-      {name:'Ovar', city: porto},
-      {name:'Pacos de Ferreira', city: porto},
-      {name:'Paredes de Coura', city: porto},
-      {name:'Penafiel', city: porto},
-      {name:'Peso da Regua', city: porto},
-      {name:'Pinhao', city: porto},
-      {name:'Ponte da Barca', city: porto},
-      {name:'Ponte de Lima', city: porto},
-      {name:'Povoa de Varzim', city: porto},
-      {name:'Santa Maria da Feira', city: porto},
-      {name:'Santo Tirso', city: porto},
-      {name:'Sao Joao da Madeira', city: porto},
-      {name:'Tui', city: porto},
-      {name:'Valenca do Minho', city: porto},
-      {name:'Viana do Castelo', city: porto},
-      {name:'Vidago', city: porto},
-      {name:'Vila Real', city: porto},
-      {name:'Vila do Conde', city: porto},
-      {name:'Viseu', city: porto}
-        ])
+  
+pick_up_locations << PickUpLocation.new(name:'Beja Airport',city: beja)
+pick_up_locations << PickUpLocation.new(name:'Beja City Centre',city: beja)
+pick_up_locations << PickUpLocation.new(name:'Almeirim',city: beja)
+pick_up_locations << PickUpLocation.new(name:'Amieira',city: beja)
+pick_up_locations << PickUpLocation.new(name:'Elvas',city: beja)
+pick_up_locations << PickUpLocation.new(name:'Esporao',city: beja)
+pick_up_locations << PickUpLocation.new(name:'Estremoz',city: beja)
+pick_up_locations << PickUpLocation.new(name:'Manta Rota',city: beja)
+pick_up_locations << PickUpLocation.new(name:'Odemira',city: beja)
+pick_up_locations << PickUpLocation.new(name:'Olhos de Agua',city: beja)
+pick_up_locations << PickUpLocation.new(name:'Portalegre',city: beja)
+pick_up_locations << PickUpLocation.new(name:'Reguengos de Monsaraz',city: beja)
+pick_up_locations << PickUpLocation.new(name:'Serra da Estrela',city: beja)
+pick_up_locations << PickUpLocation.new(name:'Faro Airport', city: faro)
+pick_up_locations << PickUpLocation.new(name:'Albufeira', city: faro)
+pick_up_locations << PickUpLocation.new(name:'Vilamoura', city: faro)
+pick_up_locations << PickUpLocation.new(name:'Praia da Luz', city: faro)
+pick_up_locations << PickUpLocation.new(name:'Alvor', city: faro)
+pick_up_locations << PickUpLocation.new(name:'Quarteira', city: faro)
+pick_up_locations << PickUpLocation.new(name:'Carvoeiro', city: faro)
+pick_up_locations << PickUpLocation.new(name:'Acoteias', city: faro)
+pick_up_locations << PickUpLocation.new(name:'Alcantarilha', city: faro)
+pick_up_locations << PickUpLocation.new(name:'Alcoutim', city: faro)
+pick_up_locations << PickUpLocation.new(name:'Alfontes', city: faro)
+pick_up_locations << PickUpLocation.new(name:'Algoz', city: faro)
+pick_up_locations << PickUpLocation.new(name:'Aljezur', city: faro)
+pick_up_locations << PickUpLocation.new(name:'Almadena', city: faro)
+pick_up_locations << PickUpLocation.new(name:'Almancil', city: faro)
+pick_up_locations << PickUpLocation.new(name:'Altura', city: faro)
+pick_up_locations << PickUpLocation.new(name:'Areias de Sao Joao', city: faro)
+pick_up_locations << PickUpLocation.new(name:'Armacao de Pera', city: faro)
+pick_up_locations << PickUpLocation.new(name:'Ayamonte', city: faro)
+pick_up_locations << PickUpLocation.new(name:'Balaia Golf Resort', city: faro)
+pick_up_locations << PickUpLocation.new(name:'Boliqueime', city: faro)
+pick_up_locations << PickUpLocation.new(name:'Bordeira', city: faro)
+pick_up_locations << PickUpLocation.new(name:'Budens', city: faro)
+pick_up_locations << PickUpLocation.new(name:'Burgau', city: faro)
+pick_up_locations << PickUpLocation.new(name:'Cabanas de Tavira', city: faro)
+pick_up_locations << PickUpLocation.new(name:'Carrapateira', city: faro)
+pick_up_locations << PickUpLocation.new(name:'Castro Marim', city: faro)
+pick_up_locations << PickUpLocation.new(name:'El Rompido', city: faro)
+pick_up_locations << PickUpLocation.new(name:'Estoi', city: faro)
+pick_up_locations << PickUpLocation.new(name:'Falesia', city: faro)
+pick_up_locations << PickUpLocation.new(name:'Faro City Centre', city: faro)
+pick_up_locations << PickUpLocation.new(name:'Ferragudo', city: faro)
+pick_up_locations << PickUpLocation.new(name:'Fuseta', city: faro)
+pick_up_locations << PickUpLocation.new(name:'Gale', city: faro)
+pick_up_locations << PickUpLocation.new(name:'Guia', city: faro)
+pick_up_locations << PickUpLocation.new(name:'Isla Antilla', city: faro)
+pick_up_locations << PickUpLocation.new(name:'Isla Canela', city: faro)
+pick_up_locations << PickUpLocation.new(name:'Isla Critina', city: faro)
+pick_up_locations << PickUpLocation.new(name:'Lagoa', city: faro)
+pick_up_locations << PickUpLocation.new(name:'Lepe', city: faro)
+pick_up_locations << PickUpLocation.new(name:'Loule', city: faro)
+pick_up_locations << PickUpLocation.new(name:'Matalascanas', city: faro)
+pick_up_locations << PickUpLocation.new(name:'Meia Praia', city: faro)
+pick_up_locations << PickUpLocation.new(name:'Moncarapacho', city: faro)
+pick_up_locations << PickUpLocation.new(name:'Monchique', city: faro)
+pick_up_locations << PickUpLocation.new(name:'Monte Gordo', city: faro)
+pick_up_locations << PickUpLocation.new(name:'Montechoro', city: faro)
+pick_up_locations << PickUpLocation.new(name:'Montenegro', city: faro)
+pick_up_locations << PickUpLocation.new(name:'Olhao', city: faro)
+pick_up_locations << PickUpLocation.new(name:'Paderne', city: faro)
+pick_up_locations << PickUpLocation.new(name:'Pechao', city: faro)
+pick_up_locations << PickUpLocation.new(name:'Pedras Del Rei', city: faro)
+pick_up_locations << PickUpLocation.new(name:'Penina', city: faro)
+pick_up_locations << PickUpLocation.new(name:'Porches', city: faro)
+pick_up_locations << PickUpLocation.new(name:'Praia da Falesia', city: faro)
+pick_up_locations << PickUpLocation.new(name:'Praia da Oura', city: faro)
+pick_up_locations << PickUpLocation.new(name:'Praia da Rocha', city: faro)
+pick_up_locations << PickUpLocation.new(name:'Praia do Vau', city: faro)
+pick_up_locations << PickUpLocation.new(name:'Punta Umbria', city: faro)
+pick_up_locations << PickUpLocation.new(name:'Quinta do Lago', city: faro)
+pick_up_locations << PickUpLocation.new(name:'Rocha Brava Resort', city: faro)
+pick_up_locations << PickUpLocation.new(name:'Sagres', city: faro)
+pick_up_locations << PickUpLocation.new(name:'Salema', city: faro)
+pick_up_locations << PickUpLocation.new(name:'Santa Barbara de Nexe', city: faro)
+pick_up_locations << PickUpLocation.new(name:'Santa Eulalia', city: faro)
+pick_up_locations << PickUpLocation.new(name:'Santa Luzia', city: faro)
+pick_up_locations << PickUpLocation.new(name:'Sao Bras de Alportel', city: faro)
+pick_up_locations << PickUpLocation.new(name:'Sao Rafael', city: faro)
+pick_up_locations << PickUpLocation.new(name:'Sesmarias', city: faro)
+pick_up_locations << PickUpLocation.new(name:'Silves', city: faro)
+pick_up_locations << PickUpLocation.new(name:'Tavira', city: faro)
+pick_up_locations << PickUpLocation.new(name:'Vale Carros', city: faro)
+pick_up_locations << PickUpLocation.new(name:'Vale Garrao', city: faro)
+pick_up_locations << PickUpLocation.new(name:'Vale Parra', city: faro)
+pick_up_locations << PickUpLocation.new(name:'Vale do Lobo', city: faro)
+pick_up_locations << PickUpLocation.new(name:'Vila Real De Santo Antonio', city: faro)
+pick_up_locations << PickUpLocation.new(name:'Madeira Funchal Airport', city: funchal)
+pick_up_locations << PickUpLocation.new(name:'Funchal City Centre', city: funchal)
+pick_up_locations << PickUpLocation.new(name:'Santa Cruz Funchal', city: funchal)
+pick_up_locations << PickUpLocation.new(name:'Machico', city: funchal)
+pick_up_locations << PickUpLocation.new(name:'Canico', city: funchal)
+pick_up_locations << PickUpLocation.new(name:'Ribeira Brava', city: funchal)
+pick_up_locations << PickUpLocation.new(name:'Calheta', city: funchal)
+pick_up_locations << PickUpLocation.new(name:'Boaventura', city: funchal)
+pick_up_locations << PickUpLocation.new(name:'Camara de Lobos', city: funchal)
+pick_up_locations << PickUpLocation.new(name:'Choupana Hills Resort', city: funchal)
+pick_up_locations << PickUpLocation.new(name:'Encumeada', city: funchal)
+pick_up_locations << PickUpLocation.new(name:'Jardim da Serra', city: funchal)
+pick_up_locations << PickUpLocation.new(name:'Ponta Delgada', city: funchal)
+pick_up_locations << PickUpLocation.new(name:'Ponta do Pargo', city: funchal)
+pick_up_locations << PickUpLocation.new(name:'Ponta do Sol', city: funchal)
+pick_up_locations << PickUpLocation.new(name:'Porto Moniz', city: funchal)
+pick_up_locations << PickUpLocation.new(name:'Porto da Cruz', city: funchal)
+pick_up_locations << PickUpLocation.new(name:'Santana', city: funchal)
+pick_up_locations << PickUpLocation.new(name:'Santo da Serra', city: funchal)
+pick_up_locations << PickUpLocation.new(name:'Sao Jorge', city: funchal)
+pick_up_locations << PickUpLocation.new(name:'Sao Vicente', city: funchal)
+pick_up_locations << PickUpLocation.new(name:'Lisbon Airport', city: lisbon)
+pick_up_locations << PickUpLocation.new(name:'Belem Cruise Port', city: lisbon)
+pick_up_locations << PickUpLocation.new(name:'Lisbon Cruise Port', city: lisbon)
+pick_up_locations << PickUpLocation.new(name:'Lisbon Train Station', city: lisbon)
+pick_up_locations << PickUpLocation.new(name:'Lisbon City Centre', city: lisbon)
+pick_up_locations << PickUpLocation.new(name:'Cascais', city: lisbon)
+pick_up_locations << PickUpLocation.new(name:'Lagos', city: lisbon)
+pick_up_locations << PickUpLocation.new(name:'Estoril', city: lisbon)
+pick_up_locations << PickUpLocation.new(name:'Sintra', city: lisbon)
+pick_up_locations << PickUpLocation.new(name:'Fatima', city: lisbon)
+pick_up_locations << PickUpLocation.new(name:'Alcobaca', city: lisbon)
+pick_up_locations << PickUpLocation.new(name:'Alcochete', city: lisbon)
+pick_up_locations << PickUpLocation.new(name:'Algarve', city: lisbon)
+pick_up_locations << PickUpLocation.new(name:'Azinhaga', city: lisbon)
+pick_up_locations << PickUpLocation.new(name:'Batalha', city: lisbon)
+pick_up_locations << PickUpLocation.new(name:'Bombarral', city: lisbon)
+pick_up_locations << PickUpLocation.new(name:'Caldas da Rainha', city: lisbon)
+pick_up_locations << PickUpLocation.new(name:'Caparica', city: lisbon)
+pick_up_locations << PickUpLocation.new(name:'Castelo Branco', city: lisbon)
+pick_up_locations << PickUpLocation.new(name:'Charneca da Caparica', city: lisbon)
+pick_up_locations << PickUpLocation.new(name:'Coimbra', city: lisbon)
+pick_up_locations << PickUpLocation.new(name:'Colares', city: lisbon)
+pick_up_locations << PickUpLocation.new(name:'Costa da Caparica', city: lisbon)
+pick_up_locations << PickUpLocation.new(name:'Ericeira', city: lisbon)
+pick_up_locations << PickUpLocation.new(name:'Evora', city: lisbon)
+pick_up_locations << PickUpLocation.new(name:'Figueira da Foz', city: lisbon)
+pick_up_locations << PickUpLocation.new(name:'Foros de Salvaterra', city: lisbon)
+pick_up_locations << PickUpLocation.new(name:'Foz do Arelho', city: lisbon)
+pick_up_locations << PickUpLocation.new(name:'Fundao', city: lisbon)
+pick_up_locations << PickUpLocation.new(name:'Gradil', city: lisbon)
+pick_up_locations << PickUpLocation.new(name:'Guincho', city: lisbon)
+pick_up_locations << PickUpLocation.new(name:'Leiria', city: lisbon)
+pick_up_locations << PickUpLocation.new(name:'Luso', city: lisbon)
+pick_up_locations << PickUpLocation.new(name:'Mafra', city: lisbon)
+pick_up_locations << PickUpLocation.new(name:'Marinha Grande', city: lisbon)
+pick_up_locations << PickUpLocation.new(name:'Mindelo', city: lisbon)
+pick_up_locations << PickUpLocation.new(name:'Miraflores', city: lisbon)
+pick_up_locations << PickUpLocation.new(name:'Montijo', city: lisbon)
+pick_up_locations << PickUpLocation.new(name:'Nazare', city: lisbon)
+pick_up_locations << PickUpLocation.new(name:'Obidos', city: lisbon)
+pick_up_locations << PickUpLocation.new(name:'Oeiras', city: lisbon)
+pick_up_locations << PickUpLocation.new(name:'Paco de Arcos', city: lisbon)
+pick_up_locations << PickUpLocation.new(name:'Palmela', city: lisbon)
+pick_up_locations << PickUpLocation.new(name:'Penha Longa Golf Resort', city: lisbon)
+pick_up_locations << PickUpLocation.new(name:'Peniche', city: lisbon)
+pick_up_locations << PickUpLocation.new(name:'Portimao', city: lisbon)
+pick_up_locations << PickUpLocation.new(name:'Praia Grande', city: lisbon)
+pick_up_locations << PickUpLocation.new(name:'Praia del Rey', city: lisbon)
+pick_up_locations << PickUpLocation.new(name:'Private tour of Lisbon', city: lisbon)
+pick_up_locations << PickUpLocation.new(name:'Queijas', city: lisbon)
+pick_up_locations << PickUpLocation.new(name:'Queluz', city: lisbon)
+pick_up_locations << PickUpLocation.new(name:'Salir do Porto', city: lisbon)
+pick_up_locations << PickUpLocation.new(name:'Santa Cruz', city: lisbon)
+pick_up_locations << PickUpLocation.new(name:'Santa Iria da Azoia', city: lisbon)
+pick_up_locations << PickUpLocation.new(name:'Santa Maria de Belem', city: lisbon)
+pick_up_locations << PickUpLocation.new(name:'Santarem', city: lisbon)
+pick_up_locations << PickUpLocation.new(name:'Santiago de Cacem', city: lisbon)
+pick_up_locations << PickUpLocation.new(name:'Santo Estevao', city: lisbon)
+pick_up_locations << PickUpLocation.new(name:'Sao Martinho do Porto', city: lisbon)
+pick_up_locations << PickUpLocation.new(name:'Seixal', city: lisbon)
+pick_up_locations << PickUpLocation.new(name:'Sesimbra', city: lisbon)
+pick_up_locations << PickUpLocation.new(name:'Setubal', city: lisbon)
+pick_up_locations << PickUpLocation.new(name:'Sevilha', city: lisbon)
+pick_up_locations << PickUpLocation.new(name:'Sines', city: lisbon)
+pick_up_locations << PickUpLocation.new(name:'Sintra Private Tour', city: lisbon)
+pick_up_locations << PickUpLocation.new(name:'Tomar', city: lisbon)
+pick_up_locations << PickUpLocation.new(name:'Torres Vedras', city: lisbon)
+pick_up_locations << PickUpLocation.new(name:'Troia by Ferry', city: lisbon)
+pick_up_locations << PickUpLocation.new(name:'Troia by road', city: lisbon)
+pick_up_locations << PickUpLocation.new(name:'Turcifal', city: lisbon)
+pick_up_locations << PickUpLocation.new(name:'Vieira de Leiria', city: lisbon)
+pick_up_locations << PickUpLocation.new(name:'Vila do Bispo', city: lisbon)
+pick_up_locations << PickUpLocation.new(name:'Villa Nova de Milfontes', city: lisbon)
+pick_up_locations << PickUpLocation.new(name:'Porto Airport', city: porto)
+pick_up_locations << PickUpLocation.new(name:'Porto Cruise Port', city: porto)
+pick_up_locations << PickUpLocation.new(name:'Porto City Centre', city: porto)
+pick_up_locations << PickUpLocation.new(name:'Vila Nova de Gaia', city: porto)
+pick_up_locations << PickUpLocation.new(name:'Aveiro', city: porto)
+pick_up_locations << PickUpLocation.new(name:'Esposende', city: porto)
+pick_up_locations << PickUpLocation.new(name:'Braga', city: porto)
+pick_up_locations << PickUpLocation.new(name:'Viseu', city: porto)
+pick_up_locations << PickUpLocation.new(name:'Amarante', city: porto)
+pick_up_locations << PickUpLocation.new(name:'Arcos de Valdevez', city: porto)
+pick_up_locations << PickUpLocation.new(name:'Baiona', city: porto)
+pick_up_locations << PickUpLocation.new(name:'Barcelos', city: porto)
+pick_up_locations << PickUpLocation.new(name:'Braganca', city: porto)
+pick_up_locations << PickUpLocation.new(name:'Bussaco', city: porto)
+pick_up_locations << PickUpLocation.new(name:'Chaves', city: porto)
+pick_up_locations << PickUpLocation.new(name:'Espinho', city: porto)
+pick_up_locations << PickUpLocation.new(name:'Estarreja', city: porto)
+pick_up_locations << PickUpLocation.new(name:'Europarque', city: porto)
+pick_up_locations << PickUpLocation.new(name:'Guarda', city: porto)
+pick_up_locations << PickUpLocation.new(name:'Guimaraes', city: porto)
+pick_up_locations << PickUpLocation.new(name:'Lamego', city: porto)
+pick_up_locations << PickUpLocation.new(name:'Mirandela', city: porto)
+pick_up_locations << PickUpLocation.new(name:'Moncao', city: porto)
+pick_up_locations << PickUpLocation.new(name:'Oliveira de Azemeis', city: porto)
+pick_up_locations << PickUpLocation.new(name:'Ovar', city: porto)
+pick_up_locations << PickUpLocation.new(name:'Pacos de Ferreira', city: porto)
+pick_up_locations << PickUpLocation.new(name:'Paredes de Coura', city: porto)
+pick_up_locations << PickUpLocation.new(name:'Penafiel', city: porto)
+pick_up_locations << PickUpLocation.new(name:'Peso da Regua', city: porto)
+pick_up_locations << PickUpLocation.new(name:'Pinhao', city: porto)
+pick_up_locations << PickUpLocation.new(name:'Ponte da Barca', city: porto)
+pick_up_locations << PickUpLocation.new(name:'Ponte de Lima', city: porto)
+pick_up_locations << PickUpLocation.new(name:'Povoa de Varzim', city: porto)
+pick_up_locations << PickUpLocation.new(name:'Santa Maria da Feira', city: porto)
+pick_up_locations << PickUpLocation.new(name:'Santo Tirso', city: porto)
+pick_up_locations << PickUpLocation.new(name:'Sao Joao da Madeira', city: porto)
+pick_up_locations << PickUpLocation.new(name:'Tui', city: porto)
+pick_up_locations << PickUpLocation.new(name:'Valenca do Minho', city: porto)
+pick_up_locations << PickUpLocation.new(name:'Viana do Castelo', city: porto)
+pick_up_locations << PickUpLocation.new(name:'Vidago', city: porto)
+pick_up_locations << PickUpLocation.new(name:'Vila Real', city: porto)
+pick_up_locations << PickUpLocation.new(name:'Vila do Conde', city: porto)
+pick_up_locations << PickUpLocation.new(name:'Viseu', city: porto)
+  
   puts 'Cities of Romania'
   bucharest = City.find_by(name:'Bucharest')
   cluj = City.find_by(name:'Cluj Napoca')
   sibiu = City.find_by(name:'Sibiu')
   timisoara = City.find_by(name:'Timisoara')
-  PickUpLocation.create([
-      {name:'Bucharest Baneasa Airport', city: bucharest},
-      {name:'Bucharest Otopeni Airport', city: bucharest},
-      {name:'Bucharest City Centre', city: bucharest},
-      {name:'Predeal', city: bucharest},
-      {name:'Ploiesti', city: bucharest},
-      {name:'Giurgiu', city: bucharest},
-      {name:'Slanic Prahova', city: bucharest},
-      {name:'Targoviste', city: bucharest},
-      {name:'Alexandria Teleorman', city: bucharest},
-      {name:'Azuga', city: bucharest},
-      {name:'Bacau', city: bucharest},
-      {name:'Baile Olanesti', city: bucharest},
-      {name:'Birlad', city: bucharest},
-      {name:'Braila', city: bucharest},
-      {name:'Bran', city: bucharest},
-      {name:'Brasov', city: bucharest},
-      {name:'Busteni', city: bucharest},
-      {name:'Buzau', city: bucharest},
-      {name:'Calarasi', city: bucharest},
-      {name:'Cimpulung Arges', city: bucharest},
-      {name:'Constanta', city: bucharest},
-      {name:'Craiova', city: bucharest},
-      {name:'Curtea de Arges', city: bucharest},
-      {name:'Fetesti', city: bucharest},
-      {name:'Focsani', city: bucharest},
-      {name:'Galati', city: bucharest},
-      {name:'Horezu', city: bucharest},
-      {name:'Mangalia', city: bucharest},
-      {name:'Pitesti', city: bucharest},
-      {name:'Poiana Brasov', city: bucharest},
-      {name:'Ramnicu Valcea', city: bucharest},
-      {name:'Rasnov', city: bucharest},
-      {name:'Sighisoara', city: bucharest},
-      {name:'Sinaia', city: bucharest},
-      {name:'Slobozia', city: bucharest},
-      {name:'Tandarei', city: bucharest},
-      {name:'Tulcea', city: bucharest},
-      {name:'Cluj Napoca Airport', city: cluj},
-      {name:'Cilnic', city: cluj},
-      {name:'Calimanesti', city: cluj},
-      {name:'Tusnad', city: cluj},
-      {name:'Miercurea Ciuc', city: cluj},
-      {name:'Odorheiu Secuiesc', city: cluj},
-      {name:'Slanic Moldova', city: cluj},
-      {name:'Abrud', city: cluj},
-      {name:'Acatari', city: cluj},
-      {name:'Aiud', city: cluj},
-      {name:'Alba Iulia', city: cluj},
-      {name:'Alesd', city: cluj},
-      {name:'Apahida', city: cluj},
-      {name:'Baia Mare', city: cluj},
-      {name:'Bazna', city: cluj},
-      {name:'Beclean', city: cluj},
-      {name:'Belis', city: cluj},
-      {name:'Bicaz', city: cluj},
-      {name:'Blaj', city: cluj},
-      {name:'Campia Turzii', city: cluj},
-      {name:'Dej', city: cluj},
-      {name:'Feleacu', city: cluj},
-      {name:'Floresti', city: cluj},
-      {name:'Gheorgheni', city: cluj},
-      {name:'Gherla', city: cluj},
-      {name:'Gilau', city: cluj},
-      {name:'Huiedin', city: cluj},
-      {name:'Iasi', city: cluj},
-      {name:'Iernut', city: cluj},
-      {name:'Ileanda', city: cluj},
-      {name:'Jibou', city: cluj},
-      {name:'Ludus', city: cluj},
-      {name:'Medias', city: cluj},
-      {name:'Nasaud', city: cluj},
-      {name:'Negreni', city: cluj},
-      {name:'Ocna Mures', city: cluj},
-      {name:'Oradea', city: cluj},
-      {name:'Praid', city: cluj},
-      {name:'Reghin', city: cluj},
-      {name:'Sangeorz Bai', city: cluj},
-      {name:'Satu Mare', city: cluj},
-      {name:'Sebes', city: cluj},
-      {name:'Simleu Silvaniei', city: cluj},
-      {name:'Somcuta Mare', city: cluj},
-      {name:'Suceava', city: cluj},
-      {name:'Targu Mures', city: cluj},
-      {name:'Tarnaveni', city: cluj},
-      {name:'Teius', city: cluj},
-      {name:'Turda', city: cluj},
-      {name:'Vadu Izei', city: cluj},
-      {name:'Vaslui', city: cluj},
-      {name:'Viseu de Jos', city: cluj},
-      {name:'Viseu de Sus', city: cluj},
-      {name:'Vlahita', city: cluj},
-      {name:'Zalau', city: cluj},
-      {name:'Sibiu Airport', city: sibiu},
-      {name:'Baile Govora', city: sibiu},
-      {name:'Cisnadie', city: sibiu},
-      {name:'Sibiu City', city: sibiu},
-      {name:'Avrig', city: sibiu},
-      {name:'Copsa Mica', city: sibiu},
-      {name:'Cristian', city: sibiu},
-      {name:'Agnita', city: sibiu},
-      {name:'Brad', city: sibiu},
-      {name:'Brezoi', city: sibiu},
-      {name:'Campeni', city: sibiu},
-      {name:'Codlea', city: sibiu},
-      {name:'Covasna', city: sibiu},
-      {name:'Fagaras', city: sibiu},
-      {name:'Geoagiu', city: sibiu},
-      {name:'Hoghiz', city: sibiu},
-      {name:'Lupeni', city: sibiu},
-      {name:'Miercurea Sibiului', city: sibiu},
-      {name:'Ocna Sibiului', city: sibiu},
-      {name:'Ocnele Mari', city: sibiu},
-      {name:'Paltinis', city: sibiu},
-      {name:'Petrila', city: sibiu},
-      {name:'Petrosani', city: sibiu},
-      {name:'Rupea', city: sibiu},
-      {name:'Saliste', city: sibiu},
-      {name:'Selimbar', city: sibiu},
-      {name:'Talmaciu', city: sibiu},
-      {name:'Vulcan', city: sibiu},
-      {name:'Zarnesti', city: sibiu},
-      {name:'Zlatna', city: sibiu},
-      {name:'Timisoara Airport', city: timisoara},
-      {name:'Belint', city: timisoara},
-      {name:'Biled', city: timisoara},
-      {name:'Buzias', city: timisoara},
-      {name:'Cenei', city: timisoara},
-      {name:'Cheverescu Mare', city: timisoara},
-      {name:'Chizatau', city: timisoara},
-      {name:'Armenis', city: timisoara},
-      {name:'Baile Herculane', city: timisoara},
-      {name:'Birda', city: timisoara},
-      {name:'Bocsa', city: timisoara},
-      {name:'Buchin', city: timisoara},
-      {name:'Caransebes', city: timisoara},
-      {name:'Denta', city: timisoara},
-      {name:'Deta', city: timisoara},
-      {name:'Deva', city: timisoara},
-      {name:'Dudesti Vechi', city: timisoara},
-      {name:'Gottlob', city: timisoara},
-      {name:'Hunedoara', city: timisoara},
-      {name:'Jebel', city: timisoara},
-      {name:'Jimbolia', city: timisoara},
-      {name:'Jupa', city: timisoara},
-      {name:'Lenauheim', city: timisoara},
-      {name:'Liebling', city: timisoara},
-      {name:'Lovrin', city: timisoara},
-      {name:'Maureni', city: timisoara},
-      {name:'Mehadia', city: timisoara},
-      {name:'Moravita', city: timisoara},
-      {name:'Neudorf', city: timisoara},
-      {name:'Nitchidorf', city: timisoara},
-      {name:'Orastie', city: timisoara},
-      {name:'Otelec', city: timisoara},
-      {name:'Pischia', city: timisoara},
-      {name:'Plugova', city: timisoara},
-      {name:'Pustinis', city: timisoara},
-      {name:'Recas', city: timisoara},
-      {name:'Resita', city: timisoara},
-      {name:'Sacu', city: timisoara},
-      {name:'Sadova Veche', city: timisoara},
-      {name:'Sanandrei', city: timisoara},
-      {name:'Sanmartinul Sarbesc', city: timisoara},
-      {name:'Sanmihaiu German', city: timisoara},
-      {name:'Sannicolau Mare', city: timisoara},
-      {name:'Silagiu', city: timisoara},
-      {name:'Sinersig', city: timisoara},
-      {name:'Timisoara City Centre', city: timisoara},
-      {name:'Topolovatu Mare', city: timisoara},
-      {name:'Tormac', city: timisoara},
-      {name:'Vinga', city: timisoara},
-      {name:'Voiteg', city: timisoara}
-          ])
+  
+pick_up_locations << PickUpLocation.new(name:'Bucharest Baneasa Airport', city: bucharest)
+pick_up_locations << PickUpLocation.new(name:'Bucharest Otopeni Airport', city: bucharest)
+pick_up_locations << PickUpLocation.new(name:'Bucharest City Centre', city: bucharest)
+pick_up_locations << PickUpLocation.new(name:'Predeal', city: bucharest)
+pick_up_locations << PickUpLocation.new(name:'Ploiesti', city: bucharest)
+pick_up_locations << PickUpLocation.new(name:'Giurgiu', city: bucharest)
+pick_up_locations << PickUpLocation.new(name:'Slanic Prahova', city: bucharest)
+pick_up_locations << PickUpLocation.new(name:'Targoviste', city: bucharest)
+pick_up_locations << PickUpLocation.new(name:'Alexandria Teleorman', city: bucharest)
+pick_up_locations << PickUpLocation.new(name:'Azuga', city: bucharest)
+pick_up_locations << PickUpLocation.new(name:'Bacau', city: bucharest)
+pick_up_locations << PickUpLocation.new(name:'Baile Olanesti', city: bucharest)
+pick_up_locations << PickUpLocation.new(name:'Birlad', city: bucharest)
+pick_up_locations << PickUpLocation.new(name:'Braila', city: bucharest)
+pick_up_locations << PickUpLocation.new(name:'Bran', city: bucharest)
+pick_up_locations << PickUpLocation.new(name:'Brasov', city: bucharest)
+pick_up_locations << PickUpLocation.new(name:'Busteni', city: bucharest)
+pick_up_locations << PickUpLocation.new(name:'Buzau', city: bucharest)
+pick_up_locations << PickUpLocation.new(name:'Calarasi', city: bucharest)
+pick_up_locations << PickUpLocation.new(name:'Cimpulung Arges', city: bucharest)
+pick_up_locations << PickUpLocation.new(name:'Constanta', city: bucharest)
+pick_up_locations << PickUpLocation.new(name:'Craiova', city: bucharest)
+pick_up_locations << PickUpLocation.new(name:'Curtea de Arges', city: bucharest)
+pick_up_locations << PickUpLocation.new(name:'Fetesti', city: bucharest)
+pick_up_locations << PickUpLocation.new(name:'Focsani', city: bucharest)
+pick_up_locations << PickUpLocation.new(name:'Galati', city: bucharest)
+pick_up_locations << PickUpLocation.new(name:'Horezu', city: bucharest)
+pick_up_locations << PickUpLocation.new(name:'Mangalia', city: bucharest)
+pick_up_locations << PickUpLocation.new(name:'Pitesti', city: bucharest)
+pick_up_locations << PickUpLocation.new(name:'Poiana Brasov', city: bucharest)
+pick_up_locations << PickUpLocation.new(name:'Ramnicu Valcea', city: bucharest)
+pick_up_locations << PickUpLocation.new(name:'Rasnov', city: bucharest)
+pick_up_locations << PickUpLocation.new(name:'Sighisoara', city: bucharest)
+pick_up_locations << PickUpLocation.new(name:'Sinaia', city: bucharest)
+pick_up_locations << PickUpLocation.new(name:'Slobozia', city: bucharest)
+pick_up_locations << PickUpLocation.new(name:'Tandarei', city: bucharest)
+pick_up_locations << PickUpLocation.new(name:'Tulcea', city: bucharest)
+pick_up_locations << PickUpLocation.new(name:'Cluj Napoca Airport', city: cluj)
+pick_up_locations << PickUpLocation.new(name:'Cilnic', city: cluj)
+pick_up_locations << PickUpLocation.new(name:'Calimanesti', city: cluj)
+pick_up_locations << PickUpLocation.new(name:'Tusnad', city: cluj)
+pick_up_locations << PickUpLocation.new(name:'Miercurea Ciuc', city: cluj)
+pick_up_locations << PickUpLocation.new(name:'Odorheiu Secuiesc', city: cluj)
+pick_up_locations << PickUpLocation.new(name:'Slanic Moldova', city: cluj)
+pick_up_locations << PickUpLocation.new(name:'Abrud', city: cluj)
+pick_up_locations << PickUpLocation.new(name:'Acatari', city: cluj)
+pick_up_locations << PickUpLocation.new(name:'Aiud', city: cluj)
+pick_up_locations << PickUpLocation.new(name:'Alba Iulia', city: cluj)
+pick_up_locations << PickUpLocation.new(name:'Alesd', city: cluj)
+pick_up_locations << PickUpLocation.new(name:'Apahida', city: cluj)
+pick_up_locations << PickUpLocation.new(name:'Baia Mare', city: cluj)
+pick_up_locations << PickUpLocation.new(name:'Bazna', city: cluj)
+pick_up_locations << PickUpLocation.new(name:'Beclean', city: cluj)
+pick_up_locations << PickUpLocation.new(name:'Belis', city: cluj)
+pick_up_locations << PickUpLocation.new(name:'Bicaz', city: cluj)
+pick_up_locations << PickUpLocation.new(name:'Blaj', city: cluj)
+pick_up_locations << PickUpLocation.new(name:'Campia Turzii', city: cluj)
+pick_up_locations << PickUpLocation.new(name:'Dej', city: cluj)
+pick_up_locations << PickUpLocation.new(name:'Feleacu', city: cluj)
+pick_up_locations << PickUpLocation.new(name:'Floresti', city: cluj)
+pick_up_locations << PickUpLocation.new(name:'Gheorgheni', city: cluj)
+pick_up_locations << PickUpLocation.new(name:'Gherla', city: cluj)
+pick_up_locations << PickUpLocation.new(name:'Gilau', city: cluj)
+pick_up_locations << PickUpLocation.new(name:'Huiedin', city: cluj)
+pick_up_locations << PickUpLocation.new(name:'Iasi', city: cluj)
+pick_up_locations << PickUpLocation.new(name:'Iernut', city: cluj)
+pick_up_locations << PickUpLocation.new(name:'Ileanda', city: cluj)
+pick_up_locations << PickUpLocation.new(name:'Jibou', city: cluj)
+pick_up_locations << PickUpLocation.new(name:'Ludus', city: cluj)
+pick_up_locations << PickUpLocation.new(name:'Medias', city: cluj)
+pick_up_locations << PickUpLocation.new(name:'Nasaud', city: cluj)
+pick_up_locations << PickUpLocation.new(name:'Negreni', city: cluj)
+pick_up_locations << PickUpLocation.new(name:'Ocna Mures', city: cluj)
+pick_up_locations << PickUpLocation.new(name:'Oradea', city: cluj)
+pick_up_locations << PickUpLocation.new(name:'Praid', city: cluj)
+pick_up_locations << PickUpLocation.new(name:'Reghin', city: cluj)
+pick_up_locations << PickUpLocation.new(name:'Sangeorz Bai', city: cluj)
+pick_up_locations << PickUpLocation.new(name:'Satu Mare', city: cluj)
+pick_up_locations << PickUpLocation.new(name:'Sebes', city: cluj)
+pick_up_locations << PickUpLocation.new(name:'Simleu Silvaniei', city: cluj)
+pick_up_locations << PickUpLocation.new(name:'Somcuta Mare', city: cluj)
+pick_up_locations << PickUpLocation.new(name:'Suceava', city: cluj)
+pick_up_locations << PickUpLocation.new(name:'Targu Mures', city: cluj)
+pick_up_locations << PickUpLocation.new(name:'Tarnaveni', city: cluj)
+pick_up_locations << PickUpLocation.new(name:'Teius', city: cluj)
+pick_up_locations << PickUpLocation.new(name:'Turda', city: cluj)
+pick_up_locations << PickUpLocation.new(name:'Vadu Izei', city: cluj)
+pick_up_locations << PickUpLocation.new(name:'Vaslui', city: cluj)
+pick_up_locations << PickUpLocation.new(name:'Viseu de Jos', city: cluj)
+pick_up_locations << PickUpLocation.new(name:'Viseu de Sus', city: cluj)
+pick_up_locations << PickUpLocation.new(name:'Vlahita', city: cluj)
+pick_up_locations << PickUpLocation.new(name:'Zalau', city: cluj)
+pick_up_locations << PickUpLocation.new(name:'Sibiu Airport', city: sibiu)
+pick_up_locations << PickUpLocation.new(name:'Baile Govora', city: sibiu)
+pick_up_locations << PickUpLocation.new(name:'Cisnadie', city: sibiu)
+pick_up_locations << PickUpLocation.new(name:'Sibiu City', city: sibiu)
+pick_up_locations << PickUpLocation.new(name:'Avrig', city: sibiu)
+pick_up_locations << PickUpLocation.new(name:'Copsa Mica', city: sibiu)
+pick_up_locations << PickUpLocation.new(name:'Cristian', city: sibiu)
+pick_up_locations << PickUpLocation.new(name:'Agnita', city: sibiu)
+pick_up_locations << PickUpLocation.new(name:'Brad', city: sibiu)
+pick_up_locations << PickUpLocation.new(name:'Brezoi', city: sibiu)
+pick_up_locations << PickUpLocation.new(name:'Campeni', city: sibiu)
+pick_up_locations << PickUpLocation.new(name:'Codlea', city: sibiu)
+pick_up_locations << PickUpLocation.new(name:'Covasna', city: sibiu)
+pick_up_locations << PickUpLocation.new(name:'Fagaras', city: sibiu)
+pick_up_locations << PickUpLocation.new(name:'Geoagiu', city: sibiu)
+pick_up_locations << PickUpLocation.new(name:'Hoghiz', city: sibiu)
+pick_up_locations << PickUpLocation.new(name:'Lupeni', city: sibiu)
+pick_up_locations << PickUpLocation.new(name:'Miercurea Sibiului', city: sibiu)
+pick_up_locations << PickUpLocation.new(name:'Ocna Sibiului', city: sibiu)
+pick_up_locations << PickUpLocation.new(name:'Ocnele Mari', city: sibiu)
+pick_up_locations << PickUpLocation.new(name:'Paltinis', city: sibiu)
+pick_up_locations << PickUpLocation.new(name:'Petrila', city: sibiu)
+pick_up_locations << PickUpLocation.new(name:'Petrosani', city: sibiu)
+pick_up_locations << PickUpLocation.new(name:'Rupea', city: sibiu)
+pick_up_locations << PickUpLocation.new(name:'Saliste', city: sibiu)
+pick_up_locations << PickUpLocation.new(name:'Selimbar', city: sibiu)
+pick_up_locations << PickUpLocation.new(name:'Talmaciu', city: sibiu)
+pick_up_locations << PickUpLocation.new(name:'Vulcan', city: sibiu)
+pick_up_locations << PickUpLocation.new(name:'Zarnesti', city: sibiu)
+pick_up_locations << PickUpLocation.new(name:'Zlatna', city: sibiu)
+pick_up_locations << PickUpLocation.new(name:'Timisoara Airport', city: timisoara)
+pick_up_locations << PickUpLocation.new(name:'Belint', city: timisoara)
+pick_up_locations << PickUpLocation.new(name:'Biled', city: timisoara)
+pick_up_locations << PickUpLocation.new(name:'Buzias', city: timisoara)
+pick_up_locations << PickUpLocation.new(name:'Cenei', city: timisoara)
+pick_up_locations << PickUpLocation.new(name:'Cheverescu Mare', city: timisoara)
+pick_up_locations << PickUpLocation.new(name:'Chizatau', city: timisoara)
+pick_up_locations << PickUpLocation.new(name:'Armenis', city: timisoara)
+pick_up_locations << PickUpLocation.new(name:'Baile Herculane', city: timisoara)
+pick_up_locations << PickUpLocation.new(name:'Birda', city: timisoara)
+pick_up_locations << PickUpLocation.new(name:'Bocsa', city: timisoara)
+pick_up_locations << PickUpLocation.new(name:'Buchin', city: timisoara)
+pick_up_locations << PickUpLocation.new(name:'Caransebes', city: timisoara)
+pick_up_locations << PickUpLocation.new(name:'Denta', city: timisoara)
+pick_up_locations << PickUpLocation.new(name:'Deta', city: timisoara)
+pick_up_locations << PickUpLocation.new(name:'Deva', city: timisoara)
+pick_up_locations << PickUpLocation.new(name:'Dudesti Vechi', city: timisoara)
+pick_up_locations << PickUpLocation.new(name:'Gottlob', city: timisoara)
+pick_up_locations << PickUpLocation.new(name:'Hunedoara', city: timisoara)
+pick_up_locations << PickUpLocation.new(name:'Jebel', city: timisoara)
+pick_up_locations << PickUpLocation.new(name:'Jimbolia', city: timisoara)
+pick_up_locations << PickUpLocation.new(name:'Jupa', city: timisoara)
+pick_up_locations << PickUpLocation.new(name:'Lenauheim', city: timisoara)
+pick_up_locations << PickUpLocation.new(name:'Liebling', city: timisoara)
+pick_up_locations << PickUpLocation.new(name:'Lovrin', city: timisoara)
+pick_up_locations << PickUpLocation.new(name:'Maureni', city: timisoara)
+pick_up_locations << PickUpLocation.new(name:'Mehadia', city: timisoara)
+pick_up_locations << PickUpLocation.new(name:'Moravita', city: timisoara)
+pick_up_locations << PickUpLocation.new(name:'Neudorf', city: timisoara)
+pick_up_locations << PickUpLocation.new(name:'Nitchidorf', city: timisoara)
+pick_up_locations << PickUpLocation.new(name:'Orastie', city: timisoara)
+pick_up_locations << PickUpLocation.new(name:'Otelec', city: timisoara)
+pick_up_locations << PickUpLocation.new(name:'Pischia', city: timisoara)
+pick_up_locations << PickUpLocation.new(name:'Plugova', city: timisoara)
+pick_up_locations << PickUpLocation.new(name:'Pustinis', city: timisoara)
+pick_up_locations << PickUpLocation.new(name:'Recas', city: timisoara)
+pick_up_locations << PickUpLocation.new(name:'Resita', city: timisoara)
+pick_up_locations << PickUpLocation.new(name:'Sacu', city: timisoara)
+pick_up_locations << PickUpLocation.new(name:'Sadova Veche', city: timisoara)
+pick_up_locations << PickUpLocation.new(name:'Sanandrei', city: timisoara)
+pick_up_locations << PickUpLocation.new(name:'Sanmartinul Sarbesc', city: timisoara)
+pick_up_locations << PickUpLocation.new(name:'Sanmihaiu German', city: timisoara)
+pick_up_locations << PickUpLocation.new(name:'Sannicolau Mare', city: timisoara)
+pick_up_locations << PickUpLocation.new(name:'Silagiu', city: timisoara)
+pick_up_locations << PickUpLocation.new(name:'Sinersig', city: timisoara)
+pick_up_locations << PickUpLocation.new(name:'Timisoara City Centre', city: timisoara)
+pick_up_locations << PickUpLocation.new(name:'Topolovatu Mare', city: timisoara)
+pick_up_locations << PickUpLocation.new(name:'Tormac', city: timisoara)
+pick_up_locations << PickUpLocation.new(name:'Vinga', city: timisoara)
+pick_up_locations << PickUpLocation.new(name:'Voiteg', city: timisoara)
+ 
   puts 'Cities of Russia'
   moscow = City.find_by(name:'Moscow')
   petersburg = City.find_by(name:'Saint Petersburg')
-  PickUpLocation.create([
-            {name:'Moscow Domodedovo Airport', city: moscow},
-            {name:'Moscow Sheremetyevo Airport', city: moscow},
-            {name:'Moscow Vnukovo Airport', city: moscow},
-            {name:'Moscow City Centre', city: moscow},
-            {name:'Pulkovo Airport', city: petersburg},
-            {name:'Saint Petersburg', city: petersburg}
-          ])
+  
+pick_up_locations << PickUpLocation.new(name:'Moscow Domodedovo Airport', city: moscow)
+pick_up_locations << PickUpLocation.new(name:'Moscow Sheremetyevo Airport', city: moscow)
+pick_up_locations << PickUpLocation.new(name:'Moscow Vnukovo Airport', city: moscow)
+pick_up_locations << PickUpLocation.new(name:'Moscow City Centre', city: moscow)
+pick_up_locations << PickUpLocation.new(name:'Pulkovo Airport', city: petersburg)
+pick_up_locations << PickUpLocation.new(name:'Saint Petersburg', city: petersburg)
+ 
   puts 'Cities of Serbia'
   belgrade = City.find_by(name:'Belgrade')
-  PickUpLocation.create([
-             {name:'Belgrade Airport', city: belgrade},
-             {name:'Belgrade City Centre', city: belgrade},
-             {name:'Batocina', city: belgrade},
-             {name:'Bor', city: belgrade},
-             {name:'Batocina', city: belgrade},
-             {name:'Belgrade City Centre', city: belgrade},
-             {name:'Bor', city: belgrade},
-             {name:'Cacak', city: belgrade},
-             {name:'Cuprija', city: belgrade},
-             {name:'Debeljaca', city: belgrade},
-             {name:'Durdevi Stupovi', city: belgrade},
-             {name:'Golubac', city: belgrade},
-             {name:'Hopovo', city: belgrade},
-             {name:'Indija', city: belgrade},
-             {name:'Jagodina', city: belgrade},
-             {name:'Kikinda', city: belgrade},
-             {name:'Knjazevac', city: belgrade},
-             {name:'Kopaonik', city: belgrade},
-             {name:'Kragujevac', city: belgrade},
-             {name:'Kraljevo', city: belgrade},
-             {name:'Krusevac', city: belgrade},
-             {name:'Leskovac', city: belgrade},
-             {name:'Mediana', city: belgrade},
-             {name:'Mladenovac', city: belgrade},
-             {name:'Nis', city: belgrade},
-             {name:'Niska Banja', city: belgrade},
-             {name:'Novi Pazar', city: belgrade},
-             {name:'Novi Sad', city: belgrade},
-             {name:'Pancevo', city: belgrade},
-             {name:'Paracin', city: belgrade},
-             {name:'Petrovaradin', city: belgrade},
-             {name:'Pozarevac', city: belgrade},
-             {name:'Ruma', city: belgrade},
-             {name:'Sabac', city: belgrade},
-             {name:'Sarajevo City Centre', city: belgrade},
-             {name:'Sokobanja', city: belgrade},
-             {name:'Sombor', city: belgrade},
-             {name:'Sremska Mitrovica', city: belgrade},
-             {name:'Subotica', city: belgrade},
-             {name:'Uzice', city: belgrade},
-             {name:'Valjevo', city: belgrade},
-             {name:'Vranje', city: belgrade},
-             {name:'Vrnjacka Banja', city: belgrade},
-             {name:'Vrsac', city: belgrade},
-             {name:'Zajecar', city: belgrade},
-             {name:'Zlatibor', city: belgrade},
-             {name:'Zrenjanin', city: belgrade}
-         ])
+  
+ pick_up_locations << PickUpLocation.new(name:'Belgrade Airport', city: belgrade)
+ pick_up_locations << PickUpLocation.new(name:'Belgrade City Centre', city: belgrade)
+ pick_up_locations << PickUpLocation.new(name:'Batocina', city: belgrade)
+ pick_up_locations << PickUpLocation.new(name:'Bor', city: belgrade)
+ pick_up_locations << PickUpLocation.new(name:'Batocina', city: belgrade)
+ pick_up_locations << PickUpLocation.new(name:'Belgrade City Centre', city: belgrade)
+ pick_up_locations << PickUpLocation.new(name:'Bor', city: belgrade)
+ pick_up_locations << PickUpLocation.new(name:'Cacak', city: belgrade)
+ pick_up_locations << PickUpLocation.new(name:'Cuprija', city: belgrade)
+ pick_up_locations << PickUpLocation.new(name:'Debeljaca', city: belgrade)
+ pick_up_locations << PickUpLocation.new(name:'Durdevi Stupovi', city: belgrade)
+ pick_up_locations << PickUpLocation.new(name:'Golubac', city: belgrade)
+ pick_up_locations << PickUpLocation.new(name:'Hopovo', city: belgrade)
+ pick_up_locations << PickUpLocation.new(name:'Indija', city: belgrade)
+ pick_up_locations << PickUpLocation.new(name:'Jagodina', city: belgrade)
+ pick_up_locations << PickUpLocation.new(name:'Kikinda', city: belgrade)
+ pick_up_locations << PickUpLocation.new(name:'Knjazevac', city: belgrade)
+ pick_up_locations << PickUpLocation.new(name:'Kopaonik', city: belgrade)
+ pick_up_locations << PickUpLocation.new(name:'Kragujevac', city: belgrade)
+ pick_up_locations << PickUpLocation.new(name:'Kraljevo', city: belgrade)
+ pick_up_locations << PickUpLocation.new(name:'Krusevac', city: belgrade)
+ pick_up_locations << PickUpLocation.new(name:'Leskovac', city: belgrade)
+ pick_up_locations << PickUpLocation.new(name:'Mediana', city: belgrade)
+ pick_up_locations << PickUpLocation.new(name:'Mladenovac', city: belgrade)
+ pick_up_locations << PickUpLocation.new(name:'Nis', city: belgrade)
+ pick_up_locations << PickUpLocation.new(name:'Niska Banja', city: belgrade)
+ pick_up_locations << PickUpLocation.new(name:'Novi Pazar', city: belgrade)
+ pick_up_locations << PickUpLocation.new(name:'Novi Sad', city: belgrade)
+ pick_up_locations << PickUpLocation.new(name:'Pancevo', city: belgrade)
+ pick_up_locations << PickUpLocation.new(name:'Paracin', city: belgrade)
+ pick_up_locations << PickUpLocation.new(name:'Petrovaradin', city: belgrade)
+ pick_up_locations << PickUpLocation.new(name:'Pozarevac', city: belgrade)
+ pick_up_locations << PickUpLocation.new(name:'Ruma', city: belgrade)
+ pick_up_locations << PickUpLocation.new(name:'Sabac', city: belgrade)
+ pick_up_locations << PickUpLocation.new(name:'Sarajevo City Centre', city: belgrade)
+ pick_up_locations << PickUpLocation.new(name:'Sokobanja', city: belgrade)
+ pick_up_locations << PickUpLocation.new(name:'Sombor', city: belgrade)
+ pick_up_locations << PickUpLocation.new(name:'Sremska Mitrovica', city: belgrade)
+ pick_up_locations << PickUpLocation.new(name:'Subotica', city: belgrade)
+ pick_up_locations << PickUpLocation.new(name:'Uzice', city: belgrade)
+ pick_up_locations << PickUpLocation.new(name:'Valjevo', city: belgrade)
+ pick_up_locations << PickUpLocation.new(name:'Vranje', city: belgrade)
+ pick_up_locations << PickUpLocation.new(name:'Vrnjacka Banja', city: belgrade)
+ pick_up_locations << PickUpLocation.new(name:'Vrsac', city: belgrade)
+ pick_up_locations << PickUpLocation.new(name:'Zajecar', city: belgrade)
+ pick_up_locations << PickUpLocation.new(name:'Zlatibor', city: belgrade)
+ pick_up_locations << PickUpLocation.new(name:'Zrenjanin', city: belgrade)
+
   puts 'Cities of Slovakia'
   bratislava = City.find_by(name:'Bratislava')
-  PickUpLocation.create([
-             {name:'Bratislava Airport', city: bratislava},
-             {name:'Kosice Airport', city: bratislava},
-             {name:'Bratislava Train Station', city: bratislava},
-             {name:'Banska Bystrica', city: bratislava},
-             {name:'Biele Vody nad Hrinova', city: bratislava},
-             {name:'Bratislava City Centre', city: bratislava},
-             {name:'Brusno', city: bratislava},
-             {name:'Bukovina', city: bratislava},
-             {name:'Bystricka', city: bratislava},
-             {name:'Certovica', city: bratislava},
-             {name:'Drienica', city: bratislava},
-             {name:'Dubovica Zliabky', city: bratislava},
-             {name:'Fackov', city: bratislava},
-             {name:'Fackovske Sedlo', city: bratislava},
-             {name:'High Tatras', city: bratislava},
-             {name:'Hlohovec', city: bratislava},
-             {name:'Jasenska Dolina', city: bratislava},
-             {name:'Kokava nad Rimavicou', city: bratislava},
-             {name:'Komarno', city: bratislava},
-             {name:'Kosice', city: bratislava},
-             {name:'Krahule', city: bratislava},
-             {name:'Kraliky', city: bratislava},
-             {name:'Kremnica', city: bratislava},
-             {name:'Krompachy', city: bratislava},
-             {name:'Kubinska Hola', city: bratislava},
-             {name:'Limbach', city: bratislava},
-             {name:'Liptovska Teplicka', city: bratislava},
-             {name:'Liptovske Jan', city: bratislava},
-             {name:'Lubochna', city: bratislava},
-             {name:'Lubovnianske Kupele', city: bratislava},
-             {name:'Makov', city: bratislava},
-             {name:'Mala Lucivna', city: bratislava},
-             {name:'Martin', city: bratislava},
-             {name:'Martinske Hole', city: bratislava},
-             {name:'Mlynky', city: bratislava},
-             {name:'Myto pod Dumbierom', city: bratislava},
-             {name:'Nitra', city: bratislava},
-             {name:'Oscadnica', city: bratislava},
-             {name:'Pezinok', city: bratislava},
-             {name:'Pezinska Baba', city: bratislava},
-             {name:'Piestany', city: bratislava},
-             {name:'Plejsy', city: bratislava},
-             {name:'Podbanske', city: bratislava},
-             {name:'Poprad', city: bratislava},
-             {name:'Poruba', city: bratislava},
-             {name:'Rackova Dolina', city: bratislava},
-             {name:'Rajecke Teplice', city: bratislava},
-             {name:'Regetovka', city: bratislava},
-             {name:'Remata', city: bratislava},
-             {name:'Rohace', city: bratislava},
-             {name:'Senec', city: bratislava},
-             {name:'Sered', city: bratislava},
-             {name:'Skalite Serafinov', city: bratislava},
-             {name:'Skalka', city: bratislava},
-             {name:'Stary Smokovec', city: bratislava},
-             {name:'Strbske Pleso', city: bratislava},
-             {name:'Svit', city: bratislava},
-             {name:'Telgart', city: bratislava},
-             {name:'Teplica', city: bratislava},
-             {name:'Trencianske Teplice', city: bratislava},
-             {name:'Trencin', city: bratislava},
-             {name:'Trnava', city: bratislava},
-             {name:'Turany', city: bratislava},
-             {name:'Turcianske Klacany', city: bratislava},
-             {name:'Turecka', city: bratislava},
-             {name:'Utekac', city: bratislava},
-             {name:'Velka Raca', city: bratislava},
-             {name:'Vernar', city: bratislava},
-             {name:'Vratna', city: bratislava},
-             {name:'Vrutky', city: bratislava},
-             {name:'Vysne Ruzbachy', city: bratislava},
-             {name:'Zavada', city: bratislava},
-             {name:'Zdiar', city: bratislava},
-             {name:'Zilina', city: bratislava}
-         ])
+  
+ pick_up_locations << PickUpLocation.new(name:'Bratislava Airport', city: bratislava)
+ pick_up_locations << PickUpLocation.new(name:'Kosice Airport', city: bratislava)
+ pick_up_locations << PickUpLocation.new(name:'Bratislava Train Station', city: bratislava)
+ pick_up_locations << PickUpLocation.new(name:'Banska Bystrica', city: bratislava)
+ pick_up_locations << PickUpLocation.new(name:'Biele Vody nad Hrinova', city: bratislava)
+ pick_up_locations << PickUpLocation.new(name:'Bratislava City Centre', city: bratislava)
+ pick_up_locations << PickUpLocation.new(name:'Brusno', city: bratislava)
+ pick_up_locations << PickUpLocation.new(name:'Bukovina', city: bratislava)
+ pick_up_locations << PickUpLocation.new(name:'Bystricka', city: bratislava)
+ pick_up_locations << PickUpLocation.new(name:'Certovica', city: bratislava)
+ pick_up_locations << PickUpLocation.new(name:'Drienica', city: bratislava)
+ pick_up_locations << PickUpLocation.new(name:'Dubovica Zliabky', city: bratislava)
+ pick_up_locations << PickUpLocation.new(name:'Fackov', city: bratislava)
+ pick_up_locations << PickUpLocation.new(name:'Fackovske Sedlo', city: bratislava)
+ pick_up_locations << PickUpLocation.new(name:'High Tatras', city: bratislava)
+ pick_up_locations << PickUpLocation.new(name:'Hlohovec', city: bratislava)
+ pick_up_locations << PickUpLocation.new(name:'Jasenska Dolina', city: bratislava)
+ pick_up_locations << PickUpLocation.new(name:'Kokava nad Rimavicou', city: bratislava)
+ pick_up_locations << PickUpLocation.new(name:'Komarno', city: bratislava)
+ pick_up_locations << PickUpLocation.new(name:'Kosice', city: bratislava)
+ pick_up_locations << PickUpLocation.new(name:'Krahule', city: bratislava)
+ pick_up_locations << PickUpLocation.new(name:'Kraliky', city: bratislava)
+ pick_up_locations << PickUpLocation.new(name:'Kremnica', city: bratislava)
+ pick_up_locations << PickUpLocation.new(name:'Krompachy', city: bratislava)
+ pick_up_locations << PickUpLocation.new(name:'Kubinska Hola', city: bratislava)
+ pick_up_locations << PickUpLocation.new(name:'Limbach', city: bratislava)
+ pick_up_locations << PickUpLocation.new(name:'Liptovska Teplicka', city: bratislava)
+ pick_up_locations << PickUpLocation.new(name:'Liptovske Jan', city: bratislava)
+ pick_up_locations << PickUpLocation.new(name:'Lubochna', city: bratislava)
+ pick_up_locations << PickUpLocation.new(name:'Lubovnianske Kupele', city: bratislava)
+ pick_up_locations << PickUpLocation.new(name:'Makov', city: bratislava)
+ pick_up_locations << PickUpLocation.new(name:'Mala Lucivna', city: bratislava)
+ pick_up_locations << PickUpLocation.new(name:'Martin', city: bratislava)
+ pick_up_locations << PickUpLocation.new(name:'Martinske Hole', city: bratislava)
+ pick_up_locations << PickUpLocation.new(name:'Mlynky', city: bratislava)
+ pick_up_locations << PickUpLocation.new(name:'Myto pod Dumbierom', city: bratislava)
+ pick_up_locations << PickUpLocation.new(name:'Nitra', city: bratislava)
+ pick_up_locations << PickUpLocation.new(name:'Oscadnica', city: bratislava)
+ pick_up_locations << PickUpLocation.new(name:'Pezinok', city: bratislava)
+ pick_up_locations << PickUpLocation.new(name:'Pezinska Baba', city: bratislava)
+ pick_up_locations << PickUpLocation.new(name:'Piestany', city: bratislava)
+ pick_up_locations << PickUpLocation.new(name:'Plejsy', city: bratislava)
+ pick_up_locations << PickUpLocation.new(name:'Podbanske', city: bratislava)
+ pick_up_locations << PickUpLocation.new(name:'Poprad', city: bratislava)
+ pick_up_locations << PickUpLocation.new(name:'Poruba', city: bratislava)
+ pick_up_locations << PickUpLocation.new(name:'Rackova Dolina', city: bratislava)
+ pick_up_locations << PickUpLocation.new(name:'Rajecke Teplice', city: bratislava)
+ pick_up_locations << PickUpLocation.new(name:'Regetovka', city: bratislava)
+ pick_up_locations << PickUpLocation.new(name:'Remata', city: bratislava)
+ pick_up_locations << PickUpLocation.new(name:'Rohace', city: bratislava)
+ pick_up_locations << PickUpLocation.new(name:'Senec', city: bratislava)
+ pick_up_locations << PickUpLocation.new(name:'Sered', city: bratislava)
+ pick_up_locations << PickUpLocation.new(name:'Skalite Serafinov', city: bratislava)
+ pick_up_locations << PickUpLocation.new(name:'Skalka', city: bratislava)
+ pick_up_locations << PickUpLocation.new(name:'Stary Smokovec', city: bratislava)
+ pick_up_locations << PickUpLocation.new(name:'Strbske Pleso', city: bratislava)
+ pick_up_locations << PickUpLocation.new(name:'Svit', city: bratislava)
+ pick_up_locations << PickUpLocation.new(name:'Telgart', city: bratislava)
+ pick_up_locations << PickUpLocation.new(name:'Teplica', city: bratislava)
+ pick_up_locations << PickUpLocation.new(name:'Trencianske Teplice', city: bratislava)
+ pick_up_locations << PickUpLocation.new(name:'Trencin', city: bratislava)
+ pick_up_locations << PickUpLocation.new(name:'Trnava', city: bratislava)
+ pick_up_locations << PickUpLocation.new(name:'Turany', city: bratislava)
+ pick_up_locations << PickUpLocation.new(name:'Turcianske Klacany', city: bratislava)
+ pick_up_locations << PickUpLocation.new(name:'Turecka', city: bratislava)
+ pick_up_locations << PickUpLocation.new(name:'Utekac', city: bratislava)
+ pick_up_locations << PickUpLocation.new(name:'Velka Raca', city: bratislava)
+ pick_up_locations << PickUpLocation.new(name:'Vernar', city: bratislava)
+ pick_up_locations << PickUpLocation.new(name:'Vratna', city: bratislava)
+ pick_up_locations << PickUpLocation.new(name:'Vrutky', city: bratislava)
+ pick_up_locations << PickUpLocation.new(name:'Vysne Ruzbachy', city: bratislava)
+ pick_up_locations << PickUpLocation.new(name:'Zavada', city: bratislava)
+ pick_up_locations << PickUpLocation.new(name:'Zdiar', city: bratislava)
+ pick_up_locations << PickUpLocation.new(name:'Zilina', city: bratislava)
+
   puts 'Cities of Slovenia'
   bled = City.find_by(name:'Bled')
   ljubljana = City.find_by(name:'Ljubljana')
   portoroz = City.find_by(name:'Portoroz')
-  PickUpLocation.create([
-            {name:'Kranjska Gora', city: bled},
-            {name:'Bled', city: bled},
-            {name:'Bohinj', city: bled},
-            {name:'Bovec', city: bled},
-            {name:'Radovljica', city: bled},
-            {name:'Trzic', city: bled},
-            {name:'Ljubljana Airport', city: ljubljana},
-            {name:'Ljubljana City Centre', city: ljubljana},
-            {name:'Maribor', city: ljubljana},
-            {name:'Mezica', city: ljubljana},
-            {name:'Rogaska Slatina', city: ljubljana},
-            {name:'Terme Catez', city: ljubljana},
-            {name:'Ljutomer', city: ljubljana},
-            {name:'Brezice', city: ljubljana},
-            {name:'Cateske Toplice', city: ljubljana},
-            {name:'Celje', city: ljubljana},
-            {name:'Cerknica', city: ljubljana},
-            {name:'Crnomelj', city: ljubljana},
-            {name:'Dolenjske Toplice', city: ljubljana},
-            {name:'Domzale', city: ljubljana},
-            {name:'Dravograd', city: ljubljana},
-            {name:'Gornja Radgona', city: ljubljana},
-            {name:'Grosuplje', city: ljubljana},
-            {name:'Idrija', city: ljubljana},
-            {name:'Ilirska Bistrica', city: ljubljana},
-            {name:'Jesenice', city: ljubljana},
-            {name:'Kamnik', city: ljubljana},
-            {name:'Kocevje', city: ljubljana},
-            {name:'Kostanjevica na Krki', city: ljubljana},
-            {name:'Kranj', city: ljubljana},
-            {name:'Krsko', city: ljubljana},
-            {name:'Lasko', city: ljubljana},
-            {name:'Lenart', city: ljubljana},
-            {name:'Lendava', city: ljubljana},
-            {name:'Litija', city: ljubljana},
-            {name:'Log Dragomer', city: ljubljana},
-            {name:'Logatec', city: ljubljana},
-            {name:'Medvode', city: ljubljana},
-            {name:'Menges', city: ljubljana},
-            {name:'Metlika', city: ljubljana},
-            {name:'Murska Sobota', city: ljubljana},
-            {name:'Nova Gorica', city: ljubljana},
-            {name:'Novo Mesto', city: ljubljana},
-            {name:'Ormoz', city: ljubljana},
-            {name:'Postojna', city: ljubljana},
-            {name:'Ptuj', city: ljubljana},
-            {name:'Radece', city: ljubljana},
-            {name:'Ravne na Koroskem', city: ljubljana},
-            {name:'Sempeter pri Gorici', city: ljubljana},
-            {name:'Sentjur', city: ljubljana},
-            {name:'Sevnica', city: ljubljana},
-            {name:'Sezana', city: ljubljana},
-            {name:'Skofja Loka', city: ljubljana},
-            {name:'Slovenj Gradec', city: ljubljana},
-            {name:'Slovenska Bistrica', city: ljubljana},
-            {name:'Slovenske Konjice', city: ljubljana},
-            {name:'Sostanj', city: ljubljana},
-            {name:'Terme Olimia', city: ljubljana},
-            {name:'Tolmin', city: ljubljana},
-            {name:'Trbovlje', city: ljubljana},
-            {name:'Trebnje', city: ljubljana},
-            {name:'Velenje', city: ljubljana},
-            {name:'Visnja Gora', city: ljubljana},
-            {name:'Vrhnika', city: ljubljana},
-            {name:'Zagorje ob Savi', city: ljubljana},
-            {name:'Zalec', city: ljubljana},
-            {name:'Zelezniki', city: ljubljana},
-            {name:'Ziri', city: ljubljana},
-            {name:'Koper', city: portoroz},
-            {name:'Portoroz', city: portoroz},
-            {name:'Izola', city: portoroz},
-            {name:'Piran', city: portoroz}
-          ])
+  
+pick_up_locations << PickUpLocation.new(name:'Kranjska Gora', city: bled)
+pick_up_locations << PickUpLocation.new(name:'Bled', city: bled)
+pick_up_locations << PickUpLocation.new(name:'Bohinj', city: bled)
+pick_up_locations << PickUpLocation.new(name:'Bovec', city: bled)
+pick_up_locations << PickUpLocation.new(name:'Radovljica', city: bled)
+pick_up_locations << PickUpLocation.new(name:'Trzic', city: bled)
+pick_up_locations << PickUpLocation.new(name:'Ljubljana Airport', city: ljubljana)
+pick_up_locations << PickUpLocation.new(name:'Ljubljana City Centre', city: ljubljana)
+pick_up_locations << PickUpLocation.new(name:'Maribor', city: ljubljana)
+pick_up_locations << PickUpLocation.new(name:'Mezica', city: ljubljana)
+pick_up_locations << PickUpLocation.new(name:'Rogaska Slatina', city: ljubljana)
+pick_up_locations << PickUpLocation.new(name:'Terme Catez', city: ljubljana)
+pick_up_locations << PickUpLocation.new(name:'Ljutomer', city: ljubljana)
+pick_up_locations << PickUpLocation.new(name:'Brezice', city: ljubljana)
+pick_up_locations << PickUpLocation.new(name:'Cateske Toplice', city: ljubljana)
+pick_up_locations << PickUpLocation.new(name:'Celje', city: ljubljana)
+pick_up_locations << PickUpLocation.new(name:'Cerknica', city: ljubljana)
+pick_up_locations << PickUpLocation.new(name:'Crnomelj', city: ljubljana)
+pick_up_locations << PickUpLocation.new(name:'Dolenjske Toplice', city: ljubljana)
+pick_up_locations << PickUpLocation.new(name:'Domzale', city: ljubljana)
+pick_up_locations << PickUpLocation.new(name:'Dravograd', city: ljubljana)
+pick_up_locations << PickUpLocation.new(name:'Gornja Radgona', city: ljubljana)
+pick_up_locations << PickUpLocation.new(name:'Grosuplje', city: ljubljana)
+pick_up_locations << PickUpLocation.new(name:'Idrija', city: ljubljana)
+pick_up_locations << PickUpLocation.new(name:'Ilirska Bistrica', city: ljubljana)
+pick_up_locations << PickUpLocation.new(name:'Jesenice', city: ljubljana)
+pick_up_locations << PickUpLocation.new(name:'Kamnik', city: ljubljana)
+pick_up_locations << PickUpLocation.new(name:'Kocevje', city: ljubljana)
+pick_up_locations << PickUpLocation.new(name:'Kostanjevica na Krki', city: ljubljana)
+pick_up_locations << PickUpLocation.new(name:'Kranj', city: ljubljana)
+pick_up_locations << PickUpLocation.new(name:'Krsko', city: ljubljana)
+pick_up_locations << PickUpLocation.new(name:'Lasko', city: ljubljana)
+pick_up_locations << PickUpLocation.new(name:'Lenart', city: ljubljana)
+pick_up_locations << PickUpLocation.new(name:'Lendava', city: ljubljana)
+pick_up_locations << PickUpLocation.new(name:'Litija', city: ljubljana)
+pick_up_locations << PickUpLocation.new(name:'Log Dragomer', city: ljubljana)
+pick_up_locations << PickUpLocation.new(name:'Logatec', city: ljubljana)
+pick_up_locations << PickUpLocation.new(name:'Medvode', city: ljubljana)
+pick_up_locations << PickUpLocation.new(name:'Menges', city: ljubljana)
+pick_up_locations << PickUpLocation.new(name:'Metlika', city: ljubljana)
+pick_up_locations << PickUpLocation.new(name:'Murska Sobota', city: ljubljana)
+pick_up_locations << PickUpLocation.new(name:'Nova Gorica', city: ljubljana)
+pick_up_locations << PickUpLocation.new(name:'Novo Mesto', city: ljubljana)
+pick_up_locations << PickUpLocation.new(name:'Ormoz', city: ljubljana)
+pick_up_locations << PickUpLocation.new(name:'Postojna', city: ljubljana)
+pick_up_locations << PickUpLocation.new(name:'Ptuj', city: ljubljana)
+pick_up_locations << PickUpLocation.new(name:'Radece', city: ljubljana)
+pick_up_locations << PickUpLocation.new(name:'Ravne na Koroskem', city: ljubljana)
+pick_up_locations << PickUpLocation.new(name:'Sempeter pri Gorici', city: ljubljana)
+pick_up_locations << PickUpLocation.new(name:'Sentjur', city: ljubljana)
+pick_up_locations << PickUpLocation.new(name:'Sevnica', city: ljubljana)
+pick_up_locations << PickUpLocation.new(name:'Sezana', city: ljubljana)
+pick_up_locations << PickUpLocation.new(name:'Skofja Loka', city: ljubljana)
+pick_up_locations << PickUpLocation.new(name:'Slovenj Gradec', city: ljubljana)
+pick_up_locations << PickUpLocation.new(name:'Slovenska Bistrica', city: ljubljana)
+pick_up_locations << PickUpLocation.new(name:'Slovenske Konjice', city: ljubljana)
+pick_up_locations << PickUpLocation.new(name:'Sostanj', city: ljubljana)
+pick_up_locations << PickUpLocation.new(name:'Terme Olimia', city: ljubljana)
+pick_up_locations << PickUpLocation.new(name:'Tolmin', city: ljubljana)
+pick_up_locations << PickUpLocation.new(name:'Trbovlje', city: ljubljana)
+pick_up_locations << PickUpLocation.new(name:'Trebnje', city: ljubljana)
+pick_up_locations << PickUpLocation.new(name:'Velenje', city: ljubljana)
+pick_up_locations << PickUpLocation.new(name:'Visnja Gora', city: ljubljana)
+pick_up_locations << PickUpLocation.new(name:'Vrhnika', city: ljubljana)
+pick_up_locations << PickUpLocation.new(name:'Zagorje ob Savi', city: ljubljana)
+pick_up_locations << PickUpLocation.new(name:'Zalec', city: ljubljana)
+pick_up_locations << PickUpLocation.new(name:'Zelezniki', city: ljubljana)
+pick_up_locations << PickUpLocation.new(name:'Ziri', city: ljubljana)
+pick_up_locations << PickUpLocation.new(name:'Koper', city: portoroz)
+pick_up_locations << PickUpLocation.new(name:'Portoroz', city: portoroz)
+pick_up_locations << PickUpLocation.new(name:'Izola', city: portoroz)
+pick_up_locations << PickUpLocation.new(name:'Piran', city: portoroz)
+ 
   puts 'Cities of Spain'
   alicante = City.find_by(name:'Alicante')
   almeria = City.find_by(name:'Almeria')
@@ -5221,1038 +5208,1038 @@ after :cities do
   santander = City.find_by(name:'Santander')
   tenerife = City.find_by(name:'Tenerife')
   valencia = City.find_by(name:'Valencia')
-  PickUpLocation.create([
-            {name:'Alicante Airport', city: alicante},
-            {name:'Santiago de la Ribera Cruise Port', city: alicante},
-            {name:'Benidorm', city: alicante},
-            {name:'Alicante City Centre', city: alicante},
-            {name:'Altea', city: alicante},
-            {name:'Calp', city: alicante},
-            {name:'Playa de San Juan', city: alicante},
-            {name:'Javea', city: alicante},
-            {name:'Albatera', city: alicante},
-            {name:'Albir', city: alicante},
-            {name:'Alcoy', city: alicante},
-            {name:'Alenda Golf', city: alicante},
-            {name:'Alfaz del Pi', city: alicante},
-            {name:'Algorfa', city: alicante},
-            {name:'Almansa', city: alicante},
-            {name:'Altea Hills', city: alicante},
-            {name:'Banyeres de Mariola', city: alicante},
-            {name:'Benejuzar', city: alicante},
-            {name:'Benissa', city: alicante},
-            {name:'Benitachell', city: alicante},
-            {name:'Biar', city: alicante},
-            {name:'Bonalba Golf', city: alicante},
-            {name:'Busot', city: alicante},
-            {name:'Cala Finestrat', city: alicante},
-            {name:'Callosa de Ensarria', city: alicante},
-            {name:'Campello', city: alicante},
-            {name:'Castalla', city: alicante},
-            {name:'Cocentaina', city: alicante},
-            {name:'Coveta Fuma', city: alicante},
-            {name:'Dehesa de Campoamor', city: alicante},
-            {name:'Denia', city: alicante},
-            {name:'El Plantio Golf Resort', city: alicante},
-            {name:'Elche', city: alicante},
-            {name:'Finestrat', city: alicante},
-            {name:'Gran Alacant', city: alicante},
-            {name:'Guadalest', city: alicante},
-            {name:'Ibi', city: alicante},
-            {name:'Jalon', city: alicante},
-            {name:'Jesus Pobre', city: alicante},
-            {name:'Jijona', city: alicante},
-            {name:'La Marina', city: alicante},
-            {name:'La Nucia', city: alicante},
-            {name:'Miranda de Ebro', city: alicante},
-            {name:'Novelda', city: alicante},
-            {name:'Onil', city: alicante},
-            {name:'Orcheta', city: alicante},
-            {name:'Petrer', city: alicante},
-            {name:'Pinar de Campoverde', city: alicante},
-            {name:'Polop', city: alicante},
-            {name:'Pueblo Acantilado', city: alicante},
-            {name:'Relleu', city: alicante},
-            {name:'San Juan de Alicante', city: alicante},
-            {name:'San Vicente del Raspeig', city: alicante},
-            {name:'Sax', city: alicante},
-            {name:'Tibi', city: alicante},
-            {name:'Villajoyosa', city: alicante},
-            {name:'Villena', city: alicante},
-            {name:'Almeria Airport', city: almeria},
-            {name:'Roquetas de Mar', city: almeria},
-            {name:'Almeria City Centre', city: almeria},
-            {name:'Adra', city: almeria},
-            {name:'Mojacar', city: almeria},
-            {name:'Aguadulce', city: almeria},
-            {name:'Agua Amarga', city: almeria},
-            {name:'Aguilas', city: almeria},
-            {name:'Albox', city: almeria},
-            {name:'Albunol', city: almeria},
-            {name:'Alfaix', city: almeria},
-            {name:'Alhama de Almeria', city: almeria},
-            {name:'Almerimar', city: almeria},
-            {name:'Antas', city: almeria},
-            {name:'Arboleas', city: almeria},
-            {name:'Baza', city: almeria},
-            {name:'Berja', city: almeria},
-            {name:'Cabo De Gata', city: almeria},
-            {name:'Camposol Golf Resort', city: almeria},
-            {name:'Capileira', city: almeria},
-            {name:'Carboneras', city: almeria},
-            {name:'Cortes de Baza', city: almeria},
-            {name:'Cortijo Grande Golf Resort', city: almeria},
-            {name:'Desert Spring Golf Resort', city: almeria},
-            {name:'El Cucador', city: almeria},
-            {name:'El Ejido', city: almeria},
-            {name:'El Pozo De Los Frailes', city: almeria},
-            {name:'El Toyo', city: almeria},
-            {name:'Gador', city: almeria},
-            {name:'Garrucha', city: almeria},
-            {name:'Guadix', city: almeria},
-            {name:'Huercal Overa', city: almeria},
-            {name:'La Envia Golf Resort', city: almeria},
-            {name:'La Hojilla', city: almeria},
-            {name:'La Isleta del Moro', city: almeria},
-            {name:'La Rabita', city: almeria},
-            {name:'Las Negras', city: almeria},
-            {name:'Los Alias', city: almeria},
-            {name:'Los Escullos', city: almeria},
-            {name:'Los Moriscos Golf Resort', city: almeria},
-            {name:'Lucainena de las Torres', city: almeria},
-            {name:'Marina Golf Resort', city: almeria},
-            {name:'Monachil', city: almeria},
-            {name:'Olula del Rio', city: almeria},
-            {name:'Palomares', city: almeria},
-            {name:'Playa Macenas Golf Resort', city: almeria},
-            {name:'Prado Llano', city: almeria},
-            {name:'Puerto Rey', city: almeria},
-            {name:'Rodalquilar', city: almeria},
-            {name:'San Jose', city: almeria},
-            {name:'San Juan de los Terreros', city: almeria},
-            {name:'Tabernas', city: almeria},
-            {name:'Tijola', city: almeria},
-            {name:'Turre', city: almeria},
-            {name:'Ugijar', city: almeria},
-            {name:'Valle Del Este Golf Resort', city: almeria},
-            {name:'Vera', city: almeria},
-            {name:'Vera Playa', city: almeria},
-            {name:'Villaricos', city: almeria},
-            {name:'Zurgena', city: almeria},
-            {name:'Barcelona Airport', city: barcelona},
-            {name:'Reus Airport', city: barcelona},
-            {name:'Barcelona Cruise Port', city: barcelona},
-            {name:'Barcelona Train Station', city: barcelona},
-            {name:'Barcelona City Centre', city: barcelona},
-            {name:'Barcelona City Hotels', city: barcelona},
-            {name:'Lloret de Mar', city: barcelona},
-            {name:'Sitges', city: barcelona},
-            {name:'Tossa de Mar', city: barcelona},
-            {name:'Salou', city: barcelona},
-            {name:'Abrera', city: barcelona},
-            {name:'Aiguafreda', city: barcelona},
-            {name:'Aixirivall', city: barcelona},
-            {name:'Alcossebre', city: barcelona},
-            {name:'Alella', city: barcelona},
-            {name:'Alp', city: barcelona},
-            {name:'Ametlla de Mar', city: barcelona},
-            {name:'Ametlla del Valles', city: barcelona},
-            {name:'Amposta', city: barcelona},
-            {name:'Andorra la Vella', city: barcelona},
-            {name:'Ansalonga Andorra', city: barcelona},
-            {name:'Anyos Andorra', city: barcelona},
-            {name:'Arans Andorra', city: barcelona},
-            {name:'Arcalis Andorra', city: barcelona},
-            {name:'Arenys de Mar', city: barcelona},
-            {name:'Arenys de Munt', city: barcelona},
-            {name:'Argentona', city: barcelona},
-            {name:'Arinsal Andorra', city: barcelona},
-            {name:'Astun', city: barcelona},
-            {name:'Auvinya Andorra', city: barcelona},
-            {name:'Badalona', city: barcelona},
-            {name:'Baqueira Beret', city: barcelona},
-            {name:'Barbera del Valles', city: barcelona},
-            {name:'Begues', city: barcelona},
-            {name:'Bellaterra', city: barcelona},
-            {name:'Benasque', city: barcelona},
-            {name:'Benicassim', city: barcelona},
-            {name:'Berga', city: barcelona},
-            {name:'Bielsa', city: barcelona},
-            {name:'Bigues', city: barcelona},
-            {name:'Blanes', city: barcelona},
-            {name:'Boi Taull', city: barcelona},
-            {name:'Boltana', city: barcelona},
-            {name:'Broto', city: barcelona},
-            {name:'Cabrera de Mar', city: barcelona},
-            {name:'Cabrils', city: barcelona},
-            {name:'Calaf', city: barcelona},
-            {name:'Calafell', city: barcelona},
-            {name:'Caldes d Estrac', city: barcelona},
-            {name:'Caldes de Montbui', city: barcelona},
-            {name:'Calella', city: barcelona},
-            {name:'Cambrils', city: barcelona},
-            {name:'Candanchu', city: barcelona},
-            {name:'Canet de Mar', city: barcelona},
-            {name:'Canovelles', city: barcelona},
-            {name:'Capellades', city: barcelona},
-            {name:'Cardedeu', city: barcelona},
-            {name:'Cardona', city: barcelona},
-            {name:'Castellar del Valles', city: barcelona},
-            {name:'Castellbisbal', city: barcelona},
-            {name:'Castelldefels', city: barcelona},
-            {name:'Castellon de la Plana', city: barcelona},
-            {name:'Cerdanyola del Valles', city: barcelona},
-            {name:'Cerler', city: barcelona},
-            {name:'Cervello', city: barcelona},
-            {name:'Collbato', city: barcelona},
-            {name:'Coma Ruga', city: barcelona},
-            {name:'Corbera de Llobregat', city: barcelona},
-            {name:'Cornella de Llobregat', city: barcelona},
-            {name:'Cubelles', city: barcelona},
-            {name:'Cunit', city: barcelona},
-            {name:'Dosrius', city: barcelona},
-            {name:'El Formigal', city: barcelona},
-            {name:'El Masnou', city: barcelona},
-            {name:'El Papiol', city: barcelona},
-            {name:'El Perello', city: barcelona},
-            {name:'El Port de la Selva', city: barcelona},
-            {name:'El Prat de Llobregat', city: barcelona},
-            {name:'El Vendrell', city: barcelona},
-            {name:'Esparreguera', city: barcelona},
-            {name:'Esplugues de Llobregat', city: barcelona},
-            {name:'Espot', city: barcelona},
-            {name:'Falset', city: barcelona},
-            {name:'Figaro', city: barcelona},
-            {name:'Fontpineda', city: barcelona},
-            {name:'Fraga', city: barcelona},
-            {name:'Gava', city: barcelona},
-            {name:'Gelida', city: barcelona},
-            {name:'Granollers', city: barcelona},
-            {name:'Hospitalet de Llobregat', city: barcelona},
-            {name:'Hostalets de Balenya', city: barcelona},
-            {name:'Igualada', city: barcelona},
-            {name:'Jaca', city: barcelona},
-            {name:'L Ampolla', city: barcelona},
-            {name:'La Garriga', city: barcelona},
-            {name:'La Llagosta', city: barcelona},
-            {name:'La Pineda', city: barcelona},
-            {name:'La Roca del Valles', city: barcelona},
-            {name:'Les Franqueses del Valles', city: barcelona},
-            {name:'Lleida', city: barcelona},
-            {name:'Llica d Amunt', city: barcelona},
-            {name:'Llica de Vall', city: barcelona},
-            {name:'Llinars del Valles', city: barcelona},
-            {name:'Malgrat de Mar', city: barcelona},
-            {name:'Manresa', city: barcelona},
-            {name:'Martorell', city: barcelona},
-            {name:'Martorelles', city: barcelona},
-            {name:'Masquefa', city: barcelona},
-            {name:'Matadepera', city: barcelona},
-            {name:'Mataro', city: barcelona},
-            {name:'Miami Platja', city: barcelona},
-            {name:'Moia', city: barcelona},
-            {name:'Molins de Rei', city: barcelona},
-            {name:'Mollet del Valles', city: barcelona},
-            {name:'Monastirio Montserrat', city: barcelona},
-            {name:'Monistrol de Montserrat', city: barcelona},
-            {name:'Mont Roig del Camp', city: barcelona},
-            {name:'Montbrio del Camp', city: barcelona},
-            {name:'Montcada I Reixach', city: barcelona},
-            {name:'Montgat', city: barcelona},
-            {name:'Montmelo Catalunya Circuit', city: barcelona},
-            {name:'Montornes del Valles', city: barcelona},
-            {name:'Montroig Platja', city: barcelona},
-            {name:'Montseny', city: barcelona},
-            {name:'Navarcles', city: barcelona},
-            {name:'Navata', city: barcelona},
-            {name:'Odena', city: barcelona},
-            {name:'Olesa de Montserrat', city: barcelona},
-            {name:'Oropesa del mar', city: barcelona},
-            {name:'Orrius', city: barcelona},
-            {name:'Pacs del Penedes', city: barcelona},
-            {name:'Palafolls', city: barcelona},
-            {name:'Palau Solit I Plegamans', city: barcelona},
-            {name:'Palleja', city: barcelona},
-            {name:'Panticosa', city: barcelona},
-            {name:'Parets del Valles', city: barcelona},
-            {name:'Piera', city: barcelona},
-            {name:'Pineda de Mar', city: barcelona},
-            {name:'Platja de la Pineda', city: barcelona},
-            {name:'Polinya', city: barcelona},
-            {name:'Port Aventura', city: barcelona},
-            {name:'Premia de Dalt', city: barcelona},
-            {name:'Premia de Mar', city: barcelona},
-            {name:'Rasquera', city: barcelona},
-            {name:'Rellinars', city: barcelona},
-            {name:'Reus', city: barcelona},
-            {name:'Rialp', city: barcelona},
-            {name:'Ribes de Freser', city: barcelona},
-            {name:'Riells de Montseny', city: barcelona},
-            {name:'Ripollet', city: barcelona},
-            {name:'Roda de Bara', city: barcelona},
-            {name:'Rubi', city: barcelona},
-            {name:'Sabadell', city: barcelona},
-            {name:'Sabinanigo', city: barcelona},
-            {name:'Sallent', city: barcelona},
-            {name:'Sant Adria de Besos', city: barcelona},
-            {name:'Sant Andreu de La Barca', city: barcelona},
-            {name:'Sant Andreu de Llavaneres', city: barcelona},
-            {name:'Sant Antoni de Vilamajor', city: barcelona},
-            {name:'Sant Boi de Llobregat', city: barcelona},
-            {name:'Sant Carles de la Rapita', city: barcelona},
-            {name:'Sant Cebria de Vallarta', city: barcelona},
-            {name:'Sant Celoni', city: barcelona},
-            {name:'Sant Climent de Llobregat', city: barcelona},
-            {name:'Sant Cugat del Valles', city: barcelona},
-            {name:'Sant Esteve Sesrovires', city: barcelona},
-            {name:'Sant Feliu de Codines', city: barcelona},
-            {name:'Sant Feliu de Llobregat', city: barcelona},
-            {name:'Sant Fost de Campsentelles', city: barcelona},
-            {name:'Sant Fruitos del Bages', city: barcelona},
-            {name:'Sant Joan Despi', city: barcelona},
-            {name:'Sant Just Desvern', city: barcelona},
-            {name:'Sant Pere de Ribes', city: barcelona},
-            {name:'Sant Pol de Mar', city: barcelona},
-            {name:'Sant Quirze del Valles', city: barcelona},
-            {name:'Sant Sadurni d Anoia', city: barcelona},
-            {name:'Sant Vicenc de Castellet', city: barcelona},
-            {name:'Sant Vicenc de Montalt', city: barcelona},
-            {name:'Sant Vicenc dels Horts', city: barcelona},
-            {name:'Santa Coloma de Cervello', city: barcelona},
-            {name:'Santa Coloma de Gramanet', city: barcelona},
-            {name:'Santa Margarida', city: barcelona},
-            {name:'Santa Oliva', city: barcelona},
-            {name:'Santa Perpetua de Mogoda', city: barcelona},
-            {name:'Santa Susanna', city: barcelona},
-            {name:'Segur de Calafell', city: barcelona},
-            {name:'Seva', city: barcelona},
-            {name:'Sispony Andorra', city: barcelona},
-            {name:'Soldeu Andorra', city: barcelona},
-            {name:'Solsona', city: barcelona},
-            {name:'Sornas Andorra', city: barcelona},
-            {name:'Sort', city: barcelona},
-            {name:'Tarragona', city: barcelona},
-            {name:'Tavascan', city: barcelona},
-            {name:'Teia', city: barcelona},
-            {name:'Terrassa', city: barcelona},
-            {name:'Tona', city: barcelona},
-            {name:'Tordera', city: barcelona},
-            {name:'Torla', city: barcelona},
-            {name:'Torredembarra', city: barcelona},
-            {name:'Tortosa', city: barcelona},
-            {name:'Valldoreix', city: barcelona},
-            {name:'Valls', city: barcelona},
-            {name:'Vandellos', city: barcelona},
-            {name:'Vendrell', city: barcelona},
-            {name:'Vic', city: barcelona},
-            {name:'Vielha', city: barcelona},
-            {name:'Viladecans', city: barcelona},
-            {name:'Viladecavalls', city: barcelona},
-            {name:'Vilafranca Del Penedes', city: barcelona},
-            {name:'Vilanova i la Geltru', city: barcelona},
-            {name:'Vilassar De Dalt', city: barcelona},
-            {name:'Vilassar De Mar', city: barcelona},
-            {name:'Xixerella Andorra', city: barcelona},
-            {name:'Zaragoza', city: barcelona},
-            {name:'Bilbao Airport', city: bilbao},
-            {name:'Bilbao City Centre', city: bilbao},
-            {name:'Vitoria', city: bilbao},
-            {name:'Biarritz', city: bilbao},
-            {name:'S Domingo de la Calzada', city: bilbao},
-            {name:'Logrono', city: bilbao},
-            {name:'Algorta', city: bilbao},
-            {name:'Amorebieta', city: bilbao},
-            {name:'Amurrio', city: bilbao},
-            {name:'Arrigorriaga', city: bilbao},
-            {name:'Azkoitia', city: bilbao},
-            {name:'Azpeitia', city: bilbao},
-            {name:'Balmaseda', city: bilbao},
-            {name:'Barakaldo', city: bilbao},
-            {name:'Basauri', city: bilbao},
-            {name:'Beasain', city: bilbao},
-            {name:'Berango', city: bilbao},
-            {name:'Bergara', city: bilbao},
-            {name:'Bermeo', city: bilbao},
-            {name:'Castro Urdiales', city: bilbao},
-            {name:'Castrojeriz', city: bilbao},
-            {name:'Corunna', city: bilbao},
-            {name:'Cruces', city: bilbao},
-            {name:'Durango', city: bilbao},
-            {name:'Elciego', city: bilbao},
-            {name:'Elorrio', city: bilbao},
-            {name:'Erandio', city: bilbao},
-            {name:'Ermua', city: bilbao},
-            {name:'Estella', city: bilbao},
-            {name:'Galdakao', city: bilbao},
-            {name:'Getaria', city: bilbao},
-            {name:'Guenes', city: bilbao},
-            {name:'Guernica', city: bilbao},
-            {name:'Hendaye', city: bilbao},
-            {name:'Laguardia', city: bilbao},
-            {name:'Laredo', city: bilbao},
-            {name:'Las Arenas', city: bilbao},
-            {name:'Legazpi', city: bilbao},
-            {name:'Leioa', city: bilbao},
-            {name:'Lekeitio', city: bilbao},
-            {name:'Lemoa', city: bilbao},
-            {name:'Llodio', city: bilbao},
-            {name:'Medina de Pomar', city: bilbao},
-            {name:'Mundaka', city: bilbao},
-            {name:'Mutriku', city: bilbao},
-            {name:'Olite', city: bilbao},
-            {name:'Onati', city: bilbao},
-            {name:'Ondarroa', city: bilbao},
-            {name:'Ortuella', city: bilbao},
-            {name:'Oviedo', city: bilbao},
-            {name:'Plentzia', city: bilbao},
-            {name:'Portugalete', city: bilbao},
-            {name:'Puente la Reina', city: bilbao},
-            {name:'Santiago Compostela', city: bilbao},
-            {name:'Santillana del Mar', city: bilbao},
-            {name:'Santona', city: bilbao},
-            {name:'Santurtzi', city: bilbao},
-            {name:'Sestao', city: bilbao},
-            {name:'Sodupe', city: bilbao},
-            {name:'Sopelana', city: bilbao},
-            {name:'Vigo', city: bilbao},
-            {name:'Villarcayo', city: bilbao},
-            {name:'Yurre', city: bilbao},
-            {name:'Zarautz', city: bilbao},
-            {name:'Zumaia', city: bilbao},
-            {name:'Zumarraga', city: bilbao},
-            {name:'Girona Airport', city: girona},
-            {name:'Platja d Aro', city: girona},
-            {name:'Roses', city: girona},
-            {name:'Girona City Centre', city: girona},
-            {name:'Cadaques', city: girona},
-            {name:'Caldes de Malavella', city: girona},
-            {name:'Empuriabrava', city: girona},
-            {name:'Aiguablava', city: girona},
-            {name:'Aiguaviva', city: girona},
-            {name:'Banyoles', city: girona},
-            {name:'Begur', city: girona},
-            {name:'Besalu', city: girona},
-            {name:'Calella de Palafrugell', city: girona},
-            {name:'Calonge', city: girona},
-            {name:'Canillo Andorra', city: girona},
-            {name:'Castellar de n Hug', city: girona},
-            {name:'Castello d Empuries', city: girona},
-            {name:'Colomers', city: girona},
-            {name:'El Serrat Andorra', city: girona},
-            {name:'El Tarter Andorra', city: girona},
-            {name:'Encamp Andorra', city: girona},
-            {name:'Engolasters Andorra', city: girona},
-            {name:'Erts Andorra', city: girona},
-            {name:'Escala', city: girona},
-            {name:'Escaldes Engordany Andorra', city: girona},
-            {name:'Estartit', city: girona},
-            {name:'Figueres', city: girona},
-            {name:'Fornells de la Selva', city: girona},
-            {name:'Grau Roig Andorra', city: girona},
-            {name:'Guardiola de Bergueda', city: girona},
-            {name:'Incles Andorra', city: girona},
-            {name:'Juberri Andorra', city: girona},
-            {name:'L Aldosa Andorra', city: girona},
-            {name:'La Bisbal d Emporda', city: girona},
-            {name:'La Cortinada Andorra', city: girona},
-            {name:'La Margineda Andorra', city: girona},
-            {name:'La Masella', city: girona},
-            {name:'La Massana Andorra', city: girona},
-            {name:'La Molina', city: girona},
-            {name:'Llafranc Palafrugell', city: girona},
-            {name:'Llanca', city: girona},
-            {name:'Llofriu', city: girona},
-            {name:'Llorts Andorra', city: girona},
-            {name:'Manlleu', city: girona},
-            {name:'Nagol Andorra', city: girona},
-            {name:'Olot', city: girona},
-            {name:'Ordino Andorra', city: girona},
-            {name:'Pal Andorra', city: girona},
-            {name:'Palafrugell', city: girona},
-            {name:'Palamos', city: girona},
-            {name:'Pals', city: girona},
-            {name:'Pas de la Casa Andorra', city: girona},
-            {name:'Platja de Pals', city: girona},
-            {name:'Puigcerda', city: girona},
-            {name:'Ripoll', city: girona},
-            {name:'Roda de Ter', city: girona},
-            {name:'Rupit', city: girona},
-            {name:'S Agaro', city: girona},
-            {name:'Sant Antoni de Calonge', city: girona},
-            {name:'Sant Esteve d en Bas', city: girona},
-            {name:'Sant Feliu de Guixols', city: girona},
-            {name:'Sant Hilari Sacalm', city: girona},
-            {name:'Sant Julia de Loria Andorra', city: girona},
-            {name:'Sant Pere Pescador', city: girona},
-            {name:'Santa Coloma Andorra', city: girona},
-            {name:'Santa Coloma de Farners', city: girona},
-            {name:'Santa Cristina d Aro', city: girona},
-            {name:'Tamariu Begur', city: girona},
-            {name:'Torroella de Montgri', city: girona},
-            {name:'Vallter', city: girona},
-            {name:'Vidreres', city: girona},
-            {name:'Gran Canaria Airport', city: canaria},
-            {name:'Las Palmas', city: canaria},
-            {name:'Maspalomas', city: canaria},
-            {name:'Puerto Rico Gran Canaria', city: canaria},
-            {name:'Playa del Ingles', city: canaria},
-            {name:'Anfi del Mar', city: canaria},
-            {name:'Meloneras', city: canaria},
-            {name:'Agaete', city: canaria},
-            {name:'Aguimes', city: canaria},
-            {name:'Amadores', city: canaria},
-            {name:'Arguineguin', city: canaria},
-            {name:'Arucas', city: canaria},
-            {name:'El Salobre', city: canaria},
-            {name:'La Aldea de Tolentino', city: canaria},
-            {name:'Maspalomas Faro', city: canaria},
-            {name:'Mogan City', city: canaria},
-            {name:'Pasito Blanco', city: canaria},
-            {name:'Patalavaca', city: canaria},
-            {name:'Playa del Aguila', city: canaria},
-            {name:'Playa del Cura', city: canaria},
-            {name:'Puerto Mogan', city: canaria},
-            {name:'San Agustin', city: canaria},
-            {name:'Santa Lucia Tirajana', city: canaria},
-            {name:'Taurito', city: canaria},
-            {name:'Tauro', city: canaria},
-            {name:'Tejeda', city: canaria},
-            {name:'Telde', city: canaria},
-            {name:'Vecindario', city: canaria},
-            {name:'Madrid Airport', city: madrid},
-            {name:'Madrid Atocha Train Station', city: madrid},
-            {name:'Madrid Chamartin Train Station', city: madrid},
-            {name:'Madrid City Centre', city: madrid},
-            {name:'Aranjuez', city: madrid},
-            {name:'San Sebastian de Los Reyes', city: madrid},
-            {name:'Boadilla del Monte', city: madrid},
-            {name:'Brunete', city: madrid},
-            {name:'Pozuelo de Alarcon', city: madrid},
-            {name:'Ajalvir', city: madrid},
-            {name:'Alalpardo', city: madrid},
-            {name:'Alameda del Valle', city: madrid},
-            {name:'Albacete', city: madrid},
-            {name:'Alcala de Henares', city: madrid},
-            {name:'Alcazar de San Juan', city: madrid},
-            {name:'Alcobendas', city: madrid},
-            {name:'Alcorcon', city: madrid},
-            {name:'Aldea del Fresno', city: madrid},
-            {name:'Algete', city: madrid},
-            {name:'Alpedrete', city: madrid},
-            {name:'Ambite', city: madrid},
-            {name:'Anchuelo', city: madrid},
-            {name:'Aranda de Duero', city: madrid},
-            {name:'Arganda del Rey', city: madrid},
-            {name:'Arroyomolinos', city: madrid},
-            {name:'Avila', city: madrid},
-            {name:'Azuqueca de Henares', city: madrid},
-            {name:'Badajoz', city: madrid},
-            {name:'Batres', city: madrid},
-            {name:'Becerril de la Sierra', city: madrid},
-            {name:'Belmonte de Tajo', city: madrid},
-            {name:'Benavente', city: madrid},
-            {name:'Berzosa del Lozoya', city: madrid},
-            {name:'Bilbao', city: madrid},
-            {name:'Braojos', city: madrid},
-            {name:'Brea de Tajo', city: madrid},
-            {name:'Buitrago del Lozoya', city: madrid},
-            {name:'Burgo de Osma', city: madrid},
-            {name:'Bustarviejo', city: madrid},
-            {name:'Cabanillas de la Sierra', city: madrid},
-            {name:'Caceres', city: madrid},
-            {name:'Cadalso de los Vidrios', city: madrid},
-            {name:'Calahorra', city: madrid},
-            {name:'Calatayud', city: madrid},
-            {name:'Camarma de Esteruelas', city: madrid},
-            {name:'Campo Real', city: madrid},
-            {name:'Canencia', city: madrid},
-            {name:'Carabana', city: madrid},
-            {name:'Casarrubuelos', city: madrid},
-            {name:'Cebreiro', city: madrid},
-            {name:'Cenicientos', city: madrid},
-            {name:'Cercedilla', city: madrid},
-            {name:'Cervera de Buitrago', city: madrid},
-            {name:'Chapineria', city: madrid},
-            {name:'Chinchon', city: madrid},
-            {name:'Ciempozuelos', city: madrid},
-            {name:'Ciudad Real', city: madrid},
-            {name:'Ciudad Rodrigo', city: madrid},
-            {name:'Cobena', city: madrid},
-            {name:'Collado Mediano', city: madrid},
-            {name:'Collado Villalva', city: madrid},
-            {name:'Colmenar Viejo', city: madrid},
-            {name:'Colmenar de Oreja', city: madrid},
-            {name:'Colmenar del Arroyo', city: madrid},
-            {name:'Colmenarejo', city: madrid},
-            {name:'Cordoba', city: madrid},
-            {name:'Corpa', city: madrid},
-            {name:'Coslada', city: madrid},
-            {name:'Cubas de la Sagra', city: madrid},
-            {name:'Cuenca', city: madrid},
-            {name:'Daganzo de Arriba', city: madrid},
-            {name:'Daimiel', city: madrid},
-            {name:'El Alamo', city: madrid},
-            {name:'El Atazar', city: madrid},
-            {name:'El Berrueco', city: madrid},
-            {name:'El Boalo', city: madrid},
-            {name:'El Escorial', city: madrid},
-            {name:'El Molar', city: madrid},
-            {name:'El Vellon', city: madrid},
-            {name:'Estremera', city: madrid},
-            {name:'Fresnedillas de la Oliva', city: madrid},
-            {name:'Fresno de Torote', city: madrid},
-            {name:'Fuente el Saz de Jarama', city: madrid},
-            {name:'Fuentiduena de Tajo', city: madrid},
-            {name:'Galapagar', city: madrid},
-            {name:'Gandullas', city: madrid},
-            {name:'Garganta de los Montes', city: madrid},
-            {name:'Gargantilla del Lozoya', city: madrid},
-            {name:'Gascones', city: madrid},
-            {name:'Getafe', city: madrid},
-            {name:'Grinon', city: madrid},
-            {name:'Guadalajara', city: madrid},
-            {name:'Guadalix de la Sierra', city: madrid},
-            {name:'Guadarrama', city: madrid},
-            {name:'Horcajo de la Sierra', city: madrid},
-            {name:'Horcajuelo de la Sierra', city: madrid},
-            {name:'Hoyo de Manzanares', city: madrid},
-            {name:'Humanes de Madrid', city: madrid},
-            {name:'La Acebeda', city: madrid},
-            {name:'La Cabrera', city: madrid},
-            {name:'La Hiruela', city: madrid},
-            {name:'La Serna del Monte', city: madrid},
-            {name:'Las Rozas de Madrid', city: madrid},
-            {name:'Leganes', city: madrid},
-            {name:'Leon', city: madrid},
-            {name:'Loeches', city: madrid},
-            {name:'Los Molinos', city: madrid},
-            {name:'Los Santos de la Humosa', city: madrid},
-            {name:'Lozoya', city: madrid},
-            {name:'Lozoyuela', city: madrid},
-            {name:'Madarcos', city: madrid},
-            {name:'Majadahonda', city: madrid},
-            {name:'Malagon', city: madrid},
-            {name:'Manjiron', city: madrid},
-            {name:'Manzanares', city: madrid},
-            {name:'Manzanares el Real', city: madrid},
-            {name:'Meco', city: madrid},
-            {name:'Medina del Campo', city: madrid},
-            {name:'Mejorada del Campo', city: madrid},
-            {name:'Miraflores de la Sierra', city: madrid},
-            {name:'Montejo de la Sierra', city: madrid},
-            {name:'Moraleja de Enmedio', city: madrid},
-            {name:'Moralzarzal', city: madrid},
-            {name:'Morata de Tajuna', city: madrid},
-            {name:'Mostoles', city: madrid},
-            {name:'Murcia', city: madrid},
-            {name:'Navacerrada', city: madrid},
-            {name:'Navalafuente', city: madrid},
-            {name:'Navalagamella', city: madrid},
-            {name:'Navalcarnero', city: madrid},
-            {name:'Navalmanzano', city: madrid},
-            {name:'Navas de Buitrago', city: madrid},
-            {name:'Navas del Rey', city: madrid},
-            {name:'Nuevo Baztan', city: madrid},
-            {name:'Olmeda de las Fuentes', city: madrid},
-            {name:'Oporto', city: madrid},
-            {name:'Orusco de Tajuna', city: madrid},
-            {name:'Ourense', city: madrid},
-            {name:'Palencia', city: madrid},
-            {name:'Pamplona', city: madrid},
-            {name:'Paracuellos de Jarama', city: madrid},
-            {name:'Parla', city: madrid},
-            {name:'Patones', city: madrid},
-            {name:'Pedrezuela', city: madrid},
-            {name:'Pelayos de la Presa', city: madrid},
-            {name:'Perales de Tajuna', city: madrid},
-            {name:'Pezuela de las Torres', city: madrid},
-            {name:'Pinilla del Valle', city: madrid},
-            {name:'Pinuecar', city: madrid},
-            {name:'Pontevedra', city: madrid},
-            {name:'Pozuelo del Rey', city: madrid},
-            {name:'Pradena del Rincon', city: madrid},
-            {name:'Puebla de la Sierra', city: madrid},
-            {name:'Puentes Viejas', city: madrid},
-            {name:'Puertollano', city: madrid},
-            {name:'Quijorna', city: madrid},
-            {name:'Rascafria', city: madrid},
-            {name:'Reduena', city: madrid},
-            {name:'Rivas Vaciamadrid', city: madrid},
-            {name:'Robledillo de la Jara', city: madrid},
-            {name:'Robledo de Chavela', city: madrid},
-            {name:'Robregordo', city: madrid},
-            {name:'Rozas de Puerto Real', city: madrid},
-            {name:'Salamanca', city: madrid},
-            {name:'San Agustin del Guadalix', city: madrid},
-            {name:'San Fernando de Henares', city: madrid},
-            {name:'San Lorenzo de El Escorial', city: madrid},
-            {name:'San Mames', city: madrid},
-            {name:'San Martin de Valdeiglesias', city: madrid},
-            {name:'San Martin de la Vega', city: madrid},
-            {name:'Santa Maria de la Alameda', city: madrid},
-            {name:'Santander', city: madrid},
-            {name:'Santorcaz', city: madrid},
-            {name:'Segovia', city: madrid},
-            {name:'Serranillos del Valle', city: madrid},
-            {name:'Sevilla la Nueva', city: madrid},
-            {name:'Siete Iglesias', city: madrid},
-            {name:'Somosierra', city: madrid},
-            {name:'Soria', city: madrid},
-            {name:'Soto del Real', city: madrid},
-            {name:'Talamanca de Jarama', city: madrid},
-            {name:'Talavera de la Reina', city: madrid},
-            {name:'Tarancon', city: madrid},
-            {name:'Teruel', city: madrid},
-            {name:'Tielmes', city: madrid},
-            {name:'Titulcia', city: madrid},
-            {name:'Toledo', city: madrid},
-            {name:'Torrejon de Ardoz', city: madrid},
-            {name:'Torrejon de Velasco', city: madrid},
-            {name:'Torrejon de la Calzada', city: madrid},
-            {name:'Torrelaguna', city: madrid},
-            {name:'Torrelodones', city: madrid},
-            {name:'Torremocha de Jarama', city: madrid},
-            {name:'Torres de la Alameda', city: madrid},
-            {name:'Tres Cantos', city: madrid},
-            {name:'Valdaracete', city: madrid},
-            {name:'Valdeavero', city: madrid},
-            {name:'Valdelaguna', city: madrid},
-            {name:'Valdemanco', city: madrid},
-            {name:'Valdemaqueda', city: madrid},
-            {name:'Valdemorillo', city: madrid},
-            {name:'Valdemoro', city: madrid},
-            {name:'Valdeolmos', city: madrid},
-            {name:'Valdepielagos', city: madrid},
-            {name:'Valdetorres de Jarama', city: madrid},
-            {name:'Valdilecha', city: madrid},
-            {name:'Valladolid', city: madrid},
-            {name:'Valverde de Alcala', city: madrid},
-            {name:'Velilla de San Antonio', city: madrid},
-            {name:'Venturada', city: madrid},
-            {name:'Villa del Prado', city: madrid},
-            {name:'Villaconejos', city: madrid},
-            {name:'Villalbilla', city: madrid},
-            {name:'Villamanrique de Tajo', city: madrid},
-            {name:'Villamanta', city: madrid},
-            {name:'Villamantilla', city: madrid},
-            {name:'Villanueva de Perales', city: madrid},
-            {name:'Villanueva de la Canada', city: madrid},
-            {name:'Villanueva del Pardillo', city: madrid},
-            {name:'Villar del Olmo', city: madrid},
-            {name:'Villarejo de Salvanes', city: madrid},
-            {name:'Villarrobledo', city: madrid},
-            {name:'Villaviciosa de Odon', city: madrid},
-            {name:'Villavieja del Lozoya', city: madrid},
-            {name:'Vitoria Gasteiz', city: madrid},
-            {name:'Zamora', city: madrid},
-            {name:'Zarzalejo', city: madrid},
-            {name:'Malaga Airport', city: malaga},
-            {name:'Malaga Cruise Port', city: malaga},
-            {name:'Malaga Train Station', city: malaga},
-            {name:'Fuengirola', city: malaga},
-            {name:'Marbella', city: malaga},
-            {name:'Calahonda', city: malaga},
-            {name:'Torremolinos', city: malaga},
-            {name:'Puerto Banus', city: malaga},
-            {name:'Benalmadena Costa', city: malaga},
-            {name:'Alcaidesa', city: malaga},
-            {name:'Algarrobo Costa', city: malaga},
-            {name:'Algeciras', city: malaga},
-            {name:'Alhaurin Grande', city: malaga},
-            {name:'Alhaurin de la Torre', city: malaga},
-            {name:'Almunecar', city: malaga},
-            {name:'Alora', city: malaga},
-            {name:'Alozaina', city: malaga},
-            {name:'Antequera', city: malaga},
-            {name:'Arcos de la Frontera', city: malaga},
-            {name:'Atalaya Villacana', city: malaga},
-            {name:'Benagalbon', city: malaga},
-            {name:'Benahavis', city: malaga},
-            {name:'Benajarafe', city: malaga},
-            {name:'Benalmadena Pueblo', city: malaga},
-            {name:'Bubion', city: malaga},
-            {name:'Cabo Pino', city: malaga},
-            {name:'Cadiz', city: malaga},
-            {name:'Cancelada', city: malaga},
-            {name:'Carchuna', city: malaga},
-            {name:'Carmona', city: malaga},
-            {name:'Carratraca', city: malaga},
-            {name:'Cartama', city: malaga},
-            {name:'Casares', city: malaga},
-            {name:'Chiclana de la Fronter', city: malaga},
-            {name:'Coin', city: malaga},
-            {name:'Colmenar', city: malaga},
-            {name:'Competa', city: malaga},
-            {name:'Conil de la Frontera', city: malaga},
-            {name:'Cortes de la Frontera', city: malaga},
-            {name:'El Morche', city: malaga},
-            {name:'El Puerto de Santa Maria', city: malaga},
-            {name:'El Toril', city: malaga},
-            {name:'Elviria', city: malaga},
-            {name:'Estepona', city: malaga},
-            {name:'Frigiliana', city: malaga},
-            {name:'Granada', city: malaga},
-            {name:'Granada Golf Resort', city: malaga},
-            {name:'Huelva', city: malaga},
-            {name:'Jaen', city: malaga},
-            {name:'Jerez de la Frontera', city: malaga},
-            {name:'La Cala de Mijas', city: malaga},
-            {name:'La Herradura', city: malaga},
-            {name:'La Linea', city: malaga},
-            {name:'La Mamola', city: malaga},
-            {name:'Loja', city: malaga},
-            {name:'Malaga City Centre', city: malaga},
-            {name:'Manilva', city: malaga},
-            {name:'Mijas Costa', city: malaga},
-            {name:'Mijas Pueblo', city: malaga},
-            {name:'Motril', city: malaga},
-            {name:'Nerja', city: malaga},
-            {name:'Ojen', city: malaga},
-            {name:'Parque Tecnologico', city: malaga},
-            {name:'Priego de Cordoba', city: malaga},
-            {name:'Puerto de la Duquesa', city: malaga},
-            {name:'Rincon de la Victoria', city: malaga},
-            {name:'Ronda', city: malaga},
-            {name:'Sabinillas', city: malaga},
-            {name:'Salobrena', city: malaga},
-            {name:'San Pedro de Alcantara', city: malaga},
-            {name:'San Roque Club', city: malaga},
-            {name:'Sancti Petri', city: malaga},
-            {name:'Sanlucar La Mayor', city: malaga},
-            {name:'Sevilla', city: malaga},
-            {name:'Sierra Nevada', city: malaga},
-            {name:'Sotogrande', city: malaga},
-            {name:'Sunset Beach Malaga', city: malaga},
-            {name:'Tarifa', city: malaga},
-            {name:'Torre del Mar', city: malaga},
-            {name:'Torremuelle', city: malaga},
-            {name:'Torrox', city: malaga},
-            {name:'Torrox Costa', city: malaga},
-            {name:'Ubrique', city: malaga},
-            {name:'Velez Malaga', city: malaga},
-            {name:'Villanueva de la Concepcion', city: malaga},
-            {name:'Murcia Airport', city: murcia},
-            {name:'La Manga Club', city: murcia},
-            {name:'Torrevieja', city: murcia},
-            {name:'Cabo Roig', city: murcia},
-            {name:'La Zenia', city: murcia},
-            {name:'Playa Flamenca', city: murcia},
-            {name:'Mar Menor Golf Resort', city: murcia},
-            {name:'Alhama Golf  Resort', city: murcia},
-            {name:'Alhama de Murcia', city: murcia},
-            {name:'Almoradi', city: murcia},
-            {name:'Altorrear Golf Resort', city: murcia},
-            {name:'Bigastro', city: murcia},
-            {name:'Bolnuevo', city: murcia},
-            {name:'Cabo De Palos', city: murcia},
-            {name:'Callosa de Segura', city: murcia},
-            {name:'Campamor Golf Resort', city: murcia},
-            {name:'Campoamor', city: murcia},
-            {name:'Cartagena', city: murcia},
-            {name:'Catral', city: murcia},
-            {name:'Ciudad Quesada', city: murcia},
-            {name:'Cox', city: murcia},
-            {name:'Dolores', city: murcia},
-            {name:'Dona Pepa Urbanizacion', city: murcia},
-            {name:'El Valle Golf Resort', city: murcia},
-            {name:'Finca Algorfa', city: murcia},
-            {name:'Formentera del Segura', city: murcia},
-            {name:'Fuente Alamo', city: murcia},
-            {name:'Granja de Rocamora', city: murcia},
-            {name:'Guardamar', city: murcia},
-            {name:'Hacienda Riquelme', city: murcia},
-            {name:'Hacienda del Alamo', city: murcia},
-            {name:'Isla Plana', city: murcia},
-            {name:'Jacarilla', city: murcia},
-            {name:'La Azohia', city: murcia},
-            {name:'La Azohia Cartagena', city: murcia},
-            {name:'La Azohia Mazarron', city: murcia},
-            {name:'La Finca Golf Resort', city: murcia},
-            {name:'La Manga Strip', city: murcia},
-            {name:'La Manga del Mar Menor', city: murcia},
-            {name:'La Mata', city: murcia},
-            {name:'La Roda Golf Resort', city: murcia},
-            {name:'La Serena Golf Resort', city: murcia},
-            {name:'La Tercia Club Resort', city: murcia},
-            {name:'La Torre Golf', city: murcia},
-            {name:'Las Colinas Golf Club', city: murcia},
-            {name:'Las Ramblas De Orihuela Golf', city: murcia},
-            {name:'Lo Pagan', city: murcia},
-            {name:'Lo Romero Golf Resort', city: murcia},
-            {name:'Lorca', city: murcia},
-            {name:'Los Alcazares', city: murcia},
-            {name:'Los Alcazeres', city: murcia},
-            {name:'Los Montesinos', city: murcia},
-            {name:'Los Nietos', city: murcia},
-            {name:'Los Urrutias', city: murcia},
-            {name:'Mar De Cristal', city: murcia},
-            {name:'Mazarron', city: murcia},
-            {name:'Mazarron Puerto', city: murcia},
-            {name:'Mil Palmeras', city: murcia},
-            {name:'Molina del Segura', city: murcia},
-            {name:'Moraira', city: murcia},
-            {name:'Mosa Trajectum', city: murcia},
-            {name:'Muchamiel', city: murcia},
-            {name:'Murcia City Centre', city: murcia},
-            {name:'Muxamel', city: murcia},
-            {name:'Nijar', city: murcia},
-            {name:'Orihuela', city: murcia},
-            {name:'Orihuela Costa', city: murcia},
-            {name:'Peraleja Golf Resort', city: murcia},
-            {name:'Pilar de la Horadada', city: murcia},
-            {name:'Pinoso', city: murcia},
-            {name:'Puerto Lumbreras', city: murcia},
-            {name:'Puerto de Mazarron', city: murcia},
-            {name:'Punta Prima Orihuela', city: murcia},
-            {name:'Redovan', city: murcia},
-            {name:'Rojales', city: murcia},
-            {name:'San Fulgencio', city: murcia},
-            {name:'San Isidro', city: murcia},
-            {name:'San Javier', city: murcia},
-            {name:'San Miguel de las Salinas', city: murcia},
-            {name:'San Pedro del Pinatar', city: murcia},
-            {name:'Santa Pola', city: murcia},
-            {name:'Sucina', city: murcia},
-            {name:'Torre de la Horadada', city: murcia},
-            {name:'Villamartin', city: murcia},
-            {name:'San Sebastian Airport', city: sebastian},
-            {name:'San Sebastian', city: sebastian},
-            {name:'Irun', city: sebastian},
-            {name:'Hondarribia', city: sebastian},
-            {name:'Burgos', city: sebastian},
-            {name:'Andoain', city: sebastian},
-            {name:'Pasajes', city: sebastian},
-            {name:'Bidegoian', city: sebastian},
-            {name:'Burlada', city: sebastian},
-            {name:'Derio', city: sebastian},
-            {name:'Etxalar', city: sebastian},
-            {name:'Getxo', city: sebastian},
-            {name:'Hernani', city: sebastian},
-            {name:'Lekeito', city: sebastian},
-            {name:'Lezo', city: sebastian},
-            {name:'Noain', city: sebastian},
-            {name:'Oiartzun', city: sebastian},
-            {name:'Orio', city: sebastian},
-            {name:'Roncesvalles', city: sebastian},
-            {name:'Tolosa', city: sebastian},
-            {name:'Vera de Bidasoa', city: sebastian},
-            {name:'Santander Airport', city: santander},
-            {name:'Santander City Centre', city: santander},
-            {name:'Noja', city: santander},
-            {name:'San Sebastian de Garabandal', city: santander},
-            {name:'Torrelavega', city: santander},
-            {name:'Santillana', city: santander},
-            {name:'Comillas', city: santander},
-            {name:'Eibar', city: santander},
-            {name:'Gijon', city: santander},
-            {name:'Liencres', city: santander},
-            {name:'Lugo', city: santander},
-            {name:'Mondragon', city: santander},
-            {name:'Potes', city: santander},
-            {name:'Reinosa', city: santander},
-            {name:'Tenerife North Airport', city: tenerife},
-            {name:'Tenerife South Airport', city: tenerife},
-            {name:'Los Cristianos Cruise Port', city: tenerife},
-            {name:'Santa Cruz Cruise Port', city: tenerife},
-            {name:'Costa Adeje', city: tenerife},
-            {name:'Playa De Las Americas', city: tenerife},
-            {name:'Los Cristianos', city: tenerife},
-            {name:'Playa San Juan', city: tenerife},
-            {name:'Puerto De Santiago', city: tenerife},
-            {name:'Puerto de la Cruz', city: tenerife},
-            {name:'Abades', city: tenerife},
-            {name:'Abama', city: tenerife},
-            {name:'Adeje Village', city: tenerife},
-            {name:'Alcala', city: tenerife},
-            {name:'Amarilla Golf Resort', city: tenerife},
-            {name:'Arafo', city: tenerife},
-            {name:'Arico', city: tenerife},
-            {name:'Arona Village', city: tenerife},
-            {name:'Bajamar', city: tenerife},
-            {name:'Buenavista', city: tenerife},
-            {name:'Callao Salvaje', city: tenerife},
-            {name:'Candelaria', city: tenerife},
-            {name:'Chayofa', city: tenerife},
-            {name:'Costa Del Silencio', city: tenerife},
-            {name:'El Medano', city: tenerife},
-            {name:'El Tanque', city: tenerife},
-            {name:'Garachico', city: tenerife},
-            {name:'Golf del Sur', city: tenerife},
-            {name:'Granadilla', city: tenerife},
-            {name:'Guimar', city: tenerife},
-            {name:'Icod de los Vinos', city: tenerife},
-            {name:'La Caleta', city: tenerife},
-            {name:'La Guancha', city: tenerife},
-            {name:'La Laguna', city: tenerife},
-            {name:'La Matanza', city: tenerife},
-            {name:'La Orotava', city: tenerife},
-            {name:'La Quinta', city: tenerife},
-            {name:'La Victoria', city: tenerife},
-            {name:'Las Caletillas', city: tenerife},
-            {name:'Los Abrigos', city: tenerife},
-            {name:'Los Gigantes', city: tenerife},
-            {name:'Los Realejos', city: tenerife},
-            {name:'Los Silos', city: tenerife},
-            {name:'Marazul', city: tenerife},
-            {name:'Masca', city: tenerife},
-            {name:'Palm Mar', city: tenerife},
-            {name:'Parador Las Canadas Teide', city: tenerife},
-            {name:'Playa De La Arena', city: tenerife},
-            {name:'Playa Fanabe', city: tenerife},
-            {name:'Playa Paraiso ', city: tenerife},
-            {name:'Poris de Abona', city: tenerife},
-            {name:'Puertito de Guimar', city: tenerife},
-            {name:'Punta Del Hidalgo', city: tenerife},
-            {name:'Radazul', city: tenerife},
-            {name:'Roques De Fasnia', city: tenerife},
-            {name:'San Isidro Tenerife', city: tenerife},
-            {name:'San Juan de la Rambla', city: tenerife},
-            {name:'San Miguel Tenerife', city: tenerife},
-            {name:'Santa Cruz Tenerife', city: tenerife},
-            {name:'Santa Ursula', city: tenerife},
-            {name:'Santiago Del Teide', city: tenerife},
-            {name:'Tabaiba', city: tenerife},
-            {name:'Tacoronte', city: tenerife},
-            {name:'Tegueste', city: tenerife},
-            {name:'Ten bel Las Galletas', city: tenerife},
-            {name:'Valle De San Lorenzo', city: tenerife},
-            {name:'Valle Guerra', city: tenerife},
-            {name:'Vilaflor', city: tenerife},
-            {name:'Valencia Airport', city: valencia},
-            {name:'Valencia Cruise Port', city: valencia},
-            {name:'Valencia Train Station', city: valencia},
-            {name:'Valencia City Centre', city: valencia},
-            {name:'Gandia', city: valencia},
-            {name:'Vinaros', city: valencia},
-            {name:'Carcaixent', city: valencia},
-            {name:'Pego', city: valencia},
-            {name:'Port Saplaya', city: valencia},
-            {name:'Alcocebre', city: valencia},
-            {name:'Benicarlo', city: valencia},
-            {name:'Canet Playa', city: valencia},
-            {name:'Castellon', city: valencia},
-            {name:'Chella', city: valencia},
-            {name:'Cullera', city: valencia},
-            {name:'El Saler', city: valencia},
-            {name:'El Vergel', city: valencia},
-            {name:'Els Poblets', city: valencia},
-            {name:'Gandia Playas', city: valencia},
-            {name:'Gata de Gorgos', city: valencia},
-            {name:'Navajas', city: valencia},
-            {name:'Oliva', city: valencia},
-            {name:'Ondara', city: valencia},
-            {name:'Orba', city: valencia},
-            {name:'Pedreguer', city: valencia},
-            {name:'Peniscola', city: valencia},
-            {name:'Piles', city: valencia},
-            {name:'Pucol', city: valencia},
-            {name:'Sagunto', city: valencia},
-            {name:'San Carlos de la Rapita', city: valencia},
-            {name:'Tavernes de Valldigna', city: valencia},
-            {name:'Teulada Valencia', city: valencia},
-            {name:'Torreblanca', city: valencia},
-            {name:'Valencia Suburbs', city: valencia}
-          ])
+  
+pick_up_locations << PickUpLocation.new(name:'Alicante Airport', city: alicante)
+pick_up_locations << PickUpLocation.new(name:'Santiago de la Ribera Cruise Port', city: alicante)
+pick_up_locations << PickUpLocation.new(name:'Benidorm', city: alicante)
+pick_up_locations << PickUpLocation.new(name:'Alicante City Centre', city: alicante)
+pick_up_locations << PickUpLocation.new(name:'Altea', city: alicante)
+pick_up_locations << PickUpLocation.new(name:'Calp', city: alicante)
+pick_up_locations << PickUpLocation.new(name:'Playa de San Juan', city: alicante)
+pick_up_locations << PickUpLocation.new(name:'Javea', city: alicante)
+pick_up_locations << PickUpLocation.new(name:'Albatera', city: alicante)
+pick_up_locations << PickUpLocation.new(name:'Albir', city: alicante)
+pick_up_locations << PickUpLocation.new(name:'Alcoy', city: alicante)
+pick_up_locations << PickUpLocation.new(name:'Alenda Golf', city: alicante)
+pick_up_locations << PickUpLocation.new(name:'Alfaz del Pi', city: alicante)
+pick_up_locations << PickUpLocation.new(name:'Algorfa', city: alicante)
+pick_up_locations << PickUpLocation.new(name:'Almansa', city: alicante)
+pick_up_locations << PickUpLocation.new(name:'Altea Hills', city: alicante)
+pick_up_locations << PickUpLocation.new(name:'Banyeres de Mariola', city: alicante)
+pick_up_locations << PickUpLocation.new(name:'Benejuzar', city: alicante)
+pick_up_locations << PickUpLocation.new(name:'Benissa', city: alicante)
+pick_up_locations << PickUpLocation.new(name:'Benitachell', city: alicante)
+pick_up_locations << PickUpLocation.new(name:'Biar', city: alicante)
+pick_up_locations << PickUpLocation.new(name:'Bonalba Golf', city: alicante)
+pick_up_locations << PickUpLocation.new(name:'Busot', city: alicante)
+pick_up_locations << PickUpLocation.new(name:'Cala Finestrat', city: alicante)
+pick_up_locations << PickUpLocation.new(name:'Callosa de Ensarria', city: alicante)
+pick_up_locations << PickUpLocation.new(name:'Campello', city: alicante)
+pick_up_locations << PickUpLocation.new(name:'Castalla', city: alicante)
+pick_up_locations << PickUpLocation.new(name:'Cocentaina', city: alicante)
+pick_up_locations << PickUpLocation.new(name:'Coveta Fuma', city: alicante)
+pick_up_locations << PickUpLocation.new(name:'Dehesa de Campoamor', city: alicante)
+pick_up_locations << PickUpLocation.new(name:'Denia', city: alicante)
+pick_up_locations << PickUpLocation.new(name:'El Plantio Golf Resort', city: alicante)
+pick_up_locations << PickUpLocation.new(name:'Elche', city: alicante)
+pick_up_locations << PickUpLocation.new(name:'Finestrat', city: alicante)
+pick_up_locations << PickUpLocation.new(name:'Gran Alacant', city: alicante)
+pick_up_locations << PickUpLocation.new(name:'Guadalest', city: alicante)
+pick_up_locations << PickUpLocation.new(name:'Ibi', city: alicante)
+pick_up_locations << PickUpLocation.new(name:'Jalon', city: alicante)
+pick_up_locations << PickUpLocation.new(name:'Jesus Pobre', city: alicante)
+pick_up_locations << PickUpLocation.new(name:'Jijona', city: alicante)
+pick_up_locations << PickUpLocation.new(name:'La Marina', city: alicante)
+pick_up_locations << PickUpLocation.new(name:'La Nucia', city: alicante)
+pick_up_locations << PickUpLocation.new(name:'Miranda de Ebro', city: alicante)
+pick_up_locations << PickUpLocation.new(name:'Novelda', city: alicante)
+pick_up_locations << PickUpLocation.new(name:'Onil', city: alicante)
+pick_up_locations << PickUpLocation.new(name:'Orcheta', city: alicante)
+pick_up_locations << PickUpLocation.new(name:'Petrer', city: alicante)
+pick_up_locations << PickUpLocation.new(name:'Pinar de Campoverde', city: alicante)
+pick_up_locations << PickUpLocation.new(name:'Polop', city: alicante)
+pick_up_locations << PickUpLocation.new(name:'Pueblo Acantilado', city: alicante)
+pick_up_locations << PickUpLocation.new(name:'Relleu', city: alicante)
+pick_up_locations << PickUpLocation.new(name:'San Juan de Alicante', city: alicante)
+pick_up_locations << PickUpLocation.new(name:'San Vicente del Raspeig', city: alicante)
+pick_up_locations << PickUpLocation.new(name:'Sax', city: alicante)
+pick_up_locations << PickUpLocation.new(name:'Tibi', city: alicante)
+pick_up_locations << PickUpLocation.new(name:'Villajoyosa', city: alicante)
+pick_up_locations << PickUpLocation.new(name:'Villena', city: alicante)
+pick_up_locations << PickUpLocation.new(name:'Almeria Airport', city: almeria)
+pick_up_locations << PickUpLocation.new(name:'Roquetas de Mar', city: almeria)
+pick_up_locations << PickUpLocation.new(name:'Almeria City Centre', city: almeria)
+pick_up_locations << PickUpLocation.new(name:'Adra', city: almeria)
+pick_up_locations << PickUpLocation.new(name:'Mojacar', city: almeria)
+pick_up_locations << PickUpLocation.new(name:'Aguadulce', city: almeria)
+pick_up_locations << PickUpLocation.new(name:'Agua Amarga', city: almeria)
+pick_up_locations << PickUpLocation.new(name:'Aguilas', city: almeria)
+pick_up_locations << PickUpLocation.new(name:'Albox', city: almeria)
+pick_up_locations << PickUpLocation.new(name:'Albunol', city: almeria)
+pick_up_locations << PickUpLocation.new(name:'Alfaix', city: almeria)
+pick_up_locations << PickUpLocation.new(name:'Alhama de Almeria', city: almeria)
+pick_up_locations << PickUpLocation.new(name:'Almerimar', city: almeria)
+pick_up_locations << PickUpLocation.new(name:'Antas', city: almeria)
+pick_up_locations << PickUpLocation.new(name:'Arboleas', city: almeria)
+pick_up_locations << PickUpLocation.new(name:'Baza', city: almeria)
+pick_up_locations << PickUpLocation.new(name:'Berja', city: almeria)
+pick_up_locations << PickUpLocation.new(name:'Cabo De Gata', city: almeria)
+pick_up_locations << PickUpLocation.new(name:'Camposol Golf Resort', city: almeria)
+pick_up_locations << PickUpLocation.new(name:'Capileira', city: almeria)
+pick_up_locations << PickUpLocation.new(name:'Carboneras', city: almeria)
+pick_up_locations << PickUpLocation.new(name:'Cortes de Baza', city: almeria)
+pick_up_locations << PickUpLocation.new(name:'Cortijo Grande Golf Resort', city: almeria)
+pick_up_locations << PickUpLocation.new(name:'Desert Spring Golf Resort', city: almeria)
+pick_up_locations << PickUpLocation.new(name:'El Cucador', city: almeria)
+pick_up_locations << PickUpLocation.new(name:'El Ejido', city: almeria)
+pick_up_locations << PickUpLocation.new(name:'El Pozo De Los Frailes', city: almeria)
+pick_up_locations << PickUpLocation.new(name:'El Toyo', city: almeria)
+pick_up_locations << PickUpLocation.new(name:'Gador', city: almeria)
+pick_up_locations << PickUpLocation.new(name:'Garrucha', city: almeria)
+pick_up_locations << PickUpLocation.new(name:'Guadix', city: almeria)
+pick_up_locations << PickUpLocation.new(name:'Huercal Overa', city: almeria)
+pick_up_locations << PickUpLocation.new(name:'La Envia Golf Resort', city: almeria)
+pick_up_locations << PickUpLocation.new(name:'La Hojilla', city: almeria)
+pick_up_locations << PickUpLocation.new(name:'La Isleta del Moro', city: almeria)
+pick_up_locations << PickUpLocation.new(name:'La Rabita', city: almeria)
+pick_up_locations << PickUpLocation.new(name:'Las Negras', city: almeria)
+pick_up_locations << PickUpLocation.new(name:'Los Alias', city: almeria)
+pick_up_locations << PickUpLocation.new(name:'Los Escullos', city: almeria)
+pick_up_locations << PickUpLocation.new(name:'Los Moriscos Golf Resort', city: almeria)
+pick_up_locations << PickUpLocation.new(name:'Lucainena de las Torres', city: almeria)
+pick_up_locations << PickUpLocation.new(name:'Marina Golf Resort', city: almeria)
+pick_up_locations << PickUpLocation.new(name:'Monachil', city: almeria)
+pick_up_locations << PickUpLocation.new(name:'Olula del Rio', city: almeria)
+pick_up_locations << PickUpLocation.new(name:'Palomares', city: almeria)
+pick_up_locations << PickUpLocation.new(name:'Playa Macenas Golf Resort', city: almeria)
+pick_up_locations << PickUpLocation.new(name:'Prado Llano', city: almeria)
+pick_up_locations << PickUpLocation.new(name:'Puerto Rey', city: almeria)
+pick_up_locations << PickUpLocation.new(name:'Rodalquilar', city: almeria)
+pick_up_locations << PickUpLocation.new(name:'San Jose', city: almeria)
+pick_up_locations << PickUpLocation.new(name:'San Juan de los Terreros', city: almeria)
+pick_up_locations << PickUpLocation.new(name:'Tabernas', city: almeria)
+pick_up_locations << PickUpLocation.new(name:'Tijola', city: almeria)
+pick_up_locations << PickUpLocation.new(name:'Turre', city: almeria)
+pick_up_locations << PickUpLocation.new(name:'Ugijar', city: almeria)
+pick_up_locations << PickUpLocation.new(name:'Valle Del Este Golf Resort', city: almeria)
+pick_up_locations << PickUpLocation.new(name:'Vera', city: almeria)
+pick_up_locations << PickUpLocation.new(name:'Vera Playa', city: almeria)
+pick_up_locations << PickUpLocation.new(name:'Villaricos', city: almeria)
+pick_up_locations << PickUpLocation.new(name:'Zurgena', city: almeria)
+pick_up_locations << PickUpLocation.new(name:'Barcelona Airport', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Reus Airport', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Barcelona Cruise Port', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Barcelona Train Station', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Barcelona City Centre', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Barcelona City Hotels', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Lloret de Mar', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Sitges', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Tossa de Mar', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Salou', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Abrera', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Aiguafreda', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Aixirivall', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Alcossebre', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Alella', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Alp', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Ametlla de Mar', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Ametlla del Valles', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Amposta', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Andorra la Vella', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Ansalonga Andorra', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Anyos Andorra', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Arans Andorra', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Arcalis Andorra', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Arenys de Mar', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Arenys de Munt', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Argentona', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Arinsal Andorra', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Astun', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Auvinya Andorra', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Badalona', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Baqueira Beret', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Barbera del Valles', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Begues', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Bellaterra', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Benasque', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Benicassim', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Berga', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Bielsa', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Bigues', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Blanes', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Boi Taull', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Boltana', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Broto', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Cabrera de Mar', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Cabrils', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Calaf', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Calafell', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Caldes d Estrac', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Caldes de Montbui', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Calella', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Cambrils', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Candanchu', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Canet de Mar', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Canovelles', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Capellades', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Cardedeu', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Cardona', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Castellar del Valles', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Castellbisbal', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Castelldefels', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Castellon de la Plana', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Cerdanyola del Valles', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Cerler', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Cervello', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Collbato', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Coma Ruga', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Corbera de Llobregat', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Cornella de Llobregat', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Cubelles', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Cunit', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Dosrius', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'El Formigal', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'El Masnou', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'El Papiol', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'El Perello', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'El Port de la Selva', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'El Prat de Llobregat', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'El Vendrell', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Esparreguera', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Esplugues de Llobregat', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Espot', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Falset', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Figaro', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Fontpineda', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Fraga', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Gava', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Gelida', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Granollers', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Hospitalet de Llobregat', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Hostalets de Balenya', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Igualada', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Jaca', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'L Ampolla', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'La Garriga', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'La Llagosta', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'La Pineda', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'La Roca del Valles', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Les Franqueses del Valles', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Lleida', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Llica d Amunt', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Llica de Vall', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Llinars del Valles', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Malgrat de Mar', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Manresa', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Martorell', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Martorelles', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Masquefa', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Matadepera', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Mataro', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Miami Platja', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Moia', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Molins de Rei', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Mollet del Valles', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Monastirio Montserrat', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Monistrol de Montserrat', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Mont Roig del Camp', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Montbrio del Camp', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Montcada I Reixach', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Montgat', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Montmelo Catalunya Circuit', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Montornes del Valles', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Montroig Platja', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Montseny', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Navarcles', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Navata', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Odena', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Olesa de Montserrat', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Oropesa del mar', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Orrius', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Pacs del Penedes', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Palafolls', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Palau Solit I Plegamans', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Palleja', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Panticosa', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Parets del Valles', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Piera', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Pineda de Mar', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Platja de la Pineda', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Polinya', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Port Aventura', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Premia de Dalt', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Premia de Mar', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Rasquera', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Rellinars', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Reus', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Rialp', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Ribes de Freser', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Riells de Montseny', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Ripollet', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Roda de Bara', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Rubi', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Sabadell', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Sabinanigo', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Sallent', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Sant Adria de Besos', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Sant Andreu de La Barca', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Sant Andreu de Llavaneres', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Sant Antoni de Vilamajor', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Sant Boi de Llobregat', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Sant Carles de la Rapita', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Sant Cebria de Vallarta', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Sant Celoni', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Sant Climent de Llobregat', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Sant Cugat del Valles', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Sant Esteve Sesrovires', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Sant Feliu de Codines', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Sant Feliu de Llobregat', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Sant Fost de Campsentelles', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Sant Fruitos del Bages', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Sant Joan Despi', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Sant Just Desvern', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Sant Pere de Ribes', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Sant Pol de Mar', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Sant Quirze del Valles', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Sant Sadurni d Anoia', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Sant Vicenc de Castellet', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Sant Vicenc de Montalt', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Sant Vicenc dels Horts', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Santa Coloma de Cervello', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Santa Coloma de Gramanet', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Santa Margarida', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Santa Oliva', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Santa Perpetua de Mogoda', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Santa Susanna', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Segur de Calafell', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Seva', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Sispony Andorra', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Soldeu Andorra', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Solsona', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Sornas Andorra', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Sort', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Tarragona', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Tavascan', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Teia', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Terrassa', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Tona', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Tordera', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Torla', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Torredembarra', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Tortosa', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Valldoreix', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Valls', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Vandellos', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Vendrell', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Vic', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Vielha', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Viladecans', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Viladecavalls', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Vilafranca Del Penedes', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Vilanova i la Geltru', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Vilassar De Dalt', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Vilassar De Mar', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Xixerella Andorra', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Zaragoza', city: barcelona)
+pick_up_locations << PickUpLocation.new(name:'Bilbao Airport', city: bilbao)
+pick_up_locations << PickUpLocation.new(name:'Bilbao City Centre', city: bilbao)
+pick_up_locations << PickUpLocation.new(name:'Vitoria', city: bilbao)
+pick_up_locations << PickUpLocation.new(name:'Biarritz', city: bilbao)
+pick_up_locations << PickUpLocation.new(name:'S Domingo de la Calzada', city: bilbao)
+pick_up_locations << PickUpLocation.new(name:'Logrono', city: bilbao)
+pick_up_locations << PickUpLocation.new(name:'Algorta', city: bilbao)
+pick_up_locations << PickUpLocation.new(name:'Amorebieta', city: bilbao)
+pick_up_locations << PickUpLocation.new(name:'Amurrio', city: bilbao)
+pick_up_locations << PickUpLocation.new(name:'Arrigorriaga', city: bilbao)
+pick_up_locations << PickUpLocation.new(name:'Azkoitia', city: bilbao)
+pick_up_locations << PickUpLocation.new(name:'Azpeitia', city: bilbao)
+pick_up_locations << PickUpLocation.new(name:'Balmaseda', city: bilbao)
+pick_up_locations << PickUpLocation.new(name:'Barakaldo', city: bilbao)
+pick_up_locations << PickUpLocation.new(name:'Basauri', city: bilbao)
+pick_up_locations << PickUpLocation.new(name:'Beasain', city: bilbao)
+pick_up_locations << PickUpLocation.new(name:'Berango', city: bilbao)
+pick_up_locations << PickUpLocation.new(name:'Bergara', city: bilbao)
+pick_up_locations << PickUpLocation.new(name:'Bermeo', city: bilbao)
+pick_up_locations << PickUpLocation.new(name:'Castro Urdiales', city: bilbao)
+pick_up_locations << PickUpLocation.new(name:'Castrojeriz', city: bilbao)
+pick_up_locations << PickUpLocation.new(name:'Corunna', city: bilbao)
+pick_up_locations << PickUpLocation.new(name:'Cruces', city: bilbao)
+pick_up_locations << PickUpLocation.new(name:'Durango', city: bilbao)
+pick_up_locations << PickUpLocation.new(name:'Elciego', city: bilbao)
+pick_up_locations << PickUpLocation.new(name:'Elorrio', city: bilbao)
+pick_up_locations << PickUpLocation.new(name:'Erandio', city: bilbao)
+pick_up_locations << PickUpLocation.new(name:'Ermua', city: bilbao)
+pick_up_locations << PickUpLocation.new(name:'Estella', city: bilbao)
+pick_up_locations << PickUpLocation.new(name:'Galdakao', city: bilbao)
+pick_up_locations << PickUpLocation.new(name:'Getaria', city: bilbao)
+pick_up_locations << PickUpLocation.new(name:'Guenes', city: bilbao)
+pick_up_locations << PickUpLocation.new(name:'Guernica', city: bilbao)
+pick_up_locations << PickUpLocation.new(name:'Hendaye', city: bilbao)
+pick_up_locations << PickUpLocation.new(name:'Laguardia', city: bilbao)
+pick_up_locations << PickUpLocation.new(name:'Laredo', city: bilbao)
+pick_up_locations << PickUpLocation.new(name:'Las Arenas', city: bilbao)
+pick_up_locations << PickUpLocation.new(name:'Legazpi', city: bilbao)
+pick_up_locations << PickUpLocation.new(name:'Leioa', city: bilbao)
+pick_up_locations << PickUpLocation.new(name:'Lekeitio', city: bilbao)
+pick_up_locations << PickUpLocation.new(name:'Lemoa', city: bilbao)
+pick_up_locations << PickUpLocation.new(name:'Llodio', city: bilbao)
+pick_up_locations << PickUpLocation.new(name:'Medina de Pomar', city: bilbao)
+pick_up_locations << PickUpLocation.new(name:'Mundaka', city: bilbao)
+pick_up_locations << PickUpLocation.new(name:'Mutriku', city: bilbao)
+pick_up_locations << PickUpLocation.new(name:'Olite', city: bilbao)
+pick_up_locations << PickUpLocation.new(name:'Onati', city: bilbao)
+pick_up_locations << PickUpLocation.new(name:'Ondarroa', city: bilbao)
+pick_up_locations << PickUpLocation.new(name:'Ortuella', city: bilbao)
+pick_up_locations << PickUpLocation.new(name:'Oviedo', city: bilbao)
+pick_up_locations << PickUpLocation.new(name:'Plentzia', city: bilbao)
+pick_up_locations << PickUpLocation.new(name:'Portugalete', city: bilbao)
+pick_up_locations << PickUpLocation.new(name:'Puente la Reina', city: bilbao)
+pick_up_locations << PickUpLocation.new(name:'Santiago Compostela', city: bilbao)
+pick_up_locations << PickUpLocation.new(name:'Santillana del Mar', city: bilbao)
+pick_up_locations << PickUpLocation.new(name:'Santona', city: bilbao)
+pick_up_locations << PickUpLocation.new(name:'Santurtzi', city: bilbao)
+pick_up_locations << PickUpLocation.new(name:'Sestao', city: bilbao)
+pick_up_locations << PickUpLocation.new(name:'Sodupe', city: bilbao)
+pick_up_locations << PickUpLocation.new(name:'Sopelana', city: bilbao)
+pick_up_locations << PickUpLocation.new(name:'Vigo', city: bilbao)
+pick_up_locations << PickUpLocation.new(name:'Villarcayo', city: bilbao)
+pick_up_locations << PickUpLocation.new(name:'Yurre', city: bilbao)
+pick_up_locations << PickUpLocation.new(name:'Zarautz', city: bilbao)
+pick_up_locations << PickUpLocation.new(name:'Zumaia', city: bilbao)
+pick_up_locations << PickUpLocation.new(name:'Zumarraga', city: bilbao)
+pick_up_locations << PickUpLocation.new(name:'Girona Airport', city: girona)
+pick_up_locations << PickUpLocation.new(name:'Platja d Aro', city: girona)
+pick_up_locations << PickUpLocation.new(name:'Roses', city: girona)
+pick_up_locations << PickUpLocation.new(name:'Girona City Centre', city: girona)
+pick_up_locations << PickUpLocation.new(name:'Cadaques', city: girona)
+pick_up_locations << PickUpLocation.new(name:'Caldes de Malavella', city: girona)
+pick_up_locations << PickUpLocation.new(name:'Empuriabrava', city: girona)
+pick_up_locations << PickUpLocation.new(name:'Aiguablava', city: girona)
+pick_up_locations << PickUpLocation.new(name:'Aiguaviva', city: girona)
+pick_up_locations << PickUpLocation.new(name:'Banyoles', city: girona)
+pick_up_locations << PickUpLocation.new(name:'Begur', city: girona)
+pick_up_locations << PickUpLocation.new(name:'Besalu', city: girona)
+pick_up_locations << PickUpLocation.new(name:'Calella de Palafrugell', city: girona)
+pick_up_locations << PickUpLocation.new(name:'Calonge', city: girona)
+pick_up_locations << PickUpLocation.new(name:'Canillo Andorra', city: girona)
+pick_up_locations << PickUpLocation.new(name:'Castellar de n Hug', city: girona)
+pick_up_locations << PickUpLocation.new(name:'Castello d Empuries', city: girona)
+pick_up_locations << PickUpLocation.new(name:'Colomers', city: girona)
+pick_up_locations << PickUpLocation.new(name:'El Serrat Andorra', city: girona)
+pick_up_locations << PickUpLocation.new(name:'El Tarter Andorra', city: girona)
+pick_up_locations << PickUpLocation.new(name:'Encamp Andorra', city: girona)
+pick_up_locations << PickUpLocation.new(name:'Engolasters Andorra', city: girona)
+pick_up_locations << PickUpLocation.new(name:'Erts Andorra', city: girona)
+pick_up_locations << PickUpLocation.new(name:'Escala', city: girona)
+pick_up_locations << PickUpLocation.new(name:'Escaldes Engordany Andorra', city: girona)
+pick_up_locations << PickUpLocation.new(name:'Estartit', city: girona)
+pick_up_locations << PickUpLocation.new(name:'Figueres', city: girona)
+pick_up_locations << PickUpLocation.new(name:'Fornells de la Selva', city: girona)
+pick_up_locations << PickUpLocation.new(name:'Grau Roig Andorra', city: girona)
+pick_up_locations << PickUpLocation.new(name:'Guardiola de Bergueda', city: girona)
+pick_up_locations << PickUpLocation.new(name:'Incles Andorra', city: girona)
+pick_up_locations << PickUpLocation.new(name:'Juberri Andorra', city: girona)
+pick_up_locations << PickUpLocation.new(name:'L Aldosa Andorra', city: girona)
+pick_up_locations << PickUpLocation.new(name:'La Bisbal d Emporda', city: girona)
+pick_up_locations << PickUpLocation.new(name:'La Cortinada Andorra', city: girona)
+pick_up_locations << PickUpLocation.new(name:'La Margineda Andorra', city: girona)
+pick_up_locations << PickUpLocation.new(name:'La Masella', city: girona)
+pick_up_locations << PickUpLocation.new(name:'La Massana Andorra', city: girona)
+pick_up_locations << PickUpLocation.new(name:'La Molina', city: girona)
+pick_up_locations << PickUpLocation.new(name:'Llafranc Palafrugell', city: girona)
+pick_up_locations << PickUpLocation.new(name:'Llanca', city: girona)
+pick_up_locations << PickUpLocation.new(name:'Llofriu', city: girona)
+pick_up_locations << PickUpLocation.new(name:'Llorts Andorra', city: girona)
+pick_up_locations << PickUpLocation.new(name:'Manlleu', city: girona)
+pick_up_locations << PickUpLocation.new(name:'Nagol Andorra', city: girona)
+pick_up_locations << PickUpLocation.new(name:'Olot', city: girona)
+pick_up_locations << PickUpLocation.new(name:'Ordino Andorra', city: girona)
+pick_up_locations << PickUpLocation.new(name:'Pal Andorra', city: girona)
+pick_up_locations << PickUpLocation.new(name:'Palafrugell', city: girona)
+pick_up_locations << PickUpLocation.new(name:'Palamos', city: girona)
+pick_up_locations << PickUpLocation.new(name:'Pals', city: girona)
+pick_up_locations << PickUpLocation.new(name:'Pas de la Casa Andorra', city: girona)
+pick_up_locations << PickUpLocation.new(name:'Platja de Pals', city: girona)
+pick_up_locations << PickUpLocation.new(name:'Puigcerda', city: girona)
+pick_up_locations << PickUpLocation.new(name:'Ripoll', city: girona)
+pick_up_locations << PickUpLocation.new(name:'Roda de Ter', city: girona)
+pick_up_locations << PickUpLocation.new(name:'Rupit', city: girona)
+pick_up_locations << PickUpLocation.new(name:'S Agaro', city: girona)
+pick_up_locations << PickUpLocation.new(name:'Sant Antoni de Calonge', city: girona)
+pick_up_locations << PickUpLocation.new(name:'Sant Esteve d en Bas', city: girona)
+pick_up_locations << PickUpLocation.new(name:'Sant Feliu de Guixols', city: girona)
+pick_up_locations << PickUpLocation.new(name:'Sant Hilari Sacalm', city: girona)
+pick_up_locations << PickUpLocation.new(name:'Sant Julia de Loria Andorra', city: girona)
+pick_up_locations << PickUpLocation.new(name:'Sant Pere Pescador', city: girona)
+pick_up_locations << PickUpLocation.new(name:'Santa Coloma Andorra', city: girona)
+pick_up_locations << PickUpLocation.new(name:'Santa Coloma de Farners', city: girona)
+pick_up_locations << PickUpLocation.new(name:'Santa Cristina d Aro', city: girona)
+pick_up_locations << PickUpLocation.new(name:'Tamariu Begur', city: girona)
+pick_up_locations << PickUpLocation.new(name:'Torroella de Montgri', city: girona)
+pick_up_locations << PickUpLocation.new(name:'Vallter', city: girona)
+pick_up_locations << PickUpLocation.new(name:'Vidreres', city: girona)
+pick_up_locations << PickUpLocation.new(name:'Gran Canaria Airport', city: canaria)
+pick_up_locations << PickUpLocation.new(name:'Las Palmas', city: canaria)
+pick_up_locations << PickUpLocation.new(name:'Maspalomas', city: canaria)
+pick_up_locations << PickUpLocation.new(name:'Puerto Rico Gran Canaria', city: canaria)
+pick_up_locations << PickUpLocation.new(name:'Playa del Ingles', city: canaria)
+pick_up_locations << PickUpLocation.new(name:'Anfi del Mar', city: canaria)
+pick_up_locations << PickUpLocation.new(name:'Meloneras', city: canaria)
+pick_up_locations << PickUpLocation.new(name:'Agaete', city: canaria)
+pick_up_locations << PickUpLocation.new(name:'Aguimes', city: canaria)
+pick_up_locations << PickUpLocation.new(name:'Amadores', city: canaria)
+pick_up_locations << PickUpLocation.new(name:'Arguineguin', city: canaria)
+pick_up_locations << PickUpLocation.new(name:'Arucas', city: canaria)
+pick_up_locations << PickUpLocation.new(name:'El Salobre', city: canaria)
+pick_up_locations << PickUpLocation.new(name:'La Aldea de Tolentino', city: canaria)
+pick_up_locations << PickUpLocation.new(name:'Maspalomas Faro', city: canaria)
+pick_up_locations << PickUpLocation.new(name:'Mogan City', city: canaria)
+pick_up_locations << PickUpLocation.new(name:'Pasito Blanco', city: canaria)
+pick_up_locations << PickUpLocation.new(name:'Patalavaca', city: canaria)
+pick_up_locations << PickUpLocation.new(name:'Playa del Aguila', city: canaria)
+pick_up_locations << PickUpLocation.new(name:'Playa del Cura', city: canaria)
+pick_up_locations << PickUpLocation.new(name:'Puerto Mogan', city: canaria)
+pick_up_locations << PickUpLocation.new(name:'San Agustin', city: canaria)
+pick_up_locations << PickUpLocation.new(name:'Santa Lucia Tirajana', city: canaria)
+pick_up_locations << PickUpLocation.new(name:'Taurito', city: canaria)
+pick_up_locations << PickUpLocation.new(name:'Tauro', city: canaria)
+pick_up_locations << PickUpLocation.new(name:'Tejeda', city: canaria)
+pick_up_locations << PickUpLocation.new(name:'Telde', city: canaria)
+pick_up_locations << PickUpLocation.new(name:'Vecindario', city: canaria)
+pick_up_locations << PickUpLocation.new(name:'Madrid Airport', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Madrid Atocha Train Station', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Madrid Chamartin Train Station', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Madrid City Centre', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Aranjuez', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'San Sebastian de Los Reyes', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Boadilla del Monte', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Brunete', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Pozuelo de Alarcon', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Ajalvir', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Alalpardo', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Alameda del Valle', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Albacete', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Alcala de Henares', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Alcazar de San Juan', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Alcobendas', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Alcorcon', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Aldea del Fresno', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Algete', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Alpedrete', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Ambite', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Anchuelo', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Aranda de Duero', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Arganda del Rey', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Arroyomolinos', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Avila', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Azuqueca de Henares', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Badajoz', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Batres', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Becerril de la Sierra', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Belmonte de Tajo', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Benavente', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Berzosa del Lozoya', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Bilbao', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Braojos', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Brea de Tajo', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Buitrago del Lozoya', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Burgo de Osma', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Bustarviejo', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Cabanillas de la Sierra', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Caceres', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Cadalso de los Vidrios', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Calahorra', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Calatayud', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Camarma de Esteruelas', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Campo Real', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Canencia', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Carabana', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Casarrubuelos', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Cebreiro', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Cenicientos', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Cercedilla', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Cervera de Buitrago', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Chapineria', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Chinchon', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Ciempozuelos', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Ciudad Real', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Ciudad Rodrigo', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Cobena', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Collado Mediano', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Collado Villalva', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Colmenar Viejo', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Colmenar de Oreja', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Colmenar del Arroyo', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Colmenarejo', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Cordoba', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Corpa', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Coslada', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Cubas de la Sagra', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Cuenca', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Daganzo de Arriba', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Daimiel', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'El Alamo', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'El Atazar', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'El Berrueco', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'El Boalo', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'El Escorial', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'El Molar', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'El Vellon', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Estremera', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Fresnedillas de la Oliva', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Fresno de Torote', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Fuente el Saz de Jarama', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Fuentiduena de Tajo', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Galapagar', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Gandullas', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Garganta de los Montes', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Gargantilla del Lozoya', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Gascones', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Getafe', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Grinon', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Guadalajara', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Guadalix de la Sierra', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Guadarrama', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Horcajo de la Sierra', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Horcajuelo de la Sierra', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Hoyo de Manzanares', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Humanes de Madrid', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'La Acebeda', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'La Cabrera', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'La Hiruela', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'La Serna del Monte', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Las Rozas de Madrid', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Leganes', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Leon', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Loeches', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Los Molinos', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Los Santos de la Humosa', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Lozoya', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Lozoyuela', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Madarcos', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Majadahonda', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Malagon', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Manjiron', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Manzanares', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Manzanares el Real', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Meco', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Medina del Campo', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Mejorada del Campo', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Miraflores de la Sierra', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Montejo de la Sierra', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Moraleja de Enmedio', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Moralzarzal', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Morata de Tajuna', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Mostoles', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Murcia', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Navacerrada', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Navalafuente', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Navalagamella', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Navalcarnero', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Navalmanzano', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Navas de Buitrago', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Navas del Rey', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Nuevo Baztan', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Olmeda de las Fuentes', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Oporto', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Orusco de Tajuna', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Ourense', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Palencia', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Pamplona', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Paracuellos de Jarama', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Parla', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Patones', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Pedrezuela', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Pelayos de la Presa', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Perales de Tajuna', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Pezuela de las Torres', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Pinilla del Valle', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Pinuecar', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Pontevedra', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Pozuelo del Rey', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Pradena del Rincon', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Puebla de la Sierra', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Puentes Viejas', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Puertollano', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Quijorna', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Rascafria', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Reduena', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Rivas Vaciamadrid', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Robledillo de la Jara', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Robledo de Chavela', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Robregordo', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Rozas de Puerto Real', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Salamanca', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'San Agustin del Guadalix', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'San Fernando de Henares', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'San Lorenzo de El Escorial', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'San Mames', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'San Martin de Valdeiglesias', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'San Martin de la Vega', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Santa Maria de la Alameda', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Santander', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Santorcaz', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Segovia', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Serranillos del Valle', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Sevilla la Nueva', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Siete Iglesias', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Somosierra', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Soria', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Soto del Real', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Talamanca de Jarama', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Talavera de la Reina', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Tarancon', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Teruel', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Tielmes', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Titulcia', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Toledo', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Torrejon de Ardoz', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Torrejon de Velasco', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Torrejon de la Calzada', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Torrelaguna', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Torrelodones', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Torremocha de Jarama', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Torres de la Alameda', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Tres Cantos', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Valdaracete', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Valdeavero', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Valdelaguna', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Valdemanco', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Valdemaqueda', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Valdemorillo', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Valdemoro', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Valdeolmos', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Valdepielagos', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Valdetorres de Jarama', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Valdilecha', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Valladolid', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Valverde de Alcala', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Velilla de San Antonio', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Venturada', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Villa del Prado', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Villaconejos', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Villalbilla', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Villamanrique de Tajo', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Villamanta', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Villamantilla', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Villanueva de Perales', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Villanueva de la Canada', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Villanueva del Pardillo', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Villar del Olmo', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Villarejo de Salvanes', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Villarrobledo', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Villaviciosa de Odon', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Villavieja del Lozoya', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Vitoria Gasteiz', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Zamora', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Zarzalejo', city: madrid)
+pick_up_locations << PickUpLocation.new(name:'Malaga Airport', city: malaga)
+pick_up_locations << PickUpLocation.new(name:'Malaga Cruise Port', city: malaga)
+pick_up_locations << PickUpLocation.new(name:'Malaga Train Station', city: malaga)
+pick_up_locations << PickUpLocation.new(name:'Fuengirola', city: malaga)
+pick_up_locations << PickUpLocation.new(name:'Marbella', city: malaga)
+pick_up_locations << PickUpLocation.new(name:'Calahonda', city: malaga)
+pick_up_locations << PickUpLocation.new(name:'Torremolinos', city: malaga)
+pick_up_locations << PickUpLocation.new(name:'Puerto Banus', city: malaga)
+pick_up_locations << PickUpLocation.new(name:'Benalmadena Costa', city: malaga)
+pick_up_locations << PickUpLocation.new(name:'Alcaidesa', city: malaga)
+pick_up_locations << PickUpLocation.new(name:'Algarrobo Costa', city: malaga)
+pick_up_locations << PickUpLocation.new(name:'Algeciras', city: malaga)
+pick_up_locations << PickUpLocation.new(name:'Alhaurin Grande', city: malaga)
+pick_up_locations << PickUpLocation.new(name:'Alhaurin de la Torre', city: malaga)
+pick_up_locations << PickUpLocation.new(name:'Almunecar', city: malaga)
+pick_up_locations << PickUpLocation.new(name:'Alora', city: malaga)
+pick_up_locations << PickUpLocation.new(name:'Alozaina', city: malaga)
+pick_up_locations << PickUpLocation.new(name:'Antequera', city: malaga)
+pick_up_locations << PickUpLocation.new(name:'Arcos de la Frontera', city: malaga)
+pick_up_locations << PickUpLocation.new(name:'Atalaya Villacana', city: malaga)
+pick_up_locations << PickUpLocation.new(name:'Benagalbon', city: malaga)
+pick_up_locations << PickUpLocation.new(name:'Benahavis', city: malaga)
+pick_up_locations << PickUpLocation.new(name:'Benajarafe', city: malaga)
+pick_up_locations << PickUpLocation.new(name:'Benalmadena Pueblo', city: malaga)
+pick_up_locations << PickUpLocation.new(name:'Bubion', city: malaga)
+pick_up_locations << PickUpLocation.new(name:'Cabo Pino', city: malaga)
+pick_up_locations << PickUpLocation.new(name:'Cadiz', city: malaga)
+pick_up_locations << PickUpLocation.new(name:'Cancelada', city: malaga)
+pick_up_locations << PickUpLocation.new(name:'Carchuna', city: malaga)
+pick_up_locations << PickUpLocation.new(name:'Carmona', city: malaga)
+pick_up_locations << PickUpLocation.new(name:'Carratraca', city: malaga)
+pick_up_locations << PickUpLocation.new(name:'Cartama', city: malaga)
+pick_up_locations << PickUpLocation.new(name:'Casares', city: malaga)
+pick_up_locations << PickUpLocation.new(name:'Chiclana de la Fronter', city: malaga)
+pick_up_locations << PickUpLocation.new(name:'Coin', city: malaga)
+pick_up_locations << PickUpLocation.new(name:'Colmenar', city: malaga)
+pick_up_locations << PickUpLocation.new(name:'Competa', city: malaga)
+pick_up_locations << PickUpLocation.new(name:'Conil de la Frontera', city: malaga)
+pick_up_locations << PickUpLocation.new(name:'Cortes de la Frontera', city: malaga)
+pick_up_locations << PickUpLocation.new(name:'El Morche', city: malaga)
+pick_up_locations << PickUpLocation.new(name:'El Puerto de Santa Maria', city: malaga)
+pick_up_locations << PickUpLocation.new(name:'El Toril', city: malaga)
+pick_up_locations << PickUpLocation.new(name:'Elviria', city: malaga)
+pick_up_locations << PickUpLocation.new(name:'Estepona', city: malaga)
+pick_up_locations << PickUpLocation.new(name:'Frigiliana', city: malaga)
+pick_up_locations << PickUpLocation.new(name:'Granada', city: malaga)
+pick_up_locations << PickUpLocation.new(name:'Granada Golf Resort', city: malaga)
+pick_up_locations << PickUpLocation.new(name:'Huelva', city: malaga)
+pick_up_locations << PickUpLocation.new(name:'Jaen', city: malaga)
+pick_up_locations << PickUpLocation.new(name:'Jerez de la Frontera', city: malaga)
+pick_up_locations << PickUpLocation.new(name:'La Cala de Mijas', city: malaga)
+pick_up_locations << PickUpLocation.new(name:'La Herradura', city: malaga)
+pick_up_locations << PickUpLocation.new(name:'La Linea', city: malaga)
+pick_up_locations << PickUpLocation.new(name:'La Mamola', city: malaga)
+pick_up_locations << PickUpLocation.new(name:'Loja', city: malaga)
+pick_up_locations << PickUpLocation.new(name:'Malaga City Centre', city: malaga)
+pick_up_locations << PickUpLocation.new(name:'Manilva', city: malaga)
+pick_up_locations << PickUpLocation.new(name:'Mijas Costa', city: malaga)
+pick_up_locations << PickUpLocation.new(name:'Mijas Pueblo', city: malaga)
+pick_up_locations << PickUpLocation.new(name:'Motril', city: malaga)
+pick_up_locations << PickUpLocation.new(name:'Nerja', city: malaga)
+pick_up_locations << PickUpLocation.new(name:'Ojen', city: malaga)
+pick_up_locations << PickUpLocation.new(name:'Parque Tecnologico', city: malaga)
+pick_up_locations << PickUpLocation.new(name:'Priego de Cordoba', city: malaga)
+pick_up_locations << PickUpLocation.new(name:'Puerto de la Duquesa', city: malaga)
+pick_up_locations << PickUpLocation.new(name:'Rincon de la Victoria', city: malaga)
+pick_up_locations << PickUpLocation.new(name:'Ronda', city: malaga)
+pick_up_locations << PickUpLocation.new(name:'Sabinillas', city: malaga)
+pick_up_locations << PickUpLocation.new(name:'Salobrena', city: malaga)
+pick_up_locations << PickUpLocation.new(name:'San Pedro de Alcantara', city: malaga)
+pick_up_locations << PickUpLocation.new(name:'San Roque Club', city: malaga)
+pick_up_locations << PickUpLocation.new(name:'Sancti Petri', city: malaga)
+pick_up_locations << PickUpLocation.new(name:'Sanlucar La Mayor', city: malaga)
+pick_up_locations << PickUpLocation.new(name:'Sevilla', city: malaga)
+pick_up_locations << PickUpLocation.new(name:'Sierra Nevada', city: malaga)
+pick_up_locations << PickUpLocation.new(name:'Sotogrande', city: malaga)
+pick_up_locations << PickUpLocation.new(name:'Sunset Beach Malaga', city: malaga)
+pick_up_locations << PickUpLocation.new(name:'Tarifa', city: malaga)
+pick_up_locations << PickUpLocation.new(name:'Torre del Mar', city: malaga)
+pick_up_locations << PickUpLocation.new(name:'Torremuelle', city: malaga)
+pick_up_locations << PickUpLocation.new(name:'Torrox', city: malaga)
+pick_up_locations << PickUpLocation.new(name:'Torrox Costa', city: malaga)
+pick_up_locations << PickUpLocation.new(name:'Ubrique', city: malaga)
+pick_up_locations << PickUpLocation.new(name:'Velez Malaga', city: malaga)
+pick_up_locations << PickUpLocation.new(name:'Villanueva de la Concepcion', city: malaga)
+pick_up_locations << PickUpLocation.new(name:'Murcia Airport', city: murcia)
+pick_up_locations << PickUpLocation.new(name:'La Manga Club', city: murcia)
+pick_up_locations << PickUpLocation.new(name:'Torrevieja', city: murcia)
+pick_up_locations << PickUpLocation.new(name:'Cabo Roig', city: murcia)
+pick_up_locations << PickUpLocation.new(name:'La Zenia', city: murcia)
+pick_up_locations << PickUpLocation.new(name:'Playa Flamenca', city: murcia)
+pick_up_locations << PickUpLocation.new(name:'Mar Menor Golf Resort', city: murcia)
+pick_up_locations << PickUpLocation.new(name:'Alhama Golf  Resort', city: murcia)
+pick_up_locations << PickUpLocation.new(name:'Alhama de Murcia', city: murcia)
+pick_up_locations << PickUpLocation.new(name:'Almoradi', city: murcia)
+pick_up_locations << PickUpLocation.new(name:'Altorrear Golf Resort', city: murcia)
+pick_up_locations << PickUpLocation.new(name:'Bigastro', city: murcia)
+pick_up_locations << PickUpLocation.new(name:'Bolnuevo', city: murcia)
+pick_up_locations << PickUpLocation.new(name:'Cabo De Palos', city: murcia)
+pick_up_locations << PickUpLocation.new(name:'Callosa de Segura', city: murcia)
+pick_up_locations << PickUpLocation.new(name:'Campamor Golf Resort', city: murcia)
+pick_up_locations << PickUpLocation.new(name:'Campoamor', city: murcia)
+pick_up_locations << PickUpLocation.new(name:'Cartagena', city: murcia)
+pick_up_locations << PickUpLocation.new(name:'Catral', city: murcia)
+pick_up_locations << PickUpLocation.new(name:'Ciudad Quesada', city: murcia)
+pick_up_locations << PickUpLocation.new(name:'Cox', city: murcia)
+pick_up_locations << PickUpLocation.new(name:'Dolores', city: murcia)
+pick_up_locations << PickUpLocation.new(name:'Dona Pepa Urbanizacion', city: murcia)
+pick_up_locations << PickUpLocation.new(name:'El Valle Golf Resort', city: murcia)
+pick_up_locations << PickUpLocation.new(name:'Finca Algorfa', city: murcia)
+pick_up_locations << PickUpLocation.new(name:'Formentera del Segura', city: murcia)
+pick_up_locations << PickUpLocation.new(name:'Fuente Alamo', city: murcia)
+pick_up_locations << PickUpLocation.new(name:'Granja de Rocamora', city: murcia)
+pick_up_locations << PickUpLocation.new(name:'Guardamar', city: murcia)
+pick_up_locations << PickUpLocation.new(name:'Hacienda Riquelme', city: murcia)
+pick_up_locations << PickUpLocation.new(name:'Hacienda del Alamo', city: murcia)
+pick_up_locations << PickUpLocation.new(name:'Isla Plana', city: murcia)
+pick_up_locations << PickUpLocation.new(name:'Jacarilla', city: murcia)
+pick_up_locations << PickUpLocation.new(name:'La Azohia', city: murcia)
+pick_up_locations << PickUpLocation.new(name:'La Azohia Cartagena', city: murcia)
+pick_up_locations << PickUpLocation.new(name:'La Azohia Mazarron', city: murcia)
+pick_up_locations << PickUpLocation.new(name:'La Finca Golf Resort', city: murcia)
+pick_up_locations << PickUpLocation.new(name:'La Manga Strip', city: murcia)
+pick_up_locations << PickUpLocation.new(name:'La Manga del Mar Menor', city: murcia)
+pick_up_locations << PickUpLocation.new(name:'La Mata', city: murcia)
+pick_up_locations << PickUpLocation.new(name:'La Roda Golf Resort', city: murcia)
+pick_up_locations << PickUpLocation.new(name:'La Serena Golf Resort', city: murcia)
+pick_up_locations << PickUpLocation.new(name:'La Tercia Club Resort', city: murcia)
+pick_up_locations << PickUpLocation.new(name:'La Torre Golf', city: murcia)
+pick_up_locations << PickUpLocation.new(name:'Las Colinas Golf Club', city: murcia)
+pick_up_locations << PickUpLocation.new(name:'Las Ramblas De Orihuela Golf', city: murcia)
+pick_up_locations << PickUpLocation.new(name:'Lo Pagan', city: murcia)
+pick_up_locations << PickUpLocation.new(name:'Lo Romero Golf Resort', city: murcia)
+pick_up_locations << PickUpLocation.new(name:'Lorca', city: murcia)
+pick_up_locations << PickUpLocation.new(name:'Los Alcazares', city: murcia)
+pick_up_locations << PickUpLocation.new(name:'Los Alcazeres', city: murcia)
+pick_up_locations << PickUpLocation.new(name:'Los Montesinos', city: murcia)
+pick_up_locations << PickUpLocation.new(name:'Los Nietos', city: murcia)
+pick_up_locations << PickUpLocation.new(name:'Los Urrutias', city: murcia)
+pick_up_locations << PickUpLocation.new(name:'Mar De Cristal', city: murcia)
+pick_up_locations << PickUpLocation.new(name:'Mazarron', city: murcia)
+pick_up_locations << PickUpLocation.new(name:'Mazarron Puerto', city: murcia)
+pick_up_locations << PickUpLocation.new(name:'Mil Palmeras', city: murcia)
+pick_up_locations << PickUpLocation.new(name:'Molina del Segura', city: murcia)
+pick_up_locations << PickUpLocation.new(name:'Moraira', city: murcia)
+pick_up_locations << PickUpLocation.new(name:'Mosa Trajectum', city: murcia)
+pick_up_locations << PickUpLocation.new(name:'Muchamiel', city: murcia)
+pick_up_locations << PickUpLocation.new(name:'Murcia City Centre', city: murcia)
+pick_up_locations << PickUpLocation.new(name:'Muxamel', city: murcia)
+pick_up_locations << PickUpLocation.new(name:'Nijar', city: murcia)
+pick_up_locations << PickUpLocation.new(name:'Orihuela', city: murcia)
+pick_up_locations << PickUpLocation.new(name:'Orihuela Costa', city: murcia)
+pick_up_locations << PickUpLocation.new(name:'Peraleja Golf Resort', city: murcia)
+pick_up_locations << PickUpLocation.new(name:'Pilar de la Horadada', city: murcia)
+pick_up_locations << PickUpLocation.new(name:'Pinoso', city: murcia)
+pick_up_locations << PickUpLocation.new(name:'Puerto Lumbreras', city: murcia)
+pick_up_locations << PickUpLocation.new(name:'Puerto de Mazarron', city: murcia)
+pick_up_locations << PickUpLocation.new(name:'Punta Prima Orihuela', city: murcia)
+pick_up_locations << PickUpLocation.new(name:'Redovan', city: murcia)
+pick_up_locations << PickUpLocation.new(name:'Rojales', city: murcia)
+pick_up_locations << PickUpLocation.new(name:'San Fulgencio', city: murcia)
+pick_up_locations << PickUpLocation.new(name:'San Isidro', city: murcia)
+pick_up_locations << PickUpLocation.new(name:'San Javier', city: murcia)
+pick_up_locations << PickUpLocation.new(name:'San Miguel de las Salinas', city: murcia)
+pick_up_locations << PickUpLocation.new(name:'San Pedro del Pinatar', city: murcia)
+pick_up_locations << PickUpLocation.new(name:'Santa Pola', city: murcia)
+pick_up_locations << PickUpLocation.new(name:'Sucina', city: murcia)
+pick_up_locations << PickUpLocation.new(name:'Torre de la Horadada', city: murcia)
+pick_up_locations << PickUpLocation.new(name:'Villamartin', city: murcia)
+pick_up_locations << PickUpLocation.new(name:'San Sebastian Airport', city: sebastian)
+pick_up_locations << PickUpLocation.new(name:'San Sebastian', city: sebastian)
+pick_up_locations << PickUpLocation.new(name:'Irun', city: sebastian)
+pick_up_locations << PickUpLocation.new(name:'Hondarribia', city: sebastian)
+pick_up_locations << PickUpLocation.new(name:'Burgos', city: sebastian)
+pick_up_locations << PickUpLocation.new(name:'Andoain', city: sebastian)
+pick_up_locations << PickUpLocation.new(name:'Pasajes', city: sebastian)
+pick_up_locations << PickUpLocation.new(name:'Bidegoian', city: sebastian)
+pick_up_locations << PickUpLocation.new(name:'Burlada', city: sebastian)
+pick_up_locations << PickUpLocation.new(name:'Derio', city: sebastian)
+pick_up_locations << PickUpLocation.new(name:'Etxalar', city: sebastian)
+pick_up_locations << PickUpLocation.new(name:'Getxo', city: sebastian)
+pick_up_locations << PickUpLocation.new(name:'Hernani', city: sebastian)
+pick_up_locations << PickUpLocation.new(name:'Lekeito', city: sebastian)
+pick_up_locations << PickUpLocation.new(name:'Lezo', city: sebastian)
+pick_up_locations << PickUpLocation.new(name:'Noain', city: sebastian)
+pick_up_locations << PickUpLocation.new(name:'Oiartzun', city: sebastian)
+pick_up_locations << PickUpLocation.new(name:'Orio', city: sebastian)
+pick_up_locations << PickUpLocation.new(name:'Roncesvalles', city: sebastian)
+pick_up_locations << PickUpLocation.new(name:'Tolosa', city: sebastian)
+pick_up_locations << PickUpLocation.new(name:'Vera de Bidasoa', city: sebastian)
+pick_up_locations << PickUpLocation.new(name:'Santander Airport', city: santander)
+pick_up_locations << PickUpLocation.new(name:'Santander City Centre', city: santander)
+pick_up_locations << PickUpLocation.new(name:'Noja', city: santander)
+pick_up_locations << PickUpLocation.new(name:'San Sebastian de Garabandal', city: santander)
+pick_up_locations << PickUpLocation.new(name:'Torrelavega', city: santander)
+pick_up_locations << PickUpLocation.new(name:'Santillana', city: santander)
+pick_up_locations << PickUpLocation.new(name:'Comillas', city: santander)
+pick_up_locations << PickUpLocation.new(name:'Eibar', city: santander)
+pick_up_locations << PickUpLocation.new(name:'Gijon', city: santander)
+pick_up_locations << PickUpLocation.new(name:'Liencres', city: santander)
+pick_up_locations << PickUpLocation.new(name:'Lugo', city: santander)
+pick_up_locations << PickUpLocation.new(name:'Mondragon', city: santander)
+pick_up_locations << PickUpLocation.new(name:'Potes', city: santander)
+pick_up_locations << PickUpLocation.new(name:'Reinosa', city: santander)
+pick_up_locations << PickUpLocation.new(name:'Tenerife North Airport', city: tenerife)
+pick_up_locations << PickUpLocation.new(name:'Tenerife South Airport', city: tenerife)
+pick_up_locations << PickUpLocation.new(name:'Los Cristianos Cruise Port', city: tenerife)
+pick_up_locations << PickUpLocation.new(name:'Santa Cruz Cruise Port', city: tenerife)
+pick_up_locations << PickUpLocation.new(name:'Costa Adeje', city: tenerife)
+pick_up_locations << PickUpLocation.new(name:'Playa De Las Americas', city: tenerife)
+pick_up_locations << PickUpLocation.new(name:'Los Cristianos', city: tenerife)
+pick_up_locations << PickUpLocation.new(name:'Playa San Juan', city: tenerife)
+pick_up_locations << PickUpLocation.new(name:'Puerto De Santiago', city: tenerife)
+pick_up_locations << PickUpLocation.new(name:'Puerto de la Cruz', city: tenerife)
+pick_up_locations << PickUpLocation.new(name:'Abades', city: tenerife)
+pick_up_locations << PickUpLocation.new(name:'Abama', city: tenerife)
+pick_up_locations << PickUpLocation.new(name:'Adeje Village', city: tenerife)
+pick_up_locations << PickUpLocation.new(name:'Alcala', city: tenerife)
+pick_up_locations << PickUpLocation.new(name:'Amarilla Golf Resort', city: tenerife)
+pick_up_locations << PickUpLocation.new(name:'Arafo', city: tenerife)
+pick_up_locations << PickUpLocation.new(name:'Arico', city: tenerife)
+pick_up_locations << PickUpLocation.new(name:'Arona Village', city: tenerife)
+pick_up_locations << PickUpLocation.new(name:'Bajamar', city: tenerife)
+pick_up_locations << PickUpLocation.new(name:'Buenavista', city: tenerife)
+pick_up_locations << PickUpLocation.new(name:'Callao Salvaje', city: tenerife)
+pick_up_locations << PickUpLocation.new(name:'Candelaria', city: tenerife)
+pick_up_locations << PickUpLocation.new(name:'Chayofa', city: tenerife)
+pick_up_locations << PickUpLocation.new(name:'Costa Del Silencio', city: tenerife)
+pick_up_locations << PickUpLocation.new(name:'El Medano', city: tenerife)
+pick_up_locations << PickUpLocation.new(name:'El Tanque', city: tenerife)
+pick_up_locations << PickUpLocation.new(name:'Garachico', city: tenerife)
+pick_up_locations << PickUpLocation.new(name:'Golf del Sur', city: tenerife)
+pick_up_locations << PickUpLocation.new(name:'Granadilla', city: tenerife)
+pick_up_locations << PickUpLocation.new(name:'Guimar', city: tenerife)
+pick_up_locations << PickUpLocation.new(name:'Icod de los Vinos', city: tenerife)
+pick_up_locations << PickUpLocation.new(name:'La Caleta', city: tenerife)
+pick_up_locations << PickUpLocation.new(name:'La Guancha', city: tenerife)
+pick_up_locations << PickUpLocation.new(name:'La Laguna', city: tenerife)
+pick_up_locations << PickUpLocation.new(name:'La Matanza', city: tenerife)
+pick_up_locations << PickUpLocation.new(name:'La Orotava', city: tenerife)
+pick_up_locations << PickUpLocation.new(name:'La Quinta', city: tenerife)
+pick_up_locations << PickUpLocation.new(name:'La Victoria', city: tenerife)
+pick_up_locations << PickUpLocation.new(name:'Las Caletillas', city: tenerife)
+pick_up_locations << PickUpLocation.new(name:'Los Abrigos', city: tenerife)
+pick_up_locations << PickUpLocation.new(name:'Los Gigantes', city: tenerife)
+pick_up_locations << PickUpLocation.new(name:'Los Realejos', city: tenerife)
+pick_up_locations << PickUpLocation.new(name:'Los Silos', city: tenerife)
+pick_up_locations << PickUpLocation.new(name:'Marazul', city: tenerife)
+pick_up_locations << PickUpLocation.new(name:'Masca', city: tenerife)
+pick_up_locations << PickUpLocation.new(name:'Palm Mar', city: tenerife)
+pick_up_locations << PickUpLocation.new(name:'Parador Las Canadas Teide', city: tenerife)
+pick_up_locations << PickUpLocation.new(name:'Playa De La Arena', city: tenerife)
+pick_up_locations << PickUpLocation.new(name:'Playa Fanabe', city: tenerife)
+pick_up_locations << PickUpLocation.new(name:'Playa Paraiso ', city: tenerife)
+pick_up_locations << PickUpLocation.new(name:'Poris de Abona', city: tenerife)
+pick_up_locations << PickUpLocation.new(name:'Puertito de Guimar', city: tenerife)
+pick_up_locations << PickUpLocation.new(name:'Punta Del Hidalgo', city: tenerife)
+pick_up_locations << PickUpLocation.new(name:'Radazul', city: tenerife)
+pick_up_locations << PickUpLocation.new(name:'Roques De Fasnia', city: tenerife)
+pick_up_locations << PickUpLocation.new(name:'San Isidro Tenerife', city: tenerife)
+pick_up_locations << PickUpLocation.new(name:'San Juan de la Rambla', city: tenerife)
+pick_up_locations << PickUpLocation.new(name:'San Miguel Tenerife', city: tenerife)
+pick_up_locations << PickUpLocation.new(name:'Santa Cruz Tenerife', city: tenerife)
+pick_up_locations << PickUpLocation.new(name:'Santa Ursula', city: tenerife)
+pick_up_locations << PickUpLocation.new(name:'Santiago Del Teide', city: tenerife)
+pick_up_locations << PickUpLocation.new(name:'Tabaiba', city: tenerife)
+pick_up_locations << PickUpLocation.new(name:'Tacoronte', city: tenerife)
+pick_up_locations << PickUpLocation.new(name:'Tegueste', city: tenerife)
+pick_up_locations << PickUpLocation.new(name:'Ten bel Las Galletas', city: tenerife)
+pick_up_locations << PickUpLocation.new(name:'Valle De San Lorenzo', city: tenerife)
+pick_up_locations << PickUpLocation.new(name:'Valle Guerra', city: tenerife)
+pick_up_locations << PickUpLocation.new(name:'Vilaflor', city: tenerife)
+pick_up_locations << PickUpLocation.new(name:'Valencia Airport', city: valencia)
+pick_up_locations << PickUpLocation.new(name:'Valencia Cruise Port', city: valencia)
+pick_up_locations << PickUpLocation.new(name:'Valencia Train Station', city: valencia)
+pick_up_locations << PickUpLocation.new(name:'Valencia City Centre', city: valencia)
+pick_up_locations << PickUpLocation.new(name:'Gandia', city: valencia)
+pick_up_locations << PickUpLocation.new(name:'Vinaros', city: valencia)
+pick_up_locations << PickUpLocation.new(name:'Carcaixent', city: valencia)
+pick_up_locations << PickUpLocation.new(name:'Pego', city: valencia)
+pick_up_locations << PickUpLocation.new(name:'Port Saplaya', city: valencia)
+pick_up_locations << PickUpLocation.new(name:'Alcocebre', city: valencia)
+pick_up_locations << PickUpLocation.new(name:'Benicarlo', city: valencia)
+pick_up_locations << PickUpLocation.new(name:'Canet Playa', city: valencia)
+pick_up_locations << PickUpLocation.new(name:'Castellon', city: valencia)
+pick_up_locations << PickUpLocation.new(name:'Chella', city: valencia)
+pick_up_locations << PickUpLocation.new(name:'Cullera', city: valencia)
+pick_up_locations << PickUpLocation.new(name:'El Saler', city: valencia)
+pick_up_locations << PickUpLocation.new(name:'El Vergel', city: valencia)
+pick_up_locations << PickUpLocation.new(name:'Els Poblets', city: valencia)
+pick_up_locations << PickUpLocation.new(name:'Gandia Playas', city: valencia)
+pick_up_locations << PickUpLocation.new(name:'Gata de Gorgos', city: valencia)
+pick_up_locations << PickUpLocation.new(name:'Navajas', city: valencia)
+pick_up_locations << PickUpLocation.new(name:'Oliva', city: valencia)
+pick_up_locations << PickUpLocation.new(name:'Ondara', city: valencia)
+pick_up_locations << PickUpLocation.new(name:'Orba', city: valencia)
+pick_up_locations << PickUpLocation.new(name:'Pedreguer', city: valencia)
+pick_up_locations << PickUpLocation.new(name:'Peniscola', city: valencia)
+pick_up_locations << PickUpLocation.new(name:'Piles', city: valencia)
+pick_up_locations << PickUpLocation.new(name:'Pucol', city: valencia)
+pick_up_locations << PickUpLocation.new(name:'Sagunto', city: valencia)
+pick_up_locations << PickUpLocation.new(name:'San Carlos de la Rapita', city: valencia)
+pick_up_locations << PickUpLocation.new(name:'Tavernes de Valldigna', city: valencia)
+pick_up_locations << PickUpLocation.new(name:'Teulada Valencia', city: valencia)
+pick_up_locations << PickUpLocation.new(name:'Torreblanca', city: valencia)
+pick_up_locations << PickUpLocation.new(name:'Valencia Suburbs', city: valencia)
+ 
   puts 'Cities of Switzerland'
   basel = City.find_by(name:'Basel')
   bern = City.find_by(name:'Bern')
@@ -6260,200 +6247,200 @@ after :cities do
   lugano = City.find_by(name:'Lugano')
   sion = City.find_by(name:'Sion')
   zurich = City.find_by(name:'Zurich')
-  PickUpLocation.create([
-      {name:'Basel Airport', city: basel},
-      {name:'Basel Port', city: basel},
-      {name:'Basel Train Station', city: basel},
-      {name:'Basel City Centre', city: basel},
-      {name:'Liestal', city: basel},
-      {name:'Breitenbach', city: basel},
-      {name:'Chevenez', city: basel},
-      {name:'Bern Airport', city: bern},
-      {name:'Bern Train Station', city: bern},
-      {name:'Gstaad', city: bern},
-      {name:'Bern City Centre', city: bern},
-      {name:'Fribourg', city: bern},
-      {name:'Interlaken', city: bern},
-      {name:'Villars', city: bern},
-      {name:'Wengen', city: bern},
-      {name:'Adelboden', city: bern},
-      {name:'Brienz', city: bern},
-      {name:'Grindelwald', city: bern},
-      {name:'Gruyeres', city: bern},
-      {name:'Lauterbrunnen', city: bern},
-      {name:'Lenk', city: bern},
-      {name:'Lenk im Simmental', city: bern},
-      {name:'Neuchatel', city: bern},
-      {name:'Rougemont', city: bern},
-      {name:'Saignelegier', city: bern},
-      {name:'Sainte Croix', city: bern},
-      {name:'Wilderswil', city: bern},
-      {name:'Zweisimmen', city: bern},
-      {name:'Geneva Airport', city: geneva},
-      {name:'Geneva Train Station', city: geneva},
-      {name:'Geneva City Centre', city: geneva},
-      {name:'Verbier', city: geneva},
-      {name:'Lausanne', city: geneva},
-      {name:'Rolle', city: geneva},
-      {name:'Visp', city: geneva},
-      {name:'Eysins', city: geneva},
-      {name:'Aigle', city: geneva},
-      {name:'Anzere', city: geneva},
-      {name:'Araches la Frasse', city: geneva},
-      {name:'Arolla', city: geneva},
-      {name:'Boudry', city: geneva},
-      {name:'Bulle', city: geneva},
-      {name:'Celigny', city: geneva},
-      {name:'Champery', city: geneva},
-      {name:'Champoussin', city: geneva},
-      {name:'Chexbres', city: geneva},
-      {name:'Collonge Bellerive', city: geneva},
-      {name:'Crans Montana', city: geneva},
-      {name:'Divonne les Bains', city: geneva},
-      {name:'Duillier', city: geneva},
-      {name:'Ferney Voltaire', city: geneva},
-      {name:'Goppenstein', city: geneva},
-      {name:'Grimentz', city: geneva},
-      {name:'Lausanne Port', city: geneva},
-      {name:'Le Bouveret', city: geneva},
-      {name:'Le Brassus', city: geneva},
-      {name:'Le Mont Pelerin', city: geneva},
-      {name:'Les Crosets', city: geneva},
-      {name:'Les Diableret', city: geneva},
-      {name:'Les Masses', city: geneva},
-      {name:'Leukerbad', city: geneva},
-      {name:'Leysin', city: geneva},
-      {name:'Martigny', city: geneva},
-      {name:'Montreux', city: geneva},
-      {name:'Morgins', city: geneva},
-      {name:'Muerren', city: geneva},
-      {name:'Nendaz', city: geneva},
-      {name:'Nyon', city: geneva},
-      {name:'Orbe', city: geneva},
-      {name:'Ovronnaz', city: geneva},
-      {name:'Thonon les Bains', city: geneva},
-      {name:'Thyon Les Collons', city: geneva},
-      {name:'Troinex', city: geneva},
-      {name:'Val d illiez', city: geneva},
-      {name:'Valais', city: geneva},
-      {name:'Vaud', city: geneva},
-      {name:'Vevey', city: geneva},
-      {name:'Veysonnaz', city: geneva},
-      {name:'Villars sur Ollon', city: geneva},
-      {name:'Wiler Lotschen', city: geneva},
-      {name:'Zinal', city: geneva},
-      {name:'Lugano Airport', city: lugano},
-      {name:'Lugano Train Station', city: lugano},
-      {name:'Pontresina', city: lugano},
-      {name:'Airolo', city: lugano},
-      {name:'Aldesago', city: lugano},
-      {name:'Ascona', city: lugano},
-      {name:'Balerna', city: lugano},
-      {name:'Bedano', city: lugano},
-      {name:'Bellinzona', city: lugano},
-      {name:'Breganzona', city: lugano},
-      {name:'Cassarate', city: lugano},
-      {name:'Castagnola', city: lugano},
-      {name:'Centro', city: lugano},
-      {name:'Chiasso', city: lugano},
-      {name:'Fiesch', city: lugano},
-      {name:'Locarno', city: lugano},
-      {name:'Lugano City Centre', city: lugano},
-      {name:'Massagno', city: lugano},
-      {name:'Mendrisio', city: lugano},
-      {name:'Olivone', city: lugano},
-      {name:'Paradiso', city: lugano},
-      {name:'Piotta', city: lugano},
-      {name:'Pregassona', city: lugano},
-      {name:'Saas Fee', city: lugano},
-      {name:'San Bernardino', city: lugano},
-      {name:'Vals', city: lugano},
-      {name:'Viganello', city: lugano},
-      {name:'Sion Airport', city: sion},
-      {name:'Sion Train Station', city: sion},
-      {name:'Biel', city: sion},
-      {name:'Kandersteg', city: sion},
-      {name:'Murten', city: sion},
-      {name:'Sion', city: sion},
-      {name:'Zurich Airport', city: zurich},
-      {name:'Zurich Train Station', city: zurich},
-      {name:'Adliswil', city: zurich},
-      {name:'Andermatt', city: zurich},
-      {name:'Appenzell', city: zurich},
-      {name:'Arbon', city: zurich},
-      {name:'Arosa', city: zurich},
-      {name:'Baar', city: zurich},
-      {name:'Bad Ragaz', city: zurich},
-      {name:'Bellwald', city: zurich},
-      {name:'Brig', city: zurich},
-      {name:'Bubikon', city: zurich},
-      {name:'Buonas', city: zurich},
-      {name:'Burgenstock', city: zurich},
-      {name:'Castaneda', city: zurich},
-      {name:'Chur', city: zurich},
-      {name:'Davos', city: zurich},
-      {name:'Disentis', city: zurich},
-      {name:'Ebikon', city: zurich},
-      {name:'Effretikon', city: zurich},
-      {name:'Egerkingen', city: zurich},
-      {name:'Einsiedeln', city: zurich},
-      {name:'Embrach', city: zurich},
-      {name:'Engelberg', city: zurich},
-      {name:'Feusisberg', city: zurich},
-      {name:'Flims', city: zurich},
-      {name:'Frauenfeld', city: zurich},
-      {name:'Gaienhofen', city: zurich},
-      {name:'Graubunden', city: zurich},
-      {name:'Hasliberg', city: zurich},
-      {name:'Horgen', city: zurich},
-      {name:'Klosters', city: zurich},
-      {name:'Koblach', city: zurich},
-      {name:'Laax', city: zurich},
-      {name:'Lenzerheide', city: zurich},
-      {name:'Linthal', city: zurich},
-      {name:'Lutzelfluh', city: zurich},
-      {name:'Luzern', city: zurich},
-      {name:'Malbun ', city: zurich},
-      {name:'Meilen', city: zurich},
-      {name:'Meiringen', city: zurich},
-      {name:'Murren', city: zurich},
-      {name:'Muster', city: zurich},
-      {name:'Obwalden', city: zurich},
-      {name:'Parpan', city: zurich},
-      {name:'Pfaffikon', city: zurich},
-      {name:'Realp', city: zurich},
-      {name:'Regensdorf', city: zurich},
-      {name:'Rheinfelden', city: zurich},
-      {name:'Romanshorn', city: zurich},
-      {name:'Samnaun', city: zurich},
-      {name:'Savognin', city: zurich},
-      {name:'Schindellegi', city: zurich},
-      {name:'Scuol', city: zurich},
-      {name:'Sertig Dofli', city: zurich},
-      {name:'Silvaplana', city: zurich},
-      {name:'St Gallen', city: zurich},
-      {name:'St Moritz', city: zurich},
-      {name:'Steckborn', city: zurich},
-      {name:'Tasch', city: zurich},
-      {name:'Thun', city: zurich},
-      {name:'Todtmoos', city: zurich},
-      {name:'Triesenberg', city: zurich},
-      {name:'Unterterzen', city: zurich},
-      {name:'Uster', city: zurich},
-      {name:'Vaduz', city: zurich},
-      {name:'Weggis', city: zurich},
-      {name:'Wetzikon', city: zurich},
-      {name:'Wildhaus', city: zurich},
-      {name:'Winterthur', city: zurich},
-      {name:'Wohlen', city: zurich},
-      {name:'Zermatt', city: zurich},
-      {name:'Zernez', city: zurich},
-      {name:'Zofingen', city: zurich},
-      {name:'Zug', city: zurich},
-      {name:'Zuoz', city: zurich},
-      {name:'Zurich Baden', city: zurich},
-      {name:'Zurich City Centre', city: zurich}
-          ])
+  
+pick_up_locations << PickUpLocation.new(name:'Basel Airport', city: basel)
+pick_up_locations << PickUpLocation.new(name:'Basel Port', city: basel)
+pick_up_locations << PickUpLocation.new(name:'Basel Train Station', city: basel)
+pick_up_locations << PickUpLocation.new(name:'Basel City Centre', city: basel)
+pick_up_locations << PickUpLocation.new(name:'Liestal', city: basel)
+pick_up_locations << PickUpLocation.new(name:'Breitenbach', city: basel)
+pick_up_locations << PickUpLocation.new(name:'Chevenez', city: basel)
+pick_up_locations << PickUpLocation.new(name:'Bern Airport', city: bern)
+pick_up_locations << PickUpLocation.new(name:'Bern Train Station', city: bern)
+pick_up_locations << PickUpLocation.new(name:'Gstaad', city: bern)
+pick_up_locations << PickUpLocation.new(name:'Bern City Centre', city: bern)
+pick_up_locations << PickUpLocation.new(name:'Fribourg', city: bern)
+pick_up_locations << PickUpLocation.new(name:'Interlaken', city: bern)
+pick_up_locations << PickUpLocation.new(name:'Villars', city: bern)
+pick_up_locations << PickUpLocation.new(name:'Wengen', city: bern)
+pick_up_locations << PickUpLocation.new(name:'Adelboden', city: bern)
+pick_up_locations << PickUpLocation.new(name:'Brienz', city: bern)
+pick_up_locations << PickUpLocation.new(name:'Grindelwald', city: bern)
+pick_up_locations << PickUpLocation.new(name:'Gruyeres', city: bern)
+pick_up_locations << PickUpLocation.new(name:'Lauterbrunnen', city: bern)
+pick_up_locations << PickUpLocation.new(name:'Lenk', city: bern)
+pick_up_locations << PickUpLocation.new(name:'Lenk im Simmental', city: bern)
+pick_up_locations << PickUpLocation.new(name:'Neuchatel', city: bern)
+pick_up_locations << PickUpLocation.new(name:'Rougemont', city: bern)
+pick_up_locations << PickUpLocation.new(name:'Saignelegier', city: bern)
+pick_up_locations << PickUpLocation.new(name:'Sainte Croix', city: bern)
+pick_up_locations << PickUpLocation.new(name:'Wilderswil', city: bern)
+pick_up_locations << PickUpLocation.new(name:'Zweisimmen', city: bern)
+pick_up_locations << PickUpLocation.new(name:'Geneva Airport', city: geneva)
+pick_up_locations << PickUpLocation.new(name:'Geneva Train Station', city: geneva)
+pick_up_locations << PickUpLocation.new(name:'Geneva City Centre', city: geneva)
+pick_up_locations << PickUpLocation.new(name:'Verbier', city: geneva)
+pick_up_locations << PickUpLocation.new(name:'Lausanne', city: geneva)
+pick_up_locations << PickUpLocation.new(name:'Rolle', city: geneva)
+pick_up_locations << PickUpLocation.new(name:'Visp', city: geneva)
+pick_up_locations << PickUpLocation.new(name:'Eysins', city: geneva)
+pick_up_locations << PickUpLocation.new(name:'Aigle', city: geneva)
+pick_up_locations << PickUpLocation.new(name:'Anzere', city: geneva)
+pick_up_locations << PickUpLocation.new(name:'Araches la Frasse', city: geneva)
+pick_up_locations << PickUpLocation.new(name:'Arolla', city: geneva)
+pick_up_locations << PickUpLocation.new(name:'Boudry', city: geneva)
+pick_up_locations << PickUpLocation.new(name:'Bulle', city: geneva)
+pick_up_locations << PickUpLocation.new(name:'Celigny', city: geneva)
+pick_up_locations << PickUpLocation.new(name:'Champery', city: geneva)
+pick_up_locations << PickUpLocation.new(name:'Champoussin', city: geneva)
+pick_up_locations << PickUpLocation.new(name:'Chexbres', city: geneva)
+pick_up_locations << PickUpLocation.new(name:'Collonge Bellerive', city: geneva)
+pick_up_locations << PickUpLocation.new(name:'Crans Montana', city: geneva)
+pick_up_locations << PickUpLocation.new(name:'Divonne les Bains', city: geneva)
+pick_up_locations << PickUpLocation.new(name:'Duillier', city: geneva)
+pick_up_locations << PickUpLocation.new(name:'Ferney Voltaire', city: geneva)
+pick_up_locations << PickUpLocation.new(name:'Goppenstein', city: geneva)
+pick_up_locations << PickUpLocation.new(name:'Grimentz', city: geneva)
+pick_up_locations << PickUpLocation.new(name:'Lausanne Port', city: geneva)
+pick_up_locations << PickUpLocation.new(name:'Le Bouveret', city: geneva)
+pick_up_locations << PickUpLocation.new(name:'Le Brassus', city: geneva)
+pick_up_locations << PickUpLocation.new(name:'Le Mont Pelerin', city: geneva)
+pick_up_locations << PickUpLocation.new(name:'Les Crosets', city: geneva)
+pick_up_locations << PickUpLocation.new(name:'Les Diableret', city: geneva)
+pick_up_locations << PickUpLocation.new(name:'Les Masses', city: geneva)
+pick_up_locations << PickUpLocation.new(name:'Leukerbad', city: geneva)
+pick_up_locations << PickUpLocation.new(name:'Leysin', city: geneva)
+pick_up_locations << PickUpLocation.new(name:'Martigny', city: geneva)
+pick_up_locations << PickUpLocation.new(name:'Montreux', city: geneva)
+pick_up_locations << PickUpLocation.new(name:'Morgins', city: geneva)
+pick_up_locations << PickUpLocation.new(name:'Muerren', city: geneva)
+pick_up_locations << PickUpLocation.new(name:'Nendaz', city: geneva)
+pick_up_locations << PickUpLocation.new(name:'Nyon', city: geneva)
+pick_up_locations << PickUpLocation.new(name:'Orbe', city: geneva)
+pick_up_locations << PickUpLocation.new(name:'Ovronnaz', city: geneva)
+pick_up_locations << PickUpLocation.new(name:'Thonon les Bains', city: geneva)
+pick_up_locations << PickUpLocation.new(name:'Thyon Les Collons', city: geneva)
+pick_up_locations << PickUpLocation.new(name:'Troinex', city: geneva)
+pick_up_locations << PickUpLocation.new(name:'Val d illiez', city: geneva)
+pick_up_locations << PickUpLocation.new(name:'Valais', city: geneva)
+pick_up_locations << PickUpLocation.new(name:'Vaud', city: geneva)
+pick_up_locations << PickUpLocation.new(name:'Vevey', city: geneva)
+pick_up_locations << PickUpLocation.new(name:'Veysonnaz', city: geneva)
+pick_up_locations << PickUpLocation.new(name:'Villars sur Ollon', city: geneva)
+pick_up_locations << PickUpLocation.new(name:'Wiler Lotschen', city: geneva)
+pick_up_locations << PickUpLocation.new(name:'Zinal', city: geneva)
+pick_up_locations << PickUpLocation.new(name:'Lugano Airport', city: lugano)
+pick_up_locations << PickUpLocation.new(name:'Lugano Train Station', city: lugano)
+pick_up_locations << PickUpLocation.new(name:'Pontresina', city: lugano)
+pick_up_locations << PickUpLocation.new(name:'Airolo', city: lugano)
+pick_up_locations << PickUpLocation.new(name:'Aldesago', city: lugano)
+pick_up_locations << PickUpLocation.new(name:'Ascona', city: lugano)
+pick_up_locations << PickUpLocation.new(name:'Balerna', city: lugano)
+pick_up_locations << PickUpLocation.new(name:'Bedano', city: lugano)
+pick_up_locations << PickUpLocation.new(name:'Bellinzona', city: lugano)
+pick_up_locations << PickUpLocation.new(name:'Breganzona', city: lugano)
+pick_up_locations << PickUpLocation.new(name:'Cassarate', city: lugano)
+pick_up_locations << PickUpLocation.new(name:'Castagnola', city: lugano)
+pick_up_locations << PickUpLocation.new(name:'Centro', city: lugano)
+pick_up_locations << PickUpLocation.new(name:'Chiasso', city: lugano)
+pick_up_locations << PickUpLocation.new(name:'Fiesch', city: lugano)
+pick_up_locations << PickUpLocation.new(name:'Locarno', city: lugano)
+pick_up_locations << PickUpLocation.new(name:'Lugano City Centre', city: lugano)
+pick_up_locations << PickUpLocation.new(name:'Massagno', city: lugano)
+pick_up_locations << PickUpLocation.new(name:'Mendrisio', city: lugano)
+pick_up_locations << PickUpLocation.new(name:'Olivone', city: lugano)
+pick_up_locations << PickUpLocation.new(name:'Paradiso', city: lugano)
+pick_up_locations << PickUpLocation.new(name:'Piotta', city: lugano)
+pick_up_locations << PickUpLocation.new(name:'Pregassona', city: lugano)
+pick_up_locations << PickUpLocation.new(name:'Saas Fee', city: lugano)
+pick_up_locations << PickUpLocation.new(name:'San Bernardino', city: lugano)
+pick_up_locations << PickUpLocation.new(name:'Vals', city: lugano)
+pick_up_locations << PickUpLocation.new(name:'Viganello', city: lugano)
+pick_up_locations << PickUpLocation.new(name:'Sion Airport', city: sion)
+pick_up_locations << PickUpLocation.new(name:'Sion Train Station', city: sion)
+pick_up_locations << PickUpLocation.new(name:'Biel', city: sion)
+pick_up_locations << PickUpLocation.new(name:'Kandersteg', city: sion)
+pick_up_locations << PickUpLocation.new(name:'Murten', city: sion)
+pick_up_locations << PickUpLocation.new(name:'Sion', city: sion)
+pick_up_locations << PickUpLocation.new(name:'Zurich Airport', city: zurich)
+pick_up_locations << PickUpLocation.new(name:'Zurich Train Station', city: zurich)
+pick_up_locations << PickUpLocation.new(name:'Adliswil', city: zurich)
+pick_up_locations << PickUpLocation.new(name:'Andermatt', city: zurich)
+pick_up_locations << PickUpLocation.new(name:'Appenzell', city: zurich)
+pick_up_locations << PickUpLocation.new(name:'Arbon', city: zurich)
+pick_up_locations << PickUpLocation.new(name:'Arosa', city: zurich)
+pick_up_locations << PickUpLocation.new(name:'Baar', city: zurich)
+pick_up_locations << PickUpLocation.new(name:'Bad Ragaz', city: zurich)
+pick_up_locations << PickUpLocation.new(name:'Bellwald', city: zurich)
+pick_up_locations << PickUpLocation.new(name:'Brig', city: zurich)
+pick_up_locations << PickUpLocation.new(name:'Bubikon', city: zurich)
+pick_up_locations << PickUpLocation.new(name:'Buonas', city: zurich)
+pick_up_locations << PickUpLocation.new(name:'Burgenstock', city: zurich)
+pick_up_locations << PickUpLocation.new(name:'Castaneda', city: zurich)
+pick_up_locations << PickUpLocation.new(name:'Chur', city: zurich)
+pick_up_locations << PickUpLocation.new(name:'Davos', city: zurich)
+pick_up_locations << PickUpLocation.new(name:'Disentis', city: zurich)
+pick_up_locations << PickUpLocation.new(name:'Ebikon', city: zurich)
+pick_up_locations << PickUpLocation.new(name:'Effretikon', city: zurich)
+pick_up_locations << PickUpLocation.new(name:'Egerkingen', city: zurich)
+pick_up_locations << PickUpLocation.new(name:'Einsiedeln', city: zurich)
+pick_up_locations << PickUpLocation.new(name:'Embrach', city: zurich)
+pick_up_locations << PickUpLocation.new(name:'Engelberg', city: zurich)
+pick_up_locations << PickUpLocation.new(name:'Feusisberg', city: zurich)
+pick_up_locations << PickUpLocation.new(name:'Flims', city: zurich)
+pick_up_locations << PickUpLocation.new(name:'Frauenfeld', city: zurich)
+pick_up_locations << PickUpLocation.new(name:'Gaienhofen', city: zurich)
+pick_up_locations << PickUpLocation.new(name:'Graubunden', city: zurich)
+pick_up_locations << PickUpLocation.new(name:'Hasliberg', city: zurich)
+pick_up_locations << PickUpLocation.new(name:'Horgen', city: zurich)
+pick_up_locations << PickUpLocation.new(name:'Klosters', city: zurich)
+pick_up_locations << PickUpLocation.new(name:'Koblach', city: zurich)
+pick_up_locations << PickUpLocation.new(name:'Laax', city: zurich)
+pick_up_locations << PickUpLocation.new(name:'Lenzerheide', city: zurich)
+pick_up_locations << PickUpLocation.new(name:'Linthal', city: zurich)
+pick_up_locations << PickUpLocation.new(name:'Lutzelfluh', city: zurich)
+pick_up_locations << PickUpLocation.new(name:'Luzern', city: zurich)
+pick_up_locations << PickUpLocation.new(name:'Malbun ', city: zurich)
+pick_up_locations << PickUpLocation.new(name:'Meilen', city: zurich)
+pick_up_locations << PickUpLocation.new(name:'Meiringen', city: zurich)
+pick_up_locations << PickUpLocation.new(name:'Murren', city: zurich)
+pick_up_locations << PickUpLocation.new(name:'Muster', city: zurich)
+pick_up_locations << PickUpLocation.new(name:'Obwalden', city: zurich)
+pick_up_locations << PickUpLocation.new(name:'Parpan', city: zurich)
+pick_up_locations << PickUpLocation.new(name:'Pfaffikon', city: zurich)
+pick_up_locations << PickUpLocation.new(name:'Realp', city: zurich)
+pick_up_locations << PickUpLocation.new(name:'Regensdorf', city: zurich)
+pick_up_locations << PickUpLocation.new(name:'Rheinfelden', city: zurich)
+pick_up_locations << PickUpLocation.new(name:'Romanshorn', city: zurich)
+pick_up_locations << PickUpLocation.new(name:'Samnaun', city: zurich)
+pick_up_locations << PickUpLocation.new(name:'Savognin', city: zurich)
+pick_up_locations << PickUpLocation.new(name:'Schindellegi', city: zurich)
+pick_up_locations << PickUpLocation.new(name:'Scuol', city: zurich)
+pick_up_locations << PickUpLocation.new(name:'Sertig Dofli', city: zurich)
+pick_up_locations << PickUpLocation.new(name:'Silvaplana', city: zurich)
+pick_up_locations << PickUpLocation.new(name:'St Gallen', city: zurich)
+pick_up_locations << PickUpLocation.new(name:'St Moritz', city: zurich)
+pick_up_locations << PickUpLocation.new(name:'Steckborn', city: zurich)
+pick_up_locations << PickUpLocation.new(name:'Tasch', city: zurich)
+pick_up_locations << PickUpLocation.new(name:'Thun', city: zurich)
+pick_up_locations << PickUpLocation.new(name:'Todtmoos', city: zurich)
+pick_up_locations << PickUpLocation.new(name:'Triesenberg', city: zurich)
+pick_up_locations << PickUpLocation.new(name:'Unterterzen', city: zurich)
+pick_up_locations << PickUpLocation.new(name:'Uster', city: zurich)
+pick_up_locations << PickUpLocation.new(name:'Vaduz', city: zurich)
+pick_up_locations << PickUpLocation.new(name:'Weggis', city: zurich)
+pick_up_locations << PickUpLocation.new(name:'Wetzikon', city: zurich)
+pick_up_locations << PickUpLocation.new(name:'Wildhaus', city: zurich)
+pick_up_locations << PickUpLocation.new(name:'Winterthur', city: zurich)
+pick_up_locations << PickUpLocation.new(name:'Wohlen', city: zurich)
+pick_up_locations << PickUpLocation.new(name:'Zermatt', city: zurich)
+pick_up_locations << PickUpLocation.new(name:'Zernez', city: zurich)
+pick_up_locations << PickUpLocation.new(name:'Zofingen', city: zurich)
+pick_up_locations << PickUpLocation.new(name:'Zug', city: zurich)
+pick_up_locations << PickUpLocation.new(name:'Zuoz', city: zurich)
+pick_up_locations << PickUpLocation.new(name:'Zurich Baden', city: zurich)
+pick_up_locations << PickUpLocation.new(name:'Zurich City Centre', city: zurich)
+ 
   puts 'Cities of Turkey'
   ankara = City.find_by(name:'Ankara')
   antalya = City.find_by(name:'Antalya')
@@ -6461,155 +6448,155 @@ after :cities do
   dalaman = City.find_by(name:'Dalaman')
   istanbul = City.find_by(name:'Istanbul')
   izmir = City.find_by(name:'Izmir')
-  PickUpLocation.create([
-           {name:'Ankara Airport', city: ankara},
-           {name:'Abant Nature Park', city: ankara},
-           {name:'Amasra', city: ankara},
-           {name:'Ankara City Centre', city: ankara},
-           {name:'Ayas', city: ankara},
-           {name:'Beypazari', city: ankara},
-           {name:'Bolu', city: ankara},
-           {name:'Elmadag', city: ankara},
-           {name:'Eryaman', city: ankara},
-           {name:'Etimesgut', city: ankara},
-           {name:'Golbasi', city: ankara},
-           {name:'Haymana', city: ankara},
-           {name:'Ilgaz Mountain Resort', city: ankara},
-           {name:'Kapadokya', city: ankara},
-           {name:'Kizilcahamam', city: ankara},
-           {name:'Konya City Centre', city: ankara},
-           {name:'Polatli', city: ankara},
-           {name:'Safranbolu', city: ankara},
-           {name:'Sapanca', city: ankara},
-           {name:'Sereflikochisar', city: ankara},
-           {name:'Sincan', city: ankara},
-           {name:'Uludag Mountain Resort', city: ankara},
-           {name:'Umitkoy', city: ankara},
-           {name:'Antalya Airport', city: antalya},
-           {name:'Adrasan', city: antalya},
-           {name:'Alanya', city: antalya},
-           {name:'Antalya City Centre', city: antalya},
-           {name:'Aspendos', city: antalya},
-           {name:'Avsallar', city: antalya},
-           {name:'Beldibi', city: antalya},
-           {name:'Belek', city: antalya},
-           {name:'Bogazkent', city: antalya},
-           {name:'Camyuva', city: antalya},
-           {name:'Cirali', city: antalya},
-           {name:'Club Med Belek', city: antalya},
-           {name:'Colakli', city: antalya},
-           {name:'Demre', city: antalya},
-           {name:'Fethiye', city: antalya},
-           {name:'Finike', city: antalya},
-           {name:'Gazipasa', city: antalya},
-           {name:'Goynuk', city: antalya},
-           {name:'Incekum', city: antalya},
-           {name:'Kaleici', city: antalya},
-           {name:'Kalkan', city: antalya},
-           {name:'Kargicak', city: antalya},
-           {name:'Kas', city: antalya},
-           {name:'Kemer', city: antalya},
-           {name:'Kiris', city: antalya},
-           {name:'Kizilagac', city: antalya},
-           {name:'Kizilot', city: antalya},
-           {name:'Konakli', city: antalya},
-           {name:'Konyaalti', city: antalya},
-           {name:'Kumkoy Beach Resort', city: antalya},
-           {name:'Kumluca', city: antalya},
-           {name:'Kundu', city: antalya},
-           {name:'Lara', city: antalya},
-           {name:'Lykia World Resort', city: antalya},
-           {name:'Mahmutlar', city: antalya},
-           {name:'Manavgat', city: antalya},
-           {name:'Okurcalar', city: antalya},
-           {name:'Olympus Bay', city: antalya},
-           {name:'Side', city: antalya},
-           {name:'Sorgun', city: antalya},
-           {name:'Tekirova', city: antalya},
-           {name:'Titreyengol', city: antalya},
-           {name:'Turkler', city: antalya},
-           {name:'Milas Bodrum Airport', city: bodrum},
-           {name:'Bodrum Port', city: bodrum},
-           {name:'Marmaris Port', city: bodrum},
-           {name:'Akbuk', city: bodrum},
-           {name:'Akyarlar', city: bodrum},
-           {name:'Bitez', city: bodrum},
-           {name:'Bodrum City Centre', city: bodrum},
-           {name:'Bodrum Icmeler', city: bodrum},
-           {name:'Calis Beach', city: bodrum},
-           {name:'Ciftlik', city: bodrum},
-           {name:'Club La Costa Apollonium', city: bodrum},
-           {name:'Club La Costa Kusadasi Resort', city: bodrum},
-           {name:'Davutlar', city: bodrum},
-           {name:'Didim', city: bodrum},
-           {name:'Gulluk', city: bodrum},
-           {name:'Gumbet', city: bodrum},
-           {name:'Gumusluk', city: bodrum},
-           {name:'Gundogan', city: bodrum},
-           {name:'Guvercinlik', city: bodrum},
-           {name:'Hisaronu', city: bodrum},
-           {name:'Kadikale Resort', city: bodrum},
-           {name:'Lasos', city: bodrum},
-           {name:'Marmaris', city: bodrum},
-           {name:'Marmaris Icmeler', city: bodrum},
-           {name:'Marmaris Yacht Marina', city: bodrum},
-           {name:'Ortakent', city: bodrum},
-           {name:'Ovacik', city: bodrum},
-           {name:'Torba', city: bodrum},
-           {name:'Turgutreis', city: bodrum},
-           {name:'Turkbuku', city: bodrum},
-           {name:'Yaliciftlik', city: bodrum},
-           {name:'Yalikavak', city: bodrum},
-           {name:'Dalaman Airport', city: dalaman},
-           {name:'Dalyan', city: dalaman},
-           {name:'Datca', city: dalaman},
-           {name:'Gocek', city: dalaman},
-           {name:'Oludeniz', city: dalaman},
-           {name:'Sarigerme', city: dalaman},
-           {name:'Turunc', city: dalaman},
-           {name:'Ataturk Airport', city: istanbul},
-           {name:'Corlu Airport', city: istanbul},
-           {name:'Sabiha Gokcen Airport', city: istanbul},
-           {name:'Agva', city: istanbul},
-           {name:'Aksaray', city: istanbul},
-           {name:'Atasehir', city: istanbul},
-           {name:'Avcilar', city: istanbul},
-           {name:'Bakirkoy', city: istanbul},
-           {name:'Basaksehir', city: istanbul},
-           {name:'Besiktas', city: istanbul},
-           {name:'Beykoz', city: istanbul},
-           {name:'Bostanci', city: istanbul},
-           {name:'Buyukcekmece', city: istanbul},
-           {name:'Catalca', city: istanbul},
-           {name:'Cekmekoy', city: istanbul},
-           {name:'Corlu', city: istanbul},
-           {name:'Esenler Bus Station', city: istanbul},
-           {name:'Gebze', city: istanbul},
-           {name:'Harem Bus Station', city: istanbul},
-           {name:'Istanbul City Centre', city: istanbul},
-           {name:'Istanbul Port', city: istanbul},
-           {name:'Istinye', city: istanbul},
-           {name:'Izmit', city: istanbul},
-           {name:'Kadikoy', city: istanbul},
-           {name:'Kartal', city: istanbul},
-           {name:'Kumburgaz', city: istanbul},
-           {name:'Maltepe', city: istanbul},
-           {name:'Maslak', city: istanbul},
-           {name:'Pendik', city: istanbul},
-           {name:'Polonezkoy', city: istanbul},
-           {name:'Sakarya', city: istanbul},
-           {name:'Sariyer', city: istanbul},
-           {name:'Sile', city: istanbul},
-           {name:'Silivri', city: istanbul},
-           {name:'Sisli', city: istanbul},
-           {name:'Sultanahmet', city: istanbul},
-           {name:'Taksim', city: istanbul},
-           {name:'Tuzla', city: istanbul},
-           {name:'Umraniye', city: istanbul},
-           {name:'Uskudar', city: istanbul},
-           {name:'Ozdere', city: izmir},
-           {name:'Kusadasi', city: izmir}
-          ])
+  
+  pick_up_locations << PickUpLocation.new(name:'Ankara Airport', city: ankara)
+  pick_up_locations << PickUpLocation.new(name:'Abant Nature Park', city: ankara)
+  pick_up_locations << PickUpLocation.new(name:'Amasra', city: ankara)
+  pick_up_locations << PickUpLocation.new(name:'Ankara City Centre', city: ankara)
+  pick_up_locations << PickUpLocation.new(name:'Ayas', city: ankara)
+  pick_up_locations << PickUpLocation.new(name:'Beypazari', city: ankara)
+  pick_up_locations << PickUpLocation.new(name:'Bolu', city: ankara)
+  pick_up_locations << PickUpLocation.new(name:'Elmadag', city: ankara)
+  pick_up_locations << PickUpLocation.new(name:'Eryaman', city: ankara)
+  pick_up_locations << PickUpLocation.new(name:'Etimesgut', city: ankara)
+  pick_up_locations << PickUpLocation.new(name:'Golbasi', city: ankara)
+  pick_up_locations << PickUpLocation.new(name:'Haymana', city: ankara)
+  pick_up_locations << PickUpLocation.new(name:'Ilgaz Mountain Resort', city: ankara)
+  pick_up_locations << PickUpLocation.new(name:'Kapadokya', city: ankara)
+  pick_up_locations << PickUpLocation.new(name:'Kizilcahamam', city: ankara)
+  pick_up_locations << PickUpLocation.new(name:'Konya City Centre', city: ankara)
+  pick_up_locations << PickUpLocation.new(name:'Polatli', city: ankara)
+  pick_up_locations << PickUpLocation.new(name:'Safranbolu', city: ankara)
+  pick_up_locations << PickUpLocation.new(name:'Sapanca', city: ankara)
+  pick_up_locations << PickUpLocation.new(name:'Sereflikochisar', city: ankara)
+  pick_up_locations << PickUpLocation.new(name:'Sincan', city: ankara)
+  pick_up_locations << PickUpLocation.new(name:'Uludag Mountain Resort', city: ankara)
+  pick_up_locations << PickUpLocation.new(name:'Umitkoy', city: ankara)
+  pick_up_locations << PickUpLocation.new(name:'Antalya Airport', city: antalya)
+  pick_up_locations << PickUpLocation.new(name:'Adrasan', city: antalya)
+  pick_up_locations << PickUpLocation.new(name:'Alanya', city: antalya)
+  pick_up_locations << PickUpLocation.new(name:'Antalya City Centre', city: antalya)
+  pick_up_locations << PickUpLocation.new(name:'Aspendos', city: antalya)
+  pick_up_locations << PickUpLocation.new(name:'Avsallar', city: antalya)
+  pick_up_locations << PickUpLocation.new(name:'Beldibi', city: antalya)
+  pick_up_locations << PickUpLocation.new(name:'Belek', city: antalya)
+  pick_up_locations << PickUpLocation.new(name:'Bogazkent', city: antalya)
+  pick_up_locations << PickUpLocation.new(name:'Camyuva', city: antalya)
+  pick_up_locations << PickUpLocation.new(name:'Cirali', city: antalya)
+  pick_up_locations << PickUpLocation.new(name:'Club Med Belek', city: antalya)
+  pick_up_locations << PickUpLocation.new(name:'Colakli', city: antalya)
+  pick_up_locations << PickUpLocation.new(name:'Demre', city: antalya)
+  pick_up_locations << PickUpLocation.new(name:'Fethiye', city: antalya)
+  pick_up_locations << PickUpLocation.new(name:'Finike', city: antalya)
+  pick_up_locations << PickUpLocation.new(name:'Gazipasa', city: antalya)
+  pick_up_locations << PickUpLocation.new(name:'Goynuk', city: antalya)
+  pick_up_locations << PickUpLocation.new(name:'Incekum', city: antalya)
+  pick_up_locations << PickUpLocation.new(name:'Kaleici', city: antalya)
+  pick_up_locations << PickUpLocation.new(name:'Kalkan', city: antalya)
+  pick_up_locations << PickUpLocation.new(name:'Kargicak', city: antalya)
+  pick_up_locations << PickUpLocation.new(name:'Kas', city: antalya)
+  pick_up_locations << PickUpLocation.new(name:'Kemer', city: antalya)
+  pick_up_locations << PickUpLocation.new(name:'Kiris', city: antalya)
+  pick_up_locations << PickUpLocation.new(name:'Kizilagac', city: antalya)
+  pick_up_locations << PickUpLocation.new(name:'Kizilot', city: antalya)
+  pick_up_locations << PickUpLocation.new(name:'Konakli', city: antalya)
+  pick_up_locations << PickUpLocation.new(name:'Konyaalti', city: antalya)
+  pick_up_locations << PickUpLocation.new(name:'Kumkoy Beach Resort', city: antalya)
+  pick_up_locations << PickUpLocation.new(name:'Kumluca', city: antalya)
+  pick_up_locations << PickUpLocation.new(name:'Kundu', city: antalya)
+  pick_up_locations << PickUpLocation.new(name:'Lara', city: antalya)
+  pick_up_locations << PickUpLocation.new(name:'Lykia World Resort', city: antalya)
+  pick_up_locations << PickUpLocation.new(name:'Mahmutlar', city: antalya)
+  pick_up_locations << PickUpLocation.new(name:'Manavgat', city: antalya)
+  pick_up_locations << PickUpLocation.new(name:'Okurcalar', city: antalya)
+  pick_up_locations << PickUpLocation.new(name:'Olympus Bay', city: antalya)
+  pick_up_locations << PickUpLocation.new(name:'Side', city: antalya)
+  pick_up_locations << PickUpLocation.new(name:'Sorgun', city: antalya)
+  pick_up_locations << PickUpLocation.new(name:'Tekirova', city: antalya)
+  pick_up_locations << PickUpLocation.new(name:'Titreyengol', city: antalya)
+  pick_up_locations << PickUpLocation.new(name:'Turkler', city: antalya)
+  pick_up_locations << PickUpLocation.new(name:'Milas Bodrum Airport', city: bodrum)
+  pick_up_locations << PickUpLocation.new(name:'Bodrum Port', city: bodrum)
+  pick_up_locations << PickUpLocation.new(name:'Marmaris Port', city: bodrum)
+  pick_up_locations << PickUpLocation.new(name:'Akbuk', city: bodrum)
+  pick_up_locations << PickUpLocation.new(name:'Akyarlar', city: bodrum)
+  pick_up_locations << PickUpLocation.new(name:'Bitez', city: bodrum)
+  pick_up_locations << PickUpLocation.new(name:'Bodrum City Centre', city: bodrum)
+  pick_up_locations << PickUpLocation.new(name:'Bodrum Icmeler', city: bodrum)
+  pick_up_locations << PickUpLocation.new(name:'Calis Beach', city: bodrum)
+  pick_up_locations << PickUpLocation.new(name:'Ciftlik', city: bodrum)
+  pick_up_locations << PickUpLocation.new(name:'Club La Costa Apollonium', city: bodrum)
+  pick_up_locations << PickUpLocation.new(name:'Club La Costa Kusadasi Resort', city: bodrum)
+  pick_up_locations << PickUpLocation.new(name:'Davutlar', city: bodrum)
+  pick_up_locations << PickUpLocation.new(name:'Didim', city: bodrum)
+  pick_up_locations << PickUpLocation.new(name:'Gulluk', city: bodrum)
+  pick_up_locations << PickUpLocation.new(name:'Gumbet', city: bodrum)
+  pick_up_locations << PickUpLocation.new(name:'Gumusluk', city: bodrum)
+  pick_up_locations << PickUpLocation.new(name:'Gundogan', city: bodrum)
+  pick_up_locations << PickUpLocation.new(name:'Guvercinlik', city: bodrum)
+  pick_up_locations << PickUpLocation.new(name:'Hisaronu', city: bodrum)
+  pick_up_locations << PickUpLocation.new(name:'Kadikale Resort', city: bodrum)
+  pick_up_locations << PickUpLocation.new(name:'Lasos', city: bodrum)
+  pick_up_locations << PickUpLocation.new(name:'Marmaris', city: bodrum)
+  pick_up_locations << PickUpLocation.new(name:'Marmaris Icmeler', city: bodrum)
+  pick_up_locations << PickUpLocation.new(name:'Marmaris Yacht Marina', city: bodrum)
+  pick_up_locations << PickUpLocation.new(name:'Ortakent', city: bodrum)
+  pick_up_locations << PickUpLocation.new(name:'Ovacik', city: bodrum)
+  pick_up_locations << PickUpLocation.new(name:'Torba', city: bodrum)
+  pick_up_locations << PickUpLocation.new(name:'Turgutreis', city: bodrum)
+  pick_up_locations << PickUpLocation.new(name:'Turkbuku', city: bodrum)
+  pick_up_locations << PickUpLocation.new(name:'Yaliciftlik', city: bodrum)
+  pick_up_locations << PickUpLocation.new(name:'Yalikavak', city: bodrum)
+  pick_up_locations << PickUpLocation.new(name:'Dalaman Airport', city: dalaman)
+  pick_up_locations << PickUpLocation.new(name:'Dalyan', city: dalaman)
+  pick_up_locations << PickUpLocation.new(name:'Datca', city: dalaman)
+  pick_up_locations << PickUpLocation.new(name:'Gocek', city: dalaman)
+  pick_up_locations << PickUpLocation.new(name:'Oludeniz', city: dalaman)
+  pick_up_locations << PickUpLocation.new(name:'Sarigerme', city: dalaman)
+  pick_up_locations << PickUpLocation.new(name:'Turunc', city: dalaman)
+  pick_up_locations << PickUpLocation.new(name:'Ataturk Airport', city: istanbul)
+  pick_up_locations << PickUpLocation.new(name:'Corlu Airport', city: istanbul)
+  pick_up_locations << PickUpLocation.new(name:'Sabiha Gokcen Airport', city: istanbul)
+  pick_up_locations << PickUpLocation.new(name:'Agva', city: istanbul)
+  pick_up_locations << PickUpLocation.new(name:'Aksaray', city: istanbul)
+  pick_up_locations << PickUpLocation.new(name:'Atasehir', city: istanbul)
+  pick_up_locations << PickUpLocation.new(name:'Avcilar', city: istanbul)
+  pick_up_locations << PickUpLocation.new(name:'Bakirkoy', city: istanbul)
+  pick_up_locations << PickUpLocation.new(name:'Basaksehir', city: istanbul)
+  pick_up_locations << PickUpLocation.new(name:'Besiktas', city: istanbul)
+  pick_up_locations << PickUpLocation.new(name:'Beykoz', city: istanbul)
+  pick_up_locations << PickUpLocation.new(name:'Bostanci', city: istanbul)
+  pick_up_locations << PickUpLocation.new(name:'Buyukcekmece', city: istanbul)
+  pick_up_locations << PickUpLocation.new(name:'Catalca', city: istanbul)
+  pick_up_locations << PickUpLocation.new(name:'Cekmekoy', city: istanbul)
+  pick_up_locations << PickUpLocation.new(name:'Corlu', city: istanbul)
+  pick_up_locations << PickUpLocation.new(name:'Esenler Bus Station', city: istanbul)
+  pick_up_locations << PickUpLocation.new(name:'Gebze', city: istanbul)
+  pick_up_locations << PickUpLocation.new(name:'Harem Bus Station', city: istanbul)
+  pick_up_locations << PickUpLocation.new(name:'Istanbul City Centre', city: istanbul)
+  pick_up_locations << PickUpLocation.new(name:'Istanbul Port', city: istanbul)
+  pick_up_locations << PickUpLocation.new(name:'Istinye', city: istanbul)
+  pick_up_locations << PickUpLocation.new(name:'Izmit', city: istanbul)
+  pick_up_locations << PickUpLocation.new(name:'Kadikoy', city: istanbul)
+  pick_up_locations << PickUpLocation.new(name:'Kartal', city: istanbul)
+  pick_up_locations << PickUpLocation.new(name:'Kumburgaz', city: istanbul)
+  pick_up_locations << PickUpLocation.new(name:'Maltepe', city: istanbul)
+  pick_up_locations << PickUpLocation.new(name:'Maslak', city: istanbul)
+  pick_up_locations << PickUpLocation.new(name:'Pendik', city: istanbul)
+  pick_up_locations << PickUpLocation.new(name:'Polonezkoy', city: istanbul)
+  pick_up_locations << PickUpLocation.new(name:'Sakarya', city: istanbul)
+  pick_up_locations << PickUpLocation.new(name:'Sariyer', city: istanbul)
+  pick_up_locations << PickUpLocation.new(name:'Sile', city: istanbul)
+  pick_up_locations << PickUpLocation.new(name:'Silivri', city: istanbul)
+  pick_up_locations << PickUpLocation.new(name:'Sisli', city: istanbul)
+  pick_up_locations << PickUpLocation.new(name:'Sultanahmet', city: istanbul)
+  pick_up_locations << PickUpLocation.new(name:'Taksim', city: istanbul)
+  pick_up_locations << PickUpLocation.new(name:'Tuzla', city: istanbul)
+  pick_up_locations << PickUpLocation.new(name:'Umraniye', city: istanbul)
+  pick_up_locations << PickUpLocation.new(name:'Uskudar', city: istanbul)
+  pick_up_locations << PickUpLocation.new(name:'Ozdere', city: izmir)
+  pick_up_locations << PickUpLocation.new(name:'Kusadasi', city: izmir)
+ 
   puts 'Cities of United Kingdom'
   birmingham = City.find_by(name:'Birmingham')
   bristol = City.find_by(name:'Bristol')
@@ -6617,608 +6604,608 @@ after :cities do
   glasgow = City.find_by(name:'Glasgow')
   london = City.find_by(name:'London')
   manchester = City.find_by(name:'Manchester')
-  PickUpLocation.create([
-            {name:'Birmingham Airport',city: birmingham},
-            {name:'Birmingham City Centre',city: birmingham},
-            {name:'Bristol Airport', city: bristol},
-            {name:'Cardiff Airport', city: bristol},
-            {name:'Filton Airport', city: bristol},
-            {name:'Almondsbury', city: bristol},
-            {name:'Aztec West', city: bristol},
-            {name:'Bath', city: bristol},
-            {name:'Bradford on Avon', city: bristol},
-            {name:'Bradley Stoke', city: bristol},
-            {name:'Bridgend', city: bristol},
-            {name:'Bristol City Centre', city: bristol},
-            {name:'Burham on sea ', city: bristol},
-            {name:'Cardiff City Centre', city: bristol},
-            {name:'Cheltheham', city: bristol},
-            {name:'Chepstow', city: bristol},
-            {name:'Chippenham', city: bristol},
-            {name:'Chipping Sodbury', city: bristol},
-            {name:'Clevedon', city: bristol},
-            {name:'Clifton', city: bristol},
-            {name:'Clutton', city: bristol},
-            {name:'Coalpit Heath', city: bristol},
-            {name:'Cwmbran', city: bristol},
-            {name:'Downend', city: bristol},
-            {name:'Emersons Green', city: bristol},
-            {name:'Exeter', city: bristol},
-            {name:'Filton', city: bristol},
-            {name:'Fishpnds', city: bristol},
-            {name:'Frampton Cattrel', city: bristol},
-            {name:'Frenchay', city: bristol},
-            {name:'Frome', city: bristol},
-            {name:'Glascoed', city: bristol},
-            {name:'Glastonbury', city: bristol},
-            {name:'Gloucester', city: bristol},
-            {name:'Hambrook', city: bristol},
-            {name:'Kingswood', city: bristol},
-            {name:'Lakeland', city: bristol},
-            {name:'Lampeter', city: bristol},
-            {name:'Mangotsfield', city: bristol},
-            {name:'Nailsea', city: bristol},
-            {name:'Newport', city: bristol},
-            {name:'North Bovey', city: bristol},
-            {name:'Oxford', city: bristol},
-            {name:'Paignton', city: bristol},
-            {name:'Patchway', city: bristol},
-            {name:'Plymouth', city: bristol},
-            {name:'Porthcawl', city: bristol},
-            {name:'Powick', city: bristol},
-            {name:'Pucklechurch', city: bristol},
-            {name:'Soutmead', city: bristol},
-            {name:'Staple Hill', city: bristol},
-            {name:'Stapleton', city: bristol},
-            {name:'Stoke Gifford', city: bristol},
-            {name:'Swansea', city: bristol},
-            {name:'Swindon', city: bristol},
-            {name:'Tample Meads', city: bristol},
-            {name:'Taunton', city: bristol},
-            {name:'Tavistock', city: bristol},
-            {name:'Thornbury', city: bristol},
-            {name:'Trowbridge', city: bristol},
-            {name:'Warmley', city: bristol},
-            {name:'Westbury', city: bristol},
-            {name:'Westerleigh', city: bristol},
-            {name:'Weston super Mare', city: bristol},
-            {name:'Weymouth', city: bristol},
-            {name:'Winterbourne', city: bristol},
-            {name:'Wotton under Edge', city: bristol},
-            {name:'Edinburgh Airport', city: edinburgh},
-            {name:'Leith Ferry Port', city: edinburgh},
-            {name:'Rosyth Ferry Port', city: edinburgh},
-            {name:'Edinburgh Waverley Station', city: edinburgh},
-            {name:'Aberdeen', city: edinburgh},
-            {name:'Alnwick', city: edinburgh},
-            {name:'Ardgay', city: edinburgh},
-            {name:'Biggar', city: edinburgh},
-            {name:'Blair Atholl', city: edinburgh},
-            {name:'Blantyre', city: edinburgh},
-            {name:'Brechin', city: edinburgh},
-            {name:'Callander', city: edinburgh},
-            {name:'Charlestown', city: edinburgh},
-            {name:'Crieff', city: edinburgh},
-            {name:'Dumfries', city: edinburgh},
-            {name:'Dunbar', city: edinburgh},
-            {name:'Dunblane', city: edinburgh},
-            {name:'Dundee', city: edinburgh},
-            {name:'Dunfermline', city: edinburgh},
-            {name:'Dunkeld', city: edinburgh},
-            {name:'Duns', city: edinburgh},
-            {name:'Edinburgh City Centre', city: edinburgh},
-            {name:'Falkirk', city: edinburgh},
-            {name:'Gleneagles', city: edinburgh},
-            {name:'Harthill', city: edinburgh},
-            {name:'Inch', city: edinburgh},
-            {name:'Inverness', city: edinburgh},
-            {name:'Kelso', city: edinburgh},
-            {name:'Killin', city: edinburgh},
-            {name:'Kinross', city: edinburgh},
-            {name:'Kirkcaldy', city: edinburgh},
-            {name:'Leven', city: edinburgh},
-            {name:'Livingston', city: edinburgh},
-            {name:'Loanhead', city: edinburgh},
-            {name:'Montrose', city: edinburgh},
-            {name:'Muirfield', city: edinburgh},
-            {name:'Musselburgh', city: edinburgh},
-            {name:'Newtongarange', city: edinburgh},
-            {name:'North Berwick', city: edinburgh},
-            {name:'Peebles', city: edinburgh},
-            {name:'Pencaitland', city: edinburgh},
-            {name:'Penicuik', city: edinburgh},
-            {name:'Perth', city: edinburgh},
-            {name:'Pitlochry', city: edinburgh},
-            {name:'Rosyth', city: edinburgh},
-            {name:'St Andrews', city: edinburgh},
-            {name:'Stanley', city: edinburgh},
-            {name:'Stirling', city: edinburgh},
-            {name:'Whitburn', city: edinburgh},
-            {name:'Glasgow Airport', city: glasgow},
-            {name:'Prestwick Airport', city: glasgow},
-            {name:'Ardrossan', city: glasgow},
-            {name:'Ballantrae', city: glasgow},
-            {name:'Dalry', city: glasgow},
-            {name:'East Kilbride', city: glasgow},
-            {name:'Elgin', city: glasgow},
-            {name:'Fort William', city: glasgow},
-            {name:'Glasgow City Centre', city: glasgow},
-            {name:'Greenock', city: glasgow},
-            {name:'Hamilton', city: glasgow},
-            {name:'Kilmarnock', city: glasgow},
-            {name:'Lanark', city: glasgow},
-            {name:'Lesmahagow', city: glasgow},
-            {name:'Milngavie', city: glasgow},
-            {name:'Oban', city: glasgow},
-            {name:'Paisley', city: glasgow},
-            {name:'Renfrew', city: glasgow},
-            {name:'Troon', city: glasgow},
-            {name:'Turnberry Resort', city: glasgow},
-            {name:'Wemyss Bay', city: glasgow},
-            {name:'London City Airport', city: london},
-            {name:'London Gatwick Airport', city: london},
-            {name:'London Heathrow Airport', city: london},
-            {name:'London Luton Airport', city: london},
-            {name:'London Stansted Airport', city: london},
-            {name:'Dover Cruise Port', city: london},
-            {name:'Harwich Cruise Port', city: london},
-            {name:'Portsmouth Cruise Port', city: london},
-            {name:'Southampton Cruise Port', city: london},
-            {name:'Tilbury Cruise Port', city: london},
-            {name:'Euston Train Station', city: london},
-            {name:'Kings Cross Train Station', city: london},
-            {name:'Paddington Train Station', city: london},
-            {name:'St Pancras Train Station', city: london},
-            {name:'Victoria Train Station', city: london},
-            {name:'Waterloo Train Station', city: london},
-            {name:'BR1 Sundridge', city: london},
-            {name:'BR2 Bromley', city: london},
-            {name:'BR3 Beckenham', city: london},
-            {name:'BR4 West Wickham', city: london},
-            {name:'BR5 St Mary Cray', city: london},
-            {name:'BR6 Orpington', city: london},
-            {name:'BR7 Chislehurst', city: london},
-            {name:'BR8 Swanley', city: london},
-            {name:'Bedford', city: london},
-            {name:'Bournemouth', city: london},
-            {name:'Brighton', city: london},
-            {name:'CR0 Croydon', city: london},
-            {name:'CR1 Croydon', city: london},
-            {name:'CR2 South Croydon', city: london},
-            {name:'CR3 Caterham', city: london},
-            {name:'CR4 Mitcham', city: london},
-            {name:'CR5 Coulsdon', city: london},
-            {name:'CR6 Warlingham', city: london},
-            {name:'CR7 Thornton Heath', city: london},
-            {name:'CR8 Purley', city: london},
-            {name:'DA 1 Dartford Road', city: london},
-            {name:'DA 2 Dartford', city: london},
-            {name:'DA 3 Longfield', city: london},
-            {name:'DA 4 Horton Kirby', city: london},
-            {name:'DA 5 Bexley', city: london},
-            {name:'DA 6 Bexleyheath', city: london},
-            {name:'DA 7 Barnehurst', city: london},
-            {name:'DA 8 Erith', city: london},
-            {name:'DA 9 Greenhithe', city: london},
-            {name:'DA10 Swanscombe', city: london},
-            {name:'DA11 Northfleet', city: london},
-            {name:'DA12 Shorne', city: london},
-            {name:'DA13 Gravesend', city: london},
-            {name:'DA14 Sidcup', city: london},
-            {name:'DA15 Willersley', city: london},
-            {name:'DA16 Welling', city: london},
-            {name:'DA17 Beldevere', city: london},
-            {name:'DA18 Erith', city: london},
-            {name:'E 1 Whitechapel', city: london},
-            {name:'E 2 Bethnal Green', city: london},
-            {name:'E 3 Bow', city: london},
-            {name:'E 4 Chingford', city: london},
-            {name:'E 5 Clapton', city: london},
-            {name:'E 6 East Ham', city: london},
-            {name:'E 7 Forest Gate', city: london},
-            {name:'E 8 Dalston  ', city: london},
-            {name:'E 8 Hackney', city: london},
-            {name:'E 9 Hackney', city: london},
-            {name:'E 9 Homerton  ', city: london},
-            {name:'E10 Leyton', city: london},
-            {name:'E11 Leytonstone', city: london},
-            {name:'E12 Manor Park', city: london},
-            {name:'E13 Plaistow', city: london},
-            {name:'E14 Canary Wharf', city: london},
-            {name:'E15 Stratford  ', city: london},
-            {name:'E15 West Ham  ', city: london},
-            {name:'E16 Canning Town', city: london},
-            {name:'E16 Docklands', city: london},
-            {name:'E17 Walthamstow', city: london},
-            {name:'E18 South Woodford', city: london},
-            {name:'EC1 Barbican', city: london},
-            {name:'EC1 Clarkenwell', city: london},
-            {name:'EC1 Old Street', city: london},
-            {name:'EC2 Liverpool Street', city: london},
-            {name:'EC2 Moorgate', city: london},
-            {name:'EC3 Aldgate', city: london},
-            {name:'EC3 Tower Hill', city: london},
-            {name:'EC4 Fleet St', city: london},
-            {name:'EC4 St Pauls', city: london},
-            {name:'EN1 Enfield', city: london},
-            {name:'EN2 Enfield Hills', city: london},
-            {name:'EN3 Brimsdown', city: london},
-            {name:'EN4 Cockfosters', city: london},
-            {name:'EN5 Barnet', city: london},
-            {name:'EN6 Potters Bar', city: london},
-            {name:'EN7 Waltham Cross', city: london},
-            {name:'EN8 Cheshunt', city: london},
-            {name:'EN9 Waltham Abbey ', city: london},
-            {name:'Gatwick Airport Hotels', city: london},
-            {name:'HA0 Alperton  ', city: london},
-            {name:'HA0 Wembley', city: london},
-            {name:'HA0 Wembley Stadium', city: london},
-            {name:'HA1 Harrow', city: london},
-            {name:'HA2 Rayners Lane', city: london},
-            {name:'HA3 Kenton', city: london},
-            {name:'HA4 South Ruislip', city: london},
-            {name:'HA5 Hatch End', city: london},
-            {name:'HA5 Pinner', city: london},
-            {name:'HA6 Northwood', city: london},
-            {name:'HA7 Stanmore', city: london},
-            {name:'HA8 Edgware', city: london},
-            {name:'HA9 Wembley', city: london},
-            {name:'IG 1 Ilford', city: london},
-            {name:'IG 2 Grants Hill', city: london},
-            {name:'IG 3 Seven Kings', city: london},
-            {name:'IG 4 Redbridge', city: london},
-            {name:'IG 5 Clayhall', city: london},
-            {name:'IG 6 Fairlop', city: london},
-            {name:'IG 7 Chigwell', city: london},
-            {name:'IG 8 Woodford Green', city: london},
-            {name:'IG 9 Buckhurst Hill', city: london},
-            {name:'IG10 Loughton', city: london},
-            {name:'IG11 Barking', city: london},
-            {name:'KT 1 Kingston Upon Thames', city: london},
-            {name:'KT 2 Kingston Hospital', city: london},
-            {name:'KT 3 New Malden', city: london},
-            {name:'KT 4 Worcester Park', city: london},
-            {name:'KT 5 Berrylands', city: london},
-            {name:'KT 6 Surbiton', city: london},
-            {name:'KT 7 Thames Ditton', city: london},
-            {name:'KT 8 West Molsley', city: london},
-            {name:'KT 9 Chessington', city: london},
-            {name:'KT10 Esher', city: london},
-            {name:'KT11 Cobham', city: london},
-            {name:'KT12 Walton on Thames', city: london},
-            {name:'KT13 Weybridge', city: london},
-            {name:'KT14 West Byfleet', city: london},
-            {name:'KT15 Addlestone', city: london},
-            {name:'KT16 Chertsey', city: london},
-            {name:'KT17 Ewell', city: london},
-            {name:'KT18 Epsom', city: london},
-            {name:'KT19 West Epsom', city: london},
-            {name:'KT20 Tadworth', city: london},
-            {name:'KT21 Ashtead', city: london},
-            {name:'KT22 Leatherhead', city: london},
-            {name:'KT23 Bookham', city: london},
-            {name:'KT24 East Horsley', city: london},
-            {name:'London City Centre', city: london},
-            {name:'Luton Airport Hotels', city: london},
-            {name:'N 1 Islington', city: london},
-            {name:'N 2 East Finchley', city: london},
-            {name:'N 3 Finchley Central ', city: london},
-            {name:'N 4 Finsbury Park', city: london},
-            {name:'N 4 Manor House  ', city: london},
-            {name:'N 5 Highbury', city: london},
-            {name:'N 6 Highgate', city: london},
-            {name:'N 7 Holloway', city: london},
-            {name:'N 8 Crouch End  ', city: london},
-            {name:'N 8 Hornsey', city: london},
-            {name:'N 9 Lower Edmonton', city: london},
-            {name:'N10 Muswell Hill', city: london},
-            {name:'N11 Friern Barnet', city: london},
-            {name:'N12 North Finchley', city: london},
-            {name:'N12 Woodside Park  ', city: london},
-            {name:'N13 Palmers Green', city: london},
-            {name:'N14 Southgate', city: london},
-            {name:'N15 Seven Sisters', city: london},
-            {name:'N16 Stamford Hill  ', city: london},
-            {name:'N16 Stoke Newington', city: london},
-            {name:'N17 Tottenham  ', city: london},
-            {name:'N18 Upper Edmonton', city: london},
-            {name:'N19 Archway', city: london},
-            {name:'N19 Tuffnell Park  ', city: london},
-            {name:'N20 Totteridge and Whetstone', city: london},
-            {name:'N21 Winchmore Hill', city: london},
-            {name:'N22 Alexandra Palace  ', city: london},
-            {name:'N22 Wood Green', city: london},
-            {name:'NW 1 Camden  ', city: london},
-            {name:'NW 1 Regents Park', city: london},
-            {name:'NW 2 Cricklewood', city: london},
-            {name:'NW 2 Willesden', city: london},
-            {name:'NW 3 Hampsted', city: london},
-            {name:'NW 3 Swiss Cottage', city: london},
-            {name:'NW 4 Brent Cross', city: london},
-            {name:'NW 4 Hendon', city: london},
-            {name:'NW 5 Kentish Town', city: london},
-            {name:'NW 6 Kilburn', city: london},
-            {name:'NW 6 West Hampstead', city: london},
-            {name:'NW 7 Mill Hill', city: london},
-            {name:'NW 8 St Johns Wood', city: london},
-            {name:'NW 9 Colindale', city: london},
-            {name:'NW 9 Kingsbury', city: london},
-            {name:'NW10 Harlesden', city: london},
-            {name:'NW10 Neasden', city: london},
-            {name:'NW11 Golders Green', city: london},
-            {name:'RH 1 Redhill', city: london},
-            {name:'RH 2 Reigate', city: london},
-            {name:'RH 3 Betchworth', city: london},
-            {name:'RH 4 Dorking', city: london},
-            {name:'RH 5 Capel', city: london},
-            {name:'RH 6 Horley', city: london},
-            {name:'RH 7 Lingfield', city: london},
-            {name:'RH 8 Oxted', city: london},
-            {name:'RH 9 Godstone', city: london},
-            {name:'RH10 Crawley', city: london},
-            {name:'RH11 Crawley', city: london},
-            {name:'RH12 Horsham', city: london},
-            {name:'RH13 Horsham South', city: london},
-            {name:'RH14 Billingshurst', city: london},
-            {name:'RH15 Burgess Hill', city: london},
-            {name:'RH16 Haywards Heath', city: london},
-            {name:'RH17 Lindfield', city: london},
-            {name:'RH18 Forest Row', city: london},
-            {name:'RH19 East Grinstead', city: london},
-            {name:'RH20 Pulborough', city: london},
-            {name:'RM 1 Romford', city: london},
-            {name:'RM 2 Gidea Park', city: london},
-            {name:'RM 3 Harold Hill', city: london},
-            {name:'RM 4 Staplesford Abbotts', city: london},
-            {name:'RM 5 Collier Row', city: london},
-            {name:'RM 6 Chadwell Heath', city: london},
-            {name:'RM 7 Crowlands', city: london},
-            {name:'RM 8 Becontree', city: london},
-            {name:'RM 9 Parsloes Park', city: london},
-            {name:'RM10 Dagenham', city: london},
-            {name:'RM11 Emerson Park', city: london},
-            {name:'RM12 Hornchurch', city: london},
-            {name:'RM13 Rainham', city: london},
-            {name:'RM14 Upminster', city: london},
-            {name:'RM15 South Ockendon', city: london},
-            {name:'RM16 Orsett', city: london},
-            {name:'RM17 Grays', city: london},
-            {name:'RM18 Tilbury', city: london},
-            {name:'RM19 Purfleet', city: london},
-            {name:'RM20 Chafford Hundred', city: london},
-            {name:'SE 1 Southwark  ', city: london},
-            {name:'SE 1 Waterloo', city: london},
-            {name:'SE 2 Abbey Wood', city: london},
-            {name:'SE 3 Blackheath', city: london},
-            {name:'SE 4 Brockley', city: london},
-            {name:'SE 5 Camberwell', city: london},
-            {name:'SE 6 Catford', city: london},
-            {name:'SE 6 Hither Green  ', city: london},
-            {name:'SE 7 Charlton', city: london},
-            {name:'SE 8 Deptford', city: london},
-            {name:'SE 9 Eltham', city: london},
-            {name:'SE10 Greenwich', city: london},
-            {name:'SE11 Lambeth', city: london},
-            {name:'SE12 Lee Grove Park', city: london},
-            {name:'SE13 Hither Green  ', city: london},
-            {name:'SE13 Lewisham', city: london},
-            {name:'SE14 New Cross', city: london},
-            {name:'SE15 Peckham', city: london},
-            {name:'SE16 Bermondsey', city: london},
-            {name:'SE17 Elephant and Castle  ', city: london},
-            {name:'SE17 Walworth', city: london},
-            {name:'SE18 Plumstead', city: london},
-            {name:'SE18 Shooters Hill', city: london},
-            {name:'SE18 Woolwich', city: london},
-            {name:'SE19 Crystal Palace', city: london},
-            {name:'SE20 Penge', city: london},
-            {name:'SE21 Dulwich', city: london},
-            {name:'SE22 East Dulwich', city: london},
-            {name:'SE23 Forest Hill', city: london},
-            {name:'SE24 Herene Hill', city: london},
-            {name:'SE25 South Norwood', city: london},
-            {name:'SE26 Sydneham', city: london},
-            {name:'SE27 Tulse Hill  ', city: london},
-            {name:'SE27 West Norwood', city: london},
-            {name:'SE28 Thamesmead', city: london},
-            {name:'SL0 Iver', city: london},
-            {name:'SL1 Cippenham', city: london},
-            {name:'SL2 Farnham Common', city: london},
-            {name:'SL3 Slough', city: london},
-            {name:'SL4 Windsor', city: london},
-            {name:'SL5 Ascot', city: london},
-            {name:'SL6 Maidenhead', city: london},
-            {name:'SM1 Sutton', city: london},
-            {name:'SM2 Belmont', city: london},
-            {name:'SM3 North Cheam', city: london},
-            {name:'SM4 Morden', city: london},
-            {name:'SM5 Carshalton', city: london},
-            {name:'SM6 Wallington', city: london},
-            {name:'SM7 Banstead', city: london},
-            {name:'SW 1 Belgravia', city: london},
-            {name:'SW 1 Victoria', city: london},
-            {name:'SW 1 Westminster', city: london},
-            {name:'SW 2 Streatham Hill', city: london},
-            {name:'SW 3 Brompton', city: london},
-            {name:'SW 3 Chelsea', city: london},
-            {name:'SW 4 Clapham', city: london},
-            {name:'SW 5 Earls Court', city: london},
-            {name:'SW 6 Fulham', city: london},
-            {name:'SW 6 Parsons Green', city: london},
-            {name:'SW 7 South Kensington', city: london},
-            {name:'SW 8 Nine Elms', city: london},
-            {name:'SW 9 Brixton', city: london},
-            {name:'SW 9 Stockwell', city: london},
-            {name:'SW10 West Brompton', city: london},
-            {name:'SW11 Battersea', city: london},
-            {name:'SW11 Clapham Junction', city: london},
-            {name:'SW12 Balham', city: london},
-            {name:'SW13 Barnes', city: london},
-            {name:'SW14 New Cross', city: london},
-            {name:'SW15 Putney', city: london},
-            {name:'SW15 Roehampton', city: london},
-            {name:'SW16 Norbury', city: london},
-            {name:'SW16 Streatham', city: london},
-            {name:'SW17 Tooting', city: london},
-            {name:'SW18 Earlsfield', city: london},
-            {name:'SW18 Wandsworth', city: london},
-            {name:'SW19 Merton', city: london},
-            {name:'SW19 Wimbledon', city: london},
-            {name:'SW20 Rayners Park', city: london},
-            {name:'SW20 South Wimbledon  ', city: london},
-            {name:'Stansted Airport Hotels', city: london},
-            {name:'TN13 Sevenoaks', city: london},
-            {name:'TW 1 Marble Hill Park', city: london},
-            {name:'TW 2 Twickenham', city: london},
-            {name:'TW 3 Hounslow', city: london},
-            {name:'TW 4 Hounslow Heath', city: london},
-            {name:'TW 5 Heston', city: london},
-            {name:'TW 6 Heathrow', city: london},
-            {name:'TW 7 Isleworth', city: london},
-            {name:'TW 8 Brentford', city: london},
-            {name:'TW 9 Kew Gardens ', city: london},
-            {name:'TW10 Richmond', city: london},
-            {name:'TW11 Teddington', city: london},
-            {name:'TW12 Hampton', city: london},
-            {name:'TW13 Hanworth', city: london},
-            {name:'TW14 Feltham', city: london},
-            {name:'TW15 Ashford', city: london},
-            {name:'TW16 Sunbury on Thames', city: london},
-            {name:'TW17 Shepperton', city: london},
-            {name:'TW18 Staines', city: london},
-            {name:'TW19 Stanwell Moor', city: london},
-            {name:'TW20 Egham', city: london},
-            {name:'UB 1 Southall', city: london},
-            {name:'UB 2 Norwood Green', city: london},
-            {name:'UB 3 Hayes', city: london},
-            {name:'UB 4 Hayes End', city: london},
-            {name:'UB 5 Notholt', city: london},
-            {name:'UB 6 Greenford', city: london},
-            {name:'UB 6 Perivale', city: london},
-            {name:'UB 7 Sipson', city: london},
-            {name:'UB 8 Cowley', city: london},
-            {name:'UB 9 Uxbridge', city: london},
-            {name:'UB10 Hillingdon', city: london},
-            {name:'W 1 Mayfair', city: london},
-            {name:'W 1 Oxford Street', city: london},
-            {name:'W 1 Piccadilly', city: london},
-            {name:'W 2 Bayswater  ', city: london},
-            {name:'W 2 Paddington', city: london},
-            {name:'W 3 Acton', city: london},
-            {name:'W 4 Chiswick', city: london},
-            {name:'W 5 Ealing', city: london},
-            {name:'W 6 Hammersmith', city: london},
-            {name:'W 7 Hanwell', city: london},
-            {name:'W 8 Kensington', city: london},
-            {name:'W 9 Mailda Vale', city: london},
-            {name:'W10 Ladbroke Grove', city: london},
-            {name:'W11 Holland Park  ', city: london},
-            {name:'W11 Notting Hill', city: london},
-            {name:'W12 Shepherds Bush', city: london},
-            {name:'W13 West Ealing', city: london},
-            {name:'W14 West Kensington', city: london},
-            {name:'WC1 Bloomsbury', city: london},
-            {name:'WC1 Grays Inn', city: london},
-            {name:'WC2 Covent Garden', city: london},
-            {name:'WC2 Holborn', city: london},
-            {name:'WD17 Watford North', city: london},
-            {name:'WD18 Watford', city: london},
-            {name:'WD19 Carpenders Park', city: london},
-            {name:'WD23 Bushey', city: london},
-            {name:'WD24 Watford Junction', city: london},
-            {name:'WD25 Garston', city: london},
-            {name:'WD3 Chorleywood', city: london},
-            {name:'WD4 Kings Langley', city: london},
-            {name:'WD5 Abbotts Langley', city: london},
-            {name:'WD6 Bushey', city: london},
-            {name:'WD7 Radlett', city: london},
-            {name:'Blackpool Airport', city: manchester},
-            {name:'East Middlands Airport', city: manchester},
-            {name:'Leeds Bradford Airport', city: manchester},
-            {name:'Liverpool Airport', city: manchester},
-            {name:'Manchester Airport', city: manchester},
-            {name:'Liverpool Cruise Port', city: manchester},
-            {name:'Alderley Edge', city: manchester},
-            {name:'Audlem', city: manchester},
-            {name:'Bacup', city: manchester},
-            {name:'Barnsley', city: manchester},
-            {name:'Barnsley via Dewsbury', city: manchester},
-            {name:'Birkenhead', city: manchester},
-            {name:'Blackburn', city: manchester},
-            {name:'Blackpool', city: manchester},
-            {name:'Bolton', city: manchester},
-            {name:'Bowness on Windermere', city: manchester},
-            {name:'Burnley', city: manchester},
-            {name:'Burscough', city: manchester},
-            {name:'Bury', city: manchester},
-            {name:'Buxton', city: manchester},
-            {name:'Chapel en le Frith', city: manchester},
-            {name:'Chester', city: manchester},
-            {name:'Chorley', city: manchester},
-            {name:'Congleton', city: manchester},
-            {name:'Crewe', city: manchester},
-            {name:'Derby', city: manchester},
-            {name:'Derby Alt Route', city: manchester},
-            {name:'Doncaster', city: manchester},
-            {name:'Ellesmere port', city: manchester},
-            {name:'Endmoor ', city: manchester},
-            {name:'Fleetwood', city: manchester},
-            {name:'Glossop', city: manchester},
-            {name:'Halifax', city: manchester},
-            {name:'Haydock', city: manchester},
-            {name:'Hebden Bridge', city: manchester},
-            {name:'Hindley', city: manchester},
-            {name:'Holmes Chapel', city: manchester},
-            {name:'Holyhead Port', city: manchester},
-            {name:'Huddersfield', city: manchester},
-            {name:'Hull', city: manchester},
-            {name:'Knutsford', city: manchester},
-            {name:'Lancaster', city: manchester},
-            {name:'Leeds City Centre', city: manchester},
-            {name:'Leicester', city: manchester},
-            {name:'Lincoln', city: manchester},
-            {name:'Liverpool City Centre', city: manchester},
-            {name:'Llandudno', city: manchester},
-            {name:'Llangollen', city: manchester},
-            {name:'Macclesfield', city: manchester},
-            {name:'Manchester City Centre', city: manchester},
-            {name:'Mere', city: manchester},
-            {name:'Middlesborough', city: manchester},
-            {name:'Middlewich', city: manchester},
-            {name:'Mold', city: manchester},
-            {name:'Morecambe', city: manchester},
-            {name:'Nantwich', city: manchester},
-            {name:'Newcastle', city: manchester},
-            {name:'Newton le willows', city: manchester},
-            {name:'Norwich', city: manchester},
-            {name:'Nottingham', city: manchester},
-            {name:'Nottingham Alt Route', city: manchester},
-            {name:'Poynton', city: manchester},
-            {name:'Preston', city: manchester},
-            {name:'Rawtenstall', city: manchester},
-            {name:'Rochdale', city: manchester},
-            {name:'Rotherham', city: manchester},
-            {name:'Sheffield', city: manchester},
-            {name:'Sheffield via Dewsbury', city: manchester},
-            {name:'Skelmersdale', city: manchester},
-            {name:'Southport', city: manchester},
-            {name:'Sowerby Bridge', city: manchester},
-            {name:'St Helens', city: manchester},
-            {name:'Stockport', city: manchester},
-            {name:'Stoke on Trent', city: manchester},
-            {name:'Todmorden', city: manchester},
-            {name:'Wakefield', city: manchester},
-            {name:'Warrington', city: manchester},
-            {name:'Wetherby', city: manchester},
-            {name:'Whaley Bridge', city: manchester},
-            {name:'Widnes', city: manchester},
-            {name:'Wigan', city: manchester},
-            {name:'Wilmslow', city: manchester},
-            {name:'Windermere', city: manchester},
-            {name:'Wirral', city: manchester},
-            {name:'Witchurch', city: manchester},
-            {name:'Wrexham', city: manchester},
-            {name:'York', city: manchester}
-          ])
+pick_up_locations << PickUpLocation.new(name:'Birmingham Airport',city: birmingham)
+pick_up_locations << PickUpLocation.new(name:'Birmingham City Centre',city: birmingham)
+pick_up_locations << PickUpLocation.new(name:'Bristol Airport', city: bristol)
+pick_up_locations << PickUpLocation.new(name:'Cardiff Airport', city: bristol)
+pick_up_locations << PickUpLocation.new(name:'Filton Airport', city: bristol)
+pick_up_locations << PickUpLocation.new(name:'Almondsbury', city: bristol)
+pick_up_locations << PickUpLocation.new(name:'Aztec West', city: bristol)
+pick_up_locations << PickUpLocation.new(name:'Bath', city: bristol)
+pick_up_locations << PickUpLocation.new(name:'Bradford on Avon', city: bristol)
+pick_up_locations << PickUpLocation.new(name:'Bradley Stoke', city: bristol)
+pick_up_locations << PickUpLocation.new(name:'Bridgend', city: bristol)
+pick_up_locations << PickUpLocation.new(name:'Bristol City Centre', city: bristol)
+pick_up_locations << PickUpLocation.new(name:'Burham on sea ', city: bristol)
+pick_up_locations << PickUpLocation.new(name:'Cardiff City Centre', city: bristol)
+pick_up_locations << PickUpLocation.new(name:'Cheltheham', city: bristol)
+pick_up_locations << PickUpLocation.new(name:'Chepstow', city: bristol)
+pick_up_locations << PickUpLocation.new(name:'Chippenham', city: bristol)
+pick_up_locations << PickUpLocation.new(name:'Chipping Sodbury', city: bristol)
+pick_up_locations << PickUpLocation.new(name:'Clevedon', city: bristol)
+pick_up_locations << PickUpLocation.new(name:'Clifton', city: bristol)
+pick_up_locations << PickUpLocation.new(name:'Clutton', city: bristol)
+pick_up_locations << PickUpLocation.new(name:'Coalpit Heath', city: bristol)
+pick_up_locations << PickUpLocation.new(name:'Cwmbran', city: bristol)
+pick_up_locations << PickUpLocation.new(name:'Downend', city: bristol)
+pick_up_locations << PickUpLocation.new(name:'Emersons Green', city: bristol)
+pick_up_locations << PickUpLocation.new(name:'Exeter', city: bristol)
+pick_up_locations << PickUpLocation.new(name:'Filton', city: bristol)
+pick_up_locations << PickUpLocation.new(name:'Fishpnds', city: bristol)
+pick_up_locations << PickUpLocation.new(name:'Frampton Cattrel', city: bristol)
+pick_up_locations << PickUpLocation.new(name:'Frenchay', city: bristol)
+pick_up_locations << PickUpLocation.new(name:'Frome', city: bristol)
+pick_up_locations << PickUpLocation.new(name:'Glascoed', city: bristol)
+pick_up_locations << PickUpLocation.new(name:'Glastonbury', city: bristol)
+pick_up_locations << PickUpLocation.new(name:'Gloucester', city: bristol)
+pick_up_locations << PickUpLocation.new(name:'Hambrook', city: bristol)
+pick_up_locations << PickUpLocation.new(name:'Kingswood', city: bristol)
+pick_up_locations << PickUpLocation.new(name:'Lakeland', city: bristol)
+pick_up_locations << PickUpLocation.new(name:'Lampeter', city: bristol)
+pick_up_locations << PickUpLocation.new(name:'Mangotsfield', city: bristol)
+pick_up_locations << PickUpLocation.new(name:'Nailsea', city: bristol)
+pick_up_locations << PickUpLocation.new(name:'Newport', city: bristol)
+pick_up_locations << PickUpLocation.new(name:'North Bovey', city: bristol)
+pick_up_locations << PickUpLocation.new(name:'Oxford', city: bristol)
+pick_up_locations << PickUpLocation.new(name:'Paignton', city: bristol)
+pick_up_locations << PickUpLocation.new(name:'Patchway', city: bristol)
+pick_up_locations << PickUpLocation.new(name:'Plymouth', city: bristol)
+pick_up_locations << PickUpLocation.new(name:'Porthcawl', city: bristol)
+pick_up_locations << PickUpLocation.new(name:'Powick', city: bristol)
+pick_up_locations << PickUpLocation.new(name:'Pucklechurch', city: bristol)
+pick_up_locations << PickUpLocation.new(name:'Soutmead', city: bristol)
+pick_up_locations << PickUpLocation.new(name:'Staple Hill', city: bristol)
+pick_up_locations << PickUpLocation.new(name:'Stapleton', city: bristol)
+pick_up_locations << PickUpLocation.new(name:'Stoke Gifford', city: bristol)
+pick_up_locations << PickUpLocation.new(name:'Swansea', city: bristol)
+pick_up_locations << PickUpLocation.new(name:'Swindon', city: bristol)
+pick_up_locations << PickUpLocation.new(name:'Tample Meads', city: bristol)
+pick_up_locations << PickUpLocation.new(name:'Taunton', city: bristol)
+pick_up_locations << PickUpLocation.new(name:'Tavistock', city: bristol)
+pick_up_locations << PickUpLocation.new(name:'Thornbury', city: bristol)
+pick_up_locations << PickUpLocation.new(name:'Trowbridge', city: bristol)
+pick_up_locations << PickUpLocation.new(name:'Warmley', city: bristol)
+pick_up_locations << PickUpLocation.new(name:'Westbury', city: bristol)
+pick_up_locations << PickUpLocation.new(name:'Westerleigh', city: bristol)
+pick_up_locations << PickUpLocation.new(name:'Weston super Mare', city: bristol)
+pick_up_locations << PickUpLocation.new(name:'Weymouth', city: bristol)
+pick_up_locations << PickUpLocation.new(name:'Winterbourne', city: bristol)
+pick_up_locations << PickUpLocation.new(name:'Wotton under Edge', city: bristol)
+pick_up_locations << PickUpLocation.new(name:'Edinburgh Airport', city: edinburgh)
+pick_up_locations << PickUpLocation.new(name:'Leith Ferry Port', city: edinburgh)
+pick_up_locations << PickUpLocation.new(name:'Rosyth Ferry Port', city: edinburgh)
+pick_up_locations << PickUpLocation.new(name:'Edinburgh Waverley Station', city: edinburgh)
+pick_up_locations << PickUpLocation.new(name:'Aberdeen', city: edinburgh)
+pick_up_locations << PickUpLocation.new(name:'Alnwick', city: edinburgh)
+pick_up_locations << PickUpLocation.new(name:'Ardgay', city: edinburgh)
+pick_up_locations << PickUpLocation.new(name:'Biggar', city: edinburgh)
+pick_up_locations << PickUpLocation.new(name:'Blair Atholl', city: edinburgh)
+pick_up_locations << PickUpLocation.new(name:'Blantyre', city: edinburgh)
+pick_up_locations << PickUpLocation.new(name:'Brechin', city: edinburgh)
+pick_up_locations << PickUpLocation.new(name:'Callander', city: edinburgh)
+pick_up_locations << PickUpLocation.new(name:'Charlestown', city: edinburgh)
+pick_up_locations << PickUpLocation.new(name:'Crieff', city: edinburgh)
+pick_up_locations << PickUpLocation.new(name:'Dumfries', city: edinburgh)
+pick_up_locations << PickUpLocation.new(name:'Dunbar', city: edinburgh)
+pick_up_locations << PickUpLocation.new(name:'Dunblane', city: edinburgh)
+pick_up_locations << PickUpLocation.new(name:'Dundee', city: edinburgh)
+pick_up_locations << PickUpLocation.new(name:'Dunfermline', city: edinburgh)
+pick_up_locations << PickUpLocation.new(name:'Dunkeld', city: edinburgh)
+pick_up_locations << PickUpLocation.new(name:'Duns', city: edinburgh)
+pick_up_locations << PickUpLocation.new(name:'Edinburgh City Centre', city: edinburgh)
+pick_up_locations << PickUpLocation.new(name:'Falkirk', city: edinburgh)
+pick_up_locations << PickUpLocation.new(name:'Gleneagles', city: edinburgh)
+pick_up_locations << PickUpLocation.new(name:'Harthill', city: edinburgh)
+pick_up_locations << PickUpLocation.new(name:'Inch', city: edinburgh)
+pick_up_locations << PickUpLocation.new(name:'Inverness', city: edinburgh)
+pick_up_locations << PickUpLocation.new(name:'Kelso', city: edinburgh)
+pick_up_locations << PickUpLocation.new(name:'Killin', city: edinburgh)
+pick_up_locations << PickUpLocation.new(name:'Kinross', city: edinburgh)
+pick_up_locations << PickUpLocation.new(name:'Kirkcaldy', city: edinburgh)
+pick_up_locations << PickUpLocation.new(name:'Leven', city: edinburgh)
+pick_up_locations << PickUpLocation.new(name:'Livingston', city: edinburgh)
+pick_up_locations << PickUpLocation.new(name:'Loanhead', city: edinburgh)
+pick_up_locations << PickUpLocation.new(name:'Montrose', city: edinburgh)
+pick_up_locations << PickUpLocation.new(name:'Muirfield', city: edinburgh)
+pick_up_locations << PickUpLocation.new(name:'Musselburgh', city: edinburgh)
+pick_up_locations << PickUpLocation.new(name:'Newtongarange', city: edinburgh)
+pick_up_locations << PickUpLocation.new(name:'North Berwick', city: edinburgh)
+pick_up_locations << PickUpLocation.new(name:'Peebles', city: edinburgh)
+pick_up_locations << PickUpLocation.new(name:'Pencaitland', city: edinburgh)
+pick_up_locations << PickUpLocation.new(name:'Penicuik', city: edinburgh)
+pick_up_locations << PickUpLocation.new(name:'Perth', city: edinburgh)
+pick_up_locations << PickUpLocation.new(name:'Pitlochry', city: edinburgh)
+pick_up_locations << PickUpLocation.new(name:'Rosyth', city: edinburgh)
+pick_up_locations << PickUpLocation.new(name:'St Andrews', city: edinburgh)
+pick_up_locations << PickUpLocation.new(name:'Stanley', city: edinburgh)
+pick_up_locations << PickUpLocation.new(name:'Stirling', city: edinburgh)
+pick_up_locations << PickUpLocation.new(name:'Whitburn', city: edinburgh)
+pick_up_locations << PickUpLocation.new(name:'Glasgow Airport', city: glasgow)
+pick_up_locations << PickUpLocation.new(name:'Prestwick Airport', city: glasgow)
+pick_up_locations << PickUpLocation.new(name:'Ardrossan', city: glasgow)
+pick_up_locations << PickUpLocation.new(name:'Ballantrae', city: glasgow)
+pick_up_locations << PickUpLocation.new(name:'Dalry', city: glasgow)
+pick_up_locations << PickUpLocation.new(name:'East Kilbride', city: glasgow)
+pick_up_locations << PickUpLocation.new(name:'Elgin', city: glasgow)
+pick_up_locations << PickUpLocation.new(name:'Fort William', city: glasgow)
+pick_up_locations << PickUpLocation.new(name:'Glasgow City Centre', city: glasgow)
+pick_up_locations << PickUpLocation.new(name:'Greenock', city: glasgow)
+pick_up_locations << PickUpLocation.new(name:'Hamilton', city: glasgow)
+pick_up_locations << PickUpLocation.new(name:'Kilmarnock', city: glasgow)
+pick_up_locations << PickUpLocation.new(name:'Lanark', city: glasgow)
+pick_up_locations << PickUpLocation.new(name:'Lesmahagow', city: glasgow)
+pick_up_locations << PickUpLocation.new(name:'Milngavie', city: glasgow)
+pick_up_locations << PickUpLocation.new(name:'Oban', city: glasgow)
+pick_up_locations << PickUpLocation.new(name:'Paisley', city: glasgow)
+pick_up_locations << PickUpLocation.new(name:'Renfrew', city: glasgow)
+pick_up_locations << PickUpLocation.new(name:'Troon', city: glasgow)
+pick_up_locations << PickUpLocation.new(name:'Turnberry Resort', city: glasgow)
+pick_up_locations << PickUpLocation.new(name:'Wemyss Bay', city: glasgow)
+pick_up_locations << PickUpLocation.new(name:'London City Airport', city: london)
+pick_up_locations << PickUpLocation.new(name:'London Gatwick Airport', city: london)
+pick_up_locations << PickUpLocation.new(name:'London Heathrow Airport', city: london)
+pick_up_locations << PickUpLocation.new(name:'London Luton Airport', city: london)
+pick_up_locations << PickUpLocation.new(name:'London Stansted Airport', city: london)
+pick_up_locations << PickUpLocation.new(name:'Dover Cruise Port', city: london)
+pick_up_locations << PickUpLocation.new(name:'Harwich Cruise Port', city: london)
+pick_up_locations << PickUpLocation.new(name:'Portsmouth Cruise Port', city: london)
+pick_up_locations << PickUpLocation.new(name:'Southampton Cruise Port', city: london)
+pick_up_locations << PickUpLocation.new(name:'Tilbury Cruise Port', city: london)
+pick_up_locations << PickUpLocation.new(name:'Euston Train Station', city: london)
+pick_up_locations << PickUpLocation.new(name:'Kings Cross Train Station', city: london)
+pick_up_locations << PickUpLocation.new(name:'Paddington Train Station', city: london)
+pick_up_locations << PickUpLocation.new(name:'St Pancras Train Station', city: london)
+pick_up_locations << PickUpLocation.new(name:'Victoria Train Station', city: london)
+pick_up_locations << PickUpLocation.new(name:'Waterloo Train Station', city: london)
+pick_up_locations << PickUpLocation.new(name:'BR1 Sundridge', city: london)
+pick_up_locations << PickUpLocation.new(name:'BR2 Bromley', city: london)
+pick_up_locations << PickUpLocation.new(name:'BR3 Beckenham', city: london)
+pick_up_locations << PickUpLocation.new(name:'BR4 West Wickham', city: london)
+pick_up_locations << PickUpLocation.new(name:'BR5 St Mary Cray', city: london)
+pick_up_locations << PickUpLocation.new(name:'BR6 Orpington', city: london)
+pick_up_locations << PickUpLocation.new(name:'BR7 Chislehurst', city: london)
+pick_up_locations << PickUpLocation.new(name:'BR8 Swanley', city: london)
+pick_up_locations << PickUpLocation.new(name:'Bedford', city: london)
+pick_up_locations << PickUpLocation.new(name:'Bournemouth', city: london)
+pick_up_locations << PickUpLocation.new(name:'Brighton', city: london)
+pick_up_locations << PickUpLocation.new(name:'CR0 Croydon', city: london)
+pick_up_locations << PickUpLocation.new(name:'CR1 Croydon', city: london)
+pick_up_locations << PickUpLocation.new(name:'CR2 South Croydon', city: london)
+pick_up_locations << PickUpLocation.new(name:'CR3 Caterham', city: london)
+pick_up_locations << PickUpLocation.new(name:'CR4 Mitcham', city: london)
+pick_up_locations << PickUpLocation.new(name:'CR5 Coulsdon', city: london)
+pick_up_locations << PickUpLocation.new(name:'CR6 Warlingham', city: london)
+pick_up_locations << PickUpLocation.new(name:'CR7 Thornton Heath', city: london)
+pick_up_locations << PickUpLocation.new(name:'CR8 Purley', city: london)
+pick_up_locations << PickUpLocation.new(name:'DA 1 Dartford Road', city: london)
+pick_up_locations << PickUpLocation.new(name:'DA 2 Dartford', city: london)
+pick_up_locations << PickUpLocation.new(name:'DA 3 Longfield', city: london)
+pick_up_locations << PickUpLocation.new(name:'DA 4 Horton Kirby', city: london)
+pick_up_locations << PickUpLocation.new(name:'DA 5 Bexley', city: london)
+pick_up_locations << PickUpLocation.new(name:'DA 6 Bexleyheath', city: london)
+pick_up_locations << PickUpLocation.new(name:'DA 7 Barnehurst', city: london)
+pick_up_locations << PickUpLocation.new(name:'DA 8 Erith', city: london)
+pick_up_locations << PickUpLocation.new(name:'DA 9 Greenhithe', city: london)
+pick_up_locations << PickUpLocation.new(name:'DA10 Swanscombe', city: london)
+pick_up_locations << PickUpLocation.new(name:'DA11 Northfleet', city: london)
+pick_up_locations << PickUpLocation.new(name:'DA12 Shorne', city: london)
+pick_up_locations << PickUpLocation.new(name:'DA13 Gravesend', city: london)
+pick_up_locations << PickUpLocation.new(name:'DA14 Sidcup', city: london)
+pick_up_locations << PickUpLocation.new(name:'DA15 Willersley', city: london)
+pick_up_locations << PickUpLocation.new(name:'DA16 Welling', city: london)
+pick_up_locations << PickUpLocation.new(name:'DA17 Beldevere', city: london)
+pick_up_locations << PickUpLocation.new(name:'DA18 Erith', city: london)
+pick_up_locations << PickUpLocation.new(name:'E 1 Whitechapel', city: london)
+pick_up_locations << PickUpLocation.new(name:'E 2 Bethnal Green', city: london)
+pick_up_locations << PickUpLocation.new(name:'E 3 Bow', city: london)
+pick_up_locations << PickUpLocation.new(name:'E 4 Chingford', city: london)
+pick_up_locations << PickUpLocation.new(name:'E 5 Clapton', city: london)
+pick_up_locations << PickUpLocation.new(name:'E 6 East Ham', city: london)
+pick_up_locations << PickUpLocation.new(name:'E 7 Forest Gate', city: london)
+pick_up_locations << PickUpLocation.new(name:'E 8 Dalston  ', city: london)
+pick_up_locations << PickUpLocation.new(name:'E 8 Hackney', city: london)
+pick_up_locations << PickUpLocation.new(name:'E 9 Hackney', city: london)
+pick_up_locations << PickUpLocation.new(name:'E 9 Homerton  ', city: london)
+pick_up_locations << PickUpLocation.new(name:'E10 Leyton', city: london)
+pick_up_locations << PickUpLocation.new(name:'E11 Leytonstone', city: london)
+pick_up_locations << PickUpLocation.new(name:'E12 Manor Park', city: london)
+pick_up_locations << PickUpLocation.new(name:'E13 Plaistow', city: london)
+pick_up_locations << PickUpLocation.new(name:'E14 Canary Wharf', city: london)
+pick_up_locations << PickUpLocation.new(name:'E15 Stratford  ', city: london)
+pick_up_locations << PickUpLocation.new(name:'E15 West Ham  ', city: london)
+pick_up_locations << PickUpLocation.new(name:'E16 Canning Town', city: london)
+pick_up_locations << PickUpLocation.new(name:'E16 Docklands', city: london)
+pick_up_locations << PickUpLocation.new(name:'E17 Walthamstow', city: london)
+pick_up_locations << PickUpLocation.new(name:'E18 South Woodford', city: london)
+pick_up_locations << PickUpLocation.new(name:'EC1 Barbican', city: london)
+pick_up_locations << PickUpLocation.new(name:'EC1 Clarkenwell', city: london)
+pick_up_locations << PickUpLocation.new(name:'EC1 Old Street', city: london)
+pick_up_locations << PickUpLocation.new(name:'EC2 Liverpool Street', city: london)
+pick_up_locations << PickUpLocation.new(name:'EC2 Moorgate', city: london)
+pick_up_locations << PickUpLocation.new(name:'EC3 Aldgate', city: london)
+pick_up_locations << PickUpLocation.new(name:'EC3 Tower Hill', city: london)
+pick_up_locations << PickUpLocation.new(name:'EC4 Fleet St', city: london)
+pick_up_locations << PickUpLocation.new(name:'EC4 St Pauls', city: london)
+pick_up_locations << PickUpLocation.new(name:'EN1 Enfield', city: london)
+pick_up_locations << PickUpLocation.new(name:'EN2 Enfield Hills', city: london)
+pick_up_locations << PickUpLocation.new(name:'EN3 Brimsdown', city: london)
+pick_up_locations << PickUpLocation.new(name:'EN4 Cockfosters', city: london)
+pick_up_locations << PickUpLocation.new(name:'EN5 Barnet', city: london)
+pick_up_locations << PickUpLocation.new(name:'EN6 Potters Bar', city: london)
+pick_up_locations << PickUpLocation.new(name:'EN7 Waltham Cross', city: london)
+pick_up_locations << PickUpLocation.new(name:'EN8 Cheshunt', city: london)
+pick_up_locations << PickUpLocation.new(name:'EN9 Waltham Abbey ', city: london)
+pick_up_locations << PickUpLocation.new(name:'Gatwick Airport Hotels', city: london)
+pick_up_locations << PickUpLocation.new(name:'HA0 Alperton  ', city: london)
+pick_up_locations << PickUpLocation.new(name:'HA0 Wembley', city: london)
+pick_up_locations << PickUpLocation.new(name:'HA0 Wembley Stadium', city: london)
+pick_up_locations << PickUpLocation.new(name:'HA1 Harrow', city: london)
+pick_up_locations << PickUpLocation.new(name:'HA2 Rayners Lane', city: london)
+pick_up_locations << PickUpLocation.new(name:'HA3 Kenton', city: london)
+pick_up_locations << PickUpLocation.new(name:'HA4 South Ruislip', city: london)
+pick_up_locations << PickUpLocation.new(name:'HA5 Hatch End', city: london)
+pick_up_locations << PickUpLocation.new(name:'HA5 Pinner', city: london)
+pick_up_locations << PickUpLocation.new(name:'HA6 Northwood', city: london)
+pick_up_locations << PickUpLocation.new(name:'HA7 Stanmore', city: london)
+pick_up_locations << PickUpLocation.new(name:'HA8 Edgware', city: london)
+pick_up_locations << PickUpLocation.new(name:'HA9 Wembley', city: london)
+pick_up_locations << PickUpLocation.new(name:'IG 1 Ilford', city: london)
+pick_up_locations << PickUpLocation.new(name:'IG 2 Grants Hill', city: london)
+pick_up_locations << PickUpLocation.new(name:'IG 3 Seven Kings', city: london)
+pick_up_locations << PickUpLocation.new(name:'IG 4 Redbridge', city: london)
+pick_up_locations << PickUpLocation.new(name:'IG 5 Clayhall', city: london)
+pick_up_locations << PickUpLocation.new(name:'IG 6 Fairlop', city: london)
+pick_up_locations << PickUpLocation.new(name:'IG 7 Chigwell', city: london)
+pick_up_locations << PickUpLocation.new(name:'IG 8 Woodford Green', city: london)
+pick_up_locations << PickUpLocation.new(name:'IG 9 Buckhurst Hill', city: london)
+pick_up_locations << PickUpLocation.new(name:'IG10 Loughton', city: london)
+pick_up_locations << PickUpLocation.new(name:'IG11 Barking', city: london)
+pick_up_locations << PickUpLocation.new(name:'KT 1 Kingston Upon Thames', city: london)
+pick_up_locations << PickUpLocation.new(name:'KT 2 Kingston Hospital', city: london)
+pick_up_locations << PickUpLocation.new(name:'KT 3 New Malden', city: london)
+pick_up_locations << PickUpLocation.new(name:'KT 4 Worcester Park', city: london)
+pick_up_locations << PickUpLocation.new(name:'KT 5 Berrylands', city: london)
+pick_up_locations << PickUpLocation.new(name:'KT 6 Surbiton', city: london)
+pick_up_locations << PickUpLocation.new(name:'KT 7 Thames Ditton', city: london)
+pick_up_locations << PickUpLocation.new(name:'KT 8 West Molsley', city: london)
+pick_up_locations << PickUpLocation.new(name:'KT 9 Chessington', city: london)
+pick_up_locations << PickUpLocation.new(name:'KT10 Esher', city: london)
+pick_up_locations << PickUpLocation.new(name:'KT11 Cobham', city: london)
+pick_up_locations << PickUpLocation.new(name:'KT12 Walton on Thames', city: london)
+pick_up_locations << PickUpLocation.new(name:'KT13 Weybridge', city: london)
+pick_up_locations << PickUpLocation.new(name:'KT14 West Byfleet', city: london)
+pick_up_locations << PickUpLocation.new(name:'KT15 Addlestone', city: london)
+pick_up_locations << PickUpLocation.new(name:'KT16 Chertsey', city: london)
+pick_up_locations << PickUpLocation.new(name:'KT17 Ewell', city: london)
+pick_up_locations << PickUpLocation.new(name:'KT18 Epsom', city: london)
+pick_up_locations << PickUpLocation.new(name:'KT19 West Epsom', city: london)
+pick_up_locations << PickUpLocation.new(name:'KT20 Tadworth', city: london)
+pick_up_locations << PickUpLocation.new(name:'KT21 Ashtead', city: london)
+pick_up_locations << PickUpLocation.new(name:'KT22 Leatherhead', city: london)
+pick_up_locations << PickUpLocation.new(name:'KT23 Bookham', city: london)
+pick_up_locations << PickUpLocation.new(name:'KT24 East Horsley', city: london)
+pick_up_locations << PickUpLocation.new(name:'London City Centre', city: london)
+pick_up_locations << PickUpLocation.new(name:'Luton Airport Hotels', city: london)
+pick_up_locations << PickUpLocation.new(name:'N 1 Islington', city: london)
+pick_up_locations << PickUpLocation.new(name:'N 2 East Finchley', city: london)
+pick_up_locations << PickUpLocation.new(name:'N 3 Finchley Central ', city: london)
+pick_up_locations << PickUpLocation.new(name:'N 4 Finsbury Park', city: london)
+pick_up_locations << PickUpLocation.new(name:'N 4 Manor House  ', city: london)
+pick_up_locations << PickUpLocation.new(name:'N 5 Highbury', city: london)
+pick_up_locations << PickUpLocation.new(name:'N 6 Highgate', city: london)
+pick_up_locations << PickUpLocation.new(name:'N 7 Holloway', city: london)
+pick_up_locations << PickUpLocation.new(name:'N 8 Crouch End  ', city: london)
+pick_up_locations << PickUpLocation.new(name:'N 8 Hornsey', city: london)
+pick_up_locations << PickUpLocation.new(name:'N 9 Lower Edmonton', city: london)
+pick_up_locations << PickUpLocation.new(name:'N10 Muswell Hill', city: london)
+pick_up_locations << PickUpLocation.new(name:'N11 Friern Barnet', city: london)
+pick_up_locations << PickUpLocation.new(name:'N12 North Finchley', city: london)
+pick_up_locations << PickUpLocation.new(name:'N12 Woodside Park  ', city: london)
+pick_up_locations << PickUpLocation.new(name:'N13 Palmers Green', city: london)
+pick_up_locations << PickUpLocation.new(name:'N14 Southgate', city: london)
+pick_up_locations << PickUpLocation.new(name:'N15 Seven Sisters', city: london)
+pick_up_locations << PickUpLocation.new(name:'N16 Stamford Hill  ', city: london)
+pick_up_locations << PickUpLocation.new(name:'N16 Stoke Newington', city: london)
+pick_up_locations << PickUpLocation.new(name:'N17 Tottenham  ', city: london)
+pick_up_locations << PickUpLocation.new(name:'N18 Upper Edmonton', city: london)
+pick_up_locations << PickUpLocation.new(name:'N19 Archway', city: london)
+pick_up_locations << PickUpLocation.new(name:'N19 Tuffnell Park  ', city: london)
+pick_up_locations << PickUpLocation.new(name:'N20 Totteridge and Whetstone', city: london)
+pick_up_locations << PickUpLocation.new(name:'N21 Winchmore Hill', city: london)
+pick_up_locations << PickUpLocation.new(name:'N22 Alexandra Palace  ', city: london)
+pick_up_locations << PickUpLocation.new(name:'N22 Wood Green', city: london)
+pick_up_locations << PickUpLocation.new(name:'NW 1 Camden  ', city: london)
+pick_up_locations << PickUpLocation.new(name:'NW 1 Regents Park', city: london)
+pick_up_locations << PickUpLocation.new(name:'NW 2 Cricklewood', city: london)
+pick_up_locations << PickUpLocation.new(name:'NW 2 Willesden', city: london)
+pick_up_locations << PickUpLocation.new(name:'NW 3 Hampsted', city: london)
+pick_up_locations << PickUpLocation.new(name:'NW 3 Swiss Cottage', city: london)
+pick_up_locations << PickUpLocation.new(name:'NW 4 Brent Cross', city: london)
+pick_up_locations << PickUpLocation.new(name:'NW 4 Hendon', city: london)
+pick_up_locations << PickUpLocation.new(name:'NW 5 Kentish Town', city: london)
+pick_up_locations << PickUpLocation.new(name:'NW 6 Kilburn', city: london)
+pick_up_locations << PickUpLocation.new(name:'NW 6 West Hampstead', city: london)
+pick_up_locations << PickUpLocation.new(name:'NW 7 Mill Hill', city: london)
+pick_up_locations << PickUpLocation.new(name:'NW 8 St Johns Wood', city: london)
+pick_up_locations << PickUpLocation.new(name:'NW 9 Colindale', city: london)
+pick_up_locations << PickUpLocation.new(name:'NW 9 Kingsbury', city: london)
+pick_up_locations << PickUpLocation.new(name:'NW10 Harlesden', city: london)
+pick_up_locations << PickUpLocation.new(name:'NW10 Neasden', city: london)
+pick_up_locations << PickUpLocation.new(name:'NW11 Golders Green', city: london)
+pick_up_locations << PickUpLocation.new(name:'RH 1 Redhill', city: london)
+pick_up_locations << PickUpLocation.new(name:'RH 2 Reigate', city: london)
+pick_up_locations << PickUpLocation.new(name:'RH 3 Betchworth', city: london)
+pick_up_locations << PickUpLocation.new(name:'RH 4 Dorking', city: london)
+pick_up_locations << PickUpLocation.new(name:'RH 5 Capel', city: london)
+pick_up_locations << PickUpLocation.new(name:'RH 6 Horley', city: london)
+pick_up_locations << PickUpLocation.new(name:'RH 7 Lingfield', city: london)
+pick_up_locations << PickUpLocation.new(name:'RH 8 Oxted', city: london)
+pick_up_locations << PickUpLocation.new(name:'RH 9 Godstone', city: london)
+pick_up_locations << PickUpLocation.new(name:'RH10 Crawley', city: london)
+pick_up_locations << PickUpLocation.new(name:'RH11 Crawley', city: london)
+pick_up_locations << PickUpLocation.new(name:'RH12 Horsham', city: london)
+pick_up_locations << PickUpLocation.new(name:'RH13 Horsham South', city: london)
+pick_up_locations << PickUpLocation.new(name:'RH14 Billingshurst', city: london)
+pick_up_locations << PickUpLocation.new(name:'RH15 Burgess Hill', city: london)
+pick_up_locations << PickUpLocation.new(name:'RH16 Haywards Heath', city: london)
+pick_up_locations << PickUpLocation.new(name:'RH17 Lindfield', city: london)
+pick_up_locations << PickUpLocation.new(name:'RH18 Forest Row', city: london)
+pick_up_locations << PickUpLocation.new(name:'RH19 East Grinstead', city: london)
+pick_up_locations << PickUpLocation.new(name:'RH20 Pulborough', city: london)
+pick_up_locations << PickUpLocation.new(name:'RM 1 Romford', city: london)
+pick_up_locations << PickUpLocation.new(name:'RM 2 Gidea Park', city: london)
+pick_up_locations << PickUpLocation.new(name:'RM 3 Harold Hill', city: london)
+pick_up_locations << PickUpLocation.new(name:'RM 4 Staplesford Abbotts', city: london)
+pick_up_locations << PickUpLocation.new(name:'RM 5 Collier Row', city: london)
+pick_up_locations << PickUpLocation.new(name:'RM 6 Chadwell Heath', city: london)
+pick_up_locations << PickUpLocation.new(name:'RM 7 Crowlands', city: london)
+pick_up_locations << PickUpLocation.new(name:'RM 8 Becontree', city: london)
+pick_up_locations << PickUpLocation.new(name:'RM 9 Parsloes Park', city: london)
+pick_up_locations << PickUpLocation.new(name:'RM10 Dagenham', city: london)
+pick_up_locations << PickUpLocation.new(name:'RM11 Emerson Park', city: london)
+pick_up_locations << PickUpLocation.new(name:'RM12 Hornchurch', city: london)
+pick_up_locations << PickUpLocation.new(name:'RM13 Rainham', city: london)
+pick_up_locations << PickUpLocation.new(name:'RM14 Upminster', city: london)
+pick_up_locations << PickUpLocation.new(name:'RM15 South Ockendon', city: london)
+pick_up_locations << PickUpLocation.new(name:'RM16 Orsett', city: london)
+pick_up_locations << PickUpLocation.new(name:'RM17 Grays', city: london)
+pick_up_locations << PickUpLocation.new(name:'RM18 Tilbury', city: london)
+pick_up_locations << PickUpLocation.new(name:'RM19 Purfleet', city: london)
+pick_up_locations << PickUpLocation.new(name:'RM20 Chafford Hundred', city: london)
+pick_up_locations << PickUpLocation.new(name:'SE 1 Southwark  ', city: london)
+pick_up_locations << PickUpLocation.new(name:'SE 1 Waterloo', city: london)
+pick_up_locations << PickUpLocation.new(name:'SE 2 Abbey Wood', city: london)
+pick_up_locations << PickUpLocation.new(name:'SE 3 Blackheath', city: london)
+pick_up_locations << PickUpLocation.new(name:'SE 4 Brockley', city: london)
+pick_up_locations << PickUpLocation.new(name:'SE 5 Camberwell', city: london)
+pick_up_locations << PickUpLocation.new(name:'SE 6 Catford', city: london)
+pick_up_locations << PickUpLocation.new(name:'SE 6 Hither Green  ', city: london)
+pick_up_locations << PickUpLocation.new(name:'SE 7 Charlton', city: london)
+pick_up_locations << PickUpLocation.new(name:'SE 8 Deptford', city: london)
+pick_up_locations << PickUpLocation.new(name:'SE 9 Eltham', city: london)
+pick_up_locations << PickUpLocation.new(name:'SE10 Greenwich', city: london)
+pick_up_locations << PickUpLocation.new(name:'SE11 Lambeth', city: london)
+pick_up_locations << PickUpLocation.new(name:'SE12 Lee Grove Park', city: london)
+pick_up_locations << PickUpLocation.new(name:'SE13 Hither Green  ', city: london)
+pick_up_locations << PickUpLocation.new(name:'SE13 Lewisham', city: london)
+pick_up_locations << PickUpLocation.new(name:'SE14 New Cross', city: london)
+pick_up_locations << PickUpLocation.new(name:'SE15 Peckham', city: london)
+pick_up_locations << PickUpLocation.new(name:'SE16 Bermondsey', city: london)
+pick_up_locations << PickUpLocation.new(name:'SE17 Elephant and Castle  ', city: london)
+pick_up_locations << PickUpLocation.new(name:'SE17 Walworth', city: london)
+pick_up_locations << PickUpLocation.new(name:'SE18 Plumstead', city: london)
+pick_up_locations << PickUpLocation.new(name:'SE18 Shooters Hill', city: london)
+pick_up_locations << PickUpLocation.new(name:'SE18 Woolwich', city: london)
+pick_up_locations << PickUpLocation.new(name:'SE19 Crystal Palace', city: london)
+pick_up_locations << PickUpLocation.new(name:'SE20 Penge', city: london)
+pick_up_locations << PickUpLocation.new(name:'SE21 Dulwich', city: london)
+pick_up_locations << PickUpLocation.new(name:'SE22 East Dulwich', city: london)
+pick_up_locations << PickUpLocation.new(name:'SE23 Forest Hill', city: london)
+pick_up_locations << PickUpLocation.new(name:'SE24 Herene Hill', city: london)
+pick_up_locations << PickUpLocation.new(name:'SE25 South Norwood', city: london)
+pick_up_locations << PickUpLocation.new(name:'SE26 Sydneham', city: london)
+pick_up_locations << PickUpLocation.new(name:'SE27 Tulse Hill  ', city: london)
+pick_up_locations << PickUpLocation.new(name:'SE27 West Norwood', city: london)
+pick_up_locations << PickUpLocation.new(name:'SE28 Thamesmead', city: london)
+pick_up_locations << PickUpLocation.new(name:'SL0 Iver', city: london)
+pick_up_locations << PickUpLocation.new(name:'SL1 Cippenham', city: london)
+pick_up_locations << PickUpLocation.new(name:'SL2 Farnham Common', city: london)
+pick_up_locations << PickUpLocation.new(name:'SL3 Slough', city: london)
+pick_up_locations << PickUpLocation.new(name:'SL4 Windsor', city: london)
+pick_up_locations << PickUpLocation.new(name:'SL5 Ascot', city: london)
+pick_up_locations << PickUpLocation.new(name:'SL6 Maidenhead', city: london)
+pick_up_locations << PickUpLocation.new(name:'SM1 Sutton', city: london)
+pick_up_locations << PickUpLocation.new(name:'SM2 Belmont', city: london)
+pick_up_locations << PickUpLocation.new(name:'SM3 North Cheam', city: london)
+pick_up_locations << PickUpLocation.new(name:'SM4 Morden', city: london)
+pick_up_locations << PickUpLocation.new(name:'SM5 Carshalton', city: london)
+pick_up_locations << PickUpLocation.new(name:'SM6 Wallington', city: london)
+pick_up_locations << PickUpLocation.new(name:'SM7 Banstead', city: london)
+pick_up_locations << PickUpLocation.new(name:'SW 1 Belgravia', city: london)
+pick_up_locations << PickUpLocation.new(name:'SW 1 Victoria', city: london)
+pick_up_locations << PickUpLocation.new(name:'SW 1 Westminster', city: london)
+pick_up_locations << PickUpLocation.new(name:'SW 2 Streatham Hill', city: london)
+pick_up_locations << PickUpLocation.new(name:'SW 3 Brompton', city: london)
+pick_up_locations << PickUpLocation.new(name:'SW 3 Chelsea', city: london)
+pick_up_locations << PickUpLocation.new(name:'SW 4 Clapham', city: london)
+pick_up_locations << PickUpLocation.new(name:'SW 5 Earls Court', city: london)
+pick_up_locations << PickUpLocation.new(name:'SW 6 Fulham', city: london)
+pick_up_locations << PickUpLocation.new(name:'SW 6 Parsons Green', city: london)
+pick_up_locations << PickUpLocation.new(name:'SW 7 South Kensington', city: london)
+pick_up_locations << PickUpLocation.new(name:'SW 8 Nine Elms', city: london)
+pick_up_locations << PickUpLocation.new(name:'SW 9 Brixton', city: london)
+pick_up_locations << PickUpLocation.new(name:'SW 9 Stockwell', city: london)
+pick_up_locations << PickUpLocation.new(name:'SW10 West Brompton', city: london)
+pick_up_locations << PickUpLocation.new(name:'SW11 Battersea', city: london)
+pick_up_locations << PickUpLocation.new(name:'SW11 Clapham Junction', city: london)
+pick_up_locations << PickUpLocation.new(name:'SW12 Balham', city: london)
+pick_up_locations << PickUpLocation.new(name:'SW13 Barnes', city: london)
+pick_up_locations << PickUpLocation.new(name:'SW14 New Cross', city: london)
+pick_up_locations << PickUpLocation.new(name:'SW15 Putney', city: london)
+pick_up_locations << PickUpLocation.new(name:'SW15 Roehampton', city: london)
+pick_up_locations << PickUpLocation.new(name:'SW16 Norbury', city: london)
+pick_up_locations << PickUpLocation.new(name:'SW16 Streatham', city: london)
+pick_up_locations << PickUpLocation.new(name:'SW17 Tooting', city: london)
+pick_up_locations << PickUpLocation.new(name:'SW18 Earlsfield', city: london)
+pick_up_locations << PickUpLocation.new(name:'SW18 Wandsworth', city: london)
+pick_up_locations << PickUpLocation.new(name:'SW19 Merton', city: london)
+pick_up_locations << PickUpLocation.new(name:'SW19 Wimbledon', city: london)
+pick_up_locations << PickUpLocation.new(name:'SW20 Rayners Park', city: london)
+pick_up_locations << PickUpLocation.new(name:'SW20 South Wimbledon  ', city: london)
+pick_up_locations << PickUpLocation.new(name:'Stansted Airport Hotels', city: london)
+pick_up_locations << PickUpLocation.new(name:'TN13 Sevenoaks', city: london)
+pick_up_locations << PickUpLocation.new(name:'TW 1 Marble Hill Park', city: london)
+pick_up_locations << PickUpLocation.new(name:'TW 2 Twickenham', city: london)
+pick_up_locations << PickUpLocation.new(name:'TW 3 Hounslow', city: london)
+pick_up_locations << PickUpLocation.new(name:'TW 4 Hounslow Heath', city: london)
+pick_up_locations << PickUpLocation.new(name:'TW 5 Heston', city: london)
+pick_up_locations << PickUpLocation.new(name:'TW 6 Heathrow', city: london)
+pick_up_locations << PickUpLocation.new(name:'TW 7 Isleworth', city: london)
+pick_up_locations << PickUpLocation.new(name:'TW 8 Brentford', city: london)
+pick_up_locations << PickUpLocation.new(name:'TW 9 Kew Gardens ', city: london)
+pick_up_locations << PickUpLocation.new(name:'TW10 Richmond', city: london)
+pick_up_locations << PickUpLocation.new(name:'TW11 Teddington', city: london)
+pick_up_locations << PickUpLocation.new(name:'TW12 Hampton', city: london)
+pick_up_locations << PickUpLocation.new(name:'TW13 Hanworth', city: london)
+pick_up_locations << PickUpLocation.new(name:'TW14 Feltham', city: london)
+pick_up_locations << PickUpLocation.new(name:'TW15 Ashford', city: london)
+pick_up_locations << PickUpLocation.new(name:'TW16 Sunbury on Thames', city: london)
+pick_up_locations << PickUpLocation.new(name:'TW17 Shepperton', city: london)
+pick_up_locations << PickUpLocation.new(name:'TW18 Staines', city: london)
+pick_up_locations << PickUpLocation.new(name:'TW19 Stanwell Moor', city: london)
+pick_up_locations << PickUpLocation.new(name:'TW20 Egham', city: london)
+pick_up_locations << PickUpLocation.new(name:'UB 1 Southall', city: london)
+pick_up_locations << PickUpLocation.new(name:'UB 2 Norwood Green', city: london)
+pick_up_locations << PickUpLocation.new(name:'UB 3 Hayes', city: london)
+pick_up_locations << PickUpLocation.new(name:'UB 4 Hayes End', city: london)
+pick_up_locations << PickUpLocation.new(name:'UB 5 Notholt', city: london)
+pick_up_locations << PickUpLocation.new(name:'UB 6 Greenford', city: london)
+pick_up_locations << PickUpLocation.new(name:'UB 6 Perivale', city: london)
+pick_up_locations << PickUpLocation.new(name:'UB 7 Sipson', city: london)
+pick_up_locations << PickUpLocation.new(name:'UB 8 Cowley', city: london)
+pick_up_locations << PickUpLocation.new(name:'UB 9 Uxbridge', city: london)
+pick_up_locations << PickUpLocation.new(name:'UB10 Hillingdon', city: london)
+pick_up_locations << PickUpLocation.new(name:'W 1 Mayfair', city: london)
+pick_up_locations << PickUpLocation.new(name:'W 1 Oxford Street', city: london)
+pick_up_locations << PickUpLocation.new(name:'W 1 Piccadilly', city: london)
+pick_up_locations << PickUpLocation.new(name:'W 2 Bayswater  ', city: london)
+pick_up_locations << PickUpLocation.new(name:'W 2 Paddington', city: london)
+pick_up_locations << PickUpLocation.new(name:'W 3 Acton', city: london)
+pick_up_locations << PickUpLocation.new(name:'W 4 Chiswick', city: london)
+pick_up_locations << PickUpLocation.new(name:'W 5 Ealing', city: london)
+pick_up_locations << PickUpLocation.new(name:'W 6 Hammersmith', city: london)
+pick_up_locations << PickUpLocation.new(name:'W 7 Hanwell', city: london)
+pick_up_locations << PickUpLocation.new(name:'W 8 Kensington', city: london)
+pick_up_locations << PickUpLocation.new(name:'W 9 Mailda Vale', city: london)
+pick_up_locations << PickUpLocation.new(name:'W10 Ladbroke Grove', city: london)
+pick_up_locations << PickUpLocation.new(name:'W11 Holland Park  ', city: london)
+pick_up_locations << PickUpLocation.new(name:'W11 Notting Hill', city: london)
+pick_up_locations << PickUpLocation.new(name:'W12 Shepherds Bush', city: london)
+pick_up_locations << PickUpLocation.new(name:'W13 West Ealing', city: london)
+pick_up_locations << PickUpLocation.new(name:'W14 West Kensington', city: london)
+pick_up_locations << PickUpLocation.new(name:'WC1 Bloomsbury', city: london)
+pick_up_locations << PickUpLocation.new(name:'WC1 Grays Inn', city: london)
+pick_up_locations << PickUpLocation.new(name:'WC2 Covent Garden', city: london)
+pick_up_locations << PickUpLocation.new(name:'WC2 Holborn', city: london)
+pick_up_locations << PickUpLocation.new(name:'WD17 Watford North', city: london)
+pick_up_locations << PickUpLocation.new(name:'WD18 Watford', city: london)
+pick_up_locations << PickUpLocation.new(name:'WD19 Carpenders Park', city: london)
+pick_up_locations << PickUpLocation.new(name:'WD23 Bushey', city: london)
+pick_up_locations << PickUpLocation.new(name:'WD24 Watford Junction', city: london)
+pick_up_locations << PickUpLocation.new(name:'WD25 Garston', city: london)
+pick_up_locations << PickUpLocation.new(name:'WD3 Chorleywood', city: london)
+pick_up_locations << PickUpLocation.new(name:'WD4 Kings Langley', city: london)
+pick_up_locations << PickUpLocation.new(name:'WD5 Abbotts Langley', city: london)
+pick_up_locations << PickUpLocation.new(name:'WD6 Bushey', city: london)
+pick_up_locations << PickUpLocation.new(name:'WD7 Radlett', city: london)
+pick_up_locations << PickUpLocation.new(name:'Blackpool Airport', city: manchester)
+pick_up_locations << PickUpLocation.new(name:'East Middlands Airport', city: manchester)
+pick_up_locations << PickUpLocation.new(name:'Leeds Bradford Airport', city: manchester)
+pick_up_locations << PickUpLocation.new(name:'Liverpool Airport', city: manchester)
+pick_up_locations << PickUpLocation.new(name:'Manchester Airport', city: manchester)
+pick_up_locations << PickUpLocation.new(name:'Liverpool Cruise Port', city: manchester)
+pick_up_locations << PickUpLocation.new(name:'Alderley Edge', city: manchester)
+pick_up_locations << PickUpLocation.new(name:'Audlem', city: manchester)
+pick_up_locations << PickUpLocation.new(name:'Bacup', city: manchester)
+pick_up_locations << PickUpLocation.new(name:'Barnsley', city: manchester)
+pick_up_locations << PickUpLocation.new(name:'Barnsley via Dewsbury', city: manchester)
+pick_up_locations << PickUpLocation.new(name:'Birkenhead', city: manchester)
+pick_up_locations << PickUpLocation.new(name:'Blackburn', city: manchester)
+pick_up_locations << PickUpLocation.new(name:'Blackpool', city: manchester)
+pick_up_locations << PickUpLocation.new(name:'Bolton', city: manchester)
+pick_up_locations << PickUpLocation.new(name:'Bowness on Windermere', city: manchester)
+pick_up_locations << PickUpLocation.new(name:'Burnley', city: manchester)
+pick_up_locations << PickUpLocation.new(name:'Burscough', city: manchester)
+pick_up_locations << PickUpLocation.new(name:'Bury', city: manchester)
+pick_up_locations << PickUpLocation.new(name:'Buxton', city: manchester)
+pick_up_locations << PickUpLocation.new(name:'Chapel en le Frith', city: manchester)
+pick_up_locations << PickUpLocation.new(name:'Chester', city: manchester)
+pick_up_locations << PickUpLocation.new(name:'Chorley', city: manchester)
+pick_up_locations << PickUpLocation.new(name:'Congleton', city: manchester)
+pick_up_locations << PickUpLocation.new(name:'Crewe', city: manchester)
+pick_up_locations << PickUpLocation.new(name:'Derby', city: manchester)
+pick_up_locations << PickUpLocation.new(name:'Derby Alt Route', city: manchester)
+pick_up_locations << PickUpLocation.new(name:'Doncaster', city: manchester)
+pick_up_locations << PickUpLocation.new(name:'Ellesmere port', city: manchester)
+pick_up_locations << PickUpLocation.new(name:'Endmoor ', city: manchester)
+pick_up_locations << PickUpLocation.new(name:'Fleetwood', city: manchester)
+pick_up_locations << PickUpLocation.new(name:'Glossop', city: manchester)
+pick_up_locations << PickUpLocation.new(name:'Halifax', city: manchester)
+pick_up_locations << PickUpLocation.new(name:'Haydock', city: manchester)
+pick_up_locations << PickUpLocation.new(name:'Hebden Bridge', city: manchester)
+pick_up_locations << PickUpLocation.new(name:'Hindley', city: manchester)
+pick_up_locations << PickUpLocation.new(name:'Holmes Chapel', city: manchester)
+pick_up_locations << PickUpLocation.new(name:'Holyhead Port', city: manchester)
+pick_up_locations << PickUpLocation.new(name:'Huddersfield', city: manchester)
+pick_up_locations << PickUpLocation.new(name:'Hull', city: manchester)
+pick_up_locations << PickUpLocation.new(name:'Knutsford', city: manchester)
+pick_up_locations << PickUpLocation.new(name:'Lancaster', city: manchester)
+pick_up_locations << PickUpLocation.new(name:'Leeds City Centre', city: manchester)
+pick_up_locations << PickUpLocation.new(name:'Leicester', city: manchester)
+pick_up_locations << PickUpLocation.new(name:'Lincoln', city: manchester)
+pick_up_locations << PickUpLocation.new(name:'Liverpool City Centre', city: manchester)
+pick_up_locations << PickUpLocation.new(name:'Llandudno', city: manchester)
+pick_up_locations << PickUpLocation.new(name:'Llangollen', city: manchester)
+pick_up_locations << PickUpLocation.new(name:'Macclesfield', city: manchester)
+pick_up_locations << PickUpLocation.new(name:'Manchester City Centre', city: manchester)
+pick_up_locations << PickUpLocation.new(name:'Mere', city: manchester)
+pick_up_locations << PickUpLocation.new(name:'Middlesborough', city: manchester)
+pick_up_locations << PickUpLocation.new(name:'Middlewich', city: manchester)
+pick_up_locations << PickUpLocation.new(name:'Mold', city: manchester)
+pick_up_locations << PickUpLocation.new(name:'Morecambe', city: manchester)
+pick_up_locations << PickUpLocation.new(name:'Nantwich', city: manchester)
+pick_up_locations << PickUpLocation.new(name:'Newcastle', city: manchester)
+pick_up_locations << PickUpLocation.new(name:'Newton le willows', city: manchester)
+pick_up_locations << PickUpLocation.new(name:'Norwich', city: manchester)
+pick_up_locations << PickUpLocation.new(name:'Nottingham', city: manchester)
+pick_up_locations << PickUpLocation.new(name:'Nottingham Alt Route', city: manchester)
+pick_up_locations << PickUpLocation.new(name:'Poynton', city: manchester)
+pick_up_locations << PickUpLocation.new(name:'Preston', city: manchester)
+pick_up_locations << PickUpLocation.new(name:'Rawtenstall', city: manchester)
+pick_up_locations << PickUpLocation.new(name:'Rochdale', city: manchester)
+pick_up_locations << PickUpLocation.new(name:'Rotherham', city: manchester)
+pick_up_locations << PickUpLocation.new(name:'Sheffield', city: manchester)
+pick_up_locations << PickUpLocation.new(name:'Sheffield via Dewsbury', city: manchester)
+pick_up_locations << PickUpLocation.new(name:'Skelmersdale', city: manchester)
+pick_up_locations << PickUpLocation.new(name:'Southport', city: manchester)
+pick_up_locations << PickUpLocation.new(name:'Sowerby Bridge', city: manchester)
+pick_up_locations << PickUpLocation.new(name:'St Helens', city: manchester)
+pick_up_locations << PickUpLocation.new(name:'Stockport', city: manchester)
+pick_up_locations << PickUpLocation.new(name:'Stoke on Trent', city: manchester)
+pick_up_locations << PickUpLocation.new(name:'Todmorden', city: manchester)
+pick_up_locations << PickUpLocation.new(name:'Wakefield', city: manchester)
+pick_up_locations << PickUpLocation.new(name:'Warrington', city: manchester)
+pick_up_locations << PickUpLocation.new(name:'Wetherby', city: manchester)
+pick_up_locations << PickUpLocation.new(name:'Whaley Bridge', city: manchester)
+pick_up_locations << PickUpLocation.new(name:'Widnes', city: manchester)
+pick_up_locations << PickUpLocation.new(name:'Wigan', city: manchester)
+pick_up_locations << PickUpLocation.new(name:'Wilmslow', city: manchester)
+pick_up_locations << PickUpLocation.new(name:'Windermere', city: manchester)
+pick_up_locations << PickUpLocation.new(name:'Wirral', city: manchester)
+pick_up_locations << PickUpLocation.new(name:'Witchurch', city: manchester)
+pick_up_locations << PickUpLocation.new(name:'Wrexham', city: manchester)
+pick_up_locations << PickUpLocation.new(name:'York', city: manchester)
+
+  PickUpLocation.import pick_up_locations
   puts '--------- End of Pick Up Locations Seeds File -----------'
 end
