@@ -10,7 +10,7 @@ after :cities, :agencies do
     end
     alamo_random << city_id
     city = City.find(city_id)
-    alamo_subsidiaries << Subsidiary.create(name: city.name.to_s + ' Station', address:'Street of '+city.name,city:city, agency:Agency.find(1))
+    alamo_subsidiaries << Subsidiary.new(name: city.name.to_s + ' Station', address:'Street of '+city.name,city:city, agency:Agency.find(1))
   end
   puts 'end ------ Alamo subsidiaries ---------'
 
@@ -24,7 +24,7 @@ after :cities, :agencies do
     end
     avis_random << city_id
     city = City.find(city_id)
-    avis_subsidiaries << Subsidiary.create(name: city.name.to_s + ' Station', address:'Street of '+city.name,city:city, agency:Agency.find(2))
+    avis_subsidiaries << Subsidiary.new(name: city.name.to_s + ' Station', address:'Street of '+city.name,city:city, agency:Agency.find(2))
   end
   puts 'end ------ avis subsidiaries ---------'
 
@@ -38,7 +38,7 @@ after :cities, :agencies do
     end
     budget_random << city_id
     city = City.find(city_id)
-    budget_subsidiaries << Subsidiary.create(name: city.name.to_s + ' Station', address:'Street of '+city.name,city:city, agency:Agency.find(3))
+    budget_subsidiaries << Subsidiary.new(name: city.name.to_s + ' Station', address:'Street of '+city.name,city:city, agency:Agency.find(3))
   end
   puts 'end ------ budget subsidiaries ---------'
 
@@ -52,7 +52,7 @@ after :cities, :agencies do
     end
     dollar_random << city_id
     city = City.find(city_id)
-    dollar_subsidiaries << Subsidiary.create(name: city.name.to_s + ' Station', address:'Street of '+city.name,city:city, agency:Agency.find(4))
+    dollar_subsidiaries << Subsidiary.new(name: city.name.to_s + ' Station', address:'Street of '+city.name,city:city, agency:Agency.find(4))
   end
   puts 'end ------ dollar subsidiaries ---------'
 
@@ -67,7 +67,7 @@ after :cities, :agencies do
     end
     europcar_random << city_id
     city = City.find(city_id)
-    europcar_subsidiaries << Subsidiary.create(name: city.name.to_s + ' Station', address:'Street of '+city.name,city:city, agency:Agency.find(5))
+    europcar_subsidiaries << Subsidiary.new(name: city.name.to_s + ' Station', address:'Street of '+city.name,city:city, agency:Agency.find(5))
   end
   puts 'end ------ europcar subsidiaries ---------'
 
@@ -82,7 +82,7 @@ after :cities, :agencies do
     end
     hertz_random << city_id
     city = City.find(city_id)
-    hertz_subsidiaries << Subsidiary.create(name: city.name.to_s + ' Station', address:'Street of '+city.name,city:city, agency:Agency.find(6))
+    hertz_subsidiaries << Subsidiary.new(name: city.name.to_s + ' Station', address:'Street of '+city.name,city:city, agency:Agency.find(6))
   end
   puts 'end ------ hertz subsidiaries ---------'
 
@@ -97,7 +97,7 @@ after :cities, :agencies do
     end
     national_random << city_id
     city = City.find(city_id)
-    national_subsidiaries << Subsidiary.create(name: city.name.to_s + ' Station', address:'Street of '+city.name,city:city, agency:Agency.find(7))
+    national_subsidiaries << Subsidiary.new(name: city.name.to_s + ' Station', address:'Street of '+city.name,city:city, agency:Agency.find(7))
   end
   puts 'end ------ national subsidiaries ---------'
 
@@ -111,8 +111,18 @@ after :cities, :agencies do
     end
     thrifty_random << city_id
     city = City.find(city_id)
-    thrifty_subsidiaries << Subsidiary.create(name: city.name.to_s + ' Station', address:'Street of '+city.name,city:city, agency:Agency.find(8))
+    thrifty_subsidiaries << Subsidiary.new(name: city.name.to_s + ' Station', address:'Street of '+city.name,city:city, agency:Agency.find(8))
   end
   puts 'end ------ thrifty subsidiaries ---------'
+
+  Subsidiary.import alamo_subsidiaries
+  Subsidiary.import avis_subsidiaries
+  Subsidiary.import budget_subsidiaries
+  Subsidiary.import dollar_subsidiaries
+  Subsidiary.import europcar_subsidiaries
+  Subsidiary.import hertz_subsidiaries
+  Subsidiary.import thrifty_subsidiaries
+  Subsidiary.import national_subsidiaries
+  puts '---- Subsidiaries Seeds Finish'
 
 end

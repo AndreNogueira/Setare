@@ -1,5 +1,5 @@
 after :agencies, :categories do
-
+ puts '---begin Car seeds'
   cars = []
 
   # Categories
@@ -39,6 +39,10 @@ after :agencies, :categories do
   cars << Car.new(image:'volkswagen_transporter',brand:'VOLKSWAGEN',model:'Transporter',year:2010,ac:0,abs:1,transmission:1,doors_number:3,capacity:9,price:28,fuel_type:'diesel',fuel_consumption:7.1  ,is_available:1,current_subsidiary:0,agency:a,category:miniVan)
   cars << Car.new(image:'vw_polo',brand:'VOLKSWAGEN',model:'Polo',year:2011,ac:1,abs:1,transmission:1,doors_number:4,capacity:5,price:73,fuel_type:'diesel',fuel_consumption:5.8  ,is_available:1,current_subsidiary:0,agency:a,category:economy)
 
+  
+  
+  cars_array = []
+  
   puts 'Begin ------- Alamo Cars ------'
 
   alamo_subs = Subsidiary.where(agency: Agency.find_by(name:'Alamo'))
@@ -48,7 +52,7 @@ after :agencies, :categories do
       new_car = cars[random_id].dup
       new_car.agency = f.agency
       new_car.current_subsidiary = f.id
-      new_car.save
+      cars_array << new_car
     end
   end
 
@@ -65,7 +69,7 @@ after :agencies, :categories do
       new_car = cars[random_id].dup
       new_car.agency = f.agency
       new_car.current_subsidiary = f.id
-      new_car.save
+      cars_array << new_car
     end
   end
 
@@ -80,7 +84,7 @@ after :agencies, :categories do
       new_car = cars[random_id].dup
       new_car.agency = f.agency
       new_car.current_subsidiary = f.id
-      new_car.save
+      cars_array << new_car
     end
   end
 
@@ -95,7 +99,7 @@ after :agencies, :categories do
       new_car = cars[random_id].dup
       new_car.agency = f.agency
       new_car.current_subsidiary = f.id
-      new_car.save
+      cars_array << new_car
     end
   end
 
@@ -111,7 +115,7 @@ after :agencies, :categories do
       new_car = cars[random_id].dup
       new_car.agency = f.agency
       new_car.current_subsidiary = f.id
-      new_car.save
+      cars_array << new_car
     end
   end
 
@@ -126,7 +130,7 @@ after :agencies, :categories do
       new_car = cars[random_id].dup
       new_car.agency = f.agency
       new_car.current_subsidiary = f.id
-      new_car.save
+      cars_array << new_car
     end
   end
 
@@ -141,7 +145,7 @@ after :agencies, :categories do
       new_car = cars[random_id].dup
       new_car.agency = f.agency
       new_car.current_subsidiary = f.id
-      new_car.save
+      cars_array << new_car
     end
   end
 
@@ -157,10 +161,12 @@ after :agencies, :categories do
       new_car = cars[random_id].dup
       new_car.agency = f.agency
       new_car.current_subsidiary = f.id
-      new_car.save
+      cars_array << new_car
     end
   end
 
   puts 'End ------------Thrifty Cars ------'
 
+  Car.import  cars_array
+  puts '---End Car seeds'
 end
