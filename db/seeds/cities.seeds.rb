@@ -1,4 +1,5 @@
 after :countries do
+  puts '--------- Begin of Cities Seeds File ---------'
   countries = Country.all
   austria = countries.where(name: 'Austria').first
   belgium = countries.where(name: 'Belgium').first
@@ -31,174 +32,173 @@ after :countries do
   switzerland = countries.where(name:'Switzerland').first
   turkey =  countries.where(name:'Turkey').first
   uk =  countries.where(name:'United Kingdom').first
-
-  City.create([
-                {name: 'Innsbruck', is_taxi:true, country: austria },
-                {name: 'Klagenfurt', is_taxi:true, country: austria},
-                {name: 'Salzburg', is_taxi:true, country: austria},
-                {name: 'Vienna', is_taxi:true, country: austria},
-                {name: 'Antwerp', is_taxi:true, country: belgium },
-                {name: 'Bruges', is_taxi:true, country: belgium },
-                {name: 'Brussels', is_taxi:true, country: belgium },
-                {name: 'Burgas', is_taxi:true, country: bulgaria },
-                {name: 'Plovdiv', is_taxi:true, country: bulgaria},
-                {name: 'Sofia', is_taxi:true, country: bulgaria},
-                {name: 'Varna', is_taxi:true, country: bulgaria},
-                {name: 'Dubrovnik', is_taxi:true, country: croatia},
-                {name: 'Osijek', is_taxi:true, country: croatia},
-                {name: 'Pula', is_taxi:true, country: croatia},
-                {name: 'Rijeka', is_taxi:true, country: croatia},
-                {name: 'Split', is_taxi:true, country: croatia},
-                {name: 'Zadar', is_taxi:true, country: croatia},
-                {name: 'Zagreb', is_taxi:true, country: croatia},
-                {name: 'Larnaca', is_taxi:true, country: cyprus},
-                {name: 'Limassol', is_taxi:true, country: cyprus},
-                {name: 'Paphos', is_taxi:true, country: cyprus},
-                {name: 'Prague', is_taxi:true, country: czech},
-                {name: 'Alexandria', is_taxi:true, country: egypt},
-                {name: 'Aswan', is_taxi:true, country: egypt},
-                {name: 'Cairo', is_taxi:true, country: egypt},
-                {name: 'Dabaa', is_taxi:true, country: egypt},
-                {name: 'Hurghada', is_taxi:true, country: egypt},
-                {name: 'Luxor', is_taxi:true, country: egypt},
-                {name: 'Marsa Alam', is_taxi:true, country: egypt},
-                {name: 'Sharm El Sheikh', is_taxi:true, country: egypt},
-                {name: 'Taba', is_taxi:true, country: egypt},
-                {name: 'Tallinn', is_taxi:true, country: estonia},
-                {name: 'Tartu', is_taxi:true, country: estonia},
-                {name: 'Helsinki', is_taxi:true, country: finland},
-                {name: 'Annecy', is_taxi:true, country: france},
-                {name: 'Biarritz', is_taxi:true, country: france},
-                {name: 'Bordeaux', is_taxi:true, country: france},
-                {name: 'Cannes', is_taxi:true, country: france},
-                {name: 'Chambery', is_taxi:true, country: france},
-                {name: 'Grenoble', is_taxi:true, country: france},
-                {name: 'Lyon', is_taxi:true, country: france},
-                {name: 'Marseille', is_taxi:true, country: france},
-                {name: 'Metz', is_taxi:true, country: france},
-                {name: 'Montpellier', is_taxi:true, country: france},
-                {name: 'Nancy', is_taxi:true, country: france},
-                {name: 'Nice', is_taxi:true, country: france},
-                {name: 'Paris', is_taxi:true, country: france},
-                {name: 'Pau', is_taxi:true, country: france},
-                {name: 'Perpignan', is_taxi:true, country: france},
-                {name: 'Strasbourg', is_taxi:true, country: france},
-                {name: 'Tarbes', is_taxi:true, country: france},
-                {name: 'Toulon', is_taxi:true, country: france},
-                {name: 'Toulouse', is_taxi:true, country: france},
-                {name: 'Berlin', is_taxi:true, country: germany},
-                {name: 'Bremen', is_taxi:true, country: germany},
-                {name: 'Cologne', is_taxi:true, country: germany},
-                {name: 'Dusseldorf', is_taxi:true, country: germany},
-                {name: 'Frankfurt', is_taxi:true, country: germany},
-                {name: 'Friedrichshafen', is_taxi:true, country: germany},
-                {name: 'Hamburg', is_taxi:true, country: germany},
-                {name: 'Hannover', is_taxi:true, country: germany},
-                {name: 'Leipzig', is_taxi:true, country: germany},
-                {name: 'Munich', is_taxi:true, country: germany},
-                {name: 'Nuremberg', is_taxi:true, country: germany},
-                {name: 'Stuttgart', is_taxi:true, country: germany},
-                {name: 'Athens', is_taxi:true, country: greece},
-                {name: 'Crete', is_taxi:true, country: greece},
-                {name: 'Kos', is_taxi:true, country: greece},
-                {name: 'Mykonos', is_taxi:true, country: greece},
-                {name: 'Naxos', is_taxi:true, country: greece},
-                {name: 'Paros', is_taxi:true, country: greece},
-                {name: 'Rhodes', is_taxi:true, country: greece},
-                {name: 'Santorini', is_taxi:true, country: greece},
-                {name: 'Zakynthos', is_taxi:true, country: greece},
-                {name: 'Budapest', is_taxi:true, country: hungary},
-                {name: 'Alghero', is_taxi:true, country: italy},
-                {name: 'Ancona', is_taxi:true, country: italy},
-                {name: 'Bergamo', is_taxi:true, country: italy},
-                {name: 'Bologna', is_taxi:true, country: italy},
-                {name: 'Bolzano', is_taxi:true, country: italy},
-                {name: 'Brescia', is_taxi:true, country: italy},
-                {name: 'Cagliari', is_taxi:true, country: italy},
-                {name: 'Catania', is_taxi:true, country: italy},
-                {name: 'Florence', is_taxi:true, country: italy},
-                {name: 'Forli', is_taxi:true, country: italy},
-                {name: 'Genoa', is_taxi:true, country: italy},
-                {name: 'Lamezia Terme', is_taxi:true, country: italy},
-                {name: 'Milan', is_taxi:true, country: italy},
-                {name: 'Naples', is_taxi:true, country: italy},
-                {name: 'Olbia', is_taxi:true, country: italy},
-                {name: 'Palermo', is_taxi:true, country: italy},
-                {name: 'Pescara', is_taxi:true, country: italy},
-                {name: 'Pisa', is_taxi:true, country: italy},
-                {name: 'Rimini', is_taxi:true, country: italy},
-                {name: 'Rome', is_taxi:true, country: italy},
-                {name: 'Trapani', is_taxi:true, country: italy},
-                {name: 'Treviso', is_taxi:true, country: italy},
-                {name: 'Trieste', is_taxi:true, country: italy},
-                {name: 'Turin', is_taxi:true, country: italy},
-                {name: 'Venice', is_taxi:true, country: italy},
-                {name: 'Verona', is_taxi:true, country: italy},
-                {name: 'Liepaja', is_taxi:true, country: latvia},
-                {name: 'Riga', is_taxi:true, country: latvia},
-                {name: 'Kaunas', is_taxi:true, country: lithuania},
-                {name: 'Palanga', is_taxi:true, country: lithuania},
-                {name: 'Vilnius', is_taxi:true, country: lithuania},
-                {name: 'Luxembourg', is_taxi:true, country: luxembourg},
-                {name: 'Valletta', is_taxi:true, country: malta},
-                {name: 'Amsterdam', is_taxi:true, country: netherlands},
-                {name: 'Eindhoven', is_taxi:true, country: netherlands},
-                {name: 'Rotterdam', is_taxi:true, country: netherlands},
-                {name: 'Oslo', is_taxi:true, country: norway},
-                {name: 'Bydgoszcz', is_taxi:true, country: poland},
-                {name: 'Gdansk', is_taxi:true, country: poland},
-                {name: 'Katowice', is_taxi:true, country: poland},
-                {name: 'Krakow', is_taxi:true, country: poland},
-                {name: 'Poznan', is_taxi:true, country: poland},
-                {name: 'Warsaw', is_taxi:true, country: poland},
-                {name: 'Wroclaw', is_taxi:true, country: poland},
-                {name: 'Beja', is_taxi:true, country: portugal},
-                {name: 'Faro', is_taxi:true, country: portugal},
-                {name: 'Funchal', is_taxi:true, country: portugal},
-                {name: 'Lisbon', is_taxi:true, country: portugal},
-                {name: 'Porto', is_taxi:true, country: portugal},
-                {name: 'Bucharest', is_taxi:true, country: romania},
-                {name: 'Cluj Napoca', is_taxi:true, country: romania},
-                {name: 'Sibiu', is_taxi:true, country: romania},
-                {name: 'Timisoara', is_taxi:true, country: romania},
-                {name: 'Moscow', is_taxi:true, country: russia},
-                {name: 'Saint Petersburg', is_taxi:true, country: russia},
-                {name: 'Belgrade', is_taxi:true, country: serbia},
-                {name: 'Bratislava', is_taxi:true, country: slovakia},
-                {name: 'Bled', is_taxi:true, country: slovenia},
-                {name: 'Ljubljana', is_taxi:true, country: slovenia},
-                {name: 'Portoroz', is_taxi:true, country: slovenia},
-                {name: 'Alicante', is_taxi:true, country: spain},
-                {name: 'Almeria', is_taxi:true, country: spain},
-                {name: 'Barcelona', is_taxi:true, country: spain},
-                {name: 'Bilbao', is_taxi:true, country: spain},
-                {name: 'Girona', is_taxi:true, country: spain},
-                {name: 'Gran Canaria', is_taxi:true, country: spain},
-                {name: 'Madrid', is_taxi:true, country: spain},
-                {name: 'Malaga', is_taxi:true, country: spain},
-                {name: 'Murcia', is_taxi:true, country: spain},
-                {name: 'San Sebastian', is_taxi:true, country: spain},
-                {name: 'Santander', is_taxi:true, country: spain},
-                {name: 'Tenerife', is_taxi:true, country: spain},
-                {name: 'Valencia', is_taxi:true, country: spain},
-                {name: 'Basel', is_taxi:true, country: switzerland},
-                {name: 'Bern', is_taxi:true, country: switzerland},
-                {name: 'Geneva', is_taxi:true, country: switzerland},
-                {name: 'Lugano', is_taxi:true, country: switzerland},
-                {name: 'Sion', is_taxi:true, country: switzerland},
-                {name: 'Zurich', is_taxi:true, country: switzerland},
-                {name: 'Ankara', is_taxi:true, country: turkey},
-                {name: 'Antalya', is_taxi:true, country:  turkey},
-                {name: 'Bodrum', is_taxi:true, country: turkey},
-                {name: 'Dalaman', is_taxi:true, country: turkey},
-                {name: 'Istanbul', is_taxi:true, country: turkey},
-                {name: 'Izmir', is_taxi:true, country: turkey},
-                {name: 'Birmingham', is_taxi:true, country: uk},
-                {name: 'Bristol', is_taxi:true, country: uk},
-                {name: 'Edinburgh', is_taxi:true, country: uk},
-                {name: 'Glasgow', is_taxi:true, country: uk},
-                {name: 'London', is_taxi:true, country: uk},
-                {name: 'Manchester', is_taxi:true, country: uk}
-              ])
-
+  cities = []
+  cities << City.new(name: 'Innsbruck', is_taxi:true, country: austria )
+  cities << City.new(name: 'Klagenfurt', is_taxi:true, country: austria)
+  cities << City.new(name: 'Salzburg', is_taxi:true, country: austria)
+  cities << City.new(name: 'Vienna', is_taxi:true, country: austria)
+  cities << City.new(name: 'Antwerp', is_taxi:true, country: belgium )
+  cities << City.new(name: 'Bruges', is_taxi:true, country: belgium )
+  cities << City.new(name: 'Brussels', is_taxi:true, country: belgium )
+  cities << City.new(name: 'Burgas', is_taxi:true, country: bulgaria )
+  cities << City.new(name: 'Plovdiv', is_taxi:true, country: bulgaria)
+  cities << City.new(name: 'Sofia', is_taxi:true, country: bulgaria)
+  cities << City.new(name: 'Varna', is_taxi:true, country: bulgaria)
+  cities << City.new(name: 'Dubrovnik', is_taxi:true, country: croatia)
+  cities << City.new(name: 'Osijek', is_taxi:true, country: croatia)
+  cities << City.new(name: 'Pula', is_taxi:true, country: croatia)
+  cities << City.new(name: 'Rijeka', is_taxi:true, country: croatia)
+  cities << City.new(name: 'Split', is_taxi:true, country: croatia)
+  cities << City.new(name: 'Zadar', is_taxi:true, country: croatia)
+  cities << City.new(name: 'Zagreb', is_taxi:true, country: croatia)
+  cities << City.new(name: 'Larnaca', is_taxi:true, country: cyprus)
+  cities << City.new(name: 'Limassol', is_taxi:true, country: cyprus)
+  cities << City.new(name: 'Paphos', is_taxi:true, country: cyprus)
+  cities << City.new(name: 'Prague', is_taxi:true, country: czech)
+  cities << City.new(name: 'Alexandria', is_taxi:true, country: egypt)
+  cities << City.new(name: 'Aswan', is_taxi:true, country: egypt)
+  cities << City.new(name: 'Cairo', is_taxi:true, country: egypt)
+  cities << City.new(name: 'Dabaa', is_taxi:true, country: egypt)
+  cities << City.new(name: 'Hurghada', is_taxi:true, country: egypt)
+  cities << City.new(name: 'Luxor', is_taxi:true, country: egypt)
+  cities << City.new(name: 'Marsa Alam', is_taxi:true, country: egypt)
+  cities << City.new(name: 'Sharm El Sheikh', is_taxi:true, country: egypt)
+  cities << City.new(name: 'Taba', is_taxi:true, country: egypt)
+  cities << City.new(name: 'Tallinn', is_taxi:true, country: estonia)
+  cities << City.new(name: 'Tartu', is_taxi:true, country: estonia)
+  cities << City.new(name: 'Helsinki', is_taxi:true, country: finland)
+  cities << City.new(name: 'Annecy', is_taxi:true, country: france)
+  cities << City.new(name: 'Biarritz', is_taxi:true, country: france)
+  cities << City.new(name: 'Bordeaux', is_taxi:true, country: france)
+  cities << City.new(name: 'Cannes', is_taxi:true, country: france)
+  cities << City.new(name: 'Chambery', is_taxi:true, country: france)
+  cities << City.new(name: 'Grenoble', is_taxi:true, country: france)
+  cities << City.new(name: 'Lyon', is_taxi:true, country: france)
+  cities << City.new(name: 'Marseille', is_taxi:true, country: france)
+  cities << City.new(name: 'Metz', is_taxi:true, country: france)
+  cities << City.new(name: 'Montpellier', is_taxi:true, country: france)
+  cities << City.new(name: 'Nancy', is_taxi:true, country: france)
+  cities << City.new(name: 'Nice', is_taxi:true, country: france)
+  cities << City.new(name: 'Paris', is_taxi:true, country: france)
+  cities << City.new(name: 'Pau', is_taxi:true, country: france)
+  cities << City.new(name: 'Perpignan', is_taxi:true, country: france)
+  cities << City.new(name: 'Strasbourg', is_taxi:true, country: france)
+  cities << City.new(name: 'Tarbes', is_taxi:true, country: france)
+  cities << City.new(name: 'Toulon', is_taxi:true, country: france)
+  cities << City.new(name: 'Toulouse', is_taxi:true, country: france)
+  cities << City.new(name: 'Berlin', is_taxi:true, country: germany)
+  cities << City.new(name: 'Bremen', is_taxi:true, country: germany)
+  cities << City.new(name: 'Cologne', is_taxi:true, country: germany)
+  cities << City.new(name: 'Dusseldorf', is_taxi:true, country: germany)
+  cities << City.new(name: 'Frankfurt', is_taxi:true, country: germany)
+  cities << City.new(name: 'Friedrichshafen', is_taxi:true, country: germany)
+  cities << City.new(name: 'Hamburg', is_taxi:true, country: germany)
+  cities << City.new(name: 'Hannover', is_taxi:true, country: germany)
+  cities << City.new(name: 'Leipzig', is_taxi:true, country: germany)
+  cities << City.new(name: 'Munich', is_taxi:true, country: germany)
+  cities << City.new(name: 'Nuremberg', is_taxi:true, country: germany)
+  cities << City.new(name: 'Stuttgart', is_taxi:true, country: germany)
+  cities << City.new(name: 'Athens', is_taxi:true, country: greece)
+  cities << City.new(name: 'Crete', is_taxi:true, country: greece)
+  cities << City.new(name: 'Kos', is_taxi:true, country: greece)
+  cities << City.new(name: 'Mykonos', is_taxi:true, country: greece)
+  cities << City.new(name: 'Naxos', is_taxi:true, country: greece)
+  cities << City.new(name: 'Paros', is_taxi:true, country: greece)
+  cities << City.new(name: 'Rhodes', is_taxi:true, country: greece)
+  cities << City.new(name: 'Santorini', is_taxi:true, country: greece)
+  cities << City.new(name: 'Zakynthos', is_taxi:true, country: greece)
+  cities << City.new(name: 'Budapest', is_taxi:true, country: hungary)
+  cities << City.new(name: 'Alghero', is_taxi:true, country: italy)
+  cities << City.new(name: 'Ancona', is_taxi:true, country: italy)
+  cities << City.new(name: 'Bergamo', is_taxi:true, country: italy)
+  cities << City.new(name: 'Bologna', is_taxi:true, country: italy)
+  cities << City.new(name: 'Bolzano', is_taxi:true, country: italy)
+  cities << City.new(name: 'Brescia', is_taxi:true, country: italy)
+  cities << City.new(name: 'Cagliari', is_taxi:true, country: italy)
+  cities << City.new(name: 'Catania', is_taxi:true, country: italy)
+  cities << City.new(name: 'Florence', is_taxi:true, country: italy)
+  cities << City.new(name: 'Forli', is_taxi:true, country: italy)
+  cities << City.new(name: 'Genoa', is_taxi:true, country: italy)
+  cities << City.new(name: 'Lamezia Terme', is_taxi:true, country: italy)
+  cities << City.new(name: 'Milan', is_taxi:true, country: italy)
+  cities << City.new(name: 'Naples', is_taxi:true, country: italy)
+  cities << City.new(name: 'Olbia', is_taxi:true, country: italy)
+  cities << City.new(name: 'Palermo', is_taxi:true, country: italy)
+  cities << City.new(name: 'Pescara', is_taxi:true, country: italy)
+  cities << City.new(name: 'Pisa', is_taxi:true, country: italy)
+  cities << City.new(name: 'Rimini', is_taxi:true, country: italy)
+  cities << City.new(name: 'Rome', is_taxi:true, country: italy)
+  cities << City.new(name: 'Trapani', is_taxi:true, country: italy)
+  cities << City.new(name: 'Treviso', is_taxi:true, country: italy)
+  cities << City.new(name: 'Trieste', is_taxi:true, country: italy)
+  cities << City.new(name: 'Turin', is_taxi:true, country: italy)
+  cities << City.new(name: 'Venice', is_taxi:true, country: italy)
+  cities << City.new(name: 'Verona', is_taxi:true, country: italy)
+  cities << City.new(name: 'Liepaja', is_taxi:true, country: latvia)
+  cities << City.new(name: 'Riga', is_taxi:true, country: latvia)
+  cities << City.new(name: 'Kaunas', is_taxi:true, country: lithuania)
+  cities << City.new(name: 'Palanga', is_taxi:true, country: lithuania)
+  cities << City.new(name: 'Vilnius', is_taxi:true, country: lithuania)
+  cities << City.new(name: 'Luxembourg', is_taxi:true, country: luxembourg)
+  cities << City.new(name: 'Valletta', is_taxi:true, country: malta)
+  cities << City.new(name: 'Amsterdam', is_taxi:true, country: netherlands)
+  cities << City.new(name: 'Eindhoven', is_taxi:true, country: netherlands)
+  cities << City.new(name: 'Rotterdam', is_taxi:true, country: netherlands)
+  cities << City.new(name: 'Oslo', is_taxi:true, country: norway)
+  cities << City.new(name: 'Bydgoszcz', is_taxi:true, country: poland)
+  cities << City.new(name: 'Gdansk', is_taxi:true, country: poland)
+  cities << City.new(name: 'Katowice', is_taxi:true, country: poland)
+  cities << City.new(name: 'Krakow', is_taxi:true, country: poland)
+  cities << City.new(name: 'Poznan', is_taxi:true, country: poland)
+  cities << City.new(name: 'Warsaw', is_taxi:true, country: poland)
+  cities << City.new(name: 'Wroclaw', is_taxi:true, country: poland)
+  cities << City.new(name: 'Beja', is_taxi:true, country: portugal)
+  cities << City.new(name: 'Faro', is_taxi:true, country: portugal)
+  cities << City.new(name: 'Funchal', is_taxi:true, country: portugal)
+  cities << City.new(name: 'Lisbon', is_taxi:true, country: portugal)
+  cities << City.new(name: 'Porto', is_taxi:true, country: portugal)
+  cities << City.new(name: 'Bucharest', is_taxi:true, country: romania)
+  cities << City.new(name: 'Cluj Napoca', is_taxi:true, country: romania)
+  cities << City.new(name: 'Sibiu', is_taxi:true, country: romania)
+  cities << City.new(name: 'Timisoara', is_taxi:true, country: romania)
+  cities << City.new(name: 'Moscow', is_taxi:true, country: russia)
+  cities << City.new(name: 'Saint Petersburg', is_taxi:true, country: russia)
+  cities << City.new(name: 'Belgrade', is_taxi:true, country: serbia)
+  cities << City.new(name: 'Bratislava', is_taxi:true, country: slovakia)
+  cities << City.new(name: 'Bled', is_taxi:true, country: slovenia)
+  cities << City.new(name: 'Ljubljana', is_taxi:true, country: slovenia)
+  cities << City.new(name: 'Portoroz', is_taxi:true, country: slovenia)
+  cities << City.new(name: 'Alicante', is_taxi:true, country: spain)
+  cities << City.new(name: 'Almeria', is_taxi:true, country: spain)
+  cities << City.new(name: 'Barcelona', is_taxi:true, country: spain)
+  cities << City.new(name: 'Bilbao', is_taxi:true, country: spain)
+  cities << City.new(name: 'Girona', is_taxi:true, country: spain)
+  cities << City.new(name: 'Gran Canaria', is_taxi:true, country: spain)
+  cities << City.new(name: 'Madrid', is_taxi:true, country: spain)
+  cities << City.new(name: 'Malaga', is_taxi:true, country: spain)
+  cities << City.new(name: 'Murcia', is_taxi:true, country: spain)
+  cities << City.new(name: 'San Sebastian', is_taxi:true, country: spain)
+  cities << City.new(name: 'Santander', is_taxi:true, country: spain)
+  cities << City.new(name: 'Tenerife', is_taxi:true, country: spain)
+  cities << City.new(name: 'Valencia', is_taxi:true, country: spain)
+  cities << City.new(name: 'Basel', is_taxi:true, country: switzerland)
+  cities << City.new(name: 'Bern', is_taxi:true, country: switzerland)
+  cities << City.new(name: 'Geneva', is_taxi:true, country: switzerland)
+  cities << City.new(name: 'Lugano', is_taxi:true, country: switzerland)
+  cities << City.new(name: 'Sion', is_taxi:true, country: switzerland)
+  cities << City.new(name: 'Zurich', is_taxi:true, country: switzerland)
+  cities << City.new(name: 'Ankara', is_taxi:true, country: turkey)
+  cities << City.new(name: 'Antalya', is_taxi:true, country:  turkey)
+  cities << City.new(name: 'Bodrum', is_taxi:true, country: turkey)
+  cities << City.new(name: 'Dalaman', is_taxi:true, country: turkey)
+  cities << City.new(name: 'Istanbul', is_taxi:true, country: turkey)
+  cities << City.new(name: 'Izmir', is_taxi:true, country: turkey)
+  cities << City.new(name: 'Birmingham', is_taxi:true, country: uk)
+  cities << City.new(name: 'Bristol', is_taxi:true, country: uk)
+  cities << City.new(name: 'Edinburgh', is_taxi:true, country: uk)
+  cities << City.new(name: 'Glasgow', is_taxi:true, country: uk)
+  cities << City.new(name: 'London', is_taxi:true, country: uk)
+  cities << City.new(name: 'Manchester', is_taxi:true, country: uk)
+  City.import cities
+  puts '--------- End of Cities Seeds File ---------'
 end
