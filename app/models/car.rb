@@ -19,6 +19,8 @@
 #  category_id        :integer          not null
 #  created_at         :datetime
 #  updated_at         :datetime
+#  fuel_type          :string(255)      default("diesel"), not null
+#  fuel_consumption   :integer          default(0), not null
 #
 # Indexes
 #
@@ -46,5 +48,4 @@ class Car < ActiveRecord::Base
 
   # Callbacks
   # Instance Methods
-
 end
