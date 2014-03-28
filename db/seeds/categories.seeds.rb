@@ -1,1 +1,9 @@
-Category.create([ {name:'Compact'},{name:'MiniVan'},{name:'PickUp'},{name:'Sport'},{name:'Economy'},{name:'Premium'}, {name:'Standard'}])
+Category.create([
+                    {name:'Compact'},
+                    {name:'MiniVan'},
+                    {name:'PickUp'},
+                    {name:'Sport'},
+                    {name:'Economy'},
+                    {name:'Premium'},
+                    {name:'Standard'}
+                ])

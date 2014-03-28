@@ -48,6 +48,9 @@ gem 'andand', '~> 1.3.3'
 # ActiveRecord-Import. Read More: https://github.com/zdennis/activerecord-import
 gem 'activerecord-import', '~> 0.5.0'
 
+# Google_Directions. Read More: https://github.com/joshcrews/google-directions-ruby
+gem 'google_directions', '~> 0.1.6.2'
+
 # Read more: https://github.com/plataformatec/devise
 gem 'devise'
 
