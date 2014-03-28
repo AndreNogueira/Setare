@@ -31,3 +31,4 @@ class Taxi < ActiveRecord::Base
   # Instance Methods
 
 end
+
