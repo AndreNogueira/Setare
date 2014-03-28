@@ -41,11 +41,6 @@ class RegistrationsController < Devise::RegistrationsController
   # ie if password or email was changed
   def needs_password?(user, params)
     params[:user][:password].present? &&
-        (user.email != params[:user][:email] || verify_extra_user_params?(user,params)
-        )
-  end
-  def verify_extra_user_params?(user,params)
-    user.bi != params[:user][:bi] || user.name != params[:user][:name] ||  user.address != params[:user][:address] ||
-        user.nif != params[:user][:nif] ||  user.phone_number != params[:user][:phone_number] ||  user.driver_license != params[:user][:driver_license]
+        (user.email != params[:user][:email] || user.verify_extra_user_params?(params))
   end
 end
