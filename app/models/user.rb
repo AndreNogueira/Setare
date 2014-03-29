@@ -46,10 +46,4 @@ class User < ActiveRecord::Base
     self.user_profile = UserProfile.first if self.user_profile.nil?
   end
   # Instance Methods
-  def verify_extra_user_params?(params)
-    self.bi != params[:user][:bi] || self.name != params[:user][:name] || self.address != params[:user][:address] ||
-        self.nif != params[:user][:nif] ||  self.phone_number != params[:user][:phone_number] ||
-        self.driver_license != params[:user][:driver_license]
-  end
-
 end

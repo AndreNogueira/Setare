@@ -26,7 +26,7 @@ class RegistrationsController < Devise::RegistrationsController
 
   private
   def verify_current_password(user, params)
-    if needs_password?(user, params)
+    if params[:user][:password].present?
       user.update_with_password(devise_parameter_sanitizer.sanitize(:account_update))
       {password:true, request: true}
     else
@@ -35,12 +35,5 @@ class RegistrationsController < Devise::RegistrationsController
       user.update_without_password(devise_parameter_sanitizer.sanitize(:account_update))
       {password: false, request: true}
     end
-  end
-
-  # check if we need password to update user data
-  # ie if password or email was changed
-  def needs_password?(user, params)
-    params[:user][:password].present? &&
-        (user.email != params[:user][:email] || user.verify_extra_user_params?(params))
   end
 end
