@@ -63,6 +63,9 @@ gem 'will_paginate-foundation'
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'quiet_assets'
+  gem 'bullet'
+  gem 'lol_dba'
 end
 
 group :doc do
