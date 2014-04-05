@@ -4307,7 +4307,7 @@ after :cities do
   pick_up_locations << PickUpLocation.new(name: 'St Julians', city: valletta)
   pick_up_locations << PickUpLocation.new(name: 'St Paul Bay', city: valletta)
   pick_up_locations << PickUpLocation.new(name: 'Valletta City Centre', city: valletta)
-  puts 'Cities of Netherlands'
+  puts 'Cities of Holland'
   amsterdam = City.find_by(name: 'Amsterdam')
   eindhoven = City.find_by(name: 'Eindhoven')
   rotterdam = City.find_by(name: 'Rotterdam')
