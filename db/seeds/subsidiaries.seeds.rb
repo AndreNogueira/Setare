@@ -10,7 +10,7 @@ after :cities, :agencies do
       subsidiaries << Subsidiary.new(name: city.name.to_s + ' Station', address:'Street of '+ city.name, city:city, agency:agency)
     end
   end
-  
+
   Subsidiary.import subsidiaries
   puts '--------- End of Subsidiaries Seeds File ---------'
 end

@@ -1,3 +1,4 @@
+puts '--------- Begin of Taxis Seeds File ---------'
 taxis = []
 taxis << Taxi.new(name:'Sedan Car', image:'sedan_car',passengers_number: 3, luggage:4,price_km:1.3)
 taxis << Taxi.new(name:'Mercedes E class', image:'mercedes_e_class',passengers_number: 3, luggage:4,price_km:1.4)
@@ -12,6 +13,5 @@ taxis << Taxi.new(name:'Minivan MPV 5pax', image:'minivan_mpv_5',passengers_numb
 taxis << Taxi.new(name:'Standard Estate Car', image:'standard_estate',passengers_number: 4, luggage:8,price_km: 1.2)
 taxis << Taxi.new(name:'Standard Sedan Car', image:'standard_sedan',passengers_number: 4, luggage:4,price_km: 1.1)
 
-puts '----Begin Insert Taxis ----'
 Taxi.import taxis
-puts '----End Insert Taxis ----'
+puts '--------- End of Agencies Seeds File ---------'

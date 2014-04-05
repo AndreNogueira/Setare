@@ -1,6 +1,6 @@
 after :taxis, :pick_up_locations do
-
   puts '--------- Begin of PickUpLocations for Taxis --------------'
+
   taxis     = Taxi.all
   locations = PickUpLocation.all
 
@@ -10,7 +10,6 @@ after :taxis, :pick_up_locations do
       taxi.pick_up_locations << locations.sample(600)
     end
   end
+
   puts '--------- End of PickUpLocations for Taxis --------------'
-
-
 end

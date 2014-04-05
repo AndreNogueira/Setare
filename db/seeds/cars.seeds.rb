@@ -1,5 +1,5 @@
 after :agencies, :categories, :subsidiaries do
-  puts 'puts --------- Begin of Car Seeds File ---------'
+  puts '--------- Begin of Car Seeds File ---------'
 
   # Categories
   compact  = Category.find(1)

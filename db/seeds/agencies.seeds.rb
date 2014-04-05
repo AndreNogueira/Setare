@@ -1,3 +1,4 @@
+puts '--------- Begin of Agencies Seeds File ---------'
 Agency.create([
                {name:'Alamo', image:'alamo_logo'},
                {name:'Avis', image:'avis_logo'},
@@ -8,3 +9,4 @@ Agency.create([
                {name:'National', image:'national_logo'},
                {name:'Thrifty', image:'thrifty_logo'}
               ])
+puts '--------- End of Agencies Seeds File ---------'

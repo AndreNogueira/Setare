@@ -1,3 +1,4 @@
+puts '--------- Begin of Categories Seeds File ---------'
 Category.create([
                     {name:'Compact'},
                     {name:'MiniVan'},
@@ -7,3 +8,4 @@ Category.create([
                     {name:'Premium'},
                     {name:'Standard'}
                 ])
+puts '--------- End of Categories Seeds File ---------'
