@@ -2,9 +2,10 @@
   <nav class="top-bar" data-topbar data-options="is_hover: true">
     <ul class="title-area">
       <li class="name">
-        <h1>
-          <%= link_to 'Setare', root_path %>
-        </h1>
+        <%= link_to root_path do %>
+            <%= image_tag 'setare-logo.png',class: 'logo-topbar' %>
+        <% end %>
+
       </li>
     </ul>
 
