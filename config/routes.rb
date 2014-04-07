@@ -1,6 +1,7 @@
 Setare::Application.routes.draw do
 
-
+  # Taxis
+  get 'taxis/index', to: 'taxis#index', as: :taxis_index
 
 
   devise_for :users, :controllers => {:registrations => 'registrations'}
