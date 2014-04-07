@@ -15,24 +15,29 @@
             <li><a href="#">Cars</a></li>
             <li class="divider"></li>
             <li class="has-dropdown not-click">
-              <%= link_to current_user.name ,'#' %>
+              <%= link_to current_user.name, '#' %>
               <ul class="dropdown">
                 <li>
                   <%= link_to edit_user_registration_path do %>
-                    <i class="fi-torso large"></i> Perfil
+                      <i class="fi-torso large"></i> Profile
                   <% end %>
                 </li>
                 <li>
-                  <%= link_to destroy_user_session_path , method: :delete do %>
-                  <i class="fi-power large"></i> Logout
+                  <%= link_to '#' do %>
+                    <i class="fi-book-bookmark large"></i> My Reservations
+                  <% end %>
+                </li>
+                <li>
+                  <%= link_to destroy_user_session_path, method: :delete do %>
+                      <i class="fi-power large"></i> Logout
                   <% end %>
                 </li>
               </ul>
             </li>
         <% else %>
-           <li><%= link_to 'Login', new_user_session_path  %></li>
+            <li><%= link_to 'Login', new_user_session_path %></li>
             <li class="divider"></li>
-           <li><%= link_to 'Register', new_user_registration_path %> </li>
+            <li><%= link_to 'Register', new_user_registration_path %> </li>
         <% end %>
       </ul>
     </section>
