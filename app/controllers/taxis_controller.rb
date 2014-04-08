@@ -4,7 +4,7 @@ class TaxisController < ApplicationController
   end
 
   def city
-    @cities = City.where(country_id: params[:id])
+    @cities = City.taxis(params[:id])
     respond_to do |format|
       format.json { render :json => @cities}
     end

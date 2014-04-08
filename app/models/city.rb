@@ -24,6 +24,7 @@ class City < ActiveRecord::Base
 
   # Scopes
   default_scope {order('name ASC')}
+  scope :taxis, ->(country_id) {where(country_id:country_id,is_taxi: true)}
 
   # Class Methods
   # Validations

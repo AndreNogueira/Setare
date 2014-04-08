@@ -1,6 +1,3 @@
-// Place all the behaviors and hooks related to the matching controller here.
-// All this logic will automatically be available in application.js.
-
 $(document).ready(function () {
     $('select#country').on('change', function () {
         var country_id = $(this).val();
@@ -12,15 +9,10 @@ $(document).ready(function () {
                 $.each(data, function (i, value) {
                     city.append($('<option>').text(value.name).attr('value', value.id));
                 });
-
             }, "json");
-
         }
         else {
             city.attr('disabled', true);
         }
-
-
     });
-
 });

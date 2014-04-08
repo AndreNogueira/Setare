@@ -1,6 +1,6 @@
 after :countries do
   puts '--------- Begin of Cities Seeds File ---------'
-  countries = Country.all
+  countries = Country.reorder('id asc').all
   cities    = []
 
   puts "Cities for Albania"
@@ -1387,10 +1387,10 @@ after :countries do
   cities << City.new(name: "Woippy", is_taxi: false, country: countries[43])
   cities << City.new(name: "Yutz", is_taxi: false, country: countries[43])
   cities << City.new(name: "Yvetot", is_taxi: false, country: countries[43])
-  puts "Cities for FrenchGuiana"
+  puts "Cities for French - Guiana"
   cities << City.new(name: "Cayenne", is_taxi: false, country: countries[44])
   cities << City.new(name: "Kourou", is_taxi: false, country: countries[44])
-  puts "Cities for FrenchPolynesia"
+  puts "Cities for French - Polynesia"
   cities << City.new(name: "Moorea Island", is_taxi: false, country: countries[45])
   cities << City.new(name: "Tahiti Island", is_taxi: false, country: countries[45])
   puts "Cities for Georgia"
@@ -2882,7 +2882,7 @@ after :countries do
   cities << City.new(name: "Matagalpa", is_taxi: false, country: countries[101])
   cities << City.new(name: "Penas Blancas", is_taxi: false, country: countries[101])
   cities << City.new(name: "San Juan del Sur", is_taxi: false, country: countries[101])
-  puts "Cities for NorthernCyprus"
+  puts "Cities for Northern Cyprus"
   cities << City.new(name: "Alsancak", is_taxi: false, country: countries[102])
   cities << City.new(name: "Dogankoy", is_taxi: false, country: countries[102])
   cities << City.new(name: "Ercan", is_taxi: false, country: countries[102])
@@ -2890,11 +2890,11 @@ after :countries do
   cities << City.new(name: "Karaoglanoglu", is_taxi: false, country: countries[102])
   cities << City.new(name: "Kyrenia", is_taxi: false, country: countries[102])
   cities << City.new(name: "Nicosia", is_taxi: false, country: countries[102])
-  puts "Cities for NorthernIreland"
+  puts "Cities for Northern Ireland"
   cities << City.new(name: "Belfast", is_taxi: false, country: countries[103])
   cities << City.new(name: "Derry", is_taxi: false, country: countries[103])
   cities << City.new(name: "Newtownards", is_taxi: false, country: countries[103])
-  puts "Cities for NorthernMarianaIslands"
+  puts "Cities for Northern Mariana Islands"
   cities << City.new(name: "Guam", is_taxi: false, country: countries[104])
   cities << City.new(name: "Saipan", is_taxi: false, country: countries[104])
   cities << City.new(name: "Tinian Island", is_taxi: false, country: countries[104])
