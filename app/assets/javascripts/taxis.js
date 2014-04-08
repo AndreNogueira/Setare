@@ -48,6 +48,27 @@ $(document).ready(function () {
         }
     });
 
+    $('input#begin-datepicker').datepicker({
+        dateFormat: 'dd/mm/yy',
+        showAnim: 'blind',
+        minDate: 0
+    });
+    $('input#end-datepicker').datepicker({
+        dateFormat: 'dd/mm/yy',
+        showAnim: 'blind',
+        minDate: 0
+    });
+
+    $('button#begin-calendar').click(function () {
+        $('#begin-datepicker').datepicker('show');
+    });
+    $('button#end-calendar').click(function () {
+        $('#end-datepicker').datepicker('show');
+    });
+
+    $('input[name=type_trip]').on('change', function () {
+        $('div#return_date').slideToggle();
+    });
 
     function fill_data(url, html_select) {
         $.get(url, function (data) {

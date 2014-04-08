@@ -12,40 +12,106 @@
           <!-- Row Country -->
           <div class="row">
             <div class="large-2 columns">
-              <%= label_tag :country,'Country : ', class: 'right inline' %>
+              <%= label_tag :country, 'Country : ', class: 'right inline' %>
             </div>
             <div class="large-10 columns">
-              <%= select_tag :country, options_from_collection_for_select(@countries,'id','name'), prompt: 'Please Select', id: 'country' %>
+              <%= select_tag :country, options_from_collection_for_select(@countries, 'id', 'name'), prompt: 'Please Select', id: 'country' %>
             </div>
           </div>
 
           <!-- Row City -->
           <div class="row">
-          	<div class="large-2 columns">
+            <div class="large-2 columns">
               <%= label_tag :city, 'City : ', class: 'right inline' %>
-          	</div>
+            </div>
             <div class="large-10 columns">
-              <%= select_tag :city, nil, prompt: 'Please Select', disabled: true, id:'city' %>
+              <%= select_tag :city, nil, prompt: 'Please Select', disabled: true, id: 'city' %>
             </div>
           </div>
 
           <!-- Row Pick Up Location -->
           <div class="row">
             <div class="large-2 columns">
-              <%= label_tag  :pick_up_location,'Pick-Up Location : ' , class: 'right inline'%>
+              <%= label_tag :pick_up_location, 'Pick-Up Location : ', class: 'right inline' %>
             </div>
             <div class="large-10 columns">
-              <%= select_tag :pick_up_location, nil, prompt: 'Please Select', disabled: true, id:'pick_up_location' %>
+              <%= select_tag :pick_up_location, nil, prompt: 'Please Select', disabled: true, id: 'pick_up_location' %>
             </div>
           </div>
 
           <!-- Row Pick Up Location -->
           <div class="row">
             <div class="large-2 columns">
-              <%= label_tag :drop_off_location,'Drop-Off Location : ' , class: 'right inline'%>
+              <%= label_tag :drop_off_location, 'Drop-Off Location : ', class: 'right inline' %>
             </div>
             <div class="large-10 columns">
-              <%= select_tag :drop_off_location, nil, prompt: 'Please Select', disabled: true, id:'drop_off_location' %>
+              <%= select_tag :drop_off_location, nil, prompt: 'Please Select', disabled: true, id: 'drop_off_location' %>
+            </div>
+          </div>
+          <!-- Row Passengers and Type of Trip -->
+          <div class="row">
+            <div class="large-2 columns">
+              <%= label_tag :passengers, 'Passengers :', class: 'right inline' %>
+            </div>
+            <div class="large-5 columns">
+              <%= number_field_tag :passengers, 1, id: 'passengers' %>
+            </div>
+            <div class="large-5 columns type-trip-align">
+              <%= radio_button_tag :type_trip, true, checked: true %> <%= label_tag :type_trip, 'One-Way' %>
+              <%= radio_button_tag :type_trip, false %> <%= label_tag :type_trip, 'Round Trip' %>
+            </div>
+          </div>
+
+          <!-- Row Date of Pick-Up Time -->
+          <div class="row">
+            <div class="large-2 columns">
+              <%= label_tag :begin_date, 'Date : ', class: 'right inline' %>
+            </div>
+            <div class="large-4 columns">
+              <div class="row collapse">
+                <div class="large-10 columns">
+                  <%= text_field_tag :begin_date, DateTime.now.strftime('%d/%m/%Y'), id: 'begin-datepicker', readonly: true %>
+                </div>
+                <div class="large-2 columns">
+                  <%= button_tag type: 'button', class: 'button small round postfix', id: 'begin-calendar' do %>
+                      <i class="fi-calendar"></i>
+                  <% end %>
+                </div>
+              </div>
+            </div>
+
+            <div class="large-2 columns">
+              <%= label_tag :begin_time, 'Pick-Up Time : ', class: 'right inline' %>
+            </div>
+            <div class="large-4 columns">
+              <%= text_field_tag :begin_time, nil, id: 'begin_time' %>
+            </div>
+          </div>
+
+
+          <!-- Row Return Date of Pick-Up Time -->
+          <div class="row" id="return_date" style="display: none">
+            <div class="large-2 columns">
+              <%= label_tag :end_date, 'Return Date : ', class: 'right inline' %>
+            </div>
+            <div class="large-4 columns">
+              <div class="row collapse">
+                <div class="large-10 columns">
+                  <%= text_field_tag :end_date, (DateTime.now + 2.days).strftime('%d/%m/%Y'), id: 'end-datepicker', readonly: true %>
+                </div>
+                <div class="large-2 columns">
+                  <%= button_tag type: 'button', class: 'button small round postfix', id: 'end-calendar' do %>
+                      <i class="fi-calendar"></i>
+                  <% end %>
+                </div>
+              </div>
+            </div>
+
+            <div class="large-2 columns">
+              <%= label_tag :end_time, 'Pick-Up Time : ', class: 'right inline' %>
+            </div>
+            <div class="large-4 columns">
+              <%= text_field_tag :end_time, nil, id: 'end_time' %>
             </div>
           </div>
 
