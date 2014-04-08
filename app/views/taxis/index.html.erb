@@ -12,7 +12,7 @@
           <!-- Row Country -->
           <div class="row">
             <div class="large-2 columns">
-              <label for="right-label" class="right inline"><%= label_tag 'Country : ' %></label>
+              <%= label_tag :country,'Country : ', class: 'right inline' %>
             </div>
             <div class="large-10 columns">
               <%= select_tag :country, options_from_collection_for_select(@countries,'id','name'), prompt: 'Please Select', id: 'country' %>
@@ -22,10 +22,30 @@
           <!-- Row City -->
           <div class="row">
           	<div class="large-2 columns">
-              <label for="right-label" class="right inline"><%= label_tag 'City : ' %></label>
+              <%= label_tag :city, 'City : ', class: 'right inline' %>
           	</div>
             <div class="large-10 columns">
               <%= select_tag :city, nil, prompt: 'Please Select', disabled: true, id:'city' %>
+            </div>
+          </div>
+
+          <!-- Row Pick Up Location -->
+          <div class="row">
+            <div class="large-2 columns">
+              <%= label_tag  :pick_up_location,'Pick-Up Location : ' , class: 'right inline'%>
+            </div>
+            <div class="large-10 columns">
+              <%= select_tag :pick_up_location, nil, prompt: 'Please Select', disabled: true, id:'pick_up_location' %>
+            </div>
+          </div>
+
+          <!-- Row Pick Up Location -->
+          <div class="row">
+            <div class="large-2 columns">
+              <%= label_tag :drop_off_location,'Drop-Off Location : ' , class: 'right inline'%>
+            </div>
+            <div class="large-10 columns">
+              <%= select_tag :drop_off_location, nil, prompt: 'Please Select', disabled: true, id:'drop_off_location' %>
             </div>
           </div>
 

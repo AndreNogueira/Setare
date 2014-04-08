@@ -3,6 +3,8 @@ Setare::Application.routes.draw do
   # Taxis
   get 'taxis/index', to: 'taxis#index', as: :taxis_index
   get 'taxis/city/:id', to: 'taxis#city', as: :get_city
+  get 'taxis/pick_up/:id', to: 'taxis#pick_up', as: :get_pick_up
+  get 'taxis/drop_off/:id', to: 'taxis#drop_off', as: :get_drop_off
 
 
   devise_for :users, :controllers => {:registrations => 'registrations'}

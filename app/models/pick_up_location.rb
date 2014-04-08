@@ -22,6 +22,9 @@ class PickUpLocation < ActiveRecord::Base
 
   # Scopes
   default_scope {order('name ASC')}
+  scope :all_pick_ups_from_city, ->(city_id){where(city_id: city_id)}
+  scope :drop_offs_from_pick_up, ->(pick_up_id) {find(pick_up_id).drop_off_locations}
+
   # Class Methods
   # Validations
   validates :name, presence: true
