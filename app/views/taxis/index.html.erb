@@ -6,7 +6,7 @@
 
 <div class="row">
   <div class="large-12 columns">
-    <%= form_tag taxis_search_path do %>
+    <%= form_tag taxis_search_path,  data: { abide: '' } do %>
         <fieldset class="fieldset-border">
 
           <!-- Row Country -->
@@ -15,7 +15,8 @@
               <%= label_tag :country, 'Country : ', class: 'right inline' %>
             </div>
             <div class="large-10 columns">
-              <%= select_tag :country, options_from_collection_for_select(@countries, 'id', 'name'), prompt: 'Please Select', id: 'country' %>
+              <%= select_tag :country, options_from_collection_for_select(@countries, 'id', 'name'), prompt: 'Please Select', id: 'country', required:true %>
+              <small class="error">You need to choose a Country.</small>
             </div>
           </div>
 
@@ -25,7 +26,8 @@
               <%= label_tag :city, 'City : ', class: 'right inline' %>
             </div>
             <div class="large-10 columns">
-              <%= select_tag :city, nil, prompt: 'Please Select', disabled: true, id: 'city' %>
+              <%= select_tag :city, nil, prompt: 'Please Select', disabled: true, id: 'city' ,required:true%>
+              <small class="error">You need to choose a City.</small>
             </div>
           </div>
 
@@ -35,7 +37,8 @@
               <%= label_tag :pick_up_location, 'Pick-Up Location : ', class: 'right inline' %>
             </div>
             <div class="large-10 columns">
-              <%= select_tag :pick_up_location, nil, prompt: 'Please Select', disabled: true, id: 'pick_up_location' %>
+              <%= select_tag :pick_up_location, nil, prompt: 'Please Select', disabled: true, id: 'pick_up_location' ,required:true %>
+              <small class="error">You need to choose a Pick-Up Location.</small>
             </div>
           </div>
 
@@ -45,7 +48,8 @@
               <%= label_tag :drop_off_location, 'Drop-Off Location : ', class: 'right inline' %>
             </div>
             <div class="large-10 columns">
-              <%= select_tag :drop_off_location, nil, prompt: 'Please Select', disabled: true, id: 'drop_off_location' %>
+              <%= select_tag :drop_off_location, nil, prompt: 'Please Select', disabled: true, id: 'drop_off_location' ,required:true %>
+              <small class="error">You need to choose a Drop-Off Location.</small>
             </div>
           </div>
           <!-- Row Passengers and Type of Trip -->
@@ -103,7 +107,8 @@
               <%= label_tag :begin_time, 'Pick-Up Time : ', class: 'right inline' %>
             </div>
             <div class="large-4 columns">
-              <%= time_select :begin_time, :begin_time, { prompt: true, minute_step: 5 }, { class: 'time-select' } %>
+              <%= time_select :begin_time, :begin_time, { prompt: true, minute_step: 5 }, { class: 'time-select',required:true} %>
+              <small class="error" style="width: 272px;margin-top: 0 !important">You need to choose an hour and minutes.</small>
             </div>
           </div>
 

@@ -18,6 +18,9 @@ gem 'jquery-rails'
 # jQuery UI assets. Read More : https://github.com/joliss/jquery-ui-rails
 gem 'jquery-ui-rails'
 
+# jQuery UI Themes. Read More: https://github.com/fatdude/jquery-ui-themes-rails
+gem 'jquery-ui-themes'
+
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 
