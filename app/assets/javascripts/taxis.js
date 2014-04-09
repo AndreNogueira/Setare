@@ -59,15 +59,14 @@ $(document).ready(function () {
         minDate: 0
     });
 
-    $('input#passengers').simpleSlider({
-        theme:'volume',
-        range:'1,100',
-        highlight:true
-    }).on("slider:ready", function (event, data) {
-       $('span#output').val(data.value);
-    }).on("slider:changed", function (event, data) {
-        console.log(data.value);
-        $('span#output').val(data.value);
+    $('div#slider').slider({
+        range: 'min',
+        value:1,
+        min: 1,
+        max: 50,
+        slide: function( event, ui ) {
+            $("input#passengers").val(ui.value);
+        }
     });
 
     $('button#begin-calendar').click(function () {

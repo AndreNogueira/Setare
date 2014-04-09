@@ -6,7 +6,7 @@
 
 <div class="row">
   <div class="large-12 columns">
-    <%= form_tag "#" do %>
+    <%= form_tag taxis_search_path do %>
         <fieldset class="fieldset-border">
 
           <!-- Row Country -->
@@ -54,8 +54,14 @@
               <%= label_tag :passengers, 'Passengers :', class: 'right inline' %>
             </div>
             <div class="large-5 columns">
-              <%= text_field_tag :passengers, 1, id: 'passengers' %>
-              <span id="output">1</span>
+              <div class="row">
+              	<div class="large-2 columns">
+                  <%= text_field_tag :passengers, 1, id: 'passengers', readonly:true, class:'input-center' %>
+              	</div>
+                <div class="large-10 columns" style="padding-top: 2%;">
+                  <div id="slider"></div>
+                </div>
+              </div>
             </div>
             <div class="large-5 columns">
               <div class="row">

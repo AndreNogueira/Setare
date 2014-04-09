@@ -23,4 +23,8 @@ class TaxisController < ApplicationController
       format.json { render :json => drop_offs}
     end
   end
+
+  def search
+    redirect_to root_path
+  end
 end
