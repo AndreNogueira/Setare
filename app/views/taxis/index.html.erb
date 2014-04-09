@@ -1,6 +1,6 @@
 <div class="row">
   <div class="large-10 large-centered columns">
-    <h1 style="text-align: center;">Taxis Rent</h1>
+    <h2 style="text-align: center;">Taxis Rent</h2>
   </div>
 </div>
 
@@ -54,11 +54,24 @@
               <%= label_tag :passengers, 'Passengers :', class: 'right inline' %>
             </div>
             <div class="large-5 columns">
-              <%= number_field_tag :passengers, 1, id: 'passengers' %>
+              <%= text_field_tag :passengers, 1, id: 'passengers' %>
+              <span id="output">1</span>
             </div>
-            <div class="large-5 columns type-trip-align">
-              <%= radio_button_tag :type_trip, true, checked: true %> <%= label_tag :type_trip, 'One-Way' %>
-              <%= radio_button_tag :type_trip, false %> <%= label_tag :type_trip, 'Round Trip' %>
+            <div class="large-5 columns">
+              <div class="row">
+                <div class="large-6 columns">
+                  <label class="type-trip-align">
+                    <%= radio_button_tag :type_trip, true, checked: true %>
+                    <span>One-Way</span>
+                  </label>
+                </div>
+                <div class="large-6 columns">
+                  <label class="type-trip-align">
+                    <%= radio_button_tag :type_trip, false %>
+                    <span>Round Trip</span>
+                  </label>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -84,7 +97,7 @@
               <%= label_tag :begin_time, 'Pick-Up Time : ', class: 'right inline' %>
             </div>
             <div class="large-4 columns">
-              <%= text_field_tag :begin_time, nil, id: 'begin_time' %>
+              <%= time_select :begin_time, :begin_time, { prompt: true, minute_step: 5 }, { class: 'time-select' } %>
             </div>
           </div>
 
@@ -111,10 +124,16 @@
               <%= label_tag :end_time, 'Pick-Up Time : ', class: 'right inline' %>
             </div>
             <div class="large-4 columns">
-              <%= text_field_tag :end_time, nil, id: 'end_time' %>
+              <%= time_select :end_time, :end_time, { prompt: true, minute_step: 5 }, { class: 'time-select' } %>
             </div>
           </div>
-
+          <div class="row">
+            <div class="large-6 large-centered columns" style="padding-top: 2%;">
+              <%= button_tag type: 'submit', class: 'button small radius expand' do %>
+                  <i class="fi-magnifying-glass"></i> Search
+              <% end %>
+            </div>
+          </div>
         </fieldset>
     <% end %>
   </div>

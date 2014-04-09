@@ -59,6 +59,17 @@ $(document).ready(function () {
         minDate: 0
     });
 
+    $('input#passengers').simpleSlider({
+        theme:'volume',
+        range:'1,100',
+        highlight:true
+    }).on("slider:ready", function (event, data) {
+       $('span#output').val(data.value);
+    }).on("slider:changed", function (event, data) {
+        console.log(data.value);
+        $('span#output').val(data.value);
+    });
+
     $('button#begin-calendar').click(function () {
         $('#begin-datepicker').datepicker('show');
     });
