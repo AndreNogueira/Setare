@@ -7,7 +7,7 @@ after :taxis, :pick_up_locations do
   Taxi.transaction do
     taxis.each do |taxi|
       puts 'Taxi '+ taxi.name.to_s
-      taxi.pick_up_locations << locations.sample(600)
+      taxi.pick_up_locations << locations.sample(2000)
     end
   end
 

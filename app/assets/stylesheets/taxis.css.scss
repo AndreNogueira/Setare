@@ -3,12 +3,38 @@
   text-align: center;
 }
 
-.time-select{
+.time-select {
   width: 130px;
 }
 
-.input-center{
+.input-center {
   text-align: center;
   background-color: #D5D5D5 !important;
   border: solid 1px #FFFFFF !important;
+}
+
+.span-align {
+  padding-top: 2%;
+  padding-left: 5%;
+}
+
+.taxi{
+  border: solid 1px grey;
+  background-color: gainsboro;
+  margin-top: 2% !important;
+  border-radius: 10px;
+}
+
+.taxi-info-div{
+  padding-top: 7%;
+  text-align: center;
+}
+
+.taxi-info{
+  padding-top: 8%;
+  padding-right: 3%;
+}
+
+.taxi-text-color{
+  color: midnightblue;
 }

@@ -24,7 +24,14 @@ class TaxisController < ApplicationController
     end
   end
 
-  def search
-    redirect_to root_path
+  def search_results
+    #puts params[:begin_time][:'begin_time(4i)']
+    #puts params[:begin_time][:'begin_time(5i)']
+
+    taxi_form = TaxiForm.new(params)
+    t = TaxiSearch.new(pick_up_location: taxi_form.pick_up_location, passengers: taxi_form.passengers)
+    @taxis_results = t.search
+
+
   end
 end

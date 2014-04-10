@@ -135,9 +135,12 @@
               <%= label_tag :end_time, 'Pick-Up Time : ', class: 'right inline' %>
             </div>
             <div class="large-4 columns">
-              <%= time_select :end_time, :end_time, { prompt: true, minute_step: 5 }, { class: 'time-select' } %>
+              <%= time_select :end_time, :end_time, { prompt: true, minute_step: 5 }, { class: 'time-select'} %>
+              <small class="error" style="width: 272px;margin-top: 0 !important">You need to choose an hour and minutes.</small>
             </div>
           </div>
+
+
           <div class="row">
             <div class="large-6 large-centered columns" style="padding-top: 2%;">
               <%= button_tag type: 'submit', class: 'button small radius expand' do %>
