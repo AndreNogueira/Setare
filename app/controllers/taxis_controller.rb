@@ -23,7 +23,7 @@ class TaxisController < ApplicationController
     #puts params[:begin_time][:'begin_time(5i)']
 
     taxi_form = TaxiForm.new(params)
-    t = TaxiSearch.new(pick_up_location: taxi_form.pick_up_location, passengers: taxi_form.passengers)
+    t = TaxiSearch.new(pick_up_location: taxi_form.pick_up_location, drop_off_location: taxi_form.drop_off_location, passengers: taxi_form.passengers)
     @taxis_results = t.search
 
 
