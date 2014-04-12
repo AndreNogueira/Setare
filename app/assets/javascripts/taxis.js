@@ -61,10 +61,12 @@ $(document).ready(function () {
 
     $('div#slider').slider({
         range: 'min',
-        value:1,
         min: 1,
         max: 55,
-        slide: function( event, ui ) {
+        create: function (event, ui) {
+            $(this).slider('value', $("input#passengers").val());
+        },
+        slide: function (event, ui) {
             $("input#passengers").val(ui.value);
         }
     });

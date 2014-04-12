@@ -42,7 +42,7 @@
             </div>
           </div>
 
-          <!-- Row Pick Up Location -->
+          <!-- Row Drop Off Location -->
           <div class="row">
             <div class="large-2 columns">
               <%= label_tag :drop_off_location, 'Drop-Off Location : ', class: 'right inline' %>
@@ -107,6 +107,7 @@
               <%= label_tag :begin_time, 'Pick-Up Time : ', class: 'right inline' %>
             </div>
             <div class="large-4 columns">
+              <%#= text_field_tag :begin_time, Time.now, id:'begin-time' %>
               <%= time_select :begin_time, :begin_time, { prompt: true, minute_step: 5 }, { class: 'time-select',required:true} %>
               <small class="error" style="width: 272px;margin-top: 0 !important">You need to choose an hour and minutes.</small>
             </div>
