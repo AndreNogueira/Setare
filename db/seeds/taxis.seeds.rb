@@ -6,7 +6,7 @@ taxis << Taxi.new(name: 'Sedan Car', image: 'sedan_car', passengers_number: 3, l
 taxis << Taxi.new(name: 'Saloon Car', image: 'saloon_car', passengers_number: 4, luggage: 4, price_km: 1.5)
 taxis << Taxi.new(name: 'Toyota Seand Car', image: 'toyota_car', passengers_number: 4, luggage: 5, price_km: 2)
 taxis << Taxi.new(name: 'Standard Estate Car', image: 'standard_estate', passengers_number: 4, luggage: 8, price_km: 1.2)
-taxis << Taxi.new(name: 'VW Caravelle ', image: 'vw_caravelle ', passengers_number: 6, luggage: 12, price_km: 1.3)
+taxis << Taxi.new(name: 'VW Caravelle ', image: 'vw_caravelle', passengers_number: 6, luggage: 12, price_km: 1.3)
 taxis << Taxi.new(name: 'Minivan', image: 'minivan', passengers_number: 6, luggage: 16, price_km: 1.7)
 taxis << Taxi.new(name: 'Luxury Minivan', image: 'luxury_minivan', passengers_number: 7, luggage: 14, price_km: 2)
 taxis << Taxi.new(name: 'Minivan MPV 5pax', image: 'minivan_mpv_5', passengers_number: 5, luggage: 10, price_km: 1.6)
