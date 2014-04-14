@@ -10,6 +10,7 @@ class TaxiSearch
     drop_off = get_drop_off_location
     distance = calculate_distance_in_km(pick_up.name, drop_off.name)
     taxis    = pick_up.taxis.where('passengers_number >= ?', passengers)
+    puts distance
     create_taxis_response(distance, taxis)
   end
 

@@ -1,6 +1,6 @@
 class TaxisController < ApplicationController
 
-  respond_to :html, :json
+  respond_to :html, :json, :js
 
   def index
     respond_with(@countries = Country.taxis)
@@ -23,6 +23,5 @@ class TaxisController < ApplicationController
     @form = TaxiLocations.new(params)
     t = TaxiSearch.new(pick_up_location: params[:pick_up_location], drop_off_location: params[:drop_off_location], passengers: params[:passengers])
     @taxis_results = t.search
-
   end
 end

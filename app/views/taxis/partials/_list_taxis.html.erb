@@ -1,3 +1,9 @@
-<% taxis.each do |taxi| %>
-    <%= render partial: 'taxis/partials/taxi', locals: {taxi: taxi} %>
+<% if taxis.empty? %>
+
+<% else %>
+    <% taxis.each do |taxi| %>
+        <%= render partial: 'taxis/partials/taxi', locals: { taxi: taxi } %>
+    <% end %>
 <% end %>
+
+

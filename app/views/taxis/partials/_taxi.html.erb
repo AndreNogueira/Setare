@@ -34,7 +34,7 @@
       <!-- Taxi Price -->
       <div class="large-4 columns" style="padding-top: 4%;">
         <span class="taxi-text-color">
-            <%= number_to_currency taxi[:cost], unit: '€', separator: ',', format: '%n %u' %>
+            <%= number_to_currency taxi[:cost], unit: '€', delimiter: '.', format: '%n %u', precision: 0 %>
         </span>
       </div>
     </div>

@@ -1,5 +1,5 @@
 <% taxi_form = session[:taxi_form] %>
-<%= form_tag taxis_search_path, data: { abide: '' } do %>
+<%= form_tag taxis_search_path, data: { abide: '' }, remote:true do %>
     <fieldset class="fieldset-border">
 
       <!-- Row Country -->
@@ -130,8 +130,6 @@
             <%= select_hour hour, { prompt: 'Choose Hour', prefix: 'end_time' }, { class: 'taxi-time' } %>
             <span style="padding-left: 1%;padding-right: 1%;">:</span>
             <%= select_minute minute, { prompt: 'Choose Minute', minute_step: 5, prefix: 'end_time' }, { class: 'taxi-time' } %>
-
-            <%#= time_select :end_time, :end_time, { prompt: true, minute_step: 5 }, { class: 'time-select-after-search' } %>
             <small class="error" style="width: 257px;margin-top: 0 !important;">
               You need to choose an hour and minutes.
             </small>

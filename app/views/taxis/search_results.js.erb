@@ -1,0 +1,3 @@
+$('div#taxis-results')
+        .empty()
+        .append('<%= escape_javascript(render partial: 'taxis/partials/list_taxis' , locals: {taxis:@taxis_results}) %>');

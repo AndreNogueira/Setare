@@ -1,12 +1,8 @@
+
 <div class="row">
   <!-- Result List -->
-  <div class="large-8 columns">
-    <% if @taxis_results.empty? %>
-
-    <% else %>
-        <%= render partial: 'taxis/partials/list_taxis', locals: { taxis: @taxis_results } %>
-    <% end %>
-
+  <div class="large-8 columns" id="taxis-results">
+    <%= render partial: 'taxis/partials/list_taxis', locals: { taxis: @taxis_results } %>
   </div>
 
   <!-- Search Form -->
