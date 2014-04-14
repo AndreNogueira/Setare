@@ -19,14 +19,10 @@ class TaxisController < ApplicationController
   end
 
   def search_results
-    #puts params[:begin_time][:'begin_time(4i)']
-    #puts params[:begin_time][:'begin_time(5i)']
-
     session[:taxi_form] = TaxiForm.new(params)
     @form = TaxiLocations.new(params)
     t = TaxiSearch.new(pick_up_location: params[:pick_up_location], drop_off_location: params[:drop_off_location], passengers: params[:passengers])
     @taxis_results = t.search
-
 
   end
 end

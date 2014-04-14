@@ -96,8 +96,11 @@
       <div class="row">
         <div class="large-12 columns">
           <%= label_tag :begin_time, 'Pick-Up Time' %>
-          <%= time_select :begin_time, :begin_time, { prompt: true, minute_step: 5 }, { class: 'time-select-after-search', required: true } %>
-          <small class="error" style="width: 252px;margin-top: 0 !important">You need to choose an hour and minutes.
+          <%= select_hour taxi_form.begin_time[:hour].to_i, { prompt: 'Choose Hour', prefix: 'begin_time' }, { class: 'taxi-time', required: true } %>
+          <span style="padding-left: 1%;padding-right: 1%;">:</span>
+          <%= select_minute taxi_form.begin_time[:minute].to_i, { prompt: 'Choose Minute', minute_step: 5, prefix: 'begin_time' }, { class: 'taxi-time', required: true } %>
+          <small class="error" style="width: 257px;margin-top: 0 !important">
+            You need to choose an hour and minutes.
           </small>
         </div>
       </div>
@@ -122,9 +125,15 @@
         <div class="row">
           <div class="large-12 columns">
             <%= label_tag :end_time, 'Pick-Up Time' %>
-            <%= time_select :end_time, :end_time, { prompt: true, minute_step: 5 }, { class: 'time-select-after-search' } %>
-            <%#= select_time %>
-            <small class="error" style="width: 252px;margin-top: 0 !important;">You need to choose an hour and minutes.
+            <% hour = (taxi_form.end_time[:hour].empty?) ? nil : taxi_form.end_time[:hour].to_i %>
+            <% minute = (taxi_form.end_time[:minute].empty?) ? nil : taxi_form.end_time[:minute].to_i %>
+            <%= select_hour hour, { prompt: 'Choose Hour', prefix: 'end_time' }, { class: 'taxi-time' } %>
+            <span style="padding-left: 1%;padding-right: 1%;">:</span>
+            <%= select_minute minute, { prompt: 'Choose Minute', minute_step: 5, prefix: 'end_time' }, { class: 'taxi-time' } %>
+
+            <%#= time_select :end_time, :end_time, { prompt: true, minute_step: 5 }, { class: 'time-select-after-search' } %>
+            <small class="error" style="width: 257px;margin-top: 0 !important;">
+              You need to choose an hour and minutes.
             </small>
           </div>
         </div>
