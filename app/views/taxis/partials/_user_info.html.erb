@@ -1,0 +1,47 @@
+<fieldset class="fieldset-border">
+  <legend><i class="fi-info"></i> Passenger Information</legend>
+  <!-- Row Name and E-mail -->
+  <div class="row">
+    <div class="large-6 columns">
+      <%= label_tag :name, 'Name' %>
+      <%= text_field_tag :name, current_user.name, disabled: true %>
+    </div>
+    <div class="large-6 columns">
+      <%= label_tag :email, 'E-mail' %>
+      <%= text_field_tag :email, current_user.email, disabled: true %>
+    </div>
+  </div>
+
+  <!-- Row BI and PhoneNumber -->
+  <div class="row">
+    <div class="large-6 columns">
+      <%= label_tag :bi, 'BI' %>
+      <%= text_field_tag :bi, current_user.bi, disabled: true %>
+    </div>
+    <div class="large-6 columns">
+      <%= label_tag :phone_number, 'Phone Number' %>
+      <%= text_field_tag :phone_number, current_user.phone_number, disabled: true %>
+    </div>
+  </div>
+
+  <!-- Row NIF and Driver License -->
+  <div class="row">
+    <div class="large-6 columns">
+      <%= label_tag :nif, 'NIF' %>
+      <%= text_field_tag :nif, current_user.nif, disabled: true %>
+    </div>
+    <div class="large-6 columns">
+      <%= label_tag :driver_license, 'Driver License' %>
+      <%= text_field_tag :driver_license, current_user.driver_license, disabled: true %>
+    </div>
+  </div>
+
+  <!-- Row Address -->
+  <div class="row">
+    <div class="large-12 columns">
+      <%= label_tag :address, 'Address' %>
+      <%= text_field_tag :address, current_user.address, disabled: true %>
+    </div>
+  </div>
+
+</fieldset>

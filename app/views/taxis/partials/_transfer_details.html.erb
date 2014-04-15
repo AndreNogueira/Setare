@@ -1,0 +1,34 @@
+<fieldset class="fieldset-border">
+  <legend><i class="fi-info"></i> Transfer Details</legend>
+
+  <!-- Row Luggage -->
+  <div class="row">
+    <div class="large-9 columns">
+      <%= label_tag :luggage, 'Do you have intentions to use the space reserved for luggage? ', class: 'inline' %>
+    </div>
+    <div class="large-3 columns" style="padding:2% 6% 0 0;">
+      <div class="row">
+        <div class="large-6 columns">
+          <%= label_tag :luggage_true do %>
+              <%= radio_button_tag :luggage, true %>
+              <span>Yes</span>
+          <% end %>
+        </div>
+        <div class="large-6 columns">
+          <%= label_tag :luggage_false do %>
+              <%= radio_button_tag :luggage, false, checked: true %>
+              <span>No</span>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Row Special Request -->
+  <div class="row">
+    <div class="large-12 columns">
+      <%= label_tag :special_request, 'Special Request' %>
+      <%= text_area_tag :special_request, nil, class: 'taxi-textarea' %>
+    </div>
+  </div>
+</fieldset>

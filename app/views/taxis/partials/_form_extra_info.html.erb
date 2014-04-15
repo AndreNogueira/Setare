@@ -1,0 +1,16 @@
+<%= form_tag '#' do %>
+    <%= render partial: 'taxis/partials/transfer_details' %>
+    <%= render partial: 'taxis/partials/user_info' %>
+    <fieldset class="fieldset-border">
+      <legend><i class="fi-info"></i> Payment Information</legend>
+    </fieldset>
+
+    <!-- Row for Book Button -->
+    <div class="row">
+      <div class="large-12 columns">
+        <%= button_tag type: 'submit', class: 'button small radius expand' do %>
+            <i class="fi-"></i> Book Now!!
+        <% end %>
+      </div>
+    </div>
+<% end %>
