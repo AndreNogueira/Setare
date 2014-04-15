@@ -42,7 +42,8 @@
 
   <!-- Taxi Button -->
   <div class="large-3 columns" style="padding-top: 5%;">
-    <%= form_tag '#' do %>
+    <%= form_tag taxi_selected_path(taxi[:taxi]) do %>
+        <%= hidden_field_tag :cost, taxi[:cost] %>
         <%= button_tag type: 'submit', class: 'button small radius' do %>
             <i class="fi-check"></i> Select Taxi
         <% end %>
