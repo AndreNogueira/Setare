@@ -82,6 +82,29 @@ $(document).ready(function () {
         $('div#return_date').slideToggle();
     });
 
+    $('button#button-edit').on('click', function (event) {
+        event.preventDefault();
+        var all_inputs = $('fieldset#user-info input');
+        var button_icon = $(this).find('i');
+
+        if (button_icon.hasClass('fi-pencil')) {
+            change_button_text($(this), 'fi-save', ' Save');
+            turn_disabled_option(all_inputs, false);
+        } else if (button_icon.hasClass('fi-save')) {
+            change_button_text($(this), 'fi-pencil', ' Edit');
+            turn_disabled_option(all_inputs, true);
+        }
+
+    });
+    function turn_disabled_option(array, value) {
+        $.each(array, function () {
+            $(this).prop('disabled', value);
+        });
+    }
+    function change_button_text(button, icon_class, text) {
+        var content = $('<i>').addClass(icon_class);
+        button.empty().append(content).append(text);
+    }
     function fill_data(url, html_select) {
         $.get(url, function (data) {
             html_select.attr('disabled', false);

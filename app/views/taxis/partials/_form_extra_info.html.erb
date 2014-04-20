@@ -1,4 +1,5 @@
-<%= form_tag '#', data: { abide: '' } do %>
+<%= form_tag taxi_reservation_path, data: { abide: '' } do %>
+
     <%= render partial: 'taxis/partials/transfer_details' %>
     <%= render partial: 'taxis/partials/user_info' %>
 
@@ -45,9 +46,9 @@
         </div>
         <div class="large-6 columns">
           <%= label_tag :expiry_date, 'Expiry Date' %>
-          <%= select_year nil, start_year: 2014, end_year: 2050, prompt: 'Choose year', required: true %>
-          <%= select_month nil, add_month_numbers: true,use_short_month: true, prompt: 'Choose month', required: true %>
-          <small class="error">You need to choose an year and a month.</small>
+          <%= select_year nil, {start_year: 2014, end_year: 2050, prompt: 'Choose year'}, {required: true, class:'taxi-expiry-year'} %>
+          <%= select_month nil, {add_month_numbers: true,use_short_month: true, prompt: 'Choose month'}, {required: true, class:'taxi-expiry-month'} %>
+          <small class="error" style="margin-top: 0 !important;width: 281px;">You need to choose an year and a month.</small>
         </div>
 
       </div>

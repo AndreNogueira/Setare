@@ -7,6 +7,7 @@ Setare::Application.routes.draw do
   get 'taxis/drop_off/:id', to: 'taxis#drop_off', as: :get_drop_off
   post 'taxis/search', to: 'taxis#search_results', as: :taxis_search
   post 'taxis/taxi/:id', to: 'taxis#taxi_selected', as: :taxi_selected
+  post 'taxis/taxi_reservation', to:'taxis#taxi_reservation', as: :taxi_reservation
 
 
   devise_for :users, :controllers => {:registrations => 'registrations'}

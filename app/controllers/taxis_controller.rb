@@ -20,11 +20,18 @@ class TaxisController < ApplicationController
 
   def search_results
     session[:taxi_form] = TaxiForm.new(params)
-    @form = TaxiLocations.new(params)
-    t = TaxiSearch.new(pick_up_location: params[:pick_up_location], drop_off_location: params[:drop_off_location], passengers: params[:passengers])
-    @taxis_results = t.search
+    @form               = TaxiLocations.new(params)
+    t                   = TaxiSearch.new(pick_up_location: params[:pick_up_location], drop_off_location: params[:drop_off_location], passengers: params[:passengers])
+    @taxis_results      = t.search
   end
+
   def taxi_selected
-    @form = TaxiLocations.new(session[:taxi_form].attributes)
+    session[:taxi_info] = { taxi: params[:id], cost: params[:cost] }
+    @form               = TaxiLocations.new(session[:taxi_form].attributes)
+  end
+
+  def taxi_reservation
+    puts session[:taxi_info]
+
   end
 end

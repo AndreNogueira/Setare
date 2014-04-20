@@ -1,4 +1,4 @@
-<fieldset class="fieldset-border">
+<fieldset class="fieldset-border" id="user-info">
   <legend><i class="fi-info"></i> Passenger Information</legend>
   <!-- Row Name and E-mail -->
   <div class="row">
@@ -41,6 +41,14 @@
     <div class="large-12 columns">
       <%= label_tag :address, 'Address' %>
       <%= text_field_tag :address, current_user.address, disabled: true %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="large-12 columns" style="text-align: center;">
+      <%= button_tag id: 'button-edit', class: 'button small radius' do %>
+        <i class="fi-pencil"></i> Edit
+      <% end %>
     </div>
   </div>
 
