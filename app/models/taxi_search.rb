@@ -5,6 +5,10 @@ class TaxiSearch
   attribute :drop_off_location, type: Integer
   attribute :passengers, type: Integer
 
+  validates :pick_up_location, presence: true
+  validates :drop_off_location, presence: true
+  validates :passengers, presence: true
+
   def search
     pick_up  = get_pick_up_location
     drop_off = get_drop_off_location
@@ -24,6 +28,7 @@ class TaxiSearch
   def calculate_distance_in_km(pick_up_name, drop_off_name)
     directions = GoogleDirections.new(pick_up_name, drop_off_name)
     (directions.status == 'OK')? directions.distance.to_f / 1000 : 25.0
+    #25.0
   end
 
   def get_pick_up_location
