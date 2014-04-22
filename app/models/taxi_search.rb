@@ -26,9 +26,9 @@ class TaxiSearch
   end
 
   def calculate_distance_in_km(pick_up_name, drop_off_name)
-    directions = GoogleDirections.new(pick_up_name, drop_off_name)
-    (directions.status == 'OK')? directions.distance.to_f / 1000 : 25.0
-    #25.0
+    #directions = GoogleDirections.new(pick_up_name, drop_off_name)
+    #(directions.status == 'OK')? directions.distance.to_f / 1000 : 25.0
+    25.0
   end
 
   def get_pick_up_location

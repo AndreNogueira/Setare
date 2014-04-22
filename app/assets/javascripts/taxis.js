@@ -89,16 +89,16 @@ $(document).ready(function () {
 
         if (button_icon.hasClass('fi-pencil')) {
             change_button_text($(this), 'fi-save', ' Save');
-            turn_disabled_option(all_inputs, false);
+            turn_readonly_option(all_inputs, false);
         } else if (button_icon.hasClass('fi-save')) {
             change_button_text($(this), 'fi-pencil', ' Edit');
-            turn_disabled_option(all_inputs, true);
+            turn_readonly_option(all_inputs, true);
         }
 
     });
-    function turn_disabled_option(array, value) {
+    function turn_readonly_option(array, value) {
         $.each(array, function () {
-            $(this).prop('disabled', value);
+            $(this).prop('readonly', value);
         });
     }
     function change_button_text(button, icon_class, text) {
