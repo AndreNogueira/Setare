@@ -63,6 +63,9 @@ gem 'google_directions', '~> 0.1.6.2'
 # Read more: https://github.com/plataformatec/devise
 gem 'devise'
 
+# Read More: https://github.com/Shopify/active_merchant
+gem 'activemerchant'
+
 # Pagination. Read More: https://github.com/mislav/will_paginate
 gem 'will_paginate', '~> 3.0'
 # Foundation style for will_paginate gem. Read More: https://github.com/acrogenesis/will_paginate-foundation
