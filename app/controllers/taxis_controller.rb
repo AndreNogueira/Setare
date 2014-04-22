@@ -31,9 +31,9 @@ class TaxisController < ApplicationController
   end
 
   def taxi_reservation
-    t = TaxiReservation.new(taxi_form: session[:taxi_form],taxi:session[:taxi_info],extra_params: params,user: current_user)
+    t = TaxiReservation.new(taxi_form: session[:taxi_form], taxi: session[:taxi_info], extra_params: params, user: current_user)
+    t.reservation
 
     redirect_to root_path
-
   end
 end

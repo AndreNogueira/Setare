@@ -1,7 +1,7 @@
 class SenderMail
   include SuckerPunch::Job
 
-  def perform
-    TaxiReservationMailer.taxi_reservation(nil,nil).deliver
+  def perform(taxi_service,user)
+    TaxiReservationMailer.taxi_reservation(taxi_service,user).deliver
   end
 end
