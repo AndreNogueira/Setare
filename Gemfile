@@ -66,6 +66,9 @@ gem 'devise'
 # Read More: https://github.com/Shopify/active_merchant
 gem 'activemerchant'
 
+# Sucker Punch is a single-process Ruby asynchronous processing library. Read More: https://github.com/brandonhilkert/sucker_punch
+gem 'sucker_punch', '~> 1.0'
+
 # Pagination. Read More: https://github.com/mislav/will_paginate
 gem 'will_paginate', '~> 3.0'
 # Foundation style for will_paginate gem. Read More: https://github.com/acrogenesis/will_paginate-foundation
