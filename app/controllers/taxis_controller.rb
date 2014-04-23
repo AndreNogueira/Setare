@@ -31,9 +31,16 @@ class TaxisController < ApplicationController
   end
 
   def taxi_reservation
-    t = TaxiReservation.new(taxi_form: session[:taxi_form], taxi: session[:taxi_info], extra_params: params, user: current_user)
-    t.reservation
+    taxi_reserve = TaxiReservation.new(taxi_form: session[:taxi_form], taxi: session[:taxi_info], extra_params: params, user: current_user)
+    results      = taxi_reserve.reservation
 
-    redirect_to root_path
+    if results[:service]
+
+      redirect_to root_path
+    else
+      @form = TaxiLocations.new(session[:taxi_form].attributes)
+      flash.now[:warning] = results[:message]
+      render 'taxis/taxi_selected'
+    end
   end
 end

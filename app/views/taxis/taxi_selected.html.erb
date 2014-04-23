@@ -1,12 +1,19 @@
+<% unless flash[:warning].nil? %>
+    <div data-alert class="alert-box warning">
+      <%= flash[:warning] %>
+      <a href="#" class="close">&times;</a>
+    </div>
+<% end %>
+
+
 <div class="row">
   <!-- Result List -->
   <div class="large-8 columns">
-    <%= render partial: 'taxis/partials/form_extra_info', locals: { } %>
+    <%= render partial: 'taxis/partials/form_extra_info' %>
   </div>
 
   <!-- Search Form -->
   <div class="large-4 columns">
-    <%= render partial: 'taxis/partials/form_after_search', locals: {form_data: @form, remote:false} %>
+    <%= render partial: 'taxis/partials/form_after_search', locals: { form_data: @form, remote: false } %>
   </div>
-
 </div>
