@@ -37,7 +37,7 @@ class TaxisController < ApplicationController
     results      = taxi_reserve.reservation
 
     if results[:service]
-
+      flash[:success] = results[:message]
       redirect_to root_path
     else
       @form = TaxiLocations.new(session[:taxi_form].attributes)
