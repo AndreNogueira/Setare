@@ -22,7 +22,7 @@ class TaxisController < ApplicationController
     session[:taxi_form] = TaxiForm.new(params)
     @form               = TaxiLocations.new(params)
     t                   = TaxiSearch.new(pick_up_location: params[:pick_up_location], drop_off_location: params[:drop_off_location], passengers: params[:passengers])
-    @taxis_results      = t.search
+    @taxis_results      = t.search(session[:taxi_form].type_trip)
   end
 
   def taxi_selected

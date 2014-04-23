@@ -1,1 +1,32 @@
-qwertyhuiolpç
+<h1><b>Taxi Reservation Confirmation</b></h1>
+
+Hello, <b><%= @user.name %></b>
+
+<p>
+  The reservation of the taxi is scheduled for <b><%= @reservation.service_begin.strftime("%d/%m/%Y at %H:%M") %></b> at
+  the place of departure <b><%= @reservation.pick_up_location %></b>,<b> <%= @reservation.city %> </b>and the final
+  destination is
+  <b><%= @reservation.drop_off_location %></b>.
+</p>
+<% unless @reservation.round_trip %>
+    <p>
+      The return is scheduled for the <b><%= @reservation.service_end.strftime("%d/%m/%Y at %H:%M") %> </b>
+      at the final destination mentioned above.
+    </p>
+<% end %>
+<p>
+  The price to be paid to the driver will be <b>
+  <%= number_to_currency @reservation.final_price, precision: 2, unit: '€', separator: ',', delimiter: '.', format: '%n%u' %></b>,
+  which include luggage according to the taxi selected.
+  <% unless @reservation.special_request.nil? %>
+      Your special request is :<b><%= @reservation.special_request %></b>
+  <% end %>
+</p>
+
+<p>
+  For further questions contact the Setare team through the provided contact.
+</p>
+<p>Thank you for choosing,</p>
+<p>The Setare team</p>
+
+

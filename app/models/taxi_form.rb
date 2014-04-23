@@ -47,6 +47,4 @@ class TaxiForm
   def drop_off_location_name
     DropOffLocation.find(drop_off_location).name
   end
-
-
 end

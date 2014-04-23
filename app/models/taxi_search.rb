@@ -9,12 +9,13 @@ class TaxiSearch
   validates :drop_off_location, presence: true
   validates :passengers, presence: true
 
-  def search
+  def search(round_trip=true)
     pick_up  = get_pick_up_location
     drop_off = get_drop_off_location
     distance = calculate_distance_in_km(pick_up.name, drop_off.name)
     taxis    = pick_up.taxis.where('passengers_number >= ?', passengers)
     puts distance
+    distance *=  2 unless round_trip
     create_taxis_response(distance, taxis)
   end
 
@@ -22,7 +23,7 @@ class TaxiSearch
   def create_taxis_response(distance, taxis)
     results = []
     taxis.each { |taxi| results << { taxi: taxi, cost: taxi.price_km * distance } }
-    results.sort{|t1, t2| t1[:cost] <=> t2[:cost]}
+    results.sort { |t1, t2| t1[:cost] <=> t2[:cost] }
   end
 
   def calculate_distance_in_km(pick_up_name, drop_off_name)
