@@ -13,10 +13,10 @@
 #  taxi_id           :integer          not null
 #  created_at        :datetime
 #  updated_at        :datetime
-#  country           :string(255)
-#  city              :string(255)
-#  pick_up_location  :string(255)
-#  drop_off_location :string(255)
+#  country           :string(255)      not null
+#  city              :string(255)      not null
+#  pick_up_location  :string(255)      not null
+#  drop_off_location :string(255)      not null
 #
 # Indexes
 #
