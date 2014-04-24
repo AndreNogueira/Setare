@@ -6,6 +6,6 @@ class HomeController < ApplicationController
   end
 
   def reservations
-
+    @taxis = current_user.taxi_services
   end
 end

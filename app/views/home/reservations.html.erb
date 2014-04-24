@@ -1,0 +1,14 @@
+<div>
+  <dl class="tabs" data-tab>
+    <dd class="active"><a href="#taxis">Taxis</a></dd>
+    <dd><a href="#cars">Cars</a></dd>
+  </dl>
+</div>
+<br>
+<div class="row">
+
+
+  <%= render partial: 'home/partials/table_taxis_reservations', locals: { taxis: @taxis } %>
+
+</div>
+
