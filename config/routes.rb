@@ -10,6 +10,9 @@ Setare::Application.routes.draw do
   post 'taxis/taxi_reservation', to:'taxis#taxi_reservation', as: :taxi_reservation
 
 
+  # Reservations
+  get 'reservations', to: 'home#reservations', as: :reservations
+
   devise_for :users, :controllers => {:registrations => 'registrations'}
 
   devise_scope :user do
