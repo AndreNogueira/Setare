@@ -14,11 +14,7 @@ class TaxiReservation
   def reservation
     if self.valid?
       if valid_credit_card?
-        taxi_service = nil
-        ActiveRecord::Base.transaction do
-          user_update_attributes
-          taxi_service = create_taxi_service
-        end
+        taxi_service = create_taxi_service
         SenderMail.new.async.perform(taxi_service, user) unless taxi_service.nil?
         { service: true, message: 'Your taxi reservation was successful created. Check your e-mail for more details.' }
       else
@@ -27,13 +23,19 @@ class TaxiReservation
     end
   end
 
-
   private
+  def create_taxi_service
+    ActiveRecord::Base.transaction do
+      user_update_attributes
+      taxi_service
+    end
+  end
+
   def valid_credit_card?
     create_credit_card.valid?
   end
 
-  def create_taxi_service
+  def taxi_service
     taxi_service                   = TaxiService.new
     taxi_service.country           = taxi_form.country_name
     taxi_service.city              = taxi_form.city_name
