@@ -46,20 +46,22 @@
         </div>
         <div class="large-6 columns">
           <%= label_tag :expiry_date, 'Expiry Date' %>
-          <%= select_year nil, {start_year: 2014, end_year: 2050, prompt: 'Choose year'}, {required: true, class:'taxi-expiry-year'} %>
-          <%= select_month nil, {add_month_numbers: true,use_short_month: true, prompt: 'Choose month'}, {required: true, class:'taxi-expiry-month'} %>
-          <small class="error" style="margin-top: 0 !important;width: 281px;">You need to choose an year and a month.</small>
+          <%= select_year nil, { start_year: 2014, end_year: 2050, prompt: 'Choose year' }, { required: true, class: 'taxi-expiry-year' } %>
+          <%= select_month nil, { add_month_numbers: true, use_short_month: true, prompt: 'Choose month' }, { required: true, class: 'taxi-expiry-month' } %>
+          <small class="error" style="margin-top: 0 !important;width: 281px;">You need to choose an year and a month.
+          </small>
         </div>
 
       </div>
-    </fieldset>
 
-    <!-- Row for Book Button -->
-    <div class="row">
-      <div class="large-12 columns">
-        <%= button_tag type: 'submit', class: 'button small radius expand' do %>
-            <i class="fi-bookmark"></i> Book Now!!
-        <% end %>
+
+      <!-- Row for Book Button -->
+      <div class="row" style="margin: 3% 0 0 0 !important;">
+        <div class="large-12 columns">
+          <%= button_tag type: 'submit', class: 'button small radius expand' do %>
+              <i class="fi-bookmark"></i> Book Now!!
+          <% end %>
+        </div>
       </div>
-    </div>
+    </fieldset>
 <% end %>

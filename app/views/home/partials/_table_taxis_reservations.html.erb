@@ -2,8 +2,8 @@
   <thead>
   <tr>
     <th>Service ID</th>
-    <th>Begin of Service</th>
-    <th>End of Service</th>
+    <th>Date</th>
+    <th>Return Date</th>
     <th>Taxi</th>
     <th>Type of Trip</th>
     <th>Luggage</th>
@@ -15,7 +15,7 @@
   </thead>
   <tbody>
   <% taxis.each do |taxi_reservation| %>
-    <%= render partial: 'home/partials/line_reservation', locals: {service: taxi_reservation}  %>
+      <%= render partial: 'home/partials/line_reservation', locals: { service: taxi_reservation } %>
   <% end %>
   </tbody>
 </table>

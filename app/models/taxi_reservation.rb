@@ -93,7 +93,6 @@ class TaxiReservation
   end
 
   def user_params
-    extra_params.permit(:name, :email, :bi, :nif, :phone_number, :driver_license, :address)
-    .slice(:name, :email, :bi, :nif, :phone_number, :driver_license, :address)
+    extra_params.permit!.slice(:name, :email, :bi, :nif, :phone_number, :driver_license, :address)
   end
 end
