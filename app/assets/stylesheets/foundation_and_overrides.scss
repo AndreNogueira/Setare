@@ -1033,18 +1033,18 @@
 // $include-html-table-classes: $include-html-classes;
 
 // These control the background color for the table and even rows
-// $table-bg: #fff;
-// $table-even-row-bg: #f9f9f9  ;
+$table-bg: #e7e7e7;
+$table-even-row-bg: #cbcbcb;
 
 // These control the table cell border style
-// $table-border-style: solid;
-// $table-border-size: 1px;
-// $table-border-color: #ddd;
+$table-border-style: solid;
+$table-border-size: 2px;
+$table-border-color: #1b1b1b;
 
 // These control the table head styles
-// $table-head-bg: #f5f5f5  ;
+$table-head-bg: #5d82ba;
 // $table-head-font-size: rem-calc(14);
-// $table-head-font-color: #222;
+$table-head-font-color: #ffffff;
 // $table-head-font-weight: bold;
 // $table-head-padding: rem-calc(8 10 10);
 
@@ -1065,15 +1065,15 @@
 // $include-html-tabs-classes: $include-html-classes;
 
 // $tabs-navigation-padding: rem-calc(16);
-// $tabs-navigation-bg-color: #efefef  ;
-// $tabs-navigation-active-bg-color: #fff;
-// $tabs-navigation-hover-bg-color: scale-color($tabs-navigation-bg-color, $lightness: -6%);
+$tabs-navigation-bg-color: #B8B4B4 ;
+$tabs-navigation-active-bg-color: #e8e5e6;
+$tabs-navigation-hover-bg-color: scale-color($tabs-navigation-bg-color, $lightness: -10%);
 // $tabs-navigation-font-color: #222;
 // $tabs-navigation-font-size: rem-calc(16);
 // $tabs-navigation-font-family: $body-font-family;
 
 // $tabs-content-margin-bottom: rem-calc(24);
-// $tabs-content-padding: $column-gutter/2;
+// $tabs-content-padding: rem-calc(16);
 
 // $tabs-vertical-navigation-margin-bottom: 1.25rem;
 
