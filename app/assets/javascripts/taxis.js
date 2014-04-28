@@ -1,51 +1,39 @@
 $(document).ready(function () {
+
     $('select#country').on('change', function () {
         var country_id = $(this).val();
         var city = $('select#city');
-
         $('select#pick_up_location').attr('disabled', true);
         $('select#drop_off_location').attr('disabled', true);
         $('select#city > option:gt(0)').remove();
         $('select#drop_off_location > option:gt(0)').remove();
         $('select#pick_up_location > option:gt(0)').remove();
-
-        if (country_id != '') {
+        if (country_id != '')
             fill_data('city/' + country_id, city);
-        } else {
+        else
             city.attr('disabled', true);
-        }
     });
 
     $('select#city').on('change', function () {
         var city_id = $(this).val();
         var pick_up = $('select#pick_up_location');
-
         $('select#drop_off_location').attr('disabled', true);
-
-
         $('select#pick_up_location > option:gt(0)').remove();
         $('select#drop_off_location > option:gt(0)').remove();
-
-
-        if (city_id != '') {
+        if (city_id != '')
             fill_data('pick_up/' + city_id, pick_up);
-        } else {
+        else
             pick_up.attr('disabled', true);
-        }
-
     });
 
     $('select#pick_up_location').on('change', function () {
         var pick_up_id = $(this).val();
         var drop_offs = $('select#drop_off_location');
-
         $('select#drop_off_location > option:gt(0)').remove();
-
-        if (pick_up_id != '') {
+        if (pick_up_id != '')
             fill_data('drop_off/' + pick_up_id, drop_offs);
-        } else {
+        else
             drop_offs.attr('disabled', true);
-        }
     });
 
     $('input#begin-datepicker').datepicker({
@@ -96,15 +84,31 @@ $(document).ready(function () {
         }
 
     });
+
+    $('.tabs .tab-links a').on('click', function (event) {
+        var currentAttrValue = $(this).attr('href');
+        var tabs = $('.tabs ' + currentAttrValue);
+        // Show/Hide Tabs
+        tabs.siblings().slideUp(400);
+        tabs.delay(400).slideDown(400);
+        // Change/remove current tab to active
+        $(this).parent('li').addClass('active').siblings().removeClass('active');
+        event.preventDefault();
+    });
+
+
+    // Funções auxiliares
     function turn_readonly_option(array, value) {
         $.each(array, function () {
             $(this).prop('readonly', value);
         });
     }
+
     function change_button_text(button, icon_class, text) {
         var content = $('<i>').addClass(icon_class);
         button.empty().append(content).append(text);
     }
+
     function fill_data(url, html_select) {
         $.get(url, function (data) {
             html_select.attr('disabled', false);
