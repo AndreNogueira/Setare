@@ -74,6 +74,9 @@ gem 'will_paginate', '~> 3.0'
 # Foundation style for will_paginate gem. Read More: https://github.com/acrogenesis/will_paginate-foundation
 gem 'will_paginate-foundation'
 
+#Figaro securely configure Rails applications .Read More: https://github.com/laserlemon/figaro
+gem 'figaro'
+
 # Better errors for Rails. Read More: https://github.com/charliesome/better_errors
 group :development do
   gem 'better_errors'
