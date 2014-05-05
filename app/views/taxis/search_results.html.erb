@@ -1,0 +1,13 @@
+
+<div class="row">
+  <!-- Result List -->
+  <div class="large-8 columns" id="taxis-results">
+    <%= render partial: 'taxis/partials/list_taxis', locals: { taxis: @taxis_results } %>
+  </div>
+
+  <!-- Search Form -->
+  <div class="large-4 columns">
+    <%= render partial: 'taxis/partials/form_after_search', locals: {form_data: @form, remote:true} %>
+  </div>
+
+</div>

@@ -1,0 +1,12 @@
+<tr>
+  <td><%= service.id %></td>
+  <td><%= service.service_begin.strftime('%d/%m/%Y %H:%M') %></td>
+  <td><%= (service.service_end.nil?) ? '------' : service.service_end.strftime('%d/%m/%Y %H:%M') %></td>
+  <td><%= service.taxi.name %></td>
+  <td><%= (service.round_trip) ? 'Round Trip' : 'One Way' %></td>
+  <td><%= (service.luggage) ? 'Yes': 'No' %></td>
+  <td><%= service.pick_up_location %></td>
+  <td><%= service.drop_off_location %></td>
+  <td><%= number_to_currency service.final_price, precision: 2, unit: '€', separator: ',', delimiter: '.', format: '%n%u' %></td>
+  <td><%= (service.special_request.empty?) ? '------' : service.special_request %></td>
+</tr>

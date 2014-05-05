@@ -39,99 +39,22 @@ after :agencies, :categories, :subsidiaries do
   cars << Car.new(image: 'volkswagen_transporter', brand: 'VOLKSWAGEN', model: 'Transporter', year: 2010, ac: 0, abs: 1, transmission: 1, doors_number: 3, capacity: 9, price: 28, fuel_type: 'diesel', fuel_consumption: 7.1, is_available: 1, current_subsidiary: 0, agency: a, category: miniVan)
   cars << Car.new(image: 'vw_polo', brand: 'VOLKSWAGEN', model: 'Polo', year: 2011, ac: 1, abs: 1, transmission: 1, doors_number: 4, capacity: 5, price: 73, fuel_type: 'diesel', fuel_consumption: 5.8, is_available: 1, current_subsidiary: 0, agency: a, category: economy)
 
-
   cars_array = []
 
-  puts 'Alamo Cars'
-
-  alamo_subs = Subsidiary.where(agency: Agency.find_by(name: 'Alamo'))
-  alamo_subs.each do |f|
-    cars.sample(6).each do |car|
-      new_car                    = car.dup
-      new_car.agency             = f.agency
-      new_car.current_subsidiary = f.id
-      cars_array << new_car
-    end
-  end
-
-  puts 'Avis Cars'
-  alamo_subs = Subsidiary.where(agency: Agency.find_by(name: 'Avis'))
-  alamo_subs.each do |f|
-    cars.sample(6).each do |car|
-      new_car                    = car.dup
-      new_car.agency             = f.agency
-      new_car.current_subsidiary = f.id
-      cars_array << new_car
-    end
-  end
-
-  puts 'Budget Cars'
-  alamo_subs = Subsidiary.where(agency: Agency.find_by(name: 'Budget'))
-  alamo_subs.each do |f|
-    cars.sample(6).each do |car|
-      new_car                    = car.dup
-      new_car.agency             = f.agency
-      new_car.current_subsidiary = f.id
-      cars_array << new_car
-    end
-  end
-
-  puts 'Dollar Cars'
-  alamo_subs = Subsidiary.where(agency: Agency.find_by(name: 'Dollar'))
-  alamo_subs.each do |f|
-    cars.sample(6).each do |car|
-      new_car                    = car.dup
-      new_car.agency             = f.agency
-      new_car.current_subsidiary = f.id
-      cars_array << new_car
-    end
-  end
-
-  puts 'Europcar Cars'
-  alamo_subs = Subsidiary.where(agency: Agency.find_by(name: 'Europcar'))
-  alamo_subs.each do |f|
-    cars.sample(6).each do |car|
-      new_car                    = car.dup
-      new_car.agency             = f.agency
-      new_car.current_subsidiary = f.id
-      cars_array << new_car
-    end
-  end
-
-  puts 'Hertz Cars'
-  alamo_subs = Subsidiary.where(agency: Agency.find_by(name: 'Hertz'))
-  alamo_subs.each do |f|
-    cars.sample(6).each do |car|
-      new_car                    = car.dup
-      new_car.agency             = f.agency
-      new_car.current_subsidiary = f.id
-      cars_array << new_car
-    end
-  end
-
-  puts 'National Cars'
-  alamo_subs = Subsidiary.where(agency: Agency.find_by(name: 'National'))
-  alamo_subs.each do |f|
-    cars.sample(6).each do |car|
-      new_car                    = car.dup
-      new_car.agency             = f.agency
-      new_car.current_subsidiary = f.id
-      cars_array << new_car
-    end
-  end
-
-
-  puts 'Thrifty Cars'
-  alamo_subs = Subsidiary.where(agency: Agency.find_by(name: 'Thrifty'))
-  alamo_subs.each do |f|
-    cars.sample(6).each do |car|
-      new_car                    = car.dup
-      new_car.agency             = f.agency
-      new_car.current_subsidiary = f.id
-      cars_array << new_car
+  Agency.all.each do |agency|
+    puts "#{agency.name} Cars"
+    subs = Subsidiary.where(agency:agency)
+    subs.each do |sub|
+      cars.sample(6).each do |car|
+        new_car = car.dup
+        new_car.agency = sub.agency
+        new_car.current_subsidiary = sub.id
+        cars_array << new_car
+      end
     end
   end
 
   Car.import cars_array
+
   puts '--------- End of Car Seeds File ---------'
 end

@@ -569,7 +569,6 @@ after :countries do
   cities << City.new(name: "Kitchener", is_taxi: false, country: countries[24])
   cities << City.new(name: "Langley", is_taxi: false, country: countries[24])
   cities << City.new(name: "Lethbridge", is_taxi: false, country: countries[24])
-  cities << City.new(name: "London", is_taxi: false, country: countries[24])
   cities << City.new(name: "Matane", is_taxi: false, country: countries[24])
   cities << City.new(name: "Mississauga", is_taxi: false, country: countries[24])
   cities << City.new(name: "Moncton", is_taxi: false, country: countries[24])

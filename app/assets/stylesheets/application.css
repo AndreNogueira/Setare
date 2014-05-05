@@ -12,7 +12,7 @@
  *= require foundation_and_overrides
  *= require_tree .
  *= require jquery.ui.all
- * require jquery-ui/flick
+ *= require jquery-ui/flick
 */
 
 #footer{
@@ -41,9 +41,4 @@ tbody th, tbody td, tbody tr {
     text-align: center !important;
     border-bottom: 1px solid black;
     border-top: 1px solid;
-
-}.flash_alert{
-    position: absolute;
-    width: 100%;
-    z-index: 100;
 }

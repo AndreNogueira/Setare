@@ -1,0 +1,13 @@
+<% if taxis.empty? %>
+    <div data-alert class="alert-box warning radius" style="margin-top: 3%;">
+      <span>No results with the desired parameters were found.</span>
+      <span>Please perform once again with other search parameters.</span>
+    </div>
+
+<% else %>
+    <% taxis.each do |taxi| %>
+        <%= render partial: 'taxis/partials/taxi', locals: { taxi: taxi } %>
+    <% end %>
+<% end %>
+
+

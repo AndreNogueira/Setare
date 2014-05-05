@@ -1,0 +1,20 @@
+<div class="row">
+  <div class="tabs">
+    <ul class="tab-links">
+      <li class="active"><a href="#tab-taxis">Taxis Services</a></li>
+      <li><a href="#tab-cars">Cars Services</a></li>
+    </ul>
+    <div class="tab-content">
+      <div id="tab-taxis" class="tab active" style="display: block;">
+        <%= render partial: 'home/partials/table_taxis_reservations', locals: { taxis: @taxis } %>
+      </div>
+      <div id="tab-cars" class="tab" style="display: none;">
+        <%#= render partial: 'home/partials/table_taxis_reservations', locals: { taxis: @taxis } %>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+

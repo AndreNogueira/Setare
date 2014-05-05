@@ -1,0 +1,67 @@
+<%= form_tag taxi_reservation_path, data: { abide: '' } do %>
+
+    <%= render partial: 'taxis/partials/transfer_details' %>
+    <%= render partial: 'taxis/partials/user_info' %>
+
+    <fieldset class="fieldset-border">
+      <legend><i class="fi-info"></i> Payment Information</legend>
+
+      <!-- Row CardHolder Name -->
+      <div class="row">
+        <div class="large-6 columns">
+          <%= label_tag :first_name, 'First Name' %>
+          <%= text_field_tag :first_name, nil, required: true, placeholder: 'Insert your first name...', pattern: 'alpha' %>
+          <small class="error">You need to insert your first name.</small>
+        </div>
+        <div class="large-6 columns">
+          <%= label_tag :last_name, 'Last Name' %>
+          <%= text_field_tag :last_name, nil, required: true, placeholder: 'Insert your last name...', pattern: 'alpha' %>
+          <small class="error">You need to insert your last name.</small>
+        </div>
+      </div>
+
+      <!-- Row Card Type e Card Number -->
+      <div class="row">
+        <div class="large-6 columns">
+          <%= label_tag :card_type, 'Card Type' %>
+          <% credit_cards = [['Visa', 'visa'], ['MasterCard', 'master'], ['Discover', 'discover'], ['Maestro', 'maestro'], ['American Express', 'american_express'],
+                             ['Diner\'s Club', 'diners_club'], ['JCB', 'jcb'], ['Switch', 'switch'], ['Solo', 'solo'], ['Dankort', 'dankort'],
+                             ['Forbrugsforeningen', 'forbrugsforeningen'], ['Laser', 'laser']] %>
+          <%= select_tag :card_type, options_for_select(credit_cards), prompt: 'Choose your card type', required: true %>
+          <small class="error">You need to choose your credit card type.</small>
+        </div>
+        <div class="large-6 columns">
+          <%= label_tag :card_number, 'Credit Card Number' %>
+          <%= text_field_tag :card_number, nil, required: true, placeholder: 'Insert your credit card number...' %>
+          <small class="error">You need to insert your credit card number.</small>
+        </div>
+      </div>
+
+      <!-- Row CVV and Expire Date -->
+      <div class="row">
+        <div class="large-6 columns">
+          <%= label_tag :cvv, 'CVV/Security Number' %>
+          <%= text_field_tag :cvv, nil, placeholder: 'Insert your credit card security number...', required: true, maxlength: 3 %>
+          <small class="error">You need to insert your credit card security number.</small>
+        </div>
+        <div class="large-6 columns">
+          <%= label_tag :expiry_date, 'Expiry Date' %>
+          <%= select_year nil, { start_year: 2014, end_year: 2050, prompt: 'Choose year' }, { required: true, class: 'taxi-expiry-year' } %>
+          <%= select_month nil, { add_month_numbers: true, use_short_month: true, prompt: 'Choose month' }, { required: true, class: 'taxi-expiry-month' } %>
+          <small class="error" style="margin-top: 0 !important;width: 281px;">You need to choose an year and a month.
+          </small>
+        </div>
+
+      </div>
+
+
+      <!-- Row for Book Button -->
+      <div class="row" style="margin: 3% 0 0 0 !important;">
+        <div class="large-12 columns">
+          <%= button_tag type: 'submit', class: 'button small radius expand' do %>
+              <i class="fi-bookmark"></i> Book Now!!
+          <% end %>
+        </div>
+      </div>
+    </fieldset>
+<% end %>

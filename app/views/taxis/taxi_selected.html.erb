@@ -1,0 +1,11 @@
+<div class="row">
+  <!-- Result List -->
+  <div class="large-8 columns">
+    <%= render partial: 'taxis/partials/form_extra_info' %>
+  </div>
+
+  <!-- Search Form -->
+  <div class="large-4 columns">
+    <%= render partial: 'taxis/partials/form_after_search', locals: { form_data: @form, remote: false } %>
+  </div>
+</div>

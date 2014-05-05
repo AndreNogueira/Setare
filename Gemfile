@@ -18,6 +18,9 @@ gem 'jquery-rails'
 # jQuery UI assets. Read More : https://github.com/joliss/jquery-ui-rails
 gem 'jquery-ui-rails'
 
+# jQuery UI Themes. Read More: https://github.com/fatdude/jquery-ui-themes-rails
+gem 'jquery-ui-themes'
+
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 
@@ -61,10 +64,19 @@ gem 'google_directions', '~> 0.1.6.2'
 # Read more: https://github.com/plataformatec/devise
 gem 'devise'
 
+# Read More: https://github.com/Shopify/active_merchant
+gem 'activemerchant'
+
+# Sucker Punch is a single-process Ruby asynchronous processing library. Read More: https://github.com/brandonhilkert/sucker_punch
+gem 'sucker_punch', '~> 1.0'
+
 # Pagination. Read More: https://github.com/mislav/will_paginate
 gem 'will_paginate', '~> 3.0'
 # Foundation style for will_paginate gem. Read More: https://github.com/acrogenesis/will_paginate-foundation
 gem 'will_paginate-foundation'
+
+#Figaro securely configure Rails applications .Read More: https://github.com/laserlemon/figaro
+gem 'figaro'
 
 # Better errors for Rails. Read More: https://github.com/charliesome/better_errors
 group :development do
