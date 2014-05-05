@@ -1,31 +1,5 @@
-<div class="row" id="status_line">
-  <div class="large-12 columns">
-    <div id="progress">
-      <ul>
-        <li class="frist passed">
-          <span class="before"></span>
-          <a href="#" >Search Results</a>
-          <span class="ticks"></span>
-        </li>
-        <li class="frist passed">
-          <span class="before"></span>
-          <a href="#">Optional Extras</a>
-          <span class="ticks"></span>
-        </li>
-        <li class="active">
-          <span class="before"></span>
-          <a href="#">Payment</a>
-          <span class="ticks"></span>
-        </li>
-        <li class="last next">
-          <span class="before"></span>
-          <a href="#">Confirmation</a>
-          <span class="ticks"></span>
-        </li>
-      </ul>
-    </div>
-  </div>
-</div>
+<%= render 'car/partials/progress_status', search_results: 'passed',optional_extras:'passed',payment:'active',confirmation:'last next' %>
+
 <div class="row" id="results_main_container">
 
 <!-- style="border-radius: 5px;background: #C9D9F0" -->

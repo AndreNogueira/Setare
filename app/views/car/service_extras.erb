@@ -1,31 +1,4 @@
-<div class="row" id="status_line">
-  <div class="large-12 columns">
-    <div id="progress">
-      <ul>
-        <li class="frist passed">
-          <span class="before"></span>
-          <a href="#" >Search Results</a>
-          <span class="ticks"></span>
-        </li>
-        <li class="active">
-          <span class="before"></span>
-          <a href="#">Optional Extras</a>
-          <span class="ticks"></span>
-        </li>
-        <li class="next">
-          <span class="before"></span>
-          <a href="#">Payment</a>
-          <span class="ticks"></span>
-        </li>
-        <li class="last next">
-          <span class="before"></span>
-          <a href="#">Confirmation</a>
-          <span class="ticks"></span>
-        </li>
-      </ul>
-    </div>
-  </div>
-</div>
+<%= render 'car/partials/progress_status', search_results: 'passed',optional_extras:'active',payment:'next',confirmation:'last next' %>
 
 <div class="row" id="results_main_container">
 
@@ -35,7 +8,7 @@
 
   <div class="large-9 columns" >
 
-    <%= render 'car/partials/service_extras' %>
+    <%= render 'car/partials/service_extras', service: session[:service_params] %>
 
   </div>
 

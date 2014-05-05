@@ -6,7 +6,7 @@
       <div class="row">
         <div class="large-12 columns">
           <div class="car_image" style="text-align: center">
-            <%= image_tag "cars/"+get_car(session[:service_params]["car_id"].to_i).image+".jpg",size: "150x100" %>
+            <%= image_tag "cars/"+get_car(service["car_id"].to_i).image+".jpg",size: "150x100" %>
           </div>
         </div>
       </div>
@@ -15,7 +15,7 @@
         <div class="large-12 columns">
           <p class="provided_by">Provided by:</p>
           <div style="text-align: center">
-            <%= image_tag 'agencies/'+get_car(session[:service_params]["car_id"].to_i).agency.image+'.png',size: "70x35" %>
+            <%= image_tag 'agencies/'+get_car(service["car_id"].to_i).agency.image+'.png',size: "70x35" %>
           </div>
         </div>
       </div>
@@ -26,35 +26,35 @@
         <div class="large-8 columns" id="car_info">
           <div class="row car_info_margin">
             <div class="large-12 columns">
-              <p style="font-size: 16px !important;"><%=get_car(session[:service_params]["car_id"].to_i).brand+' '+get_car(session[:service_params]["car_id"].to_i).model%></p>
-              <p style="font-size: 14px !important;"> Ano:<%=' '+get_car(session[:service_params]["car_id"].to_i).year.to_s%></p>
+              <p style="font-size: 16px !important;"><%=get_car(service["car_id"].to_i).brand+' '+get_car(service["car_id"].to_i).model%></p>
+              <p style="font-size: 14px !important;"> Ano:<%=' '+get_car(service["car_id"].to_i).year.to_s%></p>
             </div>
           </div>
           <div class="row car_info_margin">
             <div class="large-5 columns" id="border_left">
-              <p>Classe: <%= get_car(session[:service_params]["car_id"].to_i).category.name%></p>
+              <p>Classe: <%= get_car(service["car_id"].to_i).category.name%></p>
 
             </div>
             <div class="large-7 columns">
-              <%= image_tag 'cars/Search Results/icon_fuelpolicy.gif', size:'15x15' %><p><%= ' '+get_car(session[:service_params]["car_id"].to_i).fuel_type+'  '+get_car(session[:service_params]["car_id"].to_i).fuel_consumption.to_s+'L / 100Km' %></p>
+              <%= image_tag 'cars/Search Results/icon_fuelpolicy.gif', size:'15x15' %><p><%= ' '+get_car(service["car_id"].to_i).fuel_type+'  '+get_car(service["car_id"].to_i).fuel_consumption.to_s+'L / 100Km' %></p>
             </div>
           </div>
           <div class="row car_info_margin">
             <div class="large-2 columns">
-              <%= image_tag 'cars/Search Results/nr_seats.png', size:'13x13' %><p>x<%= get_car(session[:service_params]["car_id"].to_i).capacity %></p>
+              <%= image_tag 'cars/Search Results/nr_seats.png', size:'13x13' %><p>x<%= get_car(service["car_id"].to_i).capacity %></p>
             </div>
             <div class="large-2 columns" style="text-align: center">
-              <%= image_tag 'cars/Search Results/doors-icon.jpg', size: '20x20'%><p><%= 'x'+get_car(session[:service_params]["car_id"].to_i).doors_number.to_s %></p>
+              <%= image_tag 'cars/Search Results/doors-icon.jpg', size: '20x20'%><p><%= 'x'+get_car(service["car_id"].to_i).doors_number.to_s %></p>
             </div>
             <div class="large-2 columns">
-              <%if get_car(session[:service_params]["car_id"].to_i).ac  %>
+              <%if get_car(service["car_id"].to_i).ac  %>
                   <%= image_tag 'cars/Search Results/icon-ac.png',size: '18x18'%><p> yes</p>
               <%else%>
                   <%= image_tag 'cars/Search Results/icon-ac.png',size: '18x18'%><p> no</p>
               <%end%>
             </div>
             <div class="large-3 columns" style="text-align: center">
-              <% if get_car(session[:service_params]["car_id"].to_i).transmission %>
+              <% if get_car(service["car_id"].to_i).transmission %>
                   <%=image_tag 'cars/Search Results/icon-gear.png', size:'22x22'%><p>manual</p>
               <%else%>
                   <%=image_tag 'cars/Search Results/icon-gear.png', size:'22x22'%><p>automatic</p>
@@ -62,7 +62,7 @@
             </div>
 
             <div class="large-2 columns end" style="text-align: center">
-              <%if get_car(session[:service_params]["car_id"].to_i).abs  %>
+              <%if get_car(service["car_id"].to_i).abs  %>
                   <%= image_tag 'cars/Search Results/icon_abs.png',size: '20x20'%><br><p>yes</p>
               <%else%>
                   <%= image_tag 'cars/Search Results/icon-ac.png',size: '20x20'%><br><p>no</p>
@@ -94,10 +94,10 @@
         <div class="large-4 columns" >
           <div class="row">
             <div class="large-12 columns" style="text-align: center !important;margin-top: 60px;">
-              <h5>Only <%= get_car(session[:service_params]["car_id"].to_i).price%> &euro; per day</h5>
+              <h5>Only <%= get_car(service["car_id"].to_i).price%> &euro; per day</h5>
             </div>
             <div class="large-12 columns" style="text-align: center !important;">
-              <h8>Price of your rental car <%= calc_rent_price get_car(session[:service_params]["car_id"].to_i).price, session[:service_params]["begin_date"],session[:service_params]["end_date"]  %> &euro; </h8>
+              <h8>Price of your rental car <%= calc_rent_price get_car(service["car_id"].to_i).price, service["begin_date"],service["end_date"]  %> &euro; </h8>
             </div>
           </div>
         </div>

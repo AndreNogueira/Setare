@@ -2,7 +2,7 @@
   <div class="row">
     <div class="large-12 columns">
 
-      <%= form_tag cars_search_results_path do %>
+      <%= form_tag cars_search_results_path , data: { abide: '' } do %>
 
           <!-- title search box -->
           <div class="row">
@@ -30,7 +30,8 @@
                 <%= label_tag :pick_country, 'Country:', class: 'right inline' %>
               </div>
               <div class="large-8 columns">
-                <%= select_tag :pick_country, options_from_collection_for_select(locations.countries, 'id', 'name',ids["pick_country"]), prompt: 'Please Select', id: 'pick_country' %>
+                <%= select_tag :pick_country, options_from_collection_for_select(locations.countries, 'id', 'name',ids["pick_country"]), prompt: 'Please Select', id: 'pick_country',required:true %>
+                <small class="error">You need to choose a Country.</small>
               </div>
             </div>
             <!-- pick cities select -->
@@ -39,7 +40,8 @@
                 <%= label_tag :pick_city, 'City:', class: 'right inline' %>
               </div>
               <div class="large-8 columns">
-                <%= select_tag :pick_city, options_from_collection_for_select(locations.pick_cities, 'id', 'name',ids["pick_city"]), prompt: 'Please Select', id: 'pick_city' %>
+                <%= select_tag :pick_city, options_from_collection_for_select(locations.pick_cities, 'id', 'name',ids["pick_city"]), prompt: 'Please Select', id: 'pick_city',required:true %>
+                <small class="error">You need to choose a City.</small>
               </div>
             </div>
             <!-- pick subsidiary select -->
@@ -48,7 +50,8 @@
                 <%= label_tag :pick_subsidiary, 'Subsidiary:', class: 'right inline' %>
               </div>
               <div class="large-8 columns">
-                <%= select_tag :pick_subsidiary, options_from_collection_for_select(locations.pick_subs, 'id', 'name',ids["pick_subsidiary"]), prompt: 'Please Select', id: 'pick_subsidiary' %>
+                <%= select_tag :pick_subsidiary, options_from_collection_for_select(locations.pick_subs, 'id', 'name',ids["pick_subsidiary"]), prompt: 'Please Select', id: 'pick_subsidiary',required:true %>
+                <small class="error">You need to choose a Subsidiary.</small>
               </div>
             </div>
           </div>

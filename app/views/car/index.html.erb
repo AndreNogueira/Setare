@@ -12,7 +12,7 @@
 <div class="row">
 
 <div class="large-6 columns" id="search_box">
-  <%= form_tag cars_search_results_path do %>
+  <%= form_tag cars_search_results_path , data: { abide: '' } do %>
 
       <!-- title search box -->
       <div class="row">
@@ -26,7 +26,8 @@
           <%= label_tag :pick_country, 'Country : ', class: 'right inline' %>
         </div>
         <div class="large-9 columns">
-          <%= select_tag :pick_country, options_from_collection_for_select(@countries, 'id', 'name'), prompt: 'Please Select', id: 'pick_country' %>
+          <%= select_tag :pick_country, options_from_collection_for_select(@countries, 'id', 'name'), prompt: 'Please Select', id: 'pick_country', required: true %>
+          <small class="error">You need to choose a Country.</small>
         </div>
       </div>
       <!-- pick cities select -->
@@ -35,7 +36,8 @@
           <%= label_tag :pick_city, 'City : ', class: 'right inline' %>
         </div>
         <div class="large-9 columns">
-          <%= select_tag :pick_city, nil, prompt: 'Please Select', disabled: true, id: 'pick_city' %>
+          <%= select_tag :pick_city, nil, prompt: 'Please Select', disabled: true, id: 'pick_city', required: true %>
+          <small class="error">You need to choose a Country.</small>
         </div>
       </div>
       <!-- pick subsidiary select -->
@@ -44,7 +46,8 @@
           <%= label_tag :pick_subsidiary, 'Subsidiary : ', class: 'right inline' %>
         </div>
         <div class="large-9 columns">
-          <%= select_tag :pick_subsidiary, nil, prompt: 'Please Select', disabled: true, id: 'pick_subsidiary' %>
+          <%= select_tag :pick_subsidiary, nil, prompt: 'Please Select', disabled: true, id: 'pick_subsidiary', required: true %>
+          <small class="error">You need to choose a Country.</small>
         </div>
       </div>
 
