@@ -1,5 +1,23 @@
 Setare::Application.routes.draw do
 
+
+  # Cars
+  get 'cars/index', to: 'car#index',as: :cars_index
+  get 'cars/pick_city/:id', to: 'car#pick_city', as: :get_pick_city
+  get 'cars/drop_city/country/:country_id/agency/:agency_id', to: 'car#drop_city', as: :get_drop_city
+  get 'cars/pick_subsidiary/:id', to: 'car#pick_subsidiary', as: :get_pick_subsidiary
+  get 'cars/drop_subsidiary/city/:city_id/agency/:agency_id', to: 'car#drop_subsidiary', as: :get_drop_subsidiary
+  get 'cars/get_agency/:id', to: 'car#get_agency', as: :get_agency
+  post 'cars/search', to: 'car#search_results', as: :cars_search_results
+  get 'cars/extras/:car_id', to: 'car#service_extras', as: :cars_service_extras
+  get 'cars/payment', to:'car#service_payment', as: :car_service_payment
+  post 'cars/payment', to:'car#service_payment'
+  get 'cars/reservation', to: 'car#service_reservation', as: :car_service_reservation
+  post 'cars/reservation', to: 'car#service_reservation'
+
+
+
+
   # Taxis
   get 'taxis/index', to: 'taxis#index', as: :taxis_index
   get 'taxis/city/:id', to: 'taxis#city', as: :get_city

@@ -7,7 +7,7 @@ after :cities, :agencies do
   agencies.each do |agency|
     puts agency.name + ' Subsidiaries'
     cities.sample(600).each do |city|
-      subsidiaries << Subsidiary.new(name: city.name.to_s + ' Station', address:'Street of '+ city.name, city:city, agency:agency)
+      subsidiaries << Subsidiary.new(name: agency.name+' Station - '+city.name, address:'Street of '+ city.name, city:city, agency:agency)
     end
   end
 

@@ -1,0 +1,47 @@
+<script>
+  $('select#pick_city').attr("disabled",false);
+</script>
+<!-- status bar -->
+<div class="row" id="status_line">
+  <div class="large-12 columns">
+    <div id="progress">
+      <ul>
+        <li class="frist active">
+          <span class="before"></span>
+          <a href="#">Search Results</a>
+          <span class="ticks"></span>
+        </li>
+        <li class="next">
+          <span class="before"></span>
+          <a href="#">Optional Extras</a>
+          <span class="ticks"></span>
+        </li>
+
+        <li class="next">
+          <span class="before"></span>
+          <a href="#">Payment</a>
+          <span class="ticks"></span>
+        </li>
+        <li class="last next">
+          <span class="before"></span>
+          <a href="#">Confirmação</a>
+          <span class="ticks"></span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- end of status bar -->
+
+<div class="row" id="results_main_container">
+
+  <!-- left bar search -->
+  <%= render 'car/partials/search_box_results', locations: @locations, ids:session[:service_params] %>
+  <!-- end left bar search -->
+
+  <!-- right results search -->
+  <%= render 'car/partials/results_list', car_list: @list_selected_subsidiary  %>
+  <!-- end right results search    -->
+
+</div>
