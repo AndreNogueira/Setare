@@ -41,4 +41,12 @@ tbody th, tbody td, tbody tr {
     text-align: center !important;
     border-bottom: 1px solid black;
     border-top: 1px solid;
+<<<<<<< HEAD
+=======
+
+}.flash_alert{
+    position: absolute;
+    width: 100%;
+    z-index: 100;
+>>>>>>> cars
 }

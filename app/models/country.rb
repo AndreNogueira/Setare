@@ -18,6 +18,9 @@ class Country < ActiveRecord::Base
   scope :taxis, -> {joins(:cities).where('cities.is_taxi = ?',true).distinct}
 
   # Class Methods
+  def self.with_subsidiaries
+    joins(:cities => :subsidiaries).distinct
+  end
   # Validations
   validates :name, presence: true
 

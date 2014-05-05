@@ -51,6 +51,7 @@ gem 'annotate', '>=2.6.0'
 # Organizing seed file. Read More: https://github.com/james2m/seedbank
 gem 'seedbank'
 
+gem 'activemerchant'
 #
 gem 'andand', '~> 1.3.3'
 

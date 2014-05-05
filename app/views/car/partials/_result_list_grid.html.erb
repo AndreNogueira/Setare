@@ -1,0 +1,116 @@
+<div class="large-12 columns" id="results_list">
+  <div class="row" id="result_list_inside_panel">
+    <div class="large-3 columns">
+      <div class="row">
+        <div class="large-12 columns">
+          <div class="car_image" style="text-align: center">
+            <%= image_tag 'cars/'+car.image+'.jpg',size: "150x100" %>
+          </div>
+        </div>
+      </div>
+
+      <div class="row" style="margin-top: 40px;">
+        <div class="large-12 columns">
+          <p class="provided_by">Provided by:</p>
+          <div style="text-align: center">
+            <%= image_tag 'agencies/'+car.agency.image+'.png',size: "70x35" %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="large-6 columns" id="car_info">
+      <div class="row car_info_margin">
+        <div class="large-12 columns">
+          <p style="font-size: 16px !important;"><%=car.brand+' '+car.model%></p>
+          <p style="font-size: 14px !important;"> Ano:<%=' '+car.year.to_s%></p>
+        </div>
+      </div>
+      <div class="row car_info_margin">
+        <div class="large-5 columns" id="border_left">
+          <p>Classe: <%= car.category.name%></p>
+
+        </div>
+        <div class="large-7 columns">
+          <%= image_tag 'cars/Search Results/icon_fuelpolicy.gif', size:'18x18' %><p><%= ' '+car.fuel_type+'  '+car.fuel_consumption.to_s+'L / 100Km' %></p>
+        </div>
+      </div>
+      <div class="row car_info_margin">
+        <div class="large-2 columns">
+          <%= image_tag 'cars/Search Results/nr_seats.png', size:'15x15' %><p>x<%= car.capacity %></p>
+        </div>
+        <div class="large-2 columns" style="text-align: center">
+          <%= image_tag 'cars/Search Results/doors-icon.jpg', size: '26x26'%><p><%= 'x'+car.doors_number.to_s %></p>
+        </div>
+        <div class="large-2 columns">
+          <%if car.ac  %>
+              <%= image_tag 'cars/Search Results/icon-ac.png',size: '23x23'%><p> yes</p>
+          <%else%>
+              <%= image_tag 'cars/Search Results/icon-ac.png',size: '23x23'%><p> no</p>
+          <%end%>
+        </div>
+        <div class="large-3 columns" style="text-align: center">
+          <% if car.transmission %>
+              <%=image_tag 'cars/Search Results/icon-gear.png', size:'28x28'%><p>manual</p>
+          <%else%>
+              <%=image_tag 'cars/Search Results/icon-gear.png', size:'28x28'%><p>automatic</p>
+          <%end%>
+        </div>
+
+        <div class="large-2 columns end" style="text-align: center">
+          <%if car.abs  %>
+              <%= image_tag 'cars/Search Results/icon_abs.png',size: '25x25'%><br><p>yes</p>
+          <%else%>
+              <%= image_tag 'cars/Search Results/icon-ac.png',size: '25x25'%><br><p>no</p>
+          <%end%>
+        </div>
+
+      </div>
+      <div class="row car_info_margin">
+        <div class="large-12 columns" style="text-align: center !important;">
+
+          <p style="color: #749E3A">We offer for FREE:</p>
+        </div>
+      </div>
+      <div class="row car_info_margin">
+        <div class="large-7 columns">
+          <%= image_tag 'cars/Search Results/check-icon.png',size: '16x16' %><p> Safe against Robbery</p>
+        </div>
+        <div class="large-5 columns">
+          <%= image_tag 'cars/Search Results/check-icon.png',size: '16x16' %><p> Revocation</p>
+        </div>
+      </div>
+      <div class="row car_info_margin">
+        <div class="large-12 columns">
+          <%= image_tag 'cars/Search Results/check-icon.png',size: '16x16' %><p> Own damage coverage</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="large-3 columns" id="price_column">
+      <div class="row">
+        <div class="large-12 columns">
+          <p>Price:</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="large-12 columns" style="text-align: center !important;">
+          <h3><%= calc_rent_price car.price, session[:service_params]["begin_date"],session[:service_params]["end_date"] %> &euro;</h3>
+        </div>
+      </div>
+      <div class="row" style="margin-top: 30px!important">
+        <div class="large-12 columns">
+          <%= link_to 'Book Now',cars_service_extras_path(car), class: 'button medium radius expand' %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="large-3 columns" id="terms_conditions">
+      <div style="text-align: center">
+        <p>Terms and Conditions</p>
+      </div>
+    </div>
+  </div>
+</div>

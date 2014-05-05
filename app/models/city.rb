@@ -27,6 +27,13 @@ class City < ActiveRecord::Base
   scope :taxis, ->(country_id) {where(country_id:country_id,is_taxi: true)}
 
   # Class Methods
+  def self.with_subsidiaries country_id
+    joins(:subsidiaries).where(country_id: country_id).distinct
+  end
+
+  def self.cities_with_same_agency country_id, agency_id
+    joins(:subsidiaries).where(country_id: country_id, subsidiaries:{agency_id:agency_id}).distinct
+  end
   # Validations
   validates :name, presence: true
 

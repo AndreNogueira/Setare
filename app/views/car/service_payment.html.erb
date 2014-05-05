@@ -1,0 +1,278 @@
+<div class="row" id="status_line">
+  <div class="large-12 columns">
+    <div id="progress">
+      <ul>
+        <li class="frist passed">
+          <span class="before"></span>
+          <a href="#" >Search Results</a>
+          <span class="ticks"></span>
+        </li>
+        <li class="frist passed">
+          <span class="before"></span>
+          <a href="#">Optional Extras</a>
+          <span class="ticks"></span>
+        </li>
+        <li class="active">
+          <span class="before"></span>
+          <a href="#">Payment</a>
+          <span class="ticks"></span>
+        </li>
+        <li class="last next">
+          <span class="before"></span>
+          <a href="#">Confirmation</a>
+          <span class="ticks"></span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="row" id="results_main_container">
+
+<!-- style="border-radius: 5px;background: #C9D9F0" -->
+<div class="large-4 columns" id="service_resume_price">
+  <div class="row" id="border_car_rent_price">
+    <div class="large-9 columns" >
+      <p>Your car rent price is:</p>
+    </div>
+    <div class="large-3 columns">
+      <p><%= calc_rent_price(get_car(session[:service_params]["car_id"]).price,session[:service_params]["begin_date"],session[:service_params]["end_date"]) %>&euro;</p>
+    </div>
+  </div>
+
+  <div class="row" id="border_extra_equipment_price">
+    <div class="large-9 columns" >
+      <p>Your extra-equipment price is:</p>
+    </div>
+    <div class="large-3 columns">
+      <% if @car_extras.nil? %>
+          <p><%= session[:service_params]["extras_price"]%>&euro;</p>
+      <%else%>
+          <p><%= @car_extras.extras_price%>&euro;</p>
+      <%end%>
+    </div>
+  </div>
+  <div class="row" id="border_total_price">
+    <div class="large-9 columns" >
+      <p><b>Total Price:</b></p>
+    </div>
+    <div class="large-3 columns">
+      <% if @car_extras.nil? %>
+          <p><%= session[:service_params]["final_price"]%>&euro;</p>
+      <%else%>
+          <p><%=  @car_extras.total_price%>&euro;</p>
+      <%end%>
+    </div>
+  </div>
+
+  <div class="row" id="top_border" style="background-color: #D5D5D5; border-bottom: dashed;margin-top: 10px">
+    <div class="large-12 columns" style="text-align: center">
+      <p><b>Service Resume</b></p>
+    </div>
+  </div>
+  <div class="row" id="middle_border">
+    <div class="large-12 columns" style="margin-top: 10px">
+      <p style="font-size: 12px"><%= image_tag 'cars/Main Images/pick-icon.gif' , size: '18x18' %> <%= pcity_name(session[:service_params]["pick_city"])+
+                                                                                                               ', '+pcountry_name(session[:service_params]["pick_country"])+
+                                                                                                               ' at '+session[:service_params]["timepicker_begin"]+
+                                                                                                               ' '+session[:service_params]["begin_date"]%></p>
+    </div>
+  </div>
+  <div class="row" id="middle_border">
+    <div class="large-12 columns" >
+      <p style="font-size: 12px"><%= image_tag 'cars/Main Images/drop-icon.gif' , size: '18x18' %> <%= pcity_name(session[:service_params]["drop_city"])+
+                                                                                                               ', '+pcountry_name(session[:service_params]["pick_country"])+
+                                                                                                               ' at '+session[:service_params]["timepicker_end"]+
+                                                                                                               ' '+session[:service_params]["end_date"]%></p>
+    </div>
+  </div>
+
+  <div class="row" id="bottom_border">
+    <div class="large-7 columns" >
+      <p style="font-size: 16px !important;"><%=get_car(session[:service_params]["car_id"].to_i).brand+' '+get_car(session[:service_params]["car_id"].to_i).model%></p>
+      <%= image_tag "cars/"+get_car(session[:service_params]["car_id"].to_i).image+".jpg",size: "150x100" %>
+      <div class="row" style="margin-top: 20px;">
+        <div class="large-12 columns">
+          <p style="font-size: 12px;margin-bottom: 5px">Provided by:</p>
+          <div style="text-align: center">
+            <%= image_tag 'agencies/'+get_car(session[:service_params]["car_id"].to_i).agency.image+'.png',size: "70x35" %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="large-5 columns">
+
+      <div class="row" >
+        <div class="large-12 columns">
+          <p><%= image_tag 'cars/Search Results/nr_seats.png', size:'13x13' %>x<%= get_car(session[:service_params]["car_id"].to_i).capacity %></p>
+        </div>
+      </div>
+
+      <div class="row" >
+        <div class="large-12 columns" >
+          <p><%= image_tag 'cars/Search Results/doors-icon.jpg', size: '20x20'%><%= 'x'+get_car(session[:service_params]["car_id"].to_i).doors_number.to_s %></p>
+        </div>
+      </div>
+
+      <div class="row" >
+        <div class="large-12 columns">
+          <%if get_car(session[:service_params]["car_id"].to_i).ac  %>
+              <p><%= image_tag 'cars/Search Results/icon-ac.png',size: '18x18'%> yes</p>
+          <%else%>
+              <p><%= image_tag 'cars/Search Results/icon-ac.png',size: '18x18'%> no</p>
+          <%end%>
+        </div>
+      </div>
+
+      <div class="row" >
+        <div class="large-12 columns" >
+          <% if get_car(session[:service_params]["car_id"].to_i).transmission %>
+              <p><%=image_tag 'cars/Search Results/icon-gear.png', size:'22x22'%> manual</p>
+          <%else%>
+              <p><%=image_tag 'cars/Search Results/icon-gear.png', size:'22x22'%> automatic</p>
+          <%end%>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="large-12 columns end" >
+          <%if get_car(session[:service_params]["car_id"].to_i).abs  %>
+              <p><%= image_tag 'cars/Search Results/icon_abs.png',size: '20x20'%> yes</p>
+          <%else%>
+              <p><%= image_tag 'cars/Search Results/icon-ac.png',size: '20x20'%> no</p>
+          <%end%>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+  <div class="row" >
+    <div class="large-8 large-offset-2 columns end" id="border_image_norton">
+      <%= image_tag 'cars/Main Images/norton_x150.png' %>
+    </div>
+  </div>
+</div>
+
+<div class="large-8 columns" >
+
+  <div class="large-12 columns" id="user_info_form">
+    <div class="row">
+      <div class="large-12 columns">
+        <h3><%= image_tag 'cars/Main Images/form-user.png' %> <b>Main driver data</b></h3>
+      </div>
+    </div>
+    <!-- Row Name and E-mail -->
+    <div class="row">
+      <div class="large-6 columns">
+        <%= label_tag :name, 'Name' %>
+        <%= text_field_tag :name, current_user.name, readonly: true %>
+      </div>
+      <div class="large-6 columns">
+        <%= label_tag :email, 'E-mail' %>
+        <%= text_field_tag :email, current_user.email, readonly: true %>
+      </div>
+    </div>
+
+    <!-- Row BI and PhoneNumber -->
+    <div class="row">
+      <div class="large-6 columns">
+        <%= label_tag :bi, 'BI' %>
+        <%= text_field_tag :bi, current_user.bi, readonly: true %>
+      </div>
+      <div class="large-6 columns">
+        <%= label_tag :phone_number, 'Phone Number' %>
+        <%= text_field_tag :phone_number, current_user.phone_number, readonly: true %>
+      </div>
+    </div>
+
+    <!-- Row NIF and Driver License -->
+    <div class="row">
+      <div class="large-6 columns">
+        <%= label_tag :nif, 'NIF' %>
+        <%= text_field_tag :nif, current_user.nif, readonly: true %>
+      </div>
+      <div class="large-6 columns">
+        <%= label_tag :driver_license, 'Driver License' %>
+        <%= text_field_tag :driver_license, current_user.driver_license, readonly: true %>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="large-12 columns" id="user_info_form" style="margin-top: 10px">
+    <div class="row">
+      <div class="large-7 columns">
+        <h3><%= image_tag 'cars/Main Images/card_icon.png' %> <b>Payment Details</b></h3>
+      </div>
+      <div class="large-5 columns" style="text-align: right">
+        <p style="font-size: 11px; margin-bottom: 0px">We accept all major payment methods</p>
+        <%= image_tag 'cars/Main Images/cards.png' %>
+      </div>
+    </div>
+
+    <%= form_tag car_service_reservation_path, data: { abide: '' } do %>
+        <!-- Row CardHolder Name -->
+        <div class="row">
+          <div class="large-6 columns">
+            <%= label_tag :first_name, 'First Name' %>
+            <%= text_field_tag :first_name, nil, required: true, placeholder: 'Insert your first name...', pattern: 'alpha' %>
+            <small class="error">You need to insert your first name.</small>
+          </div>
+          <div class="large-6 columns">
+            <%= label_tag :last_name, 'Last Name' %>
+            <%= text_field_tag :last_name, nil, required: true, placeholder: 'Insert your last name...', pattern: 'alpha' %>
+            <small class="error">You need to insert your last name.</small>
+          </div>
+        </div>
+
+        <!-- Row Card Type e Card Number -->
+        <div class="row">
+          <div class="large-6 columns">
+            <%= label_tag :card_type, 'Card Type' %>
+            <% credit_cards = [['Visa', 'visa'], ['MasterCard', 'master'], ['Discover', 'discover'], ['Maestro', 'maestro'], ['American Express', 'american_express'],
+                               ['Diner\'s Club', 'diners_club'], ['JCB', 'jcb'], ['Switch', 'switch'], ['Solo', 'solo'], ['Dankort', 'dankort'],
+                               ['Forbrugsforeningen', 'forbrugsforeningen'], ['Laser', 'laser']] %>
+            <%= select_tag :card_type, options_for_select(credit_cards), prompt: 'Choose your card type', required: true %>
+            <small class="error">You need to choose your credit card type.</small>
+          </div>
+          <div class="large-6 columns">
+            <%= label_tag :card_number, 'Credit Card Number' %>
+            <%= text_field_tag :card_number, nil, required: true, placeholder: 'Insert your credit card number...' %>
+            <small class="error">You need to insert your credit card number.</small>
+          </div>
+        </div>
+
+        <!-- Row CVV and Expire Date -->
+        <div class="row">
+          <div class="large-6 columns">
+            <%= label_tag :cvv, 'CVV/Security Number' %>
+            <%= text_field_tag :cvv, nil, placeholder: 'Insert your credit card security number...', required: true, maxlength: 3 %>
+            <small class="error">You need to insert your credit card security number.</small>
+            <div class="large-12 columns">
+              <%= button_tag type: 'submit', class: 'button small radius expand' do %>
+                  <%= image_tag 'cars/Main Images/key-icon.png', size: '30x30' %> Book Now!
+              <% end %>
+            </div>
+          </div>
+
+          <div class="large-6 columns">
+            <%= label_tag :expiry_date, 'Expiry Date' %>
+            <%= select_year nil, { start_year: 2014, end_year: 2050, prompt: 'Choose year' }, { required: true, class: 'taxi-expiry-year' } %>
+            <%= select_month nil, { add_month_numbers: true, use_short_month: true, prompt: 'Choose month' }, { required: true, class: 'taxi-expiry-month' } %>
+            <small class="error" style="margin-top: 0 !important;width: 281px;">You need to choose an year and a month.
+            </small>
+          </div>
+        </div>
+
+
+    <%end%>
+  </div>
+
+</div>
+</div>
