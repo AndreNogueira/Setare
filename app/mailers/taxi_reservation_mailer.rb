@@ -5,8 +5,6 @@ class TaxiReservationMailer < ActionMailer::Base
   def taxi_reservation(taxi_service, user)
     @user        = user
     @reservation = taxi_service
-    #attachments['setare-logo.png'] = File.read("#{Rails.root}/app/assets/images/setare-logo.png")
-    mail(to:      'andre.nogueira26@gmail.com', from: 'noreply.setare@gmail.com',
-         subject: "[Setare]: Taxi Reservation nº #{taxi_service.id}")
+    mail(to: user.email, from: 'noreply.setare@gmail.com', subject: "[Setare]: Taxi Reservation nº #{taxi_service.id}")
   end
 end

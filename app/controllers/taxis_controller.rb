@@ -23,8 +23,8 @@ class TaxisController < ApplicationController
   def search_results
     session[:taxi_form] = TaxiForm.new(params)
     @form               = TaxiLocations.new(params)
-    t                   = TaxiSearch.new(pick_up_location: params[:pick_up_location], drop_off_location: params[:drop_off_location], passengers: params[:passengers])
-    @taxis_results      = t.search(session[:taxi_form].type_trip)
+    taxi_search         = TaxiSearch.new(pick_up_location: params[:pick_up_location], drop_off_location: params[:drop_off_location], passengers: params[:passengers])
+    @taxis_results      = taxi_search.search(session[:taxi_form].type_trip)
   end
 
   def taxi_selected
@@ -40,7 +40,7 @@ class TaxisController < ApplicationController
       flash[:success] = results[:message]
       redirect_to root_path
     else
-      @form = TaxiLocations.new(session[:taxi_form].attributes)
+      @form               = TaxiLocations.new(session[:taxi_form].attributes)
       flash.now[:warning] = results[:message]
       render 'taxis/taxi_selected'
     end

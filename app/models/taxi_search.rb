@@ -23,13 +23,12 @@ class TaxiSearch
   def create_taxis_response(distance, taxis)
     results = []
     taxis.each { |taxi| results << { taxi: taxi, cost: taxi.price_km * distance } }
-    results.sort { |t1, t2| t1[:cost] <=> t2[:cost] }
+    results.sort { |taxi1, taxi2| taxi1[:cost] <=> taxi2[:cost] }
   end
 
   def calculate_distance_in_km(pick_up_name, drop_off_name)
-    #directions = GoogleDirections.new(pick_up_name, drop_off_name)
-    #(directions.status == 'OK')? directions.distance.to_f / 1000 : 25.0
-    25.0
+    directions = GoogleDirections.new(pick_up_name, drop_off_name)
+    (directions.status == 'OK')? directions.distance.to_f / 1000 : 25.0
   end
 
   def get_pick_up_location
