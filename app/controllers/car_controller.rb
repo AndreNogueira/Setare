@@ -49,8 +49,8 @@ class CarController < ApplicationController
   end
 
   def service_reservation
-    payment = CarPayment.new(payment_params: params)
-    result = payment.payment_status
+    payment = PaymentCard.new(params)
+    result = payment.payment_validation {{service: true, message: 'Your Card has been successfully validated!' }}
     if result[:service]
       flash[:success] = result[:message]
     else
@@ -67,7 +67,6 @@ class CarController < ApplicationController
       session[:service_params]["extras_price"] = @car_extras.extras_price
     end
   end
-
 
   private
   def json_respond(parameter)
