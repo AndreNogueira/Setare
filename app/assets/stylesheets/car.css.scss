@@ -150,7 +150,7 @@ p#reviewcentre {
   padding: 0;
   float: left;
   font-size: 14px;
-  margin-top: 60px;
+  margin-top: 10px;
   margin-left: -15px;
 }
 
@@ -373,6 +373,10 @@ p#reviewcentre {
   border-width: 1px;
   background-color: rgb(226, 228, 228);
   border-color: rgb(226, 228, 228);
+}
+#progress a{
+  color: #5d82ba;
+  background: none;
 }
 
 
