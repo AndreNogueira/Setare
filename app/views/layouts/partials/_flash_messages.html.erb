@@ -1,5 +1,5 @@
 <% flash.each do |key, value| %>
-    <div data-alert class="<%= flash_class(key) %>">
+    <div data-alert class="<%= flash_class(key)  %> flash_alert">
       <%= value %>
       <a href="#" class="close">&times;</a>
     </div>
