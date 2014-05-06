@@ -1,8 +1,51 @@
 class CarReservation
   include ActiveAttr::Model
 
+  attribute :user
+  attribute :service_params
+  attribute :payment_params
 
+  validates :user, presence: true
+  validates :service_params, presence: true
+  validates :payment_params, presence: true
 
+  def reservation
+    card_validation = PaymentCard.new(payment_params)
+    card_validation.payment_validation do
+      car_service = create_car_service
+      #SenderMail.new.async.perform(car_service, user)
+      unless car_service.nil?
+        { service: true, message: 'Your Car reservation was successful created. Check your e-mail for more details.' }
+      end
+    end
+  end
 
+  private
+  def create_car_service
+    ActiveRecord::Base.transaction do
+      car_service
+    end
+  end
 
+  def car_service
+    car_service = CarService.new
+    car_service.service_begin = concat_date_time(service_params["begin_date"],service_params["timepicker_begin"])
+    car_service.service_end = concat_date_time(service_params["end_date"],service_params["timepicker_end"])
+    car_service.gps = service_params[:extras][:gps]
+    car_service.baby_seat = service_params[:extras][:baby_seat]
+    car_service.insurance = false
+    car_service.additional_driver = service_params[:extras][:additional_driver]
+    car_service.final_price = service_params[:final_price]
+    car_service.car = get_car
+    car_service.user = user
+    car_service.pick_up_subsidiary_id = service_params[:pick_subsidiary]
+    car_service.drop_off_subsidiary_id = service_params[:drop_subsidiary]
+    (car_service.save) ? car_service : nil
+  end
+  def concat_date_time date, time
+    service_begin_datetime = (date+' '+time).to_datetime
+  end
+  def get_car
+    Car.find(service_params[:car_id])
+  end
 end

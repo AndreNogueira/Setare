@@ -26,21 +26,15 @@ class CarController < ApplicationController
   end
 
   def search_results
-    #save Search fields
     session[:service_params] = params
     if params[:return_at_same_location]
       session[:service_params]["drop_city"] = params[:pick_city]
       session[:service_params]["drop_subsidiary"] = params[:pick_subsidiary]
     end
     @locations = CarLocations.new(session[:service_params])
-    #list of all Available cars in the choosen subsidiary
-    @list_selected_subsidiary = Car.check_available_cars(params[:pick_subsidiary],params[:begin_date],params[:end_date])
-    remaining_subsidiaries = Subsidiary.other_subsidiaries(params[:pick_city],session[:service_params]["drop_city"],params[:pick_subsidiary])
-    #list of all Available cars in others subsidiaries from the same cities
-    @other_agencies_list = []
-    remaining_subsidiaries.each do |f|
-      @other_agencies_list << Car.check_available_cars(f,params[:begin_date],params[:end_date])
-    end
+    search = CarSearch.new(session[:service_params])
+    @list_selected_subsidiary = search.list_selected_subsidiary
+    @other_agencies_list = search.other_agencies_list
   end
 
   def service_extras
@@ -49,12 +43,14 @@ class CarController < ApplicationController
   end
 
   def service_reservation
-    payment = PaymentCard.new(params)
-    result = payment.payment_validation {{service: true, message: 'Your Card has been successfully validated!' }}
-    if result[:service]
-      flash[:success] = result[:message]
+    car_reservation = CarReservation.new(user: current_user,
+                                     service_params:session[:service_params],
+                                     payment_params:params)
+    results = car_reservation.reservation
+    if results[:service]
+      flash.now[:success] = results[:message]
     else
-      flash.now[:warning] = result[:message]
+      flash.now[:warning] = results[:message]
       render 'car/service_payment'
     end
   end

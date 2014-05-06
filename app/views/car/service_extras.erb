@@ -1,15 +1,12 @@
 <%= render 'car/partials/progress_status', search_results: 'passed',optional_extras:'active',payment:'next',confirmation:'last next' %>
 
 <div class="row" id="results_main_container">
-
   <!-- left bar search -->
   <%= render 'car/partials/search_box_results', locations: @locations, ids:session[:service_params] %>
   <!-- end left bar search -->
 
   <div class="large-9 columns" >
-
     <%= render 'car/partials/service_extras', service: session[:service_params] %>
-
   </div>
 
 </div>

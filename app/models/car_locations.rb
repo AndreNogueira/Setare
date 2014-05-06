@@ -12,7 +12,6 @@ class CarLocations
               :drop_cities,
               :drop_subs
 
-
   def initialize(attributes)
     super
     @countries = Country.with_subsidiaries

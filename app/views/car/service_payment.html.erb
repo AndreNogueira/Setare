@@ -228,11 +228,6 @@
             <%= label_tag :cvv, 'CVV/Security Number' %>
             <%= text_field_tag :cvv, nil, placeholder: 'Insert your credit card security number...', required: true, maxlength: 3 %>
             <small class="error">You need to insert your credit card security number.</small>
-            <div class="large-12 columns">
-              <%= button_tag type: 'submit', class: 'button small radius expand' do %>
-                  <%= image_tag 'cars/Main Images/key-icon.png', size: '30x30' %> Book Now!
-              <% end %>
-            </div>
           </div>
 
           <div class="large-6 columns">
@@ -244,9 +239,15 @@
           </div>
         </div>
 
+        <div class="row">
+          <div class="large-4 large-offset-4 columns">
+              <%= button_tag type: 'submit', class: 'tiny small radius expand' do %>
+                  <%= image_tag 'cars/Main Images/key-icon.png', size: '30x30' %> Confirm Reservation!
+              <% end %>
+          </div>
+        </div>
 
     <%end%>
   </div>
-
 </div>
 </div>
