@@ -35,6 +35,9 @@ class CarService < ActiveRecord::Base
 
   # Scopes
   # Class Methods
+  def self.services car_id
+    where(car_id:car_id).where('car_services.service_end > ?',Date.current)
+  end
   # Validations
   validates :service_begin, presence: true
   validates :service_end, presence: true
