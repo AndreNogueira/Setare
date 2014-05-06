@@ -29,8 +29,8 @@ class CarReservation
 
   def car_service
     car_service = CarService.new
-    car_service.service_begin = concat_date_time(service_params["begin_date"],service_params["timepicker_begin"])
-    car_service.service_end = concat_date_time(service_params["end_date"],service_params["timepicker_end"])
+    car_service.service_begin = get_begin_date
+    car_service.service_end = get_end_date
     car_service.gps = service_params[:extras][:gps]
     car_service.baby_seat = service_params[:extras][:baby_seat]
     car_service.insurance = false
@@ -47,5 +47,11 @@ class CarReservation
   end
   def get_car
     Car.find(service_params[:car_id])
+  end
+  def get_begin_date
+    concat_date_time(service_params[:begin_date],service_params[:timepicker_begin])
+  end
+  def get_end_date
+    concat_date_time(service_params[:end_date],service_params[:timepicker_end])
   end
 end
