@@ -1,0 +1,16 @@
+Car Reservation Confirmation
+
+Hello, <%= @user.name %>
+
+
+The reservation of the taxi is scheduled for <%= @reservation.service_begin.strftime("%d/%m/%Y at %H:%M") %> at
+the place of departure <b><%= Subsidiary.find(@reservation.pick_up_subsidiary_id).name %></b>,<b> <%= Subsidiary.find(@reservation.pick_up_subsidiary_id).city.name %> </b> and the return
+destination is <b><%= Subsidiary.find(@reservation.drop_off_subsidiary_id).name %></b>,<b> <%= Subsidiary.find(@reservation.drop_off_subsidiary_id).city.name %> </b>, scheduled for the <%= @reservation.service_end.strftime("%d/%m/%Y at %H:%M") %>.
+
+
+The price to be paid to the driver will be <%= number_to_currency @reservation.final_price, precision: 2, unit: '€', separator: ',', delimiter: '.', format: '%n%u' %>, which include luggage according to the taxi selected.
+
+For further questions contact the Setare team through the provided contact.
+
+Thank you for choosing,
+The Setare team

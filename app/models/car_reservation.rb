@@ -13,12 +13,11 @@ class CarReservation
     card_validation = PaymentCard.new(payment_params)
     card_validation.payment_validation do
       car_service = create_car_service
-      #SenderMail.new.async.perform(car_service, user)
-      unless car_service.nil?
-        { service: true, message: 'Your Car reservation was successful created. Check your e-mail for more details.' }
-      end
+      SenderMail.new.async.car_service_perform(car_service, user) unless car_service.nil?
+      { service: true, message: 'Your Car reservation was successful created. Check your e-mail for more details.' }
     end
   end
+
 
   private
   def create_car_service

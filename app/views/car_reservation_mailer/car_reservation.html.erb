@@ -1,0 +1,21 @@
+<h1><b>Car Reservation Confirmation</b></h1>
+
+Hello, <b><%= @user.name %></b>
+
+<p>
+  The reservation of the car is scheduled for <b><%= @reservation.service_begin.strftime("%d/%m/%Y at %H:%M") %></b> at
+  the place of departure <b><%= Subsidiary.find(@reservation.pick_up_subsidiary_id).name %></b>,<b> <%= Subsidiary.find(@reservation.pick_up_subsidiary_id).city.name %> </b>and the return
+ will be at
+  <b><%= Subsidiary.find(@reservation.drop_off_subsidiary_id).name %></b>,<b> <%= Subsidiary.find(@reservation.drop_off_subsidiary_id).city.name %> </b>.
+</p>
+
+<p>
+  Total Price: <b>
+  <%= number_to_currency @reservation.final_price, precision: 2, unit: '€', separator: ',', delimiter: '.', format: '%n%u' %></b>,
+</p>
+
+<p>
+  For further questions contact the Setare team through the provided contact.
+</p>
+<p>Thank you for choosing,</p>
+<p>The Setare team</p>
