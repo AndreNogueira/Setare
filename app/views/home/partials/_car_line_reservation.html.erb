@@ -1,0 +1,21 @@
+<tr>
+  <td><%= service.id %></td>
+  <td><%= service.service_begin.strftime('%d/%m/%Y %H:%M') %></td>
+  <td><%= service.service_end.strftime('%d/%m/%Y %H:%M') %></td>
+  <td><%= service.car.brand+' '+service.car.model %></td>
+  <td><%= Subsidiary.find(service.pick_up_subsidiary_id).city.name+', '+Subsidiary.find(service.pick_up_subsidiary_id).city.country.name %></td>
+  <td><%= Subsidiary.find(service.drop_off_subsidiary_id).city.name+', '+Subsidiary.find(service.drop_off_subsidiary_id).city.country.name %></td>
+  <td><%= Subsidiary.find(service.pick_up_subsidiary_id).agency.name %></td>
+  <td>
+    <% if service.gps == true %>
+        GPS<%= '; '%>
+    <%end%>
+    <% if service.additional_driver == true %>
+        Additional Driver<%= '; '%>
+    <%end%>
+    <% if service.baby_seat == true %>
+        Baby Seat
+    <%end%>
+  </td>
+  <td><%= number_to_currency service.final_price, precision: 2, unit: '€', separator: ',', delimiter: '.', format: '%n%u' %></td>
+</tr>

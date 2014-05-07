@@ -1,0 +1,20 @@
+<table style="border-collapse: collapse !important;">
+  <thead>
+  <tr>
+    <th>Service ID</th>
+    <th>Pick-Date</th>
+    <th>Return-Date</th>
+    <th>Car</th>
+    <th>Pick-Location</th>
+    <th>Drop-Location</th>
+    <th>Agency</th>
+    <th>Extras</th>
+    <th>Price</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% cars.each do |car_reservation| %>
+      <%= render partial: 'home/partials/car_line_reservation', locals: { service: car_reservation } %>
+  <% end %>
+  </tbody>
+</table>
