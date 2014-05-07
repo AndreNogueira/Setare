@@ -1,4 +1,4 @@
-<%= render 'car/partials/progress_status', search_results: 'passed',optional_extras:'passed',payment:'active',confirmation:'last next' %>
+<%= render 'car/partials/progress_status', search_results: 'passed',optional_extras:'passed',payment:'active'%>
 
 <div class="row" id="results_main_container">
 
@@ -19,9 +19,9 @@
     </div>
     <div class="large-3 columns">
       <% if @car_extras.nil? %>
-          <p><%= session[:service_params]["extras_price"]%>&euro;</p>
+          <p><%= number_to_currency(session[:service_params]["extras_price"], unit:'€', format:'%n%u')%>&euro;</p>
       <%else%>
-          <p><%= @car_extras.extras_price%>&euro;</p>
+          <p><%= number_to_currency(@car_extras.extras_price, unit:'€', format:'%n%u')%></p>
       <%end%>
     </div>
   </div>
@@ -118,13 +118,6 @@
       </div>
     </div>
   </div>
-
-
-
-
-
-
-
 
   <div class="row" >
     <div class="large-8 large-offset-2 columns end" id="border_image_norton">
@@ -242,7 +235,7 @@
         <div class="row">
           <div class="large-4 large-offset-4 columns">
               <%= button_tag type: 'submit', class: 'tiny small radius expand' do %>
-                  <%= image_tag 'cars/Main Images/key-icon.png', size: '30x30' %> Confirm Reservation!
+                  <%= image_tag 'cars/Main Images/key-icon.png', size: '30x30' %> Booking Confirmation
               <% end %>
           </div>
         </div>

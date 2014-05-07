@@ -48,7 +48,8 @@ class CarController < ApplicationController
                                      payment_params:params)
     results = car_reservation.reservation
     if results[:service]
-      flash.now[:success] = results[:message]
+      flash[:success] = results[:message]
+      redirect_to root_path
     else
       flash.now[:warning] = results[:message]
       render 'car/service_payment'

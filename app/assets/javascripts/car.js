@@ -141,20 +141,18 @@ $(document).ready(function () {
         }
     });
 
-
-    /*
-
     $('#begin_timepicker').timepicker({
-        showLeadingZero: false,
-        showOn: 'both',
-        button: '.begin_timepicker_button_trigger'
+        showOn: 'button',
+        button: $('.begin_timepicker_button_trigger'),
+        timeSeparator: 'h'
     });
 
     $('#end_timepicker').timepicker({
-        showLeadingZero: false,
-        showOn: 'both',
-        button: '.end_timepicker_button_trigger'
-    });*/
+        showOn: 'button',
+        button: $('.end_timepicker_button_trigger'),
+        timeSeparator: 'h'
+    });
+
 
     function fill_data(url, html_select) {
         $.get(url, function (data) {

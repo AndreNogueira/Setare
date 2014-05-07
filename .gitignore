@@ -20,3 +20,4 @@ Gemfile.lock
 .idea/*
 # Ignore application configuration
 /config/application.yml
+/initializers/secret_token.rb
