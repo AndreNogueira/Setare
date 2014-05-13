@@ -45,8 +45,8 @@ class Subsidiary < ActiveRecord::Base
   def self.drop_subsidiaries(drop_city_id, agency_id)
     joins(:city).where(cities: {id: drop_city_id}, agency_id: agency_id)
   end
-  def self.sub_name(id)
-    find(id).name
+  def self.agency_name(id)
+    find(id).agency.name
   end
   def self.city_name(id)
     find(id).city.name
