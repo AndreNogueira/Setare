@@ -16,10 +16,12 @@ class PaymentCard
   validates :last_name, presence: true
 
 
-  def payment_validation
+  def payment_validation(user)
     if self.valid?
       if valid_credit_card?
-        yield
+        service = yield
+        SenderMail.new.async.perform(service, user) unless service.nil?
+        { service: true, message: "Your #{extract_name(service)} reservation was successful created. Check your e-mail for more details." }
       else
         { service: false, message: 'Your credit card is invalid. Please check your credentials.' }
       end
@@ -27,6 +29,9 @@ class PaymentCard
   end
 
   private
+  def extract_name(service)
+    service.class.to_s.gsub('Service','')
+  end
   def valid_credit_card?
     create_credit_card.valid?
   end

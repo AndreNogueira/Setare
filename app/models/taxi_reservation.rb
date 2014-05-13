@@ -13,10 +13,8 @@ class TaxiReservation
 
   def reservation
     card_validation = PaymentCard.new(extra_params)
-    card_validation.payment_validation do
-      taxi_service = create_taxi_service
-      SenderMail.new.async.perform(taxi_service, user) unless taxi_service.nil?
-      { service: true, message: 'Your taxi reservation was successful created. Check your e-mail for more details.' }
+    card_validation.payment_validation(user) do
+      create_taxi_service
     end
   end
 
