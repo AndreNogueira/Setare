@@ -1,6 +1,5 @@
 Setare::Application.routes.draw do
 
-
   # Cars
   get 'cars/index', to: 'car#index',as: :cars_index
   get 'cars/pick_city/:id', to: 'car#pick_city', as: :get_pick_city
@@ -16,8 +15,6 @@ Setare::Application.routes.draw do
   post 'cars/reservation', to: 'car#service_reservation'
 
 
-
-
   # Taxis
   get 'taxis/index', to: 'taxis#index', as: :taxis_index
   get 'taxis/city/:id', to: 'taxis#city', as: :get_city
@@ -30,6 +27,7 @@ Setare::Application.routes.draw do
 
   # Reservations
   get 'reservations', to: 'home#reservations', as: :reservations
+
 
   devise_for :users, :controllers => {:registrations => 'registrations'}
 
