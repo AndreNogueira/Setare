@@ -4,9 +4,9 @@ Hello, <b><%= @user.name %></b>
 
 <p>
   The reservation of the car is scheduled for <b><%= @reservation.service_begin.strftime("%d/%m/%Y at %H:%M") %></b> at
-  the place of departure <b><%= Subsidiary.find(@reservation.pick_up_subsidiary_id).name %></b>,<b> <%= Subsidiary.find(@reservation.pick_up_subsidiary_id).city.name %> </b>and the return
+  the place of departure <b><%= @pick_up[:pick_up_sub] %></b>,<b> <%= @pick_up[:pick_up_city] %> </b>and the return
  will be at
-  <b><%= Subsidiary.find(@reservation.drop_off_subsidiary_id).name %></b>,<b> <%= Subsidiary.find(@reservation.drop_off_subsidiary_id).city.name %> </b>.
+  <b><%= @drop_off[:drop_off_sub] %></b>,<b> <%= @drop_off[:drop_off_city]%> </b>.
 </p>
 
 <p>
