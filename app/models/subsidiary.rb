@@ -42,8 +42,17 @@ class Subsidiary < ActiveRecord::Base
     other_subs
   end
 
-  def self.drop_subsidiaries drop_city_id, agency_id
+  def self.drop_subsidiaries(drop_city_id, agency_id)
     joins(:city).where(cities: {id: drop_city_id}, agency_id: agency_id)
+  end
+  def self.sub_name(id)
+    find(id).name
+  end
+  def self.city_name(id)
+    find(id).city.name
+  end
+  def self.country_name(id)
+    find(id).city.country.name
   end
   # Validations
   validates :name, presence: true

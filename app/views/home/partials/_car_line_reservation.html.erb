@@ -3,7 +3,7 @@
   <td><%= service.service_begin.strftime('%d/%m/%Y %H:%M') %></td>
   <td><%= service.service_end.strftime('%d/%m/%Y %H:%M') %></td>
   <td><%= service.car.brand+' '+service.car.model %></td>
-  <td><%= Subsidiary.find(service.pick_up_subsidiary_id).city.name+', '+Subsidiary.find(service.pick_up_subsidiary_id).city.country.name %></td>
+  <td><%= Subsidiary.sub_name(service.pick_up_subsidiary_id) +', '+Subsidiary.country_name(service.pick_up_subsidiary_id) %></td>
   <td><%= Subsidiary.find(service.drop_off_subsidiary_id).city.name+', '+Subsidiary.find(service.drop_off_subsidiary_id).city.country.name %></td>
   <td><%= Subsidiary.find(service.pick_up_subsidiary_id).agency.name %></td>
   <td>
