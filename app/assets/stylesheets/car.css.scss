@@ -9,7 +9,7 @@
 }
 
 .lifestyle_img{
-  background-image: url('cars/MainImages/lifestyle_bg_no_blur.jpg');
+  background-image: image-url('cars/MainImages/lifestyle_bg_no_blur.jpg');
   background-position: center top;
   background-repeat: no-repeat;
 }
@@ -25,7 +25,7 @@
   height: 30px;
   line-height: 26px;
   width: 32px;
-  background: url('cars/MainImages/img-1st.png') 3px 0 no-repeat transparent;
+  background: image-url('cars/MainImages/img-1st.png') 3px 0 no-repeat transparent;
   text-align: center;
   padding: 2px 0;
   color: #fff;
@@ -43,7 +43,7 @@ p#reviewcentre {
 
 #reviewcentre span {
   display: inline-block;
-  background: url('cars/MainImages/img-reviewcentre.png') 0 0 no-repeat transparent;
+  background: image-url('cars/MainImages/img-reviewcentre.png') 0 0 no-repeat transparent;
   padding: 0 0 10px 0;
   text-align: left;
   text-indent: -9999px;
@@ -52,7 +52,7 @@ p#reviewcentre {
 
 #sub span {
   display: inline-block;
-  background: url('cars/MainImages/img-reviewcentre.png') 0 0 no-repeat transparent;
+  background: image-url('cars/MainImages/img-reviewcentre.png') 0 0 no-repeat transparent;
   padding: 0 0 10px 0;
   text-align: left;
   text-indent: -9999px;
@@ -75,14 +75,14 @@ p#reviewcentre {
 }
 
 #title h1 {
-  background: url('cars/MainImages/title_bg_block.png') repeat;
+  background: image-url('cars/MainImages/title_bg_block.png') repeat;
   float: left;
   padding: 8px 15px 0px;
   color: #ffffff;
 }
 
 #h1sub {
-  background: url('cars/MainImages/title_bg_block.png') repeat;
+  background: image-url('cars/MainImages/title_bg_block.png') repeat;
   float: left;
   padding: 0px 15px 0px;
 }
@@ -156,7 +156,7 @@ p#reviewcentre {
 
 #progress ul li.active {
   border: none;
-  background: url("cars/SearchResults/step_arrow_right_right.png") no-repeat right center #E4E4E4;
+  background: image-url("cars/SearchResults/step_arrow_right_right.png") no-repeat right center #E4E4E4;
 }
 
 #progress ul li.frist.active .before {
@@ -168,7 +168,7 @@ p#reviewcentre {
   float: left;
   height: 30px;
   width: 20px;
-  background: url("cars/SearchResults/step_arrow_left.png") no-repeat right center;
+  background: image-url("cars/SearchResults/step_arrow_left.png") no-repeat right center;
   margin: 0 -20px 0 0;
   padding: 0;
 }
@@ -176,7 +176,7 @@ p#reviewcentre {
 #progress ul li.next {
   width: auto;
   border: none;
-  background: url("cars/SearchResults/step_arrow_right.png") no-repeat right center;
+  background: image-url("cars/SearchResults/step_arrow_right.png") no-repeat right center;
   background-color: #eee;
 }
 
@@ -202,7 +202,7 @@ p#reviewcentre {
   padding: 0;
   height: 20px;
   width: 20px;
-  background: url("cars/SearchResults/step_tick_green_sm.png") no-repeat center center;
+  background: image-url("cars/SearchResults/step_tick_green_sm.png") no-repeat center center;
 }
 
 #progress ul {
