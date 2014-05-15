@@ -45,7 +45,7 @@
   </div>
   <div class="row" id="middle_border">
     <div class="large-12 columns" style="margin-top: 10px">
-      <p style="font-size: 12px"><%= image_tag 'cars/Main Images/pick-icon.gif' , size: '18x18' %> <%= pcity_name(session[:service_params]["pick_city"])+
+      <p style="font-size: 12px"><%= image_tag 'cars/MainImages/pick-icon.gif' , size: '18x18' %> <%= pcity_name(session[:service_params]["pick_city"])+
                                                                                                                ', '+pcountry_name(session[:service_params]["pick_country"])+
                                                                                                                ' at '+session[:service_params]["timepicker_begin"]+
                                                                                                                ' '+session[:service_params]["begin_date"]%></p>
@@ -53,7 +53,7 @@
   </div>
   <div class="row" id="middle_border">
     <div class="large-12 columns" >
-      <p style="font-size: 12px"><%= image_tag 'cars/Main Images/drop-icon.gif' , size: '18x18' %> <%= pcity_name(session[:service_params]["drop_city"])+
+      <p style="font-size: 12px"><%= image_tag 'cars/MainImages/drop-icon.gif' , size: '18x18' %> <%= pcity_name(session[:service_params]["drop_city"])+
                                                                                                                ', '+pcountry_name(session[:service_params]["pick_country"])+
                                                                                                                ' at '+session[:service_params]["timepicker_end"]+
                                                                                                                ' '+session[:service_params]["end_date"]%></p>
@@ -77,22 +77,22 @@
 
       <div class="row" >
         <div class="large-12 columns">
-          <p><%= image_tag 'cars/Search Results/nr_seats.png', size:'13x13' %>x<%= get_car(session[:service_params]["car_id"].to_i).capacity %></p>
+          <p><%= image_tag 'cars/SearchResults/nr_seats.png', size:'13x13' %>x<%= get_car(session[:service_params]["car_id"].to_i).capacity %></p>
         </div>
       </div>
 
       <div class="row" >
         <div class="large-12 columns" >
-          <p><%= image_tag 'cars/Search Results/doors-icon.jpg', size: '20x20'%><%= 'x'+get_car(session[:service_params]["car_id"].to_i).doors_number.to_s %></p>
+          <p><%= image_tag 'cars/SearchResults/doors-icon.jpg', size: '20x20'%><%= 'x'+get_car(session[:service_params]["car_id"].to_i).doors_number.to_s %></p>
         </div>
       </div>
 
       <div class="row" >
         <div class="large-12 columns">
           <%if get_car(session[:service_params]["car_id"].to_i).ac  %>
-              <p><%= image_tag 'cars/Search Results/icon-ac.png',size: '18x18'%> yes</p>
+              <p><%= image_tag 'cars/SearchResults/icon-ac.png',size: '18x18'%> yes</p>
           <%else%>
-              <p><%= image_tag 'cars/Search Results/icon-ac.png',size: '18x18'%> no</p>
+              <p><%= image_tag 'cars/SearchResults/icon-ac.png',size: '18x18'%> no</p>
           <%end%>
         </div>
       </div>
@@ -100,9 +100,9 @@
       <div class="row" >
         <div class="large-12 columns" >
           <% if get_car(session[:service_params]["car_id"].to_i).transmission %>
-              <p><%=image_tag 'cars/Search Results/icon-gear.png', size:'22x22'%> manual</p>
+              <p><%=image_tag 'cars/SearchResults/icon-gear.png', size:'22x22'%> manual</p>
           <%else%>
-              <p><%=image_tag 'cars/Search Results/icon-gear.png', size:'22x22'%> automatic</p>
+              <p><%=image_tag 'cars/SearchResults/icon-gear.png', size:'22x22'%> automatic</p>
           <%end%>
         </div>
       </div>
@@ -110,9 +110,9 @@
       <div class="row">
         <div class="large-12 columns end" >
           <%if get_car(session[:service_params]["car_id"].to_i).abs  %>
-              <p><%= image_tag 'cars/Search Results/icon_abs.png',size: '20x20'%> yes</p>
+              <p><%= image_tag 'cars/SearchResults/icon_abs.png',size: '20x20'%> yes</p>
           <%else%>
-              <p><%= image_tag 'cars/Search Results/icon-ac.png',size: '20x20'%> no</p>
+              <p><%= image_tag 'cars/SearchResults/icon-ac.png',size: '20x20'%> no</p>
           <%end%>
         </div>
       </div>
@@ -121,7 +121,7 @@
 
   <div class="row" >
     <div class="large-8 large-offset-2 columns end" id="border_image_norton">
-      <%= image_tag 'cars/Main Images/norton_x150.png' %>
+      <%= image_tag 'cars/MainImages/norton_x150.png' %>
     </div>
   </div>
 </div>
@@ -131,7 +131,7 @@
   <div class="large-12 columns" id="user_info_form">
     <div class="row">
       <div class="large-12 columns">
-        <h3><%= image_tag 'cars/Main Images/form-user.png' %> <b>Main driver data</b></h3>
+        <h3><%= image_tag 'cars/MainImages/form-user.png' %> <b>Main driver data</b></h3>
       </div>
     </div>
     <!-- Row Name and E-mail -->
@@ -175,11 +175,11 @@
   <div class="large-12 columns" id="user_info_form" style="margin-top: 10px">
     <div class="row">
       <div class="large-7 columns">
-        <h3><%= image_tag 'cars/Main Images/card_icon.png' %> <b>Payment Details</b></h3>
+        <h3><%= image_tag 'cars/MainImages/card_icon.png' %> <b>Payment Details</b></h3>
       </div>
       <div class="large-5 columns" style="text-align: right">
         <p style="font-size: 11px; margin-bottom: 0px">We accept all major payment methods</p>
-        <%= image_tag 'cars/Main Images/cards.png' %>
+        <%= image_tag 'cars/MainImages/cards.png' %>
       </div>
     </div>
 
@@ -235,7 +235,7 @@
         <div class="row">
           <div class="large-4 large-offset-4 columns">
               <%= button_tag type: 'submit', class: 'tiny small radius expand' do %>
-                  <%= image_tag 'cars/Main Images/key-icon.png', size: '30x30' %> Booking Confirmation
+                  <%= image_tag 'cars/MainImages/key-icon.png', size: '30x30' %> Booking Confirmation
               <% end %>
           </div>
         </div>
