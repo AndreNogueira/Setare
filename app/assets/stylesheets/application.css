@@ -37,13 +37,7 @@ input[readonly]
 thead th, thead td, thead tr{
     text-align: center !important;
 }
-/*
-tbody th, tbody td, tbody tr {
-    text-align: center !important;
-    border-bottom: 1px solid black;
-    border-top: 1px solid;
-}
-*/
+
 .flash_alert{
     position: absolute;
     width: 100%;

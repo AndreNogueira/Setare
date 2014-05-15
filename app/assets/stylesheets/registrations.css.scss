@@ -3,10 +3,14 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-
-
 .fieldset-border{
   border:1px solid #999;
+  /*border-radius*/
+  -webkit-border-radius:8px;
+  -moz-border-radius:8px;
   border-radius:8px;
+  /*box-shadow*/
+  -webkit-box-shadow:0 0 10px #999;
+  -moz-box-shadow:0 0 10px #999;
   box-shadow:0 0 10px #999;
 }
