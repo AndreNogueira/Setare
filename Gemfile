@@ -1,13 +1,13 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.4'
+gem 'rails', '4.1.4'
 
 # Use mysql as the database for Active Record
-gem 'mysql2', '~> 0.3.15'
+gem 'mysql2', '~> 0.3.16'
 
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.0'
+gem 'sass-rails', '~> 4.0.3'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -28,7 +28,7 @@ gem 'turbolinks'
 gem 'jquery-turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 1.2'
+gem 'jbuilder', '~> 2.1.1'
 
 # Zurb Foundation. Read More: https://github.com/zurb/foundation-rails
 gem 'foundation-rails'
@@ -46,14 +46,10 @@ gem 'immigrant'
 gem 'active_attr'
 
 #  Read More: https://github.com/ctran/annotate_models
-gem 'annotate', '>=2.6.0'
+gem 'annotate', '>= 2.6.0'
 
 # Organizing seed file. Read More: https://github.com/james2m/seedbank
 gem 'seedbank'
-
-gem 'activemerchant'
-#
-gem 'andand', '~> 1.3.3'
 
 # ActiveRecord-Import. Read More: https://github.com/zdennis/activerecord-import
 gem 'activerecord-import', '~> 0.5.0'
@@ -77,6 +73,9 @@ gem 'will_paginate-foundation'
 
 #Figaro securely configure Rails applications .Read More: https://github.com/laserlemon/figaro
 gem 'figaro'
+
+# New Relic Instrumention for Monitoring. Read More: https://github.com/newrelic/rpm
+gem 'newrelic_rpm'
 
 # Better errors for Rails. Read More: https://github.com/charliesome/better_errors
 group :development do

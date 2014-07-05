@@ -3,7 +3,7 @@
 //= require jquery.turbolinks
 //= require foundation
 //= require_tree .
-//= require jquery.ui.all
+//= require jquery-ui
 //= require auxiliary_js/jquery.ui.timepicker.js
 $(function(){ $(document).foundation(); });
 //= require turbolinks
