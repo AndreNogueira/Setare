@@ -1,5 +1,6 @@
 class TaxiForm
   include ActiveAttr::Model
+  include ::NewRelic::Agent::MethodTracer
 
   attribute :country
   attribute :city
@@ -47,4 +48,10 @@ class TaxiForm
   def drop_off_location_name
     DropOffLocation.find(drop_off_location).name
   end
+
+  # Methods Tracers
+  add_method_tracer :city_name, 'Beans/TaxiForm/city_name'
+  add_method_tracer :country_name, 'Beans/TaxiForm/country_name'
+  add_method_tracer :pick_up_location_name, 'Beans/TaxiForm/pick_up_location_name'
+  add_method_tracer :drop_off_location_name, 'Beans/TaxiForm/drop_off_location_name'
 end

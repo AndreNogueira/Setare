@@ -1,5 +1,6 @@
 class CarLocations
   include ActiveAttr::Model
+  include ::NewRelic::Agent::MethodTracer
 
   attribute :pick_country, type: Integer
   attribute :pick_city, type: Integer
@@ -29,4 +30,7 @@ class CarLocations
       drop_city
     end
   end
+
+  #Methods Tracers
+  add_method_tracer :initialize, 'Beans/CarLocations'
 end

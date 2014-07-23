@@ -1,5 +1,6 @@
 class PaymentCard
   include ActiveAttr::Model
+  include ::NewRelic::Agent::MethodTracer
 
   attribute :card_type
   attribute :card_number
@@ -48,4 +49,6 @@ class PaymentCard
     )
   end
 
+  # Methods Tracers
+  add_method_tracer :payment_validation, 'Beans/PaymentCard'
 end

@@ -1,5 +1,6 @@
 class TaxiSearch
   include ActiveAttr::Model
+  include ::NewRelic::Agent::MethodTracer
 
   attribute :pick_up_location, type: Integer
   attribute :drop_off_location, type: Integer
@@ -38,5 +39,8 @@ class TaxiSearch
   def get_drop_off_location
     DropOffLocation.find(drop_off_location)
   end
+
+  # Methods Tracers
+  add_method_tracer :search, 'BussinessLogic/TaxiSearch'
 
 end

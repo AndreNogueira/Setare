@@ -1,5 +1,6 @@
 class CarExtras
   include ActiveAttr::Model
+  include ::NewRelic::Agent::MethodTracer
 
   attribute :additional_driver_quantity, type: Integer
   attribute :gps_quantity, type: Integer
@@ -55,4 +56,6 @@ class CarExtras
     end
     extras
   end
+  # Methods Tracers
+  add_method_tracer :initialize, 'BussinessLogic/CarExtras'
 end

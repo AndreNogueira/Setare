@@ -1,5 +1,6 @@
 class CarSearch
   include ActiveAttr::Model
+  include ::NewRelic::Agent::MethodTracer
 
   attribute :pick_subsidiary
   attribute :begin_date
@@ -33,4 +34,6 @@ class CarSearch
   def cars_list
     Car.check_available_cars(pick_subsidiary,begin_date,end_date)
   end
+  # Methods Tracers
+  add_method_tracer :initialize, 'Beans/CarSearch'
 end

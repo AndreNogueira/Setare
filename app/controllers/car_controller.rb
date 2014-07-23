@@ -1,4 +1,5 @@
 class CarController < ApplicationController
+  
   def index
     @countries = Country.with_subsidiaries
   end

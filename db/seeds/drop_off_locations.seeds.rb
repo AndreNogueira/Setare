@@ -1837,7 +1837,8 @@ after :pick_up_locations do
       end
     end
 
-    madeira = funchal_pick_up.shift
+    madeira = funchal_pick_up.to_a.shift
+    #funchal_pick_up.
     DropOffLocation.find_or_create_by(name: madeira.name) do |d|
       d.pick_up_locations = funchal_pick_up
     end

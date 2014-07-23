@@ -4524,7 +4524,6 @@ after :countries do
   cities << City.new(name: "Twin Falls", is_taxi: false, country: countries[161])
   cities << City.new(name: "Tyler", is_taxi: false, country: countries[161])
   cities << City.new(name: "Vail Eagle", is_taxi: false, country: countries[161])
-  cities << City.new(name: "Vienna", is_taxi: false, country: countries[161])
   cities << City.new(name: "Virginia Beach", is_taxi: false, country: countries[161])
   cities << City.new(name: "Waco", is_taxi: false, country: countries[161])
   cities << City.new(name: "Warwick", is_taxi: false, country: countries[161])
@@ -4538,7 +4537,6 @@ after :countries do
   puts "Cities for Vanuatu"
   cities << City.new(name: "Port Vila", is_taxi: false, country: countries[162])
   puts "Cities for Venezuela"
-  cities << City.new(name: "Barcelona", is_taxi: false, country: countries[163])
   cities << City.new(name: "Caracas", is_taxi: false, country: countries[163])
   cities << City.new(name: "Cumana", is_taxi: false, country: countries[163])
   cities << City.new(name: "Maracaibo", is_taxi: false, country: countries[163])

@@ -34,3 +34,4 @@ production:
   pool: 5
   username: root
   password: admin
+  reconnect: true

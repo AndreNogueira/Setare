@@ -1,5 +1,6 @@
 class TaxiLocations
   include ActiveAttr::Model
+  include ::NewRelic::Agent::MethodTracer
 
   attribute :country, type: Integer
   attribute :city, type: Integer
@@ -14,4 +15,7 @@ class TaxiLocations
     @pick_ups = PickUpLocation.all_pick_ups_from_city(city)
     @drop_offs = PickUpLocation.drop_offs_from_pick_up(pick_up_location)
   end
+  
+  # Methods Tracers
+  add_method_tracer :initialize, 'Beans/TaxiLocations'
 end

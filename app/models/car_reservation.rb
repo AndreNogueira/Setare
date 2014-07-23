@@ -1,5 +1,6 @@
 class CarReservation
   include ActiveAttr::Model
+  include ::NewRelic::Agent::MethodTracer
 
   attribute :user
   attribute :service_params
@@ -51,4 +52,7 @@ class CarReservation
   def get_end_date
     concat_date_time(service_params[:end_date],service_params[:timepicker_end])
   end
+
+  # Methods Tracers
+  add_method_tracer :reservation, 'BussinessLogic/CarReservation'
 end

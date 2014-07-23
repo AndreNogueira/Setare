@@ -1,5 +1,6 @@
 class TaxiReservation
   include ActiveAttr::Model
+  include ::NewRelic::Agent::MethodTracer
 
   attribute :user
   attribute :taxi
@@ -74,4 +75,7 @@ class TaxiReservation
   def user_params
     extra_params.permit!.slice(:name, :email, :bi, :nif, :phone_number, :driver_license, :address)
   end
+
+  # Methods Tracers
+  add_method_tracer :reservation, 'BussinessLogic/TaxiReservation'
 end
