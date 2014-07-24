@@ -31,7 +31,7 @@ production:
   adapter: mysql2
   encoding: utf8
   database: Setare_production
-  pool: 5
+  pool: 25
   username: root
   password: admin
   reconnect: true
