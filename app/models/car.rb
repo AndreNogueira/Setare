@@ -27,9 +27,7 @@
 #  cars_agency_id_fk    (agency_id)
 #  cars_category_id_fk  (category_id)
 #
-
 class Car < ActiveRecord::Base
-  include ::NewRelic::Agent::MethodTracer
 
   # Associations
   belongs_to :category
@@ -68,6 +66,5 @@ class Car < ActiveRecord::Base
 
   # Callbacks
   # Instance Methods
-  # Methods Tracers
-  add_method_tracer :check_available_cars, 'Model/Car/check_available_cars'
+  
 end

@@ -1,3 +1,5 @@
+require 'new_relic/agent/method_tracer'
+
 class TaxiSearch
   include ActiveAttr::Model
   include ::NewRelic::Agent::MethodTracer
