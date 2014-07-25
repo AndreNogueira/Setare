@@ -56,5 +56,8 @@ class CarReservation
   end
 
   # Methods Tracers
-  add_method_tracer :reservation, 'BussinessLogic/CarReservation'
+  add_method_tracer :reservation, 'BussinessLogic/CarReservation/reservation'
+  add_method_tracer :create_car_service, 'BussinessLogic/CarReservation/create_car_service'
+  add_method_tracer :car_service, 'BussinessLogic/CarReservation/car_service'
+  add_method_tracer :get_car, 'BussinessLogic/CarReservation/get_car'
 end

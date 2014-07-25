@@ -43,6 +43,10 @@ class TaxiSearch
   end
 
   # Methods Tracers
-  add_method_tracer :search, 'BussinessLogic/TaxiSearch'
+  add_method_tracer :search, 'BussinessLogic/TaxiSearch/search'
+  add_method_tracer :create_taxis_response, 'BussinessLogic/TaxiSearch/create_taxis_response'
+  add_method_tracer :calculate_distance_in_km, 'BussinessLogic/TaxiSearch/calculate_distance_in_km'
+  add_method_tracer :get_pick_up_location, 'BussinessLogic/TaxiSearch/get_pick_up_location'
+  add_method_tracer :get_drop_off_location, 'BussinessLogic/TaxiSearch/get_drop_off_location'
 
 end

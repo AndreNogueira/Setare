@@ -52,5 +52,7 @@ class PaymentCard
   end
 
   # Methods Tracers
-  add_method_tracer :payment_validation, 'Beans/PaymentCard'
+  add_method_tracer :payment_validation, 'Beans/PaymentCard/payment_validation'
+  add_method_tracer :valid_credit_card, 'Beans/PaymentCard/valid_credit_card'
+  add_method_tracer :create_credit_card, 'Beans/PaymentCard/create_credit_card'
 end

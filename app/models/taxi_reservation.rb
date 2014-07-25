@@ -79,5 +79,10 @@ class TaxiReservation
   end
 
   # Methods Tracers
-  add_method_tracer :reservation, 'BussinessLogic/TaxiReservation'
+  add_method_tracer :reservation, 'BussinessLogic/TaxiReservation/reservation'
+  add_method_tracer :create_taxi_service, 'BussinessLogic/TaxiReservation/create_taxi_service'
+  add_method_tracer :taxi_service, 'BussinessLogic/TaxiReservation/taxi_service'
+  add_method_tracer :get_taxi, 'BussinessLogic/TaxiReservation/get_taxi'
+  add_method_tracer :user_params, 'BussinessLogic/TaxiReservation/user_params'
+  
 end

@@ -59,5 +59,7 @@ class CarExtras
     extras
   end
   # Methods Tracers
-  add_method_tracer :initialize, 'BussinessLogic/CarExtras'
+  add_method_tracer :initialize, 'BussinessLogic/CarExtras/initialize'
+  add_method_tracer :calc_rent_price, 'BussinessLogic/CarExtras/calc_rent_price'
+  
 end

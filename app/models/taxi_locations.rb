@@ -19,5 +19,5 @@ class TaxiLocations
   end
   
   # Methods Tracers
-  add_method_tracer :initialize, 'Beans/TaxiLocations'
+  add_method_tracer :initialize, 'Beans/TaxiLocations/initialize'
 end

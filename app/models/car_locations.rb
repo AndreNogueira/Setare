@@ -9,11 +9,7 @@ class CarLocations
   attribute :pick_subsidiary,type: Integer
   attribute :drop_city,type: Integer
 
-  attr_reader :countries,
-              :pick_cities,
-              :pick_subs,
-              :drop_cities,
-              :drop_subs
+  attr_reader :countries,:pick_cities,:pick_subs,:drop_cities,:drop_subs
 
   def initialize(attributes)
     super
@@ -34,5 +30,5 @@ class CarLocations
   end
 
   #Methods Tracers
-  add_method_tracer :initialize, 'Beans/CarLocations'
+  add_method_tracer :initialize, 'Beans/CarLocations/initialize'
 end

@@ -37,5 +37,9 @@ class CarSearch
     Car.check_available_cars(pick_subsidiary,begin_date,end_date)
   end
   # Methods Tracers
-  add_method_tracer :initialize, 'Beans/CarSearch'
+  add_method_tracer :initialize, 'Beans/CarSearch/initialize'
+  add_method_tracer :remaining_subsidiaries, 'Beans/CarSearch/remaining_subsidiaries'
+  add_method_tracer :other_cars_list, 'Beans/CarSearch/other_cars_list'
+  add_method_tracer :cars_list, 'Beans/CarSearch/cars_list'
+
 end
