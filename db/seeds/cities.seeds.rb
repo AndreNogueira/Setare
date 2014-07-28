@@ -3395,7 +3395,6 @@ after :countries do
   puts "Cities for Spain Canary Islands"
   cities << City.new(name: "El Hierro", is_taxi: false, country: countries[131])
   cities << City.new(name: "Fuerteventura", is_taxi: false, country: countries[131])
-  cities << City.new(name: "Gran Canaria", is_taxi: false, country: countries[131])
   cities << City.new(name: "La Gomera", is_taxi: false, country: countries[131])
   cities << City.new(name: "Lanzarote", is_taxi: false, country: countries[131])
   cities << City.new(name: "La Palma", is_taxi: false, country: countries[131])
@@ -4431,7 +4430,6 @@ after :countries do
   cities << City.new(name: "Lynchburg", is_taxi: false, country: countries[161])
   cities << City.new(name: "Macon", is_taxi: false, country: countries[161])
   cities << City.new(name: "Madison", is_taxi: false, country: countries[161])
-  cities << City.new(name: "Manchester", is_taxi: false, country: countries[161])
   cities << City.new(name: "Marquette", is_taxi: false, country: countries[161])
   cities << City.new(name: "Marshall", is_taxi: false, country: countries[161])
   cities << City.new(name: "McAllen", is_taxi: false, country: countries[161])
@@ -4546,7 +4544,6 @@ after :countries do
   cities << City.new(name: "Porlamar", is_taxi: false, country: countries[163])
   cities << City.new(name: "Puerto Ordaz", is_taxi: false, country: countries[163])
   cities << City.new(name: "Punto Fijo", is_taxi: false, country: countries[163])
-  cities << City.new(name: "Valencia", is_taxi: false, country: countries[163])
   puts "Cities for Yemen"
   cities << City.new(name: "Aden", is_taxi: false, country: countries[164])
   cities << City.new(name: "Sana'a", is_taxi: false, country: countries[164])
