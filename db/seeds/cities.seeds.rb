@@ -4297,7 +4297,6 @@ after :countries do
   cities << City.new(name: "Bemidji", is_taxi: false, country: countries[161])
   cities << City.new(name: "Bentonville", is_taxi: false, country: countries[161])
   cities << City.new(name: "Billings", is_taxi: false, country: countries[161])
-  cities << City.new(name: "Birmingham", is_taxi: false, country: countries[161])
   cities << City.new(name: "Bismarck", is_taxi: false, country: countries[161])
   cities << City.new(name: "Bloomington IL", is_taxi: false, country: countries[161])
   cities << City.new(name: "Bloomington IN", is_taxi: false, country: countries[161])
