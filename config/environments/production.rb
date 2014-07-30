@@ -1,6 +1,8 @@
 Setare::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
+  config.thread_safe!
+
   # Code is not reloaded between requests.
   config.cache_classes = true
 
@@ -73,7 +75,7 @@ Setare::Application.configure do
   config.active_support.deprecation = :notify
 
   # Disable automatic flushing of the log to improve performance.
-  # config.autoflush_log = false
+  config.autoflush_log = false
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
