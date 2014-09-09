@@ -1088,7 +1088,6 @@ after :countries do
   cities << City.new(name: "Frethun", is_taxi: false, country: countries[43])
   cities << City.new(name: "Frontignan/Sete", is_taxi: false, country: countries[43])
   cities << City.new(name: "Gap", is_taxi: false, country: countries[43])
-  cities << City.new(name: "Geneva", is_taxi: false, country: countries[43])
   cities << City.new(name: "Gevrey Chambertin", is_taxi: false, country: countries[43])
   cities << City.new(name: "Gien", is_taxi: false, country: countries[43])
   cities << City.new(name: "Gournay En Bray", is_taxi: false, country: countries[43])

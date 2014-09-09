@@ -23,8 +23,8 @@ class PaymentCard
     if self.valid?
       if valid_credit_card?
         service = yield
-        SenderMail.new.async.perform(service, user) unless service.nil?
-        { service: true, message: "Your #{extract_name(service)} reservation was successful created. Check your e-mail for more details." }
+        #SenderMail.new.async.perform(service, user) unless service.nil?
+        { service: true, message: "Your #{extract_name(service)} reservation was successful created." }
       else
         { service: false, message: 'Your credit card is invalid. Please check your credentials.' }
       end
