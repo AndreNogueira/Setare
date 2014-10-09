@@ -6,7 +6,7 @@ class HomeController < ApplicationController
   end
 
   def reservations
-    @taxis = current_user.taxi_services
-    @cars = current_user.car_services.includes(:car)
+    @taxis = current_user.taxi_services.limit(500)
+    @cars = current_user.car_services.includes(:car).limit(500)
   end
 end

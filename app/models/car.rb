@@ -36,25 +36,32 @@ class Car < ActiveRecord::Base
 
   # Scopes
   # Class Methods
-  def self.current_subsidiary current_subsidiary
+  def self.current_subsidiary(current_subsidiary)
     where(current_subsidiary: current_subsidiary,is_available: true).includes(:agency, :category)
   end
-  def self.check_available_cars current_subsidiary, pick_date, drop_date
+
+  def self.check_available_cars(current_subsidiary, pick_date, drop_date)
     pdate = Date.parse(pick_date)
     ddate = Date.parse(drop_date)
     now = Date.current
+    car_indexes = []
     car_list = Car.current_subsidiary(current_subsidiary)
     car_list.each_with_index do |c,i|
       services = CarService.services(c)
       services.each do |s|
-        unless((pdate >= now && ddate > now) && ((pdate > s.service_end && ddate > s.service_end) ||
+         unless((pdate >= now && ddate > now) && ((pdate > s.service_end && ddate > s.service_end) ||
                     (pdate < s.service_begin && ddate < s.service_begin-1.day)))
-          car_list.delete_at(i)
-        end
+         	car_indexes << i
+         end
       end
+    end
+    if(!car_indexes.empty?)
+    	car_indexes.uniq!
+    	car_list.values_at(*car_indexes).each{|c| car_list.delete(c)}
     end
     car_list
   end
+  
   # Validations
   validates :image, presence: true
   validates :brand, presence: true
