@@ -57,7 +57,7 @@ class Car < ActiveRecord::Base
     end
     if(!car_indexes.empty?)
     	car_indexes.uniq!
-    	car_list.values_at(*car_indexes).each{|c| car_list.delete(c)}
+    	car_list.values_at(*car_indexes).each{|c| car_list.to_a.delete(c)}
     end
     car_list
   end
